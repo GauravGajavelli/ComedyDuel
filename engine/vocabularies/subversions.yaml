@@ -1,0 +1,176 @@
+# Subversions
+#
+# Moves that deliberately break joke-structural expectations. Used as the
+# anti-formula defense: once the audience (or the system) has learned to
+# expect a certain shape, subversions break the shape as the joke.
+#
+# Referenced by schema: joke.structure.subversions_applied (multi-valued)
+#   Each entry is {type: <vocabulary value>, at: <structural event>}
+#
+# See README.md for definition format.
+
+structural_refusal:
+  criterion: |
+    The joke uses a known structural template but refuses its terminal
+    move. The setup promises a reversal, escalation, or resolution,
+    and the punchline declines to deliver it — often lingering on the
+    setup or ending with banality where a climax was expected. The
+    refusal is itself the turn.
+
+  positive_example: |
+    A Mort-style bit that builds toward what sounds like an escalating
+    punchline and ends: "...and I just had a regular sandwich. So
+    there's that." The escalation structure is set up and deliberately
+    not completed. The flatness is the joke.
+
+  negative_example: |
+    A joke that simply ends with a weak punchline. NOT
+    structural_refusal — that's just a weak joke. Structural_refusal
+    requires the refusal to be the comedic mechanism, not an accident.
+    Test: would removing the refusal (and adding a conventional
+    punchline) make the joke better? If yes, it's a weak joke, not a
+    subversion. If the conventional punchline would make it worse,
+    the refusal is load-bearing.
+
+  distinguished_from:
+    meta_structural: |
+      Structural_refusal refuses the expected move silently — the
+      audience notices the absence. Meta_structural explicitly
+      comments on what's being refused ("I'm not going to do the
+      callback here"). Test: is the absence itself the joke
+      (structural_refusal), or is the commentary on the absence the
+      joke (meta_structural)?
+
+    register_break: |
+      Structural_refusal refuses a structural move. Register_break
+      breaks the comedian's established voice register mid-bit.
+      Different layers; can co-occur but are distinct moves.
+
+meta_structural:
+  criterion: |
+    The joke comments on or acknowledges the formula it's operating
+    within. The comedian breaks frame to name what would conventionally
+    happen, or name what the audience expects, or acknowledge their
+    own joke-telling. Dangerous because it's cheap; a little goes
+    a long way.
+
+  positive_example: |
+    "I could do the obvious callback here, but you already saw it
+    coming." The joke's mechanism is the explicit refusal to execute
+    a move the audience has anticipated. The commentary is the
+    punchline.
+
+  negative_example: |
+    A bit where the comedian says "so anyway" between jokes.
+    NOT meta_structural — that's just transition, not a comedic move.
+    Meta_structural requires the commentary on form to be doing the
+    comedic work, not just flow management.
+
+  distinguished_from:
+    structural_refusal: |
+      See structural_refusal's distinguished_from.
+
+    register_break: |
+      Meta_structural is explicit commentary on the joke-structure.
+      Register_break shifts the voice register without commentary.
+      Both can break frame but via different means.
+
+register_break:
+  criterion: |
+    The comedian's established voice register is deliberately broken
+    mid-joke or between jokes. A comedian known for understatement
+    suddenly commits fully; a high-energy comedian suddenly deadpans.
+    The break is only funny if the voice is well-established —
+    register_break's power depends on the audience having learned the
+    default.
+
+  positive_example: |
+    A comedian who has spent ten minutes in laid-back Mort-style
+    observation suddenly delivering one line with wild full-volume
+    commitment, then returning to understatement. The single-line
+    break lands precisely because the surrounding register is so
+    consistent.
+
+  negative_example: |
+    A comedian who alternates between calm and loud throughout their
+    set. NOT register_break — no established register to break
+    against. Register_break requires a baseline; without baseline,
+    volume shifts are just inconsistency.
+
+  distinguished_from:
+    structural_refusal: |
+      See structural_refusal's distinguished_from.
+
+    meta_structural: |
+      See meta_structural's distinguished_from.
+
+    anti_callback: |
+      Register_break shifts the voice; anti_callback refuses a
+      callback opportunity. Different axes. Can co-occur.
+
+specificity_subversion:
+  criterion: |
+    The joke refuses the expected level of abstraction. Where the
+    formula wants a category, the joke gives an aggressively specific
+    instance. Where the formula wants specificity, the joke gives
+    deliberate vagueness. The specificity level itself is the
+    subversion.
+
+  positive_example: |
+    A joke where the expected "a weird job" is replaced with "a man
+    who sells replacement pieces for chess sets where the queen is
+    missing." The hyperspecificity is more specific than the setup
+    required, and the specificity is the joke.
+
+  negative_example: |
+    A joke that's specific throughout. NOT specificity_subversion —
+    this is just detailed writing. Specificity_subversion requires
+    the specificity to SUBVERT an expected level, not just be high.
+    The formula must have suggested a less specific (or more specific)
+    option, and the joke has broken that expectation.
+
+  distinguished_from:
+    escalating_specificity: |
+      Specificity_subversion is a single break against expected level.
+      Escalating specificity (not a subversion but a structural
+      template) builds specificity across beats. Different patterns:
+      subversion is one sharp break, escalation is a gradient.
+
+    structural_refusal: |
+      Structural_refusal refuses a structural move. Specificity_
+      subversion refuses an expected level of detail. Different
+      refusals; can co-occur but are distinct.
+
+anti_callback:
+  criterion: |
+    The joke sets up a callback opportunity and pointedly doesn't
+    take it. Requires session memory — the audience must recognize
+    that a callback was available. The refusal to callback IS the
+    comedic move. Nearest to structural_refusal but specific to
+    callback expectations.
+
+  positive_example: |
+    A comedian earlier in the set has established a distinctive
+    premise. Later, a prompt invites an obvious callback to that
+    premise. The comedian instead takes the joke in an unrelated
+    direction, with just enough of a pause to signal they know what
+    they're not doing.
+
+  negative_example: |
+    A comedian who never does callbacks. NOT anti_callback — no
+    expectation to subvert. Anti_callback requires the callback
+    opportunity to be salient to the audience.
+
+  distinguished_from:
+    structural_refusal: |
+      Anti_callback is a specific subset of structural_refusal
+      applying to callback opportunities. Use anti_callback when
+      the refused move is specifically a callback; use
+      structural_refusal for other refusals.
+
+    meta_structural: |
+      Anti_callback refuses silently. Meta_structural commentary on
+      a refused callback ("I could callback to the parking garage
+      thing now but I won't") is meta_structural with a callback
+      topic — they can co-occur but the primary tag is
+      meta_structural when commentary is explicit.

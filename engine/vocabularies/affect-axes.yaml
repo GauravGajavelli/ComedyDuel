@@ -1,0 +1,115 @@
+# Affect Axes
+#
+# Numeric scales for affective register.
+# Referenced by schema: performance.affective.default_register.valence
+#                       performance.affective.default_register.arousal
+#                       performance.affective.trajectory (each entry has
+#                         {valence, arousal} pair)
+#
+# DIFFERENT FORMAT from other vocabularies: not contrast pairs, but anchor-
+# point descriptions at extremes and midpoints. Values are integers -3 to +3.
+#
+# The axes are orthogonal by design. A joke can be cool-and-energized
+# (Mort in a rare moment of commitment: valence=-2, arousal=+2) or
+# warm-and-subdued (a quiet vulnerable Bamford moment: valence=+2,
+# arousal=-1). Do not collapse to a single scale.
+
+valence:
+  description: |
+    The warmth-to-coolness of the affective register. Warm means
+    vulnerable, open, emotionally available. Cool means detached,
+    deadpan, affect-suppressed. Does NOT measure positive/negative
+    mood — a bleak joke can have low valence (cool bleakness) or
+    high valence (warm/vulnerable sadness). The axis is about
+    emotional AVAILABILITY, not emotional CONTENT.
+
+  anchors:
+    -3: |
+      Maximally cool. Affect fully suppressed. The performance denies
+      emotional access to the content. Full deadpan, with no flicker.
+      Think Steven Wright delivering a devastating observation as if
+      reading a phone bill.
+
+    -2: |
+      Cool. Observational detachment. Emotional register is muted but
+      not fully absent — there's a register, it's just held at arm's
+      length. Default Seinfeld and Hedberg territory.
+
+    -1: |
+      Slightly cool. Mostly detached with occasional flickers of
+      affect. The comedian is not performing emotion but isn't
+      actively suppressing it.
+
+    0: |
+      Neutral. No strong lean toward warm or cool. Conversational
+      register, neither performing detachment nor performing
+      vulnerability.
+
+    +1: |
+      Slightly warm. The comedian is letting some emotional register
+      through. Wryness with a hint of genuine feeling.
+
+    +2: |
+      Warm. Vulnerable, emotionally available. The audience is
+      invited into the feeling, not held at arm's length. Bamford's
+      vulnerable disclosures, Mulaney in confessional mode.
+
+    +3: |
+      Maximally warm. Full emotional openness. Rare in comedy — too
+      sustained at +3 stops being comedic. More common as a brief
+      peak within a joke than as a default register.
+
+arousal:
+  description: |
+    The energy level of the affective register. High arousal means
+    animated, intense, high-commitment. Low arousal means subdued,
+    low-energy, laconic. Orthogonal to valence: you can be cool-and-
+    energized (focused intensity without emotional warmth) or
+    warm-and-subdued (quiet vulnerability).
+
+  anchors:
+    -3: |
+      Maximally subdued. Barely-above-whisper delivery. Deeply
+      laconic. The audience has to lean in. Think late-career
+      Hedberg at his most understated.
+
+    -2: |
+      Low energy. Relaxed pace, soft delivery. The comedian isn't
+      working for attention; they're assuming it. Mort's default
+      territory.
+
+    -1: |
+      Slightly subdued. Normal conversational energy leaning calm.
+
+    0: |
+      Neutral. Ordinary conversational energy. Neither pressing nor
+      pulling back.
+
+    +1: |
+      Slightly energized. Engaged, animated, but not heightened.
+
+    +2: |
+      High energy. Animated, expressive, leaning into the material.
+      Cece's default. Robin Williams at moderate intensity.
+
+    +3: |
+      Maximally energized. Full commitment, high volume, rapid pace.
+      Rarely sustained — more common as a peak during escalation or
+      register_break than as a default register.
+
+# ============================================================================
+# Common register combinations (for intuition, not authoritative)
+# ============================================================================
+#
+# These are shorthand descriptions of common valence/arousal pairings.
+# Useful for calibration, but the actual annotation records the numeric
+# values, not these labels.
+#
+#   detached (valence -2, arousal -1):     Seinfeld default
+#   deadpan (valence -3, arousal -2):      Hedberg default
+#   laconic (valence -1, arousal -2):      Steven Wright territory
+#   absurdist-high (valence 0, arousal +2): Cece default
+#   vulnerable (valence +2, arousal -1):   Bamford's quieter bits
+#   manic (valence +1, arousal +3):        Williams at full tilt
+#   angry (valence -1, arousal +2):        Burr default
+#   confessional (valence +2, arousal 0):  Mulaney confessional mode

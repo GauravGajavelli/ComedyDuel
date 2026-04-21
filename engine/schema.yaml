@@ -1,0 +1,364 @@
+# Comedy Duel — Annotation Schema v0
+#
+# This file defines the shape of a joke annotation. One annotation per joke,
+# stored as YAML in annotations/{joke_id}.yaml.
+#
+# ============================================================================
+# GLOSS vs STRUCTURED — read before annotating
+# ============================================================================
+#
+# Every field in this schema is marked as one of two kinds:
+#
+#   [STRUCTURED] — The engine uses this. Drawn from controlled vocabularies,
+#     bounded scales, enumerated categories, or typed references. Values must
+#     match vocabulary entries or be declared as new vocabulary additions.
+#     These are what the discovery and selection stages compute on.
+#
+#   [GLOSS] — The engine does NOT use this. Free text describing the specific
+#     content of this joke, for human readability during blind reconstruction,
+#     adversarial review, and weekly review. Gloss fields exist so you can
+#     re-read a six-week-old annotation without revisiting the original joke.
+#     They also exist as a diagnostic: if a joke's distinctiveness lives
+#     entirely in gloss fields with no structured counterpart, the structured
+#     fields are under-specified and the schema has a hole.
+#
+# The generative sufficiency test operates against STRUCTURED fields only.
+# When verifying the schema can reconstruct a joke, read only the structured
+# fields. If you can't, the schema needs more structure, not more gloss.
+#
+# ============================================================================
+# Conventions
+# ============================================================================
+#
+#   - {UNSPECIFIED} marks fields not yet populated in this pass
+#   - null marks fields that don't apply to this joke (e.g., no tag, no callback)
+#   - Controlled vocabularies live in engine/vocabularies/{name}.yaml
+#   - Concept nodes live in engine/concepts/{node_id}.yaml
+#   - Trajectory fields are optional. Use only when the property shifts
+#     meaningfully across structural events and the shift is load-bearing.
+#
+# Changelog: working/schema-changelog.md
+# Field-usage tracking: working/field-usage.md
+
+# ============================================================================
+# Identity and source
+# ============================================================================
+
+joke_id: ""                        # [STRUCTURED] e.g., seinfeld_s03e14_opening_01
+source:
+  work: ""                         # [GLOSS]      human-readable source description
+  medium: ""                       # [STRUCTURED] from vocabularies/media.yaml
+                                   #              stand_up | sitcom_opener |
+                                   #              special | podcast | other
+  year: null                       # [STRUCTURED] integer or null
+
+# ============================================================================
+# Annotation status (multi-pass workflow tracking)
+# ============================================================================
+
+annotation_status:                 # all [STRUCTURED]
+  transcription: incomplete        # incomplete | complete
+  decomposition: incomplete        # Pass 2: joke-level layers
+  performance: incomplete          # Pass 3: performance-level layers
+  commutation: incomplete          # Pass 4: load-bearing analysis
+  adversarial_review: incomplete   # Pass 5: counterargument pass
+  voice_attribution: incomplete    # weekly cross-cutting pass
+
+# ============================================================================
+# JOKE (the written/structural unit, independent of performance)
+# ============================================================================
+#
+# Populated in Pass 2 (silent read). Would be the same across different
+# performances of the same joke.
+
+joke:
+
+  # --- Content layer -------------------------------------------------------
+
+  content:
+    primary_domain: []             # [STRUCTURED] multi-select from
+                                   #   vocabularies/domains.yaml
+                                   #   e.g., [domestic_life, bureaucracy]
+
+    concepts: []                   # [STRUCTURED] list of concept-node references.
+                                   #   Each entry is a node_id from engine/concepts/.
+                                   #   NOT bare strings — the engine uses these as
+                                   #   graph lookups. When a new concept is
+                                   #   needed, create a concept node (see section
+                                   #   at the bottom of this file) and reference
+                                   #   its id here.
+
+    pivot_concept: null            # [STRUCTURED] concept-node reference.
+                                   #   The node the pivot turns on — the concept
+                                   #   doing the load-bearing recontextualization
+                                   #   work. null when pivot is purely affective
+                                   #   with no concept anchor.
+
+    specificity:
+      default_level: null          # [STRUCTURED] integer 1-5
+                                   #   1=abstract, 5=hyperspecific
+      trajectory: null             # [STRUCTURED] optional list of {at, level}
+                                   #   anchored to structural events. Use only
+                                   #   when escalating specificity is part of
+                                   #   the joke's mechanism.
+
+  # --- Logic layer ---------------------------------------------------------
+
+  logic:
+    setup_expectation: ""          # [GLOSS]      free text: what the setup leads
+                                   #              the audience to expect.
+                                   #              Readable for human review;
+                                   #              not used by the engine.
+
+    punchline_violation: ""        # [GLOSS]      free text: how the punchline
+                                   #              violates that expectation.
+                                   #              Readable for human review;
+                                   #              not used by the engine.
+
+    incongruity_type: ""           # [STRUCTURED] from vocabularies/
+                                   #   incongruity-types.yaml
+                                   #   The mechanism by which the punchline
+                                   #   violates the setup (semantic reversal,
+                                   #   logical reversal, expectation reversal,
+                                   #   reframe, literalization, figuration,
+                                   #   category error, etc.)
+
+    incongruity_operates_on:       # structured features about WHAT KIND of
+                                   # expectation is being violated. Lets the
+                                   # engine reason about setup/punchline shape
+                                   # without parsing the gloss strings.
+      setup_frame: null            # [STRUCTURED] establishes_norm |
+                                   #   establishes_anomaly | establishes_category |
+                                   #   establishes_sequence
+      punchline_action: null       # [STRUCTURED] affirms | negates | redirects |
+                                   #   literalizes | figurizes | recategorizes
+      reading_switch: null         # [STRUCTURED] literal_to_figurative |
+                                   #   figurative_to_literal | general_to_specific |
+                                   #   specific_to_general | none
+
+    pivot_locus: ""                # [STRUCTURED] logical | affective | both
+                                   #   Where the recontextualization happens.
+
+    resolution_requires: []        # [STRUCTURED] multi-select:
+                                   #   shared_experience | world_knowledge |
+                                   #   character_knowledge | wordplay_recognition |
+                                   #   cultural_reference
+
+  # --- Structure layer -----------------------------------------------------
+
+  structure:
+    primary_template: ""           # [STRUCTURED] from vocabularies/templates.yaml.
+                                   #   Single-valued. Mutually exclusive. The
+                                   #   dominant rhetorical shape of the joke.
+
+    secondary_templates: []        # [STRUCTURED] multi-select from same vocab.
+                                   #   Templates the joke also uses within the
+                                   #   primary shape. Optional; often empty.
+
+    subversions_applied: []        # [STRUCTURED] list of {type, at}
+                                   #   type from vocabularies/subversions.yaml
+                                   #   at is a structural event name
+
+    has_tag: false                 # [STRUCTURED] boolean
+
+    tag_function: null             # [STRUCTURED] extends_punchline | reframes |
+                                   #   undercuts | callbacks_earlier | null
+
+    tag_has_own_pivot: null        # [STRUCTURED] boolean; rare edge case where
+                                   #   the tag is almost a second joke
+
+  # --- Narrative layer -----------------------------------------------------
+
+  narrative:
+    callbacks_to: []               # [STRUCTURED] list of prior joke_ids
+    callback_is_primary_pivot: null  # [STRUCTURED] boolean
+    running_premise: null          # [STRUCTURED] named premise id, from
+                                   #   engine/premises/ if applicable
+    position_in_set: null          # [STRUCTURED] opener | mid_set | closer |
+                                   #   standalone
+
+# ============================================================================
+# PERFORMANCE (specific to this delivery)
+# ============================================================================
+#
+# Populated in Pass 3 (aloud read). Most values are DEVIATIONS from the
+# performer's defaults in engine/performers/{performer}.yaml. Use the value
+# `default` when the performance matches the performer's default for that
+# field, instead of restating it.
+
+performance:
+
+  performer: ""                    # [STRUCTURED] performer id
+
+  # --- Delivery layer ------------------------------------------------------
+
+  delivery:
+    cadence: ""                    # [STRUCTURED] from vocabularies/cadence.yaml
+                                   #   or `default`
+    pause_placement: []            # [STRUCTURED] multi-select:
+                                   #   before_punchline | before_tag |
+                                   #   mid_setup_for_emphasis | terminal
+    repetition: null               # [STRUCTURED] null or
+                                   #   {phrase_gloss: str [GLOSS sub-field],
+                                   #    count: int, at: [events]}
+    vocal_register_shifts: []      # [STRUCTURED] list of {at, direction}
+                                   #   direction from vocabularies/
+                                   #   register-shifts.yaml
+    estimated_duration_seconds: null  # [STRUCTURED]
+
+  # --- Voice layer ---------------------------------------------------------
+
+  voice:
+    persona_markers: []            # [STRUCTURED] deviations only;
+                                   #   values from
+                                   #   vocabularies/persona-markers.yaml
+    signature_phrases: []          # [GLOSS]      exact phrases if load-bearing
+                                   #              to this specific joke
+    register: ""                   # [STRUCTURED] `default` or value from
+                                   #   vocabularies/registers.yaml
+    editorializes:
+      present: null                # [STRUCTURED] true | false
+      kind: null                   # [STRUCTURED] strong | weak | ironized | null
+
+  # --- Affective layer -----------------------------------------------------
+
+  affective:
+    default_register:
+      valence: null                # [STRUCTURED] integer -3 to +3
+                                   #   negative=cool/detached,
+                                   #   positive=warm/vulnerable
+      arousal: null                # [STRUCTURED] integer -3 to +3
+                                   #   negative=low-energy, positive=high-energy
+    trajectory: null               # [STRUCTURED] optional list of {at, register}
+                                   #   anchored to structural events
+    shifts_are_load_bearing: null  # [STRUCTURED] boolean; relevant only if
+                                   #   trajectory is populated
+    deviates_from_performer_default: null  # [STRUCTURED] boolean
+
+  # --- Relational layer ----------------------------------------------------
+
+  relational:
+    positioning:
+      default: ""                  # [STRUCTURED] from vocabularies/positioning.yaml
+                                   #   lateral_observer | above | below | with
+      trajectory: null             # [STRUCTURED] optional; list of {at, value}
+                                   #   if positioning shifts mid-joke
+
+    audience_implication: ""       # [STRUCTURED] co_observer | target |
+                                   #   accomplice | witness
+
+    vulnerability:
+      personal_exposure: null      # [STRUCTURED] integer 0-5: how much of
+                                   #   self is revealed
+      emotional_risk: null         # [STRUCTURED] integer 0-5: how affected the
+                                   #   performer is by what's revealed
+                                   #   (orthogonal to exposure)
+
+    shared_experience:
+      required: null               # [STRUCTURED] boolean
+      universality: null           # [STRUCTURED] universal | common | niche |
+                                   #   performer_specific | null
+      comprehensibility_without_experience: null  # [STRUCTURED] integer 0-5
+
+    performed_relatability:
+      present: null                # [STRUCTURED] boolean
+      intensity: null              # [STRUCTURED] 0.0-1.0 if present
+
+# ============================================================================
+# META
+# ============================================================================
+
+meta:
+  comments_on_form: null           # [STRUCTURED] null | joke | performance | both
+  breaks_fourth_wall: null         # [STRUCTURED] null | joke | performance | both
+
+# ============================================================================
+# Analysis metadata
+# ============================================================================
+
+analysis:
+
+  # --- Commutation test (Pass 4) -------------------------------------------
+  #
+  # load_bearing_element and removable_elements reference STRUCTURED fields
+  # by dotted path so the engine can learn which fields across jokes tend to
+  # be load-bearing. The gloss sub-fields are for human review only.
+
+  commutation:
+    load_bearing_element:
+      field_path: ""               # [STRUCTURED] dotted path into this
+                                   #   annotation, e.g.,
+                                   #   "joke.content.specificity.trajectory"
+                                   #   or "performance.affective.trajectory"
+                                   #   or "joke.structure.subversions_applied[0]"
+      gloss: ""                    # [GLOSS]      human-readable description
+    removable_elements:            # [STRUCTURED] list of field_paths
+      - field_path: ""
+        gloss: ""                  # [GLOSS]
+    uncertain_elements:            # [STRUCTURED] commutation was ambiguous;
+      - field_path: ""             #   flag for weekly review
+        gloss: ""                  # [GLOSS]
+
+  # --- Voice attribution (weekly cross-cutting pass) -----------------------
+
+  voice_portability:               # all [STRUCTURED]
+    mort: null                     # portable | not_portable |
+                                   # portable_with_adaptation
+    cece: null                     # Add roster members as they're defined
+
+  # --- Adversarial review (Pass 5) -----------------------------------------
+
+  adversarial:
+    counterarguments_considered:
+      - alternative: ""            # [GLOSS] the alternative reading
+        why_rejected: ""           # [GLOSS] why it was rejected
+    confidence: null               # [STRUCTURED] low | medium | high
+
+# ============================================================================
+# Free-text notes
+# ============================================================================
+#
+# The schema-gap detector. Everything here is [GLOSS]. Repeated patterns
+# across many notes fields signal new structured fields to add.
+
+notes: |
+  Free-form observations about this joke that the schema doesn't capture.
+  Things to record here:
+    - Phenomena that don't fit existing fields
+    - Uncertainty about classifications (with the specific uncertainty)
+    - Connections to other annotated jokes worth investigating
+    - Anything that felt like it mattered but had nowhere to go
+
+# ============================================================================
+# Concept nodes — reference section (not part of the annotation)
+# ============================================================================
+#
+# Concepts referenced in this annotation's content.concepts and pivot_concept
+# fields are not bare strings. They're typed nodes living in engine/concepts/.
+# Each concept node looks like:
+#
+#   # engine/concepts/parking_garages.yaml
+#   node_id: parking_garages
+#   gloss: "Multi-level car parking structures"   # [GLOSS]
+#   dimensions:                                    # all [STRUCTURED]
+#     domain: [domestic_life, urban_infrastructure]
+#     specificity: 3
+#     register: neutral
+#     valence: -1                  # slightly negative associations
+#     arousal: -1                  # low-energy
+#     physicality: physical
+#     typicality: mundane
+#     era: contemporary
+#   attested_in:                   # [STRUCTURED] jokes that use this concept
+#     - seinfeld_s03e14_opening_01
+#   adjacencies:                   # [STRUCTURED] concepts that have shown up
+#                                  # as productive pairings in annotated jokes
+#     - node_id: memory
+#       shared_axes: [specificity, mundane_frustration]
+#       attested_in: [seinfeld_s03e14_opening_01]
+#
+# Concept-node files are the engine's knowledge graph. Creating a concept
+# is a schema-level action logged in schema-changelog.md. Adjacencies are
+# NOT hand-authored — they're populated from annotations by a script that
+# scans content.concepts fields and records co-occurrences with their
+# shared feature axes.

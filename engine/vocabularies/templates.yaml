@@ -1,0 +1,190 @@
+# Structural Templates
+#
+# The rhetorical shape of the joke.
+# Referenced by schema: joke.structure.primary_template (single-valued)
+#                       joke.structure.secondary_templates (multi-valued)
+#
+# See README.md for definition format.
+
+mundane_as_monumental:
+  criterion: |
+    The joke applies the rhetorical gravity (frame, structure, register,
+    grammatical markers) typically reserved for important or mysterious
+    subjects to a trivial one. The incongruity lives in the mismatch
+    between the grammar of importance and the triviality of content.
+    The subject matter does not change; the elevated frame does the
+    comedic work.
+
+  positive_example: |
+    "What's the deal with airline food?" (Jerry Seinfeld, ubiquitous)
+    The frame "what's the deal with X" is conventionally reserved for
+    genuine mysteries or substantive concerns. Applied to airline
+    snacks, the frame's formality against the subject's triviality is
+    the mechanism. Subject matter is not reframed; the frame itself
+    is the joke.
+
+  negative_example: |
+    "Airline food is terrible, and here's three reasons why."
+    NOT mundane_as_monumental. This is straightforward complaint — no
+    elevated-register frame being mismatched against trivial content.
+    The subject is trivial and the treatment is also trivial.
+
+  distinguished_from:
+    escalation: |
+      Mundane_as_monumental applies importance-frame once and sustains
+      it without incrementing. Escalation builds intensity across
+      multiple beats. The two can co-occur (escalating
+      mundane-as-monumental is common — the frame stays elevated while
+      specificity escalates).
+
+    false_equivalence: |
+      False_equivalence pairs two unequal things as equivalents within
+      the joke. Mundane_as_monumental elevates the mundane without
+      pairing it with a specific important counterpart — the
+      importance is implied by the frame, not named.
+
+    reductio: |
+      Reductio argues a position to absurd conclusion. Mundane_as_
+      monumental doesn't argue; it applies a frame. Test: is there
+      a logical argument being taken too far (reductio), or a register
+      mismatch being sustained (mundane_as_monumental)?
+
+escalation:
+  criterion: |
+    The joke builds by incrementing a feature (specificity, absurdity,
+    intensity, commitment) across multiple beats. Each beat commits
+    harder than the last in the same direction. The humor lives in
+    the accumulation, not in a single pivot. Removing any single beat
+    would weaken but not kill the joke; removing the escalation
+    structure would.
+
+  positive_example: |
+    A bit that starts "parking garages are confusing," progresses to
+    "you can't remember the level," escalates to "you can't remember
+    the color-coded sign," and arrives at "you just stand there
+    pressing the button, hoping your car will respond." Each beat more
+    specific or more committed to the frustration than the last.
+
+  negative_example: |
+    "Parking garages are confusing; I always forget where I parked."
+    NOT escalation. Single observation, no building across beats.
+    The joke lands or doesn't in one move.
+
+  distinguished_from:
+    mundane_as_monumental: |
+      See mundane_as_monumental's distinguished_from.
+
+    reductio: |
+      Reductio escalates specifically toward an absurd conclusion from
+      a reasonable premise, and the escalation is logical
+      (argumentative). Escalation can increment on any feature
+      (specificity, imagery, commitment); reductio is the
+      logical-argument subset.
+
+    anthropomorphization: |
+      Escalation is about building. Anthropomorphization is about
+      treating something non-human as human (often while also escalating
+      specificity of the treatment). Can co-occur — Cece's territory
+      often has escalating anthropomorphization.
+
+reductio:
+  criterion: |
+    The joke accepts a reasonable-seeming premise and follows its
+    implications with logical rigor to an absurd conclusion. The
+    humor is in the logical validity of the absurd result — the
+    conclusion follows from the premise, and the premise looked fine
+    until you saw where it led.
+
+  positive_example: |
+    "If humans evolved from monkeys, why are there still monkeys?"
+    (Setup as joke form, not as sincere question)
+    Premise accepted; logical consequence drawn; absurd conclusion
+    presented as if forced by the logic. The humor lives in the mock-
+    seriousness of the reasoning chain.
+
+  negative_example: |
+    "I love parking garages — they're a wonderful test of my memory."
+    NOT reductio. Single observational statement with a reframe; no
+    logical chain, no accepted premise driven to conclusion.
+
+  distinguished_from:
+    escalation: |
+      See escalation's distinguished_from.
+
+    false_equivalence: |
+      False_equivalence equates two unequal things in a single move.
+      Reductio builds a chain to an absurd conclusion. Reductio often
+      ENDS in false_equivalence, but the template is the argumentative
+      structure, not the conclusion.
+
+    literalization: |
+      Reductio can use literalization in individual steps (taking
+      something figurative literally as part of the chain), but the
+      template is the chain itself, not the reading-mode switch.
+
+anthropomorphization:
+  criterion: |
+    The joke treats a non-human entity (object, concept, feeling,
+    institution, abstract phenomenon) as if it had human
+    characteristics — agency, interiority, social behavior, motives.
+    Specificity of the anthropomorphization is often where the humor
+    intensifies.
+
+  positive_example: |
+    "The Little Guilt that lives in my kitchen drawer." (Cece-style)
+    Guilt is treated as a small entity with a dwelling. The
+    specificity of the dwelling (kitchen drawer, not just "somewhere")
+    and the diminutive framing ("Little") commit fully to the
+    anthropomorphic frame.
+
+  negative_example: |
+    "Parking garages are like memory puzzles." NOT anthropomorphization.
+    Parking garages are being compared to a non-human abstraction
+    (puzzles), not given human characteristics. This is closer to
+    reframe or false_equivalence.
+
+  distinguished_from:
+    false_equivalence: |
+      False_equivalence pairs two things as equivalent. Anthropomorph-
+      ization gives human traits to one non-human thing. Test: is the
+      joke comparing A to B (false_equivalence) or giving A human
+      qualities (anthropomorphization)?
+
+    escalation: |
+      Anthropomorphization describes the move (treat non-human as
+      human). Escalation describes a building structure. They often
+      co-occur — anthropomorphization is more interesting when
+      escalated to specific absurd detail.
+
+false_equivalence:
+  criterion: |
+    The joke treats two unequal things as if they were equivalent,
+    usually by applying the same descriptive frame, standard, or
+    comparison to both. The humor is in the mismatch of the pairing.
+
+  positive_example: |
+    "My therapist and my drug dealer give me roughly the same advice."
+    Two unlike relationships are equated through a shared property
+    (advice-giving). The mismatch between the contexts of the advice
+    is the joke.
+
+  negative_example: |
+    "Airline food is the worst." NOT false_equivalence. Single
+    subject, single claim, no comparison between unequal things.
+
+  distinguished_from:
+    category_error: |
+      Category_error imports a framework from one domain into another
+      (corporate rules into friendship). False_equivalence pairs two
+      things directly as equivalents without necessarily importing a
+      framework. Test: is there a framework being imported
+      (category_error) or just two things being called equivalent
+      (false_equivalence)?
+
+    anthropomorphization: |
+      See anthropomorphization's distinguished_from.
+
+    reductio: |
+      Reductio builds toward an absurd conclusion. False_equivalence
+      can appear AS that conclusion, but the template is the
+      equivalence-pairing itself, not the chain leading to it.

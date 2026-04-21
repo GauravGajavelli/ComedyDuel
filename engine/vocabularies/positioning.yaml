@@ -1,0 +1,153 @@
+# Positioning
+#
+# The comedian's stance relative to the audience during this joke.
+# Referenced by schema: performance.relational.positioning.default
+#                       performance.relational.positioning.trajectory
+#
+# Single-valued at each point in time. See README.md for definition format.
+
+lateral_observer:
+  criterion: |
+    The comedian positions themselves as having noticed the same things
+    the audience has noticed but never articulated. Neither above nor
+    below the audience; alongside them. The implicit frame is "you and
+    I both know this." Grammatical tells include second-person "you"
+    used generically ("you know how when you're in an airport...") and
+    presumption of shared experience without argument.
+
+  positive_example: |
+    Most Seinfeld openings. "You know when you're in a parking garage,
+    and you can't remember what level you parked on..." The comedian
+    is not teaching the audience something new, not revealing something
+    vulnerable, not challenging them. He's naming a shared experience.
+
+  negative_example: |
+    "Let me tell you about the time I had a panic attack at the
+    grocery store." NOT lateral. The comedian is revealing something
+    the audience hasn't necessarily shared. Depending on relational
+    work, this is BELOW (vulnerable self-disclosure) or possibly WITH
+    (if the audience is invited into alignment with the disclosure).
+
+  distinguished_from:
+    above: |
+      Above positions the comedian as having MORE insight,
+      sophistication, or knowledge than the audience. Lateral presumes
+      equality. Test: does the joke's humor depend on the comedian
+      knowing something the audience doesn't (above), or on the
+      comedian articulating something the audience already implicitly
+      knows (lateral)?
+
+    below: |
+      Below positions the comedian as vulnerable, deficient, or having
+      less than the audience. Lateral presumes mutual competence. Test:
+      is the comedian exposing personal weakness (below) or shared
+      experience (lateral)?
+
+    with: |
+      With is emotionally warmer than lateral. With actively aligns the
+      comedian and audience against a third thing (a situation, a
+      person, a system). Lateral is neutral observation — no shared
+      opposition implied. Test: is there a third party being laughed
+      at or frustrated with (with), or is the joke just noting
+      something (lateral)?
+
+above:
+  criterion: |
+    The comedian positions themselves as having more insight,
+    sophistication, knowledge, or competence than the audience (or
+    than the subject of the joke). The joke's humor depends on that
+    asymmetry — something the comedian sees that the audience
+    (or subject) does not.
+
+  positive_example: |
+    A comedian describing the absurdity of something they've seen that
+    the audience hasn't, in a way that assumes the audience needs to
+    be shown. "I spent a month working at a tech startup. Let me
+    explain what those people actually do all day." The setup
+    positions the comedian as having access the audience doesn't.
+
+  negative_example: |
+    "I'll tell you what — those airport security lines, right?"
+    NOT above. The "I'll tell you what" is a rhetorical frame, not a
+    knowledge claim. The content assumes shared experience with
+    airports, not privileged access. This is LATERAL with a Mort-style
+    persona marker.
+
+  distinguished_from:
+    lateral_observer: |
+      See lateral_observer's distinguished_from.
+
+    below: |
+      Above and below are opposites on the same axis. Above claims
+      more; below claims less. They rarely co-occur.
+
+    with: |
+      Above and with can co-occur — a comedian can both have superior
+      insight (above) and ally with the audience against a third
+      party (with). But above without with is cold/distant; with
+      without above is warm/equal.
+
+below:
+  criterion: |
+    The comedian positions themselves as vulnerable, deficient, less
+    competent, or more embarrassed than the audience. Self-deprecation
+    is the common form, but below can also include genuine emotional
+    exposure or admission of weakness without ironic framing.
+
+  positive_example: |
+    Maria Bamford bits where she describes mental-health experiences
+    with vulnerability — not played for victim narrative, but genuinely
+    admitting experiences most audience members haven't had in that
+    form. The audience is in the more-stable position; the comedian
+    discloses from below.
+
+  negative_example: |
+    "I'm terrible at dating, let me tell you." NOT necessarily below —
+    this phrase is often performative self-deprecation that actually
+    positions the comedian as above (the insight that they see
+    themselves clearly). Below requires the vulnerability to be real
+    within the joke's frame, not a rhetorical move. Context-dependent.
+
+  distinguished_from:
+    lateral_observer: |
+      See lateral_observer's distinguished_from.
+
+    above: |
+      See above's distinguished_from.
+
+    with: |
+      Below and with can co-occur when the comedian discloses
+      vulnerability as a way of aligning with an audience who shares
+      it. But pure below (vulnerability without alignment) exists;
+      pure with (alignment without vulnerability) exists.
+
+with:
+  criterion: |
+    The comedian actively aligns themselves with the audience against
+    a third element (a situation, system, person, institution). The
+    "we" is load-bearing — the joke frames comedian and audience as
+    sharing a stance, not just sharing observation. Warmer than
+    lateral; implies solidarity rather than neutral noticing.
+
+  positive_example: |
+    "You know what we've all been doing for years? Pretending we know
+    what a 'hybrid meeting' is supposed to be." The "we" is not the
+    generic "you" of lateral — it's specifically "us, together,
+    against this ridiculous thing we've all been forced into."
+    Shared stance against a third party.
+
+  negative_example: |
+    "You know how in a parking garage you forget where you parked?"
+    NOT with. This is lateral. No third party, no shared stance —
+    just shared observation. The "you" here is generic, not ally-
+    building.
+
+  distinguished_from:
+    lateral_observer: |
+      See lateral_observer's distinguished_from.
+
+    above: |
+      See above's distinguished_from.
+
+    below: |
+      See below's distinguished_from.
