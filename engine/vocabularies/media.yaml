@@ -1,0 +1,26 @@
+# Source Media Types
+#
+# The medium in which the joke was originally delivered. Referenced by
+# schema: source.medium
+#
+# Single-valued. Enumerated types rather than contrast-based definitions,
+# because the distinctions are external (show formats) rather than
+# analytical. Each entry just needs a criterion — no positive/negative
+# example or distinguished_from required for this vocabulary.
+#
+# ============================================================================
+# POPULATE FROM ANNOTATION
+# ============================================================================
+#
+# Likely values (do NOT add without attestation):
+#   stand_up          — standalone stand-up performance
+#   sitcom_opener     — stand-up segment within a sitcom (Seinfeld openings)
+#   special           — dedicated comedy special
+#   podcast           — podcast or audio format
+#   late_night        — late-night TV monologue or desk bit
+#   written           — printed or online written comedy
+#   other             — fallback; if used repeatedly, split into new values
+#
+# Medium is one of the easier vocabularies to populate reactively, because
+# each new annotation's source is known at transcription time. Add entries
+# as new media types come up.

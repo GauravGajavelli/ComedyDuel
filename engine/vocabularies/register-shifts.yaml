@@ -1,0 +1,25 @@
+# Vocal Register Shifts
+#
+# Types of mid-joke shifts in vocal register. Referenced by schema:
+# performance.delivery.vocal_register_shifts (multi-valued list of
+# {at, direction} pairs).
+#
+# See README.md for definition format.
+#
+# ============================================================================
+# POPULATE FROM ANNOTATION
+# ============================================================================
+#
+# This file is intentionally empty. Register shifts are identified during
+# Pass 3 aloud reads. A shift's direction needs a named vocabulary value
+# — "shifts higher" is not precise enough; the value should name what
+# KIND of shift (e.g., from_observation_to_commitment,
+# from_deadpan_to_exasperation).
+#
+# NOTE: Not every "voice change mid-joke" is a register shift worth
+# annotating. Only shifts that are load-bearing for the joke (where
+# removing the shift would weaken or kill the joke) need capture. Small
+# natural prosodic variation is not a register shift.
+#
+# The commutation test (Pass 4) is the right check: if you remove the
+# shift and the joke still works the same, the shift was ornamental.

@@ -1,0 +1,24 @@
+# Delivery Cadence
+#
+# Rhythm patterns in joke delivery. Referenced by schema:
+# performance.delivery.cadence
+#
+# Single-valued. See README.md for definition format (criterion,
+# positive example, near-miss negative, distinguished_from).
+#
+# ============================================================================
+# POPULATE FROM ANNOTATION
+# ============================================================================
+#
+# This file is intentionally empty. Cadence patterns emerge from aloud-read
+# passes during annotation — you hear them before you can name them. Add
+# entries here as you identify distinct patterns in real performances.
+#
+# Cadence is tricky because the categories are not fully theorized in comedy
+# literature — you will be inventing distinctions as you go. That's fine, but
+# it means extra care is needed with the near-miss negative examples: two
+# cadence values that can't be clearly distinguished by a near-miss are
+# probably one value with variation.
+#
+# Expect 5–8 values total by the time the vocabulary stabilizes. If you find
+# yourself at 15+, some values likely need merging.

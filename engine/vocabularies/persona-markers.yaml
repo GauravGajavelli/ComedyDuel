@@ -1,0 +1,34 @@
+# Persona Markers
+#
+# Specific identity markers that flag a comedian's voice — characteristic
+# sentence shapes, grammatical preferences, recurring framings, signature
+# moves. Referenced by schema: performance.voice.persona_markers
+#   (multi-valued; deviations from performer default only)
+#
+# See README.md for definition format.
+#
+# ============================================================================
+# POPULATE FROM ANNOTATION
+# ============================================================================
+#
+# This file is intentionally empty. Persona markers are deeply
+# performer-specific and are best identified by annotating multiple jokes
+# from the same performer, then noticing which moves recur.
+#
+# Examples of what persona markers look like (do NOT add these without
+# attestation — they're illustrative, not prescriptive):
+#   - second_person_generalization (Seinfeld's use of "you" as generic "one")
+#   - whats_the_deal_frame (Seinfeld's elevated-frame-for-trivial-content)
+#   - i_tell_you_what (Mort's deadpan observation opener)
+#   - capitalized_absurd_concepts (Cece's anthropomorphized proper nouns)
+#
+# The way to populate: after 5+ jokes by the same performer are annotated,
+# scan their annotations and identify recurring phrases or structures.
+# Those become candidate persona markers. Each needs the full definition
+# block, with the positive example being a specific joke that uses the
+# marker, and the near-miss being a joke that LOOKS like it uses the
+# marker but is actually doing something else.
+#
+# This is one of the vocabularies most prone to over-growth. Keep the bar
+# high: a persona marker must be load-bearing for voice identity, not
+# just a phrase the comedian happens to use.

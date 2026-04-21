@@ -1,0 +1,29 @@
+# Voice Registers
+#
+# Characteristic voice registers a comedian can occupy — the texture of
+# how they sound. Referenced by schema: performance.voice.register
+#
+# Single-valued. Use `default` when the register matches the performer's
+# default register (in engine/performers/{performer}.yaml) rather than
+# restating it here.
+#
+# See README.md for definition format.
+#
+# ============================================================================
+# POPULATE FROM ANNOTATION
+# ============================================================================
+#
+# This file is intentionally empty. Registers are identified through
+# aloud-read annotation and performer-default analysis. Add entries as
+# real performances reveal distinct registers.
+#
+# NOTE: Register (this vocabulary) is about VOICE texture — who the
+# comedian SOUNDS like while performing. Do not confuse with affect
+# (valence/arousal on affect-axes.yaml), which is about the emotional
+# register of the joke itself. The same register can carry different
+# affects, and the same affect can live in different registers.
+#
+# If you're uncertain whether a quality belongs in register or affect,
+# the test: can the same comedian keep that quality across vastly
+# different emotional content? If yes, it's register (it's part of who
+# they are). If no, it's affect (it's part of what this joke feels like).

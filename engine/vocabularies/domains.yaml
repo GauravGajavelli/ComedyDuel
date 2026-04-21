@@ -1,0 +1,28 @@
+# Subject-Matter Domains
+#
+# Broad areas of life a joke is about. Multi-valued (jokes often span
+# multiple domains). Referenced by schema: joke.content.primary_domain
+#
+# DIFFERENT FORMAT from contrast-based vocabularies (see README.md):
+# domains are intentionally overlap-tolerant, so they don't need
+# distinguished_from blocks. Each entry needs a criterion (functional
+# definition — what kinds of concepts belong here) and a positive example.
+#
+# ============================================================================
+# POPULATE FROM ANNOTATION
+# ============================================================================
+#
+# This file is intentionally empty. Domains should be added as they're
+# needed during annotation, not pre-populated from theory. The goal is
+# for the domain list to reflect the jokes you're actually working with,
+# not the domains you think jokes SHOULD be about.
+#
+# When adding a domain:
+# 1. Use it in an annotation first (never add a domain speculatively)
+# 2. Add entry here with criterion and positive example
+# 3. Log in working/schema-changelog.md
+#
+# Domains are deliberately coarse — aim for ~10–20 total across the
+# whole corpus, not 50+. If you find yourself wanting many subtly
+# different domain values, the domain layer is probably trying to do
+# work that should happen at the concept layer instead.
