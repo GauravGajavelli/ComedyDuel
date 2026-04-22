@@ -523,6 +523,9 @@ comedy-duel/
       _registry.yaml               # canonical list of all concept node_ids
       {node_id}.yaml               # one file per concept, with dimensions
                                    #   and attested-in data
+    routines/                      # routine-level metadata for multi-joke bits
+      {routine_id}.yaml            # shared source, running_premise,
+                                   #   ordered list of member joke_ids
     performers/                    # voice-level defaults per roster member
       mort.yaml
       cece.yaml

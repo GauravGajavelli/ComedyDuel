@@ -80,6 +80,7 @@ Starter vocabularies provided:
 - `positioning.yaml` — comedian's stance relative to audience
 - `subversions.yaml` — moves that deliberately break expectations (formulaic defenses)
 - `affect-axes.yaml` — numeric scales for affective register (different format)
+- `specificity.yaml` — 1–5 scale anchors for content specificity (different format)
 
 Vocabularies NOT shipped with starter values — to be populated entirely from annotation:
 - `domains.yaml` — subject-matter domains

@@ -4,6 +4,14 @@
 # Referenced by schema: joke.logic.incongruity_type
 #
 # Single-valued. Mutually exclusive. See README.md for definition format.
+#
+# NOTE (schema-changelog v0.2): "Reframe" has been removed as a selectable
+# value. Reframe was functioning as a catch-all genus covering every other
+# value in the vocabulary — literalization, figuration, category_error, and
+# others are all species of reframe. Every joke was classified as reframe
+# by default, and the category stopped carrying information. Use one of the
+# specific species below. If no species fits, log a vocabulary gap in
+# working/questions.md; do not default to a catch-all.
 
 reversal:
   criterion: |
@@ -14,142 +22,78 @@ reversal:
   positive_example: |
     "I used to do drugs. I still do, but I used to, too." (Mitch Hedberg)
     Setup establishes "used to" (implying past-only, no longer). Punchline
-    affirms both past and present states, negating the implied
-    no-longer. The truth value of the setup's implicit claim is flipped.
+    affirms both past and present states, negating the implied no-longer.
+    The truth value of the setup's implicit claim is flipped.
 
   negative_example: |
     "I saw a sign that said 'Watch for children.' I thought, that sounds
     like a fair trade." (Mitch Hedberg)
     Looks like reversal because there's a sharp turn, but this is
-    LITERALIZATION. Nothing is negated — the sign's text is accepted
-    as-is and re-read with a different interpretive frame. Classify
-    as literalization, not reversal.
+    LITERALIZATION. Nothing is negated — the sign's text is accepted as-is
+    and re-read with a different interpretive frame.
 
   distinguished_from:
-    reframe: |
-      Reversal operates on truth-values (X becomes not-X). Reframe
-      operates on interpretation (X is now understood as Y, but X is
-      still true). Test: if the setup's claim is still true in the
-      punchline but means something different, it's reframe. If the
-      setup's claim is negated or contradicted, it's reversal.
-
     literalization: |
-      Literalization is a specific kind of reframe — a figurative
-      reading gets replaced by a literal one. If the turn is about
-      reading mode (figurative vs literal), classify as literalization
-      regardless of whether anything gets negated in the process.
+      Literalization is a reading-mode switch (figurative → literal).
+      Reversal is a truth-value flip. Test: if the setup's claim is still
+      true in the punchline but means something different, it's
+      literalization. If the setup's claim is negated or contradicted,
+      it's reversal.
 
     category_error: |
-      Category_error imports a framework from one domain to another in
-      a way that doesn't fit. No truth-value flip, just a domain
-      mismatch. Test: is something being negated, or is an inappropriate
-      framework being applied?
+      Category_error imports a framework from one domain into another
+      where it doesn't fit. No truth-value flip; the joke works by
+      misapplication. Test: is something being negated (reversal), or is
+      an inappropriate framework being applied (category_error)?
 
-reframe:
-  criterion: |
-    The setup establishes an interpretation of its content; the
-    punchline reveals or substitutes a different interpretation of
-    the same content. The setup's literal content remains true; what
-    changes is what it MEANS.
-
-  positive_example: |
-    A joke where someone describes their morning routine as a series
-    of small failures, ending by reframing the whole thing as "my
-    commute." The morning activities are still what was described;
-    the frame shifts from "bad morning" to "normal commute."
-
-  negative_example: |
-    "I used to be indecisive. Now I'm not so sure." (Tommy Cooper)
-    Looks like reframe because there's a shift, but this is REVERSAL.
-    The claim of having changed is negated by "now I'm not so sure" —
-    the past state is still present. Truth value flipped, not
-    interpretation shifted.
-
-  distinguished_from:
-    reversal: |
-      See reversal's distinguished_from.
-
-    literalization: |
-      Literalization is a subset of reframe. Use literalization when
-      the specific move is a figurative-to-literal reading switch.
-      Use reframe when the switch is between two interpretations,
-      neither of which is a literalization.
-
-    category_error: |
-      Reframe shifts a reading within the same domain. Category_error
-      imports a framework from a different domain. Test: does the
-      punchline stay within the setup's conceptual territory
-      (reframe), or drag in a framework from elsewhere
-      (category_error)?
+    scope_expansion: |
+      Scope_expansion generalizes a specific observation to universal
+      scope. The specific claim remains true; it's just now scoped as
+      a law. Test: does the punchline negate the setup (reversal), or
+      lift it to universality (scope_expansion)?
 
 literalization:
   criterion: |
-    A specific kind of reframe: the setup uses figurative language,
-    idiom, or conventional figurative reading; the punchline treats
-    it literally, as if the figurative reading weren't available.
+    The setup uses figurative language, idiom, or conventional figurative
+    reading; the punchline treats it literally, as if the figurative
+    reading weren't available. The literal reading replaces the
+    figurative one as the joke's operative interpretation.
 
   positive_example: |
     "I haven't slept for ten days, because that would be too long."
-    (Mitch Hedberg)
-    The idiom "haven't slept for days" is conventionally figurative
-    (meaning poor sleep). Punchline treats it literally as
+    (Mitch Hedberg) The idiom "haven't slept for days" is conventionally
+    figurative (poor sleep). Punchline treats it literally as
     "ten consecutive days of being awake," and notes that would be
     impossible. Figurative reading replaced with literal.
 
   negative_example: |
-    "What's the deal with airline food?"
-    Looks like it might be literalization (taking "deal" literally)
-    but isn't — the "deal with X" frame is being applied to trivial
-    subject matter, not being read literally. Classify as
-    MUNDANE_AS_MONUMENTAL (a template, not an incongruity type) or
-    category_error depending on what you're tagging.
+    "What's the deal with airline food?" (Jerry Seinfeld)
+    Looks like it might be literalization (taking "deal" literally) but
+    isn't — the "deal with X" frame is being applied to trivial subject
+    matter, not being read literally. This is REGISTER_DEFLATION (at the
+    incongruity level) and MUNDANE_AS_MONUMENTAL (at the template level).
 
   distinguished_from:
-    reframe: |
-      Literalization is a proper subset of reframe. Use literalization
-      when the reading-mode switch is figurative-to-literal. Use
-      reframe for other kinds of interpretation shifts.
-
     figuration: |
-      Figuration is the opposite direction: literal setup, figurative
-      punchline. Same mechanism, inverted.
+      Mirror image. Literalization is figurative → literal. Figuration
+      is literal → figurative. Same mechanism, inverted.
 
-category_error:
-  criterion: |
-    The joke applies a framework, set of rules, or mode of reasoning
-    from one domain to a situation where it doesn't belong. The humor
-    is in the misapplication. Unlike reframe, the punchline doesn't
-    shift reading within the setup's domain — it imports a foreign
-    framework.
+    reversal: |
+      See reversal's distinguished_from.
 
-  positive_example: |
-    Treating a friendship as if it were a corporate relationship
-    (PTO for emotional labor, quarterly reviews of the bond). The
-    framework of corporate HR is imported into a domain (friendship)
-    where it doesn't fit, and the mismatch is the joke.
-
-  negative_example: |
-    "I used to do drugs. I still do, but I used to, too." — NOT a
-    category_error. No framework is being imported from elsewhere;
-    the joke operates entirely within the domain of personal history.
-    This is REVERSAL.
-
-  distinguished_from:
-    reframe: |
-      See reframe's distinguished_from.
-
-    false_equivalence: |
-      False_equivalence treats two unequal things as equivalent within
-      a single comparative move. Category_error applies a framework
-      across domains. Test: is the joke making a two-thing comparison
-      (false_equivalence) or applying a rule-set inappropriately
-      (category_error)?
+    register_deflation: |
+      Literalization switches reading mode (figurative to literal).
+      Register_deflation keeps the same reading mode but delivers a
+      register-deflated answer. Test: is the punchline's content a
+      literal reading of figurative language (literalization), or a
+      tonally-deflated response within the same register (register_
+      deflation)?
 
 figuration:
   criterion: |
-    The setup uses literal language or a literal reading of a
-    situation; the punchline imposes a figurative reading that
-    wasn't signaled. Opposite direction from literalization.
+    The setup uses literal language or a literal reading of a situation;
+    the punchline imposes a figurative reading that wasn't signaled.
+    Opposite direction from literalization.
 
   positive_example: |
     "My therapist says I have a preoccupation with vengeance. We'll
@@ -165,12 +109,127 @@ figuration:
 
   distinguished_from:
     literalization: |
-      Figuration and literalization are mirror images. Literalization
-      is figurative → literal. Figuration is literal → figurative.
-      They share almost all other properties.
+      Mirror image. See literalization.
 
-    reframe: |
-      Figuration is a subset of reframe (specifically the
-      literal-to-figurative subset). Use figuration when the reading-
-      mode switch is specifically in that direction; reframe for other
-      interpretation shifts.
+    reversal: |
+      Reversal negates the setup. Figuration reads the setup as
+      figurative instead of literal; nothing is negated.
+
+category_error:
+  criterion: |
+    The joke applies a framework, set of rules, or mode of reasoning
+    from one domain to a situation where it doesn't belong. The humor
+    is in the misapplication. Unlike the reframe species above, the
+    punchline doesn't shift reading within the setup's domain — it
+    imports a foreign framework.
+
+  positive_example: |
+    Treating a friendship as if it were a corporate relationship
+    (PTO for emotional labor, quarterly reviews of the bond). The
+    framework of corporate HR is imported into a domain (friendship)
+    where it doesn't fit, and the mismatch is the joke.
+
+  negative_example: |
+    "I used to do drugs. I still do, but I used to, too." — NOT a
+    category_error. No framework is being imported from elsewhere;
+    the joke operates entirely within the domain of personal history.
+    This is REVERSAL.
+
+  distinguished_from:
+    reversal: |
+      See reversal's distinguished_from.
+
+    scope_expansion: |
+      Category_error crosses domains laterally (applying corporate-HR
+      framework to friendship). Scope_expansion extends scope
+      vertically (from specific instance to universal principle within
+      the same domain). Test: is the punchline importing a framework
+      from a DIFFERENT domain (category_error) or GENERALIZING within
+      the same domain (scope_expansion)?
+
+    register_deflation: |
+      Category_error is about domain mismatch — wrong framework applied
+      correctly. Register_deflation is about register mismatch within
+      the same domain — right framework applied in deflated tone. Can
+      be subtle; test by asking whether the framework applied in the
+      punchline comes from the same domain as the setup.
+
+register_deflation:
+  criterion: |
+    The setup establishes a register (often elevated, weighty,
+    philosophical, urgent) that implies a certain kind of payoff. The
+    punchline responds with a register-deflated answer — one that fits
+    the setup's domain but refuses its tonal demands. The incongruity
+    lives in the tonal mismatch between setup's implied register and
+    punchline's actual register.
+
+  positive_example: |
+    "Do you know what this is all about? You know, why we're here?
+    To be out, this is out..." (Jerry Seinfeld)
+    Setup's register ("do you know what this is all about, why we're
+    here") invokes philosophical inquiry, promising a weighty answer.
+    Punchline ("to be out, this is out") is a deflated tautology —
+    same domain (existence, purpose), different register (trivial).
+
+  negative_example: |
+    A joke that genuinely has a weighty answer delivered casually.
+    NOT register_deflation — the content is still weighty, just the
+    delivery is low-key. Register_deflation requires the ANSWER ITSELF
+    to be register-deflated, not merely the tone of delivery.
+
+  distinguished_from:
+    literalization: |
+      See literalization's distinguished_from.
+
+    category_error: |
+      See category_error's distinguished_from.
+
+    scope_expansion: |
+      Register_deflation keeps scope constant but deflates register.
+      Scope_expansion keeps register constant but expands scope. They
+      can co-occur — a universal principle stated in deflated register
+      combines both — but the PRIMARY move is whichever drives the
+      punchline's comedic force.
+
+scope_expansion:
+  criterion: |
+    The punchline takes a specific observation or local principle and
+    lifts it to universal scope — presenting as a universal law what
+    the setup established as a particular observation. The specific
+    claim remains true; the punchline's move is the expansion of its
+    scope.
+
+  positive_example: |
+    "Once you're out, you wanna get back. You wanna go to sleep, you
+    wanna get up, you wanna go out again tomorrow. Wherever you are in
+    life, it's my feeling, you've gotta go." (Jerry Seinfeld)
+    Setup establishes the specific "out-then-back" cycle. Punchline
+    ("wherever you are in life, you've gotta go") expands this local
+    observation to a universal principle about life itself. The
+    specific cycle is now scoped as cosmic law.
+
+  negative_example: |
+    A joke that generalizes from one example to "this is what people
+    do" — e.g., "my friend always does X; people are the worst."
+    NOT scope_expansion — this is just a lazy generalization, not a
+    punchline move. Scope_expansion requires the expansion itself to
+    be the comedic mechanism, framed as revelation rather than
+    extrapolation.
+
+  distinguished_from:
+    reversal: |
+      See reversal's distinguished_from.
+
+    category_error: |
+      See category_error's distinguished_from.
+
+    register_deflation: |
+      See register_deflation's distinguished_from.
+
+# Vocabulary gap log
+#
+# Known cases that didn't fit any existing value:
+# (none yet)
+#
+# When you log a gap, include the joke_id, the gloss that didn't fit,
+# and the nearest existing values you considered.

@@ -1,0 +1,72 @@
+# Specificity Scale
+#
+# Anchor-point descriptions for the specificity scale used in
+# joke.content.specificity.default_level and specificity.trajectory values.
+#
+# Referenced by schema: joke.content.specificity.*
+#
+# DIFFERENT FORMAT from contrast-based vocabularies (see README.md):
+# specificity is a bounded numeric scale. Each value has an anchor
+# description and a positive example, so you can calibrate the scale
+# against real jokes.
+
+specificity_scale:
+  description: |
+    How specific the joke's content operates. Specificity is about the
+    grain of the concepts and observations, not about their truth or
+    accuracy. A highly specific joke names a particular instance; an
+    abstract joke names a category.
+
+  anchors:
+    1: |
+      Abstract / universal. The joke operates at the level of broad
+      categories or life-in-general. "Life is complicated." No specific
+      instances, no named particulars.
+
+      Example: "Wherever you are in life, it's my feeling, you've gotta
+      go." (Seinfeld closing his go-out bit) — the universalized
+      principle, maximally abstract.
+
+    2: |
+      Loose category. The joke names a recognizable category without
+      committing to an instance. "Airports." "Relationships." "Mornings."
+
+      Example: "You know, airports." — names the domain but doesn't
+      zoom in.
+
+    3: |
+      Specific situation within a category. The joke names a typical
+      situation in the category but not a particular instance. "Airport
+      security lines." "The morning after you didn't sleep well."
+
+      Example: "You know how when you're in a parking garage..."
+      — names the situation with enough specificity to evoke it.
+
+    4: |
+      Detailed situation with specific attributes. The joke commits to
+      particulars that narrow the situation significantly. "Waiting at
+      baggage claim watching the same suitcase circle for the fourth
+      time."
+
+      Example: "You go: 'We gotta be getting back'." — specific
+      utterance, specific moment in the sequence.
+
+    5: |
+      Hyperspecific instance. The joke commits to a level of detail that
+      feels almost accidental in its precision. "A man who sells
+      replacement pieces for chess sets where the queen is missing."
+
+      Example: "the Little Guilt that lives in my kitchen drawer" — the
+      combination of capitalized proper noun, specific emotion, and
+      specific location achieves level 5.
+
+  calibration_notes: |
+    - Jokes often have a trajectory (e.g., starting at 2 and ending at
+      5). Use specificity.trajectory for these rather than trying to
+      pick a single default_level.
+    - When the joke explicitly operates on the tension between
+      abstraction and specificity (e.g., mundane_as_monumental applies
+      a universal frame to a level-4 detail), record both via trajectory.
+    - If you're uncertain between two adjacent levels, pick the higher
+      one. Specificity tends to be under-rated because readers
+      naturalize detail away.

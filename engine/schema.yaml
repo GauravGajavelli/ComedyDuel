@@ -115,13 +115,29 @@ joke:
                                    #              Readable for human review;
                                    #              not used by the engine.
 
-    incongruity_type: ""           # [STRUCTURED] from vocabularies/
-                                   #   incongruity-types.yaml
-                                   #   The mechanism by which the punchline
-                                   #   violates the setup (semantic reversal,
-                                   #   logical reversal, expectation reversal,
-                                   #   reframe, literalization, figuration,
-                                   #   category error, etc.)
+    incongruity_type:              # [STRUCTURED] mechanism(s) by which the
+                                   #   punchline violates the setup.
+                                   #   Values from vocabularies/incongruity-types.yaml.
+                                   #   Parallel structure to primary_template /
+                                   #   secondary_templates.
+      primary: ""                  # [STRUCTURED] required. The mechanism most
+                                   #   load-bearing for the joke — the one whose
+                                   #   removal would most damage the humor.
+                                   #   Single value from the vocabulary.
+      secondary: []                # [STRUCTURED] optional. Additional mechanisms
+                                   #   that operate SIMULTANEOUSLY with the
+                                   #   primary (not sequentially — that would be
+                                   #   multiple pivots, i.e., multiple jokes).
+                                   #   Each entry must survive its own commutation
+                                   #   check: would removing this mechanism
+                                   #   WEAKEN the joke (not kill it — killing
+                                   #   makes it primary)? If removal changes
+                                   #   nothing, the mechanism isn't really
+                                   #   operating and should not be listed.
+                                   #   Default to empty; populate only when a
+                                   #   secondary mechanism is genuinely active.
+                                   #   See protocols.md §"Secondary incongruity
+                                   #   types: when to populate".
 
     incongruity_operates_on:       # structured features about WHAT KIND of
                                    # expectation is being violated. Lets the
@@ -168,14 +184,33 @@ joke:
                                    #   the tag is almost a second joke
 
   # --- Narrative layer -----------------------------------------------------
+  #
+  # Connections to other jokes. Includes both loose narrative links (callbacks,
+  # running premises across a set) and tight routine structure (a sequence of
+  # jokes that build a single sustained bit).
 
   narrative:
     callbacks_to: []               # [STRUCTURED] list of prior joke_ids
     callback_is_primary_pivot: null  # [STRUCTURED] boolean
     running_premise: null          # [STRUCTURED] named premise id, from
                                    #   engine/premises/ if applicable
+
+    # Routine membership — for jokes that are part of a sustained bit
+    routine_id: null               # [STRUCTURED] id of the routine this joke
+                                   #   belongs to, or null if standalone.
+                                   #   Routines are defined in
+                                   #   engine/routines/{routine_id}.yaml
+    position_in_routine: null      # [STRUCTURED] integer: which sub-joke this
+                                   #   is within the routine (1-indexed).
+                                   #   null if not in a routine.
+    routine_total_jokes: null      # [STRUCTURED] integer: total sub-jokes in
+                                   #   the routine. Redundant with the routine
+                                   #   file but convenient for per-joke queries.
+
     position_in_set: null          # [STRUCTURED] opener | mid_set | closer |
-                                   #   standalone
+                                   #   standalone. The larger-scale position
+                                   #   within a performance (a set may contain
+                                   #   multiple routines plus standalone jokes).
 
 # ============================================================================
 # PERFORMANCE (specific to this delivery)
