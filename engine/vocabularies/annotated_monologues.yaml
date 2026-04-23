@@ -1,0 +1,434 @@
+# =============================================================================
+# ANNOTATED OPENING MONOLOGUES — 5 Seinfeld Episodes (Season 1)
+# Schema: joke_annotation_schema.yaml v1.0
+# =============================================================================
+# Each monologue is decomposed into the routine > bit > beat > component
+# hierarchy. Concatenating all component texts + stage_directions in order
+# reconstructs the original transcript.
+# =============================================================================
+
+schema_version: "1.0"
+
+routines:
+
+  # ===========================================================================
+  # EPISODE 1: Good News Bad News (The Seinfeld Chronicles)
+  # ===========================================================================
+  - id: "s01e01_opening"
+    episode: "Good News Bad News (The Seinfeld Chronicles)"
+    season: 1
+    episode_number: 1
+
+    bits:
+      - bit_id: "s01e01_b1"
+        topic_domain: social_rituals
+        premise_summary: "The entire purpose of human social existence is the binary of 'out' vs. 'home' — and we can never be satisfied with whichever state we're in."
+
+        beats:
+          # ---- Beat 1: The observation — being 'out' is the point ----
+          - beat_id: "s01e01_b1_beat1"
+            observational_register: anthropological
+
+            components:
+              - text: "You know, why we're here?"
+                structural_role: premise
+                performance_mode: rhetorical
+
+              - text: "To be out, this is out...and out is one of the single most enjoyable experiences of life."
+                structural_role: punchline
+                performance_mode: direct
+                mechanism: reframing
+                # Reframes the comedy club from 'entertainment venue' to existential category
+
+              - text: "People...did you ever hear people talking about \"We should go out\"? This is what they're talking about...this whole thing, we're all out now, no one is home. Not one person here is home, we're all out!"
+                structural_role: tag
+                performance_mode: direct
+                mechanism: literalization
+                # Takes the idiom "going out" and treats it as a literal state of being
+
+          # ---- Beat 2: The people looking for us ----
+          - beat_id: "s01e01_b1_beat2"
+            observational_register: conspiratorial
+
+            components:
+              - text: "There are people tryin' to find us, they don't know where we are."
+                structural_role: setup
+                performance_mode: direct
+
+              - text: "\"Did you ring?, I can't find him.\" \"Where did he go?\" \"He didn't tell me where he was going\". He must have gone out."
+                structural_role: punchline
+                performance_mode: character
+                mechanism: recognition
+                stage_direction: "[imitates one of these people 'tryin' to find us'; pretends his hand is a phone]"
+
+          # ---- Beat 3: The reversal — once out, you want back ----
+          - beat_id: "s01e01_b1_beat3"
+            observational_register: anthropological
+
+            components:
+              - text: "You wanna go out: you get ready, you pick out the clothes, right? You take the shower, you get all ready, get the cash, get your friends, the car, the spot, the reservation..."
+                structural_role: setup
+                performance_mode: narrative
+                # Escalating list of preparation steps builds investment in the 'going out' frame
+
+              - text: "There you're staring around, whatta you do? You go: \"We gotta be getting back\"."
+                structural_role: punchline
+                performance_mode: character
+                mechanism: reversal
+                # After all that buildup of wanting to go out, the immediate desire is to return
+
+              - text: "Once you're out, you wanna get back! You wanna go to sleep, you wanna get up, you wanna go out again tomorrow, right?"
+                structural_role: tag
+                performance_mode: direct
+                mechanism: escalation
+                # Extends the reversal into an infinite loop
+
+              - text: "Where ever you are in life, it's my feeling, you've gotta go."
+                structural_role: topper
+                performance_mode: direct
+                mechanism: reframing
+                # Elevates from social observation to existential thesis — the comic 'button'
+
+  # ===========================================================================
+  # EPISODE 2: The Stakeout
+  # ===========================================================================
+  - id: "s01e02_opening"
+    episode: "The Stakeout"
+    season: 1
+    episode_number: 2
+
+    bits:
+      - bit_id: "s01e02_b1"
+        topic_domain: money_and_commerce
+        premise_summary: "Paying by cheque at the supermarket reveals a gender split — women are fast with cheques because it's their weapon of choice; for men, a cheque is an emasculating admission of not having real money."
+
+        beats:
+          # ---- Beat 1: The premise — cheques at the supermarket ----
+          - beat_id: "s01e02_b1_beat1"
+            observational_register: anthropological
+
+            components:
+              - text: "So, I'm on line at the supermarket. Two women in front of me. One of them, her total was eight dollars, the other three dollars. They both of course choose to pay by the use of the"
+                structural_role: premise
+                performance_mode: narrative
+
+              - stage_direction: "[pause and gesture to audience for response]"
+                text: ""
+                structural_role: connector
+                performance_mode: call_and_response
+
+              - text: "Cheque."
+                structural_role: connector
+                performance_mode: call_and_response
+
+          # ---- Beat 2: Women are fast with cheques ----
+          - beat_id: "s01e02_b1_beat2"
+            observational_register: anthropological
+
+            components:
+              - text: "Now, the fact is, if it's a woman in front of you that's writing the cheque, you will not be waiting long. I have noticed that women are very *fast* with cheques, y'know, 'cuz they write out so many cheques."
+                structural_role: setup
+                performance_mode: direct
+
+              - text: "The keys, they can never find in their purse, they don't know where that is, but the cheque book they got that."
+                structural_role: punchline
+                performance_mode: direct
+                mechanism: reversal
+                # Expectation: women are disorganized — reversed specifically for cheques
+
+              - text: "They never fumble for the cheque book— the cheque book comes out of a holster:"
+                structural_role: tag
+                performance_mode: direct
+                mechanism: analogy
+                # Maps 'cheque book retrieval' onto 'quick-draw gunslinger'
+
+              - text: "\"Who do I make it out to?... There's my ID...\""
+                structural_role: topper
+                performance_mode: character
+                mechanism: escalation
+                stage_direction: "[\"draws\" imaginary book from an imaginary holster]"
+                # Sustains the gunslinger analogy through performed confidence
+
+          # ---- Beat 3: Cheques are emasculating ----
+          - beat_id: "s01e02_b1_beat3"
+            observational_register: confessional
+
+            components:
+              - text: "There's something about a cheque that, to a man, is not masculine. I don't know exactly what it is..."
+                structural_role: setup
+                performance_mode: direct
+
+              - text: "I think to a man, a cheque is like a note from your mother that says"
+                structural_role: punchline
+                performance_mode: direct
+                mechanism: analogy
+                # Maps 'financial instrument' onto 'child's excuse note'
+
+              - text: "\"I don't have any money, but if you'll contact these people, I'm sure they'll stick up for me..."
+                structural_role: tag
+                performance_mode: character
+                mechanism: diminishment
+                # The 'mother's voice' further degrades the cheque's authority
+
+              - text: "If you just trust me this one time I don't have any money but I have these... I wrote on these; is this of any value at all?\""
+                structural_role: topper
+                performance_mode: character
+                mechanism: diminishment
+                # Final escalation of pathetic-ness — the cheque is now a worthless scribble
+
+  # ===========================================================================
+  # EPISODE 3: The Robbery
+  # ===========================================================================
+  - id: "s01e03_opening"
+    episode: "The Robbery"
+    season: 1
+    episode_number: 3
+
+    bits:
+      - bit_id: "s01e03_b1"
+        topic_domain: body_and_physicality
+        premise_summary: "The middle finger is an absurd, arbitrary gesture — if you follow the logic of using body parts as insults, the toe would be far more committed and insulting."
+
+        beats:
+          # ---- Beat 1: The premise — arbitrariness of the finger ----
+          - beat_id: "s01e03_b1_beat1"
+            observational_register: anthropological
+
+            components:
+              - text: "So I move into the centre lane, now I get ahead of this women, who felt for some reason I guess, that she thought that I cut her off. So, she pulls up along side of me, gives me... the finger."
+                structural_role: premise
+                performance_mode: narrative
+
+              - text: "It seems like such an... arbitrary, ridiculous thing to just pick a finger and you show it to the person."
+                structural_role: punchline
+                performance_mode: direct
+                mechanism: reframing
+                # Reframes a culturally loaded gesture as an absurd arbitrary choice
+
+              - text: "It's a finger, what does it mean? Someone shows me one of their fingers and I'm supposed to feel bad. Is that the way it's supposed to work?"
+                structural_role: tag
+                performance_mode: rhetorical
+                mechanism: literalization
+                stage_direction: "[shows several fingers to the audience]"
+                # Strips the gesture of cultural meaning — it's just a digit
+
+          # ---- Beat 2: The toe as alternative ----
+          - beat_id: "s01e03_b1_beat2"
+            observational_register: absurdist
+
+            components:
+              - text: "I mean, you could just give someone the toe, really, couldn't you? I would feel worse if I got the toe, than if I got the finger."
+                structural_role: punchline
+                performance_mode: direct
+                mechanism: absurd_extension
+                # Accepts the premise 'any body part can be an insult' and finds a better candidate
+
+              - text: "'Cause it's not easy to give someone the toe, you've gotta get the shoe off, the sock off and drive,"
+                structural_role: tag
+                performance_mode: direct
+                mechanism: absurd_extension
+                # The logistics of toe-deployment make it more insulting because of effort
+
+              - text: "get it up and uh"
+                structural_role: connector
+                performance_mode: physical
+                stage_direction: "[pretends to drive with one foot in the air and speaks to person driving next to him]"
+
+              - text: "look at that toe, buddy."
+                structural_role: topper
+                performance_mode: character
+                mechanism: escalation
+                stage_direction: "[puts his foot down]"
+                # The act-out crystallizes the absurdity — delivers the 'toe insult' as performance
+
+              - text: "I mean, that's really insulting to get the toe, isn't it?"
+                structural_role: tag
+                performance_mode: rhetorical
+                mechanism: recognition
+                # Button — invites audience to confirm the absurd logic is sound
+
+  # ===========================================================================
+  # EPISODE 4: Male Unbonding
+  # ===========================================================================
+  - id: "s01e04_opening"
+    episode: "Male Unbonding"
+    season: 1
+    episode_number: 4
+
+    bits:
+      - bit_id: "s01e04_b1"
+        topic_domain: gender_dynamics
+        premise_summary: "Men have a primal, involuntary attraction to watching other men work with tools — they're drawn like zombies to any nearby construction, not to help, but just to be near the work."
+
+        beats:
+          # ---- Beat 1: Men are drawn to tools ----
+          - beat_id: "s01e04_b1_beat1"
+            observational_register: anthropological
+
+            components:
+              - text: "Most men like working on things, tools, objects, fixing things. This is what men enjoy doing."
+                structural_role: premise
+                performance_mode: direct
+
+              - text: "Have you ever noticed a guy's out in his driveway working on something with tools, how all the other men in the neighborhood are magnetically drawn to this activity."
+                structural_role: setup
+                performance_mode: direct
+
+              - text: "They just come wandering out of the house like zombies."
+                structural_role: punchline
+                performance_mode: direct
+                mechanism: analogy
+                # Maps 'casual male curiosity' onto 'undead compulsion'
+
+          # ---- Beat 2: The drill as dog whistle ----
+          - beat_id: "s01e04_b1_beat2"
+            observational_register: anthropological
+
+            components:
+              - text: "Men, it's true, men hear a drill, it's like a dog whistle."
+                structural_role: punchline
+                performance_mode: direct
+                mechanism: analogy
+                # Maps men's response to power tools onto dogs' ultrasonic compulsion
+
+              - text: "Just.. you know, they go running up to that living room curtain, \"Honey, I think Jim's working on something over there.\""
+                structural_role: tag
+                performance_mode: character
+                mechanism: recognition
+                # The performed excitement validates the analogy
+
+          # ---- Beat 3: They don't help — they just want proximity ----
+          - beat_id: "s01e04_b1_beat3"
+            observational_register: conspiratorial
+
+            components:
+              - text: "So they run over to the guy. Now they don't actually help the guy. No, they just want to hang around the area where work is being done. That's what men want to do."
+                structural_role: setup
+                performance_mode: direct
+
+              - text: "We want to watch the guy, we want to talk to him, we want to ask him dumb questions. You know, \"What are you using, the Philips head?\""
+                structural_role: punchline
+                performance_mode: character
+                mechanism: recognition
+                # The specific dumb question is funny because it's universal — audience recognizes it
+
+              - text: "You know, we feel involved."
+                structural_role: tag
+                performance_mode: direct
+                mechanism: diminishment
+                # Deflates the male need for proximity to work into pathetic self-delusion
+
+          # ---- Beat 4: Construction fences exist to contain men ----
+          - beat_id: "s01e04_b1_beat4"
+            observational_register: absurdist
+
+            components:
+              - text: "That's why when they have construction sites, they have to have those wood panel fences around it, that's just to keep the men out."
+                structural_role: punchline
+                performance_mode: direct
+                mechanism: reframing
+                # Construction fences reframed from 'safety barrier' to 'male containment system'
+
+              - text: "They cut those little holes for us so we can see what the hell is going on."
+                structural_role: tag
+                performance_mode: direct
+                mechanism: reframing
+                # Viewing holes reframed from 'curiosity accommodation' to 'concession to male compulsion'
+
+              - text: "But if they don't cut those holes - we are climbing those fences. Right over there."
+                structural_role: topper
+                performance_mode: direct
+                mechanism: absurd_extension
+                # Escalates from 'peeping' to 'breaching the perimeter'
+
+              - text: "\"What are you using the steel girders down there? Yeah, that'll hold.\""
+                structural_role: topper
+                performance_mode: character
+                mechanism: escalation
+                # Callback to the 'dumb question' format but now absurdly scaled up to steel girders
+
+  # ===========================================================================
+  # EPISODE 5: The Stock Tip
+  # ===========================================================================
+  - id: "s01e05_opening"
+    episode: "The Stock Tip"
+    season: 1
+    episode_number: 5
+
+    bits:
+      - bit_id: "s01e05_b1"
+        topic_domain: money_and_commerce
+        premise_summary: "The restaurant check exploits a psychological vulnerability — you order like a king when hungry, then the bill arrives after you've become a sated, pants-open slob who can't fathom why this food was purchased."
+
+        beats:
+          # ---- Beat 1: Money before vs. after eating ----
+          - beat_id: "s01e05_b1_beat1"
+            observational_register: anthropological
+
+            components:
+              - text: "Went out to dinner the other night. Check came at the end of the meal, as it always does."
+                structural_role: premise
+                performance_mode: narrative
+
+              - text: "Never liked the check at the end of the meal system, because money's a very different thing before and after you eat."
+                structural_role: setup
+                performance_mode: direct
+
+              - text: "Before you eat money has no value."
+                structural_role: punchline
+                performance_mode: direct
+                mechanism: reframing
+                # Reframes economics through hunger — money literally devalued by appetite
+
+          # ---- Beat 2: The ruler of an empire ----
+          - beat_id: "s01e05_b1_beat2"
+            observational_register: anthropological
+
+            components:
+              - text: "And you don't care about money when you're hungry, you sit down at a restaurant."
+                structural_role: setup
+                performance_mode: direct
+
+              - text: "You're like the ruler of an empire."
+                structural_role: punchline
+                performance_mode: direct
+                mechanism: analogy
+                # Maps 'hungry diner' onto 'sovereign ruler' — absurd elevation
+
+              - text: "\"More drinks, appetizers, quickly, quickly! It will be the greatest meal of our lives.\""
+                structural_role: tag
+                performance_mode: character
+                mechanism: escalation
+                # Sustains the emperor analogy through performed grandiosity
+
+          # ---- Beat 3: The aftermath and the check ----
+          - beat_id: "s01e05_b1_beat3"
+            observational_register: conspiratorial
+
+            components:
+              - text: "Then after the meal, you know, you've got the pants open, you've got the napkins destroyed, cigarette butt in the mashed potatoes -"
+                structural_role: setup
+                performance_mode: narrative
+                # Paints the post-meal devastation — the emperor has fallen
+
+              - text: "then the check comes at that moment."
+                structural_role: connector
+                performance_mode: direct
+
+              - text: "People are always upset, you know. They're mystified by the check. \"What is this? How could this be?\""
+                structural_role: punchline
+                performance_mode: character
+                mechanism: reversal
+                # The person who ordered everything is now baffled by the bill for everything
+
+              - text: "They start passing it around the table, \"Does this look right to you?"
+                structural_role: tag
+                performance_mode: character
+                mechanism: recognition
+                # Universally recognizable post-meal check behavior
+
+              - text: "We're not hungry now. Why are we buying all this food?!\""
+                structural_role: topper
+                performance_mode: character
+                mechanism: reframing
+                # The 'button' — reframes the complaint as genuinely logical from the post-meal perspective, which is absurd from any other perspective

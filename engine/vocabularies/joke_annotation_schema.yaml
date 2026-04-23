@@ -1,0 +1,167 @@
+# =============================================================================
+# JOKE ANNOTATION SCHEMA
+# =============================================================================
+# Goal: Decompose standup jokes into atomic components such that the original
+# can be losslessly reconstructed from the annotation alone, while categorizing
+# each element along orthogonal, mutually exclusive taxonomic dimensions.
+#
+# Theoretical basis:
+#   - Incongruity Theory (Kant, Schopenhauer, Morreall): humor arises from
+#     a perceived mismatch between expectation and outcome
+#   - Benign Violation Theory (McGraw & Warren): something is funny when it
+#     is simultaneously a violation and benign
+#   - Script Opposition (Raskin's SSTH / Attardo's GTVH): jokes activate two
+#     overlapping but incompatible cognitive scripts
+#
+# Structural hierarchy:
+#   routine > bit > beat > component
+#   - routine: the full monologue (a set or opening)
+#   - bit: a topical segment (one premise, multiple beats)
+#   - beat: one setup-punchline cycle (may include tags)
+#   - component: the atomic text unit with a single structural role
+# =============================================================================
+
+schema_version: "1.0"
+
+# -----------------------------------------------------------------------------
+# DIMENSION 1: structural_role
+# What function does this text component serve in the joke architecture?
+# Exactly one per component. Mutually exclusive.
+# -----------------------------------------------------------------------------
+structural_role:
+  premise:
+    description: "Introduces the topic and core observation that will drive the entire bit. Frames what the comedian is 'about to talk about.'"
+    example: "So I move into the centre lane..."
+  setup:
+    description: "Establishes context and expectation for a specific punchline. Creates the first script/frame the audience adopts."
+    example: "Now, the fact is, if it's a woman in front of you that's writing the cheque, you will not be waiting long."
+  punchline:
+    description: "The primary incongruity resolution / script switch. The moment the second, incompatible frame is introduced, producing the laugh."
+    example: "the cheque book comes out of a holster"
+  tag:
+    description: "An additional punchline that exploits the same incongruity without requiring a new setup. Extends the laugh."
+    example: "Who do I make it out to?... There's my ID..."
+  topper:
+    description: "A tag that escalates beyond the previous punchline's level of absurdity or commitment."
+    example: "you've gotta get the shoe off, the sock off and drive"
+  act_out:
+    description: "Performed speech or action — the comedian adopts a character voice or physicality to illustrate the joke."
+    example: "[imitates phone] Did you ring? I can't find him."
+  connector:
+    description: "Transitional text that links beats within a bit or bits within a routine. Carries no humor payload."
+    example: "I mean, you could just give someone the toe, really, couldn't you?"
+
+# -----------------------------------------------------------------------------
+# DIMENSION 2: mechanism
+# HOW does the humor work? What cognitive operation produces the laugh?
+# Exactly one per punchline/tag/topper. Mutually exclusive.
+# Applies only to components with structural_role in {punchline, tag, topper}.
+# -----------------------------------------------------------------------------
+mechanism:
+  reframing:
+    description: "Presenting a familiar thing from an unfamiliar angle — same referent, different frame. The audience sees something ordinary as if for the first time."
+    example: "Why we're here? To be out. This is out."
+    opposed_scripts: "mundane/philosophical"
+  absurd_extension:
+    description: "Following an internal logic to its absurd but consistent conclusion. The premise is accepted, then pushed past the point of reason."
+    example: "You could give someone the toe — you've gotta get the shoe off, the sock off and drive"
+    opposed_scripts: "normal gesture/extreme commitment"
+  analogy:
+    description: "Mapping structure from one domain onto another where it doesn't belong, revealing unexpected similarity."
+    example: "the cheque book comes out of a holster"
+    opposed_scripts: "mundane action/action-hero draw"
+  reversal:
+    description: "The punchline directly contradicts the expectation the setup created. Misdirection is the setup-side technique that enables reversal."
+    example: "Once you're out, you wanna get back!"
+    opposed_scripts: "desire to go out/desire to return"
+  recognition:
+    description: "Articulating a shared but previously unarticulated truth. The laugh comes from 'I never thought of it that way but yes.' No script switch — single-script humor."
+    example: "Men hear a drill, it's like a dog whistle."
+    opposed_scripts: "N/A (single-script)"
+  escalation:
+    description: "Each successive element in a list or sequence is more extreme than the last, creating cumulative comic momentum."
+    example: "More drinks, appetizers, quickly quickly! It will be the greatest meal of our lives."
+    opposed_scripts: "casual dining/imperial decree"
+  literalization:
+    description: "Taking a metaphorical or figurative expression and treating it as physically literal."
+    example: "Someone shows me one of their fingers and I'm supposed to feel bad."
+    opposed_scripts: "symbolic gesture/literal digit"
+  diminishment:
+    description: "Reducing something grand, serious, or emotional to something trivial or mundane."
+    example: "I wrote on these — is this of any value at all?"
+    opposed_scripts: "monetary authority/begging note"
+
+# -----------------------------------------------------------------------------
+# DIMENSION 3: performance_mode
+# How is this component delivered? What is the performer's relationship
+# to the audience in this moment?
+# Exactly one per component. Mutually exclusive.
+# -----------------------------------------------------------------------------
+performance_mode:
+  direct:
+    description: "Comedian speaks as themselves, addressing the audience in their own voice."
+  character:
+    description: "Comedian adopts a distinct persona — voice, posture, or attitude shifts."
+  rhetorical:
+    description: "Poses a question the audience isn't expected to answer; functions as setup or connector."
+  call_and_response:
+    description: "Explicitly solicits audience participation (verbal or gestural)."
+  physical:
+    description: "The humor is substantially carried by gesture, movement, or mime — text alone is insufficient."
+  narrative:
+    description: "Comedian recounts a sequence of events (real or hypothetical) in storytelling mode."
+
+# -----------------------------------------------------------------------------
+# DIMENSION 4: observational_register
+# What stance does the comedian adopt toward the subject?
+# One per beat (applies at beat level, not component level). Mutually exclusive.
+# -----------------------------------------------------------------------------
+observational_register:
+  anthropological:
+    description: "Observing human behavior as if studying a foreign species. 'Have you ever noticed...' Detached, curious, clinical."
+  confessional:
+    description: "Revealing personal experience, weakness, or opinion. 'I don't know what it is, but...' Vulnerable or self-deprecating."
+  conspiratorial:
+    description: "Invoking shared unspoken knowledge. 'We all know...' Creating in-group solidarity."
+  adversarial:
+    description: "Taking a position against a person, norm, or system. 'Why do they...' Challenging or indignant."
+  absurdist:
+    description: "Occupying a premise that is itself ludicrous and playing it straight. The stance IS the joke."
+
+# -----------------------------------------------------------------------------
+# DIMENSION 5: topic_domain
+# What is the bit about? Broad, mutually exclusive top-level categories.
+# One per bit.
+# -----------------------------------------------------------------------------
+topic_domain:
+  social_rituals:
+    description: "Behavioral norms, etiquette, going out, greetings, social expectations."
+  gender_dynamics:
+    description: "Differences or expectations around gender roles and behaviors."
+  money_and_commerce:
+    description: "Transactions, prices, tipping, shopping, the economics of daily life."
+  technology_and_objects:
+    description: "Tools, gadgets, cars, household items — human relationship with things."
+  body_and_physicality:
+    description: "Gestures, physical experiences, food, health, appearance."
+  relationships:
+    description: "Romantic, familial, or friendship dynamics."
+  work_and_career:
+    description: "Jobs, professions, workplace behavior."
+  urban_life:
+    description: "City living, apartments, traffic, public spaces, neighbors."
+
+# -----------------------------------------------------------------------------
+# ASSEMBLY RULES (for lossless reconstruction)
+# -----------------------------------------------------------------------------
+# 1. Every component has: text, structural_role, performance_mode
+# 2. Punchline/tag/topper components additionally have: mechanism
+# 3. Components are ordered; concatenating all component.text in order
+#    reconstructs the original monologue verbatim
+# 4. Each beat has: observational_register, ordered list of components
+# 5. Each bit has: topic_domain, premise_summary, ordered list of beats
+# 6. Each routine has: ordered list of bits
+# 7. stage_directions are preserved as a separate field on components
+#    that have them (e.g., [shows several fingers to audience])
+# 8. The union of all component.text fields + stage_direction fields
+#    equals the original transcript exactly
