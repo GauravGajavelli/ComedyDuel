@@ -1,0 +1,273 @@
+schema_version: "1.0"
+routine_id: s01e08_opening
+pass: 2
+
+annotations:
+
+  # ---------------------------------------------------------------------------
+  # LAUGH-POINT 1: "little outfits for myself"
+  # ---------------------------------------------------------------------------
+  - joke_id: s01e08_open_lp1
+    text: >
+      I hate clothes, okay? I hate buying them. I hate picking them out
+      of my closet. I can't stand every day trying to come up with little
+      outfits for myself.
+
+    setup_expectation: >
+      "I hate clothes" establishes a complaint register. The escalating
+      list (buying, picking, can't stand) builds toward a grievance about
+      the burden of fashion. The audience expects the complaint to land on
+      something proportional -- cost, social pressure, wasted time.
+
+    punchline_violation: >
+      "Little outfits for myself" reframes the daily act of getting
+      dressed as something childlike and precious -- as if Jerry is a
+      parent dressing a toddler, except the toddler is himself. The
+      diminutive "little" and the self-directed "for myself" shrink the
+      adult task to something absurdly dainty. The complaint is real, but
+      the description makes the complainer ridiculous.
+
+    pivot_locus: logical
+
+    pivot_concept: clothing_selection
+
+    pivot_mechanism:
+      operation: reinterpretation
+      # TEST (two readings of the SAME material):
+      #   Reading 1 (setup invites): getting dressed is a tedious adult
+      #     obligation -- wardrobe management, fashion pressure.
+      #   Reading 2 (punchline imposes): getting dressed is assembling
+      #     "little outfits" -- the register of a child playing dress-up
+      #     or a parent coordinating a toddler's ensemble.
+      # Same activity, two frames. Nothing is negated; dressing is reread
+      # as precious/diminutive rather than burdensome.
+      reading_switch: none
+      scale_shift: contraction
+      # The adult chore is contracted to a childlike, dainty activity.
+      # The contraction from "wardrobe burden" to "little outfits" is
+      # load-bearing for the laugh.
+
+    setup_frame: establishes_norm
+    # The norm of getting dressed as a daily obligation.
+
+    primary_template: mundane_as_monumental
+    # The escalating complaint register (hate, hate, can't stand) applies
+    # the gravity of genuine suffering to the trivial act of choosing
+    # clothes. The frame's weight against the content's triviality is the
+    # shape.
+
+    difficulties: >
+      The contraction and the mundane_as_monumental template pull in
+      seemingly opposite directions -- one shrinks, the other elevates.
+      They coexist because the COMPLAINT is monumental while the OBJECT
+      ("little outfits") is contracted. The reinterpretation vs.
+      articulation call is the main tension. I chose reinterpretation
+      because "little outfits for myself" forces a specific reframe (the
+      childlike/dainty reading) that the setup's complaint register did
+      not invite. Articulation would require the audience to already
+      implicitly think of getting dressed as assembling "little outfits";
+      the humor depends on that reframe being new, not pre-known.
+
+  # ---------------------------------------------------------------------------
+  # LAUGH-POINT 2: "One-piece silver jumpsuit, V-stripe, and boots. That's it."
+  # ---------------------------------------------------------------------------
+  - joke_id: s01e08_open_lp2
+    text: >
+      'Cause anytime I see a movie or a TV show where there's people from
+      the future of another planet, they're all wearing the same thing.
+      Somehow they decided "This is going to be our outfit. One-piece
+      silver jumpsuit, V-stripe, and boots. That's it."
+
+    setup_expectation: >
+      The observation that sci-fi civilizations all wear uniforms is
+      presented as evidence for the prediction that fashion will
+      eventually disappear. The audience is tracking a speculative
+      argument about the future of clothing. The implied frame is
+      futurism or social commentary.
+
+    punchline_violation: >
+      Jerry voices the alien civilization's fashion committee as if it
+      were a mundane, boardroom-style decision: "This is going to be our
+      outfit." The hyper-specific inventory (one-piece, silver, V-stripe,
+      boots) and the finality of "That's it" treat a civilization-wide
+      aesthetic choice with the casualness of someone settling on a work
+      uniform. The humor is in the transplant of bureaucratic
+      decision-making onto an interplanetary civilization.
+
+    pivot_locus: logical
+
+    pivot_concept: fashion_uniformity
+
+    pivot_mechanism:
+      operation: transplant
+      # TEST: Target domain: alien/future civilization choosing species-
+      #   wide attire. Source domain: mundane committee decision-making
+      #   (workplace dress code, uniform selection). Imported framework:
+      #   the language and logic of a small group casually picking an
+      #   outfit -- "This is going to be our outfit... That's it."
+      # The mismatch between the cosmic scale of the decision and the
+      # casualness of the process is the joke.
+      reading_switch: none
+      scale_shift: contraction
+      # A civilization-defining aesthetic choice is contracted to the
+      # register of a casual wardrobe decision. The contraction is
+      # load-bearing -- without the deflation from cosmic to mundane,
+      # the transplant loses its comic force.
+
+    setup_frame: establishes_norm
+    # The norm of sci-fi uniformity as a trope the audience recognizes.
+
+    primary_template: mundane_as_monumental
+    # The rhetorical shape inverts: a monumental decision (species-wide
+    # clothing) is treated with mundane gravity. The gap between the
+    # decision's actual scope and the register of its articulation is
+    # the template at work.
+
+    difficulties: >
+      The operation choice between transplant and articulation is the
+      hardest call. Articulation would say: the audience already
+      implicitly knows sci-fi uniforms look like committee decisions, and
+      Jerry is just voicing it. I chose transplant because the humor
+      requires the MISMATCH between the bureaucratic framework and the
+      civilizational context -- it is not a pre-known truth being
+      verbalized but a framework being imported. The test: if the
+      bureaucratic framework genuinely fit (i.e., alien civilizations
+      really did hold casual committee meetings about clothes), the joke
+      would lose force. The joke depends on the framework NOT fitting,
+      which points to transplant over mapping. Scale_shift: contraction is
+      debatable -- one could argue the contraction IS the transplant and
+      needn't be separately marked. I kept it because removing the
+      scale mismatch (making the committee proportional to the decision)
+      would significantly weaken the humor.
+
+  # ---------------------------------------------------------------------------
+  # LAUGH-POINT 3: "We should vote on it"
+  # ---------------------------------------------------------------------------
+  - joke_id: s01e08_open_lp3
+    text: >
+      We should come up for an outfit for earth. An earth outfit. We
+      should vote on it.
+
+    setup_expectation: >
+      The sci-fi observation has been established. "An earth outfit"
+      extends the premise by applying it to humanity. The audience expects
+      the speculative argument to continue at the same register --
+      observational social commentary about fashion convergence.
+
+    punchline_violation: >
+      "We should vote on it" treats the absurd proposal (a single outfit
+      for all of Earth) as a solvable civic problem. The democratic
+      process -- voting -- is applied to a question that is clearly beyond
+      its jurisdiction. The humor is in the extension of the accepted
+      premise (one outfit per civilization) to its logical civic
+      implementation for Earth.
+
+    pivot_locus: logical
+
+    pivot_concept: fashion_uniformity
+
+    pivot_mechanism:
+      operation: extension
+      # TEST: Accepted premise: civilizations converge on a single outfit
+      #   (established by the sci-fi observation). Absurd-but-logical
+      #   conclusion: therefore Earth should actively pursue this, and
+      #   the mechanism should be democratic voting. The premise is never
+      #   challenged; the destination (civic implementation) is absurd.
+      reading_switch: none
+      scale_shift: none
+
+    setup_frame: establishes_norm
+    # The norm of sci-fi uniformity has been established as a premise.
+
+    primary_template: reductio
+    # The argumentative chain: sci-fi shows uniforms -> fashion will
+    # disappear -> we should choose ours -> we should vote on it. Each
+    # step follows logically; the conclusion is absurd. The shape is a
+    # logical argument taken too far.
+
+    difficulties: >
+      Extension vs. transplant is the tension. "Voting" imports the
+      democratic framework onto fashion, which could be transplant. But
+      the humor is less about the mismatch of democracy-applied-to-
+      fashion and more about following the premise (one outfit per
+      civilization) to its logical next step (how would we actually do
+      it?). The premise is accepted and pushed forward, not reframed by
+      an imported framework. Extension fits more cleanly because the test
+      produces a cleaner artifact: premise (civilizations converge) ->
+      conclusion (we should vote). Template: reductio over escalation,
+      because there is an argumentative chain driving toward an absurd
+      conclusion, not merely an incrementing feature.
+
+  # ---------------------------------------------------------------------------
+  # LAUGH-POINT 4: "They walk out, twirl, walk off"
+  # ---------------------------------------------------------------------------
+  - joke_id: s01e08_open_lp4
+    text: >
+      Candidates propose different outfits, no speeches. They walk out,
+      twirl, walk off. We just sit in the audience and go, "That was
+      nice. I could wear that."
+
+    setup_expectation: >
+      "Candidates propose different outfits" continues the civic-process
+      extension. The audience is tracking a political-election metaphor
+      applied to clothing. The expected register is still speculative
+      social commentary, possibly with escalating absurdity.
+
+    punchline_violation: >
+      The political process is stripped to a fashion show: no speeches,
+      just a twirl. The audience's role collapses from engaged democratic
+      participants to passive fashion-show spectators offering tepid
+      approval ("That was nice. I could wear that"). The deflation from
+      democratic deliberation to fashion-show passivity, and the
+      bathetically mild endorsement, are the laugh. The specificity of
+      "twirl" and the banality of "I could wear that" commit fully to
+      the deflated register.
+
+    pivot_locus: logical
+
+    pivot_concept: fashion_uniformity
+
+    pivot_mechanism:
+      operation: extension
+      # TEST: Accepted premise: Earth should vote on a single outfit.
+      #   Absurd-but-logical conclusion: the voting process would look
+      #   like a fashion show -- candidates walk out, twirl, walk off --
+      #   and the electorate's engagement would be reduced to "I could
+      #   wear that." The premise is followed forward into specific
+      #   procedural detail. Nothing is contradicted; the destination is
+      #   absurd but logically consistent.
+      reading_switch: none
+      scale_shift: contraction
+      # A civilization-level democratic process is contracted to the
+      # register of a casual fashion show and tepid personal approval.
+      # The contraction from democratic deliberation to "That was nice"
+      # is load-bearing.
+
+    setup_frame: establishes_sequence
+    # The setup has established a sequence: premise -> proposal ->
+    # implementation mechanism. This laugh-point continues the sequence
+    # into procedural specifics.
+
+    primary_template: reductio
+    # The argumentative chain reaches its most absurd concrete
+    # conclusion: the political process, followed to its logical end,
+    # is a fashion show with tepid audience approval. The reductio
+    # shape is dominant -- the chain has arrived at its absurd terminus.
+
+    difficulties: >
+      This is the hardest call in the routine. The operation could be
+      transplant (fashion-show framework applied to democratic process),
+      but I chose extension because the fashion-show procedural detail
+      follows logically FROM the premise that clothing is what's being
+      voted on. If you're voting on outfits, of course the "debate"
+      is a runway walk. The framework isn't imported from a foreign
+      domain; it emerges naturally from the premise being followed. The
+      transplant test asks: does the humor come from mismatch? Partially
+      -- but more from the logical inevitability that voting on clothes
+      WOULD look like this. That points to extension. Scale_shift:
+      contraction is debatable. The "That was nice. I could wear that"
+      line does its own work by deflating democratic engagement to
+      passive consumer approval, and this contraction is arguably
+      separable from the extension operation. I marked it because
+      removing the bathos (replacing "I could wear that" with something
+      proportionate to a civilizational vote) would lose humor.

@@ -1,0 +1,437 @@
+# =============================================================================
+# PASS 2 — Silent Decomposition
+# Episode 6: "The Ex-Girlfriend"
+# Routine: s01e06_opening
+# =============================================================================
+# Laugh-points identified from the transcript.
+# Each entry below is one distinct joke/laugh-point.
+# =============================================================================
+
+schema_version: "1.0"
+routine_id: s01e06_opening
+pass: 2
+
+annotations:
+
+  # ---------------------------------------------------------------------------
+  # LAUGH-POINT 1: The lane expert — reevaluating their lane choice
+  # ---------------------------------------------------------------------------
+  - joke_id: s01e06_opening_lp1
+    text: >
+      I'm always in traffic with the lane expert. You know this type of
+      person? Constantly reevaluating their lane choice.. Never quite sure,
+      "Is this the best lane for me? For my life?"
+
+    setup_expectation: >
+      "Lane expert" establishes a recognizable type: the aggressive lane-
+      changer in traffic. The audience expects a complaint about their
+      driving behavior — cutting in, being dangerous, being annoying.
+      "Reevaluating their lane choice" is still within normal traffic
+      observation register.
+
+    punchline_violation: >
+      "Is this the best lane for me? For my life?" transplants the register
+      of existential life-decision anguish onto a traffic lane selection.
+      The driver is not weighing traffic speed but undergoing a crisis of
+      identity and life-direction. The lane becomes a life choice.
+
+    pivot_locus: both
+
+    pivot_concept: lane_choice
+
+    pivot_mechanism:
+      operation: transplant
+      # TEST: Target domain: traffic/driving. Source domain: existential
+      #   life planning (career, relationships, identity). Imported
+      #   framework: the language of deep personal evaluation ("Is this
+      #   the best X for me? For my life?"). The humor is in the MISMATCH —
+      #   the existential-crisis framework does not genuinely fit lane
+      #   selection. The lane does not warrant that depth of soul-searching.
+      reading_switch: none
+      scale_shift: expansion
+      # "For my life?" lifts lane selection from a momentary tactical
+      #   decision to a life-defining question. The expansion is load-
+      #   bearing: without "For my life?" the joke is just observation;
+      #   with it, the absurd scale mismatch lands.
+
+    setup_frame: establishes_norm
+    # The setup establishes the norm of lane-changing as a traffic behavior.
+
+    primary_template: mundane_as_monumental
+    # The rhetorical shape applies the grammar of existential gravity to
+    # a trivial traffic decision. The elevated frame ("For my life?")
+    # against the mundane content (choosing a lane) is the dominant shape.
+
+    difficulties: >
+      The main tension is between transplant and reinterpretation. I chose
+      transplant because there is a nameable foreign domain (existential
+      life-planning) whose framework is being imported into traffic. A
+      reinterpretation reading would say "lane choice" is being reread as
+      "life choice," but the humor depends on the mismatch of the framework
+      (existential anguish does NOT fit lane selection), not on seeing the
+      same material differently. The scale_shift: expansion is debatable —
+      the expansion is tightly fused with the transplant. I include it
+      because removing "For my life?" (the scale-lifting phrase) while
+      keeping the existential tone would noticeably weaken the joke.
+
+  # ---------------------------------------------------------------------------
+  # LAUGH-POINT 2: "Can I get in over there?" — the desperate requests
+  # ---------------------------------------------------------------------------
+  - joke_id: s01e06_opening_lp2
+    text: >
+      They're always a little bit ahead of you, "Can I get in over there?
+      Could I get in over here? Could I get in there?"
+
+    setup_expectation: >
+      The "lane expert" has been established as someone with existential
+      lane anxiety. The audience expects further escalation of the
+      character's absurd behavior or attitude.
+
+    punchline_violation: >
+      The comedy is in the precise articulation of the desperate,
+      rapid-fire lane-change requests. The audience recognizes the exact
+      cadence and phrasing of the driver craning and pleading. Nothing is
+      reframed — the humor is in hearing voiced aloud what everyone has
+      witnessed but never verbalized as a comedic script.
+
+    pivot_locus: affective
+
+    pivot_concept: lane_choice
+
+    pivot_mechanism:
+      operation: articulation
+      # TEST: If the audience KNEW the punchline would be rapid-fire lane
+      #   requests, would it still be funny? Yes — the humor is in the
+      #   precise rendering of the desperate cadence ("over there? over
+      #   here? in there?") that the audience recognizes from experience.
+      #   The laugh is recognition, not surprise.
+      reading_switch: none
+      scale_shift: none
+
+    setup_frame: establishes_norm
+    # The lane expert as a type has been established; the articulation
+    # voices their known behavior.
+
+    primary_template: escalation
+    # Three rapid requests, each a slight variation, building the portrait
+    # of desperation through accumulation. The escalation in specificity
+    # and desperation across the three requests is the structural shape.
+
+    difficulties: >
+      This laugh-point is performance-dependent — the voiced character
+      work carries the comedy. As a written joke, it is light. The
+      articulation classification is clean: no frame shift, pure
+      recognition humor. The escalation template fits the three-beat
+      repetition structure, though it is a mild escalation (the requests
+      differ only in direction, not in absurdity). Could arguably be
+      classified as no distinct laugh-point (a setup beat for LP3), but
+      the voiced desperation earns its own laugh.
+
+  # ---------------------------------------------------------------------------
+  # LAUGH-POINT 3: "Yeah, come on over here, pal. We're zoomin'..."
+  # ---------------------------------------------------------------------------
+  - joke_id: s01e06_opening_lp3
+    text: >
+      "Yeah, come on over here, pal. We're zoomin' over here. This is the
+      secret lane, nobody knows about it.."
+
+    setup_expectation: >
+      The lane expert is desperately seeking a better lane. The audience
+      expects either more desperation or a payoff about the futility of
+      lane-changing.
+
+    punchline_violation: >
+      Jerry switches to voicing the OTHER driver — someone sarcastically
+      "inviting" the lane-changer over with mock hospitality. "This is the
+      secret lane, nobody knows about it" is dripping with sarcasm: every
+      lane in heavy traffic is equally stuck, so the premise that any lane
+      is secretly better is absurd. The joke articulates the shared
+      irritation of every driver who has watched someone lane-hop as
+      though there were a hidden fast lane.
+
+    pivot_locus: logical
+
+    pivot_concept: lane_choice
+
+    pivot_mechanism:
+      operation: negation
+      # TEST: "Setup implies X. Punchline asserts not-X."
+      #   Setup implies: there might be a better lane somewhere (the lane
+      #     expert's entire premise).
+      #   Punchline asserts: there is no secret better lane; all lanes are
+      #     equally stuck.
+      # The sarcastic "secret lane nobody knows about" negates the lane
+      # expert's foundational belief that superior lanes exist.
+      reading_switch: none
+      scale_shift: none
+
+    setup_frame: establishes_anomaly
+    # The lane expert's behavior (desperate lane-seeking) is the anomaly
+    # the setup has been building.
+
+    primary_template: mundane_as_monumental
+    # "The secret lane, nobody knows about it" applies the register of
+    # insider knowledge / conspiracy to a traffic lane. The gravity of
+    # "secret" and exclusivity against the mundane reality of identical
+    # congested lanes is the rhetorical shape.
+
+    difficulties: >
+      The hardest call here is between negation and articulation. The
+      sarcasm voices a truth everyone knows (no lane is better) which
+      suggests articulation. But the structural move is negation: the
+      lane expert's premise (better lanes exist) is what is being negated
+      by the sarcastic response. The test for articulation ("would it
+      still be funny if you knew?") partially passes — the sarcasm is
+      recognizable — but the comedy hinges on the CONTRADICTION between
+      the lane expert's belief and reality, not just on voicing a shared
+      truth. Negation is the cleaner fit because the sarcastic "secret
+      lane" is structured as a refutation, not a verbalization.
+
+  # ---------------------------------------------------------------------------
+  # LAUGH-POINT 4: Total dead stop — "you can see gum clearly"
+  # ---------------------------------------------------------------------------
+  - joke_id: s01e06_opening_lp4
+    text: >
+      The ultimate, I think the ultimate psychological test of traffic is
+      the total dead stop. Not even rolling. And you look out the window,
+      you can see gum clearly.
+
+    setup_expectation: >
+      "The ultimate psychological test of traffic" invokes the register of
+      psychological endurance, existential challenge. The audience expects
+      the payoff to describe the emotional or mental toll of being
+      completely stopped in traffic.
+
+    punchline_violation: >
+      Instead of describing the psychological state, Jerry drops to a
+      hyperspecific physical detail: you can see gum on the road surface.
+      The "test" is not measured by emotion but by proximity to the
+      pavement. The total dead stop is so absolute that the only evidence
+      of it is an absurdly granular visual — you are close enough, for
+      long enough, to examine gum.
+
+    pivot_locus: logical
+
+    pivot_concept: traffic_dead_stop
+
+    pivot_mechanism:
+      operation: reinterpretation
+      # TEST (two readings of the SAME material):
+      #   Reading 1 (setup invites): "total dead stop" = a psychological
+      #     ordeal, a test of patience and sanity.
+      #   Reading 2 (punchline imposes): "total dead stop" = a state of
+      #     physical stasis so complete that the road surface becomes
+      #     legible. The "test" is reread not as emotional endurance but
+      #     as a visual-acuity/proximity metric.
+      # The same situation is reframed from psychological to perceptual.
+      reading_switch: none
+      scale_shift: contraction
+      # The elevated "psychological test" is contracted to a trivial
+      # physical observation (seeing gum). The contraction from existential
+      # ordeal to roadside litter is load-bearing: without the drop in
+      # register, the joke doesn't land.
+
+    setup_frame: establishes_norm
+    # "The ultimate psychological test" establishes a norm of gravity and
+    # significance for the dead stop.
+
+    primary_template: mundane_as_monumental
+    # The "ultimate psychological test" frame applies monumental gravity
+    # to being stuck in traffic. The gum detail deflates it, but the
+    # template is the mismatch between the elevated frame and the mundane
+    # content.
+
+    difficulties: >
+      The tension is between reinterpretation and mapping. Could "seeing
+      gum" be a mapping (dead stop mapped to a microscope / archaeology)?
+      I reject this because no second domain is explicitly invoked — the
+      humor is in the reframe from psychological to perceptual within the
+      same traffic domain. The scale_shift: contraction is clear —
+      "psychological test" to "seeing gum" is a gravity drop. The
+      specificity of "gum" is doing significant work (a more generic
+      detail like "the road" would be weaker), which suggests the
+      articulation test might pass, but the frame shift from psychological
+      to perceptual is load-bearing, ruling out pure articulation.
+
+  # ---------------------------------------------------------------------------
+  # LAUGH-POINT 5: "Will it start moving backwards, I wonder?"
+  # ---------------------------------------------------------------------------
+  - joke_id: s01e06_opening_lp5
+    text: >
+      So we know that in the future traffic will get even worse than that.
+      I mean, what will happen? Will it start moving backwards, I wonder?
+
+    setup_expectation: >
+      "Traffic will get worse" is a reasonable, shared premise — traffic
+      trends worse over time. The audience expects a complaint about
+      future congestion or a specific scenario of worse traffic.
+
+    punchline_violation: >
+      Jerry follows the premise to its absurd logical conclusion: if
+      traffic can go from moving to stopped, the next stage is moving
+      backwards. The progression (moving -> stopped -> backwards) is
+      logically consistent within the absurd framework that traffic
+      conditions must always worsen. The conclusion is ridiculous but
+      follows from the accepted premise.
+
+    pivot_locus: logical
+
+    pivot_concept: traffic_dead_stop
+
+    pivot_mechanism:
+      operation: extension
+      # TEST: Accepted premise: traffic always gets worse; we have
+      #   already reached "total dead stop."
+      # Absurd-but-logical conclusion: the next stage beyond zero
+      #   movement is negative movement — traffic moves backwards.
+      # The premise is never challenged; the destination is absurd.
+      reading_switch: none
+      scale_shift: none
+
+    setup_frame: establishes_sequence
+    # The setup establishes a directional sequence: traffic was moving,
+    # now it's stopped, in the future it will be worse. The sequence
+    # structure (progression through stages of worsening) sets up the
+    # extension.
+
+    primary_template: reductio
+    # The rhetorical shape is a logical argument driven to absurd
+    # conclusion: accept that traffic worsens, note it has reached zero,
+    # therefore the next value is negative. The reasoning chain (premise ->
+    # observation -> absurd conclusion) is the structural shape.
+
+    difficulties: >
+      Extension + reductio is a clean pairing — reductio is the template
+      (argumentative chain), extension is the operation (following logic
+      past reason). No significant ambiguity. The scale_shift could
+      arguably be expansion (from present traffic to a universal future
+      principle), but the humor is in the logical absurdity of backwards
+      movement, not in the scope change. Removing the future-tense framing
+      and just saying "what if traffic went backwards" would still be
+      funny, so the scale shift is not load-bearing.
+
+  # ---------------------------------------------------------------------------
+  # LAUGH-POINT 6: "Boy, this is some really bad traffic now"
+  # ---------------------------------------------------------------------------
+  - joke_id: s01e06_opening_lp6
+    text: >
+      I mean, is that possible? That someday we'll be going "Boy, this is
+      some really bad traffic now, boy. This, is really bad."
+
+    setup_expectation: >
+      The backwards-traffic premise has been established. The audience
+      expects either further logical extension or a return to reality.
+
+    punchline_violation: >
+      Jerry voices the future driver reacting to backwards traffic with
+      the SAME mundane complaint register people use for normal traffic
+      today. The absurdity is that backwards movement — a physics-defying
+      impossibility — elicits only the standard banal complaint ("Boy,
+      this is really bad"). The reaction is wildly inadequate for the
+      situation. The humor is in the understatement: normalizing the
+      impossible.
+
+    pivot_locus: both
+
+    pivot_concept: traffic_dead_stop
+
+    pivot_mechanism:
+      operation: reinterpretation
+      # TEST (two readings of the SAME material):
+      #   Reading 1: "really bad traffic" as the audience first hears it =
+      #     a familiar, proportionate complaint about normal congestion.
+      #   Reading 2: "really bad traffic" in context = traffic literally
+      #     moving backwards, a situation that should provoke existential
+      #     terror, not a casual "boy."
+      # The same banal complaint phrase is reread: it was adequate for
+      # ordinary traffic but grotesquely inadequate for backwards traffic.
+      # The humor is in the frame mismatch.
+      reading_switch: none
+      scale_shift: contraction
+      # The cosmic absurdity of backwards-moving traffic is contracted to
+      # the register of mundane complaint. The contraction is load-bearing:
+      # the joke depends on the mismatch between the enormity of the
+      # situation and the banality of the response.
+
+    setup_frame: establishes_anomaly
+    # The backwards-traffic scenario is the established anomaly; the
+    # punchline responds to it with normalizing language.
+
+    primary_template: mundane_as_monumental
+    # Inverted form: the monumental (backwards traffic) is treated as
+    # mundane. The standard register of traffic complaints is applied to
+    # an impossible scenario. The mismatch between the gravity of the
+    # situation and the triviality of the response is the shape.
+
+    difficulties: >
+      This is the hardest classification in the monologue. The template
+      is an INVERTED mundane_as_monumental — normally the template elevates
+      the mundane, but here the monumental is treated as mundane. The
+      vocabulary does not distinguish directionality within the template.
+      This is a genuine vocabulary gap. Additionally, the operation could
+      be argued as articulation (the humor is in the precise rendering of
+      the complaint voice, which the audience recognizes). But the frame
+      mismatch between situation severity and response register is load-
+      bearing — removing it kills the joke — so reinterpretation holds.
+      The contraction captures the essential move: cosmic event reduced to
+      casual complaint.
+
+  # ---------------------------------------------------------------------------
+  # LAUGH-POINT 7: "I'm gonna try to get off and get back on going the
+  # other way"
+  # ---------------------------------------------------------------------------
+  - joke_id: s01e06_opening_lp7
+    text: >
+      "I'm gonna try to get off and get back on going the other way."
+
+    setup_expectation: >
+      The backwards-traffic scenario has been established and normalized
+      through the banal complaint. The audience expects either a capper
+      that acknowledges the absurdity or a return to reality.
+
+    punchline_violation: >
+      The driver's solution to backwards traffic is the standard traffic
+      workaround: get off the highway and get back on the other way. But
+      applied to backwards traffic, "the other way" means going FORWARD —
+      the direction traffic normally goes. The ordinary escape maneuver
+      becomes a surreal act: you have to take evasive action to achieve
+      what is normally the default state. The mundane workaround, when
+      applied to the absurd premise, becomes itself absurd.
+
+    pivot_locus: logical
+
+    pivot_concept: traffic_dead_stop
+
+    pivot_mechanism:
+      operation: extension
+      # TEST: Accepted premise: traffic is moving backwards and people
+      #   respond to it with normal traffic-coping behavior.
+      # Absurd-but-logical conclusion: the standard workaround ("get off
+      #   and get back on the other way") now means getting off backwards
+      #   traffic to rejoin forward traffic — making the normal direction
+      #   of travel the thing you have to cleverly navigate toward.
+      # The premise is accepted and followed one step further.
+      reading_switch: none
+      scale_shift: none
+
+    setup_frame: establishes_anomaly
+    # The backwards-traffic world has been established as the new normal
+    # (the anomaly); the punchline extends behavior within it.
+
+    primary_template: reductio
+    # The argumentative chain continues: traffic goes backwards, people
+    # complain normally, people apply normal solutions — and the normal
+    # solution, in the backwards world, means trying to go forward. The
+    # reductio chain (absurd premise -> normalized reaction -> normalized
+    # solution -> solution is itself absurd) reaches its final beat.
+
+    difficulties: >
+      The operation choice between extension and reinterpretation is the
+      tension. "Get back on going the other way" could be a
+      reinterpretation of a familiar phrase (normally "the other way"
+      means an alternate route; here it means the forward direction). But
+      the humor is structural, not linguistic: it follows the backwards-
+      traffic premise to the logical next behavioral step. The phrase is
+      not being reread; the premise is being extended. Extension is
+      cleaner. The reductio template fits as the culminating beat of the
+      argumentative chain that started with LP5.

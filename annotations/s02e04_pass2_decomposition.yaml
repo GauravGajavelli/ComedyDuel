@@ -1,0 +1,376 @@
+# =============================================================================
+# PASS 2 — Silent Decomposition
+# S02E04: "The Heart Attack"
+# Routine: s02e04_opening
+# =============================================================================
+
+schema_version: "1.0"
+routine_id: s02e04_opening
+pass: 2
+
+annotations:
+
+  # ---------------------------------------------------------------------------
+  # LAUGH-POINT 1: "I have three cookies or four cookies, or eleven cookies"
+  # The freedom of adult cookie consumption
+  # ---------------------------------------------------------------------------
+  - joke_id: s02e04_b1_lp1
+    text: >
+      As an adult, if I want a cookie, I have a cookie, okay? I have three
+      cookies or four cookies, or eleven cookies if I want.
+
+    setup_expectation: >
+      "Enjoying adulthood" and "reason number one" establish a frame of
+      adult privileges -- the audience expects something substantive about
+      autonomy, career, relationships, or self-determination. The
+      enumerated-list register ("reason number one") promises gravity.
+
+    punchline_violation: >
+      The pinnacle of adult freedom is eating cookies without permission.
+      The escalation from one to three to four to eleven performs an
+      absurd expansion of what should be a trivially obvious freedom.
+      The content is a child's fantasy delivered with an adult's
+      self-congratulation.
+
+    pivot_locus: logical
+
+    pivot_concept: adult_autonomy
+    # The concept of what it means to be a self-governing adult is the
+    # axis the turn operates on.
+
+    pivot_mechanism:
+      operation: reinterpretation
+      # TEST (two distinct readings of the SAME material):
+      #   Reading 1 (setup invites): "enjoying adulthood" = the mature
+      #     privileges of adult life (independence, authority, freedom of
+      #     choice in consequential domains).
+      #   Reading 2 (punchline imposes): "enjoying adulthood" = the absence
+      #     of parental food restrictions. The same concept ("adult freedom")
+      #     is reread under a childish frame. Nothing is negated -- he IS
+      #     enjoying adulthood. The frame shifts from consequential autonomy
+      #     to trivial dietary license.
+      reading_switch: none
+      # No figurative expression is being literalized. "Enjoying adulthood"
+      # is not an idiom. The reframe is conceptual (consequential freedom
+      # to trivial freedom), not a reading-mode switch.
+      scale_shift: contraction
+      # The grand concept of "adult freedom" is contracted to cookie
+      # consumption. The contraction from consequential to trivial is
+      # load-bearing: without the drop in gravity, the joke doesn't land.
+
+    setup_frame: establishes_norm
+    # The setup establishes the norm of adulthood as a domain of serious
+    # privileges through register cues ("reason number one").
+
+    primary_template: mundane_as_monumental
+    # The rhetorical shape is: the grammar of importance ("I'll tell you
+    # reason number one," the declarative authority of "I have a cookie")
+    # is applied to a trivially small freedom. The elevated frame against
+    # the trivial content is the dominant shape. The escalation from three
+    # to eleven is a secondary structural move within the template.
+
+    difficulties: >
+      The main tension is whether this is reinterpretation or negation.
+      Negation would require the setup's claim to be rendered false. But
+      Jerry IS enjoying adulthood -- the claim is true, just reframed
+      from serious to trivial. The "adulthood" concept is reread, not
+      contradicted. The escalation (three, four, eleven) also creates a
+      secondary escalation template, but the dominant shape is
+      mundane_as_monumental because the escalation serves the mismatch
+      between frame gravity and content triviality.
+
+  # ---------------------------------------------------------------------------
+  # LAUGH-POINT 2: "I will intentionally ruin my entire appetite"
+  # Deliberate appetite destruction
+  # ---------------------------------------------------------------------------
+  - joke_id: s02e04_b1_lp2
+    text: >
+      Many times I will intentionally ruin my entire appetite. Just ruin it.
+
+    setup_expectation: >
+      The cookie bit has established adult freedom in trivial terms.
+      The audience is inside the comic frame. "Intentionally ruin my
+      entire appetite" imports the parental language of childhood
+      scolding -- "you'll ruin your appetite" -- as a frame the audience
+      recognizes from being a child.
+
+    punchline_violation: >
+      Jerry treats the childhood warning as a goal rather than a threat.
+      The parental prohibition ("don't ruin your appetite") is reframed
+      as an adult achievement to pursue deliberately. The word
+      "intentionally" does the heaviest work: it flips the childhood
+      frame from something that happens to you accidentally into
+      something you do on purpose as a marker of freedom. "Just ruin it"
+      doubles down with relish.
+
+    pivot_locus: logical
+
+    pivot_concept: appetite_ruining
+    # The specific concept of "ruining your appetite" -- a phrase loaded
+    # with childhood-parental connotation -- is the pivot axis.
+
+    pivot_mechanism:
+      operation: reinterpretation
+      # TEST (two distinct readings of the SAME material):
+      #   Reading 1 (childhood frame): "ruining your appetite" = a bad
+      #     outcome, something to be avoided, a failure of self-regulation
+      #     that a parent warns against.
+      #   Reading 2 (punchline frame): "ruining your appetite" = a
+      #     deliberate exercise of adult autonomy, a triumph of
+      #     self-determination. Same act, reframed from transgression
+      #     to achievement.
+      reading_switch: none
+      # "Ruin your appetite" is a conventional phrase but not an idiom
+      # being literalized. Both readings use "ruin" in the same sense.
+      # The reframe is evaluative (bad -> good), not a reading-mode switch.
+      scale_shift: none
+      # No change in scope or gravity. The bit stays at the personal,
+      # trivial level. The reframe is evaluative (transgression to
+      # achievement), not scalar.
+
+    setup_frame: establishes_norm
+    # The norm is the childhood understanding of appetite-ruining as
+    # something forbidden. The audience carries this norm implicitly
+    # from the parental-register language.
+
+    primary_template: mundane_as_monumental
+    # "Intentionally" and "Just ruin it" apply the grammar of deliberate
+    # purposeful action to a trivially small act. The word "intentionally"
+    # gives cookie-eating the gravitas of a strategic decision.
+
+    difficulties: >
+      The evaluative reframe (bad-to-good) is not quite captured by
+      reading_switch or scale_shift. reading_switch covers
+      literal/figurative mode changes; scale_shift covers scope/gravity.
+      An evaluative flip (transgression-to-achievement on the SAME act)
+      fits neither modifier cleanly. This might be a vocabulary gap:
+      the pivot-mechanisms system has no modifier for valence-flip on
+      the act itself. I classified the core operation as reinterpretation
+      because the test produces two clean readings of the same material.
+      Negation was considered but rejected: nothing is negated -- the act
+      of ruining the appetite is affirmed, not contradicted. The frame
+      around the act changes, not the truth value.
+
+  # ---------------------------------------------------------------------------
+  # LAUGH-POINT 3: "Hello, Mom? I just ruined my entire appetite.. cookies."
+  # The phone call to Mom
+  # ---------------------------------------------------------------------------
+  - joke_id: s02e04_b1_lp3
+    text: >
+      And then, I call my mother up right after to tell her that I did it.
+      "Hello, Mom? yeah, I just ruined my entire appetite.. cookies."
+
+    setup_expectation: >
+      The bit has established deliberate appetite-ruining as an adult
+      freedom. The audience expects the next beat to continue the theme
+      of self-congratulatory autonomy -- perhaps more examples of trivial
+      adult freedoms, or an escalation of the appetite destruction.
+
+    punchline_violation: >
+      Instead of moving on, Jerry calls his mother to REPORT the
+      transgression. The adult who just declared his freedom
+      immediately reverts to a child-parent dynamic by confessing.
+      The performative adult autonomy is undercut: a truly autonomous
+      adult wouldn't need to tell Mom. The confession reimports the
+      exact authority structure the cookies were supposed to transcend.
+      "Cookies" as the final word -- a bare, monosyllabic confession --
+      lands as the bathetic specificity of this non-event.
+
+    pivot_locus: logical
+
+    pivot_concept: adult_autonomy
+    # The concept of adult autonomy is the pivot -- the phone call
+    # reveals that the "autonomy" still orbits the parental authority
+    # it claims to have escaped.
+
+    pivot_mechanism:
+      operation: negation
+      # TEST: "Setup implies X. Punchline asserts not-X."
+      #   Setup implies: Jerry is a free adult who does what he wants,
+      #     independent of parental authority.
+      #   Punchline asserts: he immediately reports to his mother, which
+      #     negates the independence the setup claimed. You cannot be
+      #     autonomously free AND compulsively confessing to your parent.
+      #     The claim of adult freedom is rendered functionally false by
+      #     the behavior that follows it.
+      reading_switch: none
+      scale_shift: none
+
+    setup_frame: establishes_norm
+    # The preceding beats established the norm of adult cookie freedom.
+    # The phone call violates that norm.
+
+    primary_template: mundane_as_monumental
+    # The phone call to Mom treats a non-event (eating cookies) with the
+    # urgency and gravity of a confession. "Hello, Mom?" with the dramatic
+    # pause, then the bathetic "cookies" -- the confessional frame is
+    # monumental, the content is trivial. Additionally, there is an
+    # element of escalation (the bit has been building: cookies -> many
+    # cookies -> intentional ruining -> calling Mom), but the dominant
+    # shape of THIS laugh-point is the mismatch between confessional
+    # gravity and trivial content.
+
+    difficulties: >
+      The hardest call here is between negation and extension. Extension
+      would frame this as: accepted premise (adult freedom from parental
+      food rules) followed to an absurd conclusion (calling Mom to
+      report). But extension requires the punchline to ACCEPT the
+      premise and follow its logic. The phone call doesn't follow from
+      the premise of adult freedom -- it contradicts it. An autonomous
+      adult wouldn't call Mom. The behavior negates the autonomy claim.
+      Negation fits because the setup's implicit claim (I'm free from
+      parental authority over food) is rendered false by the compulsive
+      confession. The phone call is the behavioral not-X.
+
+  # ---------------------------------------------------------------------------
+  # LAUGH-POINT 4: "There's another appetite coming right behind it"
+  # The infinite supply of appetites
+  # ---------------------------------------------------------------------------
+  - joke_id: s02e04_b1_lp4
+    text: >
+      See, because as an adult, we understand even if you ruin an appetite,
+      there's another appetite coming right behind it. There's no danger
+      in running out of appetites.
+
+    setup_expectation: >
+      The parental frame ("don't ruin your appetite") carries an implicit
+      premise: appetites are scarce, fragile, and once ruined, the
+      consequence (not eating dinner, missing nutrition) is real. The
+      audience holds this childhood logic as background.
+
+    punchline_violation: >
+      Jerry articulates the adult realization that appetites are
+      renewable and abundant. "There's another appetite coming right
+      behind it" treats appetites as a commodity with infinite supply,
+      like buses on a route. The childhood fear of "ruining" something
+      precious is dissolved by the adult recognition that the resource
+      was never scarce. "No danger in running out of appetites" makes
+      explicit what every adult already implicitly knows but has never
+      verbalized in these terms.
+
+    pivot_locus: logical
+
+    pivot_concept: appetite_ruining
+
+    pivot_mechanism:
+      operation: extension
+      # TEST: Accepted premise + absurd-but-logical conclusion.
+      #   Accepted premise: you can ruin your appetite (the childhood
+      #     frame, accepted without challenge).
+      #   Absurd-but-logical conclusion: so what? Appetites are a
+      #     renewable resource with infinite supply. The premise "ruining
+      #     an appetite is bad" is not contradicted -- it's made
+      #     irrelevant by following the logic of what "ruin" actually
+      #     means for a recurring biological process. The conclusion is
+      #     logically valid (appetites DO return) but absurd in framing
+      #     them as a commodity you might "run out of."
+      # There is also a strong articulation component here: the audience
+      # KNOWS appetites come back. The humor is partly in the
+      # verbalization. But the framing of appetites as a supply chain
+      # ("coming right behind it," "running out") goes PAST what the
+      # audience implicitly knew -- it pushes the observation into
+      # absurd-commodity territory. Extension captures this better than
+      # pure articulation.
+      reading_switch: none
+      scale_shift: none
+
+    setup_frame: establishes_norm
+    # The childhood norm that appetite-ruining has consequences is the
+    # established frame being operated on.
+
+    primary_template: reductio
+    # The rhetorical shape is a mock-logical argument: the childhood
+    # warning is taken as a premise and argued against with absurd rigor.
+    # "As an adult, we understand" signals the pedagogical register of
+    # someone explaining a logical conclusion. The argumentative chain
+    # (even if you ruin one -> another comes -> no danger of shortage)
+    # is the shape. This is the logical-argument subset of escalation.
+
+    difficulties: >
+      The tension between extension and articulation is the hardest call
+      in this monologue. The articulation test: "If the audience KNEW
+      what the punchline would say, would they still find it funny?"
+      Partially yes -- the recognition that appetites come back is a
+      shared truth. But the specific framing as a supply-chain commodity
+      ("coming right behind it," "running out," "no danger") goes beyond
+      mere verbalization of the shared truth into absurd-commodity
+      territory. The audience knew appetites come back; they did NOT
+      independently frame this as a supply-chain risk assessment.
+      Extension captures the move past the shared truth into absurd
+      logical territory. The template call between reductio and
+      mundane_as_monumental is also debatable. I chose reductio because
+      the "as an adult, we understand" signals a mock-logical argument
+      structure, and the bit follows a premise to conclusion. But
+      mundane_as_monumental is also present: the pedagogical gravity
+      applied to appetite logistics is a frame/content mismatch.
+
+  # ---------------------------------------------------------------------------
+  # LAUGH-POINT 5: "I've got millions of them, I'll ruin them whenever I want"
+  # The button/topper
+  # ---------------------------------------------------------------------------
+  - joke_id: s02e04_b1_lp5
+    text: >
+      I've got millions of them, I'll ruin them whenever I want!
+
+    setup_expectation: >
+      The preceding beat established appetites as renewable. The audience
+      expects this to be the conclusion -- a reasonable (if amusingly
+      framed) adult insight about appetite recovery.
+
+    punchline_violation: >
+      Jerry escalates from "appetites come back" to "I have MILLIONS"
+      and reclaims the deliberate-destruction framing from earlier:
+      "I'll ruin them whenever I want." The reasonable observation
+      (appetites are renewable) is pushed to a declaration of infinite
+      resource abundance and gleeful, willful destruction. The register
+      shifts from mock-pedagogical explanation to defiant proclamation --
+      the tone of a child triumphantly shouting at a parent, delivered
+      by an adult who has just proven the parent wrong.
+
+    pivot_locus: logical
+
+    pivot_concept: appetite_ruining
+
+    pivot_mechanism:
+      operation: extension
+      # TEST: Accepted premise + absurd-but-logical conclusion.
+      #   Accepted premise: appetites are renewable and there's no danger
+      #     of running out (established by the preceding beat).
+      #   Absurd conclusion: therefore I possess MILLIONS and will
+      #     destroy them at will. The premise is accepted and pushed
+      #     further: from "they come back" to "infinite supply" to
+      #     "gleeful mass destruction." Each step is logically valid
+      #     given the prior step; the destination is absurd.
+      reading_switch: none
+      scale_shift: expansion
+      # The specific observation (appetites come back after being ruined)
+      # is expanded to a universal declaration of infinite abundance and
+      # perpetual willful destruction. "Millions" and "whenever I want"
+      # lift the scope from one evening's appetite to a lifetime's
+      # supply. The expansion is load-bearing: "I'll ruin the next one
+      # too" would be much weaker than "I've got millions."
+
+    setup_frame: establishes_norm
+    # The preceding beat's "appetites come back" is the established
+    # norm being operated on.
+
+    primary_template: escalation
+    # The rhetorical shape is escalation: "millions" increments the
+    # quantity from the preceding "another one coming," and "whenever
+    # I want" increments the agency from the preceding observation.
+    # Each feature (quantity, agency, defiance) is pushed harder than
+    # the previous beat. The accumulation is the structural move.
+
+    difficulties: >
+      The operation choice between extension and articulation is again
+      relevant: "millions" is an absurd quantification that goes past
+      what the audience would naturally frame, confirming extension over
+      articulation. The scale_shift: expansion call is based on the
+      jump from "another one coming" (singular, near-term) to "millions"
+      (infinite, lifetime). The template choice between escalation and
+      reductio is debatable: the preceding beat set up a reductio
+      argument chain, and this topper could be its final step. I chose
+      escalation because this beat's humor is in the incremental push
+      (quantity and defiance both go up), not in the logical-argument
+      structure. The reductio shape belongs to the preceding beat; this
+      beat's shape is additive.
