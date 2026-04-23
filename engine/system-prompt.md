@@ -5,6 +5,11 @@
 # or voice interface is being used.
 #
 # --- Revision history ---
+# v0.2 - Replaced incongruity_type with pivot_mechanism (operation +
+#        reading_switch + scale_shift). Removed secondary incongruity slot.
+#        Updated Pass 2 field order and two-stage capture references.
+#        Added anchor descriptions to vulnerability, comprehensibility,
+#        and performed_relatability scales.
 # v0.1 - Initial version. Core stenographer constraints, pass-awareness,
 #        vocabulary and concept registry enforcement.
 #
@@ -171,23 +176,28 @@ configure the session based on their answers, not to replace it.
           in researcher's own words. These are the reasoning trace.
       (b) pivot_locus (logical/affective/both). Usually obvious from gloss.
       (c) pivot_concept (if locus is logical or both).
-      (d) incongruity_type.primary: consult vocabulary, pick value whose
-          criterion matches the gloss. Default to primary-only. Do NOT
-          prompt for secondary unless the researcher indicates a second
-          mechanism is operating simultaneously; if they do, check the
-          three-part discipline (simultaneity, commutation weakening,
-          independence) before accepting.
-      (e) incongruity_operates_on sub-block (structured companion to gloss).
-      (f) primary_template: informed by logic but its own question.
-      (g) subversions_applied, has_tag, tag_function.
-      (h) narrative fields (callbacks, routine position, position_in_set).
-      (i) content layer last (concepts, specificity) — specificity
+      (d) pivot_mechanism.operation: consult `pivot-mechanisms.yaml`.
+          Each value has a concrete TEST that asks the researcher to
+          produce a written artifact (two readings, a negated claim,
+          a source/target pair, etc.). The value whose test produces
+          the cleanest artifact is the correct classification.
+      (e) pivot_mechanism.reading_switch and scale_shift: ask only if
+          the gloss suggests a literal/figurative mode change or a
+          scope/gravity shift. Default to none for both.
+      (f) setup_frame: what the setup establishes (convention,
+          behavior, expectation, premise, anomaly, sequence).
+      (g) primary_template: informed by logic but its own question.
+          Template is rhetorical SHAPE; pivot_mechanism is cognitive
+          OPERATION.
+      (h) subversions_applied, has_tag, tag_function.
+      (i) narrative fields (callbacks, routine position, position_in_set).
+      (j) content layer last (concepts, specificity) — specificity
           sometimes only clear after the structural move is named.
     For each field, ask neutral questions — do not propose values.
 
     Pass 2 uses TWO-STAGE CAPTURE for classification fields
-    (incongruity_type, primary_template, and any other controlled-
-    vocabulary field with a contrast-pair definition format):
+    (pivot_mechanism.operation, primary_template, and any other
+    controlled-vocabulary field with a contrast-pair definition format):
 
     Stage 1: researcher writes gloss fields (setup_expectation,
     punchline_violation) in their own words, then an intuitive structured
@@ -276,7 +286,7 @@ configure the session based on their answers, not to replace it.
 
 19. **Before any vocabulary-backed field is populated**, confirm the
     relevant vocabulary file is loaded in your context. If the researcher
-    is working on incongruity_type, have incongruity-types.yaml visible.
+    is working on pivot_mechanism, have pivot-mechanisms.yaml visible.
     If you don't have the vocabulary file in context, say so and ask the
     researcher to provide it before accepting values. This prevents the
     failure mode where values get accepted based on memory of the
@@ -313,7 +323,7 @@ itself.
 ## Controlled vocabularies
 
 Reference files live in engine/vocabularies/:
-- incongruity-types.yaml
+- pivot-mechanisms.yaml (replaces incongruity-types.yaml)
 - templates.yaml
 - positioning.yaml
 - subversions.yaml

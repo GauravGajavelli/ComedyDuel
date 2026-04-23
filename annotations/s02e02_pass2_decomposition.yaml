@@ -1,0 +1,337 @@
+# =============================================================================
+# PASS 2 — Silent Decomposition
+# S02E02: "The Statue"
+# Routine: s02e02_opening
+# =============================================================================
+# Laugh-points identified from transcript.
+# Each entry below is one distinct joke/laugh-point.
+# =============================================================================
+
+schema_version: "1.0"
+routine_id: s02e02_opening
+pass: 2
+
+annotations:
+
+  # ---------------------------------------------------------------------------
+  # LAUGH-POINT 1: The exciting announcement that is sweepstakes junk mail
+  # ---------------------------------------------------------------------------
+  - joke_id: s02e02_b1_beat1_punchline
+    text: >
+      I have to tell you that I did some very exciting news recently, and
+      I don't know if I should really tell you exactly what it is because
+      it's really not a definite thing yet. Well, I will tell you what I
+      know so far. According to the information that I have in the envelope
+      that I've received, it seems that I may have already won some very
+      valuable prizes.
+
+    setup_expectation: >
+      Jerry's preamble ("exciting news," hedging, building suspense) uses
+      the rhetorical structure of a genuine personal announcement --
+      a career milestone, a life event, something worth building to.
+      The audience expects the payoff to match the gravity of the windup.
+
+    punchline_violation: >
+      The "exciting news" is revealed to be sweepstakes junk mail. The
+      language of the reveal ("according to the information," "the envelope
+      that I've received," "may have already won") is recognizable
+      sweepstakes boilerplate. The audience realizes the entire buildup
+      was being applied to something universally understood as worthless.
+      The mismatch between the announcement frame and the junk-mail
+      content is the joke.
+
+    pivot_locus: logical
+
+    pivot_concept: sweepstakes_mail
+
+    pivot_mechanism:
+      operation: reinterpretation
+      # TEST (two distinct readings of the SAME material):
+      #   Reading 1 (setup invites): "exciting news" / "not a definite
+      #     thing yet" / "envelope I received" = a genuine personal
+      #     announcement being carefully teased.
+      #   Reading 2 (punchline imposes): the same hedging language is
+      #     actually the BOILERPLATE of sweepstakes mailers ("may have
+      #     already won"). The audience re-reads the entire buildup as
+      #     Jerry performing the breathless language of junk mail as if
+      #     it were personal news.
+      # The material isn't negated; it is reread under a different frame.
+      reading_switch: none
+      # No figurative-to-literal or literal-to-figurative shift. The
+      # language is literal throughout -- it is the DOMAIN (personal
+      # announcement vs. junk mail) that shifts, not the reading mode.
+      scale_shift: contraction
+      # The "exciting news" frame is contracted from genuine life event
+      # to mass-mailed sweepstakes form letter. The deflation from
+      # personal to generic is load-bearing.
+
+    setup_frame: establishes_norm
+    # The setup establishes the norm of a significant personal
+    # announcement via the register of suspenseful revelation.
+
+    primary_template: mundane_as_monumental
+    # The rhetorical shape is: apply the grammar of a major personal
+    # announcement (hedging, suspense, gravity) to sweepstakes junk mail.
+    # The elevated frame against the trivial content is the joke's shape.
+
+    difficulties: >
+      The operation choice between reinterpretation and transplant is the
+      main tension. This could be read as transplant (the framework of
+      "personal exciting news" applied to the domain of junk mail). I chose
+      reinterpretation because the humor is in the audience re-reading the
+      same hedging language under a new frame, not in the explicit
+      misapplication of a named foreign framework. The sweepstakes
+      language IS the same language Jerry used; it is not imported from
+      elsewhere. The audience's cognitive move is "oh, he was reading
+      junk mail the whole time," which is a frame shift on existing
+      material, not a framework import.
+
+  # ---------------------------------------------------------------------------
+  # LAUGH-POINT 2: "You may have already won" as the core annoyance
+  # ---------------------------------------------------------------------------
+  - joke_id: s02e02_b1_beat2_pivot
+    text: >
+      You know, that's what annoys me about the sweepstakes companies,
+      they always tease you with that, "You may have already won."
+
+    setup_expectation: >
+      Jerry shifts to editorializing about sweepstakes companies. The
+      audience expects a standard observational complaint about deceptive
+      marketing -- the annoyance is the dishonesty, the false hope, the
+      manipulation.
+
+    punchline_violation: >
+      This is a transitional beat that articulates a universally recognized
+      annoyance. The audience laughs at the recognition of the specific
+      phrase "you may have already won" -- it is a cultural touchstone
+      everyone has encountered. The humor is in the shared irritation
+      being named precisely.
+
+    pivot_locus: logical
+
+    pivot_concept: sweepstakes_mail
+
+    pivot_mechanism:
+      operation: articulation
+      # TEST: If the audience KNEW what Jerry was going to say, would it
+      # still be funny? Yes -- the humor is in the voicing of a shared
+      # annoyance everyone has experienced. The audience reaction is
+      # recognition ("yes, that exact phrase"). No frame shift; no
+      # surprise beyond the pleasure of hearing it said.
+      reading_switch: none
+      scale_shift: none
+
+    setup_frame: establishes_norm
+    # Establishes the norm of sweepstakes companies' deceptive language
+    # as a universally recognized annoyance.
+
+    primary_template: mundane_as_monumental
+    # Jerry treats the sweepstakes phrase with the seriousness of a
+    # genuine grievance -- "that's what ANNOYS me" elevates junk mail
+    # language to the level of something worth being indignant about.
+
+    difficulties: >
+      This beat is borderline between a laugh-point and a setup for the
+      next joke. I included it because it draws audience response (the
+      recognition laugh on "you may have already won"), but it functions
+      primarily as a pivot to the next segment. The articulation
+      classification is clean -- the humor is pure recognition.
+
+  # ---------------------------------------------------------------------------
+  # LAUGH-POINT 3: "You have definitely lost!"
+  # ---------------------------------------------------------------------------
+  - joke_id: s02e02_b1_beat3_punchline
+    text: >
+      I'd like once for a sweepstakes company to have some guts, come out
+      with the truth, just tell people the truth one time. Send out
+      envelopes, "You have definitely lost!"
+
+    setup_expectation: >
+      "I'd like a sweepstakes company to have some guts, tell the truth"
+      sets up the premise that sweepstakes companies should be honest.
+      The audience expects the honest version to be some form of
+      tempered, realistic communication -- "your odds are very low" or
+      "this is basically a lottery."
+
+    punchline_violation: >
+      Instead of a measured honest disclosure, the "truth" is a
+      maximally blunt, zero-ambiguity declaration of failure: "You have
+      definitely lost!" The premise (be honest) is accepted and followed
+      to an absurd but logically valid destination. Honest sweepstakes
+      mail wouldn't soften the news; it would be brutally direct.
+
+    pivot_locus: logical
+
+    pivot_concept: sweepstakes_mail
+
+    pivot_mechanism:
+      operation: extension
+      # TEST: Accepted premise + absurd-but-logical conclusion.
+      #   Accepted premise: sweepstakes companies should tell the truth.
+      #   Absurd conclusion: the truthful version is "You have definitely
+      #     lost!" -- because the statistical reality for nearly every
+      #     recipient IS total loss. The premise is never challenged;
+      #     the destination is absurd because corporate communication
+      #     never uses this register, even when it would be accurate.
+      reading_switch: none
+      scale_shift: none
+
+    setup_frame: establishes_norm
+    # The setup establishes the norm of "companies should be honest"
+    # as a reasonable expectation.
+
+    primary_template: mundane_as_monumental
+    # The honest sweepstakes letter is rendered with the gravity and
+    # definitiveness ("DEFINITELY lost") of a momentous declaration.
+    # The format of a sweepstakes announcement is preserved but the
+    # content is inverted, creating the mismatch.
+
+    difficulties: >
+      The operation choice between extension and negation is the key
+      question. "You have definitely lost" is the logical OPPOSITE of
+      "you may have already won," which looks like negation. But the
+      humor doesn't come from contradicting the setup's claim; the
+      setup's claim (companies should be honest) is ACCEPTED, and the
+      punchline follows it to its logical destination (honest = brutally
+      blunt). The negation is between the sweepstakes boilerplate and
+      the honest version, but the JOKE'S mechanism is extension of the
+      honesty premise. The template choice is also tight -- this could
+      be false_equivalence (equating the format of a sweepstakes letter
+      with the content of brutal rejection). I chose mundane_as_monumental
+      because the dominant shape is the sweepstakes-letter format
+      (monumental in its formality) applied to a brutally mundane truth.
+
+  # ---------------------------------------------------------------------------
+  # LAUGH-POINT 4: "Not even close!"
+  # ---------------------------------------------------------------------------
+  - joke_id: s02e02_b1_beat4_tag
+    text: >
+      You turn it over, giant printing, "Not even close!"
+
+    setup_expectation: >
+      "You have definitely lost" has already delivered the honest-
+      sweepstakes premise. The audience expects the bit to move on
+      or wind down. At most, a restatement.
+
+    punchline_violation: >
+      Instead of moving on, Jerry escalates the cruelty. The envelope
+      itself is physically described ("turn it over," "giant printing"),
+      and the message intensifies from "you lost" to "not even close" --
+      adding gratuitous emphasis to an already total defeat. The
+      specificity of the physical detail (giant printing on the back)
+      commits harder to the imagined artifact.
+
+    pivot_locus: logical
+
+    pivot_concept: sweepstakes_mail
+
+    pivot_mechanism:
+      operation: extension
+      # TEST: Accepted premise + absurd-but-logical conclusion.
+      #   Accepted premise: the honest sweepstakes letter exists (from
+      #     the preceding joke).
+      #   Absurd conclusion: the letter is so committed to honesty that
+      #     it uses the BACK of the envelope for additional emphasis,
+      #     in giant printing, to make sure you understand how badly
+      #     you lost. Each detail follows logically from "maximally
+      #     honest" but the accumulation is absurd.
+      reading_switch: none
+      scale_shift: none
+
+    setup_frame: establishes_norm
+    # The preceding joke established the norm of the honest sweepstakes
+    # letter. This tag accepts that norm and extends it.
+
+    primary_template: escalation
+    # The rhetorical shape is escalation: from "you have definitely lost"
+    # to "not even close" is an increment in cruelty and specificity.
+    # The physical detail (turn it over, giant printing) escalates
+    # commitment to the imagined artifact.
+
+    difficulties: >
+      The operation choice between extension and articulation is clean --
+      this is extension because it pushes PAST the shared truth into
+      absurd specificity (no one has imagined giant printing on the back
+      of a rejection sweepstakes letter). The template choice between
+      escalation and mundane_as_monumental is also clear: this tag's
+      function is to increment intensity, making escalation the dominant
+      shape.
+
+  # ---------------------------------------------------------------------------
+  # LAUGH-POINT 5: "Even we cannot believe how badly you've done"
+  # ---------------------------------------------------------------------------
+  - joke_id: s02e02_b1_beat5_topper
+    text: >
+      You open it up, there's this whole letter of explanation, "Even we
+      cannot believe how badly you've done in this contest."
+
+    setup_expectation: >
+      The escalation has established the honest-but-cruel sweepstakes
+      letter (definite loss, not even close). The audience expects either
+      a final repetition at the same level or a move to a new topic.
+
+    punchline_violation: >
+      Jerry escalates again, now past rejection into editorial
+      astonishment FROM THE COMPANY ITSELF. The sweepstakes company is
+      no longer just rejecting the recipient; it is expressing its own
+      incredulity at how badly the person performed. The company becomes
+      a character with feelings about the outcome. The phrase "even we"
+      implies the company expected better, making the recipient's failure
+      not just total but surprising to the very entity that designed
+      the contest.
+
+    pivot_locus: both
+    # Logical: the extension of honesty premise to a new absurd level.
+    # Affective: the shift from corporate communication to personal
+    # incredulity introduces an emotional dimension -- the company
+    # is bewildered and almost sympathetic in its disbelief.
+
+    pivot_concept: sweepstakes_mail
+
+    pivot_mechanism:
+      operation: extension
+      # TEST: Accepted premise + absurd-but-logical conclusion.
+      #   Accepted premise: the sweepstakes letter is maximally honest
+      #     (established across beats 3-4).
+      #   Absurd conclusion: maximal honesty means the company also
+      #     shares its INTERNAL reaction -- astonishment at how badly
+      #     the recipient performed. If a company were truly, completely
+      #     honest, it would include its own emotional response. The
+      #     premise is followed one more step past reason.
+      reading_switch: none
+      scale_shift: expansion
+      # The scope expands from "you lost" (a fact about the recipient)
+      # to "even the company is amazed" (a fact about the universe of
+      # people who have encountered your failure). The recipient's loss
+      # is now so notable it has affected the company emotionally. This
+      # expansion is load-bearing: the jump from personal failure to
+      # cosmically remarkable failure drives the topper.
+
+    setup_frame: establishes_sequence
+    # The preceding beats have established a sequence of escalating
+    # honest-letter details (front: "you lost," back: "not even close,"
+    # inside: the letter). This topper is the culmination of that
+    # sequence.
+
+    primary_template: escalation
+    # The dominant shape is the third beat of an escalating sequence.
+    # Each beat increments: rejection -> emphatic rejection ->
+    # astonished rejection. The escalation structure is load-bearing;
+    # this joke is substantially weaker without the preceding beats.
+
+    difficulties: >
+      The hardest call is whether to classify the company's
+      astonishment as anthropomorphization. The company is given an
+      emotional reaction ("even we cannot believe"), which is a form
+      of treating a corporate entity as having feelings. However, the
+      company is speaking in its own corporate voice (a letter of
+      explanation), not being reimagined as a person -- it is more
+      like corporate communication pushed to absurd honesty than
+      genuine anthropomorphization. I chose not to flag it as a
+      secondary template because the anthropomorphic element is
+      incidental to the escalation structure. The scale_shift: expansion
+      is debatable -- the case rests on whether "even the company is
+      amazed" genuinely expands scope or just escalates intensity. I
+      chose expansion because the joke introduces a new perspective
+      (the company's reaction) that widens the frame beyond the
+      recipient's experience, but this is a close call.

@@ -55,11 +55,11 @@ new ones.
 
 ### Vocabulary value usage
 
-#### incongruity_type
+#### pivot_mechanism.operation
 | value | uses | total | ratio |
 |---|---|---|---|
-| reversal | 11 | 30 | 0.37 |
-| reframe | 8 | 30 | 0.27 |
+| reinterpretation | ... | ... | ... |
+| mapping | ... | ... | ... |
 | ...
 
 ### Candidates flagged

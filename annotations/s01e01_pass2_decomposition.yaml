@@ -1,0 +1,401 @@
+# =============================================================================
+# PASS 2 — Silent Decomposition
+# Episode 1: "Good News Bad News" (The Seinfeld Chronicles)
+# Routine: s01e01_opening
+# =============================================================================
+# Laugh-points identified from the annotated_monologues.yaml segmentation.
+# Each entry below is one distinct joke/laugh-point.
+# =============================================================================
+
+schema_version: "1.0"
+routine_id: s01e01_opening
+pass: 2
+
+annotations:
+
+  # ---------------------------------------------------------------------------
+  # LAUGH-POINT 1: "To be out, this is out"
+  # Beat 1 punchline (s01e01_b1_beat1)
+  # ---------------------------------------------------------------------------
+  - joke_id: s01e01_b1_beat1_punchline
+    text: >
+      You know, why we're here? To be out, this is out...and out is one
+      of the single most enjoyable experiences of life.
+
+    setup_expectation: >
+      "Why we're here" invokes the register of existential or philosophical
+      inquiry. The audience expects an answer that matches that gravity --
+      something about comedy, entertainment, community, or meaning.
+
+    punchline_violation: >
+      The answer is a bathetic tautology: "to be out." The existential
+      question is deflated to a trivially literal, self-evident spatial
+      state. The comedy club is not a venue for entertainment or meaning;
+      it is simply "out" as opposed to "home."
+
+    pivot_locus: logical
+
+    pivot_concept: going_out
+    # The concept of "being out" vs "being home" is the axis the turn
+    # operates on.
+
+    pivot_mechanism:
+      operation: reinterpretation
+      # TEST (two distinct readings of the SAME material):
+      #   Reading 1 (setup invites): "Why we're here" = what is the purpose
+      #     of our gathering / existence.
+      #   Reading 2 (punchline imposes): "Why we're here" = why we are
+      #     physically located in this room rather than at home.
+      # The same question is reread under a different frame. Nothing is
+      # negated; the question is answered, just at a deflated level.
+      reading_switch: none
+      # No figurative-to-literal shift on the language itself. "Why we're
+      # here" is not an idiom being literalized; the reframe is conceptual
+      # (philosophical scope to spatial scope), not a reading-mode switch.
+      scale_shift: contraction
+      # The existential register of the question is contracted to a
+      # trivial spatial observation. The contraction is load-bearing:
+      # without the drop from philosophical to mundane, the joke doesn't
+      # land.
+
+    setup_frame: establishes_norm
+    # The setup establishes the norm of philosophical/existential inquiry
+    # via the register of "why we're here."
+
+    primary_template: mundane_as_monumental
+    # The rhetorical shape is: apply the grammar of importance ("why we're
+    # here," existential framing) to a trivial subject (being physically
+    # outside one's home). The elevated frame against the trivial content
+    # is the joke's shape.
+
+    difficulties: >
+      The contraction vs. reinterpretation distinction is tight here.
+      The pivot-mechanisms.yaml negative example under negation explicitly
+      identifies this joke as reinterpretation, and the combined
+      classification examples list it as reinterpretation + none +
+      contraction. That aligns with my independent analysis. The question
+      is whether reading_switch should be "none" or "figurative_to_literal."
+      I chose none because "why we're here" is not a figurative expression
+      being literalized -- it is a genuine question whose scope is being
+      contracted. The reframe is conceptual, not linguistic.
+
+  # ---------------------------------------------------------------------------
+  # LAUGH-POINT 2: "We're all out now, no one is home"
+  # Beat 1 tag (s01e01_b1_beat1)
+  # ---------------------------------------------------------------------------
+  - joke_id: s01e01_b1_beat1_tag
+    text: >
+      People...did you ever hear people talking about "We should go out"?
+      This is what they're talking about...this whole thing, we're all out
+      now, no one is home. Not one person here is home, we're all out!
+
+    setup_expectation: >
+      "Going out" is understood as an idiom meaning to socialize, attend
+      events, enjoy nightlife -- a qualitative experience, not a spatial
+      state.
+
+    punchline_violation: >
+      Jerry treats "going out" as a purely literal spatial descriptor.
+      "We're all out now" means we are physically not-home, full stop.
+      The idiom's connotations of fun, socializing, and experience are
+      stripped away; what remains is the bare locative fact.
+
+    pivot_locus: logical
+
+    pivot_concept: going_out
+
+    pivot_mechanism:
+      operation: reinterpretation
+      # TEST (two readings of the SAME material):
+      #   Reading 1: "going out" = socializing / experiencing nightlife.
+      #   Reading 2: "going out" = being located outside one's residence.
+      # Same phrase, two frames. The punchline imposes the spatial-literal
+      # reading.
+      reading_switch: figurative_to_literal
+      # "Going out" / "we should go out" is an idiomatic expression.
+      # The punchline strips it to its literal spatial meaning. This is
+      # a genuine reading-mode switch from figurative to literal.
+      scale_shift: contraction
+      # The rich social meaning of "going out" is contracted to a bare
+      # spatial fact.
+
+    setup_frame: establishes_norm
+    # The idiom "going out" as social activity is the established norm.
+
+    primary_template: mundane_as_monumental
+    # Jerry announces the literal state of being "out" with the
+    # enthusiasm and gravity usually reserved for meaningful
+    # revelations. The frame's weight against the content's triviality
+    # is the shape.
+
+    difficulties: >
+      This is the clearest figurative_to_literal case in the monologue.
+      The annotated_monologues.yaml labels the mechanism as
+      "literalization," which maps directly to reinterpretation +
+      figurative_to_literal under the new system. No ambiguity here.
+
+  # ---------------------------------------------------------------------------
+  # LAUGH-POINT 3: "Did you ring? I can't find him."
+  # Beat 2 punchline (s01e01_b1_beat2)
+  # ---------------------------------------------------------------------------
+  - joke_id: s01e01_b1_beat2_punchline
+    text: >
+      There are people tryin' to find us, they don't know where we are.
+      "Did you ring?, I can't find him." "Where did he go?" "He didn't
+      tell me where he was going". He must have gone out.
+
+    setup_expectation: >
+      The setup ("people are trying to find us") creates a mildly
+      conspiratorial frame -- the audience and Jerry are complicit in
+      being unreachable. The expected payoff is some elaboration on
+      the mystery or the fun of being away.
+
+    punchline_violation: >
+      Instead of elaborating, Jerry voices the people at home performing
+      a banal, universally recognizable phone-call routine. The humor
+      is in the audience recognizing this exact conversational script
+      from their own lives. There is no frame switch -- the humor is
+      in the articulation of a shared experience everyone has had but
+      never verbalized as comedy.
+
+    pivot_locus: logical
+
+    pivot_concept: going_out
+
+    pivot_mechanism:
+      operation: articulation
+      # TEST: If the audience KNEW what was coming, would it still be
+      # funny? Yes -- the humor is in the precise rendering of the
+      # "where is he?" phone call that everyone has overheard or
+      # participated in. The laugh is recognition, not surprise. The
+      # audience reaction is "yes, that's exactly what they say."
+      reading_switch: none
+      scale_shift: none
+
+    setup_frame: establishes_norm
+    # The setup establishes the norm of people being unreachable when
+    # they go out.
+
+    primary_template: mundane_as_monumental
+    # The bit treats the banal phone call as worthy of dramatic
+    # performance (character voices, building suspense about "where
+    # did he go"). The frame's theatrical weight against the triviality
+    # of the scenario is the template.
+
+    difficulties: >
+      The choice between articulation and reinterpretation is the main
+      tension. I chose articulation because there is no frame switch --
+      the punchline doesn't make you see the phone call differently; it
+      just voices what everyone already knows happens. The humor is in
+      the verbalization, not in a reframe. However, a case could be made
+      for reinterpretation: the setup frames the audience as excitingly
+      unreachable, and the punchline reframes this as mundane domestic
+      confusion. I find articulation cleaner because the test ("would it
+      still be funny if you knew what was coming?") clearly passes --
+      the audience laughs at recognition, not surprise. The primary
+      template choice of mundane_as_monumental is also debatable; this
+      could be a straight articulation with no template mismatch. I chose
+      mundane_as_monumental because Jerry does perform the phone call
+      with conspiratorial gravity ("people are tryin' to FIND us") that
+      exceeds the triviality of the scenario.
+
+  # ---------------------------------------------------------------------------
+  # LAUGH-POINT 4: "We gotta be getting back"
+  # Beat 3 punchline (s01e01_b1_beat3)
+  # ---------------------------------------------------------------------------
+  - joke_id: s01e01_b1_beat3_punchline
+    text: >
+      You wanna go out: you get ready, you pick out the clothes, right?
+      You take the shower, you get all ready, get the cash, get your
+      friends, the car, the spot, the reservation...There you're staring
+      around, whatta you do? You go: "We gotta be getting back".
+
+    setup_expectation: >
+      The escalating list of preparation steps (clothes, shower, cash,
+      friends, car, spot, reservation) builds investment in the "going
+      out" project. Each item adds commitment. The audience expects the
+      payoff to be proportional to the buildup -- a great night, an
+      amazing experience, something worth all that preparation.
+
+    punchline_violation: >
+      The immediate desire upon arriving is to leave. The entire
+      investment is negated: you wanted to go out, you went out, and
+      now you want to go back. The desire the setup built is
+      contradicted the moment it is fulfilled.
+
+    pivot_locus: logical
+
+    pivot_concept: going_out
+
+    pivot_mechanism:
+      operation: negation
+      # TEST: "Setup implies X. Punchline asserts not-X."
+      #   Setup implies: after all this preparation, being out will be
+      #     satisfying and you will want to stay.
+      #   Punchline asserts: the moment you arrive, you want to leave.
+      # The desire to be out, painstakingly established, is negated by
+      # the desire to go back. This is a truth-value flip on the
+      # implicit claim "going out will satisfy the desire to go out."
+      reading_switch: none
+      scale_shift: none
+
+    setup_frame: establishes_sequence
+    # The setup is a sequential list (get ready, pick clothes, shower,
+    # cash, friends, car, spot, reservation) that builds momentum toward
+    # a climax. The sequence structure creates the expectation of a
+    # proportional payoff.
+
+    primary_template: escalation
+    # The rhetorical shape is escalation: each preparation step
+    # increments commitment. The escalation makes the negation land
+    # harder -- the more you invested, the more absurd the reversal.
+    # Could also argue mundane_as_monumental (the ritual of going out
+    # is treated with epic-quest gravity), but escalation is the
+    # dominant shape because the building list IS the structural move.
+
+    difficulties: >
+      The pivot-mechanisms.yaml explicitly lists "Once you're out, you
+      wanna get back" under extension's negative_example, noting it is
+      NEGATION. This confirms my classification. The template choice
+      between escalation and mundane_as_monumental is the only real
+      tension. I chose escalation as primary because the list structure
+      is load-bearing -- removing the escalating list and just saying
+      "you want to go out, then you want to come back" would
+      significantly weaken the joke. The escalation does the structural
+      work; the negation does the logical work.
+
+  # ---------------------------------------------------------------------------
+  # LAUGH-POINT 5: The infinite loop
+  # Beat 3 tag (s01e01_b1_beat3)
+  # ---------------------------------------------------------------------------
+  - joke_id: s01e01_b1_beat3_tag
+    text: >
+      Once you're out, you wanna get back! You wanna go to sleep, you
+      wanna get up, you wanna go out again tomorrow, right?
+
+    setup_expectation: >
+      The reversal has just landed (you go out, then want to come back).
+      The audience expects this to be the joke's conclusion -- a single
+      ironic observation about human dissatisfaction.
+
+    punchline_violation: >
+      Jerry extends the reversal into an infinite loop: out -> back ->
+      sleep -> up -> out again. The single contradiction becomes a
+      recursive cycle with no exit. The human condition is not just
+      ironic in one direction; it is perpetually oscillating.
+
+    pivot_locus: logical
+
+    pivot_concept: going_out
+
+    pivot_mechanism:
+      operation: extension
+      # TEST: Accepted premise and absurd conclusion.
+      #   Accepted premise: wherever you are, you want to be somewhere
+      #     else (established by the preceding negation joke).
+      #   Absurd conclusion: this produces an infinite loop -- out, back,
+      #     sleep, up, out again, back again, forever. The premise is
+      #     never challenged; it is followed to its logically consistent
+      #     but absurd cyclical conclusion.
+      reading_switch: none
+      scale_shift: expansion
+      # The specific "went out, wanted to come back" observation is
+      # expanded from a single instance to an inescapable universal
+      # cycle. The scope lifts from "tonight" to "every night, forever."
+
+    setup_frame: establishes_norm
+    # The preceding joke established the norm (you always want to be
+    # where you aren't). This tag accepts that norm as given.
+
+    primary_template: escalation
+    # The rhetorical shape is escalation: each beat (sleep, get up, go
+    # out again) adds another iteration of the cycle, building momentum.
+    # The escalation is what gives the extension its comic force.
+
+    difficulties: >
+      The operation choice between extension and negation is the key
+      question. This is clearly extension: the preceding joke's negation
+      (you want to go back) is ACCEPTED as a premise, and the tag
+      follows it forward into the infinite loop. The tag does not
+      contradict anything; it says "yes, and here's where that leads."
+      The scale_shift: expansion is load-bearing because the jump from
+      "one night's irony" to "perpetual human cycle" is part of the
+      humor. Template choice: escalation over reductio. The loop builds
+      through accumulation of beats (sleep, up, out, back) rather than
+      through a logical argument chain. It is additive, not
+      argumentative.
+
+  # ---------------------------------------------------------------------------
+  # LAUGH-POINT 6: "Wherever you are in life, you've gotta go"
+  # Beat 3 topper (s01e01_b1_beat3)
+  # ---------------------------------------------------------------------------
+  - joke_id: s01e01_b1_beat3_topper
+    text: >
+      Where ever you are in life, it's my feeling, you've gotta go.
+
+    setup_expectation: >
+      The bit has been about going out vs. staying home -- a specific
+      social behavior. "Wherever you are in life" sounds like it is about
+      to deliver a life-philosophy platitude or a sincere concluding
+      observation about the human condition.
+
+    punchline_violation: >
+      "You've gotta go" collapses the entire bit's specific social
+      observation into a pseudo-philosophical universal principle. But
+      "go" carries a double meaning: the existential-sounding "you must
+      move on / you cannot stay" AND the trivially literal "you have to
+      leave wherever you are." The bit about going out is now reframed
+      as a cosmic law of restlessness.
+
+    pivot_locus: logical
+
+    pivot_concept: going_out
+
+    pivot_mechanism:
+      operation: reinterpretation
+      # TEST (two readings of the SAME material):
+      #   Reading 1: "you've gotta go" = you must leave (the specific
+      #     social observation about going out, applied universally).
+      #   Reading 2: "you've gotta go" = a philosophical/existential
+      #     imperative about the human condition, movement, restlessness.
+      # The punchline forces both readings to coexist. The same phrase
+      # works as a trivial restatement of the bit's premise AND as an
+      # existential axiom. The humor is in the shift between frames.
+      reading_switch: none
+      # "You've gotta go" is not an idiom being literalized or a literal
+      # phrase being figurated. Both readings (leave physically / move
+      # through life) are available simultaneously. No clean reading-mode
+      # switch.
+      scale_shift: expansion
+      # The specific "going out" observation is expanded to a universal
+      # life principle. The expansion is load-bearing -- this is the
+      # "button" that elevates the entire bit.
+
+    setup_frame: establishes_sequence
+    # The entire preceding bit has established a sequence (want to go
+    # out, prepare, go out, want to come back, cycle) that this topper
+    # distills.
+
+    primary_template: mundane_as_monumental
+    # The rhetorical shape is: a trivial observation about going out is
+    # presented with the gravity of a life philosophy. "Wherever you are
+    # in life, it's my feeling" applies the grammar of a profound axiom
+    # to the content of "you always want to leave." The elevated frame
+    # against the trivial content is the dominant shape.
+
+    difficulties: >
+      This is the most ambiguous laugh-point in the monologue. The
+      pivot-mechanisms.yaml combined classification examples list this
+      as reinterpretation + none + expansion, which matches my analysis.
+      The main tension is whether reading_switch should be none or
+      literal_to_figurative. "You've gotta go" could be read as literal
+      (you must physically leave) being elevated to figurative
+      (existential imperative). I chose none because both readings are
+      simultaneously available -- it is not a clean switch from one mode
+      to the other but rather an ambiguity that the joke exploits. The
+      template choice between mundane_as_monumental and escalation is
+      also debatable: the topper is the culmination of an escalating
+      bit. But the topper itself is not escalation (it does not add
+      another beat in a series); it is a register shift that reframes
+      the mundane as the monumental. So mundane_as_monumental is the
+      topper's own template, even though the broader bit uses escalation.

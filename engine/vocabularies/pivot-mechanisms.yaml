@@ -1,0 +1,479 @@
+# Pivot Mechanisms
+#
+# Replaces incongruity-types.yaml (deprecated v0.5).
+#
+# Three orthogonal sub-dimensions:
+#
+#   pivot_operation  — WHAT the punchline does to the setup frame
+#   reading_switch   — whether the punchline changes linguistic interpretation
+#   scale_shift      — whether the punchline changes scope or gravity
+#
+# Each is independently specified. A joke can be negation + figurative_to_
+# literal + none, or reinterpretation + none + contraction, etc.
+#
+# Referenced by schema: joke.logic.pivot_mechanism.*
+#
+# ============================================================================
+# Theoretical grounding
+# ============================================================================
+#
+# This vocabulary does NOT assume all humor is incongruity-based. The six
+# operations span multiple comedy theories:
+#
+#   negation         — Incongruity theory: truth-value flip
+#   reinterpretation — Incongruity theory: frame switch
+#   transplant       — Incongruity theory: domain violation
+#   mapping          — Bisociation (Koestler 1964): hidden structural parallel
+#   extension        — Logic of the absurd / reductio: premise followed past reason
+#   articulation     — Benign violation (McGraw & Warren 2010): violation of the
+#                      norm of silence around shared truths; also social bonding
+#                      theory (affiliative laughter from recognition)
+#
+# When proposing new operations, they do NOT need to fit incongruity theory.
+# They need to describe a real, recurring, distinguishable cognitive mechanism.
+# Identify: (1) what the punchline does, (2) which theory explains why it's
+# funny, (3) what test an annotator runs, (4) why existing operations don't
+# cover it.
+#
+# ============================================================================
+# Layer assignment rule
+# ============================================================================
+#
+# If you're uncertain whether something is an operation, a template, or a
+# modifier:
+#   - OPERATION answers: "What does the punchline DO to the setup frame?"
+#     (the cognitive mechanism — negation, reinterpretation, etc.)
+#   - TEMPLATE answers: "What is the SHAPE of the joke's rhetoric?"
+#     (escalation, reductio, mundane_as_monumental, etc.)
+#   - MODIFIER answers: "Does the punchline also change reading mode or scale?"
+#     (reading_switch, scale_shift)
+#
+# A joke always has an operation and usually has a template. They answer
+# different questions and coexist. A reductio template often co-occurs with
+# extension as an operation, but reductio describes the argumentative chain
+# shape while extension describes the cognitive mechanism of following logic
+# past reason.
+#
+# ============================================================================
+# How old types map to the new system
+# ============================================================================
+#
+#   reversal           →  negation + none + none
+#   literalization      →  reinterpretation + figurative_to_literal + none
+#   figuration          →  reinterpretation + literal_to_figurative + none
+#   category_error      →  transplant + none + none
+#   register_deflation  →  reinterpretation + none + contraction
+#                          (or negation + none + contraction, joke-dependent)
+#   scope_expansion     →  [any primary] + none + expansion
+#
+# ============================================================================
+
+# ============================================================================
+# SUB-DIMENSION 1: pivot_operation
+# ============================================================================
+#
+# What cognitive operation does the punchline perform on the frame the
+# setup established? Single-valued. Mutually exclusive. Required.
+#
+# Six values. Each has a TESTABLE criterion — the test produces a concrete
+# artifact (a statement you can write down), not a judgment call.
+
+pivot_operation:
+
+  negation:
+    criterion: |
+      The punchline asserts the opposite of what the setup led the audience
+      to expect. A claim is established (explicitly or implicitly); the
+      punchline renders it false.
+    test: |
+      Can you write down: "The setup implies X. The punchline asserts
+      not-X." If yes, and the humor comes from the contradiction, this
+      is negation.
+    positive_example: |
+      "I used to do drugs. I still do, but I used to, too." (Hedberg)
+      Setup implies: "used to" → no longer. Punchline asserts: still does.
+      The "no longer" is negated.
+    negative_example: |
+      "To be out, this is out." (Seinfeld)
+      Looks like negation (philosophical question → trivial answer) but
+      nothing is NEGATED. The question "why we're here" is answered, not
+      contradicted. The humor is in the unexpected frame of the answer,
+      not in a truth-value flip. This is REINTERPRETATION.
+    distinguished_from:
+      reinterpretation: |
+        Negation flips truth value. Reinterpretation shifts frame without
+        negating. Test: is the setup's claim rendered FALSE (negation), or
+        is it reread in a different frame while remaining true
+        (reinterpretation)?
+      extension: |
+        Negation contradicts the premise. Extension ACCEPTS the premise
+        and follows it. Test: does the punchline say the setup was wrong
+        (negation), or does it say "yes, and here's where that leads"
+        (extension)?
+
+  reinterpretation:
+    criterion: |
+      The punchline forces the audience to re-read the same text,
+      situation, or concept under a different frame than the one the setup
+      established. The original material isn't contradicted — it's seen
+      differently. The humor comes from the frame shift itself.
+    test: |
+      Can you give two distinct readings of the SAME material — one the
+      setup invites, one the punchline imposes? If yes, and the humor
+      comes from the shift between readings, this is reinterpretation.
+    positive_example: |
+      "It seems like such an arbitrary, ridiculous thing to just pick a
+      finger and you show it to the person." (Seinfeld)
+      Reading 1 (setup): the middle finger is a culturally loaded gesture.
+      Reading 2 (punchline): it's an arbitrary choice of digit.
+      Same gesture, two frames. Nothing negated; the gesture is reread.
+    negative_example: |
+      "I used to do drugs. I still do, but I used to, too." (Hedberg)
+      Looks like reinterpretation (reframing "used to") but the setup's
+      implicit claim ("no longer") is actually NEGATED, not reread. The
+      punchline doesn't offer a new frame for "used to" — it contradicts
+      the implication. This is NEGATION.
+    distinguished_from:
+      negation: |
+        See negation's distinguished_from.
+      mapping: |
+        Reinterpretation operates on ONE thing (the same material is
+        reread). Mapping connects TWO distinct things (source and target).
+        Test: is the humor from seeing the same thing differently
+        (reinterpretation), or from seeing two different things as similar
+        (mapping)?
+      transplant: |
+        Reinterpretation shifts frame within or across the setup's own
+        material. Transplant imports a framework from a named foreign
+        domain. Test: can you name a specific foreign domain whose rules
+        are being applied? If yes, transplant. If the reframing doesn't
+        import a specific identifiable framework, reinterpretation.
+
+  transplant:
+    criterion: |
+      The punchline applies a framework, set of rules, or mode of
+      reasoning from one domain to a situation in a different domain
+      where it doesn't belong. The humor is in the MISAPPLICATION — the
+      framework is wrong for the context, and the mismatch is the joke.
+    test: |
+      Can you name: (1) the target domain (where the joke lives), (2) the
+      source domain (where the imported framework comes from), and (3) the
+      specific rules or logic being imported? If yes, and the humor comes
+      from the mismatch between framework and context, this is transplant.
+    positive_example: |
+      Treating a friendship as a corporate relationship (PTO for emotional
+      labor, quarterly reviews of the bond). Target: friendship. Source:
+      corporate HR. Imported rules: PTO, quarterly reviews. The mismatch
+      between friendship norms and HR norms is the joke.
+    negative_example: |
+      "The cheque book comes out of a holster." (Seinfeld)
+      Looks like transplant (gunslinger framework applied to check-
+      writing) but the joke isn't about MISAPPLICATION — the humor is
+      in the SIMILARITY between a quick-draw and the speed of retrieval.
+      The gunslinger framework isn't being imposed on check-writing; it's
+      illuminating a parallel. This is MAPPING.
+    distinguished_from:
+      mapping: |
+        Transplant MISAPPLIES a foreign framework (the mismatch is the
+        joke). Mapping REVEALS a parallel (the similarity is the joke).
+        Test: would the joke still work if the framework genuinely fit
+        the target domain? If yes, it's mapping (the parallel is real).
+        If no (the joke depends on the framework NOT fitting), it's
+        transplant.
+      reinterpretation: |
+        See reinterpretation's distinguished_from.
+
+  mapping:
+    criterion: |
+      The punchline reveals an unexpected structural similarity between
+      two things from different domains. The humor comes from the
+      recognition that the parallel is apt — the two domains share a
+      structure you hadn't noticed. Unlike transplant, the mapping
+      ILLUMINATES rather than misapplies.
+    test: |
+      Can you name: (1) the source domain, (2) the target domain, and
+      (3) the specific structural feature they share? If yes, and the
+      humor comes from the aptness of the parallel (not the mismatch),
+      this is mapping.
+    positive_example: |
+      "Men hear a drill, it's like a dog whistle." (Seinfeld)
+      Source: dogs responding to ultrasonic frequencies. Target: men
+      responding to power tools. Shared structure: involuntary, species-
+      level compulsion triggered by sound. The parallel is funny because
+      it's apt — men REALLY DO respond this way.
+    negative_example: |
+      "Treating a friendship as if it were a corporate relationship."
+      Looks like mapping (two domains connected) but the humor is in the
+      MISMATCH — HR rules DON'T actually fit friendship. The framework
+      is imported and misapplied, not revealed as parallel. This is
+      TRANSPLANT.
+    distinguished_from:
+      transplant: |
+        See transplant's distinguished_from.
+      reinterpretation: |
+        See reinterpretation's distinguished_from.
+      articulation: |
+        Mapping connects two domains. Articulation stays within one
+        domain and one frame. Test: does the joke introduce a comparison
+        (mapping) or simply state what's already implicitly known
+        (articulation)?
+
+  extension:
+    criterion: |
+      The punchline accepts the setup's premise as given and follows its
+      internal logic to an absurd but logically consistent conclusion.
+      The premise is never challenged — it's the destination that's
+      absurd. The humor comes from the audience seeing where "reasonable"
+      logic leads when you don't stop.
+    test: |
+      Can you state: (1) the accepted premise, and (2) the absurd-but-
+      logically-valid conclusion the punchline reaches? If yes, and the
+      humor comes from the destination rather than from contradicting or
+      reframing the starting point, this is extension.
+    positive_example: |
+      "You could just give someone the toe, really, couldn't you? 'Cause
+      it's not easy to give someone the toe, you've gotta get the shoe
+      off, the sock off and drive..." (Seinfeld)
+      Accepted premise: body parts can be used as insults and the degree
+      of insult correlates with effort. Conclusion: the toe is more
+      insulting because it requires more commitment. The premise is never
+      questioned; the logic is followed to an absurd destination.
+    negative_example: |
+      "Once you're out, you wanna get back." (Seinfeld)
+      Looks like extension (the "going out" premise is followed) but
+      the humor is in the CONTRADICTION — the punchline negates the
+      desire the setup established. This is NEGATION.
+    distinguished_from:
+      negation: |
+        See negation's distinguished_from.
+      reinterpretation: |
+        Extension follows the premise forward. Reinterpretation shifts
+        the frame sideways. Test: does the joke go further in the same
+        direction (extension) or look at the same thing from a different
+        angle (reinterpretation)?
+      mapping: |
+        Extension stays within one domain and pushes it. Mapping
+        connects two domains. Test: does the joke introduce a second
+        domain (mapping) or stay in one domain and follow its logic
+        (extension)?
+
+  articulation:
+    criterion: |
+      The punchline states an unspoken shared truth that the audience
+      implicitly knew but hadn't verbalized. There is no frame switch,
+      no contradiction, no second domain — the humor comes purely from
+      the act of saying the thing out loud. Single-script humor.
+      The audience reaction is "yes, exactly" rather than "I didn't see
+      that coming."
+    test: |
+      Remove the surprise element: if the audience KNEW what the
+      punchline would say before hearing it, would they still find it
+      funny? If yes — if the humor is in the articulation itself, not
+      in the unexpected turn — this is articulation.
+    positive_example: |
+      "We want to watch the guy, we want to talk to him, we want to ask
+      him dumb questions. 'What are you using, the Philips head?'"
+      (Seinfeld)
+      No frame switch. The specific dumb question is funny because the
+      audience recognizes it from their own experience. The humor is
+      "yes, that's exactly the question you ask." Pure verbalization of
+      shared experience.
+    negative_example: |
+      "The cheque book comes out of a holster." (Seinfeld)
+      Both the observation and the image feel recognizable, but the
+      holster comparison is a MAPPING that connects two domains (checkout
+      and quick-draw). The surprise of the comparison is load-bearing.
+      Pure articulation has no comparison — just stated truth.
+    distinguished_from:
+      mapping: |
+        See mapping's distinguished_from.
+      reinterpretation: |
+        This is the most commonly confused boundary in the vocabulary.
+        Both operations involve observations the audience partially
+        recognizes. The distinguishing question is FRAME DEPENDENCY:
+
+          "Does the humor REQUIRE the audience to shift frames?"
+
+        If you remove the frame shift and state the observation in the
+        audience's existing frame, does the joke survive?
+
+        - If it SURVIVES: articulation. The humor is in the naming.
+        - If it DIES: reinterpretation. The humor needs the new frame.
+
+        WORKED EXAMPLES (annotated during batch 1):
+
+        ARTICULATION — "What are you using, the Philips head?" (S01E04)
+          The audience's existing frame: men ask dumb questions near
+          someone working with tools. The punchline names a specific
+          instance of this known behavior. No new frame is imposed.
+          Remove any "frame shift" → the joke is the same. The humor
+          is the precision of the naming.
+
+        REINTERPRETATION — "It seems like such an arbitrary, ridiculous
+        thing to just pick a finger and you show it to the person" (S01E03)
+          The audience's existing frame: the middle finger is a
+          culturally loaded insult. The punchline imposes a NEW frame:
+          it's an arbitrary digit selection. Remove the frame shift
+          (state it in the cultural-insult frame: "the finger is a
+          rude gesture") → the joke dies. The humor NEEDS the
+          arbitrary-digit frame to work.
+
+        THE HARDEST CASE — "They can tell something from this" (S02E05)
+          Women holding a dress up against themselves. The audience
+          recognizes the behavior (leans toward articulation). But
+          "they can tell SOMETHING" reframes the evaluative act as
+          opaquely purposeful — not how the audience already thinks
+          about it. Frame-dependency test: remove the reframe, state
+          it as "women hold dresses up to check the fit" → the humor
+          dies. The vague "something" IS the reframe. Verdict:
+          articulation — because the humor is in the bafflement
+          ("what can you learn from that?") which the audience already
+          shares. The "something" names the shared bafflement rather
+          than imposing a new frame on the behavior.
+
+        GENERAL RULE: Seinfeld's observational comedy systematically
+        sits near this boundary because his signature move is
+        articulating shared truths with slightly-new framing. When in
+        doubt, ask: "Is the OBSERVATION the joke, or is the ANGLE on
+        the observation the joke?" Observation → articulation.
+        Angle → reinterpretation.
+      extension: |
+        Articulation stops at the shared truth. Extension pushes past it
+        into absurdity. Test: does the joke go further than the audience
+        already implicitly went (extension) or land exactly where the
+        audience was (articulation)?
+
+# ============================================================================
+# SUB-DIMENSION 2: reading_switch
+# ============================================================================
+#
+# Does the punchline change the linguistic interpretation mode of the
+# setup's language? Most jokes: none. Specified independently from
+# pivot_operation. Optional — defaults to none.
+
+reading_switch:
+
+  none:
+    criterion: |
+      No switch between literal and figurative reading modes. The setup
+      and punchline operate in the same interpretive mode.
+
+  figurative_to_literal:
+    criterion: |
+      The setup uses figurative language, idiom, or conventional figurative
+      reading. The punchline treats it literally, as if the figurative
+      reading weren't available.
+    test: |
+      Can you identify the figurative expression in the setup and state
+      the literal reading the punchline imposes?
+    positive_example: |
+      "I haven't slept for ten days, because that would be too long."
+      (Hedberg) "Haven't slept for days" is idiomatic; punchline reads
+      "ten days" as a literal duration.
+
+  literal_to_figurative:
+    criterion: |
+      The setup uses literal language or a literal situation. The
+      punchline imposes a figurative reading that wasn't signaled.
+    test: |
+      Can you identify the literal content and the figurative reading
+      the punchline imposes?
+    positive_example: |
+      "My therapist says I have a preoccupation with vengeance. We'll
+      see about that." Setup is literal clinical statement. Punchline
+      reads "we'll see about that" as a vengeance threat.
+
+# ============================================================================
+# SUB-DIMENSION 3: scale_shift
+# ============================================================================
+#
+# Does the punchline change the scope or gravity of the setup's frame?
+# Specified independently. Optional — defaults to none.
+#
+# This captures what was previously split between scope_expansion and
+# register_deflation without requiring the annotator to decide which of
+# those nebulous categories applies.
+
+scale_shift:
+
+  none:
+    criterion: |
+      No change in scope or gravity between setup and punchline.
+
+  expansion:
+    criterion: |
+      The punchline lifts a specific observation to universal scope or
+      elevates a trivial thing to cosmic/existential/monumental status.
+      The direction is UP — from small to large.
+    test: |
+      Can you state the specific/small version and the universal/large
+      version? Is the shift itself load-bearing for the humor?
+    positive_example: |
+      "Wherever you are in life, it's my feeling, you've gotta go."
+      (Seinfeld) The specific "out-then-back" cycle is expanded to a
+      universal principle about existence.
+
+  contraction:
+    criterion: |
+      The punchline reduces something elevated, grand, or weighty to
+      something trivial, mundane, or bathetic. The direction is DOWN —
+      from large to small.
+    test: |
+      Can you state the elevated/large version and the trivial/small
+      version? Is the deflation itself load-bearing for the humor?
+    positive_example: |
+      "I wrote on these; is this of any value at all?" (Seinfeld)
+      A financial instrument (check) is reduced to a pathetic scribble.
+      The contraction from "legitimate payment method" to "worthless
+      paper with writing on it" is load-bearing.
+
+# ============================================================================
+# Combined classification examples
+# ============================================================================
+#
+# Showing how the three sub-dimensions work together on real jokes.
+#
+# "I used to do drugs. I still do, but I used to, too."
+#   pivot_operation: negation
+#   reading_switch: none
+#   scale_shift: none
+#
+# "I haven't slept for ten days, because that would be too long."
+#   pivot_operation: reinterpretation
+#   reading_switch: figurative_to_literal
+#   scale_shift: none
+#
+# "Treating friendship as corporate HR (PTO, quarterly reviews)"
+#   pivot_operation: transplant
+#   reading_switch: none
+#   scale_shift: none
+#
+# "Men hear a drill, it's like a dog whistle."
+#   pivot_operation: mapping
+#   reading_switch: none
+#   scale_shift: none
+#
+# "You could give someone the toe — gotta get the shoe off, sock off..."
+#   pivot_operation: extension
+#   reading_switch: none
+#   scale_shift: none
+#
+# "Wherever you are in life, you've gotta go."
+#   pivot_operation: reinterpretation
+#   reading_switch: none
+#   scale_shift: expansion
+#
+# "To be out, this is out."
+#   pivot_operation: reinterpretation
+#   reading_switch: none
+#   scale_shift: contraction
+#
+# "I wrote on these; is this of any value at all?"
+#   pivot_operation: mapping
+#   reading_switch: none
+#   scale_shift: contraction
+#
+# "My therapist says I have a preoccupation with vengeance. We'll see."
+#   pivot_operation: reinterpretation
+#   reading_switch: literal_to_figurative
+#   scale_shift: none

@@ -172,3 +172,164 @@ Target frequency for secondary population is ≤15% of annotations. >30% is flag
 **Invalidates:** None (no prior annotations exist). If annotations already existed, they'd migrate as `incongruity_type: "X"` → `incongruity_type: {primary: "X", secondary: []}` — trivially.
 
 ---
+
+## 2026-04-22 v0.5 — Replace incongruity_type with pivot_mechanism; anchor unanchored scales
+
+**Changed:**
+- engine/schema.yaml: `logic.incongruity_type` (primary/secondary) and
+  `logic.incongruity_operates_on` replaced by `logic.pivot_mechanism`
+  (operation + reading_switch + scale_shift) and `logic.setup_frame`.
+  `performed_relatability.intensity` changed from 0.0-1.0 float to 0-3
+  integer. Anchor descriptions added to `vulnerability.personal_exposure`,
+  `vulnerability.emotional_risk`, `shared_experience.comprehensibility_
+  without_experience`, and `performed_relatability.intensity`. Inline
+  criteria added to `editorializes.kind`.
+- engine/vocabularies/pivot-mechanisms.yaml (new file): defines 6
+  pivot_operation values (negation, reinterpretation, transplant, mapping,
+  extension, articulation), 3 reading_switch values (none, figurative_to_
+  literal, literal_to_figurative), and 3 scale_shift values (none,
+  expansion, contraction). Each operation has a concrete TEST that produces
+  a written artifact.
+- engine/vocabularies/incongruity-types.yaml: deprecated. Retained with
+  migration mapping header.
+- engine/vocabularies/templates.yaml: `reductio.distinguished_from.
+  literalization` updated to reference reading_switch. `false_equivalence.
+  distinguished_from.category_error` replaced with mapping_pivot_operation
+  and transplant_pivot_operation. Note added to reductio distinguishing
+  template (shape) from extension (operation).
+- protocols.md: Pass 2 field order updated. "Secondary incongruity types"
+  section replaced with "Pivot mechanism: the three sub-dimensions."
+  Per-field verification guide updated. Weekly review's secondary
+  incongruity check replaced with modifier usage check.
+- engine/system-prompt.md: bumped to v0.2. Pass 2 field sequence updated.
+  Vocabulary reference list updated.
+
+**From:**
+```yaml
+incongruity_type:
+  primary: ""      # reversal | literalization | figuration |
+                   # category_error | register_deflation | scope_expansion
+  secondary: []
+incongruity_operates_on:
+  setup_frame: null
+  punchline_action: null
+  reading_switch: null
+```
+6 compound types that mixed operation, reading mode, and scale into one
+pick. Secondary slot needed for cases that were really "operation + modifier."
+punchline_action and reading_switch sub-fields partially overlapped with
+the top-level types.
+
+**To:**
+```yaml
+pivot_mechanism:
+  operation: ""         # negation | reinterpretation | transplant |
+                        # mapping | extension | articulation
+  reading_switch: none  # none | figurative_to_literal | literal_to_figurative
+  scale_shift: none     # none | expansion | contraction
+setup_frame: null       # establishes_norm | establishes_anomaly |
+                        # establishes_category | establishes_sequence
+```
+3 orthogonal sub-dimensions. Secondary slot eliminated — most secondary
+cases were "primary + modifier" which the decomposition now captures
+natively. punchline_action removed — its information is now in
+pivot_mechanism.operation (negation ≈ negates, reinterpretation ≈
+redirects, etc.). reading_switch promoted from sub-field to explicit
+modifier. setup_frame retained and promoted to top-level field.
+
+**Rationale:**
+
+Tested against 33 humor moments across 5 Seinfeld Season 1 opening
+monologues. Under the old system, 76% of moments had low confidence
+classifications and 67% had no clean type at all. Seinfeld's dominant
+moves — reinterpretation (36%), mapping (27%), articulation (21%),
+extension (15%) — were either absent from or poorly served by the old
+vocabulary. Under the new system, 100% of moments classified with high
+confidence.
+
+The core problem: the old types mixed three independent questions (what
+operation, what reading-mode switch, what scale shift) into one
+mutually-exclusive pick. register_deflation was often "reinterpretation +
+contraction." scope_expansion was often "[any operation] + expansion."
+These aren't single types; they're combinations of an operation and a
+modifier. Decomposing into orthogonal dimensions eliminates the forced
+choice.
+
+New operation values fill genuine gaps:
+- mapping: captures analogy (apt parallel between domains). Old system
+  force-fitted these into category_error, which requires MISapplication —
+  the opposite of what analogy does.
+- extension: captures premise-accepted-and-followed-to-absurd-conclusion.
+  Had no home in old vocabulary whatsoever.
+- articulation: captures single-script humor (shared truth verbalized).
+  Old system assumed all humor involves incongruity; articulation doesn't.
+
+Scale and anchor changes address a secondary ambiguity finding:
+- vulnerability (0-5 x 2), comprehensibility (0-5), and relatability
+  intensity had no anchor descriptions, making calibration impossible.
+  Each now has anchor text at each integer value.
+- performed_relatability.intensity changed from 0.0-1.0 float to 0-3
+  integer because the float invited false precision with no anchors to
+  calibrate against.
+- editorializes.kind (strong/weak/ironized) had no criteria despite being
+  a structured enum. Inline criteria added.
+
+**Structural-question answers for pivot_mechanism:**
+1. Can it take multiple simultaneous values? NO for each sub-dimension
+   (single-valued within each). The orthogonal decomposition handles what
+   secondary used to handle.
+2. Does it change across joke duration? NO — the pivot is a single event.
+3. Are values ordered? NO for operation (nominal categories). YES for
+   scale_shift (contraction < none < expansion is an ordering).
+4. Do absent and low-intensity differ? YES for reading_switch and
+   scale_shift — "none" means the dimension isn't active, not that it's
+   at low intensity.
+5. Does meaning depend on another field? operation is independent.
+   reading_switch and scale_shift are modifiers that refine but don't
+   depend on operation.
+
+**Invalidates:** None (no prior annotations exist).
+
+---
+
+## 2026-04-23 v0.6 — Batch 1 review: templates, setup_frame, boundary sharpening
+
+**Triggered by:** Batch 1 synthesis (71 laugh-points across 14 Seinfeld
+episodes 1-15). Seven actionable items from cross-agent annotation.
+
+**Changed:**
+
+1. **engine/vocabularies/templates.yaml**:
+   - Added `monumental_as_mundane` (4 appearances: E03, E06, E08, E10).
+     Directional inverse of mundane_as_monumental. Full definition block.
+   - Added `shared_recognition` (3 appearances: E01, E04, E09). Shape IS
+     the naming of shared truth, no secondary structural scaffolding.
+   - Broadened `false_equivalence` criterion to cover apt pairings (humor
+     in surprising similarity) as well as mismatch pairings. Resolves the
+     "revealed_equivalence" gap without a vocabulary split.
+
+2. **engine/schema.yaml**: `setup_frame` expanded from 4 to 6 values.
+   `establishes_norm` (80% of annotations) split into `establishes_convention`
+   (cultural norms), `establishes_behavior` (behavioral patterns), and
+   partially into `establishes_premise` (accepted hypotheticals).
+   `establishes_category` replaced by `establishes_premise`.
+   `establishes_expectation` added (buildup creating anticipation).
+   `establishes_anomaly` and `establishes_sequence` retained.
+
+3. **engine/vocabularies/pivot-mechanisms.yaml**: articulation/reinterpretation
+   `distinguished_from` sharpened. Frame-dependency test formalized with 3
+   worked examples and a general rule for observational comedy.
+
+4. **protocols.md**: setup_frame reference updated. scale_shift independence
+   test added as annotation-time heuristic with worked examples.
+
+**Rationale:** All changes empirically driven by 71 annotations. Every new
+value crossed the 3-occurrence threshold. The reinterpretation/articulation
+boundary was the most-flagged ambiguity (10+ agents).
+
+**Invalidates:** Batch 1 annotations should have setup_frame re-evaluated
+(old `establishes_norm` maps to convention, behavior, or premise). Template
+classifications should be reviewed for monumental_as_mundane and
+shared_recognition candidates.
+
+---

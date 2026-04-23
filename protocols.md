@@ -41,12 +41,13 @@ Within Pass 2, fill fields in this order:
 1. `logic.setup_expectation` and `logic.punchline_violation` (GLOSS). Write the joke's logic in prose first. These function as your reasoning trace.
 2. `logic.pivot_locus` (logical / affective / both). The gloss fields usually make this obvious.
 3. `joke.content.pivot_concept`. Which concept node does the turn anchor on? Null if purely affective.
-4. `logic.incongruity_type.primary`. With the gloss in hand, consult `vocabularies/incongruity-types.yaml` and pick the value whose criterion matches your gloss. Default to primary-only (leave secondary empty); only add secondary values under the discipline described in §"Secondary incongruity types: when to populate" below.
-5. `logic.incongruity_operates_on` sub-block. The structured companion to the gloss.
-6. `joke.structure.primary_template`. Consult `vocabularies/templates.yaml`. This is informed by the logic but is its own question.
-7. `joke.structure.subversions_applied`, `has_tag`, `tag_function`.
-8. `joke.narrative.*` — callback references, routine position, etc.
-9. `joke.content.concepts` and `specificity` last. Specificity sometimes only becomes clear once the structural move is named.
+4. `logic.pivot_mechanism.operation`. With the gloss in hand, consult `vocabularies/pivot-mechanisms.yaml` and pick the value whose criterion and test match your gloss. Each value has a test that produces a concrete written artifact (two readings, a negated claim, a source/target pair, etc.). If the test produces the artifact, the value fits.
+5. `logic.pivot_mechanism.reading_switch` and `logic.pivot_mechanism.scale_shift`. These are orthogonal modifiers. reading_switch defaults to none (most jokes have no reading-mode change). scale_shift defaults to none. Populate only when the modifier is load-bearing.
+6. `logic.setup_frame`. What kind of expectation does the setup create? (establishes_convention | establishes_behavior | establishes_expectation | establishes_premise | establishes_anomaly | establishes_sequence).
+7. `joke.structure.primary_template`. Consult `vocabularies/templates.yaml`. This is informed by the logic but is its own question — template is the rhetorical SHAPE, pivot_mechanism is the cognitive OPERATION.
+8. `joke.structure.subversions_applied`, `has_tag`, `tag_function`.
+9. `joke.narrative.*` — callback references, routine position, etc.
+10. `joke.content.concepts` and `specificity` last. Specificity sometimes only becomes clear once the structural move is named.
 
 The gloss-before-structured ordering is the most important principle: writing the logic in prose first makes the structured classification almost mechanical. When the structured field resists, revisit the gloss — it's usually the gloss that's unsharp.
 
@@ -62,7 +63,7 @@ Within Pass 3, fill fields in this order:
 6. `performance.relational.positioning`. Tends to need the affect read first.
 7. `performance.relational.shared_experience` and `performed_relatability` fields.
 
-**Pass 4 — Commutation test (analytical, deliberate).** Against each completed annotation, test each element independently: remove the pivot concept — does the joke still work? Remove the affect shift? Remove the tag? Populate `load_bearing_element` (as field_path), `removable_elements`, and `uncertain_elements`. If you can't cleanly identify which elements are load-bearing, the decomposition is incomplete; return to Pass 2 or 3. Additionally, if `incongruity_type.secondary` is populated, apply the commutation criterion to each entry: would removing this mechanism weaken the joke? If no, remove the entry. Batch several jokes per session. Updates `annotation_status.commutation: complete`.
+**Pass 4 — Commutation test (analytical, deliberate).** Against each completed annotation, test each element independently: remove the pivot concept — does the joke still work? Remove the affect shift? Remove the tag? Populate `load_bearing_element` (as field_path), `removable_elements`, and `uncertain_elements`. If you can't cleanly identify which elements are load-bearing, the decomposition is incomplete; return to Pass 2 or 3. Additionally, for `pivot_mechanism.reading_switch` and `scale_shift` populated with non-none values, apply the commutation criterion: would the joke work identically without this modifier? If yes, set it back to none. Batch several jokes per session. Updates `annotation_status.commutation: complete`.
 
 **Pass 5 — Adversarial review (critical).** For each joke, try to break your own annotation. Propose the strongest alternative reading for non-obvious classifications; defend the current choice or revise. Capture counterarguments in the `adversarial` block. This pass benefits from batching because adjacent adversarial passes sharpen your skeptical eye. Updates `annotation_status.adversarial_review: complete`.
 
@@ -72,7 +73,7 @@ Within Pass 3, fill fields in this order:
 
 ### The two-stage capture rule (for Pass 2 and Pass 5)
 
-During Pass 2, when classifying into structured fields (especially incongruity_type and primary_template), use two-stage capture:
+During Pass 2, when classifying into structured fields (especially pivot_mechanism.operation and primary_template), use two-stage capture:
 
 **Stage 1 — Intuitive call.** Write your best guess into the structured field, plus the gloss fields (`setup_expectation`, `punchline_violation`) in your own words. Confidence is allowed to be low. The gloss fields are your reasoning trace — articulating the setup/punchline relationship often makes the structured classification obvious.
 
@@ -86,27 +87,21 @@ Three outcomes from Stage 2:
 
 The assistant can help with Stage 2 but only in a specific way: it can *read the criterion back to you* and ask whether it fits your gloss. It cannot propose which value is correct. If the assistant proposes a value, that's a data leak — log in decision log. The rule is that your intuitive call in Stage 1 is authoritative for classification; the assistant is authoritative only for pointing out when you've misapplied a definition that's written down and checkable.
 
-### Secondary incongruity types: when to populate
+### Pivot mechanism: the three sub-dimensions
 
-`incongruity_type` has `primary` (required, single-valued) and `secondary` (optional, multi-valued). Default to primary-only. Secondary is for the specific case where two mechanisms operate **simultaneously at the same pivot**, each doing distinct work.
+`pivot_mechanism` has three orthogonal sub-dimensions: `operation` (required), `reading_switch` (optional, defaults to none), and `scale_shift` (optional, defaults to none). This replaces the former `incongruity_type.primary` / `incongruity_type.secondary` system.
 
-**Three patterns that look like "multiple incongruity types" but aren't:**
+**Why the secondary slot was removed:** Most cases where secondary was populated were really "primary operation + scale modifier" (e.g., the old register_deflation was often "negation + contraction" or "reinterpretation + contraction"). The decomposed system captures these naturally as `operation` + `scale_shift` without needing a secondary mechanism slot. Genuinely layered mechanisms (rare) are identified by the commutation test in Pass 4, which surfaces what's load-bearing regardless of how the pivot is classified.
 
-1. **Uncertainty between values.** If you can't decide whether the mechanism is X or Y, that's one mechanism you can't identify — not two mechanisms. Pick the value you'd defend if pressed, log the alternative in `adversarial.counterarguments_considered` with why you rejected it, and set `adversarial.confidence: low`. Do **not** put both into primary + secondary; that encodes uncertainty as if it were layering and pollutes co-occurrence data.
+**When to populate reading_switch and scale_shift:** Default to `none`. Only populate when the modifier is doing work the operation alone doesn't capture. The commutation test (Pass 4) will verify: if removing the reading_switch or scale_shift from the annotation makes no difference to the joke's description, it wasn't load-bearing.
 
-2. **Mechanisms at different structural events.** If setup uses one mechanism and punchline uses another, you probably have two pivots, which means two jokes. This is a signal to segment into sub-jokes linked in a routine, not a signal to list multiple incongruity types.
+**scale_shift independence test (annotation-time heuristic).** scale_shift: contraction was over-applied in batch 1 (23% vs expected ≤30%). Many cases were consequences of the operation rather than independent levers. Before marking scale_shift, ask: "Can I imagine this joke using the SAME operation but at constant scale — and would the joke lose something specific?" For example:
+- reinterpretation + contraction on "To be out, this is out" — can you imagine a reinterpretation that doesn't deflate? Not easily — the reframe IS from philosophical to trivial. The contraction is the reframe. Mark **none** — the contraction is entangled with the operation, not independent.
+- mapping + contraction on "a cheque is like a note from your mother" — can you imagine the same mapping at constant scale (cheque mapped to something equally authoritative)? Yes — "a cheque is like a letter of recommendation from your bank manager" uses the same mapping structure but without contraction, and it's noticeably less funny. The contraction adds independent work. Mark **contraction**.
 
-3. **Plausible alternative readings.** If you can construct a reading of the joke under mechanism Y but the joke *also* works without Y — Y is a plausible lens, not an active mechanism — don't list Y as secondary. The test is the commutation criterion below.
+Rule of thumb: if changing the scale_shift to none would require you to also change the operation classification, the modifier is entangled and should be none. If the operation holds with a different scale_shift value, the modifier is independent and should be populated.
 
-**Secondary-use discipline (all three must hold):**
-
-- **Simultaneity.** The mechanism operates at the same pivot as the primary, not at a different structural event.
-- **Commutation weakening.** If you remove this mechanism (imagine the joke without it), does the joke become *weaker but still functional*? If yes, it's secondary. If removing kills the joke, it's primary, not secondary. If removal changes nothing, the mechanism isn't really operating — don't list it.
-- **Independence.** The secondary mechanism is doing work the primary isn't doing. If you find yourself describing both as "the same kind of thing said differently," you've got one mechanism under two names.
-
-**Expected frequency.** Most jokes have a clean single mechanism. Secondary should be populated in roughly **15% or fewer** of annotations in a healthy corpus. If you're populating secondary in more than 30% of jokes early on, the field is being over-used and the discipline above is not being applied. Weekly review tracks this ratio.
-
-**Pass 4 verification.** During the commutation test, each secondary entry is checked by asking "would the joke be weaker without this mechanism being active?" Entries that fail get removed. This is the structural check that makes secondary genuinely useful rather than decorative.
+**Uncertainty between operation values.** If you can't decide whether the operation is X or Y, pick the value whose test produces a cleaner artifact. Each operation in `pivot-mechanisms.yaml` has a test that asks you to write something concrete (two readings, a negated claim, a source/target pair, etc.). The value whose test you can complete most easily is the correct classification. If neither test works, the vocabulary may have a gap — log in `questions.md`.
 
 ### Passes are independent; don't chain them within a single joke
 
@@ -120,7 +115,7 @@ A reasonable weekly rhythm: one transcription batch (produces stubs, including r
 
 Held separately from pass-specific work because these apply regardless of which pass you're in.
 
-- **Vocabulary file open before any vocabulary-backed field is populated.** If you're filling `incongruity_type`, `vocabularies/incongruity-types.yaml` is visible. No exceptions. The vocabulary is externalized memory — trying to name values from memory guarantees you'll miss distinctions the file contains. This defends against the "I wouldn't have thought of mundane_as_monumental" failure mode.
+- **Vocabulary file open before any vocabulary-backed field is populated.** If you're filling `pivot_mechanism.operation`, `vocabularies/pivot-mechanisms.yaml` is visible. No exceptions. The vocabulary is externalized memory — trying to name values from memory guarantees you'll miss distinctions the file contains. This defends against the "I wouldn't have thought of mapping" failure mode.
 - **Concepts vs. templates — don't conflate them.** "Concept" in the schema is a technical term scoped to the content layer: it means *what the joke is about* (parking garages, memory, airline food). "Template" means *how the joke operates* on its concepts (mundane_as_monumental, reversal, escalation). The test: could this be applied to many different subjects (template) or is it a subject that many different moves could be applied to (concept)? "Mundane_as_monumental" is a template because you can apply it to any trivial subject. "Parking garages" is a concept because you can reversal it, escalate it, anthropomorphize it, or treat it as mundane_as_monumental. If you catch yourself wanting to add an idea like "mundane_as_monumental" to `concepts`, it's a template and belongs in `structure.primary_template` instead.
 - When the assistant asks a clarifying question, notice whether the question embeds a hypothesis. "What's the pivot?" is neutral. "Is the pivot the memory thing?" is not. If you notice the latter, answer the neutral version of the question instead and flag it in the decision log.
 - If you're uncertain between two vocabulary values, pick one and add a note. Don't stall. Stalling means the schema under-specifies something and that's information for the changelog, not a reason to freeze.
@@ -140,9 +135,10 @@ For each structured field, the question below is safe to ask the assistant once 
 - `setup_expectation` / `punchline_violation` (GLOSS). No verification needed — these are your reasoning, not classifications. The assistant should not comment on their content, only flag if they're missing.
 - `pivot_locus`. Ask: "I called this {logical|affective|both}. Here's my gloss. Does the turn happen at the level of meaning (logical), emotional register (affective), or both?" The assistant reads back your gloss and asks whether the turn's locus matches.
 - `pivot_concept`. Ask: "I named {concept} as the pivot concept. Does my gloss describe the turn as anchoring on that concept, or on something else?"
-- `incongruity_type.primary`. Ask: "I classified this as {value}. The criterion for {value} is {X} and the distinguished_from for the nearest neighbor {Y} says {Z}. Does my gloss fit the {value} criterion, or does it fit {Y} better?" This is the most common place for definition mismatches; the two-stage capture is designed for this field in particular.
-- `incongruity_type.secondary` (only if populated). Ask: "For each secondary mechanism I listed: does my gloss describe this mechanism as operating at the same pivot as the primary (simultaneity)? Would removing this mechanism weaken but not kill the joke (commutation)? Is this mechanism doing work the primary isn't already doing (independence)? Any 'no' means the entry should be removed." See §"Secondary incongruity types: when to populate".
-- `incongruity_operates_on` sub-block. Ask: "Given my gloss, does the setup establish a norm, anomaly, category, or sequence? Does the punchline affirm, negate, redirect, literalize, figurize, or recategorize?" The assistant walks through each sub-field against the gloss.
+- `pivot_mechanism.operation`. Ask: "I classified this as {value}. The test for {value} asks me to produce {artifact}. Here's my artifact: {X}. Does this artifact match the criterion, or does a neighboring value's test produce a cleaner artifact?" The two-stage capture is designed for this field in particular. Each operation has a concrete test in `pivot-mechanisms.yaml` — the test produces a written artifact, not a judgment call.
+- `pivot_mechanism.reading_switch`. Ask: "Does my gloss describe a shift between literal and figurative readings of the same text? If not, none." Only populated when the reading-mode change is load-bearing.
+- `pivot_mechanism.scale_shift`. Ask: "Does my gloss describe the punchline changing the scope (specific→universal) or gravity (elevated→trivial) of the setup frame? If not, none." Only populated when the scale change is load-bearing.
+- `setup_frame`. Ask: "Given my gloss, does the setup establish a norm, anomaly, category, or sequence?"
 
 ### Structure layer
 
@@ -236,7 +232,11 @@ Once a week, walk through these files in order:
 
 **Field-usage ratio check.** After the first 30 annotations, and every 20 annotations thereafter, run a quick count: for each field in the schema, how many annotations have a meaningful (non-default, non-null) value? Record in `working/field-usage.md` as a table with field name, annotation count using it, and total annotation count. Fields below roughly 20% usage are candidates for removal or merger — they're either overfit to rare cases or redundant with fields that carry similar information. Fields at 100% that always take the same value are also suspect; they may not be discriminating anything. Log candidates here; act on them only after two consecutive checks confirm the pattern.
 
-**Secondary incongruity usage check.** Specifically watch the rate at which `incongruity_type.secondary` is populated. Target is roughly ≤15% of annotations; >30% suggests the field is being over-used and the simultaneity/commutation/independence discipline is slipping. If over-used, re-read §"Secondary incongruity types: when to populate" and spot-check the last 5 secondary populations against the three-part discipline.
+**Pivot mechanism modifier usage check.** Watch the rate at which `pivot_mechanism.reading_switch` and `pivot_mechanism.scale_shift` are populated with non-none values. Expected: reading_switch is populated in roughly ≤10% of annotations (most jokes don't involve a literal/figurative mode change). scale_shift is populated in roughly ≤30%. If significantly higher, the modifiers may be being over-applied — spot-check by asking "would the annotation lose information if I set this to none?" for the last 5 populated cases.
+
+**Vocabulary value broadness check.** After the first 30 annotations, check each vocabulary's value distribution. If any single value in a vocabulary exceeds 40% of annotations, it may be a genus that needs splitting into species (the same failure mode that killed "reframe" in v0.2). Procedure: (1) collect the jokes classified under the dominant value, (2) look for clusters — do they subdivide into 2-3 groups that an annotator could reliably distinguish? (3) If yes, draft sub-species with full vocabulary discipline (criterion, positive example, near-miss negative, distinguished_from). (4) If no clean sub-species emerge, the value may be genuinely broad — note this and re-check at the next interval. Track in `working/field-usage.md` alongside field-usage ratios. Known candidates to watch: `pivot_mechanism.operation: reinterpretation` (36% in 5-episode pilot), `setup_frame: establishes_norm` (~80% in pilot).
+
+**Vocabulary gap tracker.** During annotation, when a template, operation, or other vocabulary value doesn't cleanly fit and the annotator forces a choice, log the gap in `working/questions.md` with the joke_id and a tally of appearances. Gaps are promoted to vocabulary additions when they reach 3 occurrences across different jokes and the annotator can provide the full definition block (criterion, positive example, near-miss negative, distinguished_from). Gaps that reach 3 occurrences but can't produce a clean definition block should be re-examined — the gap may be a symptom of a boundary problem in an existing value rather than a missing value. Track gap tallies in the question entry itself (update the "Appearances" count each time the gap recurs). Current tracked gaps and their counts are in `working/questions.md`.
 
 **A re-annotation spot-check.** Pick one annotation from 1–2 weeks ago and re-annotate it cold, without looking at the prior version. Compare. High agreement means the schema and your application of it are stable. Low agreement means either the schema has evolved (fine, update the old annotation) or your intuitions are drifting (not fine, needs attention).
 

@@ -1,0 +1,449 @@
+# =============================================================================
+# PASS 2 — Silent Decomposition
+# S02E06: "The Baby Shower"
+# Routine: s02e06_opening
+# =============================================================================
+# Laugh-points identified from transcript.
+# Each entry below is one distinct joke/laugh-point.
+# =============================================================================
+
+schema_version: "1.0"
+routine_id: s02e06_opening
+pass: 2
+
+annotations:
+
+  # ---------------------------------------------------------------------------
+  # LAUGH-POINT 1: Men don't know what they're watching
+  # ---------------------------------------------------------------------------
+  - joke_id: s02e06_b1_beat1_punchline
+    text: >
+      Men get that remote control in their hands, they don't even know what
+      the hell they're watching. You know, we just keep going, "Rerun,
+      don't wanna watch it.." "What are you watching?" "I don't care,
+      I gotta keep going."
+
+    setup_expectation: >
+      "Men flip around the television more than women" establishes a
+      familiar gendered-habit observation. The audience expects an
+      explanation or a comparative illustration -- why men do it, or a
+      specific funny scenario showing the difference.
+
+    punchline_violation: >
+      Instead of explaining the behavior, Jerry voices the interior
+      monologue of a man channel-surfing and reveals it is entirely
+      contentless -- the man has no criteria, no goal, no awareness of
+      what he's seeing. The humor is in the articulation of a behavior
+      the audience recognizes but hasn't heard voiced: channel-surfing
+      as a compulsion disconnected from any desire to actually watch
+      something.
+
+    pivot_locus: logical
+
+    pivot_concept: channel_surfing
+
+    pivot_mechanism:
+      operation: articulation
+      # TEST: If the audience KNEW Jerry was going to voice the interior
+      # monologue of a man flipping channels, would it still be funny?
+      # Yes -- the humor is in the recognition of the behavior, the
+      # specific phrasing ("I don't care, I gotta keep going"), and the
+      # shared experience being named. The audience reaction is "yes,
+      # that's exactly what we do." No frame shift required.
+      reading_switch: none
+      scale_shift: none
+
+    setup_frame: establishes_norm
+    # The setup establishes the norm of men's channel-surfing behavior
+    # as a recognized gendered habit.
+
+    primary_template: mundane_as_monumental
+    # The interior monologue is voiced with urgency ("I gotta keep
+    # going") as though the channel-surfing were a mission. The
+    # compulsive tone elevates a trivial act.
+
+    difficulties: >
+      The main tension is between articulation and extension. The voiced
+      monologue pushes slightly past pure recognition into comic
+      exaggeration ("I don't care, I gotta keep going" is heightened).
+      However, the humor does not depend on following a premise to an
+      absurd conclusion -- it depends on the audience recognizing the
+      behavior. Removing the surprise and telling the audience what's
+      coming would not kill the laugh; therefore articulation.
+
+  # ---------------------------------------------------------------------------
+  # LAUGH-POINT 2: Women want to see what the show is first
+  # ---------------------------------------------------------------------------
+  - joke_id: s02e06_b1_beat2_pivot
+    text: >
+      Women don't do this. See now, women will stop and go, "Well, let
+      me see what the show is before I change the channel." You see?
+      Men just fly.
+
+    setup_expectation: >
+      Having established men's compulsive flipping, the audience expects
+      the female counterpart to provide a contrast -- perhaps women
+      are more selective, more patient, more rational about TV.
+
+    punchline_violation: >
+      The contrast is delivered as maximally reasonable behavior --
+      "let me see what the show is before I change the channel" --
+      which is so obviously sensible that it highlights the absurdity
+      of the male behavior by comparison. The humor is in framing
+      basic rationality as a gendered trait. The line "men just fly"
+      caps it with a note of admiring bafflement.
+
+    pivot_locus: logical
+
+    pivot_concept: channel_surfing
+
+    pivot_mechanism:
+      operation: articulation
+      # TEST: If the audience knew the female version would be "let me
+      # see what the show is," would it still be funny? Yes -- the humor
+      # is in the recognition of the contrast and the implicit absurdity
+      # of men's behavior when juxtaposed with something so reasonable.
+      # No frame shift; pure shared-experience recognition.
+      reading_switch: none
+      scale_shift: none
+
+    setup_frame: establishes_norm
+    # Establishes the norm of women's rational TV-watching as the
+    # contrast baseline.
+
+    primary_template: false_equivalence
+    # The joke implicitly equates "watching a show before changing the
+    # channel" with a distinctly female trait, when it is simply rational
+    # behavior. The false equivalence between gender and basic sense is
+    # the rhetorical shape.
+
+    difficulties: >
+      This is a transitional beat and a lighter laugh. The template call
+      is the hardest decision -- it could be mundane_as_monumental (the
+      rational behavior is presented as a remarkable gender difference)
+      or false_equivalence (rationality is equated with femininity). I
+      chose false_equivalence because the rhetorical shape is the pairing
+      of two unequal things (gender and common sense), and the mismatch
+      of that pairing is what makes the observation funny rather than
+      merely informative.
+
+  # ---------------------------------------------------------------------------
+  # LAUGH-POINT 3: Women nest and men hunt
+  # ---------------------------------------------------------------------------
+  - joke_id: s02e06_b1_beat3_pivot
+    text: >
+      Because women, you see, women nest and men hunt. That's why we
+      watch TV differently.
+
+    setup_expectation: >
+      "Because" signals an explanation is coming. The audience expects
+      either a genuine observational insight or a comic pseudo-
+      explanation for the gendered TV behavior.
+
+    punchline_violation: >
+      Jerry invokes evolutionary psychology ("women nest and men hunt")
+      as the explanation for channel-surfing habits. The humor is in
+      the grandiosity of the framework -- reaching back to primal
+      biology to explain a behavior that involves a couch and a remote
+      control. The evolutionary framework is imported into the trivial
+      domain of television habits, and the mismatch is the joke.
+
+    pivot_locus: logical
+
+    pivot_concept: channel_surfing
+
+    pivot_mechanism:
+      operation: transplant
+      # TEST: (1) Target domain: television-watching habits.
+      # (2) Source domain: evolutionary biology / hunter-gatherer theory.
+      # (3) Imported framework: the nesting/hunting behavioral dichotomy.
+      # The humor is in the MISMATCH -- evolutionary psychology does not
+      # genuinely explain remote-control behavior, and the framework's
+      # gravity against the triviality of the subject is the joke.
+      # Would the joke work if the framework genuinely fit? No -- the
+      # absurdity of the mismatch is load-bearing. Therefore transplant,
+      # not mapping.
+      reading_switch: none
+      scale_shift: expansion
+      # The scope expands from "how we watch TV" to "primal human
+      # biology." The expansion is load-bearing: the humor requires the
+      # leap from couch behavior to evolutionary imperative.
+
+    setup_frame: establishes_norm
+    # The setup establishes the norm of an explanatory register --
+    # "because" promises a reason.
+
+    primary_template: mundane_as_monumental
+    # The rhetorical shape is applying the gravity of evolutionary
+    # theory to channel-surfing. The trivial subject is given a
+    # monumental explanatory framework.
+
+    difficulties: >
+      The operation choice between transplant and mapping is the key
+      tension. There is a loose structural parallel (men scanning
+      channels = men scanning the horizon for prey; women settling on a
+      show = women maintaining a home base), which suggests mapping. But
+      the humor depends on the framework being WRONG for the context --
+      evolutionary psychology is absurdly oversized for TV habits. If the
+      parallel genuinely fit, the line would be a TED talk, not a joke.
+      The mismatch is load-bearing, so transplant.
+
+  # ---------------------------------------------------------------------------
+  # LAUGH-POINT 4: Kings had story-tellers as entertainment
+  # ---------------------------------------------------------------------------
+  - joke_id: s02e06_b1_beat4_setup
+    text: >
+      Before there was flipping around, before there was television,
+      kings and emperors and pharaohs and such had story-tellers that
+      would tell them stories 'cause that was their entertainment.
+
+    setup_expectation: >
+      This is a transitional setup that establishes the historical
+      premise. The audience registers the shift to ancient history and
+      expects a callback to the channel-surfing behavior. The mild humor
+      is in the phrasing "and such" applied to pharaohs -- the casual
+      register against the historical grandeur.
+
+    punchline_violation: >
+      No distinct punchline -- this is primarily setup. The minor laugh
+      comes from the register mismatch of "and such" applied to kings,
+      emperors, and pharaohs, treating world-historical figures with
+      Seinfeldian casualness.
+
+    pivot_locus: logical
+
+    pivot_concept: channel_surfing
+
+    pivot_mechanism:
+      operation: reinterpretation
+      # TEST: Two readings of "kings and emperors and pharaohs and such."
+      # Reading 1 (the words invite): a grand historical catalogue of
+      #   powerful rulers.
+      # Reading 2 ("and such" imposes): an offhand, couldn't-be-bothered
+      #   grouping, as if pharaohs are just another item on a list.
+      # The reframe is from historical gravitas to casual dismissal.
+      reading_switch: none
+      scale_shift: contraction
+      # The grandeur of ancient rulers is contracted to "and such" --
+      # the deflation from historical weight to conversational
+      # throwaway is the minor laugh-point.
+
+    setup_frame: establishes_category
+    # Establishes the category of "pre-television entertainment" as
+    # the new domain the bit will operate in.
+
+    primary_template: mundane_as_monumental
+    # Inverted: the monumental (pharaohs) is treated as mundane ("and
+    # such"). The mismatch between the subject's historical weight and
+    # the casual register is the shape.
+
+    difficulties: >
+      This is borderline as a laugh-point -- it functions primarily as
+      setup for the extended bit that follows. I included it because
+      "and such" applied to pharaohs draws a recognition laugh from the
+      audience. The reinterpretation classification is debatable; this
+      could be articulation (Jerry is just being casually dismissive, and
+      the audience recognizes the Seinfeldian voice). I chose
+      reinterpretation because the humor requires the frame shift between
+      the grand catalogue and the dismissive "and such" -- without that
+      tonal shift, there is no laugh.
+
+  # ---------------------------------------------------------------------------
+  # LAUGH-POINT 5: Thirty story-tellers so you could flip around
+  # ---------------------------------------------------------------------------
+  - joke_id: s02e06_b1_beat5_punchline
+    text: >
+      I always wonder, in that era, if they would get, like, thirty
+      story-tellers together so they could still flip around.
+
+    setup_expectation: >
+      The historical premise (ancient rulers had story-tellers) has been
+      established. The audience expects either a comparison between
+      ancient and modern entertainment, or an observation about how
+      story-tellers were better/worse than TV.
+
+    punchline_violation: >
+      Instead of comparing the two eras, Jerry transplants the specific
+      modern compulsion (channel-surfing) into the ancient context,
+      imagining that rulers would have assembled thirty story-tellers
+      to replicate the experience of flipping channels. The humor is in
+      the absurd specificity of "thirty" and the image of the modern
+      behavior reconstructed with ancient technology.
+
+    pivot_locus: logical
+
+    pivot_concept: channel_surfing
+
+    pivot_mechanism:
+      operation: transplant
+      # TEST: (1) Target domain: ancient royal entertainment.
+      # (2) Source domain: modern channel-surfing behavior.
+      # (3) Imported framework: the compulsion to flip rapidly through
+      #   options, the need for parallel simultaneous content sources.
+      # The humor is in the MISMATCH -- the channel-surfing impulse does
+      # not belong in a pre-technological context, and the image of
+      # assembling thirty human beings to replicate a remote control is
+      # absurd. Would the joke work if the framework genuinely fit? No --
+      # the anachronism is the joke.
+      reading_switch: none
+      scale_shift: none
+
+    setup_frame: establishes_category
+    # The preceding setup established the category of ancient
+    # entertainment; this punchline operates within that category.
+
+    primary_template: mundane_as_monumental
+    # A trivial modern habit (channel-surfing) is projected onto
+    # the monumental context of ancient royal courts. The mismatch
+    # between the triviality of the behavior and the grandeur of the
+    # setting is the rhetorical shape.
+
+    difficulties: >
+      The operation could be mapping (the parallel between channel-
+      surfing and cycling through story-tellers is structurally apt).
+      However, the humor depends on the anachronistic mismatch -- the
+      image is funny BECAUSE it doesn't fit, not because it reveals a
+      hidden parallel. If a king genuinely did cycle through story-
+      tellers, the observation would be interesting but not funny.
+      The mismatch is load-bearing, confirming transplant.
+
+  # ---------------------------------------------------------------------------
+  # LAUGH-POINT 6: The rapid-fire dismissal of story-tellers
+  # ---------------------------------------------------------------------------
+  - joke_id: s02e06_b1_beat6_extension
+    text: >
+      Just go, "Alright start telling me a story, what's happening?
+      I don't want to hear anymore. Shut up. Go to the next guy. What
+      are you talking about? Is there a girl in that story? ..No? Shut
+      up. Go to the next guy. What do you got? I don't want to hear
+      that either. Shut up."
+
+    setup_expectation: >
+      The thirty-story-tellers premise has been established. The
+      audience expects Jerry to illustrate the scenario, probably with
+      one or two examples of the king dismissing a story-teller.
+
+    punchline_violation: >
+      Jerry commits fully to the bit, performing the king's voice as
+      he cycles through story-tellers with escalating impatience. Each
+      dismissal is faster and more contemptuous than the last. The
+      humor compounds through repetition and escalation -- "Shut up.
+      Go to the next guy" becomes a refrain. The specific detail "Is
+      there a girl in that story?" imports the modern channel-surfer's
+      criteria (looking for attractive content) into the ancient
+      context, adding another layer of anachronistic transplant.
+
+    pivot_locus: both
+    # Logical: the transplant of modern channel-surfing behavior into
+    # the ancient context continues and escalates.
+    # Affective: the king's mounting irritation and the rhythm of the
+    # rapid dismissals create a performative energy that is itself
+    # funny -- the cadence of impatience is an affective pleasure
+    # independent of the logical structure.
+
+    pivot_concept: channel_surfing
+
+    pivot_mechanism:
+      operation: extension
+      # TEST: Accepted premise + absurd-but-logical conclusion.
+      #   Accepted premise: an ancient king has thirty story-tellers
+      #     assembled to replicate channel-surfing (from beat 5).
+      #   Absurd conclusion: the king would behave EXACTLY like a modern
+      #     man with a remote -- dismissive, impatient, criteria-less,
+      #     asking "is there a girl in that story?" The premise is never
+      #     challenged; it is followed through with escalating specificity
+      #     and commitment.
+      # The humor is in the destination (the vivid, specific enactment)
+      # not in reframing or contradicting the premise.
+      reading_switch: none
+      scale_shift: none
+
+    setup_frame: establishes_sequence
+    # The preceding beat established the scenario; this beat is a
+    # sequence of escalating dismissals within that scenario.
+
+    primary_template: escalation
+    # The dominant shape is the escalating sequence of dismissals.
+    # Each "shut up, go to the next guy" increments the king's
+    # impatience and the absurdity of the scenario. Removing any
+    # single dismissal weakens but doesn't kill; removing the
+    # escalation structure does.
+
+    difficulties: >
+      The operation choice between extension and transplant is the
+      hardest call. The transplant (modern behavior into ancient
+      context) was established in beat 5; this beat EXTENDS the
+      transplanted premise rather than performing a new transplant.
+      The cognitive mechanism here is following the accepted premise
+      (king-as-channel-surfer) to its absurd-but-logical destination
+      (performing the full rapid-fire dismissal sequence). I chose
+      extension because the humor is in the COMMITMENT to the scenario,
+      not in the initial domain violation (which was the prior beat's
+      joke). The "is there a girl in that story?" detail could be a
+      separate laugh-point but is better understood as an escalation
+      beat within the sequence.
+
+  # ---------------------------------------------------------------------------
+  # LAUGH-POINT 7: "Get out of here. I'm going to bed."
+  # ---------------------------------------------------------------------------
+  - joke_id: s02e06_b1_beat7_closer
+    text: >
+      "No, go ahead, what are you talking about?.. I don't want to hear
+      that. No, the all of you, get out of here. I'm going to bed."
+
+    setup_expectation: >
+      The escalating dismissal sequence has established a rhythm of
+      cycling through story-tellers. The audience expects either more
+      of the same pattern or a final particularly absurd dismissal.
+
+    punchline_violation: >
+      Instead of continuing the cycle, the king dismisses ALL the
+      story-tellers at once and announces he's going to bed -- the
+      exact behavior of a frustrated channel-surfer who gives up and
+      turns off the TV. The humor is in the completeness of the
+      parallel: the ancient king even replicates the final move of
+      the modern ritual (abandoning the search entirely). "I'm going
+      to bed" is the ancient equivalent of turning off the television.
+
+    pivot_locus: logical
+
+    pivot_concept: channel_surfing
+
+    pivot_mechanism:
+      operation: extension
+      # TEST: Accepted premise + absurd-but-logical conclusion.
+      #   Accepted premise: the king behaves exactly like a modern
+      #     channel-surfer (from beats 5-6).
+      #   Absurd conclusion: the king even replicates the END of the
+      #     channel-surfing session -- giving up on all options and
+      #     going to bed. The premise is followed to its terminal point.
+      # This is the logical conclusion of the extended premise: if you
+      # flip through everything and find nothing, you turn off the TV.
+      # The king turns off the TV by dismissing all thirty humans.
+      reading_switch: none
+      scale_shift: none
+
+    setup_frame: establishes_sequence
+    # The preceding beats established the sequence of dismissals;
+    # this is the terminal beat that closes it.
+
+    primary_template: escalation
+    # The closer is the terminal escalation: from dismissing
+    # individuals to dismissing everyone simultaneously. The jump
+    # from "shut up, next guy" to "all of you, get out" is the
+    # final increment. "I'm going to bed" is the deflating coda
+    # that releases the accumulated tension.
+
+    difficulties: >
+      The template choice between escalation and mundane_as_monumental
+      is close. The final beat has a mundane_as_monumental quality
+      (dismissing thirty human beings is monumental; the motivation is
+      the mundane frustration of not finding anything to watch). But the
+      dominant shape is the CULMINATION of the escalating sequence -- the
+      beat derives its power from being the terminus of the pattern, not
+      from a standalone frame mismatch. The operation could also be
+      mapping (the parallel between turning off the TV and dismissing
+      story-tellers is structurally apt), but the humor is in following
+      the premise to completion rather than in revealing a hidden
+      parallel. The aptness of the parallel is a bonus, not the
+      mechanism.

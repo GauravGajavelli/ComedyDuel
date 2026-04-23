@@ -48,6 +48,106 @@ mundane_as_monumental:
       monumental doesn't argue; it applies a frame. Test: is there
       a logical argument being taken too far (reductio), or a register
       mismatch being sustained (mundane_as_monumental)?
+      Note: reductio as a template often co-occurs with extension as a
+      pivot_mechanism — reductio is the SHAPE (argumentative chain),
+      extension is the OPERATION (following logic past reason). A joke
+      can use the reductio template with a non-extension pivot (e.g.,
+      a reductio chain that ends in negation).
+
+monumental_as_mundane:
+  criterion: |
+    The joke applies the register, grammar, or behavioral norms of the
+    trivial or everyday to something that is culturally, physically, or
+    emotionally significant. The humor lives in the mismatch between the
+    gravity of the subject and the banality of the treatment. The
+    subject's significance does not change; the deflated frame does the
+    comedic work. The directional inverse of mundane_as_monumental.
+
+  positive_example: |
+    "Boy, this is some really bad traffic now, boy." (Seinfeld, S01E06)
+    The setup has established that traffic is moving BACKWARDS — a
+    physics-defying impossibility. The driver reacts with the identical
+    mundane complaint people use for ordinary congestion. The register
+    of casual annoyance applied to an impossible situation is the joke.
+
+  negative_example: |
+    "I hate clothes. I hate buying them." (Seinfeld, S01E08)
+    NOT monumental_as_mundane. Clothes are mundane and the complaint is
+    mundane — the registers match. There is no significant subject
+    being treated trivially. This is closer to mundane_as_monumental
+    (the complaint register is elevated beyond what clothes warrant).
+
+  distinguished_from:
+    mundane_as_monumental: |
+      Directional inverses. Mundane_as_monumental ELEVATES: trivial
+      subject + weighty frame. Monumental_as_mundane DEFLATES: weighty
+      subject + trivial frame. Test: is the subject trivial and the
+      frame elevated (mundane_as_monumental), or is the subject
+      significant and the frame trivially inadequate
+      (monumental_as_mundane)?
+
+    reductio: |
+      Reductio builds an argumentative chain to absurd conclusion.
+      Monumental_as_mundane applies a deflated frame without an argument
+      chain. Test: is there a logical progression (reductio), or just a
+      register mismatch (monumental_as_mundane)?
+
+    false_equivalence: |
+      False_equivalence pairs two unequal things. Monumental_as_mundane
+      does not pair — it treats a single significant subject with a
+      trivially inadequate frame. No second comparand is needed.
+
+shared_recognition:
+  criterion: |
+    The joke's rhetorical shape IS the act of naming a shared but
+    unspoken truth. There is no argumentative chain (reductio), no
+    building across beats (escalation), no register mismatch
+    (mundane_as_monumental / monumental_as_mundane), and no pairing
+    of unequal things (false_equivalence). The comedian names what
+    everyone implicitly knows, and the naming itself is the structural
+    move. The shape is the articulation.
+
+    This template typically co-occurs with the articulation pivot
+    operation but is at a different layer: articulation describes the
+    cognitive mechanism (stating unspoken truth), shared_recognition
+    describes the rhetorical shape (the joke IS the statement, with
+    no secondary structural scaffolding).
+
+  positive_example: |
+    "What are you using, the Philips head?" (Seinfeld, S01E04)
+    The joke has no escalation, no argument, no register mismatch, no
+    pairing. It IS the specific dumb question everyone has asked near
+    someone working with tools. The rhetorical shape is the naming
+    itself. No structural move beyond the articulation.
+
+  negative_example: |
+    "I'm always in traffic with the lane expert." (Seinfeld, S01E06)
+    Looks like shared_recognition (the audience recognizes the type),
+    but the bit develops an extended portrait using escalation,
+    transplant, and reductio. The recognition is a starting point, not
+    the shape. NOT shared_recognition — the joke has structural
+    scaffolding beyond the naming.
+
+  distinguished_from:
+    mundane_as_monumental: |
+      Mundane_as_monumental applies an elevated frame to trivial
+      content. Shared_recognition applies no frame at all — the
+      comedian speaks at the same register as the shared truth. Test:
+      is there a register mismatch between frame and content
+      (mundane_as_monumental), or does the comedian speak at the
+      content's own register (shared_recognition)?
+
+    escalation: |
+      Escalation builds across beats. Shared_recognition lands in one
+      move. Test: does the joke accumulate across multiple beats
+      (escalation), or does a single naming do the work
+      (shared_recognition)?
+
+    false_equivalence: |
+      False_equivalence pairs two things. Shared_recognition names
+      one thing. Test: does the joke compare two things
+      (false_equivalence) or simply name one known thing
+      (shared_recognition)?
 
 escalation:
   criterion: |
@@ -117,10 +217,12 @@ reductio:
       ENDS in false_equivalence, but the template is the argumentative
       structure, not the conclusion.
 
-    literalization: |
-      Reductio can use literalization in individual steps (taking
-      something figurative literally as part of the chain), but the
-      template is the chain itself, not the reading-mode switch.
+    reading_switch: |
+      Reductio can use a figurative_to_literal reading_switch in
+      individual steps, but the template is the chain itself, not the
+      reading-mode switch. A reductio with literalization in one step
+      has primary_template: reductio and reading_switch:
+      figurative_to_literal on that step's pivot.
 
 anthropomorphization:
   criterion: |
@@ -160,26 +262,50 @@ false_equivalence:
   criterion: |
     The joke treats two unequal things as if they were equivalent,
     usually by applying the same descriptive frame, standard, or
-    comparison to both. The humor is in the mismatch of the pairing.
+    comparison to both. The humor can come from either direction:
+    the MISMATCH of the pairing (the two things clearly don't belong
+    together) OR the surprising APTNESS of the pairing (the two things
+    turn out to share more structure than expected). The rhetorical
+    shape is the pairing itself — two things placed side by side and
+    treated as equivalent. Test: does the joke's structure depend on
+    placing two distinct things in explicit comparison? If yes, this
+    is the template regardless of whether the comparison reveals
+    mismatch or aptness.
 
   positive_example: |
     "My therapist and my drug dealer give me roughly the same advice."
     Two unlike relationships are equated through a shared property
-    (advice-giving). The mismatch between the contexts of the advice
-    is the joke.
+    (advice-giving). The mismatch between the contexts is humorous.
+
+    "Men hear a drill, it's like a dog whistle." (Seinfeld, S01E04)
+    Two unlike entities (men, dogs) equated through a shared response
+    pattern (involuntary compulsion triggered by sound). The APTNESS
+    of the comparison is humorous — men really do respond this way.
 
   negative_example: |
     "Airline food is the worst." NOT false_equivalence. Single
     subject, single claim, no comparison between unequal things.
 
   distinguished_from:
-    category_error: |
-      Category_error imports a framework from one domain into another
-      (corporate rules into friendship). False_equivalence pairs two
-      things directly as equivalents without necessarily importing a
-      framework. Test: is there a framework being imported
-      (category_error) or just two things being called equivalent
-      (false_equivalence)?
+    mapping_pivot_operation: |
+      False_equivalence is a TEMPLATE (rhetorical shape): the joke
+      EQUATES two things that are not equal, and the mismatch of the
+      pairing is the joke. Mapping is a PIVOT OPERATION (cognitive
+      mechanism): the joke REVEALS a structural parallel between two
+      domains. They can co-occur (a joke can use the false_equivalence
+      template with a mapping pivot if the "equivalence" reveals an
+      apt parallel), but they're at different layers. Test: is the
+      humor in the pairing being wrong (false_equivalence template) or
+      in the parallel being right (mapping pivot)?
+
+    transplant_pivot_operation: |
+      Transplant (pivot_mechanism.operation) APPLIES a foreign
+      framework to a domain where it doesn't belong. False_equivalence
+      (template) EQUATES two things directly. Transplant imports rules;
+      false_equivalence pairs entities. A joke can use both (equating
+      friendship and corporate employment imports the HR framework),
+      but the template is the equivalence structure, and the mechanism
+      is the framework import.
 
     anthropomorphization: |
       See anthropomorphization's distinguished_from.

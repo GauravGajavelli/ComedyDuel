@@ -77,13 +77,13 @@ print(f"Found {len(episodes)} episode links")
 
 # Pick 5 early episodes (seasons 1-2 have the most standup content)
 # Seinfeld's early episodes had extended opening monologues
-selected = episodes[:10]  # grab first 10 to have fallback options
+selected = episodes[:20]  # grab first 20 to have fallback options
 print(f"\nFirst 10 episodes available:")
 for i, (href, title) in enumerate(selected):
     print(f"  {i+1}. {title} ({href})")
 
 # Fetch the first 5
-targets = selected[:5]
+targets = selected[5:15]  # Episodes 6-15
 print(f"\n--- Fetching 5 episodes ---\n")
 
 for href, title in targets:

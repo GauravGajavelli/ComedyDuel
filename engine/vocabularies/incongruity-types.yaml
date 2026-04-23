@@ -1,17 +1,19 @@
-# Incongruity Types
+# Incongruity Types — DEPRECATED (schema v0.5)
 #
-# The mechanism by which the punchline violates the setup.
-# Referenced by schema: joke.logic.incongruity_type
+# SUPERSEDED by pivot-mechanisms.yaml. This file is retained for reference
+# during migration of any existing annotations. Do not use for new annotations.
 #
-# Single-valued. Mutually exclusive. See README.md for definition format.
+# The types below mapped to the new system as follows:
+#   reversal           →  operation: negation
+#   literalization      →  operation: reinterpretation + reading_switch: figurative_to_literal
+#   figuration          →  operation: reinterpretation + reading_switch: literal_to_figurative
+#   category_error      →  operation: transplant
+#   register_deflation  →  operation: reinterpretation + scale_shift: contraction
+#   scope_expansion     →  [any operation] + scale_shift: expansion
 #
-# NOTE (schema-changelog v0.2): "Reframe" has been removed as a selectable
-# value. Reframe was functioning as a catch-all genus covering every other
-# value in the vocabulary — literalization, figuration, category_error, and
-# others are all species of reframe. Every joke was classified as reframe
-# by default, and the category stopped carrying information. Use one of the
-# specific species below. If no species fits, log a vocabulary gap in
-# working/questions.md; do not default to a catch-all.
+# See schema-changelog.md v0.5 for rationale.
+#
+# --- Original file below for reference ---
 
 reversal:
   criterion: |

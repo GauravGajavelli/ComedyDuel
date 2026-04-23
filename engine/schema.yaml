@@ -1,4 +1,4 @@
-# Comedy Duel — Annotation Schema v0
+# Comedy Duel — Annotation Schema v0.5
 #
 # This file defines the shape of a joke annotation. One annotation per joke,
 # stored as YAML in annotations/{joke_id}.yaml.
@@ -115,42 +115,78 @@ joke:
                                    #              Readable for human review;
                                    #              not used by the engine.
 
-    incongruity_type:              # [STRUCTURED] mechanism(s) by which the
-                                   #   punchline violates the setup.
-                                   #   Values from vocabularies/incongruity-types.yaml.
-                                   #   Parallel structure to primary_template /
-                                   #   secondary_templates.
-      primary: ""                  # [STRUCTURED] required. The mechanism most
-                                   #   load-bearing for the joke — the one whose
-                                   #   removal would most damage the humor.
-                                   #   Single value from the vocabulary.
-      secondary: []                # [STRUCTURED] optional. Additional mechanisms
-                                   #   that operate SIMULTANEOUSLY with the
-                                   #   primary (not sequentially — that would be
-                                   #   multiple pivots, i.e., multiple jokes).
-                                   #   Each entry must survive its own commutation
-                                   #   check: would removing this mechanism
-                                   #   WEAKEN the joke (not kill it — killing
-                                   #   makes it primary)? If removal changes
-                                   #   nothing, the mechanism isn't really
-                                   #   operating and should not be listed.
-                                   #   Default to empty; populate only when a
-                                   #   secondary mechanism is genuinely active.
-                                   #   See protocols.md §"Secondary incongruity
-                                   #   types: when to populate".
+    pivot_mechanism:               # [STRUCTURED] Three orthogonal sub-dimensions
+                                   #   describing how the punchline operates on
+                                   #   the setup frame. Replaces incongruity_type
+                                   #   and absorbs reading_switch from the former
+                                   #   incongruity_operates_on block.
+                                   #   Values from vocabularies/pivot-mechanisms.yaml.
 
-    incongruity_operates_on:       # structured features about WHAT KIND of
-                                   # expectation is being violated. Lets the
-                                   # engine reason about setup/punchline shape
-                                   # without parsing the gloss strings.
-      setup_frame: null            # [STRUCTURED] establishes_norm |
-                                   #   establishes_anomaly | establishes_category |
-                                   #   establishes_sequence
-      punchline_action: null       # [STRUCTURED] affirms | negates | redirects |
-                                   #   literalizes | figurizes | recategorizes
-      reading_switch: null         # [STRUCTURED] literal_to_figurative |
-                                   #   figurative_to_literal | general_to_specific |
-                                   #   specific_to_general | none
+      operation: ""                # [STRUCTURED] required. Single-valued.
+                                   #   negation | reinterpretation | transplant |
+                                   #   mapping | extension | articulation
+                                   #
+                                   #   The cognitive operation the punchline
+                                   #   performs on the setup frame. Each value has
+                                   #   a testable criterion in the vocabulary file
+                                   #   that produces a written artifact (two
+                                   #   readings, a negated claim, a source/target
+                                   #   pair, etc.) rather than a judgment call.
+
+      reading_switch: none         # [STRUCTURED] optional. Single-valued.
+                                   #   none | figurative_to_literal |
+                                   #   literal_to_figurative
+                                   #
+                                   #   Whether the punchline changes the linguistic
+                                   #   interpretation mode of the setup's language.
+                                   #   Independent of operation.
+
+      scale_shift: none            # [STRUCTURED] optional. Single-valued.
+                                   #   none | expansion | contraction
+                                   #
+                                   #   Whether the punchline changes the scope
+                                   #   (specific↔universal) or gravity
+                                   #   (elevated↔trivial) of the frame.
+
+    setup_frame: null              # [STRUCTURED] What kind of expectation the
+                                   #   setup creates. Values:
+                                   #
+                                   #   establishes_convention — a cultural practice,
+                                   #     social ritual, or institutional norm. The
+                                   #     audience holds this convention as "how
+                                   #     things work." E.g., the middle finger is an
+                                   #     insult; you pay by cheque at the supermarket;
+                                   #     construction fences are for safety.
+                                   #
+                                   #   establishes_behavior — a recognizable human
+                                   #     behavioral pattern. The audience recognizes
+                                   #     "people do this." E.g., men are drawn to
+                                   #     tool work; people lane-change in traffic;
+                                   #     women hold dresses up against themselves.
+                                   #
+                                   #   establishes_expectation — a buildup that
+                                   #     creates specific anticipation of a payoff.
+                                   #     The audience expects something proportional
+                                   #     to the investment. E.g., escalating list of
+                                   #     preparation steps; "reason number one";
+                                   #     "the ultimate psychological test."
+                                   #
+                                   #   establishes_premise — an accepted claim or
+                                   #     hypothetical that subsequent jokes build on.
+                                   #     The audience accepts the frame and follows
+                                   #     it. E.g., "fashion won't exist"; "body parts
+                                   #     as insults"; "traffic will get worse."
+                                   #
+                                   #   establishes_anomaly — the setup presents
+                                   #     something unusual or puzzling that needs
+                                   #     explanation. E.g., "there's something about
+                                   #     a cheque that is not masculine."
+                                   #
+                                   #   establishes_sequence — an ordered progression
+                                   #     (temporal, logical, escalating) that creates
+                                   #     momentum toward a destination. E.g., the
+                                   #     out-back-sleep-up cycle; the paint-getting-
+                                   #     closer sequence.
 
     pivot_locus: ""                # [STRUCTURED] logical | affective | both
                                    #   Where the recontextualization happens.
@@ -253,7 +289,14 @@ performance:
                                    #   vocabularies/registers.yaml
     editorializes:
       present: null                # [STRUCTURED] true | false
-      kind: null                   # [STRUCTURED] strong | weak | ironized | null
+      kind: null                   # [STRUCTURED] null if not present, else:
+                                   #   strong — explicit judgment stated as
+                                   #     opinion ("that's ridiculous")
+                                   #   weak — judgment conveyed through tone or
+                                   #     word choice only, not stated directly
+                                   #   ironized — performing the opposite of
+                                   #     sincere judgment (mock-praise,
+                                   #     exaggerated agreement with the absurd)
 
   # --- Affective layer -----------------------------------------------------
 
@@ -284,20 +327,57 @@ performance:
 
     vulnerability:
       personal_exposure: null      # [STRUCTURED] integer 0-5: how much of
-                                   #   self is revealed
+                                   #   self is revealed.
+                                   #   0: nothing personal (pure observation)
+                                   #   1: personal preference or opinion
+                                   #   2: personal habit or quirk
+                                   #   3: personal failure or embarrassment
+                                   #   4: private emotional state or relationship
+                                   #   5: core identity, trauma, or taboo
       emotional_risk: null         # [STRUCTURED] integer 0-5: how affected the
                                    #   performer is by what's revealed
-                                   #   (orthogonal to exposure)
+                                   #   (orthogonal to exposure — high exposure
+                                   #   can have low risk if played as detached).
+                                   #   0: no emotional stake
+                                   #   1: mild discomfort played for comedy
+                                   #   2: genuine but managed vulnerability
+                                   #   3: visible emotional engagement
+                                   #   4: performance depends on sincerity
+                                   #   5: unironic emotional exposure
 
     shared_experience:
       required: null               # [STRUCTURED] boolean
       universality: null           # [STRUCTURED] universal | common | niche |
                                    #   performer_specific | null
-      comprehensibility_without_experience: null  # [STRUCTURED] integer 0-5
+      comprehensibility_without_experience: null
+                                   # [STRUCTURED] integer 0-5: can someone who
+                                   #   hasn't had the experience still find it
+                                   #   funny?
+                                   #   0: completely opaque without the experience
+                                   #   1: recognizable but not funny without it
+                                   #   2: understandable, humor partially lands
+                                   #   3: funny enough; experience adds depth
+                                   #   4: nearly as funny; experience is bonus
+                                   #   5: fully funny; experience irrelevant
 
     performed_relatability:
-      present: null                # [STRUCTURED] boolean
-      intensity: null              # [STRUCTURED] 0.0-1.0 if present
+      present: null                # [STRUCTURED] boolean — does the joke
+                                   #   perform a relatability gesture ("you know
+                                   #   when you...") for an experience that might
+                                   #   not actually be shared?
+      intensity: null              # [STRUCTURED] integer 0-3 if present, null
+                                   #   if not. Replaces 0.0-1.0 float (which
+                                   #   had no anchors and invited false
+                                   #   precision).
+                                   #   0: minimal — generic "you know"
+                                   #   1: moderate — specific scenario framed as
+                                   #      universal ("you know when you're in
+                                   #      a parking garage...")
+                                   #   2: strong — extended "we all do this"
+                                   #      framing, multiple beats of performed
+                                   #      shared experience
+                                   #   3: maximal — the relatability IS the joke
+                                   #      (the bit has no other mechanism)
 
 # ============================================================================
 # META
