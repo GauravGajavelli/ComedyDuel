@@ -1,228 +1,135 @@
-# =============================================================================
-# PASS 2 — Silent Decomposition
-# S01E09: "The Phone Message"
-# Routine: s01e09_opening
-# =============================================================================
-
-schema_version: "1.0"
+schema_version: '0.6'
 routine_id: s01e09_opening
 pass: 2
-
 annotations:
+- joke_id: s01e09_opening_lp1
+  text: 'The bad thing about television is that everybody you see on television is
+    doing something better than what you''re doing. Did you ever see anybody on TV
+    like just sliding off the front of the sofa with potato chip crumbs on their face?
 
-  # ---------------------------------------------------------------------------
-  # LAUGH-POINT 1: "sliding off the sofa with potato chip crumbs"
-  # ---------------------------------------------------------------------------
-  - joke_id: s01e09_opening_lp1
-    text: >
-      The bad thing about television is that everybody you see on television
-      is doing something better than what you're doing. Did you ever see
-      anybody on TV like just sliding off the front of the sofa with potato
-      chip crumbs on their face?
+    '
+  setup_expectation: '"Everybody on TV is doing something better than what you''re
+    doing" establishes a norm: television depicts an aspirational version of life.
+    The audience expects elaboration on what those better activities are -- glamorous,
+    exciting, impressive things.
 
-    setup_expectation: >
-      "Everybody on TV is doing something better than what you're doing"
-      establishes a norm: television depicts an aspirational version of life.
-      The audience expects elaboration on what those better activities are --
-      glamorous, exciting, impressive things.
+    '
+  punchline_violation: 'Instead of naming what TV people do better, Jerry names the
+    specific pathetic thing they never do: sliding off a sofa covered in chip crumbs.
+    The humor is in the precise, universally recognizable image of domestic sloth
+    that everyone has experienced but nobody has verbalized. The audience laughs at
+    recognition, not surprise.
 
-    punchline_violation: >
-      Instead of naming what TV people do better, Jerry names the specific
-      pathetic thing they never do: sliding off a sofa covered in chip
-      crumbs. The humor is in the precise, universally recognizable image
-      of domestic sloth that everyone has experienced but nobody has
-      verbalized. The audience laughs at recognition, not surprise.
+    '
+  pivot_locus: logical
+  pivot_concept: television_vs_reality
+  pivot_mechanism:
+    operation: articulation
+    reading_switch: none
+    scale_shift: none
+  setup_frame: establishes_behavior
+  primary_template: shared_recognition
+  difficulties: 'The operation choice between articulation and mapping is the main
+    tension. Mapping would require two distinct domains with a structural parallel
+    being revealed. Here, the joke stays within one domain (the viewer''s experience
+    of watching TV) and simply states what everyone already knows but hasn''t said.
+    The articulation test passes cleanly: the audience would laugh even knowing the
+    punchline was coming, because the specificity of the image is the joke. Template
+    is the harder call -- false_equivalence (TV life vs. real life as unequal pair)
+    vs. mundane_as_monumental (sofa-sliding treated with comedic weight). I lean false_equivalence
+    because the structural move is the contrast, not the elevation.
 
-    pivot_locus: logical
+    '
+  physical_performance: null
+- joke_id: s01e09_opening_lp2
+  text: 'Some people have a little too much fun on television: the soda commercial
+    people -- where do they summon this enthusiasm? Have you seen them? "We have soda,
+    we have soda, we have soda", jumping, laughing, flying through the air -- it''s
+    a can of soda.
 
-    pivot_concept: television_vs_reality
+    '
+  setup_expectation: 'The soda commercial is introduced as an example of excessive
+    TV enthusiasm. The audience expects Jerry to describe the commercials. The escalating
+    performance ("jumping, laughing, flying through the air") builds the commercial''s
+    energy to a peak, implicitly framing the product as something that deserves this
+    level of excitement.
 
-    pivot_mechanism:
-      operation: articulation
-      # TEST: If the audience KNEW the punchline was coming, would it still
-      # be funny? Yes. The humor is in the precise rendering of the chip-
-      # crumb-sofa-slide image. Everyone knows this about themselves and TV;
-      # the laugh is "yes, exactly." No frame shift -- the setup says TV is
-      # better, the punchline specifies exactly HOW you are worse. The
-      # recognition is the mechanism.
-      reading_switch: none
-      scale_shift: none
+    '
+  punchline_violation: '"It''s a can of soda" deflates the entire escalation by naming
+    the object at its actual scale. The enthusiasm was treated as if it were proportional
+    to the product''s worth; the punchline reasserts the product''s triviality, collapsing
+    the gap between the commercial''s emotional register and the object''s mundane
+    reality.
 
-    setup_frame: establishes_norm
-    # The norm: TV depicts a better version of life than yours.
+    '
+  pivot_locus: logical
+  pivot_concept: television_vs_reality
+  pivot_mechanism:
+    operation: reinterpretation
+    reading_switch: none
+    scale_shift: contraction
+  setup_frame: establishes_expectation
+  primary_template: mundane_as_monumental
+  difficulties: 'Operation choice between reinterpretation and articulation is the
+    key tension. The articulation test: would the audience still laugh if they knew
+    "it''s a can of soda" was coming? Partially -- the observation is recognizable.
+    But the humor is substantially in the deflation, the re-reading of the commercial''s
+    enthusiasm as absurd in light of the object''s triviality. The frame shift (from
+    absorbing commercial energy to seeing it as disproportionate) is load-bearing.
+    Reinterpretation fits better because the test produces two clean readings of the
+    same material. Scale_shift: contraction is clearly load-bearing -- "it''s a can
+    of soda" IS the contraction. Without the drop from ecstatic to trivial, the joke
+    doesn''t land.
 
-    primary_template: false_equivalence
-    # The rhetorical shape implicitly equates the viewer's sofa-sloth reality
-    # with the aspirational TV world by placing them side by side. However,
-    # this is borderline -- mundane_as_monumental could apply if we read the
-    # sofa-slide as receiving mock-gravity. I chose false_equivalence because
-    # the joke's shape is the pairing of two unequal lifestyles, not the
-    # elevation of one.
+    '
+  physical_performance: null
+- joke_id: s01e09_opening_lp3
+  text: 'Have you ever been standing there and you''re watching TV and you''re drinking
+    the exact same product that they''re advertising right there on TV, and it''s
+    like, you know, they''re spiking volleyballs, jetskiing, girls in bikinis and
+    I''m standing there -- "Maybe I''m putting too much ice in mine."
 
-    difficulties: >
-      The operation choice between articulation and mapping is the main
-      tension. Mapping would require two distinct domains with a structural
-      parallel being revealed. Here, the joke stays within one domain
-      (the viewer's experience of watching TV) and simply states what
-      everyone already knows but hasn't said. The articulation test passes
-      cleanly: the audience would laugh even knowing the punchline was
-      coming, because the specificity of the image is the joke. Template
-      is the harder call -- false_equivalence (TV life vs. real life as
-      unequal pair) vs. mundane_as_monumental (sofa-sliding treated with
-      comedic weight). I lean false_equivalence because the structural
-      move is the contrast, not the elevation.
+    '
+  setup_expectation: 'The setup establishes a simultaneous comparison: you are drinking
+    the same soda as the TV commercial people, right now, in real time. The escalating
+    list of commercial activities (spiking volleyballs, jetskiing, girls in bikinis)
+    builds the gap between their experience and yours. The audience expects a comment
+    on the absurdity of the gap -- some observation about how different the real experience
+    is.
 
-  # ---------------------------------------------------------------------------
-  # LAUGH-POINT 2: "We have soda, we have soda, we have soda"
-  # ---------------------------------------------------------------------------
-  - joke_id: s01e09_opening_lp2
-    text: >
-      Some people have a little too much fun on television: the soda
-      commercial people -- where do they summon this enthusiasm? Have you
-      seen them? "We have soda, we have soda, we have soda", jumping,
-      laughing, flying through the air -- it's a can of soda.
+    '
+  punchline_violation: 'Jerry''s self-diagnosis -- "maybe I''m putting too much ice
+    in mine" -- treats the gap between his experience and the commercial''s as a solvable
+    preparation error rather than a fundamental absurdity. The problem isn''t that
+    commercials are fantasy; the problem is that he''s making his soda wrong. The
+    commercial''s promise is accepted at face value, and the failure to achieve its
+    results is attributed to user error on the most trivial possible variable.
 
-    setup_expectation: >
-      The soda commercial is introduced as an example of excessive TV
-      enthusiasm. The audience expects Jerry to describe the commercials.
-      The escalating performance ("jumping, laughing, flying through the
-      air") builds the commercial's energy to a peak, implicitly framing
-      the product as something that deserves this level of excitement.
+    '
+  pivot_locus: logical
+  pivot_concept: television_vs_reality
+  pivot_mechanism:
+    operation: reinterpretation
+    reading_switch: none
+    scale_shift: contraction
+  setup_frame: establishes_expectation
+  primary_template: reductio
+  difficulties: 'This is the hardest call in the monologue. The operation choice between
+    reinterpretation and extension is genuinely tight. Extension would say: accepted
+    premise (the soda should produce the commercial''s effects) + absurd conclusion
+    (the failure is due to ice ratio). This reads well. But I chose reinterpretation
+    because the humor is more fundamentally about RE-READING the gap than about EXTENDING
+    a premise. The two-readings test produces a cleaner artifact than the extension
+    test: the gap between commercial and reality is the same material seen under two
+    frames (fantasy vs. correctable error). The extension reading treats the commercial''s
+    promise as a genuinely accepted premise being followed forward, but Jerry doesn''t
+    actually build a logical chain -- he jumps directly to the reframe. Template:
+    reductio vs. false_equivalence is also close. I chose reductio because the joke
+    has an implicit argumentative chain (same product + different results = user error)
+    rather than a simple pairing of unequal things. The scale_shift: contraction is
+    the clearest in the monologue -- the drop from "jetskiing and bikinis" to "too
+    much ice" is enormous and load-bearing.
 
-    punchline_violation: >
-      "It's a can of soda" deflates the entire escalation by naming the
-      object at its actual scale. The enthusiasm was treated as if it
-      were proportional to the product's worth; the punchline reasserts
-      the product's triviality, collapsing the gap between the
-      commercial's emotional register and the object's mundane reality.
-
-    pivot_locus: logical
-
-    pivot_concept: television_vs_reality
-
-    pivot_mechanism:
-      operation: reinterpretation
-      # TEST (two distinct readings of the SAME material):
-      #   Reading 1 (setup invites): The soda commercial enthusiasm is
-      #     the context -- you watch it and absorb its escalating energy
-      #     as the frame for evaluating the product.
-      #   Reading 2 (punchline imposes): The same enthusiasm is now seen
-      #     as absurdly disproportionate to its object. The commercial
-      #     performance is re-read as deranged rather than celebratory.
-      # The material (the commercial's behavior) is the same; the frame
-      # shifts from "this is how commercials work" to "this is insane
-      # behavior directed at a beverage."
-      reading_switch: none
-      scale_shift: contraction
-      # The punchline contracts the commercial's inflated register down
-      # to the object's actual scale. The contraction is load-bearing:
-      # "it's a can of soda" does its work precisely by deflating.
-
-    setup_frame: establishes_norm
-    # The norm: commercials present products with disproportionate
-    # enthusiasm. This is the accepted background reality.
-
-    primary_template: mundane_as_monumental
-    # The rhetorical shape is: the commercial applies the grammar of
-    # ecstasy (jumping, flying, chanting) to a trivial object (soda).
-    # Jerry performs the commercial's monumental treatment of the mundane,
-    # then punctures it. The template is the mismatch between the frame's
-    # gravity and the content's triviality.
-
-    difficulties: >
-      Operation choice between reinterpretation and articulation is the
-      key tension. The articulation test: would the audience still laugh
-      if they knew "it's a can of soda" was coming? Partially -- the
-      observation is recognizable. But the humor is substantially in the
-      deflation, the re-reading of the commercial's enthusiasm as absurd
-      in light of the object's triviality. The frame shift (from
-      absorbing commercial energy to seeing it as disproportionate) is
-      load-bearing. Reinterpretation fits better because the test
-      produces two clean readings of the same material. Scale_shift:
-      contraction is clearly load-bearing -- "it's a can of soda" IS
-      the contraction. Without the drop from ecstatic to trivial, the
-      joke doesn't land.
-
-  # ---------------------------------------------------------------------------
-  # LAUGH-POINT 3: "Maybe I'm putting too much ice in mine"
-  # ---------------------------------------------------------------------------
-  - joke_id: s01e09_opening_lp3
-    text: >
-      Have you ever been standing there and you're watching TV and you're
-      drinking the exact same product that they're advertising right there
-      on TV, and it's like, you know, they're spiking volleyballs,
-      jetskiing, girls in bikinis and I'm standing there -- "Maybe I'm
-      putting too much ice in mine."
-
-    setup_expectation: >
-      The setup establishes a simultaneous comparison: you are drinking
-      the same soda as the TV commercial people, right now, in real time.
-      The escalating list of commercial activities (spiking volleyballs,
-      jetskiing, girls in bikinis) builds the gap between their experience
-      and yours. The audience expects a comment on the absurdity of the
-      gap -- some observation about how different the real experience is.
-
-    punchline_violation: >
-      Jerry's self-diagnosis -- "maybe I'm putting too much ice in mine" --
-      treats the gap between his experience and the commercial's as a
-      solvable preparation error rather than a fundamental absurdity.
-      The problem isn't that commercials are fantasy; the problem is
-      that he's making his soda wrong. The commercial's promise is
-      accepted at face value, and the failure to achieve its results
-      is attributed to user error on the most trivial possible variable.
-
-    pivot_locus: logical
-
-    pivot_concept: television_vs_reality
-
-    pivot_mechanism:
-      operation: reinterpretation
-      # TEST (two readings of the SAME material):
-      #   Reading 1 (setup invites): The gap between your soda experience
-      #     and the commercial's soda experience exists because commercials
-      #     are fantasy. The comparison is absurd.
-      #   Reading 2 (punchline imposes): The gap exists because of a
-      #     correctable error in your soda preparation. The commercial's
-      #     promise is literally achievable; you're just doing it wrong.
-      # Same gap, two explanatory frames. The punchline's frame is
-      # delightfully wrong -- it reinterprets a systemic absurdity as a
-      # personal failing on the most trivial axis.
-      reading_switch: none
-      scale_shift: contraction
-      # The vast existential gap between commercial fantasy and lived
-      # reality is contracted to an ice-to-soda ratio problem. The
-      # contraction is load-bearing: the humor lives in the scale of
-      # the deflation.
-
-    setup_frame: establishes_norm
-    # The norm: commercial experiences are unattainable fantasies.
-    # Everyone knows this.
-
-    primary_template: reductio
-    # The rhetorical shape is: accept the commercial's premise (this
-    # product causes this lifestyle), follow the logic, and arrive at
-    # an absurd but internally consistent conclusion (the lifestyle
-    # failure must be a preparation error). The argumentative chain --
-    # same product, different results, therefore user error -- is the
-    # joke's shape.
-
-    difficulties: >
-      This is the hardest call in the monologue. The operation choice
-      between reinterpretation and extension is genuinely tight.
-      Extension would say: accepted premise (the soda should produce the
-      commercial's effects) + absurd conclusion (the failure is due to
-      ice ratio). This reads well. But I chose reinterpretation because
-      the humor is more fundamentally about RE-READING the gap than about
-      EXTENDING a premise. The two-readings test produces a cleaner
-      artifact than the extension test: the gap between commercial and
-      reality is the same material seen under two frames (fantasy vs.
-      correctable error). The extension reading treats the commercial's
-      promise as a genuinely accepted premise being followed forward,
-      but Jerry doesn't actually build a logical chain -- he jumps
-      directly to the reframe. Template: reductio vs. false_equivalence
-      is also close. I chose reductio because the joke has an implicit
-      argumentative chain (same product + different results = user error)
-      rather than a simple pairing of unequal things. The
-      scale_shift: contraction is the clearest in the monologue -- the
-      drop from "jetskiing and bikinis" to "too much ice" is enormous
-      and load-bearing.
+    '
+  physical_performance: null
+v0_6_reviewed: true

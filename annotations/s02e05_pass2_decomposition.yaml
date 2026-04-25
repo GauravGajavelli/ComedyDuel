@@ -1,355 +1,212 @@
-# =============================================================================
-# PASS 2 — Silent Decomposition
-# Episode: S02E05 "The Deal"
-# Routine: s02e05_opening
-# =============================================================================
-
-schema_version: "1.0"
+schema_version: '0.6'
 routine_id: s02e05_opening
 pass: 2
-
 annotations:
+- joke_id: s02e05_opening_lp1
+  text: 'Women don''t try on the clothes, they get behind the clothes, you see? They
+    take a dress off the rack, and they hold it up against themself.
 
-  # ---------------------------------------------------------------------------
-  # LAUGH-POINT 1: Women hold the dress up against themselves
-  # ---------------------------------------------------------------------------
-  - joke_id: s02e05_opening_lp1
-    text: >
-      Women don't try on the clothes, they get behind the clothes, you see?
-      They take a dress off the rack, and they hold it up against themself.
+    '
+  setup_expectation: '"I''ve been watching women in the department stores" sets up
+    a gendered-observation frame. "They do it differently from men" promises a comparative
+    insight. The audience expects a behavior difference that reveals something about
+    women''s psychology or vanity — the standard observational-comedy contract.
 
-    setup_expectation: >
-      "I've been watching women in the department stores" sets up a
-      gendered-observation frame. "They do it differently from men"
-      promises a comparative insight. The audience expects a behavior
-      difference that reveals something about women's psychology or
-      vanity — the standard observational-comedy contract.
+    '
+  punchline_violation: 'The difference is reframed as purely spatial: women don''t
+    try on clothes, they "get behind" them. The psychology is stripped away; what
+    remains is a geometric description of a body positioned behind fabric. The audience
+    recognizes the exact behavior instantly but has never heard it described this
+    way — as hiding behind the garment rather than evaluating it.
 
-    punchline_violation: >
-      The difference is reframed as purely spatial: women don't try on
-      clothes, they "get behind" them. The psychology is stripped away;
-      what remains is a geometric description of a body positioned behind
-      fabric. The audience recognizes the exact behavior instantly but
-      has never heard it described this way — as hiding behind the
-      garment rather than evaluating it.
+    '
+  pivot_locus: logical
+  pivot_concept: clothes_shopping
+  pivot_mechanism:
+    operation: reinterpretation
+    reading_switch: none
+    scale_shift: none
+  setup_frame: establishes_behavior
+  primary_template: mundane_as_monumental
+  difficulties: 'The main tension is between reinterpretation and articulation. Articulation
+    test: if the audience KNEW what was coming, would it still be funny? Partially
+    — the recognition of "getting behind the clothes" is strong. But the humor requires
+    seeing the familiar behavior through a new geometric lens. The audience has never
+    thought of holding up a dress as "getting behind" it. That frame shift is load-bearing,
+    which pushes this to reinterpretation over articulation. Close call.
 
-    pivot_locus: logical
+    '
+  physical_performance: null
+- joke_id: s02e05_opening_lp2
+  text: 'They can tell something from this.
 
-    pivot_concept: clothes_shopping
+    '
+  setup_expectation: 'Having described the behavior of holding a dress up, the audience
+    expects Jerry to explain what information women extract from it — the payoff of
+    the observation. The implied frame is that this behavior is rational and yields
+    useful data about fit, style, or appearance.
 
-    pivot_mechanism:
-      operation: reinterpretation
-      # TEST (two distinct readings of the SAME material):
-      #   Reading 1 (setup invites): holding a dress up = evaluating
-      #     whether the garment suits you (a judgment act).
-      #   Reading 2 (punchline imposes): holding a dress up = positioning
-      #     yourself behind a piece of fabric (a spatial act).
-      # Same behavior, two frames. The punchline imposes the geometric
-      # reading on what the setup framed as an evaluative act.
-      reading_switch: none
-      # No figurative expression is being literalized. "Try on" and "get
-      # behind" are both literal descriptions. The reframe is conceptual
-      # (evaluation → spatial positioning), not a reading-mode switch.
-      scale_shift: none
+    '
+  punchline_violation: 'Jerry declines to specify WHAT they can tell — just that they
+    "can tell something." The vagueness is the joke: the behavior is treated as yielding
+    information, but the information is unidentifiable. This undermines the rationality
+    of the act without directly attacking it — the women believe they''re learning
+    something, Jerry can''t figure out what.
 
-    setup_frame: establishes_norm
-    # The setup establishes the norm of clothes shopping as evaluative
-    # behavior.
+    '
+  pivot_locus: logical
+  pivot_concept: clothes_shopping
+  pivot_mechanism:
+    operation: articulation
+    reading_switch: none
+    scale_shift: none
+  setup_frame: establishes_expectation
+  primary_template: mundane_as_monumental
+  difficulties: 'Could be classified as reinterpretation (reframing the rational act
+    as irrational) but no new frame is imposed — Jerry stays within the same frame
+    and just notes the opacity. The humor is recognition, not reframe. Articulation
+    fits cleanly.
 
-    primary_template: mundane_as_monumental
-    # Jerry frames the trivially familiar act of holding up a dress with
-    # the gravity of anthropological observation ("I've been watching
-    # women"). The observational frame's seriousness against the
-    # behavior's banality is the rhetorical shape.
+    '
+  physical_performance: null
+- joke_id: s02e05_opening_lp3
+  text: 'They stick one leg way out ''cause they need to know, if some day I''m one-legged,
+    and at a forty-five degree angle, what am I gonna wear?
 
-    difficulties: >
-      The main tension is between reinterpretation and articulation.
-      Articulation test: if the audience KNEW what was coming, would it
-      still be funny? Partially — the recognition of "getting behind
-      the clothes" is strong. But the humor requires seeing the familiar
-      behavior through a new geometric lens. The audience has never
-      thought of holding up a dress as "getting behind" it. That frame
-      shift is load-bearing, which pushes this to reinterpretation over
-      articulation. Close call.
+    '
+  setup_expectation: 'The leg-out pose is a real, recognizable thing women do when
+    holding up a dress. The implicit assumption is that the pose serves some evaluative
+    purpose — mimicking how the dress will look when worn, checking length, approximating
+    fit.
 
-  # ---------------------------------------------------------------------------
-  # LAUGH-POINT 2: "They can tell something from this"
-  # ---------------------------------------------------------------------------
-  - joke_id: s02e05_opening_lp2
-    text: >
-      They can tell something from this.
+    '
+  punchline_violation: 'Jerry follows the literal geometry of the pose to its logical
+    conclusion: the only scenario where the pose would yield accurate data is one
+    where the woman is one-legged and tilted at forty-five degrees. The pose''s evaluative
+    purpose is replaced by an absurd hypothetical that the pose would actually prepare
+    for.
 
-    setup_expectation: >
-      Having described the behavior of holding a dress up, the audience
-      expects Jerry to explain what information women extract from it —
-      the payoff of the observation. The implied frame is that this
-      behavior is rational and yields useful data about fit, style,
-      or appearance.
+    '
+  pivot_locus: logical
+  pivot_concept: clothes_shopping
+  pivot_mechanism:
+    operation: extension
+    reading_switch: none
+    scale_shift: none
+  setup_frame: establishes_behavior
+  primary_template: reductio
+  difficulties: 'Extension vs. reinterpretation is the key call. Reinterpretation
+    would require two readings of the same material; here there is only one reading
+    (the pose as preview) followed forward into absurdity. Extension fits cleanly.
+    The reductio template and extension operation co-occur as expected per the vocabulary
+    guidance.
 
-    punchline_violation: >
-      Jerry declines to specify WHAT they can tell — just that they
-      "can tell something." The vagueness is the joke: the behavior is
-      treated as yielding information, but the information is
-      unidentifiable. This undermines the rationality of the act without
-      directly attacking it — the women believe they're learning
-      something, Jerry can't figure out what.
+    '
+  physical_performance: null
+- joke_id: s02e05_opening_lp4
+  text: 'You never see a guy take a suit off the rack, put his head in the neck, and
+    go, "What do you think about this suit? I think I''ll get it. Yeah, it looks fine."
 
-    pivot_locus: logical
+    '
+  setup_expectation: '"You never see a man do that" sets up a gender contrast. The
+    audience expects a description of how men shop differently — perhaps more decisively,
+    less carefully, or with less ritual.
 
-    pivot_concept: clothes_shopping
+    '
+  punchline_violation: 'Instead of describing actual male behavior, Jerry transplants
+    the women''s hold-it-up method onto a man with a suit — and the image is immediately
+    absurd. A man jamming his head into the neck hole of a suit on the rack and declaring
+    "I''ll get it" makes the women''s method look equally absurd by reflection. The
+    humor is in the grotesque visual of the male version AND in the retroactive absurdification
+    of the female version.
 
-    pivot_mechanism:
-      operation: articulation
-      # TEST: If the audience KNEW what was coming, would it still be
-      # funny? Yes — every audience member has watched someone hold a
-      # dress up and thought "what can you possibly learn from that?"
-      # The humor is in verbalizing the shared bafflement. No frame
-      # switch; just the act of saying the unspoken.
-      reading_switch: none
-      scale_shift: none
+    '
+  pivot_locus: logical
+  pivot_concept: clothes_shopping
+  pivot_mechanism:
+    operation: extension
+    reading_switch: none
+    scale_shift: none
+  setup_frame: establishes_premise
+  primary_template: false_equivalence
+  difficulties: 'Operation choice between extension and mapping is the hardest call
+    here. Mapping would require the humor to come from an APT parallel between two
+    domains; here the humor comes from the MISMATCH when you extend the technique
+    to men''s clothing — the technique breaks down, which is the joke. Extension fits
+    better: accepted premise (hold-up method works), followed to absurd destination
+    (man with head in suit neck). Template choice between false_equivalence and reductio:
+    the joke equates two situations (women holding dress vs. man putting head in suit)
+    more than it builds an argumentative chain, so false_equivalence is the dominant
+    shape.
 
-    setup_frame: establishes_norm
-    # The norm is that holding a dress up is an evaluative act that
-    # yields information.
+    '
+  physical_performance: null
+- joke_id: s02e05_opening_lp5
+  text: 'Put some shoes by the bottom of the pants, I wanna make sure. Yeah, perfect.
 
-    primary_template: mundane_as_monumental
-    # "They can tell something from this" delivers the observation with
-    # the deadpan gravity of a field researcher reporting findings,
-    # applied to a trivial shopping behavior.
+    '
+  setup_expectation: 'The man-with-head-in-suit image has landed. The audience expects
+    the bit to conclude or move on. If it continues, the expectation is that the hypothetical
+    stays at the same level of absurdity.
 
-    difficulties: >
-      Could be classified as reinterpretation (reframing the rational
-      act as irrational) but no new frame is imposed — Jerry stays
-      within the same frame and just notes the opacity. The humor is
-      recognition, not reframe. Articulation fits cleanly.
+    '
+  punchline_violation: 'The hypothetical escalates: not only has the man jammed his
+    head into the suit, he now wants shoes placed at the bottom of the pants to complete
+    the ensemble evaluation. The commitment to the absurd method deepens — the man
+    is assembling a full outfit preview while his head is stuck in a suit on the rack.
+    Each additional detail makes the image more ridiculous.
 
-  # ---------------------------------------------------------------------------
-  # LAUGH-POINT 3: One-legged at forty-five degrees
-  # ---------------------------------------------------------------------------
-  - joke_id: s02e05_opening_lp3
-    text: >
-      They stick one leg way out 'cause they need to know, if some day
-      I'm one-legged, and at a forty-five degree angle, what am I gonna
-      wear?
+    '
+  pivot_locus: logical
+  pivot_concept: clothes_shopping
+  pivot_mechanism:
+    operation: extension
+    reading_switch: none
+    scale_shift: none
+  setup_frame: establishes_premise
+  primary_template: escalation
+  difficulties: 'This is a tag on LP4 — the question is whether it''s a distinct laugh-point
+    or just a continuation. It gets its own laugh because it adds a new absurd detail
+    (shoes) that escalates beyond the head-in-suit image. The escalation template
+    is clean here.
 
-    setup_expectation: >
-      The leg-out pose is a real, recognizable thing women do when
-      holding up a dress. The implicit assumption is that the pose
-      serves some evaluative purpose — mimicking how the dress will
-      look when worn, checking length, approximating fit.
+    '
+  physical_performance: null
+- joke_id: s02e05_opening_lp6
+  text: 'And what if I''m walking? Move the shoes, move the shoes, move the shoes,
+    move the shoes.
 
-    punchline_violation: >
-      Jerry follows the literal geometry of the pose to its logical
-      conclusion: the only scenario where the pose would yield accurate
-      data is one where the woman is one-legged and tilted at forty-five
-      degrees. The pose's evaluative purpose is replaced by an absurd
-      hypothetical that the pose would actually prepare for.
+    '
+  setup_expectation: 'The shoes-at-the-bottom tag has already escalated the absurdity.
+    The audience expects either a conclusion or one more small escalation within the
+    same frame.
 
-    pivot_locus: logical
+    '
+  punchline_violation: 'The man — head still in the suit on the rack — now wants to
+    simulate WALKING by having someone move the shoes back and forth. The static preview
+    has become a dynamic simulation. The repetition of "move the shoes" four times
+    performs the walking rhythm itself, the verbal cadence mimicking footsteps. The
+    absurd commitment has gone from "preview" to "full-body motion capture on a department
+    store rack."
 
-    pivot_concept: clothes_shopping
+    '
+  pivot_locus: logical
+  pivot_concept: clothes_shopping
+  pivot_mechanism:
+    operation: extension
+    reading_switch: none
+    scale_shift: none
+  setup_frame: establishes_expectation
+  primary_template: escalation
+  difficulties: 'The main question is whether the repetition ("move the shoes" x4)
+    constitutes a separate mechanism or is purely a performance/ cadence feature.
+    As a Pass 2 (silent decomposition), the repetition is structural — it performs
+    the walking rhythm on the page. But the operation is still extension (following
+    the preview-logic further), and the template is still escalation (incrementing
+    the commitment). The repetition is a delivery choice that amplifies the escalation;
+    it doesn''t change the underlying operation. Performance-layer analysis of the
+    repetition belongs in Pass 3.
 
-    pivot_mechanism:
-      operation: extension
-      # TEST: Accepted premise + absurd-but-logical conclusion.
-      #   Accepted premise: the pose is a way of previewing how the
-      #   dress will look on your body (you hold it up to "see").
-      #   Absurd conclusion: the only body configuration the pose
-      #   accurately represents is one-legged at a forty-five-degree
-      #   angle. The premise (pose = preview) is never challenged;
-      #   it is followed to its absurd geometric endpoint.
-      reading_switch: none
-      scale_shift: none
-
-    setup_frame: establishes_norm
-    # The norm is that the leg-out pose is purposeful behavior.
-
-    primary_template: reductio
-    # The rhetorical shape is argumentative: IF the pose is a preview,
-    # THEN it previews a one-legged forty-five-degree scenario. The
-    # chain from reasonable premise to absurd conclusion is the joke's
-    # structure. Reductio is the shape; extension is the operation.
-
-    difficulties: >
-      Extension vs. reinterpretation is the key call. Reinterpretation
-      would require two readings of the same material; here there is
-      only one reading (the pose as preview) followed forward into
-      absurdity. Extension fits cleanly. The reductio template and
-      extension operation co-occur as expected per the vocabulary
-      guidance.
-
-  # ---------------------------------------------------------------------------
-  # LAUGH-POINT 4: Man puts head in the suit neck
-  # ---------------------------------------------------------------------------
-  - joke_id: s02e05_opening_lp4
-    text: >
-      You never see a guy take a suit off the rack, put his head in the
-      neck, and go, "What do you think about this suit? I think I'll get
-      it. Yeah, it looks fine."
-
-    setup_expectation: >
-      "You never see a man do that" sets up a gender contrast. The
-      audience expects a description of how men shop differently —
-      perhaps more decisively, less carefully, or with less ritual.
-
-    punchline_violation: >
-      Instead of describing actual male behavior, Jerry transplants the
-      women's hold-it-up method onto a man with a suit — and the image
-      is immediately absurd. A man jamming his head into the neck hole
-      of a suit on the rack and declaring "I'll get it" makes the
-      women's method look equally absurd by reflection. The humor is
-      in the grotesque visual of the male version AND in the retroactive
-      absurdification of the female version.
-
-    pivot_locus: logical
-
-    pivot_concept: clothes_shopping
-
-    pivot_mechanism:
-      operation: extension
-      # TEST: Accepted premise + absurd-but-logical conclusion.
-      #   Accepted premise: women's method of holding clothes up to
-      #   evaluate them is a valid shopping technique.
-      #   Absurd conclusion: applying the same technique to men's
-      #   clothing (putting your head in a suit neck while it's on the
-      #   rack) reveals the technique's absurdity. The premise is
-      #   accepted and its logic extended to a new garment type where
-      #   it visibly breaks down.
-      reading_switch: none
-      scale_shift: none
-
-    setup_frame: establishes_norm
-    # "You never see a man do that" establishes the norm that men
-    # don't use this technique, setting up the hypothetical.
-
-    primary_template: false_equivalence
-    # The rhetorical shape equates two unequal things: women's
-    # dress-holding method and a hypothetical male suit-trying method.
-    # The equivalence is the joke — applying the same logic to a
-    # different garment reveals the absurdity. The mismatch of the
-    # pairing (delicate dress evaluation vs. head-jamming into suit
-    # neck) is the dominant rhetorical shape.
-
-    difficulties: >
-      Operation choice between extension and mapping is the hardest
-      call here. Mapping would require the humor to come from an APT
-      parallel between two domains; here the humor comes from the
-      MISMATCH when you extend the technique to men's clothing —
-      the technique breaks down, which is the joke. Extension fits
-      better: accepted premise (hold-up method works), followed to
-      absurd destination (man with head in suit neck). Template choice
-      between false_equivalence and reductio: the joke equates two
-      situations (women holding dress vs. man putting head in suit) more
-      than it builds an argumentative chain, so false_equivalence is
-      the dominant shape.
-
-  # ---------------------------------------------------------------------------
-  # LAUGH-POINT 5: "Put some shoes by the bottom of the pants"
-  # ---------------------------------------------------------------------------
-  - joke_id: s02e05_opening_lp5
-    text: >
-      Put some shoes by the bottom of the pants, I wanna make sure.
-      Yeah, perfect.
-
-    setup_expectation: >
-      The man-with-head-in-suit image has landed. The audience expects
-      the bit to conclude or move on. If it continues, the expectation
-      is that the hypothetical stays at the same level of absurdity.
-
-    punchline_violation: >
-      The hypothetical escalates: not only has the man jammed his head
-      into the suit, he now wants shoes placed at the bottom of the
-      pants to complete the ensemble evaluation. The commitment to the
-      absurd method deepens — the man is assembling a full outfit
-      preview while his head is stuck in a suit on the rack. Each
-      additional detail makes the image more ridiculous.
-
-    pivot_locus: logical
-
-    pivot_concept: clothes_shopping
-
-    pivot_mechanism:
-      operation: extension
-      # TEST: Accepted premise + absurd-but-logical conclusion.
-      #   Accepted premise: this man is evaluating the suit by putting
-      #   his head in it (already established).
-      #   Absurd conclusion: the evaluation must be thorough, so shoes
-      #   are needed at the bottom. The premise of "preview the outfit
-      #   by inhabiting it on the rack" is followed further.
-      reading_switch: none
-      scale_shift: none
-
-    setup_frame: establishes_norm
-    # The prior laugh-point established the absurd norm of the
-    # head-in-suit method; this tag accepts that norm.
-
-    primary_template: escalation
-    # The rhetorical shape is escalation: the absurd image is
-    # incremented by adding another detail (shoes). Each beat commits
-    # harder to the same direction.
-
-    difficulties: >
-      This is a tag on LP4 — the question is whether it's a distinct
-      laugh-point or just a continuation. It gets its own laugh because
-      it adds a new absurd detail (shoes) that escalates beyond the
-      head-in-suit image. The escalation template is clean here.
-
-  # ---------------------------------------------------------------------------
-  # LAUGH-POINT 6: "What if I'm walking? Move the shoes"
-  # ---------------------------------------------------------------------------
-  - joke_id: s02e05_opening_lp6
-    text: >
-      And what if I'm walking? Move the shoes, move the shoes, move
-      the shoes, move the shoes.
-
-    setup_expectation: >
-      The shoes-at-the-bottom tag has already escalated the absurdity.
-      The audience expects either a conclusion or one more small
-      escalation within the same frame.
-
-    punchline_violation: >
-      The man — head still in the suit on the rack — now wants to
-      simulate WALKING by having someone move the shoes back and forth.
-      The static preview has become a dynamic simulation. The repetition
-      of "move the shoes" four times performs the walking rhythm itself,
-      the verbal cadence mimicking footsteps. The absurd commitment has
-      gone from "preview" to "full-body motion capture on a department
-      store rack."
-
-    pivot_locus: logical
-
-    pivot_concept: clothes_shopping
-
-    pivot_mechanism:
-      operation: extension
-      # TEST: Accepted premise + absurd-but-logical conclusion.
-      #   Accepted premise: the preview method requires completeness
-      #   (already extended to shoes).
-      #   Absurd conclusion: completeness requires simulating movement,
-      #   which requires someone to manually animate the shoes. The
-      #   logic of "the preview must be accurate" is followed one step
-      #   further past where LP5 stopped.
-      reading_switch: none
-      scale_shift: none
-
-    setup_frame: establishes_norm
-    # The escalating absurd norm is already established.
-
-    primary_template: escalation
-    # The rhetorical shape continues the escalation: static preview →
-    # shoes added → dynamic motion simulation. Each beat increments
-    # the commitment to the absurd method. The repetition of "move
-    # the shoes" is the escalation's rhythmic peak — the button that
-    # closes the bit.
-
-    difficulties: >
-      The main question is whether the repetition ("move the shoes"
-      x4) constitutes a separate mechanism or is purely a performance/
-      cadence feature. As a Pass 2 (silent decomposition), the
-      repetition is structural — it performs the walking rhythm on the
-      page. But the operation is still extension (following the
-      preview-logic further), and the template is still escalation
-      (incrementing the commitment). The repetition is a delivery
-      choice that amplifies the escalation; it doesn't change the
-      underlying operation. Performance-layer analysis of the
-      repetition belongs in Pass 3.
+    '
+  physical_performance: null
+v0_6_reviewed: true

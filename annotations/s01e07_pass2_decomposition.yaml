@@ -1,309 +1,174 @@
-# =============================================================================
-# PASS 2 — Silent Decomposition
-# Episode 7: "The Pony Remark"
-# Routine: s01e07_opening
-# =============================================================================
-# Laugh-points identified from the transcript.
-# Each entry below is one distinct joke/laugh-point.
-# =============================================================================
-
-schema_version: "1.0"
+schema_version: '0.6'
 routine_id: s01e07_opening
 pass: 2
-
 annotations:
+- joke_id: s01e07_b1_beat1_punchline
+  text: 'My parents live in Florida now. They moved there last year. They didn''t
+    want to move to Florida, but they''re in their sixties, and that''s the law.
 
-  # ---------------------------------------------------------------------------
-  # LAUGH-POINT 1: Florida retirement as law / leisure police
-  # ---------------------------------------------------------------------------
-  - joke_id: s01e07_b1_beat1_punchline
-    text: >
-      My parents live in Florida now. They moved there last year. They
-      didn't want to move to Florida, but they're in their sixties, and
-      that's the law.
+    '
+  setup_expectation: '"They didn''t want to move to Florida, but..." sets up a standard
+    explanatory frame. The audience expects a real-world reason — health, climate,
+    cost of living, proximity to family. The "but" signals a concession to some practical
+    force.
 
-    setup_expectation: >
-      "They didn't want to move to Florida, but..." sets up a standard
-      explanatory frame. The audience expects a real-world reason — health,
-      climate, cost of living, proximity to family. The "but" signals a
-      concession to some practical force.
+    '
+  punchline_violation: 'The reason is "that''s the law." The universal cultural observation
+    that older Americans retire to Florida is reframed as a literal legal mandate.
+    A voluntary demographic pattern is treated as compulsory statute. The comedy is
+    in replacing the soft social norm with the hard machinery of legal obligation.
 
-    punchline_violation: >
-      The reason is "that's the law." The universal cultural observation
-      that older Americans retire to Florida is reframed as a literal legal
-      mandate. A voluntary demographic pattern is treated as compulsory
-      statute. The comedy is in replacing the soft social norm with the
-      hard machinery of legal obligation.
+    '
+  pivot_locus: logical
+  pivot_concept: florida_retirement
+  pivot_mechanism:
+    operation: reinterpretation
+    reading_switch: none
+    scale_shift: none
+  setup_frame: establishes_convention
+  primary_template: mundane_as_monumental
+  difficulties: 'The main tension is between reinterpretation and transplant. A case
+    could be made for transplant: the legal/regulatory framework (source domain) is
+    being applied to a lifestyle choice (target domain), and the mismatch is the joke.
+    However, Jerry does not develop the legal framework as a foreign system being
+    imported — he simply relabels the pattern as "the law" in a single move. There
+    is no elaborated source-domain apparatus (no statute number, no penalty, no courtroom).
+    The joke operates by reframing one thing (the retirement pattern) under a different
+    concept (legal compulsion), not by importing and applying an entire foreign framework.
+    The next laugh-point IS that elaboration, making this one the reframe and the
+    next one the transplant.
 
-    pivot_locus: logical
+    '
+  physical_performance: null
+- joke_id: s01e07_b1_beat1_tag
+  text: 'You know how it works. They got the leisure police. They pull up in front
+    of the old people''s house with a golf cart, jump out, "Let''s go Pop, white belt,
+    white pants, white shoes, get in the back. Drop the snow shovel right there, drop
+    it!"
 
-    pivot_concept: florida_retirement
+    '
+  setup_expectation: '"That''s the law" has established the reframe (retirement as
+    legal mandate). The audience expects Jerry to move on or perhaps add a brief tag.
+    Instead he commits fully to the fictional world where retirement-to-Florida is
+    enforced.
 
-    pivot_mechanism:
-      operation: reinterpretation
-      # TEST (two distinct readings of the SAME material):
-      #   Reading 1 (setup invites): moving to Florida in your sixties is a
-      #     common lifestyle choice driven by personal preference, health, or
-      #     climate.
-      #   Reading 2 (punchline imposes): moving to Florida in your sixties is
-      #     a legal requirement — an actual statute you must comply with.
-      # The same phenomenon (retirees moving to Florida) is reread under
-      # a different frame. Nothing is negated; the pattern is reframed from
-      # voluntary to mandatory.
-      reading_switch: none
-      # "The law" is not an idiom being literalized. It is a literal concept
-      # (legal statute) being applied to a situation where it doesn't literally
-      # belong. The reframe is conceptual, not a linguistic reading-mode switch.
-      scale_shift: none
-      # The scope remains the same: one specific observation about retirement
-      # in Florida. No expansion to universal principle, no contraction from
-      # elevated to trivial.
+    '
+  punchline_violation: 'Jerry builds out an entire enforcement apparatus: "leisure
+    police" who arrive in golf carts, issue commands about retiree dress code (white
+    belt, white pants, white shoes), and force the surrender of northern-climate tools
+    ("drop the snow shovel"). The police-arrest framework — arriving at the house,
+    barking orders, demanding compliance — is systematically applied to the benign
+    act of retirement. Every detail is a law-enforcement trope transplanted into the
+    leisure domain: the vehicle (golf cart for squad car), the uniform mandate (retiree
+    whites for prison jumpsuits), the contraband seizure (snow shovel for weapons).
 
-    setup_frame: establishes_norm
-    # The setup establishes the norm: older Americans retire to Florida as a
-    # common social pattern.
+    '
+  pivot_locus: logical
+  pivot_concept: florida_retirement
+  pivot_mechanism:
+    operation: transplant
+    reading_switch: none
+    scale_shift: none
+  setup_frame: establishes_premise
+  primary_template: escalation
+  difficulties: 'The operation choice between transplant and extension is the main
+    tension. Extension would say: accepted premise (retirement is law), absurd-but-logical
+    conclusion (there must be enforcement). That reading has merit — this IS the logical
+    consequence of the "law" premise. However, the humor does not primarily come from
+    where the logic leads; it comes from the MISMATCH between the arrest framework
+    and the retirement context. The specific substitutions (golf cart for squad car,
+    white belt for handcuffs) are what generate the laughs, and those are transplant
+    artifacts — they depend on the imported framework not fitting. If the framework
+    genuinely fit the target domain, the joke would not work. That is the transplant
+    test. The template choice of escalation over mundane_as_monumental reflects that
+    the bit builds through accumulating details rather than sustaining a single frame
+    mismatch.
 
-    primary_template: mundane_as_monumental
-    # A mundane demographic trend (retirees moving south) is treated with the
-    # gravity of compulsory law. The mismatch between the lightweight social
-    # pattern and the heavy legal framing is the joke's shape.
+    '
+  physical_performance: null
+- joke_id: s01e07_b2_beat1_punchline
+  text: 'I am not much for the family gathering. You know, you sit there, and the
+    conversation''s so boring. It''s so dull. And you start to fantasize. You know,
+    you think, what if I just got up and jumped out that window? What would it be
+    like? Just crashed right through the glass..
 
-    difficulties: >
-      The main tension is between reinterpretation and transplant. A case
-      could be made for transplant: the legal/regulatory framework (source
-      domain) is being applied to a lifestyle choice (target domain), and
-      the mismatch is the joke. However, Jerry does not develop the legal
-      framework as a foreign system being imported — he simply relabels
-      the pattern as "the law" in a single move. There is no elaborated
-      source-domain apparatus (no statute number, no penalty, no courtroom).
-      The joke operates by reframing one thing (the retirement pattern) under
-      a different concept (legal compulsion), not by importing and applying
-      an entire foreign framework. The next laugh-point IS that elaboration,
-      making this one the reframe and the next one the transplant.
+    '
+  setup_expectation: '"You start to fantasize" at a boring family gathering sets up
+    a daydream frame. The audience expects a mild escapist fantasy — being somewhere
+    else, imagining a better scenario, mentally checking out. "Fantasize" conventionally
+    implies pleasant distraction.
 
-  # ---------------------------------------------------------------------------
-  # LAUGH-POINT 2: Leisure police arrest scenario
-  # ---------------------------------------------------------------------------
-  - joke_id: s01e07_b1_beat1_tag
-    text: >
-      You know how it works. They got the leisure police. They pull up in
-      front of the old people's house with a golf cart, jump out, "Let's
-      go Pop, white belt, white pants, white shoes, get in the back. Drop
-      the snow shovel right there, drop it!"
+    '
+  punchline_violation: 'The fantasy is violent self-defenestration. Rather than imagining
+    being at a bar or on a beach, the boredom is so extreme that the escape fantasy
+    involves bodily harm — crashing through glass. The scale of the response (physical
+    destruction, potential injury) is grotesquely disproportionate to the stimulus
+    (dull conversation). The violation is in the extremity of the boredom response.
 
-    setup_expectation: >
-      "That's the law" has established the reframe (retirement as legal
-      mandate). The audience expects Jerry to move on or perhaps add a
-      brief tag. Instead he commits fully to the fictional world where
-      retirement-to-Florida is enforced.
+    '
+  pivot_locus: both
+  pivot_concept: family_gathering_boredom
+  pivot_mechanism:
+    operation: extension
+    reading_switch: none
+    scale_shift: expansion
+  setup_frame: establishes_premise
+  primary_template: escalation
+  difficulties: 'The operation choice between extension and negation is the key question.
+    Negation would say: setup implies fantasies are pleasant, punchline asserts a
+    violent fantasy. But the humor is not in contradicting the idea of fantasy — it
+    is in FOLLOWING the boredom premise to its extreme conclusion. The boredom is
+    accepted; the escape impulse is accepted; the joke pushes them further than expected.
+    That is extension''s signature. The pivot_locus is "both" because the joke works
+    logically (disproportionate response) AND affectively (the audience genuinely
+    recognizes the desperation of family-gathering boredom). Scale_shift is expansion
+    because the jump from "bored" to "defenestration" is a scope increase that is
+    load-bearing.
 
-    punchline_violation: >
-      Jerry builds out an entire enforcement apparatus: "leisure police"
-      who arrive in golf carts, issue commands about retiree dress code
-      (white belt, white pants, white shoes), and force the surrender of
-      northern-climate tools ("drop the snow shovel"). The police-arrest
-      framework — arriving at the house, barking orders, demanding
-      compliance — is systematically applied to the benign act of
-      retirement. Every detail is a law-enforcement trope transplanted
-      into the leisure domain: the vehicle (golf cart for squad car),
-      the uniform mandate (retiree whites for prison jumpsuits), the
-      contraband seizure (snow shovel for weapons).
+    '
+  physical_performance: null
+- joke_id: s01e07_b2_beat1_tag
+  text: 'Come back in, there''s broken glass, everybody''s all upset. "No, I''m alright.
+    I was just a little bored, there. No, I''m fine. I came back. I wanted to hear
+    a little about that Hummel collection, Aunt Rose. Let''s pick it up right there."
 
-    pivot_locus: logical
+    '
+  setup_expectation: 'Having just crashed through a window — an act of dramatic, destructive
+    escape — the audience expects consequences: injury, alarm, a trip to the hospital,
+    or at minimum an acknowledgment that something extraordinary happened. The scenario
+    has escalated to physical destruction; the expected trajectory is further escalation
+    or resolution of the crisis.
 
-    pivot_concept: florida_retirement
+    '
+  punchline_violation: 'Jerry casually returns, dismisses the alarm ("I was just a
+    little bored"), and asks to resume the exact conversation he violently fled. The
+    crisis is deflated to nothing. The phrase "a little bored" is bathetic understatement
+    for an act that involved crashing through glass. And the request to hear about
+    Aunt Rose''s Hummel collection — the most stereotypically tedious family-gathering
+    topic imaginable — negates the entire premise of escape. He didn''t escape; he
+    came back for more of the very thing that drove him out. The Hummel collection
+    is the perfect specificity choice: it concretizes "boring family conversation"
+    in the most recognizable possible way.
 
-    pivot_mechanism:
-      operation: transplant
-      # TEST: Name target domain, source domain, imported framework.
-      #   Target domain: elderly retirement / moving to Florida.
-      #   Source domain: law enforcement arrest procedure.
-      #   Imported framework: police arrival at a residence, uniformed officers,
-      #     barked orders, mandatory dress code, confiscation of contraband.
-      # The humor is in the MISMATCH: arrest procedure does not belong in
-      # retirement. The golf cart replacing the squad car, the white belt
-      # replacing handcuffs, the snow shovel replacing a weapon — each
-      # substitution highlights the absurdity of the framework in this context.
-      reading_switch: none
-      scale_shift: none
+    '
+  pivot_locus: both
+  pivot_concept: family_gathering_boredom
+  pivot_mechanism:
+    operation: negation
+    reading_switch: none
+    scale_shift: contraction
+  setup_frame: establishes_anomaly
+  primary_template: mundane_as_monumental
+  difficulties: 'The template choice is the hardest call here. A case exists for reductio:
+    the logical chain would be "if you''re bored enough to jump through a window,
+    but the injury is minor, you''d have to come back and sit through it anyway —
+    making the escape pointless." But the joke does not present an argumentative chain;
+    it presents a scenario and a reaction. Mundane_as_monumental better captures the
+    rhetorical shape: the casual treatment of the extraordinary situation. The operation
+    choice between negation and reinterpretation is cleaner: the escape IS negated
+    (he comes back), not merely reframed. The scale_shift contraction captures the
+    bathetic understatement that is independently load-bearing.
 
-    setup_frame: establishes_norm
-    # The preceding joke established the norm (Florida retirement as law).
-    # This tag accepts that norm and builds the enforcement apparatus.
-
-    primary_template: escalation
-    # The bit builds through accumulating details: golf cart, then the
-    # commands, then white belt, then white pants, then white shoes, then
-    # get in the back, then drop the snow shovel, then "drop it!" Each
-    # detail commits harder to the transplanted framework. The escalation
-    # of specificity is load-bearing — each new detail is funnier than
-    # the last because it deepens the commitment.
-
-    difficulties: >
-      The operation choice between transplant and extension is the main
-      tension. Extension would say: accepted premise (retirement is law),
-      absurd-but-logical conclusion (there must be enforcement). That
-      reading has merit — this IS the logical consequence of the "law"
-      premise. However, the humor does not primarily come from where the
-      logic leads; it comes from the MISMATCH between the arrest framework
-      and the retirement context. The specific substitutions (golf cart for
-      squad car, white belt for handcuffs) are what generate the laughs,
-      and those are transplant artifacts — they depend on the imported
-      framework not fitting. If the framework genuinely fit the target
-      domain, the joke would not work. That is the transplant test. The
-      template choice of escalation over mundane_as_monumental reflects
-      that the bit builds through accumulating details rather than
-      sustaining a single frame mismatch.
-
-  # ---------------------------------------------------------------------------
-  # LAUGH-POINT 3: Fantasizing about jumping out the window
-  # ---------------------------------------------------------------------------
-  - joke_id: s01e07_b2_beat1_punchline
-    text: >
-      I am not much for the family gathering. You know, you sit there, and
-      the conversation's so boring. It's so dull. And you start to
-      fantasize. You know, you think, what if I just got up and jumped out
-      that window? What would it be like? Just crashed right through the
-      glass..
-
-    setup_expectation: >
-      "You start to fantasize" at a boring family gathering sets up a
-      daydream frame. The audience expects a mild escapist fantasy —
-      being somewhere else, imagining a better scenario, mentally checking
-      out. "Fantasize" conventionally implies pleasant distraction.
-
-    punchline_violation: >
-      The fantasy is violent self-defenestration. Rather than imagining
-      being at a bar or on a beach, the boredom is so extreme that the
-      escape fantasy involves bodily harm — crashing through glass. The
-      scale of the response (physical destruction, potential injury) is
-      grotesquely disproportionate to the stimulus (dull conversation).
-      The violation is in the extremity of the boredom response.
-
-    pivot_locus: both
-    # Logical: the disproportionate response violates expectations about
-    # what "fantasize" means. Affective: there is genuine recognition of
-    # the desperation of family-gathering boredom — the audience FEELS
-    # the impulse even as they recognize its absurdity.
-
-    pivot_concept: family_gathering_boredom
-
-    pivot_mechanism:
-      operation: extension
-      # TEST: Accepted premise and absurd-but-logical conclusion.
-      #   Accepted premise: family gatherings are boring and you want to
-      #     escape.
-      #   Absurd conclusion: the boredom is so intense that the escape
-      #     fantasy escalates to physically crashing through a window.
-      # The premise (boredom, desire to escape) is never challenged. It is
-      # followed to a logically consistent but absurdly extreme destination:
-      # if you want to escape badly enough, the window is right there.
-      reading_switch: none
-      scale_shift: expansion
-      # The mundane feeling of being bored at a family gathering is expanded
-      # to a scenario involving physical destruction and bodily risk. The
-      # expansion from "I'm bored" to "I'll crash through a window" is
-      # load-bearing — the humor depends on the disproportionate scale.
-
-    setup_frame: establishes_norm
-    # The setup establishes the universally recognized norm of being bored
-    # at family gatherings.
-
-    primary_template: escalation
-    # The bit builds: "boring" → "so boring" → "so dull" → "fantasize" →
-    # "jumped out the window" → "crashed through the glass." Each beat
-    # increments the intensity of the boredom and the extremity of the
-    # response. The escalation structure is load-bearing.
-
-    difficulties: >
-      The operation choice between extension and negation is the key
-      question. Negation would say: setup implies fantasies are pleasant,
-      punchline asserts a violent fantasy. But the humor is not in
-      contradicting the idea of fantasy — it is in FOLLOWING the boredom
-      premise to its extreme conclusion. The boredom is accepted; the
-      escape impulse is accepted; the joke pushes them further than
-      expected. That is extension's signature. The pivot_locus is "both"
-      because the joke works logically (disproportionate response) AND
-      affectively (the audience genuinely recognizes the desperation of
-      family-gathering boredom). Scale_shift is expansion because the
-      jump from "bored" to "defenestration" is a scope increase that is
-      load-bearing.
-
-  # ---------------------------------------------------------------------------
-  # LAUGH-POINT 4: Coming back to hear about the Hummel collection
-  # ---------------------------------------------------------------------------
-  - joke_id: s01e07_b2_beat1_tag
-    text: >
-      Come back in, there's broken glass, everybody's all upset. "No, I'm
-      alright. I was just a little bored, there. No, I'm fine. I came
-      back. I wanted to hear a little about that Hummel collection, Aunt
-      Rose. Let's pick it up right there."
-
-    setup_expectation: >
-      Having just crashed through a window — an act of dramatic,
-      destructive escape — the audience expects consequences: injury,
-      alarm, a trip to the hospital, or at minimum an acknowledgment that
-      something extraordinary happened. The scenario has escalated to
-      physical destruction; the expected trajectory is further escalation
-      or resolution of the crisis.
-
-    punchline_violation: >
-      Jerry casually returns, dismisses the alarm ("I was just a little
-      bored"), and asks to resume the exact conversation he violently
-      fled. The crisis is deflated to nothing. The phrase "a little bored"
-      is bathetic understatement for an act that involved crashing through
-      glass. And the request to hear about Aunt Rose's Hummel collection
-      — the most stereotypically tedious family-gathering topic
-      imaginable — negates the entire premise of escape. He didn't escape;
-      he came back for more of the very thing that drove him out. The
-      Hummel collection is the perfect specificity choice: it concretizes
-      "boring family conversation" in the most recognizable possible way.
-
-    pivot_locus: both
-    # Logical: returning to the boring conversation negates the escape.
-    # Affective: the Hummel collection detail triggers recognition laughter
-    # — the audience knows this exact kind of conversation.
-
-    pivot_concept: family_gathering_boredom
-
-    pivot_mechanism:
-      operation: negation
-      # TEST: "Setup implies X. Punchline asserts not-X."
-      #   Setup implies: crashing through the window is an escape from
-      #     unbearable boredom; having gone through the glass, he is free.
-      #   Punchline asserts: he comes back, voluntarily re-entering the
-      #     very situation he destroyed property to escape.
-      # The escape is negated. The dramatic act of defenestration is
-      # rendered pointless — he returns and asks to resume.
-      reading_switch: none
-      scale_shift: contraction
-      # The dramatic window-crash scenario is contracted to "I was just a
-      # little bored." The violent escape is deflated to a minor fidget.
-      # The contraction is load-bearing: the understatement of "a little
-      # bored" against the physical destruction is where much of the humor
-      # lives.
-
-    setup_frame: establishes_anomaly
-    # The preceding joke established an anomaly (crashing through a window
-    # at a family gathering). This tag responds to that anomaly.
-
-    primary_template: mundane_as_monumental
-    # The rhetorical shape inverts the previous joke's escalation: the
-    # monumental act (defenestration) is treated as mundane ("I was just a
-    # little bored"), and the mundane topic (Hummel collection) is treated
-    # as the reason to return. The frame mismatch — casual tone against
-    # extraordinary situation — is the dominant shape. The Hummel
-    # collection detail functions as the perfect mundane anchor.
-
-    difficulties: >
-      The template choice is the hardest call here. A case exists for
-      reductio: the logical chain would be "if you're bored enough to
-      jump through a window, but the injury is minor, you'd have to come
-      back and sit through it anyway — making the escape pointless." But
-      the joke does not present an argumentative chain; it presents a
-      scenario and a reaction. Mundane_as_monumental better captures the
-      rhetorical shape: the casual treatment of the extraordinary situation.
-      The operation choice between negation and reinterpretation is cleaner:
-      the escape IS negated (he comes back), not merely reframed. The
-      scale_shift contraction captures the bathetic understatement that
-      is independently load-bearing.
+    '
+  physical_performance: null
+v0_6_reviewed: true

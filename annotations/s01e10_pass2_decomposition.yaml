@@ -1,546 +1,307 @@
-# =============================================================================
-# PASS 2 — Silent Decomposition
-# Episode 10: "The Apartment"
-# Routine: s01e10_opening
-# =============================================================================
-# Laugh-points identified from the transcript.
-# Each entry below is one distinct joke/laugh-point.
-# =============================================================================
-
-schema_version: "1.0"
+schema_version: '0.6'
 routine_id: s01e10_opening
 pass: 2
-
 annotations:
-
-  # ---------------------------------------------------------------------------
-  # LAUGH-POINT 1: "it's a little bit smaller now"
-  # The apartment shrinks with each coat of paint
-  # ---------------------------------------------------------------------------
-  - joke_id: s01e10_opening_lp1
-    text: >
-      I've been living in this apartment for years and years, and every time
-      I paint it, it kinda gets me down. I look around, and I think, well,
-      it's a little bit smaller now.
-
-    setup_expectation: >
-      "Every time I paint it, it kinda gets me down" establishes that
-      repainting is a source of dissatisfaction. The audience expects the
-      reason to be about effort, mess, color choice, or the futility of
-      home maintenance -- normal complaints about painting.
-
-    punchline_violation: >
-      The reason for the dissatisfaction is that the apartment is physically
-      smaller due to the accumulated thickness of paint layers. This is a
-      technically true but absurdly negligible observation treated as a
-      real source of distress. The premise is accepted (paint has thickness)
-      and followed to an absurd conclusion (the apartment is measurably
-      shrinking).
-
-    pivot_locus: logical
-
-    pivot_concept: apartment_shrinkage
-
-    pivot_mechanism:
-      operation: extension
-      # TEST: Accepted premise + absurd-but-logical conclusion.
-      #   Accepted premise: paint has physical thickness; each coat adds
-      #     a layer to the walls.
-      #   Absurd conclusion: therefore the apartment is getting smaller
-      #     with each repainting, and this is a source of genuine distress.
-      #   The premise (paint has thickness) is never questioned. The
-      #   humor is in following this real physical fact to a destination
-      #   no reasonable person would reach -- treating sub-millimeter
-      #   accumulation as meaningful spatial loss.
-      reading_switch: none
-      scale_shift: expansion
-      # A negligible physical fact (paint thickness) is expanded to a
-      # life-scale existential concern (my apartment is closing in on me).
-      # The expansion from microscopic to experiential is load-bearing.
-
-    setup_frame: establishes_norm
-    # The norm of repainting one's apartment and being dissatisfied with
-    # the result is the setup's established expectation.
-
-    primary_template: mundane_as_monumental
-    # The rhetorical shape is: a trivially small physical fact (paint
-    # thickness) is treated with the emotional gravity of genuine spatial
-    # loss. The frame of distress ("gets me down," "I look around and
-    # think") against the negligibility of the phenomenon is the joke's
-    # dominant shape.
-
-    difficulties: >
-      Extension vs. articulation is the main tension. This is not
-      articulation because no one implicitly knows or has felt that their
-      apartment shrinks from repainting -- the observation is novel, not a
-      verbalization of shared experience. It is extension: the premise
-      (paint has thickness) is real and accepted, and the conclusion
-      (the apartment is shrinking) is logically valid but absurd. The
-      template choice between mundane_as_monumental and reductio is close.
-      I chose mundane_as_monumental because the joke does not build an
-      argumentative chain -- it makes a single leap from accepted fact to
-      disproportionate emotional response. Reductio would require more
-      logical steps.
-
-  # ---------------------------------------------------------------------------
-  # LAUGH-POINT 2: "It keeps coming in and coming in"
-  # Escalation of the shrinking premise
-  # ---------------------------------------------------------------------------
-  - joke_id: s01e10_opening_lp2
-    text: >
-      You know, I realize it's just the thickness of the paint, but I'm
-      aware of it. It keeps coming in and coming in. Every time I paint it,
-      it's closer and closer.
-
-    setup_expectation: >
-      The acknowledgment "I realize it's just the thickness of the paint"
-      signals rational self-awareness. The audience expects the bit to
-      deflate -- Jerry recognizes the absurdity of his own complaint, so
-      surely the joke is over.
-
-    punchline_violation: >
-      Instead of deflating, Jerry doubles down. The rational
-      acknowledgment is immediately overridden by escalating anxiety:
-      "it keeps coming in and coming in," "closer and closer." The
-      self-awareness changes nothing. The walls continue their advance
-      despite his knowing it's irrational.
-
-    pivot_locus: logical
-
-    pivot_concept: apartment_shrinkage
-
-    pivot_mechanism:
-      operation: negation
-      # TEST: "Setup implies X. Punchline asserts not-X."
-      #   Setup implies: acknowledging the irrationality of the concern
-      #     will resolve or dismiss it.
-      #   Punchline asserts: the acknowledgment is completely ineffective;
-      #     the anxiety persists and intensifies.
-      #   The implicit claim "self-awareness will defuse the neurosis"
-      #   is negated.
-      reading_switch: none
-      scale_shift: none
-
-    setup_frame: establishes_norm
-    # The norm of rational self-correction ("I know it's irrational,
-    # therefore I'll stop worrying") is established by the concession.
-
-    primary_template: escalation
-    # The rhetorical shape is escalation: "coming in and coming in,"
-    # "closer and closer" -- each phrase increments the intensity of the
-    # claustrophobic anxiety. The building repetition IS the structural
-    # move.
-
-    difficulties: >
-      Whether this is a separate laugh-point or a continuation of LP1 is
-      debatable. I separated it because the concession-then-doubling-down
-      is a distinct comedic move from the initial observation. The
-      operation choice between negation and extension is the key call.
-      I chose negation because the joke's pivot is specifically the failure
-      of self-awareness to resolve the concern -- the implicit promise of
-      "I know it's just paint" is negated by the continued anxiety. Extension
-      would require the premise to be followed further; here the premise
-      is the same but the expectation of rational resolution is what gets
-      contradicted.
-
-  # ---------------------------------------------------------------------------
-  # LAUGH-POINT 3: "a lump with two slots in it"
-  # Wall outlets buried under paint
-  # ---------------------------------------------------------------------------
-  - joke_id: s01e10_opening_lp3
-    text: >
-      I don't even know where the wall outlets are anymore. I just look
-      for like a lump with two slots in it.
-
-    setup_expectation: >
-      The shrinking-apartment premise has been established. "I don't even
-      know where the wall outlets are" extends the conceit further -- the
-      paint accumulation now has a practical consequence. The audience
-      expects continued hyperbole about the apartment's deterioration.
-
-    punchline_violation: >
-      Instead of further hyperbole, Jerry provides a precise, concrete
-      visual: "a lump with two slots in it." The outlets haven't
-      disappeared; they've been entombed in paint to the point where their
-      physical form is only discernible as a topographic feature. The
-      specificity of the image -- searching by touch for a bump in the
-      wall surface -- commits fully to the absurd premise with
-      observational precision.
-
-    pivot_locus: logical
-
-    pivot_concept: apartment_shrinkage
-
-    pivot_mechanism:
-      operation: extension
-      # TEST: Accepted premise + absurd-but-logical conclusion.
-      #   Accepted premise: the apartment has been painted so many times
-      #     that surfaces are noticeably thickened.
-      #   Absurd conclusion: wall outlets are now buried under paint layers,
-      #     identifiable only as lumps with slots.
-      #   The premise is never challenged. The humor is in the concrete
-      #   consequence -- a logical but absurd destination for the paint-
-      #   accumulation premise.
-      reading_switch: none
-      scale_shift: none
-
-    setup_frame: establishes_anomaly
-    # The setup establishes the anomaly of not knowing where outlets are --
-    # an unusual situation that signals more absurdity is coming.
-
-    primary_template: escalation
-    # This is a further beat in the escalating commitment to the paint-
-    # thickness premise. Each laugh-point in the routine commits harder
-    # to the conceit. The specificity of "lump with two slots" is what
-    # makes this beat land harder than the previous one.
-
-    difficulties: >
-      The operation choice between extension and articulation is
-      straightforward here -- this is clearly extension, as no one has
-      the shared experience of outlets buried under paint. The template
-      choice is between escalation (this is a further beat in a building
-      sequence) and mundane_as_monumental (a wall outlet described with
-      archaeological precision). I chose escalation because the joke's
-      structural role within the routine -- incrementing the absurdity --
-      is its dominant shape. The specificity serves the escalation.
-
-  # ---------------------------------------------------------------------------
-  # LAUGH-POINT 4: "a pig is trying to push his way through"
-  # The outlet-as-pig image
-  # ---------------------------------------------------------------------------
-  - joke_id: s01e10_opening_lp4
-    text: >
-      Kinda looks like a pig is trying to push his way through from the
-      other side. That's where I plug in.
-
-    setup_expectation: >
-      The "lump with two slots" image has just landed. The audience has
-      a visual of a paint-entombed outlet. They expect either another
-      escalation of the paint premise or a transition to the next topic.
-
-    punchline_violation: >
-      Jerry reinterprets the visual he just created. The two slots and
-      the lump are re-seen as a pig's snout pressing through the wall
-      from the other side. The same physical description ("lump with two
-      slots") now supports two readings: an electrical outlet under paint,
-      and an animal's face pushing through a surface. The absurd image of
-      a pig emerging from the wall is then immediately domesticated with
-      "that's where I plug in" -- grounding the surreal image back to
-      mundane function.
-
-    pivot_locus: both
-    # Logical (the reinterpretation of the visual) and affective (the
-    # absurd, slightly unsettling image of a pig pushing through a wall).
-
-    pivot_concept: apartment_shrinkage
-
-    pivot_mechanism:
-      operation: mapping
-      # TEST: Name source, target, shared structure. Humor in APTNESS.
-      #   Source: a pig's snout pressing through a surface.
-      #   Target: a paint-covered electrical outlet.
-      #   Shared structure: a rounded protrusion with two parallel
-      #     openings (nostrils / outlet slots).
-      #   The humor is in the aptness -- the visual parallel is
-      #   genuinely striking once pointed out. The mapping illuminates
-      #   a real visual similarity; the pig framework is not being
-      #   misapplied. Would the joke work if the comparison genuinely
-      #   fit? Yes -- the parallel IS genuine. This is mapping, not
-      #   transplant.
-      reading_switch: none
-      # No figurative/literal shift. Both the outlet and the pig are
-      # literal images being compared.
-      scale_shift: none
-
-    setup_frame: establishes_anomaly
-    # The "lump with two slots" establishes a visual anomaly that the
-    # pig mapping then resolves into a recognizable (if absurd) image.
-
-    primary_template: anthropomorphization
-    # The dominant rhetorical shape is treating an inanimate object
-    # (outlet) as if it has animal agency -- a pig pushing through from
-    # the other side implies intentionality and effort. The image gives
-    # the outlet a living quality.
-
-    difficulties: >
-      Mapping vs. reinterpretation is the hardest call here. I chose
-      mapping because the joke introduces a second domain (animal imagery)
-      and the humor is in the aptness of the visual parallel between
-      pig snout and outlet. Reinterpretation would require two readings
-      of the SAME material; here there are two distinct things (outlet
-      and pig) being connected via shared visual structure. The template
-      choice between anthropomorphization and escalation is also close.
-      I chose anthropomorphization because the pig image is the joke's
-      dominant move -- giving animal agency to an inanimate object. The
-      escalation of the routine continues, but this beat's own template
-      is the anthropomorphic image.
-
-  # ---------------------------------------------------------------------------
-  # LAUGH-POINT 5: "Big chair, nice screen, remote control"
-  # The Enterprise bridge as ideal living room
-  # ---------------------------------------------------------------------------
-  - joke_id: s01e10_opening_lp5
-    text: >
-      My idea of the perfect living room would be the bridge on the
-      Starship Enterprise. You know what I mean? Big chair, nice screen,
-      remote control.
-
-    setup_expectation: >
-      "My idea of the perfect living room would be the bridge on the
-      Starship Enterprise" sets up a sci-fi fantasy. The audience expects
-      Jerry to elaborate on the futuristic, technologically impressive
-      features of the Enterprise bridge -- warp drive, viewscreen showing
-      alien worlds, commanding a starship.
-
-    punchline_violation: >
-      The features Jerry identifies are: big chair, nice screen, remote
-      control. These are the features of a suburban living room, not a
-      starship command center. The Enterprise bridge is reframed as
-      appealing not for its sci-fi grandeur but for its domestic comforts.
-      The same set of physical objects supports two readings: futuristic
-      command station and lazy man's couch setup.
-
-    pivot_locus: logical
-
-    pivot_concept: enterprise_as_living_room
-
-    pivot_mechanism:
-      operation: reinterpretation
-      # TEST: Two distinct readings of the SAME material.
-      #   Reading 1 (setup invites): the Enterprise bridge is a
-      #     technologically advanced command center -- the appeal is
-      #     its sci-fi capabilities.
-      #   Reading 2 (punchline imposes): the Enterprise bridge is a
-      #     living room with a big chair, a nice screen, and a remote
-      #     control -- the appeal is domestic comfort.
-      #   Same physical space, two frames. The punchline forces the
-      #   audience to re-see the bridge as a living room. Nothing
-      #   negated; the bridge is reread.
-      reading_switch: none
-      # No figurative/literal shift. Both readings are literal
-      # descriptions of the same physical objects. The reframe is
-      # conceptual (command center to living room), not a change
-      # in linguistic interpretation mode.
-      scale_shift: contraction
-      # The Enterprise bridge (a symbol of exploration, command,
-      # futuristic aspiration) is contracted to a living room (a
-      # symbol of domestic comfort and passivity). The contraction
-      # from epic to mundane is load-bearing.
-
-    setup_frame: establishes_norm
-    # The norm of the Enterprise bridge as an impressive, aspirational
-    # space is the established expectation.
-
-    primary_template: mundane_as_monumental
-    # Inverted: the monumental (starship bridge) is revealed as mundane
-    # (living room). The rhetorical grammar of aspiration ("my idea of
-    # the perfect living room") is applied to what turns out to be an
-    # ordinary domestic desire. The elevated frame of Star Trek is
-    # sustained while the content is deflated to TV-watching.
-
-    difficulties: >
-      The scale_shift direction is the main question. The joke starts with
-      the monumental (Enterprise) and deflates it to the mundane (living
-      room), which is contraction. But one could argue the joke elevates
-      a living room to Enterprise-level status (expansion). I chose
-      contraction because the punchline's direction is downward: the
-      bridge's features are reduced to chair/screen/remote. The audience's
-      trajectory is from "wow, the Enterprise" to "oh, it's just a
-      living room." The template could also be false_equivalence (equating
-      bridge and living room), but mundane_as_monumental better captures
-      the joke's shape -- the monumental frame is applied to reveal the
-      mundane content underneath.
-
-  # ---------------------------------------------------------------------------
-  # LAUGH-POINT 6: "Just hurling through space in your living room, watching TV"
-  # Star Trek as ultimate male fantasy
-  # ---------------------------------------------------------------------------
-  - joke_id: s01e10_opening_lp6
-    text: >
-      That's why Star Trek really was the ultimate male fantasy. Just
-      hurling through space in your living room, watching TV.
-
-    setup_expectation: >
-      "The ultimate male fantasy" invokes the register of power fantasies,
-      sexual conquest, or adventure. Applied to Star Trek, the audience
-      expects the fantasy to be about commanding a starship, exploring
-      the galaxy, or being Captain Kirk.
-
-    punchline_violation: >
-      The male fantasy is: watching TV in your living room. The entire
-      apparatus of Star Trek -- warp drive, alien encounters, galactic
-      exploration -- is reduced to the experience of sitting and watching
-      a screen. "Hurling through space" is grammatically parallel to "in
-      your living room, watching TV," collapsing the cosmic into the
-      domestic within a single sentence.
-
-    pivot_locus: logical
-
-    pivot_concept: enterprise_as_living_room
-
-    pivot_mechanism:
-      operation: reinterpretation
-      # TEST: Two distinct readings of the SAME material.
-      #   Reading 1 (setup invites): Star Trek is a male fantasy about
-      #     space exploration, adventure, command.
-      #   Reading 2 (punchline imposes): Star Trek is a male fantasy
-      #     about watching TV from your couch without interruption.
-      #   Same show, two frames. The punchline reframes the fantasy from
-      #   epic to domestic.
-      reading_switch: none
-      scale_shift: contraction
-      # "The ultimate male fantasy" (elevated register) contracts to
-      # "watching TV" (maximally mundane activity). The contraction is
-      # load-bearing -- without the drop from "ultimate fantasy" to
-      # "watching TV," the joke doesn't land.
-
-    setup_frame: establishes_norm
-    # The norm of "male fantasy" as something exciting, aspirational,
-    # or transgressive.
-
-    primary_template: mundane_as_monumental
-    # The grammar of "the ultimate male fantasy" applies monumental
-    # framing to the mundane content of watching TV. The elevated
-    # register against the trivial content is the joke's shape.
-
-    difficulties: >
-      This laugh-point is closely connected to LP5 and could be treated
-      as a tag rather than a separate joke. I separated it because it
-      introduces a new framing concept ("ultimate male fantasy") that
-      goes beyond the bridge-as-living-room observation. The operation is
-      clearly reinterpretation: Star Trek is reread from sci-fi epic to
-      domestic comfort. The template choice is clean -- mundane_as_
-      monumental, with the "ultimate male fantasy" language doing the
-      elevated framing work.
-
-  # ---------------------------------------------------------------------------
-  # LAUGH-POINT 7: "Kirk was the only one that had a big screen"
-  # Aliens visit because Kirk has the TV
-  # ---------------------------------------------------------------------------
-  - joke_id: s01e10_opening_lp7
-    text: >
-      That's why all the aliens were always dropping in, because Kirk was
-      the only one that had a big screen.
-
-    setup_expectation: >
-      Within the Star Trek universe, alien encounters are understood as
-      diplomatic incidents, hostile incursions, or first-contact events --
-      high-stakes narrative events driven by interstellar politics or
-      exploration.
-
-    punchline_violation: >
-      The aliens weren't invading or making contact; they were coming over
-      to watch Kirk's TV. "Dropping in" reframes alien encounters as
-      social visits from neighbors. The Enterprise's viewscreen -- a
-      strategic military asset -- is reread as the neighborhood's only
-      big-screen TV, and alien visitations become the sci-fi equivalent
-      of "can we come over and watch the game?"
-
-    pivot_locus: logical
-
-    pivot_concept: enterprise_as_living_room
-
-    pivot_mechanism:
-      operation: reinterpretation
-      # TEST: Two distinct readings of the SAME material.
-      #   Reading 1 (Star Trek frame): aliens visit the Enterprise for
-      #     diplomatic, hostile, or exploratory reasons.
-      #   Reading 2 (living room frame): aliens visit Kirk's place
-      #     because he has the big TV and they want to watch.
-      #   Same events (alien visitations), two frames. The punchline
-      #   imposes the domestic-social frame on interstellar encounters.
-      reading_switch: none
-      scale_shift: contraction
-      # Interstellar alien encounters (cosmic scale) are contracted to
-      # neighbors coming over to watch TV (domestic scale).
-
-    setup_frame: establishes_norm
-    # The norm of Star Trek alien encounters as dramatic interstellar
-    # events.
-
-    primary_template: mundane_as_monumental
-    # The rhetorical shape sustains the Enterprise-as-living-room
-    # frame: the monumental (alien encounters) is revealed as the
-    # mundane (friends coming to watch TV). The living-room framework
-    # is applied to alien visitations with complete commitment.
-
-    difficulties: >
-      This is the most structurally clean laugh-point in the bit.
-      Reinterpretation is unambiguous: the same Star Trek events are
-      reread under the domestic frame. The only question is whether this
-      is extension rather than reinterpretation -- does it follow the
-      living-room premise to a further conclusion? I chose reinterpretation
-      because the humor is in the FRAME SHIFT applied to a new element
-      (alien encounters), not in following the same premise further. Each
-      element of Star Trek is being independently reframed, not derived
-      from a single chain of logic.
-
-  # ---------------------------------------------------------------------------
-  # LAUGH-POINT 8: "Klingon boxing.. gotta be there"
-  # Friday night at Kirk's place
-  # ---------------------------------------------------------------------------
-  - joke_id: s01e10_opening_lp8
-    text: >
-      They came over Friday night, Klingon boxing.. gotta be there.
-
-    setup_expectation: >
-      The aliens-dropping-in-to-watch-TV frame has been established. The
-      audience expects either another application of this frame or a
-      transition out of the bit.
-
-    punchline_violation: >
-      Jerry provides the specific social occasion: Friday night, Klingon
-      boxing. The specificity completes the domestic reframe with a
-      concrete scenario that mirrors a recognizable male social ritual
-      (friends coming over on Friday to watch boxing/football on the big
-      screen). "Gotta be there" is the exact language of real social
-      obligation around sports events. The specificity of "Klingon boxing"
-      -- not just any show, but the sci-fi equivalent of a pay-per-view
-      fight -- commits fully to the mapping between Star Trek aliens and
-      suburban sports buddies.
-
-    pivot_locus: logical
-
-    pivot_concept: enterprise_as_living_room
-
-    pivot_mechanism:
-      operation: articulation
-      # TEST: If audience KNEW the punchline, would it still be funny?
-      #   Yes -- the humor is in the precise rendering of "Friday night,
-      #   Klingon boxing, gotta be there." The living-room-reframe has
-      #   already been established; the audience is now IN the frame.
-      #   The laugh is recognition: "yes, that's exactly what it would
-      #   be -- Friday night boxing at Kirk's." No new frame shift; the
-      #   humor is in the specific articulation of what the established
-      #   frame looks like when fully inhabited.
-      reading_switch: none
-      scale_shift: none
-
-    setup_frame: establishes_norm
-    # The domestic-social frame (friends watching TV on Friday) is the
-    # already-established norm within the bit's own logic.
-
-    primary_template: mundane_as_monumental
-    # The rhetorical shape sustains the mundane-as-monumental frame:
-    # the monumental (Klingon warfare) is rendered as the mundane
-    # (Friday night boxing on TV). "Gotta be there" applies the
-    # grammar of must-see social events to an imagined alien
-    # fighting sport.
-
-    difficulties: >
-      The operation choice between articulation and extension is the key
-      call. I chose articulation because the frame is already established
-      (aliens come over to watch Kirk's TV) and the punchline does not
-      push it to a new logical destination -- it INHABITS the frame with
-      specific detail. The audience is already in on the joke; "Klingon
-      boxing, Friday night" is the precise rendering of what that world
-      looks like. The articulation test passes: if you told the audience
-      "he's going to describe a specific night at Kirk's place," the
-      joke would still be funny because the humor is in the specific
-      choice (Klingon boxing, Friday night, gotta be there), not in any
-      surprise. An alternative reading is mapping (source: guys watching
-      boxing on Friday; target: aliens visiting the Enterprise; shared
-      structure: obligatory male social gathering around combat sports).
-      This is plausible, but I chose articulation because the mapping was
-      already established in LP7 -- this laugh-point inhabits it rather
-      than introducing it.
+- joke_id: s01e10_opening_lp1
+  text: 'I''ve been living in this apartment for years and years, and every time I
+    paint it, it kinda gets me down. I look around, and I think, well, it''s a little
+    bit smaller now.
+
+    '
+  setup_expectation: '"Every time I paint it, it kinda gets me down" establishes that
+    repainting is a source of dissatisfaction. The audience expects the reason to
+    be about effort, mess, color choice, or the futility of home maintenance -- normal
+    complaints about painting.
+
+    '
+  punchline_violation: 'The reason for the dissatisfaction is that the apartment is
+    physically smaller due to the accumulated thickness of paint layers. This is a
+    technically true but absurdly negligible observation treated as a real source
+    of distress. The premise is accepted (paint has thickness) and followed to an
+    absurd conclusion (the apartment is measurably shrinking).
+
+    '
+  pivot_locus: logical
+  pivot_concept: apartment_shrinkage
+  pivot_mechanism:
+    operation: extension
+    reading_switch: none
+    scale_shift: expansion
+  setup_frame: establishes_premise
+  primary_template: mundane_as_monumental
+  difficulties: 'Extension vs. articulation is the main tension. This is not articulation
+    because no one implicitly knows or has felt that their apartment shrinks from
+    repainting -- the observation is novel, not a verbalization of shared experience.
+    It is extension: the premise (paint has thickness) is real and accepted, and the
+    conclusion (the apartment is shrinking) is logically valid but absurd. The template
+    choice between mundane_as_monumental and reductio is close. I chose mundane_as_monumental
+    because the joke does not build an argumentative chain -- it makes a single leap
+    from accepted fact to disproportionate emotional response. Reductio would require
+    more logical steps.
+
+    '
+  physical_performance: null
+- joke_id: s01e10_opening_lp2
+  text: 'You know, I realize it''s just the thickness of the paint, but I''m aware
+    of it. It keeps coming in and coming in. Every time I paint it, it''s closer and
+    closer.
+
+    '
+  setup_expectation: 'The acknowledgment "I realize it''s just the thickness of the
+    paint" signals rational self-awareness. The audience expects the bit to deflate
+    -- Jerry recognizes the absurdity of his own complaint, so surely the joke is
+    over.
+
+    '
+  punchline_violation: 'Instead of deflating, Jerry doubles down. The rational acknowledgment
+    is immediately overridden by escalating anxiety: "it keeps coming in and coming
+    in," "closer and closer." The self-awareness changes nothing. The walls continue
+    their advance despite his knowing it''s irrational.
+
+    '
+  pivot_locus: logical
+  pivot_concept: apartment_shrinkage
+  pivot_mechanism:
+    operation: negation
+    reading_switch: none
+    scale_shift: none
+  setup_frame: establishes_expectation
+  primary_template: escalation
+  difficulties: 'Whether this is a separate laugh-point or a continuation of LP1 is
+    debatable. I separated it because the concession-then-doubling-down is a distinct
+    comedic move from the initial observation. The operation choice between negation
+    and extension is the key call. I chose negation because the joke''s pivot is specifically
+    the failure of self-awareness to resolve the concern -- the implicit promise of
+    "I know it''s just paint" is negated by the continued anxiety. Extension would
+    require the premise to be followed further; here the premise is the same but the
+    expectation of rational resolution is what gets contradicted.
+
+    '
+  physical_performance: null
+- joke_id: s01e10_opening_lp3
+  text: 'I don''t even know where the wall outlets are anymore. I just look for like
+    a lump with two slots in it.
+
+    '
+  setup_expectation: 'The shrinking-apartment premise has been established. "I don''t
+    even know where the wall outlets are" extends the conceit further -- the paint
+    accumulation now has a practical consequence. The audience expects continued hyperbole
+    about the apartment''s deterioration.
+
+    '
+  punchline_violation: 'Instead of further hyperbole, Jerry provides a precise, concrete
+    visual: "a lump with two slots in it." The outlets haven''t disappeared; they''ve
+    been entombed in paint to the point where their physical form is only discernible
+    as a topographic feature. The specificity of the image -- searching by touch for
+    a bump in the wall surface -- commits fully to the absurd premise with observational
+    precision.
+
+    '
+  pivot_locus: logical
+  pivot_concept: apartment_shrinkage
+  pivot_mechanism:
+    operation: extension
+    reading_switch: none
+    scale_shift: none
+  setup_frame: establishes_anomaly
+  primary_template: escalation
+  difficulties: 'The operation choice between extension and articulation is straightforward
+    here -- this is clearly extension, as no one has the shared experience of outlets
+    buried under paint. The template choice is between escalation (this is a further
+    beat in a building sequence) and mundane_as_monumental (a wall outlet described
+    with archaeological precision). I chose escalation because the joke''s structural
+    role within the routine -- incrementing the absurdity -- is its dominant shape.
+    The specificity serves the escalation.
+
+    '
+  physical_performance: null
+- joke_id: s01e10_opening_lp4
+  text: 'Kinda looks like a pig is trying to push his way through from the other side.
+    That''s where I plug in.
+
+    '
+  setup_expectation: 'The "lump with two slots" image has just landed. The audience
+    has a visual of a paint-entombed outlet. They expect either another escalation
+    of the paint premise or a transition to the next topic.
+
+    '
+  punchline_violation: 'Jerry reinterprets the visual he just created. The two slots
+    and the lump are re-seen as a pig''s snout pressing through the wall from the
+    other side. The same physical description ("lump with two slots") now supports
+    two readings: an electrical outlet under paint, and an animal''s face pushing
+    through a surface. The absurd image of a pig emerging from the wall is then immediately
+    domesticated with "that''s where I plug in" -- grounding the surreal image back
+    to mundane function.
+
+    '
+  pivot_locus: both
+  pivot_concept: apartment_shrinkage
+  pivot_mechanism:
+    operation: mapping
+    reading_switch: none
+    scale_shift: none
+  setup_frame: establishes_anomaly
+  primary_template: anthropomorphization
+  difficulties: 'Mapping vs. reinterpretation is the hardest call here. I chose mapping
+    because the joke introduces a second domain (animal imagery) and the humor is
+    in the aptness of the visual parallel between pig snout and outlet. Reinterpretation
+    would require two readings of the SAME material; here there are two distinct things
+    (outlet and pig) being connected via shared visual structure. The template choice
+    between anthropomorphization and escalation is also close. I chose anthropomorphization
+    because the pig image is the joke''s dominant move -- giving animal agency to
+    an inanimate object. The escalation of the routine continues, but this beat''s
+    own template is the anthropomorphic image.
+
+    '
+  physical_performance: null
+- joke_id: s01e10_opening_lp5
+  text: 'My idea of the perfect living room would be the bridge on the Starship Enterprise.
+    You know what I mean? Big chair, nice screen, remote control.
+
+    '
+  setup_expectation: '"My idea of the perfect living room would be the bridge on the
+    Starship Enterprise" sets up a sci-fi fantasy. The audience expects Jerry to elaborate
+    on the futuristic, technologically impressive features of the Enterprise bridge
+    -- warp drive, viewscreen showing alien worlds, commanding a starship.
+
+    '
+  punchline_violation: 'The features Jerry identifies are: big chair, nice screen,
+    remote control. These are the features of a suburban living room, not a starship
+    command center. The Enterprise bridge is reframed as appealing not for its sci-fi
+    grandeur but for its domestic comforts. The same set of physical objects supports
+    two readings: futuristic command station and lazy man''s couch setup.
+
+    '
+  pivot_locus: logical
+  pivot_concept: enterprise_as_living_room
+  pivot_mechanism:
+    operation: reinterpretation
+    reading_switch: none
+    scale_shift: contraction
+  setup_frame: establishes_expectation
+  primary_template: monumental_as_mundane
+  difficulties: 'The scale_shift direction is the main question. The joke starts with
+    the monumental (Enterprise) and deflates it to the mundane (living room), which
+    is contraction. But one could argue the joke elevates a living room to Enterprise-level
+    status (expansion). I chose contraction because the punchline''s direction is
+    downward: the bridge''s features are reduced to chair/screen/remote. The audience''s
+    trajectory is from "wow, the Enterprise" to "oh, it''s just a living room." The
+    template could also be false_equivalence (equating bridge and living room), but
+    mundane_as_monumental better captures the joke''s shape -- the monumental frame
+    is applied to reveal the mundane content underneath.
+
+    '
+  physical_performance: null
+- joke_id: s01e10_opening_lp6
+  text: 'That''s why Star Trek really was the ultimate male fantasy. Just hurling
+    through space in your living room, watching TV.
+
+    '
+  setup_expectation: '"The ultimate male fantasy" invokes the register of power fantasies,
+    sexual conquest, or adventure. Applied to Star Trek, the audience expects the
+    fantasy to be about commanding a starship, exploring the galaxy, or being Captain
+    Kirk.
+
+    '
+  punchline_violation: 'The male fantasy is: watching TV in your living room. The
+    entire apparatus of Star Trek -- warp drive, alien encounters, galactic exploration
+    -- is reduced to the experience of sitting and watching a screen. "Hurling through
+    space" is grammatically parallel to "in your living room, watching TV," collapsing
+    the cosmic into the domestic within a single sentence.
+
+    '
+  pivot_locus: logical
+  pivot_concept: enterprise_as_living_room
+  pivot_mechanism:
+    operation: reinterpretation
+    reading_switch: none
+    scale_shift: contraction
+  setup_frame: establishes_behavior
+  primary_template: monumental_as_mundane
+  difficulties: 'This laugh-point is closely connected to LP5 and could be treated
+    as a tag rather than a separate joke. I separated it because it introduces a new
+    framing concept ("ultimate male fantasy") that goes beyond the bridge-as-living-room
+    observation. The operation is clearly reinterpretation: Star Trek is reread from
+    sci-fi epic to domestic comfort. The template choice is clean -- mundane_as_ monumental,
+    with the "ultimate male fantasy" language doing the elevated framing work.
+
+    '
+  physical_performance: null
+- joke_id: s01e10_opening_lp7
+  text: 'That''s why all the aliens were always dropping in, because Kirk was the
+    only one that had a big screen.
+
+    '
+  setup_expectation: 'Within the Star Trek universe, alien encounters are understood
+    as diplomatic incidents, hostile incursions, or first-contact events -- high-stakes
+    narrative events driven by interstellar politics or exploration.
+
+    '
+  punchline_violation: 'The aliens weren''t invading or making contact; they were
+    coming over to watch Kirk''s TV. "Dropping in" reframes alien encounters as social
+    visits from neighbors. The Enterprise''s viewscreen -- a strategic military asset
+    -- is reread as the neighborhood''s only big-screen TV, and alien visitations
+    become the sci-fi equivalent of "can we come over and watch the game?"
+
+    '
+  pivot_locus: logical
+  pivot_concept: enterprise_as_living_room
+  pivot_mechanism:
+    operation: reinterpretation
+    reading_switch: none
+    scale_shift: contraction
+  setup_frame: establishes_behavior
+  primary_template: monumental_as_mundane
+  difficulties: 'This is the most structurally clean laugh-point in the bit. Reinterpretation
+    is unambiguous: the same Star Trek events are reread under the domestic frame.
+    The only question is whether this is extension rather than reinterpretation --
+    does it follow the living-room premise to a further conclusion? I chose reinterpretation
+    because the humor is in the FRAME SHIFT applied to a new element (alien encounters),
+    not in following the same premise further. Each element of Star Trek is being
+    independently reframed, not derived from a single chain of logic.
+
+    '
+  physical_performance: null
+- joke_id: s01e10_opening_lp8
+  text: 'They came over Friday night, Klingon boxing.. gotta be there.
+
+    '
+  setup_expectation: 'The aliens-dropping-in-to-watch-TV frame has been established.
+    The audience expects either another application of this frame or a transition
+    out of the bit.
+
+    '
+  punchline_violation: 'Jerry provides the specific social occasion: Friday night,
+    Klingon boxing. The specificity completes the domestic reframe with a concrete
+    scenario that mirrors a recognizable male social ritual (friends coming over on
+    Friday to watch boxing/football on the big screen). "Gotta be there" is the exact
+    language of real social obligation around sports events. The specificity of "Klingon
+    boxing" -- not just any show, but the sci-fi equivalent of a pay-per-view fight
+    -- commits fully to the mapping between Star Trek aliens and suburban sports buddies.
+
+    '
+  pivot_locus: logical
+  pivot_concept: enterprise_as_living_room
+  pivot_mechanism:
+    operation: articulation
+    reading_switch: none
+    scale_shift: none
+  setup_frame: establishes_behavior
+  primary_template: monumental_as_mundane
+  difficulties: 'The operation choice between articulation and extension is the key
+    call. I chose articulation because the frame is already established (aliens come
+    over to watch Kirk''s TV) and the punchline does not push it to a new logical
+    destination -- it INHABITS the frame with specific detail. The audience is already
+    in on the joke; "Klingon boxing, Friday night" is the precise rendering of what
+    that world looks like. The articulation test passes: if you told the audience
+    "he''s going to describe a specific night at Kirk''s place," the joke would still
+    be funny because the humor is in the specific choice (Klingon boxing, Friday night,
+    gotta be there), not in any surprise. An alternative reading is mapping (source:
+    guys watching boxing on Friday; target: aliens visiting the Enterprise; shared
+    structure: obligatory male social gathering around combat sports). This is plausible,
+    but I chose articulation because the mapping was already established in LP7 --
+    this laugh-point inhabits it rather than introducing it.
+
+    '
+  physical_performance: null
+v0_6_reviewed: true

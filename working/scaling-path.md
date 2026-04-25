@@ -73,7 +73,9 @@ the protocol in `protocols.md`. The field order is:
 4. `pivot_mechanism.operation` — run the TEST from `pivot-mechanisms.yaml`
 5. `pivot_mechanism.reading_switch` (default: none)
 6. `pivot_mechanism.scale_shift` (default: none)
-7. `setup_frame`
+7. `setup_frame` (establishes_convention | establishes_behavior |
+   establishes_expectation | establishes_premise | establishes_anomaly |
+   establishes_sequence)
 8. `primary_template` from `templates.yaml`
 9. Tag difficulties and vocabulary gaps
 
@@ -103,6 +105,41 @@ costume.
 Save annotations to `annotations/{joke_id}.yaml` or batch them in
 `annotations/{episode_slug}_pass2.yaml`.
 
+### Step 2b: Extract and persist agent annotations
+
+When using parallel subagents, some agents write annotation files to disk
+and others return them inline in their result messages. After all agents
+complete, run the extraction script to ensure all annotations are persisted:
+
+```
+python3 engine/extract_annotations.py
+```
+
+The script reads agent output files from the tasks directory, extracts
+YAML blocks from ```yaml fences in assistant messages, and writes them to
+`annotations/`. It skips episodes already on disk.
+
+**Before running**, update the `AGENT_MAP` dictionary in the script to map
+each agent's ID to its episode identifier. Agent IDs are printed when
+agents are launched (the `agentId` in the launch confirmation). The
+mapping format is:
+
+```python
+AGENT_MAP = {
+    "agent_id_here": ("s01e06", "The Ex-Girlfriend"),
+    ...
+}
+```
+
+Also update `ALREADY_ON_DISK` to list episode IDs that agents already
+wrote to `annotations/` directly.
+
+After extraction, verify:
+1. All expected files exist: `ls annotations/*.yaml`
+2. All files are valid YAML: run the validation loop from the script
+3. No files are truncated: check line counts are reasonable (200-500 lines
+   per episode is typical)
+
 ### Step 3: Log gaps and difficulties
 
 After each annotation session, update:
@@ -129,8 +166,10 @@ values across the batch's annotations. If any single value exceeds 40%:
 - Look for clusters — do they subdivide into 2-3 groups?
 - If yes, draft sub-species with full vocabulary discipline.
 - If no, note and re-check at next interval.
-- Known candidates: `reinterpretation` (36% in pilot), `establishes_norm`
-  (~80% in pilot).
+- Known candidate: `reinterpretation` (31% in batch 1 — below threshold
+  but watch). `establishes_norm` was resolved in v0.6 by splitting into
+  convention/behavior/premise. `mundane_as_monumental` was 42% in batch 1,
+  resolved by adding `monumental_as_mundane` (expected to drop to ~32%).
 
 **4c. Cross-annotator consistency.** If multiple annotators (or parallel
 agents) annotated the same episodes, compare their operation classifications.
@@ -196,9 +235,8 @@ it's included.
 
 ## Scaling beyond Seinfeld
 
-The current schema was derived from 5 Seinfeld Season 1 openings — a single
-comedian's narrow stylistic range (observational, lateral_observer positioning,
-anthropological register). As annotation expands to:
+The schema has been validated against 14 Seinfeld episodes (Seasons 1-2,
+71 laugh-points). As annotation expands to:
 
 - **Later Seinfeld** (Seasons 3-9): Expect the existing operations to
   hold but templates and subversions to become more relevant as the material
@@ -224,32 +262,101 @@ To annotate a batch in parallel using Claude Code subagents:
 1. Prepare: for each episode, have the raw transcript and the manually
    identified monologue boundaries ready.
 
-2. Launch one agent per episode with this prompt template:
-   - Include the full pivot-mechanisms.yaml vocabulary (the 6 operations
-     with their tests)
-   - Include the templates.yaml vocabulary
-   - Include the Pass 2 field order (9 steps above)
-   - Include the raw transcript for that episode only
-   - Ask for YAML output with one entry per laugh-point
-   - Ask them to tag difficulties and vocabulary gaps
+2. Launch one agent per episode using the prompt template below.
+   **IMPORTANT**: Before launching, read the CURRENT versions of
+   `engine/vocabularies/pivot-mechanisms.yaml` and
+   `engine/vocabularies/templates.yaml` and include their values in the
+   prompt. Do NOT hardcode values from a prior session — the vocabularies
+   evolve. The template below marks where to insert current values.
 
-3. When agents complete, compare their classifications. Disagreements are
-   data — they reveal boundary softness in the vocabulary.
+3. When agents complete, run `python3 engine/extract_annotations.py`
+   (after updating the AGENT_MAP) to persist all annotations to disk.
+   Verify all files exist and are valid YAML.
 
-4. Run the batch review checks (Step 4) on the combined results.
+4. Compare agent classifications. Disagreements are data — they reveal
+   boundary softness in the vocabulary.
 
-## Known open issues (as of 2026-04-23)
+5. Run the batch review checks (Step 4) on the combined results.
 
-These are tracked in `working/questions.md` with appearance counts:
+### Agent prompt template
 
-- **[!] reinterpretation/articulation boundary** (5+ appearances) — HIGH
-  PRIORITY. Proposed fix: frame-dependency test. Needs validation on 10+
-  annotations.
-- **false_equivalence vs revealed_equivalence** (3 appearances) — AT
-  THRESHOLD. Should be addressed at next weekly review.
-- **template gap: monumental_as_mundane** (1 appearance) — needs 2 more.
-- **template gap: pure articulation shape** (2 appearances) — needs 1 more.
-- **setup_frame: establishes_norm at ~80%** — needs 30+ annotations to
-  confirm.
+Copy this template for each agent. Replace `[PLACEHOLDERS]` with current
+values from the vocabulary files.
+
+```
+You are performing a Pass 2 (silent decomposition) annotation on a
+Seinfeld opening monologue. Produce YAML with one entry per distinct
+laugh-point.
+
+## FIELD ORDER (follow exactly)
+1. setup_expectation (GLOSS — your reasoning trace)
+2. punchline_violation (GLOSS)
+3. pivot_locus: logical | affective | both
+4. pivot_concept
+5. pivot_mechanism.operation — run the TEST below, write down the artifact
+6. pivot_mechanism.reading_switch: none | figurative_to_literal | literal_to_figurative
+7. pivot_mechanism.scale_shift: none | expansion | contraction
+8. setup_frame: establishes_convention | establishes_behavior |
+   establishes_expectation | establishes_premise | establishes_anomaly |
+   establishes_sequence
+9. primary_template: [INSERT CURRENT TEMPLATE VALUES FROM templates.yaml]
+10. physical_performance: null
+11. difficulties (tag ambiguities, vocabulary gaps, forced choices)
+
+## OPERATION TESTS
+[INSERT THE 6 OPERATIONS AND THEIR TESTS FROM pivot-mechanisms.yaml]
+
+## DISAMBIGUATION RULES
+- reinterpretation vs articulation: Does humor REQUIRE a frame shift?
+  If removing the shift kills it → reinterpretation. If it works within
+  one frame → articulation. Ask: "Is the OBSERVATION the joke, or is
+  the ANGLE on the observation the joke?"
+- scale_shift: Only populate if you can imagine the same operation
+  WITHOUT the scale change and it would lose something specific.
+  If the scale change IS the operation, leave as none.
+- mapping vs transplant: Would joke work if the framework genuinely
+  fit? Yes → mapping (aptness). No → transplant (mismatch).
+
+## setup_frame GUIDE
+- establishes_convention: cultural practice, social ritual,
+  institutional norm ("how things work")
+- establishes_behavior: recognizable human behavioral pattern
+  ("people do this")
+- establishes_expectation: buildup creating specific anticipation
+  of a proportional payoff
+- establishes_premise: accepted claim or hypothetical that subsequent
+  jokes build on
+- establishes_anomaly: something unusual or puzzling needing explanation
+- establishes_sequence: ordered progression creating momentum
+
+## TRANSCRIPT — [EPISODE ID] "[TITLE]"
+[INSERT MONOLOGUE TEXT]
+
+Report YAML then under 300 words of commentary noting: which operations
+dominated, hardest classification call, any vocabulary gaps.
+```
+
+## Known open issues (as of 2026-04-23, schema v0.6)
+
+These are tracked in `working/questions.md` with appearance counts.
+Items marked RESOLVED were addressed in v0.6; they're listed here for
+context so future sessions understand what was already tried.
+
+**Open:**
+- **reinterpretation/articulation boundary** (10+ appearances) — PARTIALLY
+  RESOLVED in v0.6. Frame-dependency test + worked examples added to
+  pivot-mechanisms.yaml. Needs validation: does the sharpened test reduce
+  disagreement in batch 2?
 - **laugh architecture field** — flagged for investigation, needs audio data.
-- **reinterpretation at 36%** — watch for broadness at 30+ annotations.
+- **reinterpretation at 31%** — below 40% threshold but watch.
+- **valence_flip modifier** (1 appearance) — tracking.
+- **counterfactual staging device** (1 appearance) — tracking.
+- **anachronistic transplant sub-type** (1 appearance) — tracking.
+- **performance-dependent laugh-points** (2 appearances) — awkward in Pass 2.
+
+**Resolved in v0.6:**
+- monumental_as_mundane template — added (4 appearances).
+- shared_recognition template — added (3 appearances).
+- false_equivalence broadened to cover apt pairings (3 appearances).
+- setup_frame expanded from 4 to 6 values (80% establishes_norm confirmed).
+- scale_shift independence heuristic added to protocols.

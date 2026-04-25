@@ -1,262 +1,158 @@
-# =============================================================================
-# PASS 2 — SILENT DECOMPOSITION
-# Episode 5: "The Stock Tip" — Opening Monologue
-# =============================================================================
-
 monologue_id: s01e05_opening
-episode: "The Stock Tip"
+episode: The Stock Tip
 season: 1
 episode_number: 5
-
 jokes:
+- joke_id: s01e05_opening_01
+  text: 'Never liked the check at the end of the meal system, because money''s a very
+    different thing before and after you eat. Before you eat money has no value.
 
-  # ---------------------------------------------------------------------------
-  # JOKE 1: "Money has no value before you eat"
-  # ---------------------------------------------------------------------------
-  - joke_id: s01e05_opening_01
-    text: >
-      Never liked the check at the end of the meal system, because money's
-      a very different thing before and after you eat. Before you eat money
-      has no value.
+    '
+  setup_expectation: '"Money is a different thing before and after you eat" sets up
+    a comparison. The audience expects a relatable observation about how spending
+    feels different on a full stomach vs. an empty one — a psychological or emotional
+    distinction.
 
-    setup_expectation: >
-      "Money is a different thing before and after you eat" sets up a
-      comparison. The audience expects a relatable observation about how
-      spending feels different on a full stomach vs. an empty one — a
-      psychological or emotional distinction.
+    '
+  punchline_violation: '"Before you eat money has no value" doesn''t describe a feeling
+    — it states it as an absolute economic fact. Hunger doesn''t merely change your
+    attitude toward money; it annihilates money''s value entirely. The subjective
+    experience of not caring about cost is reframed as an objective property of money
+    itself.
 
-    punchline_violation: >
-      "Before you eat money has no value" doesn't describe a feeling — it
-      states it as an absolute economic fact. Hunger doesn't merely change
-      your attitude toward money; it annihilates money's value entirely.
-      The subjective experience of not caring about cost is reframed as
-      an objective property of money itself.
+    '
+  pivot_locus: logical
+  pivot_concept: money_value_hunger
+  pivot_mechanism:
+    operation: reinterpretation
+    reading_switch: none
+    scale_shift: expansion
+  setup_frame: establishes_convention
+  primary_template: mundane_as_monumental
+  difficulties: 'The operation call between reinterpretation and articulation was
+    close. The "money has no value" observation does voice a shared truth (we all
+    feel this way when hungry). But the humor is load-bearing on the SHIFT from psychological
+    to ontological framing — it''s not just "yes, exactly," it''s "I didn''t think
+    of it that way." That tips it to reinterpretation. The scale_shift: expansion
+    is also debatable — you could argue the punchline stays at the same scope (personal
+    dining) and doesn''t truly universalize. I tagged expansion because the move from
+    "feels different" to "has no value" lifts a feeling to a quasi-universal economic
+    principle.
 
-    pivot_locus: logical
+    '
+  physical_performance: null
+- joke_id: s01e05_opening_02
+  text: 'And you don''t care about money when you''re hungry, you sit down at a restaurant.
+    You''re like the ruler of an empire. "More drinks, appetizers, quickly, quickly!
+    It will be the greatest meal of our lives."
 
-    pivot_concept: money_value_hunger
-      # The concept that hunger literally alters the value of currency.
+    '
+  setup_expectation: '"You don''t care about money when you''re hungry" continues
+    the relatable observation. The audience expects a description of typical over-ordering
+    behavior — something grounded in the everyday dining experience.
 
-    pivot_mechanism:
-      operation: reinterpretation
-        # TEST (two readings of the same material):
-        #   Reading 1 (setup invites): "Money feels different when you're
-        #   hungry" — a psychological observation about spending attitudes.
-        #   Reading 2 (punchline imposes): "Money IS valueless when you're
-        #   hungry" — an ontological claim about money's nature.
-        #   Same material ("money's a very different thing"), two frames:
-        #   psychological vs. economic-ontological. The humor is the shift.
-      reading_switch: none
-      scale_shift: expansion
-        # A subjective dining feeling is elevated to a universal law about
-        # money's nature. The move from "you don't care about cost" to
-        # "money has no value" is a scope expansion.
+    '
+  punchline_violation: '"You''re like the ruler of an empire" maps the hungry diner
+    onto a sovereign issuing imperial commands. The act-out ("More drinks, appetizers,
+    quickly, quickly!") commits fully to the imperial register, escalating the mapping
+    through performed grandiosity.
 
-    setup_frame: establishes_norm
-      # The setup establishes the norm that money has consistent value;
-      # eating is a normal activity with a predictable cost.
+    '
+  pivot_locus: logical
+  pivot_concept: hungry_diner_as_sovereign
+  pivot_mechanism:
+    operation: mapping
+    reading_switch: none
+    scale_shift: expansion
+  setup_frame: establishes_premise
+  primary_template: mundane_as_monumental
+  difficulties: 'The mapping vs. transplant distinction required the aptness test.
+    Would the joke still work if the imperial framework genuinely fit? Yes — the joke
+    works BECAUSE the parallel is apt (hungry diners really do act imperious). That
+    confirms mapping over transplant. The tag/act-out ("More drinks... greatest meal
+    of our lives") uses escalation as a secondary template, building specificity within
+    the imperial frame. I classified the primary template as mundane_as_monumental
+    rather than escalation because the escalation serves the elevation, not the other
+    way around.
 
-    primary_template: mundane_as_monumental
-      # A trivial dining psychology observation is given the rhetorical
-      # gravity of an economic thesis. "Money has no value" is the kind
-      # of statement that belongs in a treatise, not a dinner anecdote.
+    '
+  physical_performance: null
+- joke_id: s01e05_opening_03
+  text: 'Then after the meal, you know, you''ve got the pants open, you''ve got the
+    napkins destroyed, cigarette butt in the mashed potatoes — then the check comes
+    at that moment. People are always upset, you know. They''re mystified by the check.
+    "What is this? How could this be?"
 
-    difficulties: >
-      The operation call between reinterpretation and articulation was close.
-      The "money has no value" observation does voice a shared truth (we all
-      feel this way when hungry). But the humor is load-bearing on the SHIFT
-      from psychological to ontological framing — it's not just "yes,
-      exactly," it's "I didn't think of it that way." That tips it to
-      reinterpretation. The scale_shift: expansion is also debatable — you
-      could argue the punchline stays at the same scope (personal dining)
-      and doesn't truly universalize. I tagged expansion because the move
-      from "feels different" to "has no value" lifts a feeling to a
-      quasi-universal economic principle.
+    '
+  setup_expectation: 'The post-meal image (pants open, napkins destroyed, cigarette
+    butt in mashed potatoes) establishes that the diner has thoroughly consumed and
+    enjoyed everything ordered. The audience expects the check to be met with rueful
+    acknowledgment — you ate it all, you knew the prices, you pay.
 
-  # ---------------------------------------------------------------------------
-  # JOKE 2: "Ruler of an empire"
-  # ---------------------------------------------------------------------------
-  - joke_id: s01e05_opening_02
-    text: >
-      And you don't care about money when you're hungry, you sit down at
-      a restaurant. You're like the ruler of an empire. "More drinks,
-      appetizers, quickly, quickly! It will be the greatest meal of our
-      lives."
+    '
+  punchline_violation: 'Instead of resigned acceptance, people react with genuine
+    mystification, as if the check is an inexplicable document. "What is this? How
+    could this be?" treats the entirely predictable bill as a shocking, baffling event.
+    The person who ordered everything is now unable to comprehend the bill for everything.
 
-    setup_expectation: >
-      "You don't care about money when you're hungry" continues the
-      relatable observation. The audience expects a description of typical
-      over-ordering behavior — something grounded in the everyday dining
-      experience.
+    '
+  pivot_locus: logical
+  pivot_concept: post_satiation_amnesia
+  pivot_mechanism:
+    operation: negation
+    reading_switch: none
+    scale_shift: none
+  setup_frame: establishes_convention
+  primary_template: mundane_as_monumental
+  difficulties: 'The operation choice between negation and reinterpretation was the
+    hardest call here. The case for reinterpretation: the check is the "same material"
+    being read differently before vs. after eating. The case for negation: the setup
+    implies the diner will recognize the bill (they ordered it), and the punchline
+    asserts they do NOT recognize it. I chose negation because the core humor is in
+    the CONTRADICTION between "you ordered all this" and "you don''t recognize the
+    bill" — a truth-value flip on self-awareness, not a frame shift on the same object.
+    This is close enough to warrant logging in the decision log.
 
-    punchline_violation: >
-      "You're like the ruler of an empire" maps the hungry diner onto a
-      sovereign issuing imperial commands. The act-out ("More drinks,
-      appetizers, quickly, quickly!") commits fully to the imperial register,
-      escalating the mapping through performed grandiosity.
+    '
+  physical_performance: null
+- joke_id: s01e05_opening_04
+  text: 'They start passing it around the table, "Does this look right to you? We''re
+    not hungry now. Why are we buying all this food?!"
 
-    pivot_locus: logical
+    '
+  setup_expectation: 'The preceding mystification sets up more of the same bewildered
+    behavior. The audience expects the confusion to continue in the same register
+    — more bafflement at the total, maybe a complaint about prices.
 
-    pivot_concept: hungry_diner_as_sovereign
-      # The structural parallel between a hungry person's disregard for cost
-      # and a ruler's command over limitless resources.
+    '
+  punchline_violation: '"We''re not hungry now. Why are we buying all this food?!"
+    reframes the complaint as genuinely logical from the post-meal perspective. It''s
+    not that the prices are wrong — it''s that buying food when you''re no longer
+    hungry is irrational. The punchline takes the post-satiation psychology and follows
+    it to its absurd but internally consistent conclusion: if you''re full, purchasing
+    food makes no sense, therefore the entire transaction is illegitimate.
 
-    pivot_mechanism:
-      operation: mapping
-        # TEST (source, target, shared structure):
-        #   Source: imperial ruler commanding a court.
-        #   Target: hungry diner ordering at a restaurant.
-        #   Shared structure: unquestioned authority, no concern for cost,
-        #   imperious tone toward servants/waitstaff, grandiose declarations.
-        #   The humor is in the APTNESS — a hungry diner really does behave
-        #   this way. The parallel illuminates rather than misapplies.
-      reading_switch: none
-      scale_shift: expansion
-        # A person ordering dinner is elevated to imperial sovereignty.
-        # The direction is up — mundane to monumental.
+    '
+  pivot_locus: logical
+  pivot_concept: temporal_logic_of_need
+  pivot_mechanism:
+    operation: extension
+    reading_switch: none
+    scale_shift: none
+  setup_frame: establishes_premise
+  primary_template: reductio
+  difficulties: 'Extension vs. reinterpretation was the key decision. The case for
+    reinterpretation: you could argue the "same material" (the check) is being read
+    under a different frame (present-need vs. past-order). But the humor doesn''t
+    come from seeing the check differently — it comes from FOLLOWING the post-satiation
+    logic to its absurd end. The premise "current hunger should determine purchases"
+    is accepted and pushed to "therefore this completed meal was an error." That''s
+    textbook extension. The template choice (reductio vs. escalation) was cleaner
+    — the joke has an argumentative structure ending in absurdity, not an accumulating
+    list. Reductio + extension is the documented co-occurrence pattern from the templates
+    vocabulary.
 
-    setup_frame: establishes_norm
-      # The setup establishes the normal experience of sitting down hungry.
-
-    primary_template: mundane_as_monumental
-      # The core shape is treating dinner-ordering with imperial gravity.
-      # Escalation is a secondary template (the act-out builds from the
-      # mapping to "greatest meal of our lives").
-
-    difficulties: >
-      The mapping vs. transplant distinction required the aptness test.
-      Would the joke still work if the imperial framework genuinely fit?
-      Yes — the joke works BECAUSE the parallel is apt (hungry diners
-      really do act imperious). That confirms mapping over transplant.
-      The tag/act-out ("More drinks... greatest meal of our lives") uses
-      escalation as a secondary template, building specificity within
-      the imperial frame. I classified the primary template as
-      mundane_as_monumental rather than escalation because the escalation
-      serves the elevation, not the other way around.
-
-  # ---------------------------------------------------------------------------
-  # JOKE 3: "Post-meal devastation + mystified by the check"
-  # ---------------------------------------------------------------------------
-  - joke_id: s01e05_opening_03
-    text: >
-      Then after the meal, you know, you've got the pants open, you've got
-      the napkins destroyed, cigarette butt in the mashed potatoes — then
-      the check comes at that moment. People are always upset, you know.
-      They're mystified by the check. "What is this? How could this be?"
-
-    setup_expectation: >
-      The post-meal image (pants open, napkins destroyed, cigarette butt
-      in mashed potatoes) establishes that the diner has thoroughly consumed
-      and enjoyed everything ordered. The audience expects the check to be
-      met with rueful acknowledgment — you ate it all, you knew the prices,
-      you pay.
-
-    punchline_violation: >
-      Instead of resigned acceptance, people react with genuine mystification,
-      as if the check is an inexplicable document. "What is this? How could
-      this be?" treats the entirely predictable bill as a shocking, baffling
-      event. The person who ordered everything is now unable to comprehend
-      the bill for everything.
-
-    pivot_locus: logical
-
-    pivot_concept: post_satiation_amnesia
-      # The phenomenon where satiation erases the memory/ownership of
-      # having ordered, making the bill feel like someone else's.
-
-    pivot_mechanism:
-      operation: negation
-        # TEST ("Setup implies X. Punchline asserts not-X"):
-        #   Setup implies: The diner knows what they ordered and will
-        #   recognize the bill as the cost of their choices.
-        #   Punchline asserts: The diner does NOT recognize the bill —
-        #   they are mystified, as if they had no role in generating it.
-        #   The expectation of self-awareness is negated.
-      reading_switch: none
-      scale_shift: none
-
-    setup_frame: establishes_norm
-      # The setup establishes the normal sequence: you eat, you get the
-      # check, you recognize it as yours.
-
-    primary_template: mundane_as_monumental
-      # "Mystified" and "What is this? How could this be?" give the
-      # check the rhetorical gravity of an incomprehensible event —
-      # people react to a dinner bill as if it were a cosmic injustice.
-
-    difficulties: >
-      The operation choice between negation and reinterpretation was the
-      hardest call here. The case for reinterpretation: the check is the
-      "same material" being read differently before vs. after eating.
-      The case for negation: the setup implies the diner will recognize
-      the bill (they ordered it), and the punchline asserts they do NOT
-      recognize it. I chose negation because the core humor is in the
-      CONTRADICTION between "you ordered all this" and "you don't
-      recognize the bill" — a truth-value flip on self-awareness, not a
-      frame shift on the same object. This is close enough to warrant
-      logging in the decision log.
-
-  # ---------------------------------------------------------------------------
-  # JOKE 4: "Passing the check around / Why are we buying all this food?"
-  # ---------------------------------------------------------------------------
-  - joke_id: s01e05_opening_04
-    text: >
-      They start passing it around the table, "Does this look right to you?
-      We're not hungry now. Why are we buying all this food?!"
-
-    setup_expectation: >
-      The preceding mystification sets up more of the same bewildered
-      behavior. The audience expects the confusion to continue in the
-      same register — more bafflement at the total, maybe a complaint
-      about prices.
-
-    punchline_violation: >
-      "We're not hungry now. Why are we buying all this food?!" reframes
-      the complaint as genuinely logical from the post-meal perspective.
-      It's not that the prices are wrong — it's that buying food when
-      you're no longer hungry is irrational. The punchline takes the
-      post-satiation psychology and follows it to its absurd but
-      internally consistent conclusion: if you're full, purchasing food
-      makes no sense, therefore the entire transaction is illegitimate.
-
-    pivot_locus: logical
-
-    pivot_concept: temporal_logic_of_need
-      # The absurd application of present-tense need to justify or
-      # invalidate a past-tense purchase.
-
-    pivot_mechanism:
-      operation: extension
-        # TEST (accepted premise + absurd conclusion):
-        #   Accepted premise: Your relationship to food purchases should
-        #   be governed by your current hunger state.
-        #   Absurd conclusion: Since you are no longer hungry, the food
-        #   you already ate should not have been purchased.
-        #   The premise (current feelings determine value) is never
-        #   challenged; it's followed to a destination where it retroactively
-        #   invalidates a completed meal.
-      reading_switch: none
-      scale_shift: none
-
-    setup_frame: establishes_norm
-      # The setup continues the norm of post-meal check-examining behavior.
-
-    primary_template: reductio
-      # The joke accepts a reasonable-seeming premise (you shouldn't pay
-      # for things you don't currently need) and follows it with logical
-      # rigor to an absurd conclusion (the meal you already ate shouldn't
-      # have been bought). The reductio template fits because the shape
-      # is an argumentative chain ending in absurdity.
-
-    difficulties: >
-      Extension vs. reinterpretation was the key decision. The case for
-      reinterpretation: you could argue the "same material" (the check)
-      is being read under a different frame (present-need vs. past-order).
-      But the humor doesn't come from seeing the check differently — it
-      comes from FOLLOWING the post-satiation logic to its absurd end.
-      The premise "current hunger should determine purchases" is accepted
-      and pushed to "therefore this completed meal was an error." That's
-      textbook extension. The template choice (reductio vs. escalation)
-      was cleaner — the joke has an argumentative structure ending in
-      absurdity, not an accumulating list. Reductio + extension is the
-      documented co-occurrence pattern from the templates vocabulary.
+    '
+  physical_performance: null
+schema_version: '0.6'
+v0_6_reviewed: true

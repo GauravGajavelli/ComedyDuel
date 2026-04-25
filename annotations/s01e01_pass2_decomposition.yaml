@@ -7,9 +7,10 @@
 # Each entry below is one distinct joke/laugh-point.
 # =============================================================================
 
-schema_version: "1.0"
+schema_version: "0.6"
 routine_id: s01e01_opening
 pass: 2
+v0_6_reviewed: true
 
 annotations:
 
@@ -58,9 +59,11 @@ annotations:
       # without the drop from philosophical to mundane, the joke doesn't
       # land.
 
-    setup_frame: establishes_norm
-    # The setup establishes the norm of philosophical/existential inquiry
+    setup_frame: establishes_convention
+    # The setup invokes the convention of philosophical/existential inquiry
     # via the register of "why we're here."
+
+    physical_performance: null
 
     primary_template: mundane_as_monumental
     # The rhetorical shape is: apply the grammar of importance ("why we're
@@ -119,8 +122,10 @@ annotations:
       # The rich social meaning of "going out" is contracted to a bare
       # spatial fact.
 
-    setup_frame: establishes_norm
-    # The idiom "going out" as social activity is the established norm.
+    setup_frame: establishes_convention
+    # The idiom "going out" as social activity is a linguistic/cultural convention.
+
+    physical_performance: null
 
     primary_template: mundane_as_monumental
     # Jerry announces the literal state of being "out" with the
@@ -172,15 +177,16 @@ annotations:
       reading_switch: none
       scale_shift: none
 
-    setup_frame: establishes_norm
-    # The setup establishes the norm of people being unreachable when
-    # they go out.
+    setup_frame: establishes_behavior
+    # The setup establishes a recognizable behavioral pattern — people
+    # being unreachable when they go out, others trying to find them.
 
-    primary_template: mundane_as_monumental
-    # The bit treats the banal phone call as worthy of dramatic
-    # performance (character voices, building suspense about "where
-    # did he go"). The frame's theatrical weight against the triviality
-    # of the scenario is the template.
+    physical_performance: null
+
+    primary_template: shared_recognition
+    # The rhetorical shape IS the naming of the shared experience —
+    # the specific phone call everyone has overheard. No escalation,
+    # no argument chain. The shape is the articulation itself.
 
     difficulties: >
       The choice between articulation and reinterpretation is the main
@@ -245,6 +251,8 @@ annotations:
     # a climax. The sequence structure creates the expectation of a
     # proportional payoff.
 
+    physical_performance: null
+
     primary_template: escalation
     # The rhetorical shape is escalation: each preparation step
     # increments commitment. The escalation makes the negation land
@@ -303,9 +311,12 @@ annotations:
       # expanded from a single instance to an inescapable universal
       # cycle. The scope lifts from "tonight" to "every night, forever."
 
-    setup_frame: establishes_norm
-    # The preceding joke established the norm (you always want to be
-    # where you aren't). This tag accepts that norm as given.
+    setup_frame: establishes_premise
+    # The preceding joke established the premise (you always want to be
+    # where you aren't). This tag accepts that premise as given and
+    # builds on it.
+
+    physical_performance: null
 
     primary_template: escalation
     # The rhetorical shape is escalation: each beat (sleep, get up, go
@@ -375,6 +386,8 @@ annotations:
     # The entire preceding bit has established a sequence (want to go
     # out, prepare, go out, want to come back, cycle) that this topper
     # distills.
+
+    physical_performance: null
 
     primary_template: mundane_as_monumental
     # The rhetorical shape is: a trivial observation about going out is

@@ -1,340 +1,199 @@
-# =============================================================================
-# PASS 2: Silent Decomposition — S01E04 "Male Unbonding" Opening Monologue
-# =============================================================================
-
 jokes:
+- joke_id: seinfeld_s01e04_opening_01
+  transcript_segment: 'Most men like working on things, tools, objects, fixing things...
+    They just come wandering out of the house like zombies.
 
-  # ---------------------------------------------------------------------------
-  # JOKE 1: Men drawn to tools like zombies
-  # ---------------------------------------------------------------------------
-  - joke_id: seinfeld_s01e04_opening_01
-    transcript_segment: >
-      Most men like working on things, tools, objects, fixing things...
-      They just come wandering out of the house like zombies.
+    '
+  setup_expectation: 'The setup establishes that men enjoy working with tools and
+    are drawn to watch a neighbor using tools in his driveway. The audience expects
+    a description of normal neighborly interest or masculine bonding — a socially
+    recognizable, voluntary behavior.
 
-    setup_expectation: >
-      The setup establishes that men enjoy working with tools and are drawn
-      to watch a neighbor using tools in his driveway. The audience expects
-      a description of normal neighborly interest or masculine bonding —
-      a socially recognizable, voluntary behavior.
+    '
+  punchline_violation: '"Like zombies" reframes the voluntary, conscious interest
+    as an involuntary, mindless compulsion. Men don''t choose to go look; they are
+    drawn out by a force they cannot resist, shambling without agency. The humor is
+    in the aptness of the parallel — the audience recognizes the zombie-like quality
+    of the behavior.
 
-    punchline_violation: >
-      "Like zombies" reframes the voluntary, conscious interest as an
-      involuntary, mindless compulsion. Men don't choose to go look; they
-      are drawn out by a force they cannot resist, shambling without
-      agency. The humor is in the aptness of the parallel — the audience
-      recognizes the zombie-like quality of the behavior.
+    '
+  pivot_locus: logical
+  pivot_concept: involuntary_male_compulsion_toward_tools
+  pivot_mechanism:
+    operation: mapping
+    reading_switch: none
+    scale_shift: none
+  setup_frame: establishes_premise
+  primary_template: mundane_as_monumental
+  difficulties: 'mapping vs. mundane_as_monumental tension: The pivot operation is
+    mapping (zombie comparison reveals an apt parallel), but the template is mundane_as_monumental
+    (trivial behavior given supernatural gravity). These sit at different schema layers
+    (operation vs. template) so they coexist cleanly, but the zombie image does double
+    duty — it''s both the vehicle of the mapping AND the source of the elevated register.
 
-    pivot_locus: logical
+    '
+  physical_performance: null
+- joke_id: seinfeld_s01e04_opening_02
+  transcript_segment: 'Men, it''s true, men hear a drill, it''s like a dog whistle.
+    Just.. you know, they go running up to that living room curtain, "Honey, I think
+    Jim''s working on something over there."
 
-    pivot_concept: involuntary_male_compulsion_toward_tools
-      # The concept that men's attraction to tool-work is not a choice
-      # but a species-level involuntary response.
+    '
+  setup_expectation: 'Continuing the premise that men are drawn to tool activity.
+    The audience expects further description of this behavior. "Men hear a drill"
+    sets up a human response to a sound.
 
-    pivot_mechanism:
-      operation: mapping
-        # TEST: Source domain — zombie behavior (mindless, compulsive,
-        # drawn toward stimulus without volition). Target domain — men
-        # noticing a neighbor doing tool work. Shared structure: involuntary
-        # locomotion toward a stimulus, absence of conscious decision-making.
-        # The humor is in the APTNESS of the parallel, not a mismatch.
-      reading_switch: none
-      scale_shift: none
+    '
+  punchline_violation: '"It''s like a dog whistle" maps men''s response to a drill
+    onto a dog''s involuntary response to an ultrasonic frequency. This degrades men
+    from conscious agents to animals responding to a stimulus they can''t resist.
+    The tag — running to the curtain and announcing excitedly to "Honey" — provides
+    the articulated recognition beat: the audience has seen or been this exact person.
 
-    setup_frame: establishes_norm
-      # The setup presents "men like working on things" as a normal,
-      # recognized behavior pattern — a shared social truth.
+    '
+  pivot_locus: logical
+  pivot_concept: involuntary_male_compulsion_toward_tools
+  pivot_mechanism:
+    operation: mapping
+    reading_switch: none
+    scale_shift: none
+  setup_frame: establishes_premise
+  primary_template: shared_recognition
+  difficulties: 'Template choice was between mundane_as_monumental and false_equivalence.
+    The dog whistle comparison is explicitly equating men = dogs, which is the false_equivalence
+    shape (two unequal things treated as equivalent). mundane_as_monumental would
+    focus on the elevated-register framing, but the joke''s shape is more about the
+    pairing than about elevation. The tag ("Honey, I think Jim''s working on something")
+    operates as articulation — pure recognition humor — but is a tag on a mapping-pivoted
+    joke, not a separate joke. This is a place where primary_template vs. tag mechanism
+    creates a layered structure the schema handles through has_tag/tag_function rather
+    than through template.
 
-    primary_template: mundane_as_monumental
-      # The rhetorical shape elevates a trivial suburban behavior (glancing
-      # at your neighbor's driveway) to the register of supernatural
-      # compulsion (zombie-like, magnetically drawn). The grammar of
-      # monumental/supernatural is applied to a mundane subject.
+    '
+  physical_performance: null
+- joke_id: seinfeld_s01e04_opening_03
+  transcript_segment: 'Now they don''t actually help the guy. No, they just want to
+    hang around the area where work is being done... We want to watch the guy, we
+    want to talk to him, we want to ask him dumb questions. "What are you using, the
+    Philips head?" You know, we feel involved.
 
-    difficulties: >
-      mapping vs. mundane_as_monumental tension: The pivot operation is
-      mapping (zombie comparison reveals an apt parallel), but the template
-      is mundane_as_monumental (trivial behavior given supernatural gravity).
-      These sit at different schema layers (operation vs. template) so they
-      coexist cleanly, but the zombie image does double duty — it's both the
-      vehicle of the mapping AND the source of the elevated register.
+    '
+  setup_expectation: 'Having established men are drawn to tool work, the audience
+    might expect these men to participate — to help, to contribute, to bond through
+    shared labor. The setup begins to dismantle this: "they don''t actually help."
 
-  # ---------------------------------------------------------------------------
-  # JOKE 2: Drill as dog whistle
-  # ---------------------------------------------------------------------------
-  - joke_id: seinfeld_s01e04_opening_02
-    transcript_segment: >
-      Men, it's true, men hear a drill, it's like a dog whistle. Just..
-      you know, they go running up to that living room curtain, "Honey,
-      I think Jim's working on something over there."
+    '
+  punchline_violation: 'The punchline reveals that men''s desire is not to participate
+    but merely to be NEAR the work. The specific dumb question ("What are you using,
+    the Philips head?") crystallizes the pathetic nature of the proximity — the question
+    is not useful, it''s a pretense of involvement. "We feel involved" is the devastating
+    summary: the entire behavior is self-delusion about participation. The humor is
+    primarily in articulation — the audience KNOWS this question, has asked or heard
+    it, and the act of naming it is the joke.
 
-    setup_expectation: >
-      Continuing the premise that men are drawn to tool activity. The
-      audience expects further description of this behavior. "Men hear a
-      drill" sets up a human response to a sound.
+    '
+  pivot_locus: logical
+  pivot_concept: male_pseudo_participation
+  pivot_mechanism:
+    operation: articulation
+    reading_switch: none
+    scale_shift: none
+  setup_frame: establishes_behavior
+  primary_template: shared_recognition
+  difficulties: 'The pivot_mechanism.operation choice between articulation and reinterpretation
+    was close. There IS a reframe element: the setup implies men go to the neighbor
+    to engage with the work, and the punchline reframes it as engagement-theater.
+    But the test for articulation ("would it still be funny if you knew?") clearly
+    passes — the Philips head line is funny because of recognition, not surprise.
+    The "we feel involved" tag has a slight scale_shift (contraction — the grand magnetic
+    compulsion from earlier jokes is deflated to pathetic self-delusion), but this
+    is more the tag''s function than the joke''s primary pivot mechanism. Chose not
+    to mark scale_shift: contraction because the contraction is in the tag, not in
+    the core punchline. (Note: the vocabulary file uses this exact joke as the positive
+    example for articulation.)
 
-    punchline_violation: >
-      "It's like a dog whistle" maps men's response to a drill onto a
-      dog's involuntary response to an ultrasonic frequency. This
-      degrades men from conscious agents to animals responding to a
-      stimulus they can't resist. The tag — running to the curtain and
-      announcing excitedly to "Honey" — provides the articulated
-      recognition beat: the audience has seen or been this exact person.
+    '
+  physical_performance: null
+- joke_id: seinfeld_s01e04_opening_04
+  transcript_segment: 'That''s why when they have construction sites, they have to
+    have those wood panel fences around it, that''s just to keep the men out. They
+    cut those little holes for us so we can see what the hell is going on.
 
-    pivot_locus: logical
+    '
+  setup_expectation: 'Construction site fences are understood as safety barriers —
+    they protect passersby from falling debris and protect the construction zone from
+    interference. The peepholes are a known feature. The audience holds the "safety/liability"
+    frame.
 
-    pivot_concept: involuntary_male_compulsion_toward_tools
-      # Same concept as Joke 1, now with a more specific and degrading
-      # comparison vehicle.
+    '
+  punchline_violation: 'The fences are reframed from safety barriers to male-containment
+    systems. Their purpose is not to protect people from construction hazards but
+    to protect construction from men''s irresistible urge to be near work. The peepholes
+    become a concession — "we''ll let you look, just don''t come in." The entire infrastructure
+    of construction site safety is reinterpreted as a response to male compulsion.
 
-    pivot_mechanism:
-      operation: mapping
-        # TEST: Source domain — dogs responding to ultrasonic whistle
-        # (involuntary, species-level, sound-triggered compulsion).
-        # Target domain — men responding to the sound of a power drill.
-        # Shared structure: involuntary compulsion triggered by a specific
-        # sound frequency, species-level rather than individual.
-        # The humor is in the aptness — men REALLY DO perk up at drill sounds.
-        # (Note: this is the exact positive example given in
-        # pivot-mechanisms.yaml for mapping.)
-      reading_switch: none
-      scale_shift: none
+    '
+  pivot_locus: logical
+  pivot_concept: construction_site_barriers
+  pivot_mechanism:
+    operation: reinterpretation
+    reading_switch: none
+    scale_shift: expansion
+  setup_frame: establishes_convention
+  primary_template: reductio
+  difficulties: 'Template choice between reductio and mundane_as_monumental was contested.
+    The reframing of fences elevates a mundane observation to grand explanatory theory
+    (mundane_as_monumental territory). But the rhetorical shape is more "accepted
+    premise → absurd conclusion" (reductio): Jerry presents "men are drawn to work"
+    as established fact and then draws an absurd causal inference. The "That''s why"
+    connector is doing reductio work — it presents the conclusion as logically forced.
+    Chose reductio as primary, with the understanding that mundane_as_monumental could
+    be a secondary_template.
 
-    setup_frame: establishes_norm
-      # Continues the established behavioral norm from Joke 1.
+    '
+  physical_performance: null
+- joke_id: seinfeld_s01e04_opening_05
+  transcript_segment: 'But if they don''t cut those holes - we are climbing those
+    fences. Right over there. "What are you using the steel girders down there? Yeah,
+    that''ll hold."
 
-    primary_template: false_equivalence
-      # The rhetorical shape equates men with dogs — two unequal categories
-      # treated as equivalent through the shared property of sound-triggered
-      # compulsion. The tag (curtain scene) then shifts into articulation
-      # territory — the specific performed excitement is pure recognition humor.
+    '
+  setup_expectation: 'The previous joke established peepholes as the concession that
+    keeps men contained. The implicit frame is that the peepholes are sufficient —
+    the system works. Men peek, they''re satisfied.
 
-    difficulties: >
-      Template choice was between mundane_as_monumental and false_equivalence.
-      The dog whistle comparison is explicitly equating men = dogs, which is
-      the false_equivalence shape (two unequal things treated as equivalent).
-      mundane_as_monumental would focus on the elevated-register framing, but
-      the joke's shape is more about the pairing than about elevation. The tag
-      ("Honey, I think Jim's working on something") operates as articulation
-      — pure recognition humor — but is a tag on a mapping-pivoted joke, not
-      a separate joke. This is a place where primary_template vs. tag mechanism
-      creates a layered structure the schema handles through has_tag/tag_function
-      rather than through template.
+    '
+  punchline_violation: '"We are climbing those fences" extends the compulsion past
+    the containment system — if the concession is removed, men will breach the perimeter
+    entirely. The escalation from peeking through holes to scaling fences intensifies
+    the compulsion to absurd levels. The tag — "What are you using the steel girders
+    down there? Yeah, that''ll hold" — callbacks the Philips head question from Joke
+    3 but now scaled up to construction-grade materials, AND adds a mock-expert evaluation
+    ("Yeah, that''ll hold") that deepens the self-delusion of involvement.
 
-  # ---------------------------------------------------------------------------
-  # JOKE 3: Men don't help — they want proximity and dumb questions
-  # ---------------------------------------------------------------------------
-  - joke_id: seinfeld_s01e04_opening_03
-    transcript_segment: >
-      Now they don't actually help the guy. No, they just want to hang
-      around the area where work is being done... We want to watch the
-      guy, we want to talk to him, we want to ask him dumb questions.
-      "What are you using, the Philips head?" You know, we feel involved.
+    '
+  pivot_locus: logical
+  pivot_concept: involuntary_male_compulsion_toward_tools
+  pivot_mechanism:
+    operation: extension
+    reading_switch: none
+    scale_shift: expansion
+  setup_frame: establishes_sequence
+  primary_template: escalation
+  difficulties: 'The tag ("What are you using the steel girders...") is doing multiple
+    things simultaneously: (1) callbacks Joke 3''s Philips head question (narrative
+    callback), (2) escalates the specificity from household tool to industrial material,
+    and (3) adds "Yeah, that''ll hold" — a mock-expert evaluation that extends the
+    self-delusion. The "that''ll hold" moment could be read as its own micro-pivot
+    (articulation of male pseudo-expertise) or as part of the escalation structure.
+    I treated the tag as part of the escalation template rather than as a separate
+    joke, since it doesn''t have an independent setup. setup_frame: establishes_sequence
+    was chosen because the joke depends on the prior sequence of containment/concession,
+    not on establishing a standalone norm. This is the one setup_frame value I was
+    least confident about — establishes_norm could also apply if you read "fences
+    have peepholes" as the established norm being violated by "no peepholes → climbing."
 
-    setup_expectation: >
-      Having established men are drawn to tool work, the audience might
-      expect these men to participate — to help, to contribute, to bond
-      through shared labor. The setup begins to dismantle this: "they
-      don't actually help."
-
-    punchline_violation: >
-      The punchline reveals that men's desire is not to participate but
-      merely to be NEAR the work. The specific dumb question ("What are
-      you using, the Philips head?") crystallizes the pathetic nature of
-      the proximity — the question is not useful, it's a pretense of
-      involvement. "We feel involved" is the devastating summary: the
-      entire behavior is self-delusion about participation. The humor
-      is primarily in articulation — the audience KNOWS this question,
-      has asked or heard it, and the act of naming it is the joke.
-
-    pivot_locus: logical
-
-    pivot_concept: male_pseudo_participation
-      # The concept that men's presence near work is not participation
-      # but a performance of involvement — proximity as substitute for
-      # contribution.
-
-    pivot_mechanism:
-      operation: articulation
-        # TEST: If the audience KNEW the punchline was "What are you
-        # using, the Philips head?" — would it still be funny? YES.
-        # The humor is in the recognition, in hearing the exact dumb
-        # question they've asked or heard a thousand times. There's no
-        # frame switch, no second domain, no contradiction. The joke
-        # states an unspoken shared truth: men ask pointless questions
-        # near work to simulate involvement.
-      reading_switch: none
-      scale_shift: none
-
-    setup_frame: establishes_norm
-      # The setup establishes a recognized behavioral norm — men
-      # congregating around tool work.
-
-    primary_template: escalation
-      # The rhetorical shape builds across beats: drawn to work →
-      # don't help → just want proximity → ask dumb questions →
-      # "feel involved." Each beat commits further to the pathetic
-      # specificity of male non-participation. The Philips head question
-      # is the escalation's peak specificity moment.
-
-    difficulties: >
-      The pivot_mechanism.operation choice between articulation and
-      reinterpretation was close. There IS a reframe element: the setup
-      implies men go to the neighbor to engage with the work, and the
-      punchline reframes it as engagement-theater. But the test for
-      articulation ("would it still be funny if you knew?") clearly passes
-      — the Philips head line is funny because of recognition, not surprise.
-      The "we feel involved" tag has a slight scale_shift (contraction — the
-      grand magnetic compulsion from earlier jokes is deflated to pathetic
-      self-delusion), but this is more the tag's function than the joke's
-      primary pivot mechanism. Chose not to mark scale_shift: contraction
-      because the contraction is in the tag, not in the core punchline.
-      (Note: the vocabulary file uses this exact joke as the positive example
-      for articulation.)
-
-  # ---------------------------------------------------------------------------
-  # JOKE 4: Construction fences are to keep men out
-  # ---------------------------------------------------------------------------
-  - joke_id: seinfeld_s01e04_opening_04
-    transcript_segment: >
-      That's why when they have construction sites, they have to have those
-      wood panel fences around it, that's just to keep the men out. They cut
-      those little holes for us so we can see what the hell is going on.
-
-    setup_expectation: >
-      Construction site fences are understood as safety barriers — they
-      protect passersby from falling debris and protect the construction
-      zone from interference. The peepholes are a known feature. The
-      audience holds the "safety/liability" frame.
-
-    punchline_violation: >
-      The fences are reframed from safety barriers to male-containment
-      systems. Their purpose is not to protect people from construction
-      hazards but to protect construction from men's irresistible urge
-      to be near work. The peepholes become a concession — "we'll let
-      you look, just don't come in." The entire infrastructure of
-      construction site safety is reinterpreted as a response to male
-      compulsion.
-
-    pivot_locus: logical
-
-    pivot_concept: construction_site_barriers
-      # Reinterpreted from safety infrastructure to male-containment
-      # infrastructure.
-
-    pivot_mechanism:
-      operation: reinterpretation
-        # TEST: Two readings of the SAME material —
-        # Reading 1 (setup/default): Construction fences are safety
-        # barriers required by regulation to protect the public.
-        # Reading 2 (punchline): Construction fences exist because men
-        # are so drawn to watching work that they must be physically
-        # contained. The peepholes are a compromise.
-        # Same fences, two frames. Nothing negated — the fences are
-        # reread under a new explanatory frame.
-      reading_switch: none
-      scale_shift: expansion
-        # The specific suburban observation (men watch neighbor's
-        # driveway work) is expanded to explain a universal feature
-        # of urban infrastructure. A personal behavioral quirk now
-        # accounts for the existence of construction site fencing
-        # worldwide. The scope shift from "my neighborhood" to "all
-        # construction sites everywhere" is load-bearing for the humor.
-
-    setup_frame: establishes_norm
-      # Construction fences are presented as a known, normal feature
-      # of the built environment.
-
-    primary_template: reductio
-      # The joke accepts the premise (men are compulsively drawn to
-      # tool work) and follows its implications to an absurd but
-      # logically consistent conclusion: construction site fences
-      # MUST exist because of this compulsion. The "therefore" structure
-      # — "That's why they have those fences" — is the hallmark of
-      # reductio, presenting an absurd conclusion as if forced by the
-      # logic of the premise.
-
-    difficulties: >
-      Template choice between reductio and mundane_as_monumental was
-      contested. The reframing of fences elevates a mundane observation
-      to grand explanatory theory (mundane_as_monumental territory). But
-      the rhetorical shape is more "accepted premise → absurd conclusion"
-      (reductio): Jerry presents "men are drawn to work" as established
-      fact and then draws an absurd causal inference. The "That's why"
-      connector is doing reductio work — it presents the conclusion as
-      logically forced. Chose reductio as primary, with the understanding
-      that mundane_as_monumental could be a secondary_template.
-
-  # ---------------------------------------------------------------------------
-  # JOKE 5: Climbing the fences / steel girders callback
-  # ---------------------------------------------------------------------------
-  - joke_id: seinfeld_s01e04_opening_05
-    transcript_segment: >
-      But if they don't cut those holes - we are climbing those fences.
-      Right over there. "What are you using the steel girders down there?
-      Yeah, that'll hold."
-
-    setup_expectation: >
-      The previous joke established peepholes as the concession that
-      keeps men contained. The implicit frame is that the peepholes are
-      sufficient — the system works. Men peek, they're satisfied.
-
-    punchline_violation: >
-      "We are climbing those fences" extends the compulsion past the
-      containment system — if the concession is removed, men will
-      breach the perimeter entirely. The escalation from peeking through
-      holes to scaling fences intensifies the compulsion to absurd
-      levels. The tag — "What are you using the steel girders down
-      there? Yeah, that'll hold" — callbacks the Philips head question
-      from Joke 3 but now scaled up to construction-grade materials,
-      AND adds a mock-expert evaluation ("Yeah, that'll hold") that
-      deepens the self-delusion of involvement.
-
-    pivot_locus: logical
-
-    pivot_concept: involuntary_male_compulsion_toward_tools
-      # Same core concept, now pushed to its maximum expression.
-
-    pivot_mechanism:
-      operation: extension
-        # TEST: Accepted premise — men are so compulsively drawn to
-        # tool-work that fences must be built to contain them.
-        # Absurd-but-consistent conclusion — if the peepholes aren't
-        # provided, men will physically scale the fences to get to
-        # the work. The premise is never challenged; the joke follows
-        # the logic: if compulsion > containment, then breach.
-      reading_switch: none
-      scale_shift: expansion
-        # The scale shifts from suburban driveway behavior to breaching
-        # construction-site security infrastructure. The same impulse
-        # that made a man peek out his curtain now makes him climb
-        # fences. The expansion in scope and intensity is load-bearing.
-
-    setup_frame: establishes_sequence
-      # The setup is the sequence of escalating containment established
-      # across prior jokes: drawn to driveway → fences built → peepholes
-      # provided. The joke extends this sequence.
-
-    primary_template: escalation
-      # The rhetorical shape is building across beats: the fence-climbing
-      # escalates from the peephole concession, and the steel girders
-      # question escalates from the Philips head question. Both the
-      # action and the dialogue are incremented versions of prior beats.
-      # The humor is in the accumulation.
-
-    difficulties: >
-      The tag ("What are you using the steel girders...") is doing
-      multiple things simultaneously: (1) callbacks Joke 3's Philips head
-      question (narrative callback), (2) escalates the specificity from
-      household tool to industrial material, and (3) adds "Yeah, that'll
-      hold" — a mock-expert evaluation that extends the self-delusion.
-      The "that'll hold" moment could be read as its own micro-pivot
-      (articulation of male pseudo-expertise) or as part of the escalation
-      structure. I treated the tag as part of the escalation template
-      rather than as a separate joke, since it doesn't have an independent
-      setup. setup_frame: establishes_sequence was chosen because the joke
-      depends on the prior sequence of containment/concession, not on
-      establishing a standalone norm. This is the one setup_frame value I
-      was least confident about — establishes_norm could also apply if
-      you read "fences have peepholes" as the established norm being
-      violated by "no peepholes → climbing."
+    '
+  physical_performance: null
+schema_version: '0.6'
+v0_6_reviewed: true
