@@ -1,0 +1,202 @@
+# FILE: annotations/s02e04_opening_pass2.yaml
+
+jokes:
+  - joke_id: "seinfeld_s02e04_opening_01"
+    source:
+      work: "Seinfeld S02E04 'The Phone Message' opening monologue"
+      medium: sitcom_opener
+      year: 1991
+    transcript_fragment: "The bad thing about television is that everybody you see on television is doing something better than what you're doing."
+    joke:
+      content:
+        primary_domain: [media, self_image]
+        concepts: [television, comparison, inadequacy]
+        pivot_concept: tv_vs_reality
+        specificity: {default_level: 2}
+        content_moves: []
+      logic:
+        setup_expectation: "Television criticism could go anywhere — content quality, time waste, cultural impact."
+        punchline_violation: "The 'bad thing' about TV is reframed as a personal inadequacy problem rather than a medium problem. The observation articulates the unspoken feeling that TV makes your own life look pathetic by comparison."
+        pivot_mechanism:
+          operation: articulation
+          reading_switch: none
+          scale_shift: none
+          wordplay: none
+        setup_frame: establishes_premise
+        pivot_locus: affective
+        resolution_requires: [shared_experience]
+      structure:
+        primary_template: bare_observation
+        secondary_templates: []
+        subversions_applied: []
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out:
+          present: false
+          character_type: null
+          register_gap: null
+          character_gloss: ""
+      relational:
+        positioning: {default: lateral_observer}
+        audience_implication: co_observer
+        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 5}
+        performed_relatability: {present: true}
+      narrative:
+        routine_id: s02e04_tv_soda
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: medium}
+    notes: "Setup for the routine. Functions more as premise establishment than a standalone laugh-point, but the articulation of 'everyone on TV is doing something better' names a shared feeling precisely enough to land."
+
+  - joke_id: "seinfeld_s02e04_opening_02"
+    source:
+      work: "Seinfeld S02E04 'The Phone Message' opening monologue"
+      medium: sitcom_opener
+      year: 1991
+    transcript_fragment: "Did you ever see anybody on TV like just sliding off the front of the sofa with potato chip crumbs on their face?"
+    joke:
+      content:
+        primary_domain: [media, daily_life]
+        concepts: [television, reality, sloth, self_image]
+        pivot_concept: real_tv_watching_behavior
+        specificity: {default_level: 4}
+        content_moves: []
+      logic:
+        setup_expectation: "The premise is established that TV people are 'doing something better.' The audience expects examples of impressive TV behavior."
+        punchline_violation: "Instead of showing what TV people DO, Jerry describes what they DON'T show — the actual reality of TV watching. The specific image (sliding off sofa, chip crumbs on face) articulates the undignified truth of the viewer's experience."
+        pivot_mechanism:
+          operation: negation
+          reading_switch: none
+          scale_shift: none
+          wordplay: none
+        setup_frame: establishes_expectation
+        pivot_locus: both
+        resolution_requires: [shared_experience]
+      structure:
+        primary_template: comparison
+        secondary_templates: []
+        subversions_applied: []
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out:
+          present: false
+          character_type: null
+          register_gap: null
+          character_gloss: ""
+      relational:
+        positioning: {default: below}
+        audience_implication: accomplice
+        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 5}
+        performed_relatability: {present: true}
+      narrative:
+        routine_id: s02e04_tv_soda
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: medium}
+    notes: "Negation: TV shows you people doing amazing things; it NEVER shows the opposite — the pathetic reality. The humor is in the contrast between TV reality and actual reality. The specificity of 'sliding off the sofa with potato chip crumbs' articulates the undignified truth. Positioning shifts to 'below' — Jerry places himself among the chip-crumb people."
+
+  - joke_id: "seinfeld_s02e04_opening_03"
+    source:
+      work: "Seinfeld S02E04 'The Phone Message' opening monologue"
+      medium: sitcom_opener
+      year: 1991
+    transcript_fragment: "The soda commercial people - where do they summon this enthusiasm? Have you seen them? 'We have soda, we have soda, we have soda', jumping, laughing, flying through the air - it's a can of soda."
+    joke:
+      content:
+        primary_domain: [media, advertising]
+        concepts: [soda_commercials, enthusiasm, disproportionate_response]
+        pivot_concept: soda_enthusiasm
+        specificity: {default_level: 4}
+        content_moves: []
+      logic:
+        setup_expectation: "Soda commercials portray extreme joy and excitement — the audience recognizes the convention."
+        punchline_violation: "'It's a can of soda' reframes the ecstatic commercial behavior by stripping away the aspirational framing and stating the bare reality of the product. The deflation from extreme enthusiasm to mundane object is the pivot."
+        pivot_mechanism:
+          operation: reinterpretation
+          reading_switch: none
+          scale_shift: contraction
+          wordplay: none
+        setup_frame: establishes_convention
+        pivot_locus: logical
+        resolution_requires: [shared_experience, world_knowledge]
+      structure:
+        primary_template: mundane_as_monumental
+        secondary_templates: [escalation]
+        subversions_applied: []
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out:
+          present: true
+          character_type: enthusiast
+          register_gap: treats_mundane_as_serious
+          character_gloss: "Soda commercial actors performing ecstatic enthusiasm over a carbonated beverage."
+      relational:
+        positioning: {default: lateral_observer}
+        audience_implication: co_observer
+        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 5}
+        performed_relatability: {present: true}
+      narrative:
+        routine_id: s02e04_tv_soda
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: high}
+    notes: "The mundane_as_monumental template describes the commercial convention being observed. The reinterpretation strips away the commercial framing to reveal the absurdity — it's just soda. The act-out voices the commercial people's enthusiasm. The contraction from 'flying through the air' to 'it's a can of soda' is load-bearing."
+
+  - joke_id: "seinfeld_s02e04_opening_04"
+    source:
+      work: "Seinfeld S02E04 'The Phone Message' opening monologue"
+      medium: sitcom_opener
+      year: 1991
+    transcript_fragment: "Have you ever been standing there and you're watching TV and you're drinking the exact same product that they're advertising right there on TV, and it's like, you know, they're spiking volleyballs, jetskiing, girls in bikinis and I'm standing there - 'Maybe I'm putting too much ice in mine.'"
+    joke:
+      content:
+        primary_domain: [media, advertising, daily_life]
+        concepts: [soda_commercials, reality_gap, inadequacy, self_blame]
+        pivot_concept: self_blame_for_soda_experience
+        specificity: {default_level: 5}
+        content_moves: []
+      logic:
+        setup_expectation: "You're drinking the same soda as the commercial people, but your experience is nothing like theirs — the audience expects an observation about the gap between ad and reality."
+        punchline_violation: "Instead of blaming the advertising, the speaker blames HIMSELF — 'Maybe I'm putting too much ice in mine.' Reframes the advertising/reality gap as a personal preparation error, as if the right ice-to-soda ratio would produce volleyball-spiking euphoria."
+        pivot_mechanism:
+          operation: reinterpretation
+          reading_switch: none
+          scale_shift: contraction
+          wordplay: none
+        setup_frame: establishes_anomaly
+        pivot_locus: both
+        resolution_requires: [shared_experience]
+      structure:
+        primary_template: comparison
+        secondary_templates: [escalation]
+        subversions_applied: []
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out:
+          present: true
+          character_type: everyman
+          register_gap: unaware_of_absurdity
+          character_gloss: "A regular person concluding that the gap between their soda experience and the commercial must be their own fault — too much ice."
+      relational:
+        positioning: {default: below}
+        audience_implication: accomplice
+        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 5}
+        performed_relatability: {present: true}
+      narrative:
+        routine_id: s02e04_tv_soda
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: high}
+    notes: "The monologue's strongest laugh-point. The reinterpretation shifts the frame from 'advertising is misleading' to 'I must be doing it wrong.' The comparison template structures the TV-experience vs. real-experience juxtaposition. The act-out character is genuinely puzzled and self-blaming — unaware_of_absurdity because they sincerely consider ice ratio as the variable. Contraction: cosmic lifestyle gap reduced to ice quantity."

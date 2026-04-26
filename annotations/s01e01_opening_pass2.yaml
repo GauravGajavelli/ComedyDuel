@@ -1,0 +1,231 @@
+# FILE: annotations/s01e01_opening_pass2.yaml
+jokes:
+  - joke_id: "seinfeld_s01e01_opening_01"
+    source:
+      work: "Seinfeld S01E01 'The Seinfeld Chronicles' opening monologue"
+      medium: sitcom_opener
+      year: 1989
+    transcript_fragment: "To be out, this is out...and out is one of the single most enjoyable experiences of life."
+    joke:
+      content:
+        primary_domain: [social_ritual]
+        concepts: [going_out, leisure, social_experience]
+        pivot_concept: going_out
+        specificity: {default_level: 2}
+        content_moves: []
+      logic:
+        setup_expectation: "Jerry asks 'why we're here' - the audience expects a philosophical or existential answer to this loaded question."
+        punchline_violation: "The answer is flatly literal: we're here to be 'out'. The grand question gets a mundane, tautological answer - being out IS the point."
+        pivot_mechanism:
+          operation: reinterpretation
+          reading_switch: none
+          scale_shift: contraction
+          wordplay: none
+        setup_frame: establishes_premise
+        pivot_locus: logical
+        resolution_requires: [shared_experience]
+      structure:
+        primary_template: mundane_as_monumental
+        secondary_templates: []
+        subversions_applied: []
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out: {present: false, character_type: null, register_gap: null, character_gloss: ""}
+      relational:
+        positioning: {default: lateral_observer}
+        audience_implication: co_observer
+        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 4}
+        performed_relatability: {present: true}
+      narrative:
+        routine_id: "s01e01_going_out"
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: high}
+    notes: "The 'why we're here' philosophical framing reread as literal location is a clean reinterpretation. Scale_shift is independent - the contraction from existential to spatial adds a modifier but the reinterpretation would survive without it."
+
+  - joke_id: "seinfeld_s01e01_opening_02"
+    source:
+      work: "Seinfeld S01E01 'The Seinfeld Chronicles' opening monologue"
+      medium: sitcom_opener
+      year: 1989
+    transcript_fragment: "There are people tryin' to find us, they don't know where we are. 'Did you ring?, I can't find him.' 'Where did he go?' 'He didn't tell me where he was going'. He must have gone out."
+    joke:
+      content:
+        primary_domain: [social_ritual]
+        concepts: [going_out, absence, phone_call, searching]
+        pivot_concept: going_out
+        specificity: {default_level: 3}
+        content_moves: []
+      logic:
+        setup_expectation: "Going out is presented as a collective escape - the audience is enjoying the shared experience of being 'out'."
+        punchline_violation: "The act-out dramatizes the mundane panic of people left behind trying to find us, turning the joyful 'out' into a minor crisis for others. The specificity of the phone call makes an abstract observation concrete and recognizable."
+        pivot_mechanism:
+          operation: articulation
+          reading_switch: none
+          scale_shift: none
+          wordplay: none
+        setup_frame: establishes_premise
+        pivot_locus: affective
+        resolution_requires: [shared_experience]
+      structure:
+        primary_template: bare_observation
+        secondary_templates: []
+        subversions_applied: []
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out: {present: true, character_type: everyman, register_gap: none, character_gloss: "Person at home trying to reach someone who went out; bewildered, slightly annoyed phone caller."}
+      relational:
+        positioning: {default: lateral_observer}
+        audience_implication: co_observer
+        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 4}
+        performed_relatability: {present: true}
+      narrative:
+        routine_id: "s01e01_going_out"
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: medium}
+    notes: "Borderline articulation/reinterpretation. The phone-call act-out names a universally recognized scenario without shifting frame - the humor is in the precision of the naming. The audience recognizes the specific phone exchange from their own lives."
+
+  - joke_id: "seinfeld_s01e01_opening_03"
+    source:
+      work: "Seinfeld S01E01 'The Seinfeld Chronicles' opening monologue"
+      medium: sitcom_opener
+      year: 1989
+    transcript_fragment: "You wanna go out: you get ready, you pick out the clothes, right? You take the shower, you get all ready, get the cash, get your friends, the car, the spot, the reservation...There you're staring around, whatta you do? You go: 'We gotta be getting back'."
+    joke:
+      content:
+        primary_domain: [social_ritual]
+        concepts: [going_out, preparation, anticipation, disappointment]
+        pivot_concept: going_out
+        specificity: {default_level: 3}
+        content_moves: []
+      logic:
+        setup_expectation: "The escalating list of preparations builds toward a climax - the big payoff of the night out. The audience expects the destination to be worth the effort."
+        punchline_violation: "After all that preparation, the immediate impulse is to go home. The desire to be 'out' is negated the moment you arrive."
+        pivot_mechanism:
+          operation: negation
+          reading_switch: none
+          scale_shift: none
+          wordplay: none
+        setup_frame: establishes_sequence
+        pivot_locus: logical
+        resolution_requires: [shared_experience]
+      structure:
+        primary_template: escalation
+        secondary_templates: []
+        subversions_applied: []
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out: {present: false, character_type: null, register_gap: null, character_gloss: ""}
+      relational:
+        positioning: {default: lateral_observer}
+        audience_implication: co_observer
+        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 4}
+        performed_relatability: {present: true}
+      narrative:
+        routine_id: "s01e01_going_out"
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: high}
+    notes: "Clean negation. The setup implies going out is desirable (all the preparation effort). The punchline asserts not-desirable: the instant you're out, you want to go back. The escalating preparation list is the template shape (escalation); the negation is the operation."
+
+  - joke_id: "seinfeld_s01e01_opening_04"
+    source:
+      work: "Seinfeld S01E01 'The Seinfeld Chronicles' opening monologue"
+      medium: sitcom_opener
+      year: 1989
+    transcript_fragment: "Once you're out, you wanna get back! You wanna go to sleep, you wanna get up, you wanna go out again tomorrow, right?"
+    joke:
+      content:
+        primary_domain: [social_ritual, existential]
+        concepts: [going_out, cycle, restlessness, human_nature]
+        pivot_concept: cycle
+        specificity: {default_level: 2}
+        content_moves: []
+      logic:
+        setup_expectation: "The negation (wanting to go back once you're out) seems like the punchline. The audience has landed on the contradiction."
+        punchline_violation: "Jerry extends the negation into an endless cycle - out/back/sleep/up/out again - revealing that the contradiction isn't a one-time thing but a perpetual loop of human restlessness."
+        pivot_mechanism:
+          operation: extension
+          reading_switch: none
+          scale_shift: expansion
+          wordplay: none
+        setup_frame: establishes_premise
+        pivot_locus: logical
+        resolution_requires: [shared_experience]
+      structure:
+        primary_template: escalation
+        secondary_templates: []
+        subversions_applied: []
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out: {present: false, character_type: null, register_gap: null, character_gloss: ""}
+      relational:
+        positioning: {default: lateral_observer}
+        audience_implication: co_observer
+        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 5}
+        performed_relatability: {present: true}
+      narrative:
+        routine_id: "s01e01_going_out"
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: medium}
+    notes: "Tags the previous joke's negation by extending the logic into a cycle. The scale_shift to expansion is independent - the cycle works at the specific level (tonight's outing) but the expansion to universal pattern adds comedic weight."
+
+  - joke_id: "seinfeld_s01e01_opening_05"
+    source:
+      work: "Seinfeld S01E01 'The Seinfeld Chronicles' opening monologue"
+      medium: sitcom_opener
+      year: 1989
+    transcript_fragment: "Wherever you are in life, it's my feeling, you've gotta go."
+    joke:
+      content:
+        primary_domain: [existential, social_ritual]
+        concepts: [going_out, restlessness, human_condition, movement]
+        pivot_concept: going_out
+        specificity: {default_level: 1}
+        content_moves: []
+      logic:
+        setup_expectation: "The routine has been about the specific cycle of going out and coming back. The audience is in the frame of a social-ritual observation."
+        punchline_violation: "'You've gotta go' reinterprets the entire routine: 'going out' becomes a universal existential principle. The specific nightlife observation is reread as a statement about the human condition - we are always in transit."
+        pivot_mechanism:
+          operation: reinterpretation
+          reading_switch: none
+          scale_shift: expansion
+          wordplay: none
+        setup_frame: establishes_convention
+        pivot_locus: both
+        resolution_requires: [shared_experience]
+      structure:
+        primary_template: mundane_as_monumental
+        secondary_templates: []
+        subversions_applied: []
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out: {present: false, character_type: null, register_gap: null, character_gloss: ""}
+      relational:
+        positioning: {default: lateral_observer}
+        audience_implication: co_observer
+        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 5}
+        performed_relatability: {present: false}
+      narrative:
+        routine_id: "s01e01_going_out"
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: high}
+    notes: "The button on the routine. 'Wherever you are in life' lifts the specific going-out cycle to existential principle. The reinterpretation is from social-ritual frame to existential frame. Scale_shift expansion is independent and load-bearing - matches the example in pivot-mechanisms.yaml."

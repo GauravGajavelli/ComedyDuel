@@ -75,38 +75,11 @@ meta_structural:
       Register_break shifts the voice register without commentary.
       Both can break frame but via different means.
 
-register_break:
-  criterion: |
-    The comedian's established voice register is deliberately broken
-    mid-joke or between jokes. A comedian known for understatement
-    suddenly commits fully; a high-energy comedian suddenly deadpans.
-    The break is only funny if the voice is well-established —
-    register_break's power depends on the audience having learned the
-    default.
-
-  positive_example: |
-    A comedian who has spent ten minutes in laid-back Mort-style
-    observation suddenly delivering one line with wild full-volume
-    commitment, then returning to understatement. The single-line
-    break lands precisely because the surrounding register is so
-    consistent.
-
-  negative_example: |
-    A comedian who alternates between calm and loud throughout their
-    set. NOT register_break — no established register to break
-    against. Register_break requires a baseline; without baseline,
-    volume shifts are just inconsistency.
-
-  distinguished_from:
-    structural_refusal: |
-      See structural_refusal's distinguished_from.
-
-    meta_structural: |
-      See meta_structural's distinguished_from.
-
-    anti_callback: |
-      Register_break shifts the voice; anti_callback refuses a
-      callback opportunity. Different axes. Can co-occur.
+# register_break — MOVED to performance.delivery.register_break in v0.9.
+# It is performer-specific: what's a register break for Mort (deadpan
+# default) is baseline for Cece (high-energy default). The same joke text
+# might have register_break in one performer's delivery and not another's.
+# See schema.yaml performance.delivery.register_break.
 
 specificity_subversion:
   criterion: |
@@ -141,36 +114,7 @@ specificity_subversion:
       subversion refuses an expected level of detail. Different
       refusals; can co-occur but are distinct.
 
-anti_callback:
-  criterion: |
-    The joke sets up a callback opportunity and pointedly doesn't
-    take it. Requires session memory — the audience must recognize
-    that a callback was available. The refusal to callback IS the
-    comedic move. Nearest to structural_refusal but specific to
-    callback expectations.
-
-  positive_example: |
-    A comedian earlier in the set has established a distinctive
-    premise. Later, a prompt invites an obvious callback to that
-    premise. The comedian instead takes the joke in an unrelated
-    direction, with just enough of a pause to signal they know what
-    they're not doing.
-
-  negative_example: |
-    A comedian who never does callbacks. NOT anti_callback — no
-    expectation to subvert. Anti_callback requires the callback
-    opportunity to be salient to the audience.
-
-  distinguished_from:
-    structural_refusal: |
-      Anti_callback is a specific subset of structural_refusal
-      applying to callback opportunities. Use anti_callback when
-      the refused move is specifically a callback; use
-      structural_refusal for other refusals.
-
-    meta_structural: |
-      Anti_callback refuses silently. Meta_structural commentary on
-      a refused callback ("I could callback to the parking garage
-      thing now but I won't") is meta_structural with a callback
-      topic — they can co-occur but the primary tag is
-      meta_structural when commentary is explicit.
+# anti_callback — MOVED to joke.narrative.anti_callback in v0.9.
+# It is context-dependent: whether a callback opportunity exists depends
+# on what was performed earlier in the set, not on the joke's text alone.
+# See schema.yaml joke.narrative.anti_callback.

@@ -1,0 +1,202 @@
+# FILE: annotations/s02e02_opening_pass2.yaml
+
+jokes:
+  - joke_id: "seinfeld_s02e02_opening_01"
+    source:
+      work: "Seinfeld S02E02 'The Pony Remark' opening monologue"
+      medium: sitcom_opener
+      year: 1991
+    transcript_fragment: "My parents live in Florida now. They moved there last year. They didn't want to move to Florida, but they're in their sixties, and that's the law."
+    joke:
+      content:
+        primary_domain: [aging, social_conventions]
+        concepts: [retirement, florida, aging, compulsion]
+        pivot_concept: retirement_migration_as_law
+        specificity: {default_level: 2}
+        content_moves: []
+      logic:
+        setup_expectation: "Parents moved to Florida — the audience expects a personal reason (climate, family, etc.)."
+        punchline_violation: "Reframes voluntary retirement migration as legally compulsory. The universality of the phenomenon is treated as if it were an actual statute."
+        pivot_mechanism:
+          operation: reinterpretation
+          reading_switch: literal_to_figurative
+          scale_shift: expansion
+          wordplay: none
+        setup_frame: establishes_premise
+        pivot_locus: logical
+        resolution_requires: [shared_experience, world_knowledge]
+      structure:
+        primary_template: mundane_as_monumental
+        secondary_templates: []
+        subversions_applied: []
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out:
+          present: false
+          character_type: null
+          register_gap: null
+          character_gloss: ""
+      relational:
+        positioning: {default: lateral_observer}
+        audience_implication: co_observer
+        shared_experience: {required: true, universality: common, comprehensibility_without_experience: 4}
+        performed_relatability: {present: false}
+      narrative:
+        routine_id: s02e02_parents_florida
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: high}
+    notes: "The reading_switch is literal_to_figurative: 'the law' is stated literally but functions figuratively to describe the cultural inevitability of Florida retirement. The expansion (personal anecdote to universal law) is independently removable — the joke works without it being 'law' but the inflation is additive."
+
+  - joke_id: "seinfeld_s02e02_opening_02"
+    source:
+      work: "Seinfeld S02E02 'The Pony Remark' opening monologue"
+      medium: sitcom_opener
+      year: 1991
+    transcript_fragment: "They got the leisure police. They pull up in front of the old people's house with a golf cart, jump out, 'Let's go Pop, white belt, white pants, white shoes, get in the back. Drop the snow shovel right there, drop it!'"
+    joke:
+      content:
+        primary_domain: [aging, social_conventions, authority]
+        concepts: [retirement, florida, police, leisure_wear, enforcement]
+        pivot_concept: leisure_enforcement
+        specificity: {default_level: 5}
+        content_moves: []
+      logic:
+        setup_expectation: "The 'law' premise has been established. The audience expects elaboration but the specific execution — a full law-enforcement scenario for retirement lifestyle — is surprising."
+        punchline_violation: "Transplants the entire apparatus of a police arrest (pulling up, jumping out, barking orders, 'get in the back') onto the domain of retirement leisure. The framework of law enforcement is applied to putting on white pants."
+        pivot_mechanism:
+          operation: transplant
+          reading_switch: none
+          scale_shift: none
+          wordplay: none
+        setup_frame: establishes_premise
+        pivot_locus: both
+        resolution_requires: [shared_experience, world_knowledge]
+      structure:
+        primary_template: escalation
+        secondary_templates: [comparison]
+        subversions_applied: []
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out:
+          present: true
+          character_type: authority
+          register_gap: treats_mundane_as_serious
+          character_gloss: "Leisure police officer barking arrest-style commands about retirement clothing and accessories."
+      relational:
+        positioning: {default: lateral_observer}
+        audience_implication: co_observer
+        shared_experience: {required: true, universality: common, comprehensibility_without_experience: 3}
+        performed_relatability: {present: false}
+      narrative:
+        routine_id: s02e02_parents_florida
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: high}
+    notes: "Clear transplant: source domain = law enforcement (arrest procedure), target domain = retirement lifestyle. The framework genuinely doesn't fit — the mismatch between the urgency of a police raid and the banality of white belts IS the joke. The escalating specificity (white belt, white pants, white shoes, snow shovel) builds the act-out across beats."
+
+  - joke_id: "seinfeld_s02e02_opening_03"
+    source:
+      work: "Seinfeld S02E02 'The Pony Remark' opening monologue"
+      medium: sitcom_opener
+      year: 1991
+    transcript_fragment: "I am not much for the family gathering. You know, you sit there, and the conversation's so boring. It's so dull. And you start to fantasize. You know, you think, what if I just got up and jumped out that window?"
+    joke:
+      content:
+        primary_domain: [domestic_life, social_obligations]
+        concepts: [family_gathering, boredom, escape_fantasy]
+        pivot_concept: window_escape
+        specificity: {default_level: 3}
+        content_moves: []
+      logic:
+        setup_expectation: "Family gatherings are boring — the audience expects a conventional complaint or a mild fantasy of escape."
+        punchline_violation: "The escape fantasy is not leaving politely or daydreaming — it's violently jumping through a window. The disproportionate physical response to conversational boredom is the pivot."
+        pivot_mechanism:
+          operation: extension
+          reading_switch: none
+          scale_shift: expansion
+          wordplay: none
+        setup_frame: establishes_expectation
+        pivot_locus: both
+        resolution_requires: [shared_experience]
+      structure:
+        primary_template: mundane_as_monumental
+        secondary_templates: []
+        subversions_applied: []
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out:
+          present: false
+          character_type: null
+          register_gap: null
+          character_gloss: ""
+      relational:
+        positioning: {default: lateral_observer}
+        audience_implication: co_observer
+        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 5}
+        performed_relatability: {present: true}
+      narrative:
+        routine_id: s02e02_family_gathering
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: medium}
+    notes: "Extension: the boredom premise is accepted and the escape fantasy is followed past reasonable bounds. The scale_shift (expansion) is independently removable — the joke works as 'what if I just left' but the window-jumping escalates it. Mundane_as_monumental template because the trivial stimulus (boring chat) receives the gravity of a defenestration fantasy."
+
+  - joke_id: "seinfeld_s02e02_opening_04"
+    source:
+      work: "Seinfeld S02E02 'The Pony Remark' opening monologue"
+      medium: sitcom_opener
+      year: 1991
+    transcript_fragment: "Come back in, there's broken glass, everybody's all upset. 'No, I'm alright. I was just a little bored, there. No, I'm fine. I came back. I wanted to hear a little about that Hummel collection, Aunt Rose. Let's pick it up right there.'"
+    joke:
+      content:
+        primary_domain: [domestic_life, social_obligations]
+        concepts: [family_gathering, boredom, social_norms, understatement]
+        pivot_concept: casual_return_from_defenestration
+        specificity: {default_level: 5}
+        content_moves: []
+      logic:
+        setup_expectation: "Having established the window-jumping fantasy, the audience expects the fantasy to end there or escalate further into absurdity."
+        punchline_violation: "Instead, the person casually returns to the family gathering as if nothing extreme happened, offering a hilariously mundane explanation ('a little bored') and asking to resume the boring conversation ('Hummel collection'). The return to normalcy after the extreme is the pivot."
+        pivot_mechanism:
+          operation: reinterpretation
+          reading_switch: none
+          scale_shift: contraction
+          wordplay: none
+        setup_frame: establishes_anomaly
+        pivot_locus: both
+        resolution_requires: [shared_experience]
+      structure:
+        primary_template: monumental_as_mundane
+        secondary_templates: []
+        subversions_applied: []
+        has_tag: true
+        tag_operation: extends
+        tag_has_own_pivot: true
+        act_out:
+          present: true
+          character_type: everyman
+          register_gap: treats_serious_as_mundane
+          character_gloss: "Person who just jumped through a window reassuring family it was no big deal, casually resuming the boring conversation."
+      relational:
+        positioning: {default: lateral_observer}
+        audience_implication: co_observer
+        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 5}
+        performed_relatability: {present: true}
+      narrative:
+        routine_id: s02e02_family_gathering
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: high}
+    notes: "The Hummel collection detail is a tag with its own pivot — it adds the specificity of exactly the kind of deadly boring topic that triggered the escape. The act-out character treats jumping through a window as a casual break, then eagerly returns to the very thing that caused the escape. The contraction (defenestration reduced to 'a little bored') is load-bearing."

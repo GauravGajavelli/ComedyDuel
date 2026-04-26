@@ -29,6 +29,20 @@
 #                      norm of silence around shared truths; also social bonding
 #                      theory (affiliative laughter from recognition)
 #
+# Additionally, the WORDPLAY sub-dimension (a modifier, not an operation)
+# captures phonemic delivery mechanisms:
+#
+#   wordplay         — Phonemic ambiguity (Attardo 1994; Toplyn 2014, 2020-2021
+#                      patents): two semantic domains collide through shared sound.
+#                      This is a DELIVERY VEHICLE for an underlying cognitive
+#                      operation, not an operation itself. A joke can be
+#                      reinterpretation + wordplay, mapping + wordplay, or
+#                      transplant + wordplay. Wordplay is never the only thing
+#                      happening — there is always an underlying frame shift.
+#                      Cross-referenced from Toplyn's WitScript formula taxonomy
+#                      (Types #1-#4 in US patents 10,642,939 / 10,878,817 /
+#                      11,080,485)
+#
 # When proposing new operations, they do NOT need to fit incongruity theory.
 # They need to describe a real, recurring, distinguishable cognitive mechanism.
 # Identify: (1) what the punchline does, (2) which theory explains why it's
@@ -428,10 +442,118 @@ scale_shift:
       paper with writing on it" is load-bearing.
 
 # ============================================================================
+# SUB-DIMENSION 4: wordplay
+# ============================================================================
+#
+# Does the punchline use phonemic collision (words that sound alike but mean
+# differently) as the DELIVERY VEHICLE for the cognitive operation? Most
+# jokes: none. Specified independently from operation.
+#
+# Wordplay is NOT a cognitive operation — it does not describe what happens
+# to the audience's frame. It describes HOW the pivot is lexically
+# constructed. A joke is always [operation] + [optional wordplay]:
+#   - reinterpretation + portmanteau ("potty larceny" — legal term reread
+#     through diaper frame, delivered via phonemic substitution)
+#   - mapping + portmanteau ("Zikachu" — structural parallel between virus
+#     and Pokemon, delivered via blended neologism)
+#   - transplant + collocation_disruption ("Rash Mountain" — disease
+#     framework imported into theme park, delivered via phrase substitution)
+#
+# The specific pun words are NOT recorded — they are realization-stage
+# output. The annotation captures: the construction pattern (which sub-type),
+# and which two semantic domains collide (via pivot_concept and concepts).
+#
+# Cross-referenced from Toplyn's WitScript formula taxonomy (Types #1-#4
+# in US patents 10,642,939 / 10,878,817 / 11,080,485). Toplyn's formulas
+# are lexical production mechanisms; this sub-dimension captures the
+# structural pattern so the realization stage knows which technique to apply.
+
+wordplay:
+
+  none:
+    criterion: |
+      No phonemic collision. The punchline delivers its cognitive operation
+      through semantic content, not through words that sound alike.
+
+  phonemic_pair:
+    criterion: |
+      Two separate words that sound similar are placed adjacent or in
+      parallel, linking two semantic domains through their shared sound.
+      The simplest form of wordplay.
+    test: |
+      Can you identify two distinct words that share phonemic similarity
+      but come from different semantic domains? If yes, and replacing
+      either word with a synonym kills the humor, this is phonemic_pair.
+    positive_example: |
+      "Egg smokes" (from "egg yolks" + "smoking" — WitScript). Two words
+      placed adjacent; their phonemic proximity links the food domain to
+      the health-risk domain. Replace "smokes" with "cigarettes" and the
+      wordplay dies.
+    distinguished_from:
+      portmanteau: |
+        Phonemic_pair keeps both words separate. Portmanteau fuses them
+        into a single neologism. Test: are there two distinct words
+        (phonemic_pair) or one blended word (portmanteau)?
+
+  portmanteau:
+    criterion: |
+      A blended neologism fuses parts of two words from different
+      semantic domains into a single new word. The audience decodes the
+      blend to access both source meanings simultaneously.
+    test: |
+      Can you identify a single coined word that contains recognizable
+      parts of two source words from different domains? If yes, and the
+      humor depends on hearing both source words through the blend, this
+      is portmanteau.
+    positive_example: |
+      "Tinderella" (WitScript, from "Tinder" + "Cinderella"). The
+      portmanteau fuses dating-app and fairy-tale domains. The humor
+      requires hearing both source words through the blend.
+
+      "Pooland Spring" (WitScript, from "poo" + "Poland Spring"). Sewage
+      and drinking water linked via phonemic fusion.
+    distinguished_from:
+      phonemic_pair: |
+        See phonemic_pair's distinguished_from.
+      collocation_disruption: |
+        Portmanteau creates a NEW word. Collocation_disruption modifies
+        an EXISTING phrase. Test: is the result a word that didn't exist
+        before (portmanteau) or a known phrase with one word swapped
+        (collocation_disruption)?
+
+  collocation_disruption:
+    criterion: |
+      A known phrase, compound, or collocation has one component word
+      swapped for a phonemically similar word from another semantic
+      domain. The audience recognizes the original phrase through the
+      remaining words and is surprised by the substitution.
+    test: |
+      Can you identify a known phrase where one word has been replaced
+      by a phonemically similar word from a different domain? If yes,
+      and the humor depends on the audience recognizing the original
+      phrase, this is collocation_disruption.
+    positive_example: |
+      "Rash Mountain" (WitScript, from "Splash Mountain" + measles/rash).
+      The audience recognizes "Splash Mountain" through "___ Mountain"
+      and is surprised by the disease-related substitution.
+
+      "Duck, Duck, Goose-step" (WitScript). The children's game is
+      recognizable; the Nazi-reference substitution creates the collision.
+    distinguished_from:
+      portmanteau: |
+        See portmanteau's distinguished_from.
+      phonemic_pair: |
+        Collocation_disruption operates on an existing phrase.
+        Phonemic_pair places two independent words together. Test: is
+        there a pre-existing phrase being modified
+        (collocation_disruption) or two free-standing words placed in
+        proximity (phonemic_pair)?
+
+# ============================================================================
 # Combined classification examples
 # ============================================================================
 #
-# Showing how the three sub-dimensions work together on real jokes.
+# Showing how the four sub-dimensions work together on real jokes.
 #
 # "I used to do drugs. I still do, but I used to, too."
 #   pivot_operation: negation
@@ -477,3 +599,32 @@ scale_shift:
 #   pivot_operation: reinterpretation
 #   reading_switch: literal_to_figurative
 #   scale_shift: none
+#   wordplay: none
+#
+# "Tinderella" (Tinder + Cinderella, dating app for Disney fans)
+#   pivot_operation: mapping
+#   reading_switch: none
+#   scale_shift: none
+#   wordplay: portmanteau
+#   (The cognitive operation is mapping — dating app and fairy tale share
+#   the structure of "seeking a romantic match." The portmanteau is HOW
+#   that parallel is delivered, not WHAT the parallel is.)
+#
+# "Rash Mountain" (measles + Splash Mountain at Disneyland)
+#   pivot_operation: transplant
+#   reading_switch: none
+#   scale_shift: none
+#   wordplay: collocation_disruption
+#   (The cognitive operation is transplant — disease framework imported
+#   into theme park. The collocation disruption is HOW the import is
+#   delivered.)
+#
+# "potty larceny" (diapers + petty larceny)
+#   pivot_operation: reinterpretation
+#   reading_switch: none
+#   scale_shift: contraction
+#   wordplay: collocation_disruption
+#   (The cognitive operation is reinterpretation — the legal term is
+#   reread through a diaper frame. Scale_shift captures the contraction
+#   from serious crime to toilet humor. Collocation disruption is the
+#   lexical delivery vehicle.)

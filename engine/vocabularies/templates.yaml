@@ -37,7 +37,7 @@ mundane_as_monumental:
       mundane-as-monumental is common — the frame stays elevated while
       specificity escalates).
 
-    false_equivalence: |
+    comparison: |
       False_equivalence pairs two unequal things as equivalents within
       the joke. Mundane_as_monumental elevates the mundane without
       pairing it with a specific important counterpart — the
@@ -92,12 +92,12 @@ monumental_as_mundane:
       chain. Test: is there a logical progression (reductio), or just a
       register mismatch (monumental_as_mundane)?
 
-    false_equivalence: |
+    comparison: |
       False_equivalence pairs two unequal things. Monumental_as_mundane
       does not pair — it treats a single significant subject with a
       trivially inadequate frame. No second comparand is needed.
 
-shared_recognition:
+bare_observation:
   criterion: |
     The joke's rhetorical shape IS the act of naming a shared but
     unspoken truth. There is no argumentative chain (reductio), no
@@ -143,7 +143,7 @@ shared_recognition:
       (escalation), or does a single naming do the work
       (shared_recognition)?
 
-    false_equivalence: |
+    comparison: |
       False_equivalence pairs two things. Shared_recognition names
       one thing. Test: does the joke compare two things
       (false_equivalence) or simply name one known thing
@@ -181,11 +181,12 @@ escalation:
       (specificity, imagery, commitment); reductio is the
       logical-argument subset.
 
-    anthropomorphization: |
-      Escalation is about building. Anthropomorphization is about
-      treating something non-human as human (often while also escalating
-      specificity of the treatment). Can co-occur — Cece's territory
-      often has escalating anthropomorphization.
+    # NOTE: anthropomorphization removed from templates in v0.9.
+    # It is a content-level technique (what the joke does with its
+    # subject), not a rhetorical shape (how the joke unfolds). Moved to
+    # joke.content.content_moves. Jokes that anthropomorphize should have
+    # their actual rhetorical shape (escalation, reductio, comparison,
+    # etc.) as the template, plus content_moves: [anthropomorphization].
 
 reductio:
   criterion: |
@@ -211,7 +212,7 @@ reductio:
     escalation: |
       See escalation's distinguished_from.
 
-    false_equivalence: |
+    comparison: |
       False_equivalence equates two unequal things in a single move.
       Reductio builds a chain to an absurd conclusion. Reductio often
       ENDS in false_equivalence, but the template is the argumentative
@@ -224,41 +225,11 @@ reductio:
       has primary_template: reductio and reading_switch:
       figurative_to_literal on that step's pivot.
 
-anthropomorphization:
-  criterion: |
-    The joke treats a non-human entity (object, concept, feeling,
-    institution, abstract phenomenon) as if it had human
-    characteristics — agency, interiority, social behavior, motives.
-    Specificity of the anthropomorphization is often where the humor
-    intensifies.
+# anthropomorphization — REMOVED in v0.9.
+# Was a content category, not a rhetorical shape. Moved to
+# joke.content.content_moves. See schema-changelog.md v0.9.
 
-  positive_example: |
-    "The Little Guilt that lives in my kitchen drawer." (Cece-style)
-    Guilt is treated as a small entity with a dwelling. The
-    specificity of the dwelling (kitchen drawer, not just "somewhere")
-    and the diminutive framing ("Little") commit fully to the
-    anthropomorphic frame.
-
-  negative_example: |
-    "Parking garages are like memory puzzles." NOT anthropomorphization.
-    Parking garages are being compared to a non-human abstraction
-    (puzzles), not given human characteristics. This is closer to
-    reframe or false_equivalence.
-
-  distinguished_from:
-    false_equivalence: |
-      False_equivalence pairs two things as equivalent. Anthropomorph-
-      ization gives human traits to one non-human thing. Test: is the
-      joke comparing A to B (false_equivalence) or giving A human
-      qualities (anthropomorphization)?
-
-    escalation: |
-      Anthropomorphization describes the move (treat non-human as
-      human). Escalation describes a building structure. They often
-      co-occur — anthropomorphization is more interesting when
-      escalated to specific absurd detail.
-
-false_equivalence:
+comparison:
   criterion: |
     The joke treats two unequal things as if they were equivalent,
     usually by applying the same descriptive frame, standard, or
@@ -288,29 +259,22 @@ false_equivalence:
 
   distinguished_from:
     mapping_pivot_operation: |
-      False_equivalence is a TEMPLATE (rhetorical shape): the joke
-      EQUATES two things that are not equal, and the mismatch of the
-      pairing is the joke. Mapping is a PIVOT OPERATION (cognitive
-      mechanism): the joke REVEALS a structural parallel between two
-      domains. They can co-occur (a joke can use the false_equivalence
-      template with a mapping pivot if the "equivalence" reveals an
-      apt parallel), but they're at different layers. Test: is the
-      humor in the pairing being wrong (false_equivalence template) or
-      in the parallel being right (mapping pivot)?
+      Comparison is a TEMPLATE (rhetorical shape): the joke places
+      two things side by side. Mapping is a PIVOT OPERATION (cognitive
+      mechanism): the joke REVEALS a structural parallel. They can
+      co-occur (a comparison that reveals an apt parallel), but they're
+      at different layers. Test: is this about the discourse shape
+      (two things juxtaposed = comparison template) or the cognitive
+      shift (parallel revealed = mapping operation)?
 
     transplant_pivot_operation: |
-      Transplant (pivot_mechanism.operation) APPLIES a foreign
-      framework to a domain where it doesn't belong. False_equivalence
-      (template) EQUATES two things directly. Transplant imports rules;
-      false_equivalence pairs entities. A joke can use both (equating
-      friendship and corporate employment imports the HR framework),
-      but the template is the equivalence structure, and the mechanism
-      is the framework import.
-
-    anthropomorphization: |
-      See anthropomorphization's distinguished_from.
+      Transplant APPLIES a foreign framework. Comparison JUXTAPOSES
+      two things. Transplant imports rules; comparison places entities
+      side by side. A joke can use both (comparing friendship and
+      corporate employment imports the HR framework), but the template
+      is the juxtaposition structure, and the mechanism is the import.
 
     reductio: |
-      Reductio builds toward an absurd conclusion. False_equivalence
-      can appear AS that conclusion, but the template is the
-      equivalence-pairing itself, not the chain leading to it.
+      Reductio builds toward an absurd conclusion. Comparison can
+      appear AS that conclusion, but the template is the juxtaposition
+      itself, not the chain leading to it.

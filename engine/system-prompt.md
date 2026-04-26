@@ -5,6 +5,14 @@
 # or voice interface is being used.
 #
 # --- Revision history ---
+# v0.3 - Schema v0.9 comprehensive audit. Created joke.relational layer
+#        (positioning, audience_implication, shared_experience moved from
+#        performance). Templates renamed: false_equivalence→comparison,
+#        shared_recognition→bare_observation. anthropomorphization moved
+#        to content_moves. register_break moved to performance.delivery.
+#        anti_callback moved to joke.narrative. act_out.character_register
+#        moved to performance.delivery.act_out_voice. wordplay added as
+#        4th modifier. Meta rules for level assignment formalized.
 # v0.2 - Replaced incongruity_type with pivot_mechanism (operation +
 #        reading_switch + scale_shift). Removed secondary incongruity slot.
 #        Updated Pass 2 field order and two-stage capture references.
@@ -181,15 +189,22 @@ configure the session based on their answers, not to replace it.
           produce a written artifact (two readings, a negated claim,
           a source/target pair, etc.). The value whose test produces
           the cleanest artifact is the correct classification.
-      (e) pivot_mechanism.reading_switch and scale_shift: ask only if
-          the gloss suggests a literal/figurative mode change or a
-          scope/gravity shift. Default to none for both.
+      (e) pivot_mechanism modifiers: reading_switch, scale_shift,
+          wordplay. All default to none. Ask only when gloss suggests
+          a mode change, scale shift, or phonemic collision.
       (f) setup_frame: what the setup establishes (convention,
           behavior, expectation, premise, anomaly, sequence).
-      (g) primary_template: informed by logic but its own question.
-          Template is rhetorical SHAPE; pivot_mechanism is cognitive
-          OPERATION.
-      (h) subversions_applied, has_tag, tag_function.
+      (g) primary_template: 6 values (mundane_as_monumental,
+          monumental_as_mundane, bare_observation, escalation,
+          reductio, comparison). Template is rhetorical SHAPE.
+          If the joke anthropomorphizes, that goes in
+          content.content_moves, NOT as the template.
+      (h) act_out: character_type + register_gap if character
+          dialogue is present. character_register is Pass 3.
+      (i) subversions_applied (structural_refusal, meta_structural,
+          specificity_subversion only), tag_operation, has_tag.
+      (j) joke.relational: positioning, audience_implication,
+          shared_experience, performed_relatability.present.
       (i) narrative fields (callbacks, routine position, position_in_set).
       (j) content layer last (concepts, specificity) — specificity
           sometimes only clear after the structural move is named.
@@ -307,8 +322,12 @@ configure the session based on their answers, not to replace it.
 
 The schema is at engine/schema.yaml. Key structure:
 
-- joke: content, logic, structure, narrative (populated in pass 2)
+- joke: content, logic, structure, relational, narrative (populated in pass 2)
+  - relational is NEW in v0.9: positioning, audience_implication,
+    shared_experience, performed_relatability.present (moved from performance)
 - performance: delivery, voice, affective, relational (populated in pass 3)
+  - relational now contains ONLY: vulnerability, performed_relatability.intensity,
+    positioning_deviation
 - meta: fourth-wall breaks, form commentary
 - analysis: commutation (pass 4), voice_portability (weekly), adversarial
   (pass 5)

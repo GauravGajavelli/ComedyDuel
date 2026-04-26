@@ -402,3 +402,183 @@ populated during audit. Known candidates from batch 1:
 - S01E08: earth-outfit voter (everyman, casual, treats_serious_as_mundane)
 
 ---
+
+## 2026-04-26 v0.8 — Wordplay added as 4th modifier sub-dimension
+
+**Triggered by:** Cross-reference of Toplyn's WitScript patent taxonomy (US
+10,642,939 / 10,878,817 / 11,080,485) against the schema's pivot operations.
+Analysis of all 3 patents revealed that phonemic humor (puns, portmanteaus,
+near-homophones) was a genuine gap. Initially added as a 7th operation, but
+immediately corrected: wordplay is a DELIVERY VEHICLE for an underlying
+cognitive operation, not an operation itself. A joke like "Tinderella" is
+mapping (the parallel between dating apps and fairy tales) + portmanteau
+(the phonemic blend that delivers the parallel). The cognitive operation
+(mapping) and the lexical mechanism (portmanteau) are orthogonal —
+wordplay belongs as a modifier alongside reading_switch and scale_shift.
+
+**Changed:**
+
+1. **engine/vocabularies/pivot-mechanisms.yaml**: Added `wordplay` as
+   SUB-DIMENSION 4 (modifier, not operation) with 3 values: phonemic_pair,
+   portmanteau, collocation_disruption. Full vocabulary definitions with
+   criterion, test, positive example, distinguished_from. Added combined
+   classification examples showing operation + wordplay co-occurrence
+   (mapping + portmanteau, transplant + collocation_disruption,
+   reinterpretation + collocation_disruption). Updated theoretical
+   grounding header to clarify wordplay is a modifier not an operation.
+   Removed wordplay from the operations section. Kept 6 operations.
+
+2. **engine/schema.yaml** (v0.8): Removed `wordplay` from operation enum
+   (stays at 6 operations). Added `wordplay` as a 4th modifier sub-field
+   in pivot_mechanism (none | phonemic_pair | portmanteau |
+   collocation_disruption). Independent of operation — a joke can be
+   mapping + portmanteau, transplant + collocation_disruption, etc.
+   The specific pun words are NOT recorded.
+
+**From:** 6 pivot operations + 3 modifier sub-dimensions (reading_switch,
+scale_shift). No phonemic humor capability.
+
+**To:** 6 pivot operations (unchanged) + 4 modifier sub-dimensions
+(+wordplay). Wordplay is orthogonal to operation — it describes HOW the
+pivot is delivered lexically, not WHAT cognitive shift occurs.
+
+**Rationale:**
+
+The Toplyn patent cross-reference revealed that his formula taxonomy
+operates at the LEXICAL level (how to construct funny words) while our
+operations are COGNITIVE (what the punchline does to the frame). These are
+orthogonal, not alternatives. Wordplay is a delivery vehicle: "Tinderella"
+is mapping (dating app ↔ fairy tale parallel) + portmanteau (phonemic
+blend). Making wordplay a 7th operation was a category error — it would
+have been mutually exclusive with the cognitive operations when in fact
+it co-occurs with them.
+
+Key design decision: the annotation records the PATTERN (which sub-type,
+which domains), not the specific words:
+1. Recording specific pun words isn't useful for generating ORIGINAL puns
+2. The realization stage needs "make a portmanteau from domains X and Y"
+   not "use the word 'Zikachu'"
+3. Toplyn's phonemic-matching algorithms (edit distance, stop consonant
+   scoring, alliteration) are realization-stage tools that generate the
+   specific words from the pattern specification
+
+The 3 sub-types map directly to Toplyn's patent types:
+- phonemic_pair → Toplyn Type #1 (two words with phonemic similarity)
+- portmanteau → Toplyn Types #2/#4 (blended neologism from two domains)
+- collocation_disruption → Toplyn Type #4 (known phrase with word swapped)
+
+**Structural-question answers (for wordplay as modifier):**
+1. Multiple simultaneous values? NO — one wordplay sub-type per joke.
+2. Changes across duration? NO — the phonemic collision is instantaneous.
+3. Ordered values? NO — the three sub-types are nominal categories.
+4. Absent vs. low-intensity? YES — `wordplay: none` means no phonemic
+   mechanism is used. This is different from "weak wordplay."
+5. Meaning depends on other fields? Independent of operation — wordplay
+   can co-occur with any of the 6 cognitive operations. The combination
+   (e.g., mapping + portmanteau) is the full classification.
+
+**Invalidates:** No existing annotations use wordplay (Seinfeld's monologues
+have almost no puns). The modifier will begin appearing when the corpus
+expands beyond Seinfeld to comedians who use wordplay (Hedberg, Wright)
+or when the generation pipeline produces pun-based jokes.
+
+---
+
+## 2026-04-26 v0.9 — Comprehensive level-assignment audit
+
+**Triggered by:** Three parallel audit agents checked every field in the
+schema for correct block (joke vs performance), layer, and level placement.
+The wordplay correction (v0.8) showed that level-assignment errors are real.
+The audit found systemic issues, primarily in the performance.relational
+layer which was almost entirely misplaced.
+
+**Meta rules formalized:** Added "Architectural levels" section to schema
+header with 6 cross-level validation tests (block test, layer test, mutual
+exclusivity test, orthogonality test, shape-not-content test, redundancy
+test). These govern all future field additions.
+
+**Tier 1 changes (block/layer reclassifications):**
+
+1. **NEW joke.relational layer** — created to house textually-determined
+   relational properties that were incorrectly in performance.relational.
+   Moved: positioning (default + trajectory), audience_implication,
+   shared_experience (required, universality, comprehensibility),
+   performed_relatability.present. These are properties of the joke's
+   text — same value regardless of performer.
+
+2. **performance.relational reduced** — now contains only performer-variable
+   properties: vulnerability (personal_exposure, emotional_risk),
+   performed_relatability.intensity, and new positioning_deviation field.
+
+3. **act_out split** — character_type and register_gap stay in
+   joke.structure (textually determined). character_register moved to
+   performance.delivery.act_out_voice (performer varies how they voice
+   the character).
+
+4. **register_break moved** from subversions (joke.structure) to
+   performance.delivery.register_break. It is performer-specific — what's
+   a register break for Mort is baseline for Cece.
+
+5. **anti_callback moved** from subversions (joke.structure) to
+   joke.narrative.anti_callback. It is context-dependent — depends on
+   what was performed earlier in the set.
+
+**Tier 2 changes (vocabulary quality):**
+
+6. **false_equivalence renamed to comparison** in templates.yaml. The
+   actual structural feature is juxtaposition/pairing of two things,
+   not a specific logical error. The renamed version foregrounds the
+   discourse shape ("the joke unfolds as a comparison") rather than
+   overclaiming a logical relationship.
+
+7. **anthropomorphization removed from templates** and moved to
+   joke.content.content_moves. It is a content-level technique (what
+   the joke does with its subject), not a rhetorical shape (how the
+   joke unfolds). Jokes that anthropomorphize now get their actual
+   rhetorical shape as the template (escalation, reductio, comparison)
+   plus content_moves: [anthropomorphization].
+
+8. **shared_recognition renamed to bare_observation** in templates.yaml.
+   It describes the absence of rhetorical scaffolding, not a positive
+   shape. The rename clarifies that this is the minimal/null template
+   value for jokes whose shape IS the observation itself.
+
+**Tier 3 changes (documentation):**
+
+9. **Articulation documented as "null operation"** in schema header meta
+   rules. It describes cognitive RECOGNITION, not a frame shift. Its
+   theoretical grounding (social bonding / benign violation of silence)
+   is explicitly noted as different from the other 5 operations.
+
+10. **reading_switch entanglement documented** — gravitates toward
+    reinterpretation, near-incompatible with articulation. Documented
+    in schema header and in the reading_switch field comment.
+
+11. **scale_shift independence test added** to field comment — "If I
+    removed the scale change but kept the operation, would the joke
+    still work at reduced effectiveness?" If the joke dies entirely,
+    the scale change IS the operation.
+
+12. **tag_function split** into tag_operation (extends | reframes |
+    undercuts) and tag_callbacks_to (joke_id, moved to narrative layer).
+    The prior value callbacks_earlier conflated the tag's relationship
+    to its own punchline with the tag's relationship to a prior joke.
+
+**Templates after v0.9:** mundane_as_monumental, monumental_as_mundane,
+bare_observation, escalation, reductio, comparison (6 values).
+
+**Subversions after v0.9:** structural_refusal, meta_structural,
+specificity_subversion (3 values — register_break and anti_callback
+moved to their correct locations).
+
+**Invalidates:** All 71 batch 1 annotations need:
+- template: any `shared_recognition` → `bare_observation`
+- template: any `false_equivalence` → `comparison`
+- template: any `anthropomorphization` → actual rhetorical shape + content_moves
+- positioning, audience_implication, shared_experience → move from performance to joke.relational
+- act_out.character_register → move to performance.delivery.act_out_voice
+- tag_function: callbacks_earlier → split to tag_operation + narrative.tag_callbacks_to
+- subversions: register_break → move to performance.delivery.register_break
+- subversions: anti_callback → move to joke.narrative.anti_callback
+
+---

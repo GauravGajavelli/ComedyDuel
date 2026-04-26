@@ -1,0 +1,151 @@
+# FILE: annotations/s02e06_opening_pass2.yaml
+jokes:
+  - joke_id: "seinfeld_s02e06_opening_01"
+    source:
+      work: "Seinfeld S02E06 'The Statue' opening monologue"
+      medium: sitcom_opener
+      year: 1991
+    transcript_fragment: "According to the information that I have in the envelope that I've received, it seems that I may have already won some very valuable prizes."
+    joke:
+      content:
+        primary_domain: [consumer_culture]
+        concepts: [sweepstakes, self_importance, anticipation]
+        pivot_concept: sweepstakes
+        specificity: {default_level: 3}
+        content_moves: []
+      logic:
+        setup_expectation: "Jerry builds excitement with 'very exciting news' and coy hedging ('not a definite thing yet'), implying genuinely significant personal news worth sharing."
+        punchline_violation: "The 'news' is a mass-mailed sweepstakes envelope -- the most impersonal, worthless form of correspondence possible. The grandiose framing collapses into junk mail."
+        pivot_mechanism:
+          operation: reinterpretation
+          reading_switch: none
+          scale_shift: contraction
+          wordplay: none
+        setup_frame: establishes_expectation
+        pivot_locus: logical
+        resolution_requires: [shared_experience]
+      structure:
+        primary_template: mundane_as_monumental
+        secondary_templates: []
+        subversions_applied: []
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out:
+          present: false
+          character_type: null
+          register_gap: null
+          character_gloss: ""
+      relational:
+        positioning: {default: lateral_observer}
+        audience_implication: co_observer
+        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 4}
+        performed_relatability: {present: true}
+      narrative:
+        routine_id: "seinfeld_s02e06_sweepstakes"
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: high}
+    notes: "The bit opens with Jerry performing sincere excitement, which turns out to be ironic -- the audience realizes the framing was already mocking the sweepstakes language."
+
+  - joke_id: "seinfeld_s02e06_opening_02"
+    source:
+      work: "Seinfeld S02E06 'The Statue' opening monologue"
+      medium: sitcom_opener
+      year: 1991
+    transcript_fragment: "I'd like once for a sweepstakes company to have some guts, come out with the truth... Send out envelopes, 'You have definitely lost!'"
+    joke:
+      content:
+        primary_domain: [consumer_culture]
+        concepts: [sweepstakes, honesty, rejection]
+        pivot_concept: honesty
+        specificity: {default_level: 3}
+        content_moves: []
+      logic:
+        setup_expectation: "Sweepstakes companies use optimistic hedging language ('you may have already won') as a marketing tactic. Jerry proposes they 'tell the truth' -- we expect a reasonable honest alternative."
+        punchline_violation: "The 'honest' version is brutally, absurdly blunt: 'You have definitely lost!' -- the opposite pole of the euphemistic original, delivered with the same direct-mail formality."
+        pivot_mechanism:
+          operation: negation
+          reading_switch: none
+          scale_shift: none
+          wordplay: none
+        setup_frame: establishes_convention
+        pivot_locus: logical
+        resolution_requires: [shared_experience]
+      structure:
+        primary_template: comparison
+        secondary_templates: []
+        subversions_applied: []
+        has_tag: true
+        tag_operation: extends
+        tag_has_own_pivot: false
+        act_out:
+          present: true
+          character_type: authority
+          register_gap: treats_mundane_as_serious
+          character_gloss: "Sweepstakes company delivering rejection with the same formal direct-mail register used for the optimistic version"
+      relational:
+        positioning: {default: lateral_observer}
+        audience_implication: co_observer
+        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 4}
+        performed_relatability: {present: true}
+      narrative:
+        routine_id: "seinfeld_s02e06_sweepstakes"
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: high}
+    notes: "The negation is clean: 'may have already won' becomes 'have definitely lost.' The direct-mail register is maintained in both versions, which is what makes it work."
+
+  - joke_id: "seinfeld_s02e06_opening_03"
+    source:
+      work: "Seinfeld S02E06 'The Statue' opening monologue"
+      medium: sitcom_opener
+      year: 1991
+    transcript_fragment: "You turn it over, giant printing, 'Not even close!' You open it up, there's this whole letter of explanation, 'Even we cannot believe how badly you've done in this contest.'"
+    joke:
+      content:
+        primary_domain: [consumer_culture]
+        concepts: [sweepstakes, rejection, humiliation]
+        pivot_concept: rejection
+        specificity: {default_level: 4}
+        content_moves: []
+      logic:
+        setup_expectation: "Having established the 'honest sweepstakes' premise with 'You have definitely lost,' the audience expects the bit is complete."
+        punchline_violation: "Jerry escalates through the physical details of the mailer -- flipping it over to find 'Not even close!', then opening it to find the company expressing disbelief at how badly you lost. Each beat adds more specific cruelty while maintaining the formal direct-mail structure."
+        pivot_mechanism:
+          operation: extension
+          reading_switch: none
+          scale_shift: expansion
+          wordplay: none
+        setup_frame: establishes_premise
+        pivot_locus: both
+        resolution_requires: [shared_experience]
+      structure:
+        primary_template: escalation
+        secondary_templates: [mundane_as_monumental]
+        subversions_applied: []
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out:
+          present: true
+          character_type: authority
+          register_gap: treats_mundane_as_serious
+          character_gloss: "Sweepstakes company doubling down with sincere editorial dismay at the recipient's failure"
+      relational:
+        positioning: {default: lateral_observer}
+        audience_implication: co_observer
+        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 4}
+        performed_relatability: {present: true}
+      narrative:
+        routine_id: "seinfeld_s02e06_sweepstakes"
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: high}
+    notes: "Classic Seinfeld escalation: the honest-rejection premise is followed to progressively more absurd specificity. The physical details (turning it over, opening it up) mirror the actual experience of handling a sweepstakes mailer, grounding the escalation."

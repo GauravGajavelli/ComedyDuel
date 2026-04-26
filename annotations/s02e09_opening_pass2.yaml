@@ -1,0 +1,201 @@
+# FILE: annotations/s02e09_opening_pass2.yaml
+jokes:
+  - joke_id: "seinfeld_s02e09_opening_01"
+    source:
+      work: "Seinfeld S02E09 'The Deal' opening monologue"
+      medium: sitcom_opener
+      year: 1991
+    transcript_fragment: "They take a dress off the rack, and they hold it up against themself. They can tell something from this."
+    joke:
+      content:
+        primary_domain: [gender_differences, consumer_culture]
+        concepts: [shopping, women, clothing, evaluation]
+        pivot_concept: evaluation
+        specificity: {default_level: 3}
+        content_moves: []
+      logic:
+        setup_expectation: "Women in department stores engage in a recognizable evaluative behavior -- holding clothes against themselves -- that is treated as a rational shopping technique."
+        punchline_violation: "Jerry articulates the shared bafflement: 'They can tell something from this' -- naming the male bewilderment at a behavior that seems to convey information to women but is opaque to outside observers."
+        pivot_mechanism:
+          operation: articulation
+          reading_switch: none
+          scale_shift: none
+          wordplay: none
+        setup_frame: establishes_behavior
+        pivot_locus: logical
+        resolution_requires: [shared_experience]
+      structure:
+        primary_template: bare_observation
+        secondary_templates: []
+        subversions_applied: []
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out:
+          present: false
+          character_type: null
+          register_gap: null
+          character_gloss: ""
+      relational:
+        positioning: {default: lateral_observer}
+        audience_implication: co_observer
+        shared_experience: {required: true, universality: common, comprehensibility_without_experience: 4}
+        performed_relatability: {present: true}
+      narrative:
+        routine_id: "seinfeld_s02e09_clothes"
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: medium}
+    notes: "This is the 'hardest case' example from the pivot-mechanisms vocabulary -- adjudicated as articulation because the humor is in the bafflement the audience already shares, not a new frame imposed on the behavior."
+
+  - joke_id: "seinfeld_s02e09_opening_02"
+    source:
+      work: "Seinfeld S02E09 'The Deal' opening monologue"
+      medium: sitcom_opener
+      year: 1991
+    transcript_fragment: "They stick one leg way out 'cause they need to know, if some day I'm one-legged, and at a forty-five degree angle, what am I gonna wear?"
+    joke:
+      content:
+        primary_domain: [gender_differences, consumer_culture]
+        concepts: [shopping, women, clothing, body_posture, absurdity]
+        pivot_concept: body_posture
+        specificity: {default_level: 4}
+        content_moves: []
+      logic:
+        setup_expectation: "The audience understands the leg-out pose as a standard modeling posture women adopt when evaluating clothes."
+        punchline_violation: "Jerry reinterprets the pose literally -- if this is a fitting test, it must be testing for the specific physical scenario it depicts: being one-legged and at a forty-five degree angle. The evaluative gesture is reread as a literal contingency plan."
+        pivot_mechanism:
+          operation: reinterpretation
+          reading_switch: figurative_to_literal
+          scale_shift: none
+          wordplay: none
+        setup_frame: establishes_behavior
+        pivot_locus: logical
+        resolution_requires: [shared_experience]
+      structure:
+        primary_template: bare_observation
+        secondary_templates: []
+        subversions_applied: []
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out:
+          present: true
+          character_type: everyman
+          register_gap: unaware_of_absurdity
+          character_gloss: "Woman sincerely planning for a one-legged, angled future wardrobe scenario"
+      relational:
+        positioning: {default: lateral_observer}
+        audience_implication: co_observer
+        shared_experience: {required: true, universality: common, comprehensibility_without_experience: 4}
+        performed_relatability: {present: true}
+      narrative:
+        routine_id: "seinfeld_s02e09_clothes"
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: high}
+    notes: "Clear reinterpretation with figurative_to_literal: the pose is conventionally figurative (aesthetic evaluation), and the punchline reads it literally as a physical scenario being tested."
+
+  - joke_id: "seinfeld_s02e09_opening_03"
+    source:
+      work: "Seinfeld S02E09 'The Deal' opening monologue"
+      medium: sitcom_opener
+      year: 1991
+    transcript_fragment: "You never see a guy take a suit off the rack, put his head in the neck, and go, 'What do you think about this suit? I think I'll get it.'"
+    joke:
+      content:
+        primary_domain: [gender_differences, consumer_culture]
+        concepts: [shopping, men, clothing, absurdity]
+        pivot_concept: gender_contrast
+        specificity: {default_level: 4}
+        content_moves: []
+      logic:
+        setup_expectation: "The audience has been primed with the women's dress-holding behavior. 'You never see a man do that' sets up a gender comparison."
+        punchline_violation: "Jerry applies the women's evaluation method to a man with a suit -- head shoved into the neck hole -- and the absurdity of the visual makes the point that the behavior looks equally strange when transplanted. The man treats this minimal contact as sufficient information to purchase."
+        pivot_mechanism:
+          operation: transplant
+          reading_switch: none
+          scale_shift: none
+          wordplay: none
+        setup_frame: establishes_convention
+        pivot_locus: logical
+        resolution_requires: [shared_experience]
+      structure:
+        primary_template: comparison
+        secondary_templates: []
+        subversions_applied: []
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out:
+          present: true
+          character_type: everyman
+          register_gap: unaware_of_absurdity
+          character_gloss: "Man sincerely shopping by pressing his head into a suit's neckhole and judging fit from this alone"
+      relational:
+        positioning: {default: lateral_observer}
+        audience_implication: co_observer
+        shared_experience: {required: true, universality: common, comprehensibility_without_experience: 4}
+        performed_relatability: {present: true}
+      narrative:
+        routine_id: "seinfeld_s02e09_clothes"
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: high}
+    notes: "Transplant, not mapping: the women's try-on method is imported into the men's domain where it doesn't belong. The humor is in the mismatch -- the framework is wrong for the context. If the method genuinely fit (mapping), it wouldn't be absurd."
+
+  - joke_id: "seinfeld_s02e09_opening_04"
+    source:
+      work: "Seinfeld S02E09 'The Deal' opening monologue"
+      medium: sitcom_opener
+      year: 1991
+    transcript_fragment: "Put some shoes by the bottom of the pants, I wanna make sure. Yeah, perfect. And what if I'm walking? Move the shoes, move the shoes, move the shoes, move the shoes."
+    joke:
+      content:
+        primary_domain: [gender_differences, consumer_culture]
+        concepts: [shopping, men, clothing, absurdity, shoes]
+        pivot_concept: evaluation
+        specificity: {default_level: 5}
+        content_moves: []
+      logic:
+        setup_expectation: "The man-trying-on-suit act-out has established the absurd premise. The audience expects it to end."
+        punchline_violation: "Jerry extends the premise further -- the man now needs shoes placed at the bottom for verification, and then needs them moved to simulate walking. Each beat follows the logic of 'testing clothes without wearing them' to more absurd specificity."
+        pivot_mechanism:
+          operation: extension
+          reading_switch: none
+          scale_shift: none
+          wordplay: none
+        setup_frame: establishes_premise
+        pivot_locus: both
+        resolution_requires: [shared_experience]
+      structure:
+        primary_template: escalation
+        secondary_templates: []
+        subversions_applied: []
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out:
+          present: true
+          character_type: everyman
+          register_gap: unaware_of_absurdity
+          character_gloss: "Man earnestly simulating walking by having someone move shoes back and forth beneath his held-up suit"
+      relational:
+        positioning: {default: lateral_observer}
+        audience_implication: co_observer
+        shared_experience: {required: true, universality: common, comprehensibility_without_experience: 4}
+        performed_relatability: {present: false}
+      narrative:
+        routine_id: "seinfeld_s02e09_clothes"
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: high}
+    notes: "Classic extension: the accepted premise (evaluating clothes without wearing them) is followed to the absurd conclusion of simulating locomotion. The repetition of 'move the shoes' is the escalation vehicle."

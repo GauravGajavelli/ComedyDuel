@@ -1,0 +1,201 @@
+# FILE: annotations/s02e10_opening_pass2.yaml
+jokes:
+  - joke_id: "seinfeld_s02e10_opening_01"
+    source:
+      work: "Seinfeld S02E10 'The Baby Shower' opening monologue"
+      medium: sitcom_opener
+      year: 1991
+    transcript_fragment: "Men get that remote control in their hands, they don't even know what the hell they're watching... 'Rerun, don't wanna watch it..' 'What are you watching?' 'I don't care, I gotta keep going.'"
+    joke:
+      content:
+        primary_domain: [gender_differences, domestic_life]
+        concepts: [television, remote_control, men, restlessness]
+        pivot_concept: channel_flipping
+        specificity: {default_level: 3}
+        content_moves: []
+      logic:
+        setup_expectation: "Men use the remote control to find something to watch -- the implicit purpose of changing channels is selection."
+        punchline_violation: "Jerry articulates that men aren't looking for anything -- the flipping itself is the activity. The purpose of having the remote is not selection but perpetual motion. The audience recognizes this behavior in themselves."
+        pivot_mechanism:
+          operation: articulation
+          reading_switch: none
+          scale_shift: none
+          wordplay: none
+        setup_frame: establishes_behavior
+        pivot_locus: logical
+        resolution_requires: [shared_experience]
+      structure:
+        primary_template: bare_observation
+        secondary_templates: []
+        subversions_applied: []
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out:
+          present: true
+          character_type: everyman
+          register_gap: unaware_of_absurdity
+          character_gloss: "Man defensively insisting he must keep flipping despite having no idea what he's looking for"
+      relational:
+        positioning: {default: lateral_observer}
+        audience_implication: co_observer
+        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 5}
+        performed_relatability: {present: true}
+      narrative:
+        routine_id: "seinfeld_s02e10_flipping"
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: high}
+    notes: "The act-out dialogue ('I gotta keep going') names the compulsive quality of the behavior. Clean articulation -- audience recognizes this immediately; no frame shift needed."
+
+  - joke_id: "seinfeld_s02e10_opening_02"
+    source:
+      work: "Seinfeld S02E10 'The Baby Shower' opening monologue"
+      medium: sitcom_opener
+      year: 1991
+    transcript_fragment: "Women don't do this. Women will stop and go, 'Well, let me see what the show is before I change the channel.' ...Because women nest and men hunt. That's why we watch TV differently."
+    joke:
+      content:
+        primary_domain: [gender_differences, domestic_life]
+        concepts: [television, gender, nesting, hunting, evolution]
+        pivot_concept: evolutionary_psychology
+        specificity: {default_level: 2}
+        content_moves: []
+      logic:
+        setup_expectation: "The contrast between men flipping and women watching sets up a behavioral observation. The audience expects more observational detail."
+        punchline_violation: "Jerry jumps to an evolutionary-biological framework -- 'women nest and men hunt' -- to explain TV remote behavior. The pop-psychology register applied to channel surfing creates a mismatch between the grandeur of the explanation and the triviality of the subject."
+        pivot_mechanism:
+          operation: mapping
+          reading_switch: none
+          scale_shift: expansion
+          wordplay: none
+        setup_frame: establishes_behavior
+        pivot_locus: logical
+        resolution_requires: [world_knowledge]
+      structure:
+        primary_template: mundane_as_monumental
+        secondary_templates: []
+        subversions_applied: []
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out:
+          present: false
+          character_type: null
+          register_gap: null
+          character_gloss: ""
+      relational:
+        positioning: {default: lateral_observer}
+        audience_implication: co_observer
+        shared_experience: {required: true, universality: common, comprehensibility_without_experience: 4}
+        performed_relatability: {present: false}
+      narrative:
+        routine_id: "seinfeld_s02e10_flipping"
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: medium}
+    notes: "Mapping, not transplant: the hunting/nesting parallel is presented as genuinely apt -- men really do scan restlessly while women settle. The framework illuminates rather than misapplies. Scale_shift expansion is independently removable: the joke would still work at reduced effectiveness without the evolutionary frame."
+
+  - joke_id: "seinfeld_s02e10_opening_03"
+    source:
+      work: "Seinfeld S02E10 'The Baby Shower' opening monologue"
+      medium: sitcom_opener
+      year: 1991
+    transcript_fragment: "I always wonder, in that era, if they would get, like, thirty story-tellers together so they could still flip around. Just go, 'Alright start telling me a story, what's happening? I don't want to hear anymore. Shut up. Go to the next guy.'"
+    joke:
+      content:
+        primary_domain: [gender_differences, history]
+        concepts: [television, channel_flipping, kings, storytellers, anachronism]
+        pivot_concept: channel_flipping
+        specificity: {default_level: 4}
+        content_moves: []
+      logic:
+        setup_expectation: "Jerry has established the modern channel-flipping behavior and its evolutionary basis. Introducing kings and storytellers shifts to a historical setting where the audience expects a different kind of observation."
+        punchline_violation: "The premise of compulsive flipping is transplanted into the ancient world: a king would need thirty storytellers just to replicate the experience of channel surfing. The modern behavior framework is imposed where it doesn't belong -- royal entertainment didn't work this way."
+        pivot_mechanism:
+          operation: transplant
+          reading_switch: none
+          scale_shift: expansion
+          wordplay: none
+        setup_frame: establishes_premise
+        pivot_locus: both
+        resolution_requires: [shared_experience, world_knowledge]
+      structure:
+        primary_template: escalation
+        secondary_templates: [mundane_as_monumental]
+        subversions_applied: []
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out:
+          present: true
+          character_type: authority
+          register_gap: treats_mundane_as_serious
+          character_gloss: "Ancient king dismissing storytellers with the same impatient register as a modern man flipping channels"
+      relational:
+        positioning: {default: lateral_observer}
+        audience_implication: co_observer
+        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 4}
+        performed_relatability: {present: false}
+      narrative:
+        routine_id: "seinfeld_s02e10_flipping"
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: high}
+    notes: "Transplant, not mapping: the modern channel-flipping framework is imported into ancient royalty where it doesn't fit. The humor is in the mismatch -- kings wouldn't actually treat storytellers like TV channels. The act-out escalates through progressively ruder dismissals, mirroring the modern flipping rhythm."
+
+  - joke_id: "seinfeld_s02e10_opening_04"
+    source:
+      work: "Seinfeld S02E10 'The Baby Shower' opening monologue"
+      medium: sitcom_opener
+      year: 1991
+    transcript_fragment: "'Is there a girl in that story? ..No? Shut up. Go to the next guy.' ...'No, the all of you, get out of here. I'm going to bed.'"
+    joke:
+      content:
+        primary_domain: [gender_differences, history]
+        concepts: [television, channel_flipping, kings, storytellers, boredom]
+        pivot_concept: channel_flipping
+        specificity: {default_level: 5}
+        content_moves: []
+      logic:
+        setup_expectation: "The king-flipping-through-storytellers premise has been established. The audience expects continued channel-surfing parallels."
+        punchline_violation: "Jerry extends the act-out to include the 'Is there a girl in that story?' criterion (mapping to looking for attractive women on TV), and then the final 'get out of here, I'm going to bed' -- the ancient equivalent of turning off the TV in frustration. Each beat follows the transplanted logic further."
+        pivot_mechanism:
+          operation: extension
+          reading_switch: none
+          scale_shift: none
+          wordplay: none
+        setup_frame: establishes_premise
+        pivot_locus: both
+        resolution_requires: [shared_experience]
+      structure:
+        primary_template: escalation
+        secondary_templates: []
+        subversions_applied: []
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out:
+          present: true
+          character_type: authority
+          register_gap: treats_mundane_as_serious
+          character_gloss: "King growing increasingly petulant and dismissive, mirroring the frustrated channel-surfer who gives up and goes to bed"
+      relational:
+        positioning: {default: lateral_observer}
+        audience_implication: co_observer
+        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 4}
+        performed_relatability: {present: false}
+      narrative:
+        routine_id: "seinfeld_s02e10_flipping"
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: high}
+    notes: "Extension of the transplant premise: having established the king-as-channel-surfer framework, this beat follows the logic further to the 'turning off the TV' endpoint. The 'girl in the story' line adds a specific male TV-watching criterion that deepens the parallel."

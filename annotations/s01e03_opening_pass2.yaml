@@ -1,0 +1,139 @@
+# FILE: annotations/s01e03_opening_pass2.yaml
+jokes:
+  - joke_id: "seinfeld_s01e03_opening_01"
+    source:
+      work: "Seinfeld S01E03 'The Robbery' opening monologue"
+      medium: sitcom_opener
+      year: 1990
+    transcript_fragment: "It seems like such an arbitrary, ridiculous thing to just pick a finger and you show it to the person."
+    joke:
+      content:
+        primary_domain: [social_convention, body]
+        concepts: [middle_finger, gesture, insult, arbitrariness]
+        pivot_concept: middle_finger
+        specificity: {default_level: 2}
+        content_moves: []
+      logic:
+        setup_expectation: "The setup describes a road-rage incident - the audience is in the cultural frame where the middle finger is a loaded, meaningful insult."
+        punchline_violation: "The middle finger is reframed as an arbitrary digit selection. The same gesture is reread from 'culturally loaded insult' to 'random finger display'. The cultural weight evaporates when you see it as just picking a finger."
+        pivot_mechanism:
+          operation: reinterpretation
+          reading_switch: none
+          scale_shift: contraction
+          wordplay: none
+        setup_frame: establishes_convention
+        pivot_locus: logical
+        resolution_requires: [shared_experience, world_knowledge]
+      structure:
+        primary_template: mundane_as_monumental
+        secondary_templates: []
+        subversions_applied: []
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out: {present: false, character_type: null, register_gap: null, character_gloss: ""}
+      relational:
+        positioning: {default: lateral_observer}
+        audience_implication: co_observer
+        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 4}
+        performed_relatability: {present: false}
+      narrative:
+        routine_id: "s01e03_finger"
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: high}
+    notes: "This is the worked example from pivot-mechanisms.yaml for reinterpretation. Reading 1: culturally loaded gesture. Reading 2: arbitrary digit selection. The frame shift is load-bearing - stating it in the cultural-insult frame kills the joke. Scale_shift contraction is independent (culturally significant gesture deflated to random finger)."
+
+  - joke_id: "seinfeld_s01e03_opening_02"
+    source:
+      work: "Seinfeld S01E03 'The Robbery' opening monologue"
+      medium: sitcom_opener
+      year: 1990
+    transcript_fragment: "I would feel worse if I got the toe, than if I got the finger. 'Cause it's not easy to give someone the toe, you've gotta get the shoe off, the sock off and drive..."
+    joke:
+      content:
+        primary_domain: [social_convention, body]
+        concepts: [middle_finger, toe, insult, effort, commitment]
+        pivot_concept: toe
+        specificity: {default_level: 4}
+        content_moves: []
+      logic:
+        setup_expectation: "The finger has been established as an arbitrary insult. The accepted premise: body parts as insults correlate with effort/commitment."
+        punchline_violation: "The logic is followed past reason: if the finger is an insult, the toe would be worse because it requires more effort (shoe off, sock off, driving one-footed). The absurd conclusion follows logically from the accepted premise."
+        pivot_mechanism:
+          operation: extension
+          reading_switch: none
+          scale_shift: none
+          wordplay: none
+        setup_frame: establishes_premise
+        pivot_locus: logical
+        resolution_requires: [shared_experience]
+      structure:
+        primary_template: escalation
+        secondary_templates: [reductio]
+        subversions_applied: []
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out: {present: true, character_type: everyman, register_gap: treats_mundane_as_serious, character_gloss: "Driver struggling to remove shoe and sock while driving to deliver the toe insult - committed, earnest effort."}
+      relational:
+        positioning: {default: lateral_observer}
+        audience_implication: co_observer
+        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 5}
+        performed_relatability: {present: false}
+      narrative:
+        routine_id: "s01e03_finger"
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: high}
+    notes: "This is the worked example from pivot-mechanisms.yaml for extension. The premise (body parts as insults proportional to effort) is accepted and followed to an absurd destination. The escalation template structures the building specificity of the effort (shoe, sock, driving). This is Seinfeld's signature extension move."
+
+  - joke_id: "seinfeld_s01e03_opening_03"
+    source:
+      work: "Seinfeld S01E03 'The Robbery' opening monologue"
+      medium: sitcom_opener
+      year: 1990
+    transcript_fragment: "Look at that toe, buddy."
+    joke:
+      content:
+        primary_domain: [social_convention, body]
+        concepts: [toe, insult, driving, confrontation]
+        pivot_concept: toe
+        specificity: {default_level: 5}
+        content_moves: []
+      logic:
+        setup_expectation: "The absurd scenario of removing shoe and sock while driving has been established. The audience is imagining the physical difficulty."
+        punchline_violation: "The act-out delivers the payoff: after all that effort, the insult itself is hilariously underwhelming - just showing a toe and saying 'look at that toe, buddy'. The gap between the enormous effort and the pathetic delivery is the joke."
+        pivot_mechanism:
+          operation: extension
+          reading_switch: none
+          scale_shift: contraction
+          wordplay: none
+        setup_frame: establishes_sequence
+        pivot_locus: affective
+        resolution_requires: [shared_experience]
+      structure:
+        primary_template: escalation
+        secondary_templates: []
+        subversions_applied: []
+        has_tag: true
+        tag_operation: extends
+        tag_has_own_pivot: true
+        act_out: {present: true, character_type: everyman, register_gap: treats_mundane_as_serious, character_gloss: "Driver with foot in the air, delivering the 'toe insult' with deadpan seriousness to the car next to him."}
+      relational:
+        positioning: {default: lateral_observer}
+        audience_implication: witness
+        shared_experience: {required: false, universality: universal, comprehensibility_without_experience: 5}
+        performed_relatability: {present: false}
+      narrative:
+        routine_id: "s01e03_finger"
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: high}
+    notes: "Tags the extension with a concrete act-out that crystallizes the absurdity. The contraction is independent: the grand effort collapses into a limp 'look at that toe, buddy'. The act-out voice is the load-bearing delivery element here."

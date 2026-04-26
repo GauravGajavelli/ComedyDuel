@@ -1,4 +1,4 @@
-# Comedy Duel — Annotation Schema v0.5
+# Comedy Duel — Annotation Schema v0.9
 #
 # This file defines the shape of a joke annotation. One annotation per joke,
 # stored as YAML in annotations/{joke_id}.yaml.
@@ -25,6 +25,106 @@
 # The generative sufficiency test operates against STRUCTURED fields only.
 # When verifying the schema can reconstruct a joke, read only the structured
 # fields. If you can't, the schema needs more structure, not more gloss.
+#
+# ============================================================================
+# Architectural levels — read before adding or moving fields
+# ============================================================================
+#
+# The schema has two top-level blocks (JOKE and PERFORMANCE) with layers
+# inside each. Every field must be placed at the correct block and layer.
+# The following rules govern placement.
+#
+# --- BLOCK ASSIGNMENT (joke vs performance) ---
+#
+# The test: "If two different performers delivered this joke, would this
+# field have the same value?"
+#   - Same value regardless of performer → JOKE block
+#   - Different value depending on performer → PERFORMANCE block
+#
+# Edge cases: some fields have a textual component (JOKE) and a delivery
+# component (PERFORMANCE). In these cases, split the field: the textual
+# property goes in JOKE, the delivery-variable property goes in
+# PERFORMANCE as a deviation or intensity marker.
+#
+# --- LAYER ASSIGNMENT (within a block) ---
+#
+# JOKE layers:
+#   content  — WHAT the joke is about (concepts, domains, specificity)
+#   logic    — HOW the joke's mechanism works (operation, setup_frame,
+#              pivot_locus). The cognitive machinery.
+#   structure — the SHAPE of the joke as discourse (template, tag,
+#              subversions, act-out character construction)
+#   relational — the STANCE the joke's text establishes between comedian,
+#              audience, and subject (positioning, audience role, shared
+#              experience requirements). NEW in v0.9.
+#   narrative — CONNECTIONS to other jokes (callbacks, routine membership)
+#
+# PERFORMANCE layers:
+#   delivery  — HOW the joke is physically/vocally delivered (cadence,
+#              pauses, register shifts, act-out voice realization)
+#   voice     — the performer's IDENTITY markers (persona, register)
+#   affective — the EMOTIONAL register (valence, arousal, trajectory)
+#   relational — performer-variable DELIVERY of the relational stance
+#              (vulnerability commitment, relatability intensity)
+#
+# --- WITHIN-LAYER RULES ---
+#
+# OPERATIONS (pivot_mechanism.operation):
+#   - Describe the COGNITIVE SHIFT the punchline performs on the audience's
+#     frame. "What does the punchline DO to the setup's frame?"
+#   - Mutually exclusive: one operation per joke at each pivot point
+#   - Must be a frame-level phenomenon, not a word-level mechanism
+#   - NOTE: articulation is the "null operation" — it describes
+#     cognitive RECOGNITION, not a frame shift. It is pragmatically
+#     necessary to prevent false reinterpretation classifications.
+#     Its theoretical grounding (social bonding / benign violation of
+#     silence) is different from the other 5 operations (all
+#     incongruity-based).
+#
+# MODIFIERS (reading_switch, scale_shift, wordplay):
+#   - Describe HOW the pivot is delivered, orthogonal to which operation
+#   - Must be independently specifiable: any modifier can co-occur with
+#     any operation (or the test must document the entanglement)
+#   - A modifier is NOT an operation if it can accompany multiple different
+#     operations. If a proposed modifier can ONLY co-occur with one
+#     operation, it may be a sub-type of that operation, not a modifier
+#   - KNOWN ENTANGLEMENT: reading_switch gravitates heavily toward
+#     reinterpretation and is near-incompatible with articulation.
+#     This is documented, not a design flaw — figurative_to_literal
+#     IS a form of reinterpretation at the cognitive level.
+#
+# TEMPLATES (primary_template):
+#   - Describe the RHETORICAL SHAPE of the joke — how it unfolds as
+#     discourse. "What structural pattern does the joke follow?"
+#   - Must be about discourse structure, NOT about content domain
+#     (what the joke is about) or cognitive mechanism (what shift occurs)
+#   - A template is NOT an operation if the same template can house
+#     different cognitive operations. If a proposed template always
+#     co-occurs with one specific operation, they may be the same thing
+#     described at different levels — verify with counter-examples
+#   - A template is NOT a content tag if it could apply to jokes about
+#     completely different subjects. If a proposed template only applies
+#     to jokes about a specific subject, it's a content property
+#
+# --- CROSS-LEVEL VALIDATION ---
+#
+# When adding a new field, ask:
+# 1. Block test: same value regardless of performer? → JOKE. Varies? →
+#    PERFORMANCE. Mixed? → split.
+# 2. Layer test: is this about content, cognitive mechanism, discourse
+#    shape, relational stance, or connections? Place accordingly.
+# 3. Mutual exclusivity test (operations): can a joke be both this AND
+#    another operation simultaneously at the same pivot? If yes, it's
+#    not an operation — it may be a modifier or template.
+# 4. Orthogonality test (modifiers): can this co-occur with all
+#    operations? If it can only co-occur with one, it's a sub-type.
+# 5. Shape-not-content test (templates): could this template apply to
+#    jokes about completely different subjects? If not, it's a content
+#    tag, not a template.
+# 6. Redundancy test: does this field duplicate information already
+#    captured by another field at a different level? If the two fields
+#    always have the same value, one is redundant. Verify with
+#    counter-examples where they diverge.
 #
 # ============================================================================
 # Conventions
@@ -83,113 +183,76 @@ joke:
     concepts: []                   # [STRUCTURED] list of concept-node references.
                                    #   Each entry is a node_id from engine/concepts/.
                                    #   NOT bare strings — the engine uses these as
-                                   #   graph lookups. When a new concept is
-                                   #   needed, create a concept node (see section
-                                   #   at the bottom of this file) and reference
-                                   #   its id here.
+                                   #   graph lookups.
 
     pivot_concept: null            # [STRUCTURED] concept-node reference.
-                                   #   The node the pivot turns on — the concept
-                                   #   doing the load-bearing recontextualization
-                                   #   work. null when pivot is purely affective
-                                   #   with no concept anchor.
+                                   #   The node the pivot turns on.
 
     specificity:
       default_level: null          # [STRUCTURED] integer 1-5
-                                   #   1=abstract, 5=hyperspecific
       trajectory: null             # [STRUCTURED] optional list of {at, level}
-                                   #   anchored to structural events. Use only
-                                   #   when escalating specificity is part of
-                                   #   the joke's mechanism.
+
+    content_moves: []              # [STRUCTURED] Content-level techniques that
+                                   #   are about WHAT the joke does with its
+                                   #   subject, not about rhetorical shape.
+                                   #   Values:
+                                   #
+                                   #   anthropomorphization — treats a non-human
+                                   #     entity as if it had human characteristics.
+                                   #     Moved from templates (v0.9) because it
+                                   #     describes content domain treatment, not
+                                   #     rhetorical shape. A joke can
+                                   #     anthropomorphize within any template
+                                   #     (escalation, reductio, comparison, etc.)
 
   # --- Logic layer ---------------------------------------------------------
 
   logic:
-    setup_expectation: ""          # [GLOSS]      free text: what the setup leads
-                                   #              the audience to expect.
-                                   #              Readable for human review;
-                                   #              not used by the engine.
+    setup_expectation: ""          # [GLOSS]      free text reasoning trace
+    punchline_violation: ""        # [GLOSS]      free text reasoning trace
 
-    punchline_violation: ""        # [GLOSS]      free text: how the punchline
-                                   #              violates that expectation.
-                                   #              Readable for human review;
-                                   #              not used by the engine.
-
-    pivot_mechanism:               # [STRUCTURED] Three orthogonal sub-dimensions
-                                   #   describing how the punchline operates on
-                                   #   the setup frame. Replaces incongruity_type
-                                   #   and absorbs reading_switch from the former
-                                   #   incongruity_operates_on block.
+    pivot_mechanism:               # [STRUCTURED] Four orthogonal sub-dimensions.
                                    #   Values from vocabularies/pivot-mechanisms.yaml.
 
       operation: ""                # [STRUCTURED] required. Single-valued.
                                    #   negation | reinterpretation | transplant |
                                    #   mapping | extension | articulation
-                                   #
-                                   #   The cognitive operation the punchline
-                                   #   performs on the setup frame. Each value has
-                                   #   a testable criterion in the vocabulary file
-                                   #   that produces a written artifact (two
-                                   #   readings, a negated claim, a source/target
-                                   #   pair, etc.) rather than a judgment call.
 
       reading_switch: none         # [STRUCTURED] optional. Single-valued.
                                    #   none | figurative_to_literal |
                                    #   literal_to_figurative
                                    #
-                                   #   Whether the punchline changes the linguistic
-                                   #   interpretation mode of the setup's language.
-                                   #   Independent of operation.
+                                   #   KNOWN ENTANGLEMENT: gravitates toward
+                                   #   reinterpretation. Near-incompatible with
+                                   #   articulation. Document, don't suppress.
 
       scale_shift: none            # [STRUCTURED] optional. Single-valued.
                                    #   none | expansion | contraction
                                    #
-                                   #   Whether the punchline changes the scope
-                                   #   (specific↔universal) or gravity
-                                   #   (elevated↔trivial) of the frame.
+                                   #   Independence test: "If I removed the scale
+                                   #   change but kept the operation, would the
+                                   #   joke still work at reduced effectiveness?"
+                                   #   If yes → independent modifier, populate.
+                                   #   If the joke dies entirely → the scale
+                                   #   change IS the operation (likely
+                                   #   reinterpretation), set to none.
 
-    setup_frame: null              # [STRUCTURED] What kind of expectation the
-                                   #   setup creates. Values:
+      wordplay: none               # [STRUCTURED] optional. Single-valued.
+                                   #   none | phonemic_pair | portmanteau |
+                                   #   collocation_disruption
                                    #
-                                   #   establishes_convention — a cultural practice,
-                                   #     social ritual, or institutional norm. The
-                                   #     audience holds this convention as "how
-                                   #     things work." E.g., the middle finger is an
-                                   #     insult; you pay by cheque at the supermarket;
-                                   #     construction fences are for safety.
-                                   #
-                                   #   establishes_behavior — a recognizable human
-                                   #     behavioral pattern. The audience recognizes
-                                   #     "people do this." E.g., men are drawn to
-                                   #     tool work; people lane-change in traffic;
-                                   #     women hold dresses up against themselves.
-                                   #
-                                   #   establishes_expectation — a buildup that
-                                   #     creates specific anticipation of a payoff.
-                                   #     The audience expects something proportional
-                                   #     to the investment. E.g., escalating list of
-                                   #     preparation steps; "reason number one";
-                                   #     "the ultimate psychological test."
-                                   #
-                                   #   establishes_premise — an accepted claim or
-                                   #     hypothetical that subsequent jokes build on.
-                                   #     The audience accepts the frame and follows
-                                   #     it. E.g., "fashion won't exist"; "body parts
-                                   #     as insults"; "traffic will get worse."
-                                   #
-                                   #   establishes_anomaly — the setup presents
-                                   #     something unusual or puzzling that needs
-                                   #     explanation. E.g., "there's something about
-                                   #     a cheque that is not masculine."
-                                   #
-                                   #   establishes_sequence — an ordered progression
-                                   #     (temporal, logical, escalating) that creates
-                                   #     momentum toward a destination. E.g., the
-                                   #     out-back-sleep-up cycle; the paint-getting-
-                                   #     closer sequence.
+                                   #   Delivery vehicle, not cognitive operation.
+                                   #   Specific pun words NOT recorded.
+
+    setup_frame: null              # [STRUCTURED]
+                                   #   establishes_convention |
+                                   #   establishes_behavior |
+                                   #   establishes_expectation |
+                                   #   establishes_premise |
+                                   #   establishes_anomaly |
+                                   #   establishes_sequence
 
     pivot_locus: ""                # [STRUCTURED] logical | affective | both
-                                   #   Where the recontextualization happens.
 
     resolution_requires: []        # [STRUCTURED] multi-select:
                                    #   shared_experience | world_knowledge |
@@ -200,167 +263,106 @@ joke:
 
   structure:
     primary_template: ""           # [STRUCTURED] from vocabularies/templates.yaml.
-                                   #   Single-valued. Mutually exclusive. The
-                                   #   dominant rhetorical shape of the joke.
+                                   #   Single-valued. The dominant rhetorical shape.
+                                   #   Must describe DISCOURSE STRUCTURE, not
+                                   #   content domain or cognitive mechanism.
 
     secondary_templates: []        # [STRUCTURED] multi-select from same vocab.
-                                   #   Templates the joke also uses within the
-                                   #   primary shape. Optional; often empty.
 
+    # Subversions — TEXTUAL subversions only (v0.9).
+    # register_break moved to performance.delivery (performer-specific).
+    # anti_callback moved to joke.narrative (context-dependent).
     subversions_applied: []        # [STRUCTURED] list of {type, at}
-                                   #   type from vocabularies/subversions.yaml
-                                   #   at is a structural event name
+                                   #   type: structural_refusal | meta_structural |
+                                   #         specificity_subversion
+                                   #   at: structural event name
 
     has_tag: false                 # [STRUCTURED] boolean
 
-    tag_function: null             # [STRUCTURED] extends_punchline | reframes |
-                                   #   undercuts | callbacks_earlier | null
+    tag_operation: null            # [STRUCTURED] What the tag does to its own
+                                   #   punchline. Single-valued.
+                                   #   extends | reframes | undercuts | null
+                                   #   (v0.9: split from tag_function. The prior
+                                   #   value callbacks_earlier moved to
+                                   #   joke.narrative as tag_callbacks_to.)
 
-    tag_has_own_pivot: null        # [STRUCTURED] boolean; rare edge case where
-                                   #   the tag is almost a second joke
+    tag_has_own_pivot: null        # [STRUCTURED] boolean
 
-    # --- Act-out sub-block --------------------------------------------------
+    # --- Act-out sub-block (JOKE portion) -----------------------------------
     #
-    # Populated when the joke contains performed character dialogue — the
-    # comedian adopts a persona and speaks as/for someone else. This is
-    # the structural description of the act-out; performance_mode: character
-    # in the performance layer marks THAT it happens; this block describes
-    # WHAT the character is and how the act-out produces humor.
-    #
-    # Null when the joke has no act-out. Populated whenever the joke
-    # includes performed dialogue in a character voice.
+    # What the character IS and what structural gap the act-out creates.
+    # These are determined by the joke's text, not by who performs it.
+    # character_register moved to performance.delivery.act_out_voice (v0.9)
+    # because how the performer VOICES the character varies by delivery.
 
     act_out:
       present: false               # [STRUCTURED] boolean
+      character_type: null         # [STRUCTURED] authority | everyman |
+                                   #   enthusiast | expert | innocent
+      register_gap: null           # [STRUCTURED] treats_mundane_as_serious |
+                                   #   treats_serious_as_mundane |
+                                   #   unaware_of_absurdity |
+                                   #   performed_sincerity | none
+      character_gloss: ""          # [GLOSS]
 
-      character_type: null         # [STRUCTURED] The kind of persona the
-                                   #   comedian adopts. Values:
-                                   #
-                                   #   authority — someone with power or
-                                   #     official standing (cop, boss, doctor,
-                                   #     "leisure police"). Often speaks in
-                                   #     commands or declarations.
-                                   #
-                                   #   everyman — a regular person in a
-                                   #     recognizable situation (the driver,
-                                   #     the diner, the person on the phone).
-                                   #     Audience identifies with them.
-                                   #
-                                   #   enthusiast — someone with excessive,
-                                   #     disproportionate investment in
-                                   #     something trivial (soda commercial
-                                   #     people, the lane expert). Energy
-                                   #     exceeds what the situation warrants.
-                                   #
-                                   #   expert — someone who speaks with
-                                   #     technical or specialized knowledge,
-                                   #     real or performed ("What are you
-                                   #     using, the Philips head?" / "Yeah,
-                                   #     that'll hold").
-                                   #
-                                   #   innocent — someone who is unaware of
-                                   #     the absurdity of their own situation
-                                   #     or statement. The gap between their
-                                   #     sincerity and reality is the joke.
+  # --- Relational layer (NEW in v0.9) --------------------------------------
+  #
+  # The STANCE the joke's text establishes between comedian, audience, and
+  # subject. These are textually determined — if two different performers
+  # delivered this joke, these values would be the same. Moved from
+  # performance.relational (v0.9 audit: the prior placement was incorrect
+  # because these are properties of the joke's text, not the delivery).
 
-      character_register: null     # [STRUCTURED] The register the character
-                                   #   speaks in. Values:
-                                   #
-                                   #   confident — assured, declarative, no
-                                   #     hesitation ("This is going to be our
-                                   #     outfit. That's it.")
-                                   #
-                                   #   bewildered — confused, struggling to
-                                   #     process ("What is this? How could
-                                   #     this be?")
-                                   #
-                                   #   earnest — sincere, emotionally
-                                   #     invested, unironic ("I don't have
-                                   #     any money, but if you'll contact
-                                   #     these people...")
-                                   #
-                                   #   bureaucratic — procedural, official,
-                                   #     impersonal ("Let's go Pop, white
-                                   #     belt, white pants, get in the back")
-                                   #
-                                   #   casual — relaxed, understated, treating
-                                   #     something significant as mundane
-                                   #     ("Boy, this is some really bad
-                                   #     traffic now, boy")
+  relational:
+    positioning:
+      default: ""                  # [STRUCTURED] from vocabularies/positioning.yaml
+                                   #   lateral_observer | above | below | with
+      trajectory: null             # [STRUCTURED] optional; list of {at, value}
 
-      register_gap: null           # [STRUCTURED] The relationship between the
-                                   #   character's register and the actual
-                                   #   situation. This gap is often an
-                                   #   independent source of humor. Values:
-                                   #
-                                   #   treats_mundane_as_serious — character
-                                   #     applies gravity to a trivial
-                                   #     situation (the cheque-book woman's
-                                   #     gunslinger confidence at checkout)
-                                   #
-                                   #   treats_serious_as_mundane — character
-                                   #     applies banality to a significant
-                                   #     situation (the driver casually
-                                   #     complaining about backwards traffic)
-                                   #
-                                   #   unaware_of_absurdity — character
-                                   #     doesn't realize their situation or
-                                   #     statement is absurd (the man with
-                                   #     his head in the suit asking for
-                                   #     shoes at the bottom)
-                                   #
-                                   #   performed_sincerity — character adopts
-                                   #     a caring/helpful register to deliver
-                                   #     what is actually an attack or
-                                   #     innuendo (Funkhouser's "have you set
-                                   #     aside a day to look at her face")
-                                   #
-                                   #   none — character's register matches
-                                   #     the situation appropriately; no gap
+    audience_implication: ""       # [STRUCTURED] co_observer | target |
+                                   #   accomplice | witness
 
-      character_gloss: ""          # [GLOSS] Free-text description of the
-                                   #   character and what they're doing.
-                                   #   "The woman at the supermarket checkout,
-                                   #   producing her cheque book with
-                                   #   gunslinger efficiency."
+    shared_experience:
+      required: null               # [STRUCTURED] boolean
+      universality: null           # [STRUCTURED] universal | common | niche |
+                                   #   performer_specific | null
+      comprehensibility_without_experience: null
+                                   # [STRUCTURED] integer 0-5
+
+    performed_relatability:
+      present: null                # [STRUCTURED] boolean — is a relatability
+                                   #   gesture ("you know when you...") in the text?
 
   # --- Narrative layer -----------------------------------------------------
-  #
-  # Connections to other jokes. Includes both loose narrative links (callbacks,
-  # running premises across a set) and tight routine structure (a sequence of
-  # jokes that build a single sustained bit).
 
   narrative:
     callbacks_to: []               # [STRUCTURED] list of prior joke_ids
     callback_is_primary_pivot: null  # [STRUCTURED] boolean
-    running_premise: null          # [STRUCTURED] named premise id, from
-                                   #   engine/premises/ if applicable
+    running_premise: null          # [STRUCTURED] named premise id
+    tag_callbacks_to: null         # [STRUCTURED] joke_id or null. Populated
+                                   #   when the tag references a prior joke.
+                                   #   (v0.9: split from tag_function's
+                                   #   callbacks_earlier value, which conflated
+                                   #   tag-to-punchline relationship with
+                                   #   tag-to-prior-joke relationship.)
+    anti_callback: null            # [STRUCTURED] joke_id or null. Populated
+                                   #   when a callback opportunity exists but
+                                   #   is pointedly not taken. (v0.9: moved
+                                   #   from subversions — context-dependent,
+                                   #   depends on what was performed earlier.)
 
-    # Routine membership — for jokes that are part of a sustained bit
-    routine_id: null               # [STRUCTURED] id of the routine this joke
-                                   #   belongs to, or null if standalone.
-                                   #   Routines are defined in
-                                   #   engine/routines/{routine_id}.yaml
-    position_in_routine: null      # [STRUCTURED] integer: which sub-joke this
-                                   #   is within the routine (1-indexed).
-                                   #   null if not in a routine.
-    routine_total_jokes: null      # [STRUCTURED] integer: total sub-jokes in
-                                   #   the routine. Redundant with the routine
-                                   #   file but convenient for per-joke queries.
-
+    routine_id: null               # [STRUCTURED]
+    position_in_routine: null      # [STRUCTURED] integer
+    routine_total_jokes: null      # [STRUCTURED] integer
     position_in_set: null          # [STRUCTURED] opener | mid_set | closer |
-                                   #   standalone. The larger-scale position
-                                   #   within a performance (a set may contain
-                                   #   multiple routines plus standalone jokes).
+                                   #   standalone
 
 # ============================================================================
 # PERFORMANCE (specific to this delivery)
 # ============================================================================
 #
 # Populated in Pass 3 (aloud read). Most values are DEVIATIONS from the
-# performer's defaults in engine/performers/{performer}.yaml. Use the value
-# `default` when the performance matches the performer's default for that
-# field, instead of restating it.
+# performer's defaults in engine/performers/{performer}.yaml.
 
 performance:
 
@@ -370,119 +372,72 @@ performance:
 
   delivery:
     cadence: ""                    # [STRUCTURED] from vocabularies/cadence.yaml
-                                   #   or `default`
-    pause_placement: []            # [STRUCTURED] multi-select:
-                                   #   before_punchline | before_tag |
-                                   #   mid_setup_for_emphasis | terminal
-    repetition: null               # [STRUCTURED] null or
-                                   #   {phrase_gloss: str [GLOSS sub-field],
-                                   #    count: int, at: [events]}
+    pause_placement: []            # [STRUCTURED] multi-select
+    repetition: null               # [STRUCTURED] null or {phrase_gloss, count, at}
     vocal_register_shifts: []      # [STRUCTURED] list of {at, direction}
-                                   #   direction from vocabularies/
-                                   #   register-shifts.yaml
     estimated_duration_seconds: null  # [STRUCTURED]
+
+    # Register break (v0.9: moved from subversions — performer-specific.
+    # What's a register break for Mort is baseline for Cece.)
+    register_break:
+      present: false               # [STRUCTURED] boolean
+      at: null                     # [STRUCTURED] structural event name
+      direction: null              # [STRUCTURED] from vocabularies/register-shifts.yaml
+
+    # Act-out voice realization (v0.9: split from joke.structure.act_out.
+    # How the performer VOICES the character varies by delivery.
+    # character_type and register_gap stay in joke.structure because they
+    # are determined by the text.)
+    act_out_voice:
+      character_register: null     # [STRUCTURED] confident | bewildered |
+                                   #   earnest | bureaucratic | casual
+                                   #   How the performer voices the character.
+                                   #   The same joke text could be delivered
+                                   #   with different character registers by
+                                   #   different performers.
 
   # --- Voice layer ---------------------------------------------------------
 
   voice:
-    persona_markers: []            # [STRUCTURED] deviations only;
-                                   #   values from
-                                   #   vocabularies/persona-markers.yaml
-    signature_phrases: []          # [GLOSS]      exact phrases if load-bearing
-                                   #              to this specific joke
-    register: ""                   # [STRUCTURED] `default` or value from
-                                   #   vocabularies/registers.yaml
+    persona_markers: []            # [STRUCTURED] deviations only
+    signature_phrases: []          # [GLOSS]
+    register: ""                   # [STRUCTURED] `default` or value
     editorializes:
       present: null                # [STRUCTURED] true | false
-      kind: null                   # [STRUCTURED] null if not present, else:
-                                   #   strong — explicit judgment stated as
-                                   #     opinion ("that's ridiculous")
-                                   #   weak — judgment conveyed through tone or
-                                   #     word choice only, not stated directly
-                                   #   ironized — performing the opposite of
-                                   #     sincere judgment (mock-praise,
-                                   #     exaggerated agreement with the absurd)
+      kind: null                   # [STRUCTURED] strong | weak | ironized | null
 
   # --- Affective layer -----------------------------------------------------
 
   affective:
     default_register:
       valence: null                # [STRUCTURED] integer -3 to +3
-                                   #   negative=cool/detached,
-                                   #   positive=warm/vulnerable
       arousal: null                # [STRUCTURED] integer -3 to +3
-                                   #   negative=low-energy, positive=high-energy
     trajectory: null               # [STRUCTURED] optional list of {at, register}
-                                   #   anchored to structural events
-    shifts_are_load_bearing: null  # [STRUCTURED] boolean; relevant only if
-                                   #   trajectory is populated
+    shifts_are_load_bearing: null  # [STRUCTURED] boolean
     deviates_from_performer_default: null  # [STRUCTURED] boolean
 
-  # --- Relational layer ----------------------------------------------------
+  # --- Relational layer (PERFORMANCE portion) ------------------------------
+  #
+  # v0.9: This layer now contains ONLY performer-variable relational
+  # properties. Textually-determined relational properties (positioning,
+  # audience_implication, shared_experience, performed_relatability.present)
+  # moved to joke.relational.
 
   relational:
-    positioning:
-      default: ""                  # [STRUCTURED] from vocabularies/positioning.yaml
-                                   #   lateral_observer | above | below | with
-      trajectory: null             # [STRUCTURED] optional; list of {at, value}
-                                   #   if positioning shifts mid-joke
-
-    audience_implication: ""       # [STRUCTURED] co_observer | target |
-                                   #   accomplice | witness
-
     vulnerability:
-      personal_exposure: null      # [STRUCTURED] integer 0-5: how much of
-                                   #   self is revealed.
-                                   #   0: nothing personal (pure observation)
-                                   #   1: personal preference or opinion
-                                   #   2: personal habit or quirk
-                                   #   3: personal failure or embarrassment
-                                   #   4: private emotional state or relationship
-                                   #   5: core identity, trauma, or taboo
-      emotional_risk: null         # [STRUCTURED] integer 0-5: how affected the
-                                   #   performer is by what's revealed
-                                   #   (orthogonal to exposure — high exposure
-                                   #   can have low risk if played as detached).
-                                   #   0: no emotional stake
-                                   #   1: mild discomfort played for comedy
-                                   #   2: genuine but managed vulnerability
-                                   #   3: visible emotional engagement
-                                   #   4: performance depends on sincerity
-                                   #   5: unironic emotional exposure
-
-    shared_experience:
-      required: null               # [STRUCTURED] boolean
-      universality: null           # [STRUCTURED] universal | common | niche |
-                                   #   performer_specific | null
-      comprehensibility_without_experience: null
-                                   # [STRUCTURED] integer 0-5: can someone who
-                                   #   hasn't had the experience still find it
-                                   #   funny?
-                                   #   0: completely opaque without the experience
-                                   #   1: recognizable but not funny without it
-                                   #   2: understandable, humor partially lands
-                                   #   3: funny enough; experience adds depth
-                                   #   4: nearly as funny; experience is bonus
-                                   #   5: fully funny; experience irrelevant
+      personal_exposure: null      # [STRUCTURED] integer 0-5
+      emotional_risk: null         # [STRUCTURED] integer 0-5
 
     performed_relatability:
-      present: null                # [STRUCTURED] boolean — does the joke
-                                   #   perform a relatability gesture ("you know
-                                   #   when you...") for an experience that might
-                                   #   not actually be shared?
-      intensity: null              # [STRUCTURED] integer 0-3 if present, null
-                                   #   if not. Replaces 0.0-1.0 float (which
-                                   #   had no anchors and invited false
-                                   #   precision).
-                                   #   0: minimal — generic "you know"
-                                   #   1: moderate — specific scenario framed as
-                                   #      universal ("you know when you're in
-                                   #      a parking garage...")
-                                   #   2: strong — extended "we all do this"
-                                   #      framing, multiple beats of performed
-                                   #      shared experience
-                                   #   3: maximal — the relatability IS the joke
-                                   #      (the bit has no other mechanism)
+      intensity: null              # [STRUCTURED] integer 0-3 if present
+                                   #   How much the performer COMMITS to the
+                                   #   relatability gesture. Varies by delivery.
+                                   #   (The gesture's presence is in joke.relational)
+
+    positioning_deviation: null    # [STRUCTURED] null or value from positioning.yaml.
+                                   #   Populated only when the performer's delivery
+                                   #   shifts the positioning from what the joke's
+                                   #   text establishes. null = matches text.
 
 # ============================================================================
 # META
@@ -498,56 +453,33 @@ meta:
 
 analysis:
 
-  # --- Commutation test (Pass 4) -------------------------------------------
-  #
-  # load_bearing_element and removable_elements reference STRUCTURED fields
-  # by dotted path so the engine can learn which fields across jokes tend to
-  # be load-bearing. The gloss sub-fields are for human review only.
-
   commutation:
     load_bearing_element:
-      field_path: ""               # [STRUCTURED] dotted path into this
-                                   #   annotation, e.g.,
-                                   #   "joke.content.specificity.trajectory"
-                                   #   or "performance.affective.trajectory"
-                                   #   or "joke.structure.subversions_applied[0]"
-      gloss: ""                    # [GLOSS]      human-readable description
-    removable_elements:            # [STRUCTURED] list of field_paths
+      field_path: ""               # [STRUCTURED]
+      gloss: ""                    # [GLOSS]
+    removable_elements:
       - field_path: ""
         gloss: ""                  # [GLOSS]
-    uncertain_elements:            # [STRUCTURED] commutation was ambiguous;
-      - field_path: ""             #   flag for weekly review
+    uncertain_elements:
+      - field_path: ""
         gloss: ""                  # [GLOSS]
 
-  # --- Voice attribution (weekly cross-cutting pass) -----------------------
-
   voice_portability:               # all [STRUCTURED]
-    mort: null                     # portable | not_portable |
-                                   # portable_with_adaptation
-    cece: null                     # Add roster members as they're defined
-
-  # --- Adversarial review (Pass 5) -----------------------------------------
+    mort: null
+    cece: null
 
   adversarial:
     counterarguments_considered:
-      - alternative: ""            # [GLOSS] the alternative reading
-        why_rejected: ""           # [GLOSS] why it was rejected
+      - alternative: ""            # [GLOSS]
+        why_rejected: ""           # [GLOSS]
     confidence: null               # [STRUCTURED] low | medium | high
 
 # ============================================================================
 # Free-text notes
 # ============================================================================
-#
-# The schema-gap detector. Everything here is [GLOSS]. Repeated patterns
-# across many notes fields signal new structured fields to add.
 
 notes: |
   Free-form observations about this joke that the schema doesn't capture.
-  Things to record here:
-    - Phenomena that don't fit existing fields
-    - Uncertainty about classifications (with the specific uncertainty)
-    - Connections to other annotated jokes worth investigating
-    - Anything that felt like it mattered but had nowhere to go
 
 # ============================================================================
 # Concept nodes — reference section (not part of the annotation)
@@ -555,30 +487,4 @@ notes: |
 #
 # Concepts referenced in this annotation's content.concepts and pivot_concept
 # fields are not bare strings. They're typed nodes living in engine/concepts/.
-# Each concept node looks like:
-#
-#   # engine/concepts/parking_garages.yaml
-#   node_id: parking_garages
-#   gloss: "Multi-level car parking structures"   # [GLOSS]
-#   dimensions:                                    # all [STRUCTURED]
-#     domain: [domestic_life, urban_infrastructure]
-#     specificity: 3
-#     register: neutral
-#     valence: -1                  # slightly negative associations
-#     arousal: -1                  # low-energy
-#     physicality: physical
-#     typicality: mundane
-#     era: contemporary
-#   attested_in:                   # [STRUCTURED] jokes that use this concept
-#     - seinfeld_s03e14_opening_01
-#   adjacencies:                   # [STRUCTURED] concepts that have shown up
-#                                  # as productive pairings in annotated jokes
-#     - node_id: memory
-#       shared_axes: [specificity, mundane_frustration]
-#       attested_in: [seinfeld_s03e14_opening_01]
-#
-# Concept-node files are the engine's knowledge graph. Creating a concept
-# is a schema-level action logged in schema-changelog.md. Adjacencies are
-# NOT hand-authored — they're populated from annotations by a script that
-# scans content.concepts fields and records co-occurrences with their
-# shared feature axes.
+# See engine/concepts/ for the node format.

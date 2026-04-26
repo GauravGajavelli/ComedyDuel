@@ -1,0 +1,203 @@
+# FILE: annotations/s02e03_opening_pass2.yaml
+
+jokes:
+  - joke_id: "seinfeld_s02e03_opening_01"
+    source:
+      work: "Seinfeld S02E03 'The Jacket' opening monologue"
+      medium: sitcom_opener
+      year: 1991
+    transcript_fragment: "I hate clothes, okay? I hate buying them. I hate picking them out of my closet. I can't stand every day trying to come up with little outfits for myself."
+    joke:
+      content:
+        primary_domain: [fashion, daily_life]
+        concepts: [clothing, daily_routine, self_presentation]
+        pivot_concept: outfits_as_burden
+        specificity: {default_level: 2}
+        content_moves: []
+      logic:
+        setup_expectation: "Getting dressed is a routine, automatic task most people don't think much about."
+        punchline_violation: "Reframes daily dressing as an exhausting creative burden — 'come up with little outfits for myself' makes it sound like curating a fashion show every morning. 'Little outfits' infantilizes the process."
+        pivot_mechanism:
+          operation: articulation
+          reading_switch: none
+          scale_shift: none
+          wordplay: none
+        setup_frame: establishes_behavior
+        pivot_locus: affective
+        resolution_requires: [shared_experience]
+      structure:
+        primary_template: bare_observation
+        secondary_templates: []
+        subversions_applied: []
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out:
+          present: false
+          character_type: null
+          register_gap: null
+          character_gloss: ""
+      relational:
+        positioning: {default: lateral_observer}
+        audience_implication: co_observer
+        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 5}
+        performed_relatability: {present: true}
+      narrative:
+        routine_id: s02e03_clothes_future
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: medium}
+    notes: "Borderline articulation vs. reinterpretation. 'Little outfits' slightly reframes but the humor is primarily recognition-based — everyone has felt this fatigue. The frame-dependency test: stating 'getting dressed every day is tedious' still has the same humor. The naming does the work. Articulation."
+
+  - joke_id: "seinfeld_s02e03_opening_02"
+    source:
+      work: "Seinfeld S02E03 'The Jacket' opening monologue"
+      medium: sitcom_opener
+      year: 1991
+    transcript_fragment: "I think eventually fashion won't even exist. It won't. I think eventually we'll all be wearing the same thing. 'Cause anytime I see a movie or a TV show where there's people from the future or another planet, they're all wearing the same thing."
+    joke:
+      content:
+        primary_domain: [fashion, popular_culture]
+        concepts: [clothing, future, science_fiction, uniformity]
+        pivot_concept: scifi_as_fashion_forecast
+        specificity: {default_level: 3}
+        content_moves: []
+      logic:
+        setup_expectation: "The prediction that fashion will disappear sounds like a philosophical or sociological claim about culture."
+        punchline_violation: "The 'evidence' for this grand cultural prediction is sci-fi movies and TV shows — treating fictional costume design as legitimate forecasting of human civilization."
+        pivot_mechanism:
+          operation: mapping
+          reading_switch: none
+          scale_shift: none
+          wordplay: none
+        setup_frame: establishes_premise
+        pivot_locus: logical
+        resolution_requires: [world_knowledge]
+      structure:
+        primary_template: comparison
+        secondary_templates: []
+        subversions_applied: []
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out:
+          present: false
+          character_type: null
+          register_gap: null
+          character_gloss: ""
+      relational:
+        positioning: {default: lateral_observer}
+        audience_implication: co_observer
+        shared_experience: {required: true, universality: common, comprehensibility_without_experience: 4}
+        performed_relatability: {present: false}
+      narrative:
+        routine_id: s02e03_clothes_future
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: medium}
+    notes: "Mapping vs transplant: the parallel between sci-fi costume conventions and a real prediction about fashion is presented as genuinely apt (the observation IS that sci-fi always shows uniform clothing). The humor is in the fake-logical connection — treating fiction as evidence. Mapping because the parallel is presented as illuminating, not as a misapplied framework."
+
+  - joke_id: "seinfeld_s02e03_opening_03"
+    source:
+      work: "Seinfeld S02E03 'The Jacket' opening monologue"
+      medium: sitcom_opener
+      year: 1991
+    transcript_fragment: "Somehow they decided 'This is going to be our outfit. One-piece silver jumpsuit, V-stripe, and boots. That's it.'"
+    joke:
+      content:
+        primary_domain: [fashion, popular_culture]
+        concepts: [science_fiction, uniform, committee_decision, specificity]
+        pivot_concept: alien_fashion_committee
+        specificity: {default_level: 5}
+        content_moves: []
+      logic:
+        setup_expectation: "Sci-fi uniforms are a production design choice — the audience understands them as a genre convention."
+        punchline_violation: "Reinterprets the convention as if the fictional civilization held a deliberate meeting and chose this specific outfit. The hyperspecific description ('V-stripe') treats the costume as a reasoned decision rather than a genre trope."
+        pivot_mechanism:
+          operation: reinterpretation
+          reading_switch: none
+          scale_shift: none
+          wordplay: none
+        setup_frame: establishes_convention
+        pivot_locus: logical
+        resolution_requires: [world_knowledge]
+      structure:
+        primary_template: bare_observation
+        secondary_templates: []
+        subversions_applied:
+          - {type: specificity_subversion, at: punchline}
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out:
+          present: false
+          character_type: null
+          register_gap: null
+          character_gloss: ""
+      relational:
+        positioning: {default: lateral_observer}
+        audience_implication: co_observer
+        shared_experience: {required: true, universality: common, comprehensibility_without_experience: 4}
+        performed_relatability: {present: false}
+      narrative:
+        routine_id: s02e03_clothes_future
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: medium}
+    notes: "The specificity subversion is load-bearing — 'V-stripe' is more specific than the setup warrants and the precision of the description is doing comedic work. Frame shift: genre convention reread as in-world deliberate choice."
+
+  - joke_id: "seinfeld_s02e03_opening_04"
+    source:
+      work: "Seinfeld S02E03 'The Jacket' opening monologue"
+      medium: sitcom_opener
+      year: 1991
+    transcript_fragment: "We should come up for an outfit for earth. An earth outfit. We should vote on it. Candidates propose different outfits, no speeches. They walk out, twirl, walk off. We just sit in the audience and go, 'That was nice. I could wear that.'"
+    joke:
+      content:
+        primary_domain: [fashion, politics, social_conventions]
+        concepts: [clothing, voting, democracy, fashion_show, earth]
+        pivot_concept: democratic_outfit_election
+        specificity: {default_level: 4}
+        content_moves: []
+      logic:
+        setup_expectation: "The premise of choosing one outfit for all of humanity has been established. The audience expects further absurd theorizing."
+        punchline_violation: "Extends the premise into a detailed political process — candidates, voting, no speeches — that transplants election/pageant conventions onto the clothing choice. The casual audience reaction ('That was nice. I could wear that.') deflates the grand democratic exercise to mundane shopping approval."
+        pivot_mechanism:
+          operation: extension
+          reading_switch: none
+          scale_shift: none
+          wordplay: none
+        setup_frame: establishes_premise
+        pivot_locus: both
+        resolution_requires: [world_knowledge]
+      structure:
+        primary_template: reductio
+        secondary_templates: [escalation]
+        subversions_applied: []
+        has_tag: true
+        tag_operation: undercuts
+        tag_has_own_pivot: true
+        act_out:
+          present: true
+          character_type: everyman
+          register_gap: treats_serious_as_mundane
+          character_gloss: "Audience member at a civilization-defining election casually evaluating outfits as if shopping."
+      relational:
+        positioning: {default: lateral_observer}
+        audience_implication: co_observer
+        shared_experience: {required: false, universality: universal, comprehensibility_without_experience: 5}
+        performed_relatability: {present: true}
+      narrative:
+        routine_id: s02e03_clothes_future
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: high}
+    notes: "The tag ('That was nice. I could wear that.') has its own pivot — it undercuts the grandeur of a species-wide democratic exercise by reducing it to the register of casual shopping. Extension is the primary operation: the one-outfit premise is followed logically into how it would actually be decided. The act-out character is an everyman audience member, blissfully treating a monumental choice with shopping-mall energy."

@@ -1,0 +1,185 @@
+# FILE: annotations/s01e04_opening_pass2.yaml
+jokes:
+  - joke_id: "seinfeld_s01e04_opening_01"
+    source:
+      work: "Seinfeld S01E04 'Male Unbonding' opening monologue"
+      medium: sitcom_opener
+      year: 1990
+    transcript_fragment: "Have you ever noticed a guy's out in his driveway working on something with tools, how all the other men in the neighborhood are magnetically drawn to this activity. They just come wandering out of the house like zombies."
+    joke:
+      content:
+        primary_domain: [gender_dynamics, domestic_life]
+        concepts: [men, tools, work, compulsion, neighborhood]
+        pivot_concept: compulsion
+        specificity: {default_level: 3}
+        content_moves: []
+      logic:
+        setup_expectation: "Men enjoy working with tools - a straightforward, accepted observation."
+        punchline_violation: "The shared truth is articulated with vivid specificity: men don't just notice, they are 'magnetically drawn' like 'zombies'. The audience recognizes this involuntary compulsion from their own experience - the humor is in the naming."
+        pivot_mechanism:
+          operation: articulation
+          reading_switch: none
+          scale_shift: none
+          wordplay: none
+        setup_frame: establishes_behavior
+        pivot_locus: affective
+        resolution_requires: [shared_experience]
+      structure:
+        primary_template: bare_observation
+        secondary_templates: []
+        subversions_applied: []
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out: {present: false, character_type: null, register_gap: null, character_gloss: ""}
+      relational:
+        positioning: {default: lateral_observer}
+        audience_implication: co_observer
+        shared_experience: {required: true, universality: common, comprehensibility_without_experience: 3}
+        performed_relatability: {present: true}
+      narrative:
+        routine_id: "s01e04_men_tools"
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: high}
+    notes: "Clean articulation. No frame shift - the zombie comparison is vivid but doesn't reframe the behavior, it names the intensity of the compulsion that everyone already implicitly knows. The 'have you ever noticed' opener is a classic relatability gesture."
+
+  - joke_id: "seinfeld_s01e04_opening_02"
+    source:
+      work: "Seinfeld S01E04 'Male Unbonding' opening monologue"
+      medium: sitcom_opener
+      year: 1990
+    transcript_fragment: "Men, it's true, men hear a drill, it's like a dog whistle. Just.. you know, they go running up to that living room curtain, 'Honey, I think Jim's working on something over there.'"
+    joke:
+      content:
+        primary_domain: [gender_dynamics, domestic_life]
+        concepts: [men, drill, dog_whistle, compulsion, instinct]
+        pivot_concept: dog_whistle
+        specificity: {default_level: 3}
+        content_moves: []
+      logic:
+        setup_expectation: "Men are drawn to tools/work activity - the audience is in the frame of male social behavior."
+        punchline_violation: "The compulsion is mapped to a dog responding to a whistle - an involuntary, species-level response to sound. The structural parallel (involuntary compulsion triggered by auditory stimulus) reveals that men's tool-attraction is animalistic, not rational."
+        pivot_mechanism:
+          operation: mapping
+          reading_switch: none
+          scale_shift: none
+          wordplay: none
+        setup_frame: establishes_behavior
+        pivot_locus: logical
+        resolution_requires: [shared_experience]
+      structure:
+        primary_template: comparison
+        secondary_templates: []
+        subversions_applied: []
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out: {present: true, character_type: enthusiast, register_gap: unaware_of_absurdity, character_gloss: "Man at the living room curtain, excited and oblivious to the absurdity of his compulsion, calling to his wife like a child reporting something exciting."}
+      relational:
+        positioning: {default: lateral_observer}
+        audience_implication: co_observer
+        shared_experience: {required: true, universality: common, comprehensibility_without_experience: 3}
+        performed_relatability: {present: true}
+      narrative:
+        routine_id: "s01e04_men_tools"
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: high}
+    notes: "This is the worked example from pivot-mechanisms.yaml for mapping. Source: dogs responding to ultrasonic frequencies. Target: men responding to power tools. Shared structure: involuntary species-level compulsion triggered by sound. The parallel is apt - the humor is in the recognition, not the mismatch."
+
+  - joke_id: "seinfeld_s01e04_opening_03"
+    source:
+      work: "Seinfeld S01E04 'Male Unbonding' opening monologue"
+      medium: sitcom_opener
+      year: 1990
+    transcript_fragment: "We want to watch the guy, we want to talk to him, we want to ask him dumb questions. 'What are you using, the Philips head?'"
+    joke:
+      content:
+        primary_domain: [gender_dynamics, domestic_life]
+        concepts: [men, tools, questions, involvement, spectating]
+        pivot_concept: dumb_questions
+        specificity: {default_level: 4}
+        content_moves: []
+      logic:
+        setup_expectation: "Men gather around the guy working - the audience understands the behavior of wanting to be near the action."
+        punchline_violation: "The specific dumb question 'What are you using, the Philips head?' crystallizes the shared experience with forensic precision. The audience recognizes this exact type of question from their own lives. The humor is in the naming, not in any frame shift."
+        pivot_mechanism:
+          operation: articulation
+          reading_switch: none
+          scale_shift: none
+          wordplay: none
+        setup_frame: establishes_behavior
+        pivot_locus: affective
+        resolution_requires: [shared_experience]
+      structure:
+        primary_template: bare_observation
+        secondary_templates: []
+        subversions_applied: []
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out: {present: true, character_type: enthusiast, register_gap: unaware_of_absurdity, character_gloss: "Neighbor asking an obvious, unnecessary question about tools with genuine interest, performing involvement."}
+      relational:
+        positioning: {default: with}
+        audience_implication: co_observer
+        shared_experience: {required: true, universality: common, comprehensibility_without_experience: 2}
+        performed_relatability: {present: true}
+      narrative:
+        routine_id: "s01e04_men_tools"
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: high}
+    notes: "This is the worked example from pivot-mechanisms.yaml for articulation vs reinterpretation. The Philips head question is funny because the audience recognizes it from their own experience - pure naming. No new frame is imposed. Remove any 'frame shift' and the joke survives intact. Positioning shifts to 'with' - Seinfeld includes himself in 'we'."
+
+  - joke_id: "seinfeld_s01e04_opening_04"
+    source:
+      work: "Seinfeld S01E04 'Male Unbonding' opening monologue"
+      medium: sitcom_opener
+      year: 1990
+    transcript_fragment: "That's why when they have construction sites, they have to have those wood panel fences around it, that's just to keep the men out. They cut those little holes for us so we can see what the hell is going on."
+    joke:
+      content:
+        primary_domain: [gender_dynamics, urban_life]
+        concepts: [construction_site, fence, peepholes, men, compulsion, containment]
+        pivot_concept: construction_fence
+        specificity: {default_level: 3}
+        content_moves: []
+      logic:
+        setup_expectation: "Construction fences exist for safety/liability reasons. The peepholes are for general public interest or curiosity."
+        punchline_violation: "The fences are reinterpreted as containment measures specifically for men's tool-compulsion - as if men are such a nuisance around construction that fences were invented to keep them out. The peepholes become a concession, like feeding holes at a zoo."
+        pivot_mechanism:
+          operation: reinterpretation
+          reading_switch: none
+          scale_shift: expansion
+          wordplay: none
+        setup_frame: establishes_premise
+        pivot_locus: logical
+        resolution_requires: [shared_experience, world_knowledge]
+      structure:
+        primary_template: escalation
+        secondary_templates: []
+        subversions_applied: []
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out: {present: false, character_type: null, register_gap: null, character_gloss: ""}
+      relational:
+        positioning: {default: with}
+        audience_implication: co_observer
+        shared_experience: {required: true, universality: common, comprehensibility_without_experience: 3}
+        performed_relatability: {present: true}
+      narrative:
+        routine_id: "s01e04_men_tools"
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: medium}
+    notes: "Reinterpretation: the construction fence is reread from 'safety barrier' to 'containment for male compulsion'. The humor requires the frame shift - stating 'construction fences exist for safety' is not funny. The peepholes-as-concession is the secondary beat that confirms the reframe. Scale_shift expansion takes the individual-behavior observation to an infrastructure-level conspiracy."

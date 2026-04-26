@@ -41,17 +41,20 @@ Within Pass 2, fill fields in this order:
 1. `logic.setup_expectation` and `logic.punchline_violation` (GLOSS). Write the joke's logic in prose first. These function as your reasoning trace.
 2. `logic.pivot_locus` (logical / affective / both). The gloss fields usually make this obvious.
 3. `joke.content.pivot_concept`. Which concept node does the turn anchor on? Null if purely affective.
-4. `logic.pivot_mechanism.operation`. With the gloss in hand, consult `vocabularies/pivot-mechanisms.yaml` and pick the value whose criterion and test match your gloss. Each value has a test that produces a concrete written artifact (two readings, a negated claim, a source/target pair, etc.). If the test produces the artifact, the value fits.
-5. `logic.pivot_mechanism.reading_switch` and `logic.pivot_mechanism.scale_shift`. These are orthogonal modifiers. reading_switch defaults to none (most jokes have no reading-mode change). scale_shift defaults to none. Populate only when the modifier is load-bearing.
-6. `logic.setup_frame`. What kind of expectation does the setup create? (establishes_convention | establishes_behavior | establishes_expectation | establishes_premise | establishes_anomaly | establishes_sequence).
-7. `joke.structure.primary_template`. Consult `vocabularies/templates.yaml`. This is informed by the logic but is its own question — template is the rhetorical SHAPE, pivot_mechanism is the cognitive OPERATION.
-8. `joke.structure.subversions_applied`, `has_tag`, `tag_function`.
-9. `joke.narrative.*` — callback references, routine position, etc.
-10. `joke.content.concepts` and `specificity` last. Specificity sometimes only becomes clear once the structural move is named.
+4. `logic.pivot_mechanism.operation`. Consult `vocabularies/pivot-mechanisms.yaml`. 6 operations: negation | reinterpretation | transplant | mapping | extension | articulation. Each has a test that produces a concrete written artifact. Note: articulation is the "null operation" — cognitive recognition, not a frame shift.
+5. `logic.pivot_mechanism.reading_switch`, `scale_shift`, and `wordplay`. Three orthogonal modifiers, all default to none. reading_switch: known entanglement with reinterpretation (document, don't suppress). scale_shift: use independence test ("if I removed the scale change, would the joke still work at reduced effectiveness?"). wordplay: delivery vehicle — record the sub-type, NOT specific pun words.
+6. `logic.setup_frame`. (establishes_convention | establishes_behavior | establishes_expectation | establishes_premise | establishes_anomaly | establishes_sequence).
+7. `joke.structure.primary_template`. Consult `vocabularies/templates.yaml`. 6 templates: mundane_as_monumental | monumental_as_mundane | bare_observation | escalation | reductio | comparison. Template is the rhetorical SHAPE; pivot_mechanism is the cognitive OPERATION. If the joke anthropomorphizes, record that in `joke.content.content_moves`, not as the template.
+8. `joke.structure.act_out` — if the joke has character dialogue, populate character_type and register_gap. character_register goes in performance (Pass 3), not here.
+9. `joke.structure.subversions_applied` — structural_refusal | meta_structural | specificity_subversion ONLY. register_break goes in performance.delivery (Pass 3). anti_callback goes in joke.narrative.
+10. `joke.structure.tag_operation` (extends | reframes | undercuts) + `joke.narrative.tag_callbacks_to` if the tag references a prior joke.
+11. `joke.relational` — positioning, audience_implication, shared_experience (required, universality, comprehensibility), performed_relatability.present. These are JOKE properties (same regardless of performer).
+12. `joke.narrative.*` — callbacks, routine position, anti_callback, tag_callbacks_to.
+13. `joke.content.concepts` and `specificity` last.
 
 The gloss-before-structured ordering is the most important principle: writing the logic in prose first makes the structured classification almost mechanical. When the structured field resists, revisit the gloss — it's usually the gloss that's unsharp.
 
-**Pass 3 — Aloud read, performance (sensory).** Read each joke aloud at least twice before committing any fields. Populate performance-level layers: delivery, affective (default register plus any trajectory anchored to structural events), voice (deviations from performer default), relational (positioning, audience implication, shared-experience dimensions). Focus on how the joke *goes*. Batch 3–5 jokes per session. Updates `annotation_status.performance: complete`.
+**Pass 3 — Aloud read, performance (sensory).** Read each joke aloud at least twice before committing any fields. Populate performance-level layers: delivery (cadence, pauses, register shifts, register_break, act_out_voice.character_register), affective (default register plus trajectory), voice (deviations from performer default), relational (vulnerability, performed_relatability.intensity, positioning_deviation if any). Note: positioning, audience_implication, shared_experience, and performed_relatability.present are now in joke.relational (Pass 2), not here. Pass 3 captures only the performer-variable aspects. Focus on how the joke *goes*. Batch 3–5 jokes per session. Updates `annotation_status.performance: complete`.
 
 Within Pass 3, fill fields in this order:
 

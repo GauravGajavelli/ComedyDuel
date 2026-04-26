@@ -9,10 +9,12 @@ without prior conversation history.
 
 The project is building an annotation schema for decomposing standup comedy
 jokes into structured fields that a generation engine can compute on. The
-schema has been through v0.5 of iterative refinement, validated against 5
-Seinfeld Season 1 opening monologues (episodes 1-5). Five independent
-annotation agents confirmed the schema works but surfaced specific ambiguities
-and vocabulary gaps that need ongoing monitoring.
+schema is at v0.9 after comprehensive level-assignment auditing. It has been
+validated against 14 Seinfeld episodes (71 laugh-points). Key architectural
+features: joke/performance block split (the "performer test"), 6 cognitive
+operations + 4 orthogonal modifiers, 6 rhetorical templates, a new
+joke.relational layer (v0.9), and meta rules for level assignment in the
+schema header.
 
 ## Files to read before starting
 
@@ -71,13 +73,32 @@ the protocol in `protocols.md`. The field order is:
 2. `pivot_locus` (logical / affective / both)
 3. `pivot_concept`
 4. `pivot_mechanism.operation` — run the TEST from `pivot-mechanisms.yaml`
+   (6 operations: negation | reinterpretation | transplant | mapping |
+   extension | articulation)
 5. `pivot_mechanism.reading_switch` (default: none)
 6. `pivot_mechanism.scale_shift` (default: none)
-7. `setup_frame` (establishes_convention | establishes_behavior |
+7. `pivot_mechanism.wordplay` (default: none | phonemic_pair | portmanteau |
+   collocation_disruption) — delivery vehicle, not operation
+8. `setup_frame` (establishes_convention | establishes_behavior |
    establishes_expectation | establishes_premise | establishes_anomaly |
    establishes_sequence)
-8. `primary_template` from `templates.yaml`
-9. Tag difficulties and vocabulary gaps
+9. `primary_template` from `templates.yaml` (6 templates:
+   mundane_as_monumental | monumental_as_mundane | bare_observation |
+   escalation | reductio | comparison)
+10. `joke.content.content_moves` — if joke anthropomorphizes, note here
+    (not in template)
+11. `joke.structure.act_out` — if joke has character dialogue: character_type
+    + register_gap (character_register goes in performance, not here)
+12. `joke.relational` — positioning, audience_implication, shared_experience,
+    performed_relatability.present (these are joke properties, not
+    performance properties — same value regardless of performer)
+13. `joke.structure.tag_operation` — extends | reframes | undercuts
+    (if tag callbacks a prior joke, note in joke.narrative.tag_callbacks_to
+    separately)
+14. `joke.structure.subversions_applied` — structural_refusal |
+    meta_structural | specificity_subversion ONLY (register_break goes in
+    performance.delivery; anti_callback goes in joke.narrative)
+15. Tag difficulties and vocabulary gaps
 
 For each laugh-point, run the operation's test and write down the concrete
 artifact (two readings, a negated claim, a source/target pair, etc.). The
@@ -288,7 +309,7 @@ You are performing a Pass 2 (silent decomposition) annotation on a
 Seinfeld opening monologue. Produce YAML with one entry per distinct
 laugh-point.
 
-## FIELD ORDER (follow exactly)
+## FIELD ORDER (follow exactly — schema v0.9)
 1. setup_expectation (GLOSS — your reasoning trace)
 2. punchline_violation (GLOSS)
 3. pivot_locus: logical | affective | both
@@ -296,12 +317,18 @@ laugh-point.
 5. pivot_mechanism.operation — run the TEST below, write down the artifact
 6. pivot_mechanism.reading_switch: none | figurative_to_literal | literal_to_figurative
 7. pivot_mechanism.scale_shift: none | expansion | contraction
-8. setup_frame: establishes_convention | establishes_behavior |
+8. pivot_mechanism.wordplay: none | phonemic_pair | portmanteau | collocation_disruption
+9. setup_frame: establishes_convention | establishes_behavior |
    establishes_expectation | establishes_premise | establishes_anomaly |
    establishes_sequence
-9. primary_template: [INSERT CURRENT TEMPLATE VALUES FROM templates.yaml]
-10. physical_performance: null
-11. difficulties (tag ambiguities, vocabulary gaps, forced choices)
+10. primary_template: [INSERT CURRENT TEMPLATE VALUES FROM templates.yaml]
+    NOTE: if joke anthropomorphizes, put that in content_moves, not template
+11. act_out: present? character_type + register_gap (NOT character_register — that's Pass 3)
+12. subversions: structural_refusal | meta_structural | specificity_subversion ONLY
+13. tag_operation: extends | reframes | undercuts
+14. joke.relational: positioning, audience_implication, shared_experience,
+    performed_relatability.present
+15. difficulties (tag ambiguities, vocabulary gaps, forced choices)
 
 ## OPERATION TESTS
 [INSERT THE 6 OPERATIONS AND THEIR TESTS FROM pivot-mechanisms.yaml]
@@ -336,27 +363,36 @@ Report YAML then under 300 words of commentary noting: which operations
 dominated, hardest classification call, any vocabulary gaps.
 ```
 
-## Known open issues (as of 2026-04-23, schema v0.6)
+## Known open issues (as of 2026-04-26, schema v0.9)
 
 These are tracked in `working/questions.md` with appearance counts.
-Items marked RESOLVED were addressed in v0.6; they're listed here for
-context so future sessions understand what was already tried.
 
-**Open:**
-- **reinterpretation/articulation boundary** (10+ appearances) — PARTIALLY
-  RESOLVED in v0.6. Frame-dependency test + worked examples added to
-  pivot-mechanisms.yaml. Needs validation: does the sharpened test reduce
-  disagreement in batch 2?
+**Open — needs monitoring in next batch:**
+- **reinterpretation/articulation boundary** — PARTIALLY RESOLVED.
+  Frame-dependency test + worked examples in pivot-mechanisms.yaml.
+  Validate: does the sharpened test reduce disagreement in batch 2?
+- **reading_switch entanglement with reinterpretation** — documented but
+  not structurally changed. Near-incompatible with articulation.
+- **act_out.character_register split** — moved to performance but the
+  text heavily constrains it. Watch whether the performance-side field
+  is almost always identical to what the text implies. If so, the split
+  may be over-engineering.
+- **tag_callbacks_to field** — split from tag_function. Watch whether
+  this is almost always null. If so, the split adds complexity without
+  discriminating.
+- **template renames** — comparison (was false_equivalence) and
+  bare_observation (was shared_recognition) are naming choices that
+  could be revised if annotators find them unclear.
 - **laugh architecture field** — flagged for investigation, needs audio data.
 - **reinterpretation at 31%** — below 40% threshold but watch.
 - **valence_flip modifier** (1 appearance) — tracking.
 - **counterfactual staging device** (1 appearance) — tracking.
 - **anachronistic transplant sub-type** (1 appearance) — tracking.
-- **performance-dependent laugh-points** (2 appearances) — awkward in Pass 2.
 
-**Resolved in v0.6:**
-- monumental_as_mundane template — added (4 appearances).
-- shared_recognition template — added (3 appearances).
-- false_equivalence broadened to cover apt pairings (3 appearances).
-- setup_frame expanded from 4 to 6 values (80% establishes_norm confirmed).
-- scale_shift independence heuristic added to protocols.
+**Resolved:**
+- v0.6: monumental_as_mundane added, setup_frame expanded, scale_shift heuristic.
+- v0.7: act_out block added.
+- v0.8: wordplay added as 4th modifier (corrected from 7th operation).
+- v0.9: comprehensive level audit. joke.relational created. register_break
+  and anti_callback moved. anthropomorphization moved to content_moves.
+  Templates renamed. Meta rules formalized.

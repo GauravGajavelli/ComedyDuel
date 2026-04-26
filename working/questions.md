@@ -147,19 +147,49 @@ extension.
 **Weekly review notes:**
 **Resolution:**
 
-### 2026-04-23 - mundane_as_monumental at 42% — broadness check
-**Context:** Batch 1 synthesis. mundane_as_monumental is the most-used template
-at 42% across 64 laugh-points, exceeding the 40% broadness threshold.
-**Question:** Should this be split into sub-species? Candidate split:
-elevation (mundane given grand frame — classic definition) vs deflation
-(monumental given trivial treatment — the monumental_as_mundane gap). Or is
-42% acceptable for Seinfeld's dominant rhetorical move?
-**Appearances:** Structural — applies to template distribution.
-**Why it's not resolvable in-session:** Needs determination of whether the
-elevation/deflation split is a clean sub-typing or if the current template
-adequately covers both directions once monumental_as_mundane is added as a
-separate value (which would pull the deflation cases out and reduce
-mundane_as_monumental to ~35%).
+### 2026-04-23 - ~~mundane_as_monumental at 42% — broadness check~~ RESOLVED
+**Context:** Batch 1 synthesis. mundane_as_monumental was 42% across 64 LPs.
+**Resolution:** v0.9 re-annotation shows mundane_as_monumental dropped to 25%
+(14/55). Three factors: monumental_as_mundane split off (5%), bare_observation
+absorbed pure-naming shapes (20%), comparison absorbed pairing shapes (21%).
+No longer exceeds the 40% threshold. Resolved.
+
+### 2026-04-26 - scale_shift non-none at 47% — independence check needed
+**Context:** v0.9 batch 2 synthesis. 26/55 laugh-points have non-none
+scale_shift (14 contraction, 12 expansion). Several agents noted that
+contraction "comes along for free" with reinterpretation — when you reframe
+something grand as trivial, contraction is inherent.
+**Question:** Is scale_shift being applied as an independent modifier or as
+a side-effect of the operation? The independence heuristic ("could the
+operation work without the scale change?") may be under-constraining.
+**Appearances:** Structural — 47% of all annotations.
+**Why it's not resolvable in-session:** Needs Pass 4 commutation tests to
+verify which scale_shifts are independently load-bearing.
+**Weekly review notes:**
+**Resolution:**
+
+### 2026-04-26 - No concept nodes populated
+**Context:** v0.9 batch 2 annotations use informal strings for concept
+references (e.g., "going_out", "cheque_writing") rather than node_id
+references to engine/concepts/. The schema requires concept-node references.
+**Question:** When should concept nodes be created? After how many annotations
+reference the same concept string?
+**Appearances:** All 55 laugh-points — structural gap.
+**Why it's not resolvable in-session:** Concept node population is a separate
+work stream. Informal strings are functional for annotation; the gap only
+matters when the engine needs graph lookups.
+**Weekly review notes:**
+**Resolution:**
+
+### 2026-04-26 - establishes_premise at 38% — watch for broadness
+**Context:** v0.9 batch 2 setup_frame distribution. establishes_premise is
+the most-used value at 38% (21/55). The v0.6 expansion from establishes_norm
+distributed load across convention/behavior/premise, but premise may now be
+absorbing cases that belong in convention.
+**Question:** Is establishes_premise over-applied? Review the 21 instances to
+check for cases that are really establishes_convention with a premise overlay.
+**Appearances:** 1 (structural). Below 40% threshold — monitoring only.
+**Why it's not resolvable in-session:** Below threshold. Check at batch 3.
 **Weekly review notes:**
 **Resolution:**
 

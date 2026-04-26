@@ -1,0 +1,185 @@
+# FILE: annotations/s01e02_opening_pass2.yaml
+jokes:
+  - joke_id: "seinfeld_s01e02_opening_01"
+    source:
+      work: "Seinfeld S01E02 'The Stakeout' opening monologue"
+      medium: sitcom_opener
+      year: 1990
+    transcript_fragment: "Women are very fast with cheques, y'know, 'cuz they write out so many cheques. The keys, they can never find in their purse, they don't know where that is, but the cheque book they got that."
+    joke:
+      content:
+        primary_domain: [gender_dynamics, commerce]
+        concepts: [cheque_writing, purse, women, speed, competence]
+        pivot_concept: cheque_writing
+        specificity: {default_level: 3}
+        content_moves: []
+      logic:
+        setup_expectation: "Women at the supermarket writing cheques sets up an expectation of slowness - the audience knows the cultural trope of waiting behind someone writing a cheque."
+        punchline_violation: "The expectation is negated: women are actually fast with cheques. The contrast between fumbling for keys (expected incompetence) and cheque-book speed (unexpected competence) sharpens the surprise."
+        pivot_mechanism:
+          operation: negation
+          reading_switch: none
+          scale_shift: none
+          wordplay: none
+        setup_frame: establishes_expectation
+        pivot_locus: logical
+        resolution_requires: [shared_experience]
+      structure:
+        primary_template: comparison
+        secondary_templates: []
+        subversions_applied: []
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out: {present: false, character_type: null, register_gap: null, character_gloss: ""}
+      relational:
+        positioning: {default: lateral_observer}
+        audience_implication: co_observer
+        shared_experience: {required: true, universality: common, comprehensibility_without_experience: 3}
+        performed_relatability: {present: false}
+      narrative:
+        routine_id: "s01e02_cheque"
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: medium}
+    notes: "The negation is the audience's expectation of slowness being flipped. The comparison template structures the keys-vs-chequebook contrast. Dated material - cheque-writing is no longer a universal experience."
+
+  - joke_id: "seinfeld_s01e02_opening_02"
+    source:
+      work: "Seinfeld S01E02 'The Stakeout' opening monologue"
+      medium: sitcom_opener
+      year: 1990
+    transcript_fragment: "The cheque book comes out of a holster: 'Who do I make it out to?... There's my ID...'"
+    joke:
+      content:
+        primary_domain: [gender_dynamics, commerce]
+        concepts: [cheque_writing, holster, gunslinger, speed, women]
+        pivot_concept: holster
+        specificity: {default_level: 4}
+        content_moves: []
+      logic:
+        setup_expectation: "Women are fast with cheques - the audience has accepted this observation."
+        punchline_violation: "The speed is mapped to a gunslinger's quick-draw via the holster image. The structural parallel between drawing a chequebook and drawing a gun reveals an unexpected aptness - both are practiced, automatic retrieval motions."
+        pivot_mechanism:
+          operation: mapping
+          reading_switch: none
+          scale_shift: none
+          wordplay: none
+        setup_frame: establishes_behavior
+        pivot_locus: logical
+        resolution_requires: [shared_experience]
+      structure:
+        primary_template: comparison
+        secondary_templates: []
+        subversions_applied: []
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out: {present: true, character_type: enthusiast, register_gap: treats_mundane_as_serious, character_gloss: "Woman at supermarket checkout with gunslinger-like efficiency and confidence."}
+      relational:
+        positioning: {default: lateral_observer}
+        audience_implication: co_observer
+        shared_experience: {required: true, universality: common, comprehensibility_without_experience: 3}
+        performed_relatability: {present: false}
+      narrative:
+        routine_id: "s01e02_cheque"
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: high}
+    notes: "This is the worked example from pivot-mechanisms.yaml for mapping vs transplant. The gunslinger framework genuinely fits - the parallel is apt, not misapplied. The holster image illuminates a real similarity in the speed/automaticity of the motion."
+
+  - joke_id: "seinfeld_s01e02_opening_03"
+    source:
+      work: "Seinfeld S01E02 'The Stakeout' opening monologue"
+      medium: sitcom_opener
+      year: 1990
+    transcript_fragment: "I think to a man, a cheque is like a note from your mother that says 'I don't have any money, but if you'll contact these people, I'm sure they'll stick up for me...'"
+    joke:
+      content:
+        primary_domain: [gender_dynamics, commerce]
+        concepts: [cheque, masculinity, money, vulnerability, mothers_note]
+        pivot_concept: cheque
+        specificity: {default_level: 3}
+        content_moves: []
+      logic:
+        setup_expectation: "A cheque is understood as a financial instrument - a legitimate form of payment in commerce."
+        punchline_violation: "The cheque is reinterpreted as a confession of inadequacy - a note from your mother asking for trust. The frame shifts from 'financial instrument' to 'plea for credibility'. The same object (cheque) is reread as a vulnerability display."
+        pivot_mechanism:
+          operation: reinterpretation
+          reading_switch: none
+          scale_shift: contraction
+          wordplay: none
+        setup_frame: establishes_convention
+        pivot_locus: logical
+        resolution_requires: [shared_experience, world_knowledge]
+      structure:
+        primary_template: comparison
+        secondary_templates: []
+        subversions_applied: []
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out: {present: true, character_type: innocent, register_gap: unaware_of_absurdity, character_gloss: "Sheepish man presenting a cheque as if apologizing, channeling a child explaining to a teacher."}
+      relational:
+        positioning: {default: lateral_observer}
+        audience_implication: co_observer
+        shared_experience: {required: true, universality: common, comprehensibility_without_experience: 3}
+        performed_relatability: {present: true}
+      narrative:
+        routine_id: "s01e02_cheque"
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: high}
+    notes: "The reinterpretation shifts the cheque from 'standard payment method' to 'confession of not having real money'. Scale_shift contraction is independent - the cheque is deflated from financial instrument to pathetic plea, but the reinterpretation (frame shift) would work without the deflation."
+
+  - joke_id: "seinfeld_s01e02_opening_04"
+    source:
+      work: "Seinfeld S01E02 'The Stakeout' opening monologue"
+      medium: sitcom_opener
+      year: 1990
+    transcript_fragment: "I wrote on these; is this of any value at all?"
+    joke:
+      content:
+        primary_domain: [commerce]
+        concepts: [cheque, value, writing, currency]
+        pivot_concept: cheque
+        specificity: {default_level: 3}
+        content_moves: []
+      logic:
+        setup_expectation: "The mother's-note act-out has established the cheque-as-plea frame. The audience is in the reinterpretation."
+        punchline_violation: "The button pushes the reinterpretation further: a cheque is reduced to 'a piece of paper I wrote on' - questioning whether writing on paper creates value at all. The financial instrument is now just scribbled-on paper."
+        pivot_mechanism:
+          operation: mapping
+          reading_switch: none
+          scale_shift: contraction
+          wordplay: none
+        setup_frame: establishes_convention
+        pivot_locus: logical
+        resolution_requires: [world_knowledge]
+      structure:
+        primary_template: reductio
+        secondary_templates: []
+        subversions_applied: []
+        has_tag: true
+        tag_operation: extends
+        tag_has_own_pivot: true
+        act_out: {present: true, character_type: innocent, register_gap: unaware_of_absurdity, character_gloss: "Man holding up a cheque as if it were a child's drawing, bewildered that anyone would accept it."}
+      relational:
+        positioning: {default: lateral_observer}
+        audience_implication: co_observer
+        shared_experience: {required: true, universality: common, comprehensibility_without_experience: 3}
+        performed_relatability: {present: true}
+      narrative:
+        routine_id: "s01e02_cheque"
+        position_in_set: opener
+    performance:
+      performer: seinfeld
+    analysis:
+      adversarial: {confidence: medium}
+    notes: "This is the worked example from pivot-mechanisms.yaml. Mapping: cheque (financial instrument) mapped to 'paper with writing on it' (child's craft). The structural parallel is between writing on paper and creating value. Scale_shift contraction is the independent modifier deflating the cheque's status. Could be coded as extension of joke_03's reinterpretation - the tag pushes the plea further to absurdity."
