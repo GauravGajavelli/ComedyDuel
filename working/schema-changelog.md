@@ -333,3 +333,72 @@ classifications should be reviewed for monumental_as_mundane and
 shared_recognition candidates.
 
 ---
+
+## 2026-04-25 v0.7 — Act-out structure block added
+
+**Changed:** `engine/schema.yaml` — added `joke.structure.act_out` sub-block
+with 4 fields: `present` (boolean), `character_type`, `character_register`,
+`register_gap`, and `character_gloss`.
+
+**From:** Act-outs were marked only by `performance_mode: character` in the
+annotations (from the earlier joke_annotation_schema.yaml work). The schema
+had no structural description of WHAT the character is or HOW the act-out
+produces humor — only THAT it happens.
+
+**To:**
+```yaml
+act_out:
+  present: false
+  character_type: null    # authority | everyman | enthusiast | expert | innocent
+  character_register: null  # confident | bewildered | earnest | bureaucratic | casual
+  register_gap: null      # treats_mundane_as_serious | treats_serious_as_mundane |
+                          # unaware_of_absurdity | performed_sincerity | none
+  character_gloss: ""     # [GLOSS]
+```
+
+**Rationale:** Act-outs appear in ~60%+ of annotated Seinfeld monologues and
+are the most performance-dependent laugh-points (flagged by 2+ agents as
+"performance-carried"). The block captures the structural information the
+realization stage needs to GENERATE act-outs: what kind of character to
+create, what register they speak in, and what gap between their register and
+reality produces the humor. This is also the mechanism underlying
+conversational roast comedy (Curb Your Enthusiasm, roast battles) —
+identifying an exploitable premise, selecting a character perspective that
+maximizes the comedic gap, and constructing dialogue in that register.
+
+For generation: act-outs are easier for LLMs than pure observation because
+the character voice constrains the output productively. "Speak as this
+character in this situation" is a more reliable prompt pattern than "make an
+original observation."
+
+**Structural-question answers:**
+1. Multiple simultaneous values? NO — one act-out per joke. Multi-character
+   act-outs (two characters in dialogue) are the comedian switching between
+   two act-outs sequentially, not one act-out with multiple values.
+2. Changes across duration? The character_type and register are constant
+   within a single act-out. If the character's register shifts, that's a
+   register_break subversion, not a trajectory.
+3. Ordered values? NO for character_type and character_register (nominal).
+   register_gap could be argued as ordered but is better treated as nominal.
+4. Absent vs. low-intensity? YES — `present: false` means no act-out at all;
+   `register_gap: none` means an act-out exists but the character's register
+   matches the situation. These are different.
+5. Meaning depends on other fields? character_register and register_gap
+   interact (the gap is defined relative to the register), but this is
+   explicit in the field definitions rather than hidden.
+
+**Invalidates:** Batch 1 annotations that have `performance_mode: character`
+in the earlier annotated_monologues.yaml should have the act_out block
+populated during audit. Known candidates from batch 1:
+- S01E01: phone call act-out (everyman, bewildered, none)
+- S01E02: cheque-book woman (everyman, confident, treats_mundane_as_serious)
+- S01E02: mother's note voice (authority, earnest, none)
+- S01E05: emperor/diner (enthusiast, confident, treats_mundane_as_serious)
+- S01E05: mystified diner (everyman, bewildered, unaware_of_absurdity)
+- S01E06: lane expert (enthusiast, earnest, treats_mundane_as_serious)
+- S01E06: backwards-traffic driver (everyman, casual, treats_serious_as_mundane)
+- S01E07: leisure police (authority, bureaucratic, treats_mundane_as_serious)
+- S01E08: alien fashion committee (authority, confident, treats_mundane_as_serious)
+- S01E08: earth-outfit voter (everyman, casual, treats_serious_as_mundane)
+
+---

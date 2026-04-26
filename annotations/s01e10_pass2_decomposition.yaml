@@ -41,6 +41,12 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: false
+    character_type: null
+    character_register: null
+    register_gap: null
+    character_gloss: null
 - joke_id: s01e10_opening_lp2
   text: 'You know, I realize it''s just the thickness of the paint, but I''m aware
     of it. It keeps coming in and coming in. Every time I paint it, it''s closer and
@@ -78,6 +84,12 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: false
+    character_type: null
+    character_register: null
+    register_gap: null
+    character_gloss: null
 - joke_id: s01e10_opening_lp3
   text: 'I don''t even know where the wall outlets are anymore. I just look for like
     a lump with two slots in it.
@@ -115,6 +127,12 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: false
+    character_type: null
+    character_register: null
+    register_gap: null
+    character_gloss: null
 - joke_id: s01e10_opening_lp4
   text: 'Kinda looks like a pig is trying to push his way through from the other side.
     That''s where I plug in.
@@ -154,6 +172,12 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: false
+    character_type: null
+    character_register: null
+    register_gap: null
+    character_gloss: null
 - joke_id: s01e10_opening_lp5
   text: 'My idea of the perfect living room would be the bridge on the Starship Enterprise.
     You know what I mean? Big chair, nice screen, remote control.
@@ -192,6 +216,12 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: false
+    character_type: null
+    character_register: null
+    register_gap: null
+    character_gloss: null
 - joke_id: s01e10_opening_lp6
   text: 'That''s why Star Trek really was the ultimate male fantasy. Just hurling
     through space in your living room, watching TV.
@@ -227,6 +257,12 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: false
+    character_type: null
+    character_register: null
+    register_gap: null
+    character_gloss: null
 - joke_id: s01e10_opening_lp7
   text: 'That''s why all the aliens were always dropping in, because Kirk was the
     only one that had a big screen.
@@ -262,6 +298,12 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: false
+    character_type: null
+    character_register: null
+    register_gap: null
+    character_gloss: null
 - joke_id: s01e10_opening_lp8
   text: 'They came over Friday night, Klingon boxing.. gotta be there.
 
@@ -304,4 +346,10 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: false
+    character_type: null
+    character_register: null
+    register_gap: null
+    character_gloss: null
 v0_6_reviewed: true

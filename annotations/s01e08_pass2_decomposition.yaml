@@ -39,6 +39,12 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: false
+    character_type: null
+    character_register: null
+    register_gap: null
+    character_gloss: null
 - joke_id: s01e08_open_lp2
   text: '''Cause anytime I see a movie or a TV show where there''s people from the
     future of another planet, they''re all wearing the same thing. Somehow they decided
@@ -83,6 +89,14 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: true
+    character_type: authority
+    character_register: confident
+    register_gap: treats_mundane_as_serious
+    character_gloss: An alien civilization's fashion committee member declaring the
+      species-wide outfit choice with boardroom finality — 'This is going to be our
+      outfit. That's it.'
 - joke_id: s01e08_open_lp3
   text: 'We should come up for an outfit for earth. An earth outfit. We should vote
     on it.
@@ -121,6 +135,12 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: false
+    character_type: null
+    character_register: null
+    register_gap: null
+    character_gloss: null
 - joke_id: s01e08_open_lp4
   text: 'Candidates propose different outfits, no speeches. They walk out, twirl,
     walk off. We just sit in the audience and go, "That was nice. I could wear that."
@@ -165,4 +185,12 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: true
+    character_type: everyman
+    character_register: casual
+    register_gap: treats_serious_as_mundane
+    character_gloss: A voter-spectator offering tepid, passive approval of a civilizational
+      outfit choice as if browsing a department store — 'That was nice. I could wear
+      that.'
 v0_6_reviewed: true

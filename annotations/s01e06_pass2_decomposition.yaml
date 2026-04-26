@@ -40,6 +40,13 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: true
+    character_type: everyman
+    character_register: bewildered
+    register_gap: treats_mundane_as_serious
+    character_gloss: The lane-changing driver agonizing over lane selection as if
+      it were a life-defining decision
 - joke_id: s01e06_opening_lp2
   text: 'They''re always a little bit ahead of you, "Can I get in over there? Could
     I get in over here? Could I get in there?"
@@ -75,6 +82,13 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: true
+    character_type: everyman
+    character_register: earnest
+    register_gap: treats_mundane_as_serious
+    character_gloss: The desperate lane-changer frantically pleading to get into other
+      lanes
 - joke_id: s01e06_opening_lp3
   text: '"Yeah, come on over here, pal. We''re zoomin'' over here. This is the secret
     lane, nobody knows about it.."
@@ -111,6 +125,13 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: true
+    character_type: everyman
+    character_register: confident
+    register_gap: none
+    character_gloss: A sarcastic fellow driver mock-inviting the lane-changer over
+      with fake hospitality, claiming to be in the 'secret lane'
 - joke_id: s01e06_opening_lp4
   text: 'The ultimate, I think the ultimate psychological test of traffic is the total
     dead stop. Not even rolling. And you look out the window, you can see gum clearly.
@@ -147,6 +168,12 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: false
+    character_type: null
+    character_register: null
+    register_gap: null
+    character_gloss: null
 - joke_id: s01e06_opening_lp5
   text: 'So we know that in the future traffic will get even worse than that. I mean,
     what will happen? Will it start moving backwards, I wonder?
@@ -182,6 +209,12 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: false
+    character_type: null
+    character_register: null
+    register_gap: null
+    character_gloss: null
 - joke_id: s01e06_opening_lp6
   text: 'I mean, is that possible? That someday we''ll be going "Boy, this is some
     really bad traffic now, boy. This, is really bad."
@@ -219,6 +252,13 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: true
+    character_type: everyman
+    character_register: casual
+    register_gap: treats_serious_as_mundane
+    character_gloss: A future driver reacting to physically backwards-moving traffic
+      with the same banal complaint register used for normal traffic
 - joke_id: s01e06_opening_lp7
   text: '"I''m gonna try to get off and get back on going the other way."
 
@@ -254,4 +294,12 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: true
+    character_type: everyman
+    character_register: casual
+    register_gap: treats_serious_as_mundane
+    character_gloss: The future driver calmly proposing a standard traffic workaround
+      (get off and get back on) to deal with the impossible situation of backwards
+      traffic
 v0_6_reviewed: true

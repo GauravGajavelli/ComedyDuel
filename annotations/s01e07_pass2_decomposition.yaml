@@ -40,6 +40,12 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: false
+    character_type: null
+    character_register: null
+    register_gap: null
+    character_gloss: null
 - joke_id: s01e07_b1_beat1_tag
   text: 'You know how it works. They got the leisure police. They pull up in front
     of the old people''s house with a golf cart, jump out, "Let''s go Pop, white belt,
@@ -86,6 +92,14 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: true
+    character_type: authority
+    character_register: bureaucratic
+    register_gap: treats_mundane_as_serious
+    character_gloss: The 'leisure police' barking orders at retirees with law-enforcement
+      urgency — mandating white belts, white pants, confiscating snow shovels — enforcing
+      Florida retirement as if it were an arrest
 - joke_id: s01e07_b2_beat1_punchline
   text: 'I am not much for the family gathering. You know, you sit there, and the
     conversation''s so boring. It''s so dull. And you start to fantasize. You know,
@@ -127,6 +141,12 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: false
+    character_type: null
+    character_register: null
+    register_gap: null
+    character_gloss: null
 - joke_id: s01e07_b2_beat1_tag
   text: 'Come back in, there''s broken glass, everybody''s all upset. "No, I''m alright.
     I was just a little bored, there. No, I''m fine. I came back. I wanted to hear
@@ -171,4 +191,12 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: true
+    character_type: everyman
+    character_register: casual
+    register_gap: treats_serious_as_mundane
+    character_gloss: Jerry-as-character returning through the broken window, casually
+      dismissing the violent defenestration as being 'a little bored' and earnestly
+      requesting to hear about Aunt Rose's Hummel collection
 v0_6_reviewed: true

@@ -41,6 +41,12 @@ jokes:
 
     '
   physical_performance: null
+  act_out:
+    present: false
+    character_type: null
+    character_register: null
+    register_gap: null
+    character_gloss: null
 - joke_id: s01e05_opening_02
   text: 'And you don''t care about money when you''re hungry, you sit down at a restaurant.
     You''re like the ruler of an empire. "More drinks, appetizers, quickly, quickly!
@@ -77,6 +83,22 @@ jokes:
 
     '
   physical_performance: null
+  act_out:
+    present: true
+    character_type: authority
+    character_register: confident
+    register_gap: treats_mundane_as_serious
+    character_gloss: 'Jerry voices the hungry diner as "the ruler of an empire," issuing
+      imperious commands to waitstaff: "More drinks, appetizers, quickly, quickly!
+      It will be the greatest meal of our lives." The character type is authority
+      — someone with power issuing commands — because the mapping explicitly casts
+      the diner as a sovereign. The register is confident (assured, declarative commands
+      with no hesitation). The register gap is treats_mundane_as_serious because ordering
+      food at a restaurant is treated with the gravity of an imperial decree; the
+      grandiose declaration "the greatest meal of our lives" applies historic-occasion
+      weight to an ordinary dinner.
+
+      '
 - joke_id: s01e05_opening_03
   text: 'Then after the meal, you know, you''ve got the pants open, you''ve got the
     napkins destroyed, cigarette butt in the mashed potatoes — then the check comes
@@ -115,6 +137,20 @@ jokes:
 
     '
   physical_performance: null
+  act_out:
+    present: true
+    character_type: everyman
+    character_register: bewildered
+    register_gap: unaware_of_absurdity
+    character_gloss: 'Jerry voices the post-meal diner confronted by the check, reacting
+      with genuine mystification: "What is this? How could this be?" The character
+      is an everyman (a regular diner in a recognizable situation) speaking in a bewildered
+      register — confused and disbelieving, as though the check is an incomprehensible
+      document rather than the predictable result of everything they just ordered.
+      The register gap is unaware_of_absurdity because the character genuinely cannot
+      fathom the bill despite having personally ordered every item on it.
+
+      '
 - joke_id: s01e05_opening_04
   text: 'They start passing it around the table, "Does this look right to you? We''re
     not hungry now. Why are we buying all this food?!"
@@ -154,5 +190,21 @@ jokes:
 
     '
   physical_performance: null
+  act_out:
+    present: true
+    character_type: everyman
+    character_register: bewildered
+    register_gap: unaware_of_absurdity
+    character_gloss: 'Jerry voices the diner passing the check around the table in
+      continued disbelief: "Does this look right to you? We''re not hungry now. Why
+      are we buying all this food?!" The character is again an everyman, still bewildered,
+      but now the bewilderment has escalated into a logically absurd but internally
+      sincere argument: since we are no longer hungry, purchasing food was irrational.
+      The register gap remains unaware_of_absurdity because the character presents
+      post-satiation logic as a genuine grievance, completely unaware that the argument
+      is nonsensical — you ordered the food when you WERE hungry, and the transaction
+      is already complete.
+
+      '
 schema_version: '0.6'
 v0_6_reviewed: true

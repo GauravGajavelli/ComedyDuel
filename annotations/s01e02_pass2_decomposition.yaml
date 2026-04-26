@@ -35,6 +35,12 @@ jokes:
 
     '
   physical_performance: null
+  act_out:
+    present: false
+    character_type: null
+    character_register: null
+    register_gap: null
+    character_gloss: null
 - joke_id: s01e02_joke2
   text_span: 'Now, the fact is, if it''s a woman in front of you that''s writing the
     cheque, you will not be waiting long. I have noticed that women are very fast
@@ -74,6 +80,12 @@ jokes:
 
     '
   physical_performance: null
+  act_out:
+    present: false
+    character_type: null
+    character_register: null
+    register_gap: null
+    character_gloss: null
 - joke_id: s01e02_joke3
   text_span: 'They never fumble for the cheque book — the cheque book comes out of
     a holster: "Who do I make it out to?... There''s my ID..."
@@ -109,6 +121,21 @@ jokes:
 
     '
   physical_performance: null
+  act_out:
+    present: true
+    character_type: everyman
+    character_register: confident
+    register_gap: treats_mundane_as_serious
+    character_gloss: 'Jerry voices the woman at the checkout pulling her cheque book
+      from a "holster" and delivering lines with gunslinger cool: "Who do I make it
+      out to?... There''s my ID..." The character is an everywoman (a regular person
+      in a recognizable checkout scenario) speaking with confident, assured composure
+      — the calm declarative register of someone who has done this a thousand times.
+      The register gap is treats_mundane_as_serious because writing a cheque for a
+      small grocery purchase is treated with the gravity and practiced precision of
+      a quick-draw confrontation.
+
+      '
 - joke_id: s01e02_joke4
   text_span: 'I think to a man, a cheque is like a note from your mother that says
     "I don''t have any money, but if you''ll contact these people, I''m sure they''ll
@@ -146,6 +173,20 @@ jokes:
 
     '
   physical_performance: null
+  act_out:
+    present: true
+    character_type: innocent
+    character_register: earnest
+    register_gap: unaware_of_absurdity
+    character_gloss: 'Jerry voices a man presenting a cheque as though it were a child''s
+      note from his mother: "I don''t have any money, but if you''ll contact these
+      people, I''m sure they''ll stick up for me..." The character is an innocent
+      — someone genuinely unaware that their plea sounds absurd. The register is earnest
+      (sincere, emotionally invested in being believed), and the register gap is unaware_of_absurdity
+      because the character does not realize that reframing a legitimate financial
+      instrument as a plea for trust exposes the absurdity of the cheque system itself.
+
+      '
 - joke_id: s01e02_joke5
   text_span: 'If you just trust me this one time I don''t have any money but I have
     these... I wrote on these; is this of any value at all?
@@ -180,5 +221,20 @@ jokes:
 
     '
   physical_performance: null
+  act_out:
+    present: true
+    character_type: innocent
+    character_register: earnest
+    register_gap: unaware_of_absurdity
+    character_gloss: 'Continuing the character voice from joke 4, Jerry extends the
+      pleading man who has now been stripped of even the cheque''s institutional backing:
+      "If you just trust me this one time I don''t have any money but I have these...
+      I wrote on these; is this of any value at all?" The character remains an innocent,
+      earnestly asking whether his own handwriting on paper has economic value, completely
+      unaware that the question exposes the absurdity of the premise. The earnest
+      register against the transparently worthless proposition creates the register
+      gap of unaware_of_absurdity.
+
+      '
 schema_version: '0.6'
 v0_6_reviewed: true

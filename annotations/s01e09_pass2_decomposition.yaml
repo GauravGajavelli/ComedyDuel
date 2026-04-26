@@ -41,6 +41,12 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: false
+    character_type: null
+    character_register: null
+    register_gap: null
+    character_gloss: null
 - joke_id: s01e09_opening_lp2
   text: 'Some people have a little too much fun on television: the soda commercial
     people -- where do they summon this enthusiasm? Have you seen them? "We have soda,
@@ -83,6 +89,13 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: true
+    character_type: enthusiast
+    character_register: earnest
+    register_gap: treats_mundane_as_serious
+    character_gloss: The soda commercial people performing ecstatic enthusiasm over
+      a can of soda — 'We have soda, we have soda, we have soda'
 - joke_id: s01e09_opening_lp3
   text: 'Have you ever been standing there and you''re watching TV and you''re drinking
     the exact same product that they''re advertising right there on TV, and it''s
@@ -132,4 +145,12 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: true
+    character_type: everyman
+    character_register: bewildered
+    register_gap: unaware_of_absurdity
+    character_gloss: The viewer drinking soda at home, sincerely wondering if the
+      reason he isn't experiencing commercial-level euphoria is a preparation error
+      — 'Maybe I'm putting too much ice in mine'
 v0_6_reviewed: true

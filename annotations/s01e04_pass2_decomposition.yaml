@@ -33,6 +33,12 @@ jokes:
 
     '
   physical_performance: null
+  act_out:
+    present: false
+    character_type: null
+    character_register: null
+    register_gap: null
+    character_gloss: null
 - joke_id: seinfeld_s01e04_opening_02
   transcript_segment: 'Men, it''s true, men hear a drill, it''s like a dog whistle.
     Just.. you know, they go running up to that living room curtain, "Honey, I think
@@ -71,6 +77,20 @@ jokes:
 
     '
   physical_performance: null
+  act_out:
+    present: true
+    character_type: everyman
+    character_register: earnest
+    register_gap: treats_mundane_as_serious
+    character_gloss: 'Jerry voices the man running to the living room curtain and
+      breathlessly reporting to his wife: "Honey, I think Jim''s working on something
+      over there." The character is an everyman (a regular suburban husband) speaking
+      with earnest excitement, as though a neighbor using a drill is a noteworthy
+      event requiring immediate domestic announcement. The register gap is treats_mundane_as_serious
+      because the character applies genuine emotional investment to the trivial observation
+      that a neighbor is doing routine work.
+
+      '
 - joke_id: seinfeld_s01e04_opening_03
   transcript_segment: 'Now they don''t actually help the guy. No, they just want to
     hang around the area where work is being done... We want to watch the guy, we
@@ -114,6 +134,20 @@ jokes:
 
     '
   physical_performance: null
+  act_out:
+    present: true
+    character_type: expert
+    character_register: confident
+    register_gap: unaware_of_absurdity
+    character_gloss: 'Jerry voices the man who has wandered over to the neighbor''s
+      work area and asks a pseudo-knowledgeable question: "What are you using, the
+      Philips head?" The character is an expert — someone performing technical knowledge
+      to feel involved. The register is confident (an assured, declarative question
+      implying familiarity with tools), and the register gap is unaware_of_absurdity
+      because the character genuinely believes this dumb question constitutes meaningful
+      participation, when it is transparent pseudo-expertise that contributes nothing.
+
+      '
 - joke_id: seinfeld_s01e04_opening_04
   transcript_segment: 'That''s why when they have construction sites, they have to
     have those wood panel fences around it, that''s just to keep the men out. They
@@ -152,6 +186,12 @@ jokes:
 
     '
   physical_performance: null
+  act_out:
+    present: false
+    character_type: null
+    character_register: null
+    register_gap: null
+    character_gloss: null
 - joke_id: seinfeld_s01e04_opening_05
   transcript_segment: 'But if they don''t cut those holes - we are climbing those
     fences. Right over there. "What are you using the steel girders down there? Yeah,
@@ -195,5 +235,20 @@ jokes:
 
     '
   physical_performance: null
+  act_out:
+    present: true
+    character_type: expert
+    character_register: confident
+    register_gap: unaware_of_absurdity
+    character_gloss: 'Jerry voices a man who has climbed a construction site fence
+      and now offers a mock-expert assessment of the materials: "What are you using
+      the steel girders down there? Yeah, that''ll hold." The character is the same
+      performed expert from joke 3, now escalated to construction-grade materials.
+      The confident register ("Yeah, that''ll hold" — an assured structural evaluation)
+      combined with the absurdity of an uninvited trespasser offering engineering
+      opinions creates the register gap of unaware_of_absurdity. The character has
+      no idea his pseudo-expertise is transparently ludicrous.
+
+      '
 schema_version: '0.6'
 v0_6_reviewed: true

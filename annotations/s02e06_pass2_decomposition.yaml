@@ -39,6 +39,14 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: true
+    character_type: everyman
+    character_register: bewildered
+    register_gap: unaware_of_absurdity
+    character_gloss: A generic male channel-surfer voiced in fragmented interior monologue
+      -- dismissing shows instantly, unable to articulate what he wants, compulsively
+      continuing without awareness that the behavior is purposeless.
 - joke_id: s02e06_b1_beat2_pivot
   text: 'Women don''t do this. See now, women will stop and go, "Well, let me see
     what the show is before I change the channel." You see? Men just fly.
@@ -74,6 +82,15 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: true
+    character_type: everyman
+    character_register: earnest
+    register_gap: treats_mundane_as_serious
+    character_gloss: A generic woman voiced as the rational counterpart to the male
+      channel-surfer -- earnestly proposing the obviously sensible idea of watching
+      a show before changing the channel, as if this is a distinctive approach rather
+      than basic common sense.
 - joke_id: s02e06_b1_beat3_pivot
   text: 'Because women, you see, women nest and men hunt. That''s why we watch TV
     differently.
@@ -109,6 +126,12 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: false
+    character_type: null
+    character_register: null
+    register_gap: null
+    character_gloss: null
 - joke_id: s02e06_b1_beat4_setup
   text: 'Before there was flipping around, before there was television, kings and
     emperors and pharaohs and such had story-tellers that would tell them stories
@@ -144,6 +167,12 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: false
+    character_type: null
+    character_register: null
+    register_gap: null
+    character_gloss: null
 - joke_id: s02e06_b1_beat5_punchline
   text: 'I always wonder, in that era, if they would get, like, thirty story-tellers
     together so they could still flip around.
@@ -179,6 +208,12 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: false
+    character_type: null
+    character_register: null
+    register_gap: null
+    character_gloss: null
 - joke_id: s02e06_b1_beat6_extension
   text: 'Just go, "Alright start telling me a story, what''s happening? I don''t want
     to hear anymore. Shut up. Go to the next guy. What are you talking about? Is there
@@ -220,6 +255,15 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: true
+    character_type: authority
+    character_register: bureaucratic
+    register_gap: treats_serious_as_mundane
+    character_gloss: An ancient king/pharaoh cycling through storytellers with the
+      impatient, dismissive cadence of a modern channel-surfer -- barking 'Shut up,
+      go to the next guy' with royal authority applied to the trivial frustration
+      of not finding anything good.
 - joke_id: s02e06_b1_beat7_closer
   text: '"No, go ahead, what are you talking about?.. I don''t want to hear that.
     No, the all of you, get out of here. I''m going to bed."
@@ -258,4 +302,13 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: true
+    character_type: authority
+    character_register: bureaucratic
+    register_gap: treats_serious_as_mundane
+    character_gloss: The same king, now dismissing all thirty storytellers at once
+      and announcing bedtime -- replicating the frustrated channel-surfer's final
+      move of giving up and turning off the TV, delivered with royal finality applied
+      to a mundane domestic frustration.
 v0_6_reviewed: true

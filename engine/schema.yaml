@@ -219,6 +219,111 @@ joke:
     tag_has_own_pivot: null        # [STRUCTURED] boolean; rare edge case where
                                    #   the tag is almost a second joke
 
+    # --- Act-out sub-block --------------------------------------------------
+    #
+    # Populated when the joke contains performed character dialogue — the
+    # comedian adopts a persona and speaks as/for someone else. This is
+    # the structural description of the act-out; performance_mode: character
+    # in the performance layer marks THAT it happens; this block describes
+    # WHAT the character is and how the act-out produces humor.
+    #
+    # Null when the joke has no act-out. Populated whenever the joke
+    # includes performed dialogue in a character voice.
+
+    act_out:
+      present: false               # [STRUCTURED] boolean
+
+      character_type: null         # [STRUCTURED] The kind of persona the
+                                   #   comedian adopts. Values:
+                                   #
+                                   #   authority — someone with power or
+                                   #     official standing (cop, boss, doctor,
+                                   #     "leisure police"). Often speaks in
+                                   #     commands or declarations.
+                                   #
+                                   #   everyman — a regular person in a
+                                   #     recognizable situation (the driver,
+                                   #     the diner, the person on the phone).
+                                   #     Audience identifies with them.
+                                   #
+                                   #   enthusiast — someone with excessive,
+                                   #     disproportionate investment in
+                                   #     something trivial (soda commercial
+                                   #     people, the lane expert). Energy
+                                   #     exceeds what the situation warrants.
+                                   #
+                                   #   expert — someone who speaks with
+                                   #     technical or specialized knowledge,
+                                   #     real or performed ("What are you
+                                   #     using, the Philips head?" / "Yeah,
+                                   #     that'll hold").
+                                   #
+                                   #   innocent — someone who is unaware of
+                                   #     the absurdity of their own situation
+                                   #     or statement. The gap between their
+                                   #     sincerity and reality is the joke.
+
+      character_register: null     # [STRUCTURED] The register the character
+                                   #   speaks in. Values:
+                                   #
+                                   #   confident — assured, declarative, no
+                                   #     hesitation ("This is going to be our
+                                   #     outfit. That's it.")
+                                   #
+                                   #   bewildered — confused, struggling to
+                                   #     process ("What is this? How could
+                                   #     this be?")
+                                   #
+                                   #   earnest — sincere, emotionally
+                                   #     invested, unironic ("I don't have
+                                   #     any money, but if you'll contact
+                                   #     these people...")
+                                   #
+                                   #   bureaucratic — procedural, official,
+                                   #     impersonal ("Let's go Pop, white
+                                   #     belt, white pants, get in the back")
+                                   #
+                                   #   casual — relaxed, understated, treating
+                                   #     something significant as mundane
+                                   #     ("Boy, this is some really bad
+                                   #     traffic now, boy")
+
+      register_gap: null           # [STRUCTURED] The relationship between the
+                                   #   character's register and the actual
+                                   #   situation. This gap is often an
+                                   #   independent source of humor. Values:
+                                   #
+                                   #   treats_mundane_as_serious — character
+                                   #     applies gravity to a trivial
+                                   #     situation (the cheque-book woman's
+                                   #     gunslinger confidence at checkout)
+                                   #
+                                   #   treats_serious_as_mundane — character
+                                   #     applies banality to a significant
+                                   #     situation (the driver casually
+                                   #     complaining about backwards traffic)
+                                   #
+                                   #   unaware_of_absurdity — character
+                                   #     doesn't realize their situation or
+                                   #     statement is absurd (the man with
+                                   #     his head in the suit asking for
+                                   #     shoes at the bottom)
+                                   #
+                                   #   performed_sincerity — character adopts
+                                   #     a caring/helpful register to deliver
+                                   #     what is actually an attack or
+                                   #     innuendo (Funkhouser's "have you set
+                                   #     aside a day to look at her face")
+                                   #
+                                   #   none — character's register matches
+                                   #     the situation appropriately; no gap
+
+      character_gloss: ""          # [GLOSS] Free-text description of the
+                                   #   character and what they're doing.
+                                   #   "The woman at the supermarket checkout,
+                                   #   producing her cheque book with
+                                   #   gunslinger efficiency."
+
   # --- Narrative layer -----------------------------------------------------
   #
   # Connections to other jokes. Includes both loose narrative links (callbacks,

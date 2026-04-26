@@ -43,6 +43,12 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: false
+    character_type: null
+    character_register: null
+    register_gap: null
+    character_gloss: null
 - joke_id: s02e02_b1_beat2_pivot
   text: 'You know, that''s what annoys me about the sweepstakes companies, they always
     tease you with that, "You may have already won."
@@ -74,6 +80,12 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: false
+    character_type: null
+    character_register: null
+    register_gap: null
+    character_gloss: null
 - joke_id: s02e02_b1_beat3_punchline
   text: 'I''d like once for a sweepstakes company to have some guts, come out with
     the truth, just tell people the truth one time. Send out envelopes, "You have
@@ -115,6 +127,14 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: true
+    character_type: authority
+    character_register: confident
+    register_gap: treats_mundane_as_serious
+    character_gloss: The hypothetical honest sweepstakes company, delivering a blunt
+      rejection letter with the same declarative authority as its real counterpart's
+      false promise.
 - joke_id: s02e02_b1_beat4_tag
   text: 'You turn it over, giant printing, "Not even close!"
 
@@ -148,6 +168,13 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: true
+    character_type: authority
+    character_register: confident
+    register_gap: treats_mundane_as_serious
+    character_gloss: The honest sweepstakes company continued, now escalating from
+      rejection to emphatic dismissal with 'Not even close!' printed in giant lettering.
 - joke_id: s02e02_b1_beat5_topper
   text: 'You open it up, there''s this whole letter of explanation, "Even we cannot
     believe how badly you''ve done in this contest."
@@ -189,4 +216,12 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: true
+    character_type: authority
+    character_register: bewildered
+    register_gap: treats_mundane_as_serious
+    character_gloss: The sweepstakes company as a character with feelings, expressing
+      genuine astonishment at how badly the recipient performed -- corporate bureaucracy
+      given an emotional inner life.
 v0_6_reviewed: true

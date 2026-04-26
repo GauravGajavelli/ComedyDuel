@@ -37,6 +37,12 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: false
+    character_type: null
+    character_register: null
+    register_gap: null
+    character_gloss: null
 - joke_id: s02e05_opening_lp2
   text: 'They can tell something from this.
 
@@ -69,6 +75,12 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: false
+    character_type: null
+    character_register: null
+    register_gap: null
+    character_gloss: null
 - joke_id: s02e05_opening_lp3
   text: 'They stick one leg way out ''cause they need to know, if some day I''m one-legged,
     and at a forty-five degree angle, what am I gonna wear?
@@ -103,6 +115,14 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: true
+    character_type: everyman
+    character_register: bewildered
+    register_gap: unaware_of_absurdity
+    character_gloss: A hypothetical woman voicing the internal logic of the leg-out
+      pose -- earnestly asking what she would wear if one-legged and tilted, unaware
+      that the question itself exposes the pose's absurdity.
 - joke_id: s02e05_opening_lp4
   text: 'You never see a guy take a suit off the rack, put his head in the neck, and
     go, "What do you think about this suit? I think I''ll get it. Yeah, it looks fine."
@@ -141,6 +161,14 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: true
+    character_type: everyman
+    character_register: confident
+    register_gap: unaware_of_absurdity
+    character_gloss: A hypothetical man with his head jammed into a suit on the rack,
+      confidently declaring he'll buy it as if this method yields reliable information
+      -- the male equivalent of the hold-up-the-dress behavior.
 - joke_id: s02e05_opening_lp5
   text: 'Put some shoes by the bottom of the pants, I wanna make sure. Yeah, perfect.
 
@@ -172,6 +200,14 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: true
+    character_type: everyman
+    character_register: confident
+    register_gap: unaware_of_absurdity
+    character_gloss: The same hypothetical man, continuing with unshaken confidence
+      -- now requesting shoes be placed at the bottom of the pants to complete his
+      absurd on-rack ensemble preview.
 - joke_id: s02e05_opening_lp6
   text: 'And what if I''m walking? Move the shoes, move the shoes, move the shoes,
     move the shoes.
@@ -209,4 +245,12 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: true
+    character_type: everyman
+    character_register: confident
+    register_gap: unaware_of_absurdity
+    character_gloss: The same man, escalating further -- now requesting a walking
+      simulation while his head remains stuck in the suit, commanding 'move the shoes'
+      with the assurance of someone conducting a legitimate fitting.
 v0_6_reviewed: true

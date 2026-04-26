@@ -59,6 +59,12 @@ jokes:
 
     '
   physical_performance: null
+  act_out:
+    present: false
+    character_type: null
+    character_register: null
+    register_gap: null
+    character_gloss: null
 - joke_id: seinfeld_s01e03_opening_02
   transcript_excerpt: 'I mean, you could just give someone the toe, really, couldn''t
     you? I would feel worse if I got the toe, than if I got the finger. ''Cause it''s
@@ -111,5 +117,19 @@ jokes:
 
     '
   physical_performance: null
+  act_out:
+    present: true
+    character_type: everyman
+    character_register: confident
+    register_gap: treats_mundane_as_serious
+    character_gloss: 'Jerry acts out a driver giving someone the toe — performing
+      the physical logistics of removing a shoe and sock while driving, then hoisting
+      the foot up with declarative bravado: "look at that toe, buddy." The character
+      is an everyman (a regular driver in traffic) who speaks with confident assurance,
+      treating the absurd act of presenting a toe as a genuine, committed insult.
+      The register gap is treats_mundane_as_serious because the character applies
+      real conviction and effort to what is a completely fabricated, nonsensical gesture.
+
+      '
 schema_version: '0.6'
 v0_6_reviewed: true

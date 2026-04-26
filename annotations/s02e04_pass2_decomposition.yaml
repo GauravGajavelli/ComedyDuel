@@ -36,6 +36,12 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: false
+    character_type: null
+    character_register: null
+    register_gap: null
+    character_gloss: null
 - joke_id: s02e04_b1_lp2
   text: 'Many times I will intentionally ruin my entire appetite. Just ruin it.
 
@@ -74,6 +80,12 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: false
+    character_type: null
+    character_register: null
+    register_gap: null
+    character_gloss: null
 - joke_id: s02e04_b1_lp3
   text: 'And then, I call my mother up right after to tell her that I did it. "Hello,
     Mom? yeah, I just ruined my entire appetite.. cookies."
@@ -113,6 +125,14 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: true
+    character_type: everyman
+    character_register: casual
+    register_gap: treats_serious_as_mundane
+    character_gloss: Jerry performing himself as a grown man calling his mother to
+      confess eating cookies -- the adult autonomy champion reverting to a child's
+      confessional register, casual and matter-of-fact about a non-event.
 - joke_id: s02e04_b1_lp4
   text: 'See, because as an adult, we understand even if you ruin an appetite, there''s
     another appetite coming right behind it. There''s no danger in running out of
@@ -157,6 +177,12 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: false
+    character_type: null
+    character_register: null
+    register_gap: null
+    character_gloss: null
 - joke_id: s02e04_b1_lp5
   text: 'I''ve got millions of them, I''ll ruin them whenever I want!
 
@@ -196,4 +222,10 @@ annotations:
 
     '
   physical_performance: null
+  act_out:
+    present: false
+    character_type: null
+    character_register: null
+    register_gap: null
+    character_gloss: null
 v0_6_reviewed: true
