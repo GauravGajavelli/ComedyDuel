@@ -1,0 +1,262 @@
+# Concept Registry — ComedyDuel
+#
+# Every concept referenced in annotations must have an entry here.
+# Annotations use node_id values from this registry, NOT ad-hoc strings.
+#
+# Node format:
+#   node_id: normalized string (lowercase, underscores, plural for countable)
+#   gloss: one-line human-readable description
+#   domain: primary subject domain(s)
+#   specificity: 1-5 (from vocabularies/specificity.yaml)
+#   aliases: [] — prior annotation strings that map to this node
+#
+# GRANULARITY RULE: a concept should be at the level where substituting
+# a sibling concept would change the joke's humor. Too broad: "traffic"
+# (many different traffic jokes). Too narrow: "lane_changing_on_I95"
+# (works on any highway). Right level: "lane_changing" — load-bearing grain.
+#
+# Built from 231 concept references across 55 annotated laugh-points (v0.9).
+# Strings that are DESCRIPTIONS of humor mechanisms (absurdity, comparison,
+# inadequacy, understatement) are excluded — those belong in the schema's
+# structural fields, not in the concept graph.
+
+# ============================================================================
+# SOCIAL/BEHAVIORAL CONCEPTS
+# ============================================================================
+
+going_out:
+  gloss: "The act of leaving home to socialize; 'out' as a state of being"
+  domain: [social_ritual]
+  specificity: 2
+  aliases: [going_out, leisure, social_experience]
+
+cheque_writing:
+  gloss: "Paying by personal cheque at a store; the ritual of writing a cheque"
+  domain: [money_and_commerce, social_ritual]
+  specificity: 3
+  aliases: [cheque_writing, cheque, check, currency]
+
+lane_changing:
+  gloss: "Switching lanes in traffic; the compulsion to find a better lane"
+  domain: [urban_life, driving]
+  specificity: 3
+  aliases: [lane_changing, traffic, indecision]
+
+channel_flipping:
+  gloss: "Compulsively changing TV channels without watching anything"
+  domain: [domestic_life, television]
+  specificity: 3
+  aliases: [channel_flipping, remote_control]
+
+family_gatherings:
+  gloss: "Obligatory family events with boring conversation"
+  domain: [relationships, social_ritual]
+  specificity: 3
+  aliases: [family_gathering, boredom]
+
+retirement_migration:
+  gloss: "Older people moving to Florida; the inevitability of retirement relocation"
+  domain: [aging, social_ritual]
+  specificity: 3
+  aliases: [retirement, florida, aging, leisure_wear]
+
+clothes_shopping:
+  gloss: "The process of evaluating and selecting clothing"
+  domain: [domestic_life, gender_dynamics]
+  specificity: 3
+  aliases: [clothing, shopping, self_presentation, daily_routine]
+
+restaurant_dining:
+  gloss: "The experience of eating at a restaurant, especially the check"
+  domain: [money_and_commerce, social_ritual]
+  specificity: 3
+  aliases: [restaurant, ordering, hunger, fullness, aftermath]
+
+television_vs_reality:
+  gloss: "The gap between how life looks on TV and how it actually is"
+  domain: [domestic_life, media]
+  specificity: 2
+  aliases: [television, reality, reality_gap, comparison, self_image, sloth]
+
+apartment_maintenance:
+  gloss: "Living in and maintaining a small apartment; painting, shrinkage"
+  domain: [domestic_life, urban_life]
+  specificity: 3
+  aliases: [apartment, painting, shrinkage, encroachment, wall_outlets, buried_infrastructure, claustrophobia, perception]
+
+# ============================================================================
+# GESTURE/BODY CONCEPTS
+# ============================================================================
+
+middle_finger_gesture:
+  gloss: "The middle finger as a culturally loaded insult gesture"
+  domain: [body_and_physicality, social_ritual]
+  specificity: 3
+  aliases: [middle_finger, gesture, insult, arbitrariness, confrontation]
+
+toe_as_insult:
+  gloss: "The hypothetical toe as a more committed insult gesture"
+  domain: [body_and_physicality]
+  specificity: 4
+  aliases: [toe, effort, commitment, driving]
+
+body_posture_evaluation:
+  gloss: "Using body position to evaluate something (holding dress up, head in suit)"
+  domain: [body_and_physicality, shopping]
+  specificity: 3
+  aliases: [body_posture, evaluation, shoes]
+
+# ============================================================================
+# GENDER/BEHAVIORAL PATTERN CONCEPTS
+# ============================================================================
+
+male_tool_compulsion:
+  gloss: "Men's involuntary attraction to watching other men work with tools"
+  domain: [gender_dynamics, domestic_life]
+  specificity: 3
+  aliases: [men, compulsion, tools, work, neighborhood, drill, instinct, spectating, involvement]
+
+construction_site_containment:
+  gloss: "Construction fences reframed as systems to contain male curiosity"
+  domain: [urban_life, gender_dynamics]
+  specificity: 4
+  aliases: [construction_site, fence, peepholes, containment]
+
+gendered_tv_watching:
+  gloss: "Different ways men and women watch television"
+  domain: [gender_dynamics, domestic_life]
+  specificity: 3
+  aliases: [gender, nesting, hunting, evolution, women]
+
+# ============================================================================
+# MONEY/VALUE CONCEPTS
+# ============================================================================
+
+money_value_perception:
+  gloss: "How hunger/context changes the perceived value of money"
+  domain: [money_and_commerce]
+  specificity: 3
+  aliases: [money, value_perception, extravagance]
+
+cheque_as_plea:
+  gloss: "A cheque reframed as a pathetic note asking for trust"
+  domain: [money_and_commerce]
+  specificity: 4
+  aliases: [mothers_note, vulnerability, masculinity, value, writing]
+
+# ============================================================================
+# COMPARISON VEHICLE CONCEPTS (used as mapping sources)
+# ============================================================================
+
+quick_draw_gunslinger:
+  gloss: "Western gunslinger quick-draw as a comparison vehicle for speed/readiness"
+  domain: [fictional]
+  specificity: 4
+  aliases: [holster, gunslinger]
+
+zombie_compulsion:
+  gloss: "Zombies as a comparison vehicle for involuntary, mindless approach behavior"
+  domain: [fictional]
+  specificity: 3
+  aliases: []
+
+dog_whistle_response:
+  gloss: "Dog responding to ultrasonic whistle as comparison for involuntary sound-triggered compulsion"
+  domain: [nature]
+  specificity: 3
+  aliases: [dog_whistle]
+
+imperial_ruler:
+  gloss: "Emperor/ruler as comparison vehicle for unconstrained authority"
+  domain: [power_dynamics]
+  specificity: 3
+  aliases: [emperor, self_importance]
+
+star_trek_bridge:
+  gloss: "The Enterprise bridge as the ideal male living room"
+  domain: [fictional, domestic_life]
+  specificity: 4
+  aliases: [star_trek, enterprise_bridge, living_room, male_fantasy, big_screen_tv, aliens, social_visits, sports_viewing]
+
+# ============================================================================
+# CHILDHOOD/AUTHORITY CONCEPTS
+# ============================================================================
+
+adult_cookie_freedom:
+  gloss: "The trivial freedom of eating cookies as emblem of adulthood"
+  domain: [domestic_life, childhood]
+  specificity: 4
+  aliases: [adulthood, freedom, cookies, childhood_rules, rebellion]
+
+appetite_ruining:
+  gloss: "The childhood prohibition against ruining your appetite, reclaimed as adult freedom"
+  domain: [domestic_life, childhood]
+  specificity: 4
+  aliases: [appetite, mother, scarcity, abundance]
+
+leisure_police:
+  gloss: "Imaginary enforcement agency that makes old people move to Florida"
+  domain: [social_ritual, authority]
+  specificity: 5
+  aliases: [police, enforcement]
+
+# ============================================================================
+# FASHION/FUTURE CONCEPTS
+# ============================================================================
+
+universal_outfit:
+  gloss: "The sci-fi trope of a single species-wide outfit; fashion's end state"
+  domain: [fashion, future]
+  specificity: 4
+  aliases: [uniform, uniformity, science_fiction, future, committee_decision, voting, democracy, fashion_show, earth, specificity]
+
+# ============================================================================
+# COMMERCIAL/MEDIA CONCEPTS
+# ============================================================================
+
+soda_commercial_enthusiasm:
+  gloss: "The disproportionate enthusiasm of soda commercial actors"
+  domain: [media, commerce]
+  specificity: 4
+  aliases: [soda_commercials, enthusiasm, disproportionate_response, self_blame]
+
+sweepstakes_deception:
+  gloss: "Sweepstakes companies' deceptive 'you may have already won' language"
+  domain: [commerce, deception]
+  specificity: 3
+  aliases: [sweepstakes, honesty, rejection, humiliation]
+
+# ============================================================================
+# ABSTRACT/STRUCTURAL CONCEPTS
+# ============================================================================
+
+cyclical_dissatisfaction:
+  gloss: "The human cycle of wanting to be where you aren't"
+  domain: [human_condition]
+  specificity: 1
+  aliases: [cycle, restlessness, human_nature, human_condition, movement]
+
+ancient_channel_flipping:
+  gloss: "Projecting modern channel-surfing behavior onto ancient kings with storytellers"
+  domain: [history, media]
+  specificity: 4
+  aliases: [kings, storytellers, anachronism]
+
+# ============================================================================
+# EXCLUDED STRINGS (mechanism descriptions, not concepts)
+# ============================================================================
+#
+# The following strings appeared in annotations but are descriptions of
+# humor mechanisms or emotional states, not content concepts. They should
+# NOT be in the concept graph — they belong in structural/logic fields:
+#
+#   absurdity, comparison, inadequacy, understatement, sarcasm,
+#   normalcy_bias, anticipation, disappointment, confusion, regret,
+#   escape_fantasy, social_norms, preparation, searching, absence,
+#   phone_call, dead_stop, ground_level_detail, regression,
+#   self_blame (when describing the joke's mechanism, not its content)
+#
+# If these appear in future annotations, redirect:
+#   - absurdity → likely describes the operation (extension) not a concept
+#   - comparison → likely describes the template, not a concept
+#   - anticipation/disappointment → likely describes setup_frame or affect

@@ -1,32 +1,94 @@
 # FILE: annotations/s02e02_opening_pass2.yaml
+# Pass 2 annotation — s02e02 "The Pony Remark", 1991
+# Opening monologue: "Parents in Florida / Family Gathering Boredom"
+# Annotated against schema v0.9
 
 jokes:
+
+  # =========================================================================
+  # JOKE 01 — "They're in their sixties, and that's the law."
+  # =========================================================================
+
   - joke_id: "seinfeld_s02e02_opening_01"
     source:
       work: "Seinfeld S02E02 'The Pony Remark' opening monologue"
       medium: sitcom_opener
       year: 1991
-    transcript_fragment: "My parents live in Florida now. They moved there last year. They didn't want to move to Florida, but they're in their sixties, and that's the law."
+
+    annotation_status:
+      transcription: complete
+      decomposition: complete
+      performance: incomplete
+      commutation: incomplete
+      adversarial_review: incomplete
+      voice_attribution: incomplete
+
+    transcript_fragment: >
+      My parents live in Florida now. They moved there last year. They
+      didn't want to move to Florida, but they're in their sixties, and
+      that's the law.
+
     joke:
       content:
-        primary_domain: [aging, social_conventions]
-        concepts: [retirement, florida, aging, compulsion]
-        pivot_concept: retirement_migration_as_law
-        specificity: {default_level: 2}
+        primary_domain: [social_ritual, aging]
+        concepts: [retirement_migration]
+        pivot_concept: retirement_migration
+        specificity:
+          default_level: 3
+          trajectory: null
         content_moves: []
+
       logic:
-        setup_expectation: "Parents moved to Florida — the audience expects a personal reason (climate, family, etc.)."
-        punchline_violation: "Reframes voluntary retirement migration as legally compulsory. The universality of the phenomenon is treated as if it were an actual statute."
+        setup_expectation: >
+          "My parents live in Florida now" sets up a mundane biographical
+          fact. "They didn't want to move to Florida" introduces a mild
+          tension — why did they move if they didn't want to? The audience
+          expects a personal or financial reason (health, cost of living,
+          being near family).
+        punchline_violation: >
+          "They're in their sixties, and that's the law" reframes the
+          well-known cultural pattern of retirees moving to Florida as
+          if it were a legal mandate rather than a voluntary social trend.
+          The humor is in treating a loose demographic tendency as a
+          binding legal obligation. The audience recognizes the pattern
+          (old people move to Florida) but the framing as "the law" is
+          the comic angle.
+
         pivot_mechanism:
           operation: reinterpretation
-          reading_switch: literal_to_figurative
-          scale_shift: expansion
+          operation_alternative: null
+          # TEST: Two readings of the same material.
+          # Reading 1 (setup): retirement migration is a voluntary social
+          # pattern — people choose to move south for warmth, leisure, etc.
+          # Reading 2 (punchline): retirement migration is a mandatory
+          # legal requirement — once you hit sixty, you MUST relocate.
+          # Same phenomenon (old people moving to Florida), two frames
+          # (voluntary choice vs. legal compulsion). Nothing is negated;
+          # the pattern is reread as compulsory.
+          reading_switch: none
+          scale_shift: none
+          # STRICT TEST: The reinterpretation from social-pattern to legal-
+          # mandate is the joke. Could I swap to expansion? The joke is
+          # not about lifting a personal observation to universal principle;
+          # it's about reframing the nature of the phenomenon. The scale
+          # doesn't change — it was already about a demographic-level
+          # pattern. Set to none.
           wordplay: none
-        setup_frame: establishes_premise
+
+        setup_frame: establishes_convention
+        # "Old people move to Florida" is a convention the audience already
+        # holds. Jerry doesn't need to establish this belief; the audience
+        # recognizes it as a cultural truism without being told.
+
         pivot_locus: logical
         resolution_requires: [shared_experience, world_knowledge]
+
       structure:
         primary_template: mundane_as_monumental
+        # The rhetorical shape: a mundane social pattern (retirement
+        # migration) is given the gravity and authority of law. The
+        # register of legal obligation is applied to a trivial
+        # demographic trend.
         secondary_templates: []
         subversions_applied: []
         has_tag: false
@@ -37,47 +99,193 @@ jokes:
           character_type: null
           register_gap: null
           character_gloss: ""
+
       relational:
-        positioning: {default: lateral_observer}
+        positioning:
+          default: lateral_observer
+          trajectory: null
         audience_implication: co_observer
-        shared_experience: {required: true, universality: common, comprehensibility_without_experience: 4}
-        performed_relatability: {present: false}
+        # The audience recognizes the retirement-to-Florida pattern. Jerry
+        # names it from alongside them.
+        shared_experience:
+          required: true
+          universality: common
+          # Not truly universal — requires knowledge of the American
+          # cultural pattern of retirees moving to Florida.
+          comprehensibility_without_experience: 3
+        performed_relatability:
+          present: true
+          # "You know how it works" — direct shared-experience gesture.
+
       narrative:
-        routine_id: s02e02_parents_florida
+        callbacks_to: []
+        callback_is_primary_pivot: null
+        running_premise: null
+        tag_callbacks_to: null
+        anti_callback: null
+        routine_id: "s02e02_opening"
+        position_in_routine: 1
+        routine_total_jokes: 4
         position_in_set: opener
+
     performance:
       performer: seinfeld
+      delivery:
+        cadence: "{UNSPECIFIED}"
+        pause_placement: []
+        repetition: null
+        vocal_register_shifts: []
+        estimated_duration_seconds: null
+        register_break:
+          present: false
+          at: null
+          direction: null
+        act_out_voice:
+          character_register: null
+      voice:
+        persona_markers: []
+        signature_phrases: []
+        register: default
+        editorializes:
+          present: null
+          kind: null
+      affective:
+        default_register:
+          valence: null
+          arousal: null
+        trajectory: null
+        shifts_are_load_bearing: null
+        deviates_from_performer_default: null
+      relational:
+        vulnerability:
+          personal_exposure: null
+          emotional_risk: null
+        performed_relatability:
+          intensity: null
+        positioning_deviation: null
+
+    meta:
+      comments_on_form: null
+      breaks_fourth_wall: null
+
     analysis:
-      adversarial: {confidence: high}
-    notes: "The reading_switch is literal_to_figurative: 'the law' is stated literally but functions figuratively to describe the cultural inevitability of Florida retirement. The expansion (personal anecdote to universal law) is independently removable — the joke works without it being 'law' but the inflation is additive."
+      commutation:
+        load_bearing_element:
+          field_path: ""
+          gloss: ""
+        removable_elements:
+          - field_path: ""
+            gloss: ""
+        uncertain_elements:
+          - field_path: ""
+            gloss: ""
+      voice_portability:
+        mort: null
+        cece: null
+      adversarial:
+        counterarguments_considered:
+          - alternative: "Could be transplant — importing legal/enforcement framework into retirement."
+            why_rejected: "Transplant requires importing specific rules from a named foreign domain. The joke here doesn't import legal procedures; it reframes an existing pattern as compulsory. The single word 'law' triggers a frame switch on the pattern itself, not an import of legal system rules. The extended act-out in joke 02 does approach transplant territory, but THIS joke is a frame switch on the phenomenon."
+          - alternative: "Could be articulation — everyone already knows old people move to Florida."
+            why_rejected: "The audience knows the pattern, but they don't already think of it as 'the law.' The humor NEEDS the legal-mandate reframe. Remove the frame shift and state it plainly ('old people tend to move to Florida') and the joke dies. The angle IS the joke, not the observation."
+        confidence: high
+
+    notes: |
+      Clean reinterpretation. The same cultural pattern (retirement migration
+      to Florida) is reread through a legal-compulsion frame. The "You know
+      how it works" explicitly invokes shared knowledge before imposing the
+      new frame. Sets up the extended act-out in joke 02.
+
+  # =========================================================================
+  # JOKE 02 — "The leisure police" act-out
+  # =========================================================================
 
   - joke_id: "seinfeld_s02e02_opening_02"
     source:
       work: "Seinfeld S02E02 'The Pony Remark' opening monologue"
       medium: sitcom_opener
       year: 1991
-    transcript_fragment: "They got the leisure police. They pull up in front of the old people's house with a golf cart, jump out, 'Let's go Pop, white belt, white pants, white shoes, get in the back. Drop the snow shovel right there, drop it!'"
+
+    annotation_status:
+      transcription: complete
+      decomposition: complete
+      performance: incomplete
+      commutation: incomplete
+      adversarial_review: incomplete
+      voice_attribution: incomplete
+
+    transcript_fragment: >
+      You know how it works. They got the leisure police. They pull up
+      in front of the old people's house with a golf cart, jump out,
+      "Let's go Pop, white belt, white pants, white shoes, get in the
+      back. Drop the snow shovel right there, drop it!"
+
     joke:
       content:
-        primary_domain: [aging, social_conventions, authority]
-        concepts: [retirement, florida, police, leisure_wear, enforcement]
-        pivot_concept: leisure_enforcement
-        specificity: {default_level: 5}
+        primary_domain: [social_ritual, aging, authority]
+        concepts: [retirement_migration, leisure_police]
+        pivot_concept: leisure_police
+        specificity:
+          default_level: 4
+          trajectory:
+            - at: setup
+              level: 3
+            - at: act_out
+              level: 5
         content_moves: []
+
       logic:
-        setup_expectation: "The 'law' premise has been established. The audience expects elaboration but the specific execution — a full law-enforcement scenario for retirement lifestyle — is surprising."
-        punchline_violation: "Transplants the entire apparatus of a police arrest (pulling up, jumping out, barking orders, 'get in the back') onto the domain of retirement leisure. The framework of law enforcement is applied to putting on white pants."
+        setup_expectation: >
+          Joke 01 established the "law" frame — retirement migration as
+          legal mandate. The audience has accepted this comic premise and
+          expects Jerry to move on. "You know how it works" signals there's
+          more to the premise.
+        punchline_violation: >
+          Jerry extends the "law" reframe into a fully realized enforcement
+          scenario: a "leisure police" force that physically compels retirees
+          to adopt the Florida lifestyle. The act-out dramatizes the arrest
+          scene with escalating specificity — golf cart as squad car, white
+          clothing as uniform requirements, confiscation of the snow shovel
+          as contraband. Each detail follows logically from the premise that
+          retirement is legally mandated, pushing the scenario further into
+          absurdity while remaining internally consistent.
+
         pivot_mechanism:
-          operation: transplant
+          operation: extension
+          operation_alternative: null
+          # TEST: (1) Accepted premise: retirement migration to Florida is
+          # "the law" (established in joke 01).
+          # (2) Absurd-but-logical conclusion: if it's the law, there must
+          # be enforcement — a "leisure police" that arrests non-compliant
+          # retirees, confiscates their winter equipment, and enforces the
+          # dress code. The premise is never challenged; the logic is
+          # followed to an absurd but internally consistent destination.
           reading_switch: none
           scale_shift: none
+          # STRICT TEST: Could this extension work with contraction or
+          # expansion? The joke already operates at the same scale as the
+          # premise (individual retirees being enforced upon). No scope
+          # change from the setup. Set to none.
           wordplay: none
+
         setup_frame: establishes_premise
-        pivot_locus: both
+        # Jerry has established the premise (from joke 01) that retirement
+        # migration is "the law." This is not something the audience
+        # believed before Jerry stated it. Premise, not convention.
+
+        pivot_locus: logical
         resolution_requires: [shared_experience, world_knowledge]
+
       structure:
         primary_template: escalation
-        secondary_templates: [comparison]
+        # The rhetorical shape builds across multiple beats: golf cart,
+        # white belt, white pants, white shoes, snow shovel confiscation.
+        # Each detail adds specificity and commitment to the enforcement
+        # scenario. The accumulation is the discourse structure.
+        secondary_templates: [reductio]
+        # The logical chain from "it's the law" to "leisure police" to
+        # specific enforcement details has a reductio quality — following
+        # an argument to its absurd conclusion.
         subversions_applied: []
         has_tag: false
         tag_operation: null
@@ -86,117 +294,518 @@ jokes:
           present: true
           character_type: authority
           register_gap: treats_mundane_as_serious
-          character_gloss: "Leisure police officer barking arrest-style commands about retirement clothing and accessories."
+          # The leisure police officer treats retirement clothing and
+          # snow-shovel confiscation with the urgency and authority of
+          # a real arrest. The gap between the gravity of the register
+          # (police authority) and the triviality of the content (white
+          # belts, golf carts) is load-bearing.
+          character_gloss: >
+            A gruff, no-nonsense leisure police officer barking orders
+            at an elderly person, treating white pants and snow shovels
+            with the same urgency as real law enforcement.
+
       relational:
-        positioning: {default: lateral_observer}
+        positioning:
+          default: lateral_observer
+          trajectory: null
         audience_implication: co_observer
-        shared_experience: {required: true, universality: common, comprehensibility_without_experience: 3}
-        performed_relatability: {present: false}
+        shared_experience:
+          required: true
+          universality: common
+          comprehensibility_without_experience: 3
+        performed_relatability:
+          present: true
+
       narrative:
-        routine_id: s02e02_parents_florida
+        callbacks_to: ["seinfeld_s02e02_opening_01"]
+        callback_is_primary_pivot: false
+        running_premise: null
+        tag_callbacks_to: null
+        anti_callback: null
+        routine_id: "s02e02_opening"
+        position_in_routine: 2
+        routine_total_jokes: 4
         position_in_set: opener
+
     performance:
       performer: seinfeld
+      delivery:
+        cadence: "{UNSPECIFIED}"
+        pause_placement: []
+        repetition: null
+        vocal_register_shifts: []
+        estimated_duration_seconds: null
+        register_break:
+          present: false
+          at: null
+          direction: null
+        act_out_voice:
+          character_register: null
+      voice:
+        persona_markers: []
+        signature_phrases: []
+        register: default
+        editorializes:
+          present: null
+          kind: null
+      affective:
+        default_register:
+          valence: null
+          arousal: null
+        trajectory: null
+        shifts_are_load_bearing: null
+        deviates_from_performer_default: null
+      relational:
+        vulnerability:
+          personal_exposure: null
+          emotional_risk: null
+        performed_relatability:
+          intensity: null
+        positioning_deviation: null
+
+    meta:
+      comments_on_form: null
+      breaks_fourth_wall: null
+
     analysis:
-      adversarial: {confidence: high}
-    notes: "Clear transplant: source domain = law enforcement (arrest procedure), target domain = retirement lifestyle. The framework genuinely doesn't fit — the mismatch between the urgency of a police raid and the banality of white belts IS the joke. The escalating specificity (white belt, white pants, white shoes, snow shovel) builds the act-out across beats."
+      commutation:
+        load_bearing_element:
+          field_path: ""
+          gloss: ""
+        removable_elements:
+          - field_path: ""
+            gloss: ""
+        uncertain_elements:
+          - field_path: ""
+            gloss: ""
+      voice_portability:
+        mort: null
+        cece: null
+      adversarial:
+        counterarguments_considered:
+          - alternative: "Could be transplant — importing law enforcement framework into retirement."
+            why_rejected: "Transplant requires a foreign framework to be MISAPPLIED. Here, the framework is not being imported from elsewhere — it follows logically from the premise established in joke 01 that retirement IS the law. If it's the law, enforcement is the logical consequence. The premise is accepted and its implications are drawn out, which is extension. Transplant would apply if Jerry suddenly imposed police procedures on retirement WITHOUT first establishing the 'law' premise."
+          - alternative: "Could be mapping — drawing a parallel between police and retirement enforcement."
+            why_rejected: "Mapping reveals an unexpected SIMILARITY between two domains. The humor here is not in the aptness of the parallel (retirement enforcement is NOT actually like policing). The humor is in following the 'law' premise to its absurd logical conclusion. The enforcement scenario is absurd precisely because it DOESN'T fit — that's extension (absurd-but-logical conclusion), not mapping (apt parallel)."
+        confidence: high
+
+    notes: |
+      Builds directly on joke 01's "that's the law" reinterpretation. The
+      act-out is the structural vehicle for the extension — the leisure
+      police officer's barked commands dramatize the absurd enforcement
+      scenario. The specificity trajectory rises from the general concept
+      (leisure police) to hyper-specific details (white belt, white pants,
+      snow shovel confiscation). The concept "leisure_police" is a new
+      registry addition — a fictional enforcement body for retirement norms.
+
+  # =========================================================================
+  # JOKE 03 — "What if I just jumped out that window?"
+  # =========================================================================
 
   - joke_id: "seinfeld_s02e02_opening_03"
     source:
       work: "Seinfeld S02E02 'The Pony Remark' opening monologue"
       medium: sitcom_opener
       year: 1991
-    transcript_fragment: "I am not much for the family gathering. You know, you sit there, and the conversation's so boring. It's so dull. And you start to fantasize. You know, you think, what if I just got up and jumped out that window?"
+
+    annotation_status:
+      transcription: complete
+      decomposition: complete
+      performance: incomplete
+      commutation: incomplete
+      adversarial_review: incomplete
+      voice_attribution: incomplete
+
+    transcript_fragment: >
+      I am not much for the family gathering. You know, you sit there,
+      and the conversation's so boring. It's so dull. And you start to
+      fantasize. You know, you think, what if I just got up and jumped
+      out that window? What would it be like? Just crashed right through
+      the glass..
+
     joke:
       content:
-        primary_domain: [domestic_life, social_obligations]
-        concepts: [family_gathering, boredom, escape_fantasy]
-        pivot_concept: window_escape
-        specificity: {default_level: 3}
+        primary_domain: [relationships, social_ritual]
+        concepts: [family_gatherings]
+        pivot_concept: family_gatherings
+        specificity:
+          default_level: 3
+          trajectory: null
         content_moves: []
+
       logic:
-        setup_expectation: "Family gatherings are boring — the audience expects a conventional complaint or a mild fantasy of escape."
-        punchline_violation: "The escape fantasy is not leaving politely or daydreaming — it's violently jumping through a window. The disproportionate physical response to conversational boredom is the pivot."
+        setup_expectation: >
+          "The conversation's so boring" and "you start to fantasize"
+          sets up a boredom scenario at a family gathering. The audience
+          expects the fantasy to be something mundane or relatable —
+          daydreaming about being elsewhere, thinking about TV, checking
+          out mentally. "You start to fantasize" implies a gentle,
+          familiar mental escape.
+        punchline_violation: >
+          The fantasy is violently physical — jumping out a window and
+          crashing through glass. The scale of the escape response is
+          wildly disproportionate to the stimulus (boring conversation).
+          The humor is in the mismatch between the mundane provocation
+          (dull family talk) and the extreme, self-destructive response
+          (defenestration). The audience recognizes the impulse (wanting
+          to escape boring gatherings) but the specific form of the
+          fantasy is absurdly escalated.
+
         pivot_mechanism:
           operation: extension
+          operation_alternative: null
+          # TEST: (1) Accepted premise: family gatherings are so boring
+          # you fantasize about escaping.
+          # (2) Absurd-but-logical conclusion: the boredom is so severe
+          # that the escape fantasy involves physically jumping through
+          # a window. The premise (boredom → escape fantasy) is never
+          # challenged; it's followed to an extreme destination.
           reading_switch: none
           scale_shift: expansion
+          # STRICT TEST: Could this extension work with contraction?
+          # Yes — the boredom-escape fantasy could be contracted to
+          # something tiny (imagining a nap, fidgeting) rather than
+          # expanded to violent defenestration. The expansion from
+          # "mild daydream" to "crash through glass" is a separable
+          # intensifier. The extension (following boredom-fantasy logic)
+          # would survive at smaller scale.
           wordplay: none
-        setup_frame: establishes_expectation
+
+        setup_frame: establishes_behavior
+        # "You sit there, the conversation's so boring, you start to
+        # fantasize" describes something people DO at family gatherings.
+        # This is a behavior the audience recognizes from their own
+        # experience. Behavior, not premise.
+
         pivot_locus: both
+        # Logically, the extension follows boredom to its extreme
+        # conclusion. Affectively, the audience feels the recognition
+        # of wanting to escape boring gatherings — the laughter has
+        # both a "that's clever" and a "yes, exactly" quality.
         resolution_requires: [shared_experience]
+
       structure:
-        primary_template: mundane_as_monumental
+        primary_template: escalation
+        # The rhetorical shape builds from boredom → fantasize → jump
+        # out window → crash through glass. Each beat escalates the
+        # intensity of the escape fantasy.
         secondary_templates: []
         subversions_applied: []
-        has_tag: false
+        has_tag: true
         tag_operation: null
-        tag_has_own_pivot: null
+        # The tag is joke 04 (the return and casual explanation).
+        # tag_operation is null here because the tag is a separate joke.
+        tag_has_own_pivot: true
         act_out:
           present: false
           character_type: null
           register_gap: null
           character_gloss: ""
+
       relational:
-        positioning: {default: lateral_observer}
+        positioning:
+          default: lateral_observer
+          trajectory: null
         audience_implication: co_observer
-        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 5}
-        performed_relatability: {present: true}
+        shared_experience:
+          required: true
+          universality: universal
+          comprehensibility_without_experience: 4
+        performed_relatability:
+          present: true
+          # "You know, you sit there" — direct shared-experience gesture.
+
       narrative:
-        routine_id: s02e02_family_gathering
+        callbacks_to: []
+        callback_is_primary_pivot: null
+        running_premise: null
+        tag_callbacks_to: null
+        anti_callback: null
+        routine_id: "s02e02_opening"
+        position_in_routine: 3
+        routine_total_jokes: 4
         position_in_set: opener
+
     performance:
       performer: seinfeld
+      delivery:
+        cadence: "{UNSPECIFIED}"
+        pause_placement: []
+        repetition: null
+        vocal_register_shifts: []
+        estimated_duration_seconds: null
+        register_break:
+          present: false
+          at: null
+          direction: null
+        act_out_voice:
+          character_register: null
+      voice:
+        persona_markers: []
+        signature_phrases: []
+        register: default
+        editorializes:
+          present: null
+          kind: null
+      affective:
+        default_register:
+          valence: null
+          arousal: null
+        trajectory: null
+        shifts_are_load_bearing: null
+        deviates_from_performer_default: null
+      relational:
+        vulnerability:
+          personal_exposure: null
+          emotional_risk: null
+        performed_relatability:
+          intensity: null
+        positioning_deviation: null
+
+    meta:
+      comments_on_form: null
+      breaks_fourth_wall: null
+
     analysis:
-      adversarial: {confidence: medium}
-    notes: "Extension: the boredom premise is accepted and the escape fantasy is followed past reasonable bounds. The scale_shift (expansion) is independently removable — the joke works as 'what if I just left' but the window-jumping escalates it. Mundane_as_monumental template because the trivial stimulus (boring chat) receives the gravity of a defenestration fantasy."
+      commutation:
+        load_bearing_element:
+          field_path: ""
+          gloss: ""
+        removable_elements:
+          - field_path: ""
+            gloss: ""
+        uncertain_elements:
+          - field_path: ""
+            gloss: ""
+      voice_portability:
+        mort: null
+        cece: null
+      adversarial:
+        counterarguments_considered:
+          - alternative: "Could be reinterpretation — reframing 'fantasize' from romantic/escapist to violent."
+            why_rejected: "The humor is not in reframing what 'fantasize' means. The audience understands fantasize literally — the joke is about WHERE the fantasy goes when you follow the boredom premise. The premise (boredom triggers escape fantasies) is accepted and pushed to an extreme conclusion (defenestration). Extension, not reinterpretation."
+          - alternative: "Could be articulation — everyone has had violent escape fantasies at boring gatherings."
+            why_rejected: "The specific form of the fantasy (jumping through a window) is not something the audience already had in mind. The humor depends on the escalation from mild boredom to violent escape, not on naming a pre-existing shared truth. If the audience KNEW the punchline was 'jump out the window,' the escalation would lose power."
+        confidence: high
+
+    notes: |
+      Extension with expansion. The boredom-fantasy premise is accepted and
+      followed to defenestration. The scale_shift expansion is separable:
+      the extension logic (boredom → escape fantasy) works at any scale,
+      but the expansion to violent self-defenestration is a separable
+      intensifier. Sets up joke 04's tag.
+
+  # =========================================================================
+  # JOKE 04 — "I was just a little bored...Hummel collection"
+  # =========================================================================
 
   - joke_id: "seinfeld_s02e02_opening_04"
     source:
       work: "Seinfeld S02E02 'The Pony Remark' opening monologue"
       medium: sitcom_opener
       year: 1991
-    transcript_fragment: "Come back in, there's broken glass, everybody's all upset. 'No, I'm alright. I was just a little bored, there. No, I'm fine. I came back. I wanted to hear a little about that Hummel collection, Aunt Rose. Let's pick it up right there.'"
+
+    annotation_status:
+      transcription: complete
+      decomposition: complete
+      performance: incomplete
+      commutation: incomplete
+      adversarial_review: incomplete
+      voice_attribution: incomplete
+
+    transcript_fragment: >
+      You know. Come back in, there's broken glass, everybody's all upset.
+      "No, I'm alright. I was just a little bored, there. No, I'm fine.
+      I came back. I wanted to hear a little about that Hummel collection,
+      Aunt Rose. Let's pick it up right there."
+
     joke:
       content:
-        primary_domain: [domestic_life, social_obligations]
-        concepts: [family_gathering, boredom, social_norms, understatement]
-        pivot_concept: casual_return_from_defenestration
-        specificity: {default_level: 5}
+        primary_domain: [relationships, social_ritual]
+        concepts: [family_gatherings]
+        pivot_concept: family_gatherings
+        specificity:
+          default_level: 4
+          trajectory:
+            - at: setup
+              level: 3
+            - at: hummel_detail
+              level: 5
         content_moves: []
+
       logic:
-        setup_expectation: "Having established the window-jumping fantasy, the audience expects the fantasy to end there or escalate further into absurdity."
-        punchline_violation: "Instead, the person casually returns to the family gathering as if nothing extreme happened, offering a hilariously mundane explanation ('a little bored') and asking to resume the boring conversation ('Hummel collection'). The return to normalcy after the extreme is the pivot."
+        setup_expectation: >
+          Joke 03 established the violent escape fantasy (jumping through
+          a window). The audience has processed the absurdity of the
+          physical act. They might expect the fantasy to end, or for
+          Jerry to comment on the aftermath seriously or move on.
+        punchline_violation: >
+          The fantasy continues past the violent act into a casual return.
+          The act-out character treats the defenestration as a minor
+          interruption — "I was just a little bored" massively understates
+          jumping through a window. "I came back" treats re-entry as a
+          social courtesy. The clincher is "I wanted to hear a little about
+          that Hummel collection, Aunt Rose" — a hyper-specific boring
+          topic named as the reason for returning. The Hummel collection
+          detail converts the abstract "boring conversation" from the setup
+          into a concrete, excruciatingly specific example. "Let's pick it
+          up right there" treats the boring conversation as if it were
+          a valued program one paused for a bathroom break.
+
         pivot_mechanism:
-          operation: reinterpretation
+          operation: extension
+          operation_alternative: reinterpretation
+          # TEST: (1) Accepted premise: the boredom was so severe you
+          # jumped through a window (from joke 03).
+          # (2) Absurd-but-logical conclusion: you come back in, casually
+          # explain you were "a little bored," and ask to resume the exact
+          # boring conversation that drove you to defenestrate. The premise
+          # is never challenged; the logic follows: if the gathering is
+          # mandatory (you "came back"), then you must resume the
+          # conversation, and the specific conversation topic is so dull
+          # it's absurd to name it as a draw.
           reading_switch: none
           scale_shift: contraction
+          # STRICT TEST: Could this extension work with expansion instead
+          # of contraction? Yes — the return could be expanded (grandiose
+          # re-entry, dramatic speech about boredom) rather than contracted
+          # (casual understatement). The contraction from "crashed through
+          # glass" to "I was just a little bored" is a separable
+          # deflation that adds comedy but the extension logic (returning
+          # to resume the boring conversation) would survive without it.
           wordplay: none
-        setup_frame: establishes_anomaly
-        pivot_locus: both
+
+        setup_frame: establishes_premise
+        # The premise that you would jump through a window AND come back
+        # is not something the audience holds without Jerry building it.
+        # This extends a premise Jerry established in joke 03.
+
+        pivot_locus: logical
         resolution_requires: [shared_experience]
+
       structure:
         primary_template: monumental_as_mundane
+        # The rhetorical shape: a violent, dramatic act (defenestration,
+        # broken glass, upset family) is treated with casual mundane
+        # register. "I was just a little bored" applies the grammar of
+        # mild inconvenience to a physically extreme act. The subject's
+        # significance (jumping through a window) is treated with
+        # trivially inadequate register.
         secondary_templates: []
         subversions_applied: []
-        has_tag: true
-        tag_operation: extends
-        tag_has_own_pivot: true
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
         act_out:
           present: true
           character_type: everyman
           register_gap: treats_serious_as_mundane
-          character_gloss: "Person who just jumped through a window reassuring family it was no big deal, casually resuming the boring conversation."
+          # The character who jumped through the window treats it as a
+          # minor social faux pas, not a dramatic or dangerous act. The
+          # register gap between the gravity of defenestration and the
+          # casualness of the explanation is load-bearing.
+          character_gloss: >
+            A family gathering attendee who has just crashed through a
+            window and re-entered, explaining himself with casual
+            understatement as if he'd merely stepped out for air. Asks
+            to resume hearing about Aunt Rose's Hummel collection.
+
       relational:
-        positioning: {default: lateral_observer}
+        positioning:
+          default: lateral_observer
+          trajectory: null
         audience_implication: co_observer
-        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 5}
-        performed_relatability: {present: true}
+        shared_experience:
+          required: true
+          universality: universal
+          comprehensibility_without_experience: 4
+        performed_relatability:
+          present: false
+          # No "you know when you..." gesture. The act-out carries the
+          # humor; Jerry is performing a character, not invoking shared
+          # experience directly.
+
       narrative:
-        routine_id: s02e02_family_gathering
+        callbacks_to: ["seinfeld_s02e02_opening_03"]
+        callback_is_primary_pivot: false
+        running_premise: null
+        tag_callbacks_to: null
+        anti_callback: null
+        routine_id: "s02e02_opening"
+        position_in_routine: 4
+        routine_total_jokes: 4
         position_in_set: opener
+
     performance:
       performer: seinfeld
+      delivery:
+        cadence: "{UNSPECIFIED}"
+        pause_placement: []
+        repetition: null
+        vocal_register_shifts: []
+        estimated_duration_seconds: null
+        register_break:
+          present: false
+          at: null
+          direction: null
+        act_out_voice:
+          character_register: null
+      voice:
+        persona_markers: []
+        signature_phrases: []
+        register: default
+        editorializes:
+          present: null
+          kind: null
+      affective:
+        default_register:
+          valence: null
+          arousal: null
+        trajectory: null
+        shifts_are_load_bearing: null
+        deviates_from_performer_default: null
+      relational:
+        vulnerability:
+          personal_exposure: null
+          emotional_risk: null
+        performed_relatability:
+          intensity: null
+        positioning_deviation: null
+
+    meta:
+      comments_on_form: null
+      breaks_fourth_wall: null
+
     analysis:
-      adversarial: {confidence: high}
-    notes: "The Hummel collection detail is a tag with its own pivot — it adds the specificity of exactly the kind of deadly boring topic that triggered the escape. The act-out character treats jumping through a window as a casual break, then eagerly returns to the very thing that caused the escape. The contraction (defenestration reduced to 'a little bored') is load-bearing."
+      commutation:
+        load_bearing_element:
+          field_path: ""
+          gloss: ""
+        removable_elements:
+          - field_path: ""
+            gloss: ""
+        uncertain_elements:
+          - field_path: ""
+            gloss: ""
+      voice_portability:
+        mort: null
+        cece: null
+      adversarial:
+        counterarguments_considered:
+          - alternative: "Could be negation — the casual return negates the severity of the act."
+            why_rejected: "Nothing is rendered false. The defenestration happened. The punchline doesn't claim it DIDN'T happen — it accepts it and treats it casually. The humor is in following the premise forward (extension) with deflated register (monumental_as_mundane template + contraction), not in contradicting anything."
+          - alternative: "Could be reinterpretation — reframing defenestration as a minor social faux pas."
+            why_rejected: "Close call, but the humor is not in re-reading the act of jumping through a window. The act is acknowledged as having happened. The humor is in CONTINUING the logic: if you jumped out but came back, you must explain yourself, and the explanation follows the absurd internal logic of the scenario (casual understatement, polite request to resume boring conversation). Extension with a contraction modifier captures the mechanism better than reinterpretation."
+          - alternative: "Primary template could be bare_observation with articulation."
+            why_rejected: "The joke has substantial structural scaffolding — act-out, escalation from broken glass to Hummel collection, register mismatch between violence and casualness. This is not a single naming. The monumental_as_mundane template captures the rhetorical shape (grave act treated with trivial register)."
+        confidence: medium
+
+    notes: |
+      Functions as a tag/extension on joke 03. The contraction (defenestration
+      treated as mild boredom) is separable from the extension (following the
+      logic of returning to the gathering). The Hummel collection detail is a
+      specificity spike — it converts "boring conversation" from abstract to
+      painfully concrete. The act-out register gap (treats_serious_as_mundane)
+      and the primary template (monumental_as_mundane) align, which is
+      appropriate — the character's treatment of the situation IS the
+      rhetorical shape.

@@ -1,201 +1,856 @@
-# FILE: annotations/s02e10_opening_pass2.yaml
-jokes:
-  - joke_id: "seinfeld_s02e10_opening_01"
-    source:
-      work: "Seinfeld S02E10 'The Baby Shower' opening monologue"
-      medium: sitcom_opener
-      year: 1991
-    transcript_fragment: "Men get that remote control in their hands, they don't even know what the hell they're watching... 'Rerun, don't wanna watch it..' 'What are you watching?' 'I don't care, I gotta keep going.'"
-    joke:
-      content:
-        primary_domain: [gender_differences, domestic_life]
-        concepts: [television, remote_control, men, restlessness]
-        pivot_concept: channel_flipping
-        specificity: {default_level: 3}
-        content_moves: []
-      logic:
-        setup_expectation: "Men use the remote control to find something to watch -- the implicit purpose of changing channels is selection."
-        punchline_violation: "Jerry articulates that men aren't looking for anything -- the flipping itself is the activity. The purpose of having the remote is not selection but perpetual motion. The audience recognizes this behavior in themselves."
-        pivot_mechanism:
-          operation: articulation
-          reading_switch: none
-          scale_shift: none
-          wordplay: none
-        setup_frame: establishes_behavior
-        pivot_locus: logical
-        resolution_requires: [shared_experience]
-      structure:
-        primary_template: bare_observation
-        secondary_templates: []
-        subversions_applied: []
-        has_tag: false
-        tag_operation: null
-        tag_has_own_pivot: null
-        act_out:
-          present: true
-          character_type: everyman
-          register_gap: unaware_of_absurdity
-          character_gloss: "Man defensively insisting he must keep flipping despite having no idea what he's looking for"
-      relational:
-        positioning: {default: lateral_observer}
-        audience_implication: co_observer
-        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 5}
-        performed_relatability: {present: true}
-      narrative:
-        routine_id: "seinfeld_s02e10_flipping"
-        position_in_set: opener
-    performance:
-      performer: seinfeld
-    analysis:
-      adversarial: {confidence: high}
-    notes: "The act-out dialogue ('I gotta keep going') names the compulsive quality of the behavior. Clean articulation -- audience recognizes this immediately; no frame shift needed."
+# S02E10 "The Baby Shower" — Opening Monologue Pass 2 Annotation
+# Schema v0.9
+# Routine: men vs women channel flipping + ancient kings with storytellers
+# Laugh-points: 6
 
-  - joke_id: "seinfeld_s02e10_opening_02"
-    source:
-      work: "Seinfeld S02E10 'The Baby Shower' opening monologue"
-      medium: sitcom_opener
-      year: 1991
-    transcript_fragment: "Women don't do this. Women will stop and go, 'Well, let me see what the show is before I change the channel.' ...Because women nest and men hunt. That's why we watch TV differently."
-    joke:
-      content:
-        primary_domain: [gender_differences, domestic_life]
-        concepts: [television, gender, nesting, hunting, evolution]
-        pivot_concept: evolutionary_psychology
-        specificity: {default_level: 2}
-        content_moves: []
-      logic:
-        setup_expectation: "The contrast between men flipping and women watching sets up a behavioral observation. The audience expects more observational detail."
-        punchline_violation: "Jerry jumps to an evolutionary-biological framework -- 'women nest and men hunt' -- to explain TV remote behavior. The pop-psychology register applied to channel surfing creates a mismatch between the grandeur of the explanation and the triviality of the subject."
-        pivot_mechanism:
-          operation: mapping
-          reading_switch: none
-          scale_shift: expansion
-          wordplay: none
-        setup_frame: establishes_behavior
-        pivot_locus: logical
-        resolution_requires: [world_knowledge]
-      structure:
-        primary_template: mundane_as_monumental
-        secondary_templates: []
-        subversions_applied: []
-        has_tag: false
-        tag_operation: null
-        tag_has_own_pivot: null
-        act_out:
-          present: false
-          character_type: null
-          register_gap: null
-          character_gloss: ""
-      relational:
-        positioning: {default: lateral_observer}
-        audience_implication: co_observer
-        shared_experience: {required: true, universality: common, comprehensibility_without_experience: 4}
-        performed_relatability: {present: false}
-      narrative:
-        routine_id: "seinfeld_s02e10_flipping"
-        position_in_set: opener
-    performance:
-      performer: seinfeld
-    analysis:
-      adversarial: {confidence: medium}
-    notes: "Mapping, not transplant: the hunting/nesting parallel is presented as genuinely apt -- men really do scan restlessly while women settle. The framework illuminates rather than misapplies. Scale_shift expansion is independently removable: the joke would still work at reduced effectiveness without the evolutionary frame."
+# ============================================================================
+# JOKE 1: Men don't even know what the hell they're watching
+# ============================================================================
 
-  - joke_id: "seinfeld_s02e10_opening_03"
-    source:
-      work: "Seinfeld S02E10 'The Baby Shower' opening monologue"
-      medium: sitcom_opener
-      year: 1991
-    transcript_fragment: "I always wonder, in that era, if they would get, like, thirty story-tellers together so they could still flip around. Just go, 'Alright start telling me a story, what's happening? I don't want to hear anymore. Shut up. Go to the next guy.'"
-    joke:
-      content:
-        primary_domain: [gender_differences, history]
-        concepts: [television, channel_flipping, kings, storytellers, anachronism]
-        pivot_concept: channel_flipping
-        specificity: {default_level: 4}
-        content_moves: []
-      logic:
-        setup_expectation: "Jerry has established the modern channel-flipping behavior and its evolutionary basis. Introducing kings and storytellers shifts to a historical setting where the audience expects a different kind of observation."
-        punchline_violation: "The premise of compulsive flipping is transplanted into the ancient world: a king would need thirty storytellers just to replicate the experience of channel surfing. The modern behavior framework is imposed where it doesn't belong -- royal entertainment didn't work this way."
-        pivot_mechanism:
-          operation: transplant
-          reading_switch: none
-          scale_shift: expansion
-          wordplay: none
-        setup_frame: establishes_premise
-        pivot_locus: both
-        resolution_requires: [shared_experience, world_knowledge]
-      structure:
-        primary_template: escalation
-        secondary_templates: [mundane_as_monumental]
-        subversions_applied: []
-        has_tag: false
-        tag_operation: null
-        tag_has_own_pivot: null
-        act_out:
-          present: true
-          character_type: authority
-          register_gap: treats_mundane_as_serious
-          character_gloss: "Ancient king dismissing storytellers with the same impatient register as a modern man flipping channels"
-      relational:
-        positioning: {default: lateral_observer}
-        audience_implication: co_observer
-        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 4}
-        performed_relatability: {present: false}
-      narrative:
-        routine_id: "seinfeld_s02e10_flipping"
-        position_in_set: opener
-    performance:
-      performer: seinfeld
-    analysis:
-      adversarial: {confidence: high}
-    notes: "Transplant, not mapping: the modern channel-flipping framework is imported into ancient royalty where it doesn't fit. The humor is in the mismatch -- kings wouldn't actually treat storytellers like TV channels. The act-out escalates through progressively ruder dismissals, mirroring the modern flipping rhythm."
+- joke_id: seinfeld_s02e10_opening_01
+  source:
+    work: "Seinfeld S02E10 'The Baby Shower' opening monologue"
+    medium: sitcom_opener
+    year: 1991
 
-  - joke_id: "seinfeld_s02e10_opening_04"
-    source:
-      work: "Seinfeld S02E10 'The Baby Shower' opening monologue"
-      medium: sitcom_opener
-      year: 1991
-    transcript_fragment: "'Is there a girl in that story? ..No? Shut up. Go to the next guy.' ...'No, the all of you, get out of here. I'm going to bed.'"
-    joke:
-      content:
-        primary_domain: [gender_differences, history]
-        concepts: [television, channel_flipping, kings, storytellers, boredom]
-        pivot_concept: channel_flipping
-        specificity: {default_level: 5}
-        content_moves: []
-      logic:
-        setup_expectation: "The king-flipping-through-storytellers premise has been established. The audience expects continued channel-surfing parallels."
-        punchline_violation: "Jerry extends the act-out to include the 'Is there a girl in that story?' criterion (mapping to looking for attractive women on TV), and then the final 'get out of here, I'm going to bed' -- the ancient equivalent of turning off the TV in frustration. Each beat follows the transplanted logic further."
-        pivot_mechanism:
-          operation: extension
-          reading_switch: none
-          scale_shift: none
-          wordplay: none
-        setup_frame: establishes_premise
-        pivot_locus: both
-        resolution_requires: [shared_experience]
-      structure:
-        primary_template: escalation
-        secondary_templates: []
-        subversions_applied: []
-        has_tag: false
-        tag_operation: null
-        tag_has_own_pivot: null
-        act_out:
-          present: true
-          character_type: authority
-          register_gap: treats_mundane_as_serious
-          character_gloss: "King growing increasingly petulant and dismissive, mirroring the frustrated channel-surfer who gives up and goes to bed"
-      relational:
-        positioning: {default: lateral_observer}
-        audience_implication: co_observer
-        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 4}
-        performed_relatability: {present: false}
-      narrative:
-        routine_id: "seinfeld_s02e10_flipping"
-        position_in_set: opener
-    performance:
-      performer: seinfeld
-    analysis:
-      adversarial: {confidence: high}
-    notes: "Extension of the transplant premise: having established the king-as-channel-surfer framework, this beat follows the logic further to the 'turning off the TV' endpoint. The 'girl in the story' line adds a specific male TV-watching criterion that deepens the parallel."
+  annotation_status:
+    transcription: complete
+    decomposition: complete
+    performance: incomplete
+    commutation: incomplete
+    adversarial_review: incomplete
+    voice_attribution: incomplete
+
+  joke:
+    content:
+      primary_domain: [domestic_life, gender_dynamics]
+      concepts: [gendered_tv_watching, channel_flipping]
+      pivot_concept: channel_flipping
+      specificity:
+        default_level: 3
+        trajectory: null
+      content_moves: []
+
+    logic:
+      setup_expectation: "Men flip around TV more than women — the audience expects a complaint about the habit, perhaps a specific annoyance about it"
+      punchline_violation: "Men don't even know what they're watching — the channel-flipping is reframed from a purposeful search (looking for something good) to a mindless compulsion (the flipping IS the activity, not a means to an end)"
+      pivot_mechanism:
+        operation: reinterpretation
+        operation_alternative: articulation
+        reading_switch: none
+        scale_shift: none
+        wordplay: none
+      setup_frame: establishes_behavior
+      pivot_locus: logical
+      resolution_requires: [shared_experience]
+
+    structure:
+      primary_template: bare_observation
+      secondary_templates: []
+      subversions_applied: []
+      has_tag: false
+      tag_operation: null
+      tag_has_own_pivot: null
+      act_out:
+        present: false
+        character_type: null
+        register_gap: null
+        character_gloss: ""
+
+    relational:
+      positioning:
+        default: lateral_observer
+        trajectory: null
+      audience_implication: co_observer
+      shared_experience:
+        required: true
+        universality: universal
+        comprehensibility_without_experience: 4
+      performed_relatability:
+        present: true
+
+    narrative:
+      callbacks_to: []
+      callback_is_primary_pivot: null
+      running_premise: channel_flipping_routine
+      tag_callbacks_to: null
+      anti_callback: null
+      routine_id: s02e10_channel_flipping
+      position_in_routine: 1
+      routine_total_jokes: 6
+      position_in_set: opener
+
+  performance:
+    performer: jerry_seinfeld
+    delivery:
+      cadence: "{UNSPECIFIED}"
+      pause_placement: []
+      repetition: null
+      vocal_register_shifts: []
+      estimated_duration_seconds: null
+      register_break:
+        present: false
+        at: null
+        direction: null
+      act_out_voice:
+        character_register: null
+    voice:
+      persona_markers: []
+      signature_phrases: []
+      register: default
+      editorializes:
+        present: null
+        kind: null
+    affective:
+      default_register:
+        valence: null
+        arousal: null
+      trajectory: null
+      shifts_are_load_bearing: null
+      deviates_from_performer_default: null
+    relational:
+      vulnerability:
+        personal_exposure: null
+        emotional_risk: null
+      performed_relatability:
+        intensity: null
+      positioning_deviation: null
+
+  meta:
+    comments_on_form: null
+    breaks_fourth_wall: null
+
+  analysis:
+    commutation:
+      load_bearing_element:
+        field_path: ""
+        gloss: ""
+      removable_elements:
+        - field_path: ""
+          gloss: ""
+      uncertain_elements:
+        - field_path: ""
+          gloss: ""
+    voice_portability:
+      mort: null
+      cece: null
+    adversarial:
+      counterarguments_considered:
+        - alternative: "Could be articulation — simply naming the shared truth that men flip mindlessly"
+          why_rejected: "The audience knows men flip channels a lot. But the specific reframe — that men don't even know what they're watching — shifts the frame from 'searching for content' to 'compulsive behavior divorced from content.' Remove the frame shift (state it as 'men watch more channels than women') and the joke dies. The reframe from purposeful search to mindless compulsion IS the joke."
+      confidence: medium
+
+  notes: |
+    The opening premise-setter for the routine. The reinterpretation shifts channel-flipping from a purposeful activity (looking for something to watch) to a compulsive behavior (the flipping itself is the point). This is close to the articulation/reinterpretation boundary — the audience recognizes the behavior, but the specific angle (they don't even know what they're watching) imposes a new frame rather than just naming a known truth.
+
+# ============================================================================
+# JOKE 2: Act-out of compulsive male channel-flipper — "I gotta keep going"
+# ============================================================================
+
+- joke_id: seinfeld_s02e10_opening_02
+  source:
+    work: "Seinfeld S02E10 'The Baby Shower' opening monologue"
+    medium: sitcom_opener
+    year: 1991
+
+  annotation_status:
+    transcription: complete
+    decomposition: complete
+    performance: incomplete
+    commutation: incomplete
+    adversarial_review: incomplete
+    voice_attribution: incomplete
+
+  joke:
+    content:
+      primary_domain: [domestic_life, gender_dynamics]
+      concepts: [channel_flipping]
+      pivot_concept: channel_flipping
+      specificity:
+        default_level: 4
+        trajectory: null
+      content_moves: []
+
+    logic:
+      setup_expectation: "The audience has accepted that men flip mindlessly — they expect examples of what men skip past"
+      punchline_violation: "The act-out reveals someone who dismisses every question about their behavior with increasing urgency — 'I don't care,' 'it's not your fault,' 'I gotta keep going' — the flipper treats it as an involuntary mission with no destination, escalating the absurdity of purposeless compulsion"
+      pivot_mechanism:
+        operation: extension
+        operation_alternative: articulation
+        reading_switch: none
+        scale_shift: none
+        wordplay: none
+      setup_frame: establishes_premise
+      pivot_locus: logical
+      resolution_requires: [shared_experience]
+
+    structure:
+      primary_template: escalation
+      secondary_templates: []
+      subversions_applied: []
+      has_tag: false
+      tag_operation: null
+      tag_has_own_pivot: null
+      act_out:
+        present: true
+        character_type: everyman
+        register_gap: unaware_of_absurdity
+        character_gloss: "A man frantically flipping channels, dismissing all challenges to his behavior as if compelled by an urgent force"
+
+    relational:
+      positioning:
+        default: lateral_observer
+        trajectory: null
+      audience_implication: co_observer
+      shared_experience:
+        required: true
+        universality: universal
+        comprehensibility_without_experience: 4
+      performed_relatability:
+        present: true
+
+    narrative:
+      callbacks_to: [seinfeld_s02e10_opening_01]
+      callback_is_primary_pivot: false
+      running_premise: channel_flipping_routine
+      tag_callbacks_to: null
+      anti_callback: null
+      routine_id: s02e10_channel_flipping
+      position_in_routine: 2
+      routine_total_jokes: 6
+      position_in_set: opener
+
+  performance:
+    performer: jerry_seinfeld
+    delivery:
+      cadence: "{UNSPECIFIED}"
+      pause_placement: []
+      repetition: null
+      vocal_register_shifts: []
+      estimated_duration_seconds: null
+      register_break:
+        present: false
+        at: null
+        direction: null
+      act_out_voice:
+        character_register: null
+    voice:
+      persona_markers: []
+      signature_phrases: []
+      register: default
+      editorializes:
+        present: null
+        kind: null
+    affective:
+      default_register:
+        valence: null
+        arousal: null
+      trajectory: null
+      shifts_are_load_bearing: null
+      deviates_from_performer_default: null
+    relational:
+      vulnerability:
+        personal_exposure: null
+        emotional_risk: null
+      performed_relatability:
+        intensity: null
+      positioning_deviation: null
+
+  meta:
+    comments_on_form: null
+    breaks_fourth_wall: null
+
+  analysis:
+    commutation:
+      load_bearing_element:
+        field_path: ""
+        gloss: ""
+      removable_elements:
+        - field_path: ""
+          gloss: ""
+      uncertain_elements:
+        - field_path: ""
+          gloss: ""
+    voice_portability:
+      mort: null
+      cece: null
+    adversarial:
+      counterarguments_considered:
+        - alternative: "Could be articulation — the act-out just names what men actually say while flipping"
+          why_rejected: "The humor goes beyond simple recognition. The escalation ('I don't care,' 'it's not your fault,' 'doesn't matter,' 'I gotta keep going') follows the compulsion premise to an absurd-but-logical extreme. The man is talking as if under a spell, unable to stop. The premise of purposeless flipping is accepted and extended to urgent, frantic dismissal of everything. Extension fits: (1) accepted premise: men flip without purpose, (2) absurd-but-logical conclusion: a man who treats flipping as an unstoppable mission."
+        - alternative: "Could be reinterpretation — the act-out reframes the behavior"
+          why_rejected: "The reframing happened in joke 1 (purposeful search to compulsion). This joke accepts that frame and pushes it further through escalating specificity. The premise is not re-read; it is followed to a more extreme place. Extension is the better fit."
+      confidence: medium
+
+  notes: |
+    The act-out escalates the compulsion premise from joke 1. Each dismissal ('I don't care,' 'it's not your fault,' 'I gotta keep going') commits harder to the idea that channel-flipping is an involuntary mission. The character is an everyman who is unaware of how absurd his urgency is — he genuinely believes he must keep going. The escalation template captures the building intensity across the act-out beats.
+
+# ============================================================================
+# JOKE 3: Women will stop — "let me see what the show is"
+# ============================================================================
+
+- joke_id: seinfeld_s02e10_opening_03
+  source:
+    work: "Seinfeld S02E10 'The Baby Shower' opening monologue"
+    medium: sitcom_opener
+    year: 1991
+
+  annotation_status:
+    transcription: complete
+    decomposition: complete
+    performance: incomplete
+    commutation: incomplete
+    adversarial_review: incomplete
+    voice_attribution: incomplete
+
+  joke:
+    content:
+      primary_domain: [domestic_life, gender_dynamics]
+      concepts: [gendered_tv_watching, channel_flipping]
+      pivot_concept: gendered_tv_watching
+      specificity:
+        default_level: 3
+        trajectory: null
+      content_moves: []
+
+    logic:
+      setup_expectation: "After the frantic male act-out, the audience expects the female counterpart — perhaps an equally specific or absurd behavior"
+      punchline_violation: "Women's approach is portrayed as bewilderingly rational — they actually watch the show before deciding to change it. The reasonable behavior is presented as exotic and alien after the male compulsion has been normalized, making sanity look unusual"
+      pivot_mechanism:
+        operation: reinterpretation
+        operation_alternative: articulation
+        reading_switch: none
+        scale_shift: none
+        wordplay: none
+      setup_frame: establishes_behavior
+      pivot_locus: affective
+      resolution_requires: [shared_experience]
+
+    structure:
+      primary_template: comparison
+      secondary_templates: []
+      subversions_applied: []
+      has_tag: false
+      tag_operation: null
+      tag_has_own_pivot: null
+      act_out:
+        present: true
+        character_type: everyman
+        register_gap: none
+        character_gloss: "A woman calmly and rationally evaluating a TV show before changing channels"
+
+    relational:
+      positioning:
+        default: lateral_observer
+        trajectory: null
+      audience_implication: co_observer
+      shared_experience:
+        required: true
+        universality: universal
+        comprehensibility_without_experience: 4
+      performed_relatability:
+        present: true
+
+    narrative:
+      callbacks_to: [seinfeld_s02e10_opening_02]
+      callback_is_primary_pivot: false
+      running_premise: channel_flipping_routine
+      tag_callbacks_to: null
+      anti_callback: null
+      routine_id: s02e10_channel_flipping
+      position_in_routine: 3
+      routine_total_jokes: 6
+      position_in_set: opener
+
+  performance:
+    performer: jerry_seinfeld
+    delivery:
+      cadence: "{UNSPECIFIED}"
+      pause_placement: []
+      repetition: null
+      vocal_register_shifts: []
+      estimated_duration_seconds: null
+      register_break:
+        present: false
+        at: null
+        direction: null
+      act_out_voice:
+        character_register: null
+    voice:
+      persona_markers: []
+      signature_phrases: []
+      register: default
+      editorializes:
+        present: null
+        kind: null
+    affective:
+      default_register:
+        valence: null
+        arousal: null
+      trajectory: null
+      shifts_are_load_bearing: null
+      deviates_from_performer_default: null
+    relational:
+      vulnerability:
+        personal_exposure: null
+        emotional_risk: null
+      performed_relatability:
+        intensity: null
+      positioning_deviation: null
+
+  meta:
+    comments_on_form: null
+    breaks_fourth_wall: null
+
+  analysis:
+    commutation:
+      load_bearing_element:
+        field_path: ""
+        gloss: ""
+      removable_elements:
+        - field_path: ""
+          gloss: ""
+      uncertain_elements:
+        - field_path: ""
+          gloss: ""
+    voice_portability:
+      mort: null
+      cece: null
+    adversarial:
+      counterarguments_considered:
+        - alternative: "Could be articulation — simply naming how women watch TV"
+          why_rejected: "The humor is not just in recognizing what women do. It's in the CONTRAST with the male act-out — after normalizing frantic compulsion, rational behavior sounds absurd. The audience re-reads 'watching the show before changing' as exotic, not because it IS exotic, but because the setup has reframed the baseline. The frame shift (normal becomes strange) is load-bearing."
+        - alternative: "Could be negation — women are the opposite of men"
+          why_rejected: "The joke is not asserting the opposite of a claim. It's showing the same activity (channel selection) through a contrasting behavioral lens. The humor is in the reframing of reasonableness as alien, not in a truth-value flip."
+      confidence: medium
+
+  notes: |
+    The comparison template captures the juxtaposition of male and female TV-watching behaviors. The reinterpretation operates on the concept of reasonableness — by establishing male compulsion as the norm in jokes 1-2, Jerry makes the women's rational approach sound exotic and alien. 'Let me see what the show is before I change the channel' is funny precisely because it sounds so reasonable after the frantic male act-out. The pivot_locus is affective because the cognitive shift relies on the emotional contrast between the frantic male and the calm female.
+
+# ============================================================================
+# JOKE 4: Women nest and men hunt — that's why we watch TV differently
+# ============================================================================
+
+- joke_id: seinfeld_s02e10_opening_04
+  source:
+    work: "Seinfeld S02E10 'The Baby Shower' opening monologue"
+    medium: sitcom_opener
+    year: 1991
+
+  annotation_status:
+    transcription: complete
+    decomposition: complete
+    performance: incomplete
+    commutation: incomplete
+    adversarial_review: incomplete
+    voice_attribution: incomplete
+
+  joke:
+    content:
+      primary_domain: [gender_dynamics, domestic_life]
+      concepts: [gendered_tv_watching, channel_flipping]
+      pivot_concept: gendered_tv_watching
+      specificity:
+        default_level: 2
+        trajectory: null
+      content_moves: []
+
+    logic:
+      setup_expectation: "The audience has observed the male/female contrast in TV watching — they expect a punchline about the specific behaviors, perhaps another example"
+      punchline_violation: "Jerry offers a pseudo-evolutionary explanation — 'women nest and men hunt' — applying pop-evolutionary framing to the trivial activity of TV channel selection. The grand biological explanation is hilariously disproportionate to the mundane behavior it purports to explain"
+      pivot_mechanism:
+        operation: mapping
+        operation_alternative: transplant
+        reading_switch: none
+        scale_shift: expansion
+        wordplay: none
+      setup_frame: establishes_behavior
+      pivot_locus: logical
+      resolution_requires: [shared_experience, world_knowledge]
+
+    structure:
+      primary_template: mundane_as_monumental
+      secondary_templates: []
+      subversions_applied: []
+      has_tag: false
+      tag_operation: null
+      tag_has_own_pivot: null
+      act_out:
+        present: false
+        character_type: null
+        register_gap: null
+        character_gloss: ""
+
+    relational:
+      positioning:
+        default: lateral_observer
+        trajectory: null
+      audience_implication: co_observer
+      shared_experience:
+        required: true
+        universality: universal
+        comprehensibility_without_experience: 4
+      performed_relatability:
+        present: false
+
+    narrative:
+      callbacks_to: [seinfeld_s02e10_opening_01, seinfeld_s02e10_opening_03]
+      callback_is_primary_pivot: false
+      running_premise: channel_flipping_routine
+      tag_callbacks_to: null
+      anti_callback: null
+      routine_id: s02e10_channel_flipping
+      position_in_routine: 4
+      routine_total_jokes: 6
+      position_in_set: opener
+
+  performance:
+    performer: jerry_seinfeld
+    delivery:
+      cadence: "{UNSPECIFIED}"
+      pause_placement: []
+      repetition: null
+      vocal_register_shifts: []
+      estimated_duration_seconds: null
+      register_break:
+        present: false
+        at: null
+        direction: null
+      act_out_voice:
+        character_register: null
+    voice:
+      persona_markers: []
+      signature_phrases: []
+      register: default
+      editorializes:
+        present: null
+        kind: null
+    affective:
+      default_register:
+        valence: null
+        arousal: null
+      trajectory: null
+      shifts_are_load_bearing: null
+      deviates_from_performer_default: null
+    relational:
+      vulnerability:
+        personal_exposure: null
+        emotional_risk: null
+      performed_relatability:
+        intensity: null
+      positioning_deviation: null
+
+  meta:
+    comments_on_form: null
+    breaks_fourth_wall: null
+
+  analysis:
+    commutation:
+      load_bearing_element:
+        field_path: ""
+        gloss: ""
+      removable_elements:
+        - field_path: ""
+          gloss: ""
+      uncertain_elements:
+        - field_path: ""
+          gloss: ""
+    voice_portability:
+      mort: null
+      cece: null
+    adversarial:
+      counterarguments_considered:
+        - alternative: "Could be transplant — importing evolutionary biology framework onto TV watching"
+          why_rejected: "The humor comes partly from the aptness of the parallel — men really do 'hunt' through channels while women 'settle in' — not purely from misapplication. The nest/hunt framework illuminates a genuine behavioral pattern rather than being absurdly misapplied. However, this is a close call; the grandness of evolutionary explanation applied to remote control use has transplant qualities. Mapping wins because Jerry presents the parallel as genuinely explanatory, and the audience laughs partly at recognizing the fit."
+        - alternative: "scale_shift could be none — is the expansion fused with the mapping?"
+          why_rejected: "The mapping (nesting/hunting = TV watching) could work without the evolutionary scale. One could say 'women browse and men scan' — same structural parallel, no expansion. The elevation to evolutionary biology is a separable scale choice that amplifies the humor by making the trivial seem cosmically determined."
+      confidence: medium
+
+  notes: |
+    The mapping connects pop-evolutionary psychology (source: nesting/hunting instincts) to TV channel behavior (target: browsing vs flipping). The shared structural feature is the behavioral pattern — settling in one place (nesting/staying on a channel) vs ranging across territory (hunting/flipping channels). The mundane_as_monumental template captures the rhetorical effect of applying evolutionary biology's register to remote control use. The expansion is separable — the same mapping could work at a smaller scale.
+
+# ============================================================================
+# JOKE 5: Kings had storytellers — would they get thirty together to flip?
+# ============================================================================
+
+- joke_id: seinfeld_s02e10_opening_05
+  source:
+    work: "Seinfeld S02E10 'The Baby Shower' opening monologue"
+    medium: sitcom_opener
+    year: 1991
+
+  annotation_status:
+    transcription: complete
+    decomposition: complete
+    performance: incomplete
+    commutation: incomplete
+    adversarial_review: incomplete
+    voice_attribution: incomplete
+
+  joke:
+    content:
+      primary_domain: [domestic_life, history]
+      concepts: [ancient_channel_flipping, channel_flipping]
+      pivot_concept: ancient_channel_flipping
+      specificity:
+        default_level: 4
+        trajectory: null
+      content_moves: []
+
+    logic:
+      setup_expectation: "Jerry notes that before TV, kings had storytellers for entertainment — the audience expects a historical observation about how entertainment has changed"
+      punchline_violation: "Jerry wonders if they would get thirty storytellers together so they could 'flip around' — projecting the modern compulsion of channel-flipping onto ancient royalty, treating a contemporary behavioral quirk as a timeless human constant"
+      pivot_mechanism:
+        operation: transplant
+        operation_alternative: null
+        reading_switch: none
+        scale_shift: none
+        wordplay: none
+      setup_frame: establishes_convention
+      pivot_locus: logical
+      resolution_requires: [world_knowledge, shared_experience]
+
+    structure:
+      primary_template: comparison
+      secondary_templates: []
+      subversions_applied: []
+      has_tag: false
+      tag_operation: null
+      tag_has_own_pivot: null
+      act_out:
+        present: false
+        character_type: null
+        register_gap: null
+        character_gloss: ""
+
+    relational:
+      positioning:
+        default: lateral_observer
+        trajectory: null
+      audience_implication: co_observer
+      shared_experience:
+        required: true
+        universality: common
+        comprehensibility_without_experience: 4
+      performed_relatability:
+        present: false
+
+    narrative:
+      callbacks_to: [seinfeld_s02e10_opening_01, seinfeld_s02e10_opening_02]
+      callback_is_primary_pivot: false
+      running_premise: channel_flipping_routine
+      tag_callbacks_to: null
+      anti_callback: null
+      routine_id: s02e10_channel_flipping
+      position_in_routine: 5
+      routine_total_jokes: 6
+      position_in_set: opener
+
+  performance:
+    performer: jerry_seinfeld
+    delivery:
+      cadence: "{UNSPECIFIED}"
+      pause_placement: []
+      repetition: null
+      vocal_register_shifts: []
+      estimated_duration_seconds: null
+      register_break:
+        present: false
+        at: null
+        direction: null
+      act_out_voice:
+        character_register: null
+    voice:
+      persona_markers: []
+      signature_phrases: []
+      register: default
+      editorializes:
+        present: null
+        kind: null
+    affective:
+      default_register:
+        valence: null
+        arousal: null
+      trajectory: null
+      shifts_are_load_bearing: null
+      deviates_from_performer_default: null
+    relational:
+      vulnerability:
+        personal_exposure: null
+        emotional_risk: null
+      performed_relatability:
+        intensity: null
+      positioning_deviation: null
+
+  meta:
+    comments_on_form: null
+    breaks_fourth_wall: null
+
+  analysis:
+    commutation:
+      load_bearing_element:
+        field_path: ""
+        gloss: ""
+      removable_elements:
+        - field_path: ""
+          gloss: ""
+      uncertain_elements:
+        - field_path: ""
+          gloss: ""
+    voice_portability:
+      mort: null
+      cece: null
+    adversarial:
+      counterarguments_considered:
+        - alternative: "Could be mapping — revealing a parallel between storytellers and TV channels"
+          why_rejected: "The humor is not in the aptness of the parallel (storytellers and TV channels ARE genuinely parallel as entertainment sources). The humor is in the MISAPPLICATION — importing the specific compulsive behavior of channel-flipping (a modern, technology-enabled quirk) into a historical context where it doesn't belong. The anachronism of thirty storytellers lined up for flipping is the joke. The framework (compulsive rapid switching) is wrong for the context (oral storytelling era), and the mismatch is funny. Transplant fits."
+        - alternative: "Could be extension — following the channel-flipping premise to an absurd historical conclusion"
+          why_rejected: "Extension stays within one domain and pushes its logic. This joke introduces a SECOND domain (ancient royalty with storytellers) and imports the channel-flipping framework into it. The jump to a new domain is what makes it transplant rather than extension."
+      confidence: high
+
+  notes: |
+    The pivot from contemporary TV watching to ancient royalty with storytellers is a clean transplant. Target domain: ancient royal entertainment. Source domain: modern channel-flipping behavior. Imported rules: the compulsion to rapidly switch between content sources, the inability to commit. The humor comes from the anachronistic mismatch — the behavioral framework of restless remote-control use is absurdly out of place in a world of live storytellers. The concept ancient_channel_flipping already exists in the registry.
+
+# ============================================================================
+# JOKE 6: Act-out of king flipping through storytellers — "Shut up. Next guy."
+# ============================================================================
+
+- joke_id: seinfeld_s02e10_opening_06
+  source:
+    work: "Seinfeld S02E10 'The Baby Shower' opening monologue"
+    medium: sitcom_opener
+    year: 1991
+
+  annotation_status:
+    transcription: complete
+    decomposition: complete
+    performance: incomplete
+    commutation: incomplete
+    adversarial_review: incomplete
+    voice_attribution: incomplete
+
+  joke:
+    content:
+      primary_domain: [domestic_life, history]
+      concepts: [ancient_channel_flipping, channel_flipping, imperial_ruler]
+      pivot_concept: ancient_channel_flipping
+      specificity:
+        default_level: 5
+        trajectory: null
+      content_moves: []
+
+    logic:
+      setup_expectation: "The transplant has been established — thirty storytellers lined up for an ancient king. The audience expects the scenario to be developed"
+      punchline_violation: "The act-out commits fully to the transplant, with the king dismissing storytellers exactly like a man with a remote — 'Shut up. Go to the next guy. What are you talking about? Is there a girl in that story? No? Shut up.' — culminating in the king dismissing ALL of them and going to bed, mirroring turning off the TV after finding nothing to watch"
+      pivot_mechanism:
+        operation: extension
+        operation_alternative: null
+        reading_switch: none
+        scale_shift: none
+        wordplay: none
+      setup_frame: establishes_premise
+      pivot_locus: logical
+      resolution_requires: [shared_experience]
+
+    structure:
+      primary_template: escalation
+      secondary_templates: [monumental_as_mundane]
+      subversions_applied:
+        - type: specificity_subversion
+          at: punchline
+      has_tag: true
+      tag_operation: extends
+      tag_has_own_pivot: false
+      act_out:
+        present: true
+        character_type: authority
+        register_gap: unaware_of_absurdity
+        character_gloss: "An ancient king treating his storytellers exactly like a bored man with a remote control — dismissing them with 'shut up' and 'next guy,' asking 'is there a girl in that story,' and finally sending everyone away to go to bed"
+
+    relational:
+      positioning:
+        default: lateral_observer
+        trajectory: null
+      audience_implication: co_observer
+      shared_experience:
+        required: true
+        universality: common
+        comprehensibility_without_experience: 4
+      performed_relatability:
+        present: true
+
+    narrative:
+      callbacks_to: [seinfeld_s02e10_opening_02, seinfeld_s02e10_opening_05]
+      callback_is_primary_pivot: false
+      running_premise: channel_flipping_routine
+      tag_callbacks_to: null
+      anti_callback: null
+      routine_id: s02e10_channel_flipping
+      position_in_routine: 6
+      routine_total_jokes: 6
+      position_in_set: opener
+
+  performance:
+    performer: jerry_seinfeld
+    delivery:
+      cadence: "{UNSPECIFIED}"
+      pause_placement: []
+      repetition: null
+      vocal_register_shifts: []
+      estimated_duration_seconds: null
+      register_break:
+        present: false
+        at: null
+        direction: null
+      act_out_voice:
+        character_register: null
+    voice:
+      persona_markers: []
+      signature_phrases: []
+      register: default
+      editorializes:
+        present: null
+        kind: null
+    affective:
+      default_register:
+        valence: null
+        arousal: null
+      trajectory: null
+      shifts_are_load_bearing: null
+      deviates_from_performer_default: null
+    relational:
+      vulnerability:
+        personal_exposure: null
+        emotional_risk: null
+      performed_relatability:
+        intensity: null
+      positioning_deviation: null
+
+  meta:
+    comments_on_form: null
+    breaks_fourth_wall: null
+
+  analysis:
+    commutation:
+      load_bearing_element:
+        field_path: ""
+        gloss: ""
+      removable_elements:
+        - field_path: ""
+          gloss: ""
+      uncertain_elements:
+        - field_path: ""
+          gloss: ""
+    voice_portability:
+      mort: null
+      cece: null
+    adversarial:
+      counterarguments_considered:
+        - alternative: "Could be transplant — this is still importing modern TV behavior into ancient context"
+          why_rejected: "The transplant was established in joke 5. This joke EXTENDS the transplant by committing fully to the scenario with escalating specificity. The premise (king can flip through storytellers like channels) is accepted and followed to its absurd-but-logical consequences: 'Is there a girl in that story?' parallels searching for appealing content, 'Shut up, go to the next guy' parallels clicking past a channel, and 'all of you get out, I'm going to bed' parallels turning off the TV in disgust. Extension fits because the premise is not re-established but pushed further."
+        - alternative: "Could be a separate transplant at each beat of the act-out"
+          why_rejected: "The transplant is a single cognitive operation established once in joke 5. Each beat of this act-out is not a new transplant — it's a new specific instance within the already-established transplanted framework. The escalation is in the SPECIFICITY and COMMITMENT of the instances, not in new domain-imports."
+      confidence: high
+
+  notes: |
+    The routine closer. Accepts the transplant premise from joke 5 and extends it through an escalating act-out. Each beat commits harder to the anachronistic scenario: 'Shut up' (casual dismissal), 'Is there a girl in that story?' (content preference — parallels checking for something appealing), 'No? Shut up' (instant rejection), and finally 'all of you get out, I'm going to bed' (turning off the TV). The monumental_as_mundane secondary template captures how ancient royalty is treated with the register of a bored suburban man on a couch. The act-out character is an authority (king) who is unaware that his behavior mirrors modern couch behavior. The tag ('I'm going to bed') extends the final beat — the king's capitulation mirrors turning off the TV in defeat.

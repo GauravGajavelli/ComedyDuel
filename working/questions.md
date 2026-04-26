@@ -100,8 +100,21 @@ Re-check after batch 2 annotations.
 **Why it's not fully resolved:** The worked examples cover the clearest cases
 but the boundary may still be soft for mid-range observational humor. Track
 whether agents using the v0.6 vocabulary produce fewer flags on this boundary.
-**Weekly review notes:**
-**Resolution:**
+**Weekly review notes (2026-04-26 batch 3):** Across 65 laugh-points,
+articulation = 9 (13%), reinterpretation = 23 (35%). Multiple agents flagged
+medium-confidence calls on this boundary (s01e01 LP2, s01e04 LP4, s02e04 LP1,
+s02e09 LP1, s02e10 LP1). The frame-dependency test + "OBSERVATION vs ANGLE"
+heuristic is helping but the boundary remains inherently soft for Seinfeld's
+observational style. Approximately 5/65 (8%) of laugh-points sit on this
+boundary. This may be an irreducible feature of the comedy style rather than
+a vocabulary deficiency.
+**Resolution (2026-04-26):** PARTIALLY RESOLVED. Added
+`pivot_mechanism.operation_alternative` field (v0.9.2). Structured, nullable.
+Populated only when confidence is medium/low. The generator can branch on
+boundary cases — produce candidates from both primary and alternative
+operations, then select. This turns the irreducible ambiguity into generative
+variety rather than requiring it to be resolved. The vocabulary boundary
+remains soft; the schema now accommodates that.
 
 ### 2026-04-23 - setup_frame "establishes_norm" captures ~80% of jokes
 **Context:** S01E01 agent flagged that establishes_norm was the default for most
@@ -154,42 +167,40 @@ extension.
 absorbed pure-naming shapes (20%), comparison absorbed pairing shapes (21%).
 No longer exceeds the 40% threshold. Resolved.
 
-### 2026-04-26 - scale_shift non-none at 47% — independence check needed
-**Context:** v0.9 batch 2 synthesis. 26/55 laugh-points have non-none
-scale_shift (14 contraction, 12 expansion). Several agents noted that
-contraction "comes along for free" with reinterpretation — when you reframe
-something grand as trivial, contraction is inherent.
-**Question:** Is scale_shift being applied as an independent modifier or as
-a side-effect of the operation? The independence heuristic ("could the
-operation work without the scale change?") may be under-constraining.
-**Appearances:** Structural — 47% of all annotations.
-**Why it's not resolvable in-session:** Needs Pass 4 commutation tests to
-verify which scale_shifts are independently load-bearing.
-**Weekly review notes:**
-**Resolution:**
+### 2026-04-26 - ~~scale_shift non-none at 47%~~ IMPROVED
+**Context:** v0.9 batch 2 synthesis. 26/55 laugh-points had non-none
+scale_shift (47%). Several agents noted contraction "comes along for free"
+with reinterpretation.
+**Update (2026-04-26 batch 3):** Re-annotated with strict "swap direction"
+test. Non-none rate dropped to 20/65 = 30% (12 expansion, 8 contraction).
+Below the 35% threshold. The strict swap test is effective — agents
+correctly set scale_shift to none when the scale change is fused with the
+operation (e.g., reinterpretation that IS a contraction). Continue
+monitoring but no longer urgent.
+**Resolution:** Strict swap test in v0.9.1 resolves the over-application.
+Rate is now 30%, down from 47%.
 
-### 2026-04-26 - No concept nodes populated
-**Context:** v0.9 batch 2 annotations use informal strings for concept
-references (e.g., "going_out", "cheque_writing") rather than node_id
-references to engine/concepts/. The schema requires concept-node references.
-**Question:** When should concept nodes be created? After how many annotations
-reference the same concept string?
-**Appearances:** All 55 laugh-points — structural gap.
-**Why it's not resolvable in-session:** Concept node population is a separate
-work stream. Informal strings are functional for annotation; the gap only
-matters when the engine needs graph lookups.
-**Weekly review notes:**
-**Resolution:**
+### 2026-04-26 - ~~No concept nodes populated~~ IMPROVED
+**Context:** v0.9 batch 2 annotations used informal strings rather than
+registry node_id references.
+**Update (2026-04-26 batch 3):** Re-annotated with explicit registry lookup
+instructions. All 31 unique concepts across 65 laugh-points resolve to
+existing registry node_ids. Zero ad-hoc strings. Zero mechanism descriptions
+used as concepts. The registry + lookup procedure is working.
+**Resolution:** Concept usage is now fully registry-compliant. No new
+concepts were needed for episodes 1-15.
 
-### 2026-04-26 - establishes_premise at 38% — watch for broadness
-**Context:** v0.9 batch 2 setup_frame distribution. establishes_premise is
-the most-used value at 38% (21/55). The v0.6 expansion from establishes_norm
-distributed load across convention/behavior/premise, but premise may now be
-absorbing cases that belong in convention.
-**Question:** Is establishes_premise over-applied? Review the 21 instances to
-check for cases that are really establishes_convention with a premise overlay.
-**Appearances:** 1 (structural). Below 40% threshold — monitoring only.
-**Why it's not resolvable in-session:** Below threshold. Check at batch 3.
+### 2026-04-26 - establishes_premise at 36% — still monitoring
+**Context:** v0.9 batch 2 had establishes_premise at 38% (21/55).
+**Update (2026-04-26 batch 3):** Re-annotated 65 laugh-points. Distribution:
+establishes_premise 24/65 (36%), establishes_behavior 18/65 (27%),
+establishes_convention 14/65 (21%), establishes_expectation 7/65 (10%),
+establishes_sequence 1 (1%), establishes_anomaly 1 (1%).
+Premise is at 36%, below 40% threshold. The premise/convention decision
+procedure ("Would audience hold this belief WITHOUT comedian stating it?")
+appears to be discriminating. Continue monitoring at batch 4.
+**Appearances:** 2 (structural). Below threshold.
+**Why it's not resolvable in-session:** Below threshold. No action needed.
 **Weekly review notes:**
 **Resolution:**
 

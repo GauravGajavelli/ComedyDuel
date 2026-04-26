@@ -1,139 +1,821 @@
-# FILE: annotations/s01e03_opening_pass2.yaml
-jokes:
-  - joke_id: "seinfeld_s01e03_opening_01"
-    source:
-      work: "Seinfeld S01E03 'The Robbery' opening monologue"
-      medium: sitcom_opener
-      year: 1990
-    transcript_fragment: "It seems like such an arbitrary, ridiculous thing to just pick a finger and you show it to the person."
-    joke:
-      content:
-        primary_domain: [social_convention, body]
-        concepts: [middle_finger, gesture, insult, arbitrariness]
-        pivot_concept: middle_finger
-        specificity: {default_level: 2}
-        content_moves: []
-      logic:
-        setup_expectation: "The setup describes a road-rage incident - the audience is in the cultural frame where the middle finger is a loaded, meaningful insult."
-        punchline_violation: "The middle finger is reframed as an arbitrary digit selection. The same gesture is reread from 'culturally loaded insult' to 'random finger display'. The cultural weight evaporates when you see it as just picking a finger."
-        pivot_mechanism:
-          operation: reinterpretation
-          reading_switch: none
-          scale_shift: contraction
-          wordplay: none
-        setup_frame: establishes_convention
-        pivot_locus: logical
-        resolution_requires: [shared_experience, world_knowledge]
-      structure:
-        primary_template: mundane_as_monumental
-        secondary_templates: []
-        subversions_applied: []
-        has_tag: false
-        tag_operation: null
-        tag_has_own_pivot: null
-        act_out: {present: false, character_type: null, register_gap: null, character_gloss: ""}
-      relational:
-        positioning: {default: lateral_observer}
-        audience_implication: co_observer
-        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 4}
-        performed_relatability: {present: false}
-      narrative:
-        routine_id: "s01e03_finger"
-        position_in_set: opener
-    performance:
-      performer: seinfeld
-    analysis:
-      adversarial: {confidence: high}
-    notes: "This is the worked example from pivot-mechanisms.yaml for reinterpretation. Reading 1: culturally loaded gesture. Reading 2: arbitrary digit selection. The frame shift is load-bearing - stating it in the cultural-insult frame kills the joke. Scale_shift contraction is independent (culturally significant gesture deflated to random finger)."
+# s01e03 "The Robbery" — Opening Monologue Pass 2
+# Schema v0.9
+# 5 laugh-points identified
 
-  - joke_id: "seinfeld_s01e03_opening_02"
-    source:
-      work: "Seinfeld S01E03 'The Robbery' opening monologue"
-      medium: sitcom_opener
-      year: 1990
-    transcript_fragment: "I would feel worse if I got the toe, than if I got the finger. 'Cause it's not easy to give someone the toe, you've gotta get the shoe off, the sock off and drive..."
-    joke:
-      content:
-        primary_domain: [social_convention, body]
-        concepts: [middle_finger, toe, insult, effort, commitment]
-        pivot_concept: toe
-        specificity: {default_level: 4}
-        content_moves: []
-      logic:
-        setup_expectation: "The finger has been established as an arbitrary insult. The accepted premise: body parts as insults correlate with effort/commitment."
-        punchline_violation: "The logic is followed past reason: if the finger is an insult, the toe would be worse because it requires more effort (shoe off, sock off, driving one-footed). The absurd conclusion follows logically from the accepted premise."
-        pivot_mechanism:
-          operation: extension
-          reading_switch: none
-          scale_shift: none
-          wordplay: none
-        setup_frame: establishes_premise
-        pivot_locus: logical
-        resolution_requires: [shared_experience]
-      structure:
-        primary_template: escalation
-        secondary_templates: [reductio]
-        subversions_applied: []
-        has_tag: false
-        tag_operation: null
-        tag_has_own_pivot: null
-        act_out: {present: true, character_type: everyman, register_gap: treats_mundane_as_serious, character_gloss: "Driver struggling to remove shoe and sock while driving to deliver the toe insult - committed, earnest effort."}
-      relational:
-        positioning: {default: lateral_observer}
-        audience_implication: co_observer
-        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 5}
-        performed_relatability: {present: false}
-      narrative:
-        routine_id: "s01e03_finger"
-        position_in_set: opener
-    performance:
-      performer: seinfeld
-    analysis:
-      adversarial: {confidence: high}
-    notes: "This is the worked example from pivot-mechanisms.yaml for extension. The premise (body parts as insults proportional to effort) is accepted and followed to an absurd destination. The escalation template structures the building specificity of the effort (shoe, sock, driving). This is Seinfeld's signature extension move."
+# =============================================================================
+# LAUGH-POINT 1: The finger as arbitrary gesture
+# =============================================================================
 
-  - joke_id: "seinfeld_s01e03_opening_03"
-    source:
-      work: "Seinfeld S01E03 'The Robbery' opening monologue"
-      medium: sitcom_opener
-      year: 1990
-    transcript_fragment: "Look at that toe, buddy."
-    joke:
-      content:
-        primary_domain: [social_convention, body]
-        concepts: [toe, insult, driving, confrontation]
-        pivot_concept: toe
-        specificity: {default_level: 5}
-        content_moves: []
-      logic:
-        setup_expectation: "The absurd scenario of removing shoe and sock while driving has been established. The audience is imagining the physical difficulty."
-        punchline_violation: "The act-out delivers the payoff: after all that effort, the insult itself is hilariously underwhelming - just showing a toe and saying 'look at that toe, buddy'. The gap between the enormous effort and the pathetic delivery is the joke."
-        pivot_mechanism:
-          operation: extension
-          reading_switch: none
-          scale_shift: contraction
-          wordplay: none
-        setup_frame: establishes_sequence
-        pivot_locus: affective
-        resolution_requires: [shared_experience]
-      structure:
-        primary_template: escalation
-        secondary_templates: []
-        subversions_applied: []
-        has_tag: true
-        tag_operation: extends
-        tag_has_own_pivot: true
-        act_out: {present: true, character_type: everyman, register_gap: treats_mundane_as_serious, character_gloss: "Driver with foot in the air, delivering the 'toe insult' with deadpan seriousness to the car next to him."}
-      relational:
-        positioning: {default: lateral_observer}
-        audience_implication: witness
-        shared_experience: {required: false, universality: universal, comprehensibility_without_experience: 5}
-        performed_relatability: {present: false}
-      narrative:
-        routine_id: "s01e03_finger"
-        position_in_set: opener
-    performance:
-      performer: seinfeld
-    analysis:
-      adversarial: {confidence: high}
-    notes: "Tags the extension with a concrete act-out that crystallizes the absurdity. The contraction is independent: the grand effort collapses into a limp 'look at that toe, buddy'. The act-out voice is the load-bearing delivery element here."
+- joke_id: seinfeld_s01e03_opening_01
+  source:
+    work: "Seinfeld S01E03 'The Robbery' — opening monologue"
+    medium: sitcom_opener
+    year: 1990
+
+  annotation_status:
+    transcription: complete
+    decomposition: complete
+    performance: incomplete
+    commutation: incomplete
+    adversarial_review: incomplete
+    voice_attribution: incomplete
+
+  joke:
+    content:
+      primary_domain: [body_and_physicality, social_ritual]
+      concepts: [middle_finger_gesture, lane_changing]
+      pivot_concept: middle_finger_gesture
+      specificity:
+        default_level: 3
+        trajectory: null
+      content_moves: []
+
+    logic:
+      setup_expectation: >
+        The middle finger is a culturally loaded, meaningful insult gesture
+        that everyone understands as a serious expression of anger.
+      punchline_violation: >
+        The finger is reframed as an arbitrary, ridiculous selection — just
+        picking one digit from a hand and displaying it, as if the choice
+        is meaningless and the convention absurd.
+      pivot_mechanism:
+        operation: reinterpretation
+        operation_alternative: null
+        # TEST: Reading 1 (setup): the middle finger is a culturally loaded
+        # insult. Reading 2 (punchline): it's an arbitrary digit selection.
+        # Same gesture, two frames. Nothing negated; the gesture is reread.
+        reading_switch: none
+        scale_shift: contraction
+        # STRICT TEST: The reinterpretation moves from "culturally loaded
+        # insult" to "arbitrary finger pick." Could I swap to expansion
+        # instead? No — the humor IS the deflation from meaningful to
+        # meaningless. The contraction is fused with the operation. → none.
+        # CORRECTION: Setting to none because the scale change is inseparable
+        # from the reinterpretation itself.
+        wordplay: none
+      setup_frame: establishes_convention
+      # The audience already knows the middle finger is an insult; Jerry
+      # doesn't need to establish this.
+      pivot_locus: logical
+      resolution_requires: [shared_experience]
+
+    structure:
+      primary_template: mundane_as_monumental
+      # Jerry applies philosophical/analytical gravity to a trivial hand
+      # gesture — treating it as worthy of serious inquiry.
+      secondary_templates: []
+      subversions_applied: []
+      has_tag: false
+      tag_operation: null
+      tag_has_own_pivot: null
+      act_out:
+        present: false
+        character_type: null
+        register_gap: null
+        character_gloss: ""
+
+    relational:
+      positioning:
+        default: lateral_observer
+        trajectory: null
+      audience_implication: co_observer
+      shared_experience:
+        required: true
+        universality: universal
+        comprehensibility_without_experience: 4
+      performed_relatability:
+        present: false
+
+    narrative:
+      callbacks_to: []
+      callback_is_primary_pivot: null
+      running_premise: middle_finger_routine
+      tag_callbacks_to: null
+      anti_callback: null
+      routine_id: s01e03_finger
+      position_in_routine: 1
+      routine_total_jokes: 5
+      position_in_set: opener
+
+  performance:
+    performer: jerry_seinfeld
+    delivery:
+      cadence: "{UNSPECIFIED}"
+      pause_placement: []
+      repetition: null
+      vocal_register_shifts: []
+      estimated_duration_seconds: null
+      register_break:
+        present: false
+        at: null
+        direction: null
+      act_out_voice:
+        character_register: null
+    voice:
+      persona_markers: []
+      signature_phrases: []
+      register: default
+      editorializes:
+        present: null
+        kind: null
+    affective:
+      default_register:
+        valence: null
+        arousal: null
+      trajectory: null
+      shifts_are_load_bearing: null
+      deviates_from_performer_default: null
+    relational:
+      vulnerability:
+        personal_exposure: null
+        emotional_risk: null
+      performed_relatability:
+        intensity: null
+      positioning_deviation: null
+
+  meta:
+    comments_on_form: null
+    breaks_fourth_wall: null
+
+  analysis:
+    commutation:
+      load_bearing_element:
+        field_path: ""
+        gloss: ""
+      removable_elements:
+        - field_path: ""
+          gloss: ""
+      uncertain_elements:
+        - field_path: ""
+          gloss: ""
+    voice_portability:
+      mort: null
+      cece: null
+    adversarial:
+      counterarguments_considered:
+        - alternative: "articulation — Jerry is naming what everyone already thinks about the finger"
+          why_rejected: >
+            The humor requires the NEW frame (arbitrary digit selection).
+            In the audience's existing frame, the finger is a loaded insult.
+            Remove the reframe → the joke dies. The angle is load-bearing,
+            not just the observation.
+      confidence: high
+
+  notes: |
+    This is the canonical example used in the schema's own documentation
+    for distinguishing reinterpretation from articulation. The reframe
+    from "culturally loaded gesture" to "arbitrary digit" is load-bearing.
+    scale_shift set to none despite apparent contraction because the
+    deflation is fused with the reinterpretation operation itself.
+
+# =============================================================================
+# LAUGH-POINT 2: "It's a finger, what does it mean?"
+# =============================================================================
+
+- joke_id: seinfeld_s01e03_opening_02
+  source:
+    work: "Seinfeld S01E03 'The Robbery' — opening monologue"
+    medium: sitcom_opener
+    year: 1990
+
+  annotation_status:
+    transcription: complete
+    decomposition: complete
+    performance: incomplete
+    commutation: incomplete
+    adversarial_review: incomplete
+    voice_attribution: incomplete
+
+  joke:
+    content:
+      primary_domain: [body_and_physicality, social_ritual]
+      concepts: [middle_finger_gesture]
+      pivot_concept: middle_finger_gesture
+      specificity:
+        default_level: 3
+        trajectory: null
+      content_moves: []
+
+    logic:
+      setup_expectation: >
+        Having established the finger as arbitrary, Jerry continues:
+        showing someone a finger should logically produce an emotional
+        response.
+      punchline_violation: >
+        Jerry feigns bewilderment at the entire system — someone displays
+        a body part and he is "supposed to feel bad." The social contract
+        of insult-by-gesture is articulated as absurd convention.
+      pivot_mechanism:
+        operation: articulation
+        operation_alternative: reinterpretation
+        # TEST: If the audience KNEW the punchline was coming — "someone
+        # shows me a finger and I'm supposed to feel bad" — would they
+        # still find it funny? Yes. The humor is in the precise naming
+        # of the absurdity everyone already implicitly recognizes. The
+        # observation IS the joke; there is no new frame being imposed.
+        reading_switch: none
+        scale_shift: none
+        wordplay: none
+      setup_frame: establishes_convention
+      pivot_locus: logical
+      resolution_requires: [shared_experience]
+
+    structure:
+      primary_template: bare_observation
+      secondary_templates: []
+      subversions_applied: []
+      has_tag: false
+      tag_operation: null
+      tag_has_own_pivot: null
+      act_out:
+        present: true
+        character_type: everyman
+        register_gap: unaware_of_absurdity
+        character_gloss: "Jerry showing several fingers to the audience as if genuinely confused by the convention"
+
+    relational:
+      positioning:
+        default: lateral_observer
+        trajectory: null
+      audience_implication: co_observer
+      shared_experience:
+        required: true
+        universality: universal
+        comprehensibility_without_experience: 4
+      performed_relatability:
+        present: true
+
+    narrative:
+      callbacks_to: [seinfeld_s01e03_opening_01]
+      callback_is_primary_pivot: false
+      running_premise: middle_finger_routine
+      tag_callbacks_to: null
+      anti_callback: null
+      routine_id: s01e03_finger
+      position_in_routine: 2
+      routine_total_jokes: 5
+      position_in_set: opener
+
+  performance:
+    performer: jerry_seinfeld
+    delivery:
+      cadence: "{UNSPECIFIED}"
+      pause_placement: []
+      repetition: null
+      vocal_register_shifts: []
+      estimated_duration_seconds: null
+      register_break:
+        present: false
+        at: null
+        direction: null
+      act_out_voice:
+        character_register: null
+    voice:
+      persona_markers: []
+      signature_phrases: []
+      register: default
+      editorializes:
+        present: null
+        kind: null
+    affective:
+      default_register:
+        valence: null
+        arousal: null
+      trajectory: null
+      shifts_are_load_bearing: null
+      deviates_from_performer_default: null
+    relational:
+      vulnerability:
+        personal_exposure: null
+        emotional_risk: null
+      performed_relatability:
+        intensity: null
+      positioning_deviation: null
+
+  meta:
+    comments_on_form: null
+    breaks_fourth_wall: null
+
+  analysis:
+    commutation:
+      load_bearing_element:
+        field_path: ""
+        gloss: ""
+      removable_elements:
+        - field_path: ""
+          gloss: ""
+      uncertain_elements:
+        - field_path: ""
+          gloss: ""
+    voice_portability:
+      mort: null
+      cece: null
+    adversarial:
+      counterarguments_considered:
+        - alternative: "reinterpretation — continuing the reframe from joke 01"
+          why_rejected: >
+            This beat doesn't impose a NEW frame. It dwells in the frame
+            already established and names the shared recognition: we all
+            know it's absurd that a finger display is supposed to produce
+            hurt feelings. The observation IS the joke. Removing the
+            "frame shift" and stating it plainly doesn't kill it.
+      confidence: medium
+
+  notes: |
+    Borderline articulation/reinterpretation. The reframe was established
+    in joke _01; this beat lives inside that reframe and articulates the
+    shared recognition. The act-out (showing fingers) is a physical
+    illustration, not a character voice.
+
+# =============================================================================
+# LAUGH-POINT 3: The toe as alternative insult
+# =============================================================================
+
+- joke_id: seinfeld_s01e03_opening_03
+  source:
+    work: "Seinfeld S01E03 'The Robbery' — opening monologue"
+    medium: sitcom_opener
+    year: 1990
+
+  annotation_status:
+    transcription: complete
+    decomposition: complete
+    performance: incomplete
+    commutation: incomplete
+    adversarial_review: incomplete
+    voice_attribution: incomplete
+
+  joke:
+    content:
+      primary_domain: [body_and_physicality, social_ritual]
+      concepts: [middle_finger_gesture, toe_as_insult]
+      pivot_concept: toe_as_insult
+      specificity:
+        default_level: 4
+        trajectory: null
+      content_moves: []
+
+    logic:
+      setup_expectation: >
+        Having established that the finger is an arbitrary insult gesture,
+        the premise is accepted: body parts can be used as insults and the
+        degree of insult correlates with the effort or commitment involved.
+      punchline_violation: >
+        Jerry proposes the toe as a more insulting alternative because it
+        would require more effort (shoe off, sock off) — following the
+        accepted premise to an absurd but logically consistent destination.
+      pivot_mechanism:
+        operation: extension
+        operation_alternative: null
+        # TEST: (1) Accepted premise: body parts can serve as insults and
+        # effort correlates with insult severity. (2) Absurd-but-logical
+        # conclusion: the toe would be more insulting because it requires
+        # more commitment. The premise is never challenged; the logic is
+        # followed to an absurd destination.
+        reading_switch: none
+        scale_shift: none
+        # STRICT TEST: Could I swap expansion ↔ contraction? The extension
+        # operation IS the forward movement from finger to toe. There is
+        # no independent scale shift — the absurdity IS the operation.
+        wordplay: none
+      setup_frame: establishes_premise
+      # The audience does NOT already believe "insult severity correlates
+      # with body-part effort." Jerry must frame this for the bit to work.
+      pivot_locus: logical
+      resolution_requires: [shared_experience]
+
+    structure:
+      primary_template: reductio
+      # Jerry accepts a reasonable-seeming premise (body parts as insults)
+      # and follows it with logical rigor to an absurd conclusion (the toe).
+      secondary_templates: []
+      subversions_applied: []
+      has_tag: false
+      tag_operation: null
+      tag_has_own_pivot: null
+      act_out:
+        present: false
+        character_type: null
+        register_gap: null
+        character_gloss: ""
+
+    relational:
+      positioning:
+        default: lateral_observer
+        trajectory: null
+      audience_implication: co_observer
+      shared_experience:
+        required: true
+        universality: universal
+        comprehensibility_without_experience: 4
+      performed_relatability:
+        present: false
+
+    narrative:
+      callbacks_to: [seinfeld_s01e03_opening_01]
+      callback_is_primary_pivot: false
+      running_premise: middle_finger_routine
+      tag_callbacks_to: null
+      anti_callback: null
+      routine_id: s01e03_finger
+      position_in_routine: 3
+      routine_total_jokes: 5
+      position_in_set: opener
+
+  performance:
+    performer: jerry_seinfeld
+    delivery:
+      cadence: "{UNSPECIFIED}"
+      pause_placement: []
+      repetition: null
+      vocal_register_shifts: []
+      estimated_duration_seconds: null
+      register_break:
+        present: false
+        at: null
+        direction: null
+      act_out_voice:
+        character_register: null
+    voice:
+      persona_markers: []
+      signature_phrases: []
+      register: default
+      editorializes:
+        present: null
+        kind: null
+    affective:
+      default_register:
+        valence: null
+        arousal: null
+      trajectory: null
+      shifts_are_load_bearing: null
+      deviates_from_performer_default: null
+    relational:
+      vulnerability:
+        personal_exposure: null
+        emotional_risk: null
+      performed_relatability:
+        intensity: null
+      positioning_deviation: null
+
+  meta:
+    comments_on_form: null
+    breaks_fourth_wall: null
+
+  analysis:
+    commutation:
+      load_bearing_element:
+        field_path: ""
+        gloss: ""
+      removable_elements:
+        - field_path: ""
+          gloss: ""
+      uncertain_elements:
+        - field_path: ""
+          gloss: ""
+    voice_portability:
+      mort: null
+      cece: null
+    adversarial:
+      counterarguments_considered:
+        - alternative: "mapping — connecting finger and toe as parallel insult systems"
+          why_rejected: >
+            The humor is not in revealing a hidden parallel between two
+            existing domains. The toe is NOT an existing insult domain.
+            Jerry is extending the logic of the finger premise forward
+            to a hypothetical absurd conclusion. The premise is accepted
+            and followed, not two domains connected.
+      confidence: high
+
+  notes: |
+    This is the canonical example used in the schema's pivot-mechanisms
+    documentation for the extension operation. The toe_as_insult concept
+    exists in the registry for this exact joke.
+
+# =============================================================================
+# LAUGH-POINT 4: Act-out of giving the toe while driving
+# =============================================================================
+
+- joke_id: seinfeld_s01e03_opening_04
+  source:
+    work: "Seinfeld S01E03 'The Robbery' — opening monologue"
+    medium: sitcom_opener
+    year: 1990
+
+  annotation_status:
+    transcription: complete
+    decomposition: complete
+    performance: incomplete
+    commutation: incomplete
+    adversarial_review: incomplete
+    voice_attribution: incomplete
+
+  joke:
+    content:
+      primary_domain: [body_and_physicality, social_ritual]
+      concepts: [toe_as_insult]
+      pivot_concept: toe_as_insult
+      specificity:
+        default_level: 5
+        trajectory: null
+      content_moves: []
+
+    logic:
+      setup_expectation: >
+        The toe has been proposed as a hypothetical insult. The audience
+        expects this to remain abstract.
+      punchline_violation: >
+        Jerry commits to the scenario with escalating logistical specificity:
+        shoe off, sock off, driving with foot in the air, addressing the
+        other driver — "look at that toe, buddy." The absurd premise is
+        made concrete through physical detail.
+      pivot_mechanism:
+        operation: extension
+        operation_alternative: null
+        # TEST: (1) Accepted premise: the toe is a viable insult gesture
+        # while driving. (2) Absurd-but-logical conclusion: the full
+        # physical procedure — removing shoe, removing sock, elevating
+        # foot while driving, presenting toe to adjacent driver. The
+        # premise is followed to its logistical endpoint.
+        reading_switch: none
+        scale_shift: none
+        wordplay: none
+      setup_frame: establishes_premise
+      pivot_locus: logical
+      resolution_requires: [shared_experience]
+
+    structure:
+      primary_template: escalation
+      # Each logistical step (shoe off, sock off, drive, elevate foot,
+      # address driver) commits harder than the last. The humor lives in
+      # the accumulation of increasingly absurd physical steps.
+      secondary_templates: [reductio]
+      subversions_applied:
+        - type: specificity_subversion
+          at: punchline
+      has_tag: false
+      tag_operation: null
+      tag_has_own_pivot: null
+      act_out:
+        present: true
+        character_type: everyman
+        register_gap: unaware_of_absurdity
+        character_gloss: >
+          Jerry as a driver earnestly performing the toe-insult procedure,
+          treating this absurd action as a reasonable thing to do. Pretends
+          to drive with one foot in the air, addresses imaginary adjacent
+          driver with casual "look at that toe, buddy."
+
+    relational:
+      positioning:
+        default: lateral_observer
+        trajectory: null
+      audience_implication: co_observer
+      shared_experience:
+        required: false
+        universality: universal
+        comprehensibility_without_experience: 5
+      performed_relatability:
+        present: false
+
+    narrative:
+      callbacks_to: [seinfeld_s01e03_opening_03]
+      callback_is_primary_pivot: false
+      running_premise: middle_finger_routine
+      tag_callbacks_to: null
+      anti_callback: null
+      routine_id: s01e03_finger
+      position_in_routine: 4
+      routine_total_jokes: 5
+      position_in_set: opener
+
+  performance:
+    performer: jerry_seinfeld
+    delivery:
+      cadence: "{UNSPECIFIED}"
+      pause_placement: []
+      repetition: null
+      vocal_register_shifts: []
+      estimated_duration_seconds: null
+      register_break:
+        present: false
+        at: null
+        direction: null
+      act_out_voice:
+        character_register: null
+    voice:
+      persona_markers: []
+      signature_phrases: []
+      register: default
+      editorializes:
+        present: null
+        kind: null
+    affective:
+      default_register:
+        valence: null
+        arousal: null
+      trajectory: null
+      shifts_are_load_bearing: null
+      deviates_from_performer_default: null
+    relational:
+      vulnerability:
+        personal_exposure: null
+        emotional_risk: null
+      performed_relatability:
+        intensity: null
+      positioning_deviation: null
+
+  meta:
+    comments_on_form: null
+    breaks_fourth_wall: null
+
+  analysis:
+    commutation:
+      load_bearing_element:
+        field_path: ""
+        gloss: ""
+      removable_elements:
+        - field_path: ""
+          gloss: ""
+      uncertain_elements:
+        - field_path: ""
+          gloss: ""
+    voice_portability:
+      mort: null
+      cece: null
+    adversarial:
+      counterarguments_considered:
+        - alternative: "articulation — the logistical details are just naming obvious steps"
+          why_rejected: >
+            The steps are NOT things the audience already implicitly knows
+            (nobody has thought through the logistics of toe-insulting).
+            Jerry is extending an absurd premise into concrete physical
+            detail. The humor is in the destination, not in recognition.
+      confidence: high
+
+  notes: |
+    The specificity_subversion captures how Jerry commits to hyper-specific
+    logistical detail ("shoe off, sock off") for an inherently absurd
+    scenario. The act-out is the joke's peak — the physical performance of
+    driving with foot in air saying "look at that toe, buddy" is where the
+    biggest laugh lands.
+
+# =============================================================================
+# LAUGH-POINT 5: "That's really insulting to get the toe"
+# =============================================================================
+
+- joke_id: seinfeld_s01e03_opening_05
+  source:
+    work: "Seinfeld S01E03 'The Robbery' — opening monologue"
+    medium: sitcom_opener
+    year: 1990
+
+  annotation_status:
+    transcription: complete
+    decomposition: complete
+    performance: incomplete
+    commutation: incomplete
+    adversarial_review: incomplete
+    voice_attribution: incomplete
+
+  joke:
+    content:
+      primary_domain: [body_and_physicality, social_ritual]
+      concepts: [toe_as_insult]
+      pivot_concept: toe_as_insult
+      specificity:
+        default_level: 3
+        trajectory: null
+      content_moves: []
+
+    logic:
+      setup_expectation: >
+        After the elaborate act-out, the audience expects the bit to end
+        or move on.
+      punchline_violation: >
+        Jerry returns to a deadpan, understated conclusion — "that's
+        really insulting to get the toe, isn't it?" — as if the absurd
+        scenario he just acted out has confirmed the original hypothesis.
+        The tag treats the reductio's conclusion as validated.
+      pivot_mechanism:
+        operation: articulation
+        operation_alternative: extension
+        # TEST: If the audience knew this conclusion was coming, would
+        # they still find it funny? Yes — the humor is in the casual,
+        # matter-of-fact restatement after the elaborate act-out. The
+        # observation "that's really insulting" names what the bit has
+        # established. No new frame is imposed.
+        reading_switch: none
+        scale_shift: none
+        wordplay: none
+      setup_frame: establishes_premise
+      pivot_locus: affective
+      resolution_requires: []
+
+    structure:
+      primary_template: bare_observation
+      secondary_templates: []
+      subversions_applied: []
+      has_tag: true
+      tag_operation: extends
+      # The tag extends the punchline by restating the conclusion as if
+      # it were an obvious, settled matter — "isn't it?"
+      tag_has_own_pivot: false
+      act_out:
+        present: false
+        character_type: null
+        register_gap: null
+        character_gloss: ""
+
+    relational:
+      positioning:
+        default: lateral_observer
+        trajectory: null
+      audience_implication: co_observer
+      shared_experience:
+        required: false
+        universality: null
+        comprehensibility_without_experience: 5
+      performed_relatability:
+        present: true
+
+    narrative:
+      callbacks_to: [seinfeld_s01e03_opening_04]
+      callback_is_primary_pivot: false
+      running_premise: middle_finger_routine
+      tag_callbacks_to: null
+      anti_callback: null
+      routine_id: s01e03_finger
+      position_in_routine: 5
+      routine_total_jokes: 5
+      position_in_set: opener
+
+  performance:
+    performer: jerry_seinfeld
+    delivery:
+      cadence: "{UNSPECIFIED}"
+      pause_placement: []
+      repetition: null
+      vocal_register_shifts: []
+      estimated_duration_seconds: null
+      register_break:
+        present: false
+        at: null
+        direction: null
+      act_out_voice:
+        character_register: null
+    voice:
+      persona_markers: []
+      signature_phrases: []
+      register: default
+      editorializes:
+        present: null
+        kind: null
+    affective:
+      default_register:
+        valence: null
+        arousal: null
+      trajectory: null
+      shifts_are_load_bearing: null
+      deviates_from_performer_default: null
+    relational:
+      vulnerability:
+        personal_exposure: null
+        emotional_risk: null
+      performed_relatability:
+        intensity: null
+      positioning_deviation: null
+
+  meta:
+    comments_on_form: null
+    breaks_fourth_wall: null
+
+  analysis:
+    commutation:
+      load_bearing_element:
+        field_path: ""
+        gloss: ""
+      removable_elements:
+        - field_path: ""
+          gloss: ""
+      uncertain_elements:
+        - field_path: ""
+          gloss: ""
+    voice_portability:
+      mort: null
+      cece: null
+    adversarial:
+      counterarguments_considered:
+        - alternative: "extension — continuing to follow the toe premise further"
+          why_rejected: >
+            The tag doesn't push the premise further into new territory.
+            It restates the conclusion already reached ("that's really
+            insulting") as settled fact. The humor is affective —
+            the casual, confirmatory tone after elaborate absurdity.
+      confidence: medium
+
+  notes: |
+    This functions as a button/tag on the routine. The "isn't it?" seeks
+    audience agreement, making it a performed_relatability gesture. The
+    pivot is primarily affective — the deadpan return to conversational
+    register after the physical act-out creates the contrast.

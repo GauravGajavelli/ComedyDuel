@@ -1,4 +1,7 @@
 # FILE: annotations/s02e01_opening_pass2.yaml
+# Episode: S02E01 "The Ex-Girlfriend" -- Opening monologue
+# Pass 2 annotation (decomposition)
+# Annotated: 2026-04-26
 
 jokes:
   - joke_id: "seinfeld_s02e01_opening_01"
@@ -6,77 +9,42 @@ jokes:
       work: "Seinfeld S02E01 'The Ex-Girlfriend' opening monologue"
       medium: sitcom_opener
       year: 1991
-    transcript_fragment: "I'm always in traffic with the lane expert... Constantly reevaluating their lane choice.. Never quite sure, 'Is this the best lane for me? For my life?'"
+
+    annotation_status:
+      transcription: complete
+      decomposition: complete
+      performance: incomplete
+      commutation: incomplete
+      adversarial_review: incomplete
+      voice_attribution: incomplete
+
+    transcript_fragment: "I'm always in traffic with the lane expert. You know this type of person? Constantly reevaluating their lane choice.. Never quite sure, 'Is this the best lane for me? For my life?'"
+
     joke:
       content:
-        primary_domain: [driving, social_types]
-        concepts: [traffic, lane_changing, indecision]
-        pivot_concept: lane_choice_as_life_choice
-        specificity: {default_level: 3}
+        primary_domain: [urban_life, driving]
+        concepts: [lane_changing]
+        pivot_concept: lane_changing
+        specificity:
+          default_level: 3
+          trajectory: null
         content_moves: []
+
       logic:
-        setup_expectation: "Lane-changing is a mundane traffic behavior — picking which lane to drive in."
-        punchline_violation: "'For my life?' reframes a trivial lane choice as an existential decision, inflating the stakes absurdly."
+        setup_expectation: "The audience recognizes the 'lane expert' as a familiar type -- someone who compulsively changes lanes in traffic. The setup establishes this as an annoying driving behavior, and the audience expects observational comedy about lane-changing frustration."
+        punchline_violation: "'Is this the best lane for me? For my life?' reinterprets a trivial traffic decision as an existential life choice. The lane-changer's internal monologue is reframed from practical optimization ('which lane moves faster') to grand philosophical self-interrogation about one's place in the universe. The same behavior (lane evaluation) is reread through an existential frame."
         pivot_mechanism:
           operation: reinterpretation
+          operation_alternative: null
           reading_switch: none
           scale_shift: expansion
           wordplay: none
         setup_frame: establishes_behavior
         pivot_locus: logical
         resolution_requires: [shared_experience]
+
       structure:
         primary_template: mundane_as_monumental
-        secondary_templates: []
-        subversions_applied: []
-        has_tag: false
-        tag_operation: null
-        tag_has_own_pivot: null
-        act_out:
-          present: false
-          character_type: null
-          register_gap: null
-          character_gloss: ""
-      relational:
-        positioning: {default: lateral_observer}
-        audience_implication: co_observer
-        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 4}
-        performed_relatability: {present: true}
-      narrative:
-        routine_id: s02e01_traffic_lanes
-        position_in_set: opener
-    performance:
-      performer: seinfeld
-    analysis:
-      adversarial: {confidence: high}
-    notes: "The 'for my life' tag elevates lane selection to existential scale. The scale_shift is independently removable — 'Is this the best lane for me?' still works as observation, but 'for my life' adds the expansion."
-
-  - joke_id: "seinfeld_s02e01_opening_02"
-    source:
-      work: "Seinfeld S02E01 'The Ex-Girlfriend' opening monologue"
-      medium: sitcom_opener
-      year: 1991
-    transcript_fragment: "'Can I get in over there? Could I get in over here? Could I get in there?' 'Yeah, come on over here, pal. We're zoomin' over here. This is the secret lane, nobody knows about it..'"
-    joke:
-      content:
-        primary_domain: [driving, social_types]
-        concepts: [traffic, lane_changing, invitation, sarcasm]
-        pivot_concept: secret_lane
-        specificity: {default_level: 4}
-        content_moves: []
-      logic:
-        setup_expectation: "The lane-changer wants to merge; the audience expects continued frustration from the lane-changer's perspective."
-        punchline_violation: "Jerry voices the OTHER driver sarcastically inviting the lane-changer over, mocking the premise that any lane is better — 'the secret lane, nobody knows about it' is absurd because all lanes are equally stuck."
-        pivot_mechanism:
-          operation: reinterpretation
-          reading_switch: none
-          scale_shift: none
-          wordplay: none
-        setup_frame: establishes_behavior
-        pivot_locus: logical
-        resolution_requires: [shared_experience]
-      structure:
-        primary_template: escalation
         secondary_templates: []
         subversions_applied: []
         has_tag: false
@@ -85,46 +53,281 @@ jokes:
         act_out:
           present: true
           character_type: everyman
-          register_gap: performed_sincerity
-          character_gloss: "Fellow driver sarcastically welcoming the lane-changer, performing fake enthusiasm about their lane."
+          register_gap: treats_mundane_as_serious
+          character_gloss: "The anxious lane-changer voicing their internal monologue as existential crisis -- treating a traffic lane decision with the weight of a life decision."
+
       relational:
-        positioning: {default: lateral_observer}
-        audience_implication: accomplice
-        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 4}
-        performed_relatability: {present: true}
+        positioning:
+          default: lateral_observer
+          trajectory: null
+        audience_implication: co_observer
+        shared_experience:
+          required: true
+          universality: universal
+          comprehensibility_without_experience: 4
+        performed_relatability:
+          present: true
+
       narrative:
-        routine_id: s02e01_traffic_lanes
+        callbacks_to: []
+        callback_is_primary_pivot: null
+        running_premise: null
+        tag_callbacks_to: null
+        anti_callback: null
+        routine_id: "s02e01_traffic_lanes"
+        position_in_routine: 1
+        routine_total_jokes: 5
         position_in_set: opener
+
     performance:
       performer: seinfeld
+      delivery:
+        cadence: "{UNSPECIFIED}"
+        pause_placement: []
+        repetition: null
+        vocal_register_shifts: []
+        estimated_duration_seconds: null
+        register_break:
+          present: false
+          at: null
+          direction: null
+        act_out_voice:
+          character_register: null
+      voice:
+        persona_markers: []
+        signature_phrases: []
+        register: default
+        editorializes:
+          present: null
+          kind: null
+      affective:
+        default_register:
+          valence: null
+          arousal: null
+        trajectory: null
+        shifts_are_load_bearing: null
+        deviates_from_performer_default: null
+      relational:
+        vulnerability:
+          personal_exposure: null
+          emotional_risk: null
+        performed_relatability:
+          intensity: null
+        positioning_deviation: null
+
+    meta:
+      comments_on_form: null
+      breaks_fourth_wall: null
+
     analysis:
-      adversarial: {confidence: medium}
-    notes: "The act-out shifts from lane-changer to the sarcastic other driver. 'Secret lane' is the peak of the sarcasm — reinterprets the lane-changer's earnest seeking as obviously absurd."
+      commutation:
+        load_bearing_element:
+          field_path: ""
+          gloss: ""
+        removable_elements:
+          - field_path: ""
+            gloss: ""
+        uncertain_elements:
+          - field_path: ""
+            gloss: ""
+      voice_portability:
+        mort: null
+        cece: null
+      adversarial:
+        counterarguments_considered:
+          - alternative: "Could be extension -- the lane-changing premise is pushed to an absurd life-question conclusion."
+            why_rejected: "The humor is not in following a logical chain to an absurd endpoint. It's in the SHIFT of frame: the same behavior (evaluating lanes) is seen through an existential lens rather than a practical one. The audience re-reads the lane-changer's anxiety as philosophical crisis. This is a frame shift (reinterpretation), not a premise followed to conclusion (extension)."
+        confidence: high
+
+    notes: |
+      Scale_shift expansion is independently specifiable: the same reinterpretation
+      (lane decision as life decision) could conceivably work with contraction (treating
+      an existential question as a mere lane choice), so the expansion is a separable
+      modifier. 'For my life?' is the pivot phrase that executes the scale shift.
+
+  - joke_id: "seinfeld_s02e01_opening_02"
+    source:
+      work: "Seinfeld S02E01 'The Ex-Girlfriend' opening monologue"
+      medium: sitcom_opener
+      year: 1991
+
+    annotation_status:
+      transcription: complete
+      decomposition: complete
+      performance: incomplete
+      commutation: incomplete
+      adversarial_review: incomplete
+      voice_attribution: incomplete
+
+    transcript_fragment: "They're always a little bit ahead of you, 'Can I get in over there? Could I get in over here? Could I get in there?' 'Yeah, come on over here, pal. We're zoomin' over here. This is the secret lane, nobody knows about it..'"
+
+    joke:
+      content:
+        primary_domain: [urban_life, driving]
+        concepts: [lane_changing]
+        pivot_concept: lane_changing
+        specificity:
+          default_level: 3
+          trajectory: null
+        content_moves: []
+
+      logic:
+        setup_expectation: "The lane expert has been established as compulsively seeking a better lane. The audience hears the desperate internal monologue ('Can I get in over there?') and expects continued observation of the behavior."
+        punchline_violation: "Jerry voices the sarcastic response of the driver being encroached upon: 'Yeah, come on over here, pal. We're zoomin' over here. This is the secret lane.' The humor comes from the sarcastic negation -- the lane obviously is NOT zooming, there IS no secret lane. The deadpan invitation to join a lane that's equally stuck deflates the lane-changer's fantasy that any lane is better."
+        pivot_mechanism:
+          operation: negation
+          operation_alternative: null
+          reading_switch: none
+          scale_shift: none
+          wordplay: none
+        setup_frame: establishes_behavior
+        pivot_locus: logical
+        resolution_requires: [shared_experience]
+
+      structure:
+        primary_template: bare_observation
+        secondary_templates: []
+        subversions_applied: []
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out:
+          present: true
+          character_type: everyman
+          register_gap: none
+          character_gloss: "Two characters in sequence: first the anxious lane-changer desperately seeking entry, then the sarcastic driver in the adjacent lane delivering a mock-welcoming invitation. The second voice is the punchline vehicle."
+
+      relational:
+        positioning:
+          default: lateral_observer
+          trajectory: null
+        audience_implication: co_observer
+        shared_experience:
+          required: true
+          universality: universal
+          comprehensibility_without_experience: 4
+        performed_relatability:
+          present: true
+
+      narrative:
+        callbacks_to: []
+        callback_is_primary_pivot: null
+        running_premise: null
+        tag_callbacks_to: null
+        anti_callback: null
+        routine_id: "s02e01_traffic_lanes"
+        position_in_routine: 2
+        routine_total_jokes: 5
+        position_in_set: opener
+
+    performance:
+      performer: seinfeld
+      delivery:
+        cadence: "{UNSPECIFIED}"
+        pause_placement: []
+        repetition: null
+        vocal_register_shifts: []
+        estimated_duration_seconds: null
+        register_break:
+          present: false
+          at: null
+          direction: null
+        act_out_voice:
+          character_register: null
+      voice:
+        persona_markers: []
+        signature_phrases: []
+        register: default
+        editorializes:
+          present: null
+          kind: null
+      affective:
+        default_register:
+          valence: null
+          arousal: null
+        trajectory: null
+        shifts_are_load_bearing: null
+        deviates_from_performer_default: null
+      relational:
+        vulnerability:
+          personal_exposure: null
+          emotional_risk: null
+        performed_relatability:
+          intensity: null
+        positioning_deviation: null
+
+    meta:
+      comments_on_form: null
+      breaks_fourth_wall: null
+
+    analysis:
+      commutation:
+        load_bearing_element:
+          field_path: ""
+          gloss: ""
+        removable_elements:
+          - field_path: ""
+            gloss: ""
+        uncertain_elements:
+          - field_path: ""
+            gloss: ""
+      voice_portability:
+        mort: null
+        cece: null
+      adversarial:
+        counterarguments_considered:
+          - alternative: "Could be articulation -- the sarcastic response is something everyone has thought while driving."
+            why_rejected: "The humor is not purely in naming a shared truth. The sarcasm ('we're zoomin' over here') asserts the OPPOSITE of reality -- the lane is not zooming at all. 'The secret lane, nobody knows about it' implies there is no secret lane. These are truth-value flips delivered through sarcasm. The test: 'Setup implies the other lane might be better. Punchline asserts it is NOT better.' This is negation."
+          - alternative: "Could be reinterpretation -- reframing the lane-changer's hope as delusion."
+            why_rejected: "The sarcastic voice does not offer a new frame on the same material. It directly contradicts the premise that another lane is better. The 'secret lane' is negated by its obvious absurdity. Truth-value flip, not frame shift."
+        confidence: high
+
+    notes: |
+      The act-out carries the negation: the sarcastic driver's voice is the mechanism
+      through which the lane-changer's hope is contradicted. Without the act-out, this
+      would likely be a direct observational negation. With it, the humor is delivered
+      through character voice, making the negation feel like shared experience rather
+      than argument.
 
   - joke_id: "seinfeld_s02e01_opening_03"
     source:
       work: "Seinfeld S02E01 'The Ex-Girlfriend' opening monologue"
       medium: sitcom_opener
       year: 1991
-    transcript_fragment: "The ultimate psychological test of traffic is the total dead stop. Not even rolling. And you look out the window, you can see gum clearly."
+
+    annotation_status:
+      transcription: complete
+      decomposition: complete
+      performance: incomplete
+      commutation: incomplete
+      adversarial_review: incomplete
+      voice_attribution: incomplete
+
+    transcript_fragment: "The ultimate, I think the ultimate psychological test of traffic is the total dead stop. Not even rolling. And you look out the window, you can see gum clearly."
+
     joke:
       content:
-        primary_domain: [driving]
-        concepts: [traffic, dead_stop, ground_level_detail]
-        pivot_concept: gum_visibility
-        specificity: {default_level: 4}
+        primary_domain: [urban_life, driving]
+        concepts: [lane_changing]
+        pivot_concept: lane_changing
+        specificity:
+          default_level: 4
+          trajectory: null
         content_moves: []
+
       logic:
-        setup_expectation: "A 'total dead stop' is set up with the register of a serious psychological ordeal — the audience expects a weighty consequence."
-        punchline_violation: "The evidence of this devastating standstill is something absurdly specific and banal: you can see gum on the road. The precision of 'clearly' undercuts the elevated setup."
+        setup_expectation: "Jerry frames the total dead stop as 'the ultimate psychological test of traffic' -- the audience expects a grand or weighty observation about the emotional toll of being completely stuck in traffic."
+        punchline_violation: "Instead of a psychological insight, the proof of the dead stop is absurdly specific and ground-level: you can see gum on the road clearly. The monumental framing ('ultimate psychological test') is answered with a trivially concrete detail. The audience re-reads the 'dead stop' from an abstract traffic concept to a literal physical state so extreme you can study the pavement."
         pivot_mechanism:
-          operation: articulation
+          operation: reinterpretation
+          operation_alternative: null
           reading_switch: none
           scale_shift: contraction
           wordplay: none
         setup_frame: establishes_expectation
-        pivot_locus: both
+        pivot_locus: logical
         resolution_requires: [shared_experience]
+
       structure:
         primary_template: mundane_as_monumental
         secondary_templates: []
@@ -137,44 +340,137 @@ jokes:
           character_type: null
           register_gap: null
           character_gloss: ""
+
       relational:
-        positioning: {default: lateral_observer}
+        positioning:
+          default: lateral_observer
+          trajectory: null
         audience_implication: co_observer
-        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 3}
-        performed_relatability: {present: true}
+        shared_experience:
+          required: true
+          universality: common
+          comprehensibility_without_experience: 5
+        performed_relatability:
+          present: false
+
       narrative:
-        routine_id: s02e01_traffic_lanes
+        callbacks_to: []
+        callback_is_primary_pivot: null
+        running_premise: null
+        tag_callbacks_to: null
+        anti_callback: null
+        routine_id: "s02e01_traffic_lanes"
+        position_in_routine: 3
+        routine_total_jokes: 5
         position_in_set: opener
+
     performance:
       performer: seinfeld
+      delivery:
+        cadence: "{UNSPECIFIED}"
+        pause_placement: []
+        repetition: null
+        vocal_register_shifts: []
+        estimated_duration_seconds: null
+        register_break:
+          present: false
+          at: null
+          direction: null
+        act_out_voice:
+          character_register: null
+      voice:
+        persona_markers: []
+        signature_phrases: []
+        register: default
+        editorializes:
+          present: null
+          kind: null
+      affective:
+        default_register:
+          valence: null
+          arousal: null
+        trajectory: null
+        shifts_are_load_bearing: null
+        deviates_from_performer_default: null
+      relational:
+        vulnerability:
+          personal_exposure: null
+          emotional_risk: null
+        performed_relatability:
+          intensity: null
+        positioning_deviation: null
+
+    meta:
+      comments_on_form: null
+      breaks_fourth_wall: null
+
     analysis:
-      adversarial: {confidence: medium}
-    notes: "Borderline articulation/reinterpretation. The gum detail doesn't shift frames — it names the specific, weirdly precise thing everyone has noticed in a dead stop. The contraction from 'ultimate psychological test' to 'gum' is independently removable. The humor survives in one frame."
+      commutation:
+        load_bearing_element:
+          field_path: ""
+          gloss: ""
+        removable_elements:
+          - field_path: ""
+            gloss: ""
+        uncertain_elements:
+          - field_path: ""
+            gloss: ""
+      voice_portability:
+        mort: null
+        cece: null
+      adversarial:
+        counterarguments_considered:
+          - alternative: "Could be articulation -- everyone has experienced the dead stop and noticed mundane details."
+            why_rejected: "Frame-dependency test: state it in the audience's existing frame ('when you're stuck in traffic you just sit there') and the humor dies. The humor REQUIRES the specific reframe -- the 'psychological test' setup creates a grand frame, and 'you can see gum clearly' forces a re-read from abstract psychological challenge to absurdly concrete physical proximity to the ground. The angle is the joke."
+          - alternative: "Scale_shift could be 'none' if the contraction is fused with the reinterpretation."
+            why_rejected: "Swap test: could this reinterpretation work with expansion instead of contraction? Yes -- 'the ultimate psychological test is the dead stop... you begin to question your entire life path.' That would be expansion with the same reinterpretation operation. So contraction is independently specifiable here."
+        confidence: high
+
+    notes: |
+      The specificity level 4 reflects the vivid 'gum clearly' detail -- a signature
+      Seinfeld ground-level concrete image. The mundane_as_monumental template comes from
+      the 'ultimate psychological test' framing applied to being stuck in traffic, which
+      sets up the contraction to the gum detail.
 
   - joke_id: "seinfeld_s02e01_opening_04"
     source:
       work: "Seinfeld S02E01 'The Ex-Girlfriend' opening monologue"
       medium: sitcom_opener
       year: 1991
-    transcript_fragment: "Will it start moving backwards, I wonder? I mean, is that possible?"
+
+    annotation_status:
+      transcription: complete
+      decomposition: complete
+      performance: incomplete
+      commutation: incomplete
+      adversarial_review: incomplete
+      voice_attribution: incomplete
+
+    transcript_fragment: "So we know that in the future traffic will get even worse than that. I mean, what will happen? Will it start moving backwards, I wonder?"
+
     joke:
       content:
-        primary_domain: [driving]
-        concepts: [traffic, absurdity, regression]
-        pivot_concept: backward_traffic
-        specificity: {default_level: 2}
+        primary_domain: [urban_life, driving]
+        concepts: [lane_changing]
+        pivot_concept: lane_changing
+        specificity:
+          default_level: 3
+          trajectory: null
         content_moves: []
+
       logic:
-        setup_expectation: "Traffic congestion gets worse over time — the audience accepts this reasonable premise."
-        punchline_violation: "Extension of the worsening-traffic premise past its logical endpoint: if it can reach zero, the next stage must be negative — traffic moving backwards. Absurd but logically follows from the trajectory."
+        setup_expectation: "Jerry has established the dead stop as the worst traffic can get. He then asks what could be worse -- the audience accepts the premise that traffic will get worse and wonders where the logic leads."
+        punchline_violation: "The accepted premise is 'traffic always gets worse.' The absurd-but-logical conclusion: if it has progressed from moving to dead stop, the next step is moving backwards. The audience recognizes the logical validity (worse-than-stopped is backwards) while seeing the absurdity of the destination."
         pivot_mechanism:
           operation: extension
+          operation_alternative: null
           reading_switch: none
           scale_shift: none
           wordplay: none
         setup_frame: establishes_premise
         pivot_locus: logical
         resolution_requires: [world_knowledge]
+
       structure:
         primary_template: reductio
         secondary_templates: []
@@ -187,44 +483,136 @@ jokes:
           character_type: null
           register_gap: null
           character_gloss: ""
+
       relational:
-        positioning: {default: lateral_observer}
+        positioning:
+          default: lateral_observer
+          trajectory: null
         audience_implication: co_observer
-        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 5}
-        performed_relatability: {present: false}
+        shared_experience:
+          required: false
+          universality: universal
+          comprehensibility_without_experience: 5
+        performed_relatability:
+          present: false
+
       narrative:
-        routine_id: s02e01_traffic_lanes
+        callbacks_to: []
+        callback_is_primary_pivot: null
+        running_premise: null
+        tag_callbacks_to: null
+        anti_callback: null
+        routine_id: "s02e01_traffic_lanes"
+        position_in_routine: 4
+        routine_total_jokes: 5
         position_in_set: opener
+
     performance:
       performer: seinfeld
+      delivery:
+        cadence: "{UNSPECIFIED}"
+        pause_placement: []
+        repetition: null
+        vocal_register_shifts: []
+        estimated_duration_seconds: null
+        register_break:
+          present: false
+          at: null
+          direction: null
+        act_out_voice:
+          character_register: null
+      voice:
+        persona_markers: []
+        signature_phrases: []
+        register: default
+        editorializes:
+          present: null
+          kind: null
+      affective:
+        default_register:
+          valence: null
+          arousal: null
+        trajectory: null
+        shifts_are_load_bearing: null
+        deviates_from_performer_default: null
+      relational:
+        vulnerability:
+          personal_exposure: null
+          emotional_risk: null
+        performed_relatability:
+          intensity: null
+        positioning_deviation: null
+
+    meta:
+      comments_on_form: null
+      breaks_fourth_wall: null
+
     analysis:
-      adversarial: {confidence: high}
-    notes: "Clean extension + reductio pairing. The premise (traffic worsening) is accepted and followed to the logically absurd conclusion (backwards movement). The reductio template shapes the argumentative chain."
+      commutation:
+        load_bearing_element:
+          field_path: ""
+          gloss: ""
+        removable_elements:
+          - field_path: ""
+            gloss: ""
+        uncertain_elements:
+          - field_path: ""
+            gloss: ""
+      voice_portability:
+        mort: null
+        cece: null
+      adversarial:
+        counterarguments_considered:
+          - alternative: "Could be reinterpretation -- reframing 'worse traffic' from 'slower' to 'reverse.'"
+            why_rejected: "The humor is not in a frame shift on the same material. Jerry accepts the premise (traffic gets worse) and follows its internal logic forward: stopped is worse than slow; backwards is worse than stopped. The logical chain IS the joke. Each step is logically valid within the premise. This is extension, not reinterpretation."
+        confidence: high
+
+    notes: |
+      Classic reductio template with extension operation: a reasonable premise ('traffic
+      always gets worse') is accepted and its logical implications are followed to an
+      absurd but internally consistent conclusion ('it will move backwards'). The
+      reductio describes the argumentative chain shape; the extension describes the
+      cognitive mechanism of following logic past reason.
 
   - joke_id: "seinfeld_s02e01_opening_05"
     source:
       work: "Seinfeld S02E01 'The Ex-Girlfriend' opening monologue"
       medium: sitcom_opener
       year: 1991
-    transcript_fragment: "'Boy, this is some really bad traffic now, boy. This, is really bad. I'm gonna try to get off and get back on going the other way.'"
+
+    annotation_status:
+      transcription: complete
+      decomposition: complete
+      performance: incomplete
+      commutation: incomplete
+      adversarial_review: incomplete
+      voice_attribution: incomplete
+
+    transcript_fragment: "That someday we'll be going 'Boy, this is some really bad traffic now, boy. This, is really bad. I'm gonna try to get off and get back on going the other way.'"
+
     joke:
       content:
-        primary_domain: [driving]
-        concepts: [traffic, understatement, normalcy_bias]
-        pivot_concept: mundane_reaction_to_impossible
-        specificity: {default_level: 4}
+        primary_domain: [urban_life, driving]
+        concepts: [lane_changing]
+        pivot_concept: lane_changing
+        specificity:
+          default_level: 4
+          trajectory: null
         content_moves: []
+
       logic:
-        setup_expectation: "Traffic moving backwards is a physics-defying impossibility. The audience expects a reaction proportional to the absurdity."
-        punchline_violation: "The driver reacts with the exact same mundane complaint anyone uses for ordinary bad traffic — 'Boy, this is really bad.' The casual normalcy applied to the impossible situation is the joke."
+        setup_expectation: "The premise of backwards-moving traffic has been established as an absurd impossibility. The audience expects the absurdity to be the endpoint -- they've already laughed at the concept."
+        punchline_violation: "Instead of treating backwards traffic as extraordinary, the act-out voice responds with the exact same mundane complaint register people use for ordinary congestion: 'Boy, this is some really bad traffic now, boy.' The physics-defying impossibility of backwards movement is met with the trivially inadequate response of mild annoyance, as if this were just a particularly bad Tuesday commute. The proposed solution -- 'get off and get back on going the other way' -- applies normal traffic-coping logic to an impossible situation."
         pivot_mechanism:
           operation: reinterpretation
+          operation_alternative: null
           reading_switch: none
-          scale_shift: contraction
+          scale_shift: none
           wordplay: none
         setup_frame: establishes_anomaly
         pivot_locus: both
         resolution_requires: [shared_experience]
+
       structure:
         primary_template: monumental_as_mundane
         secondary_templates: []
@@ -236,17 +624,100 @@ jokes:
           present: true
           character_type: everyman
           register_gap: unaware_of_absurdity
-          character_gloss: "A driver stuck in impossible backward traffic, reacting as if it's just ordinary congestion."
+          character_gloss: "A driver stuck in backwards-moving traffic responding with the identical casual complaint and coping strategy they would use in ordinary congestion -- completely unaware that the situation is physically impossible."
+
       relational:
-        positioning: {default: lateral_observer}
+        positioning:
+          default: lateral_observer
+          trajectory: null
         audience_implication: co_observer
-        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 5}
-        performed_relatability: {present: true}
+        shared_experience:
+          required: true
+          universality: universal
+          comprehensibility_without_experience: 5
+        performed_relatability:
+          present: true
+
       narrative:
-        routine_id: s02e01_traffic_lanes
+        callbacks_to: []
+        callback_is_primary_pivot: null
+        running_premise: null
+        tag_callbacks_to: null
+        anti_callback: null
+        routine_id: "s02e01_traffic_lanes"
+        position_in_routine: 5
+        routine_total_jokes: 5
         position_in_set: opener
+
     performance:
       performer: seinfeld
+      delivery:
+        cadence: "{UNSPECIFIED}"
+        pause_placement: []
+        repetition: null
+        vocal_register_shifts: []
+        estimated_duration_seconds: null
+        register_break:
+          present: false
+          at: null
+          direction: null
+        act_out_voice:
+          character_register: null
+      voice:
+        persona_markers: []
+        signature_phrases: []
+        register: default
+        editorializes:
+          present: null
+          kind: null
+      affective:
+        default_register:
+          valence: null
+          arousal: null
+        trajectory: null
+        shifts_are_load_bearing: null
+        deviates_from_performer_default: null
+      relational:
+        vulnerability:
+          personal_exposure: null
+          emotional_risk: null
+        performed_relatability:
+          intensity: null
+        positioning_deviation: null
+
+    meta:
+      comments_on_form: null
+      breaks_fourth_wall: null
+
     analysis:
-      adversarial: {confidence: high}
-    notes: "This is the monologue's closer and strongest laugh-point. The act-out driver's register gap (unaware_of_absurdity) is the core mechanism. 'I'm gonna try to get off and get back on going the other way' is a tag that extends the mundane-reaction premise — still in casual problem-solving mode about a physically impossible situation."
+      commutation:
+        load_bearing_element:
+          field_path: ""
+          gloss: ""
+        removable_elements:
+          - field_path: ""
+            gloss: ""
+        uncertain_elements:
+          - field_path: ""
+            gloss: ""
+      voice_portability:
+        mort: null
+        cece: null
+      adversarial:
+        counterarguments_considered:
+          - alternative: "Could be extension -- continuing the backwards-traffic premise further."
+            why_rejected: "The humor here is not in pushing the premise further logically. It's in the FRAME MISMATCH: an impossible situation is met with an ordinary response. The joke depends on the audience seeing the same event (backwards traffic) through two frames simultaneously -- the absurd reality vs. the mundanely inadequate reaction. This is reinterpretation: the impossible situation is reread through the driver's casual-complaint frame."
+          - alternative: "Could be articulation -- the audience recognizes the mundane complaint register."
+            why_rejected: "Frame-dependency test: state it in the audience's existing frame ('if traffic went backwards, people would freak out') and the humor dies. The humor REQUIRES the reframe -- treating an impossible situation with normalcy. The mismatch between the anomaly and the register is the joke, not the recognition of the complaint style alone."
+          - alternative: "Scale_shift contraction -- monumental situation treated as mundane."
+            why_rejected: "Swap test: could this reinterpretation work with expansion (treating backwards traffic as even MORE cosmic)? Not really -- the joke IS the deflation from impossible to mundane. The contraction is fused with the reinterpretation operation (the reinterpretation IS the move from extraordinary to ordinary). Set to none per the strict test."
+        confidence: high
+
+    notes: |
+      This joke is structurally parallel to the S01E06 example given in the templates
+      vocabulary for monumental_as_mundane ('Boy, this is some really bad traffic now,
+      boy'). The tag ('I'm gonna try to get off and get back on going the other way')
+      extends the same register mismatch by applying practical traffic-coping strategy
+      to an impossible situation, deepening the unaware_of_absurdity gap without
+      introducing a new pivot. Scale_shift set to none because the contraction is
+      inseparable from the reinterpretation -- the reinterpretation IS the deflation.

@@ -106,6 +106,95 @@
 #     completely different subjects. If a proposed template only applies
 #     to jokes about a specific subject, it's a content property
 #
+# --- REPRODUCIBILITY REQUIREMENT ---
+#
+# Every [STRUCTURED] field must have a reproducibility mechanism — a
+# defined way for two independent annotators to converge on the same
+# value. The mechanism varies by field type:
+#
+#   Controlled vocabulary fields (operation, template, positioning, etc.):
+#     Reproducibility comes from the vocabulary definition: criterion,
+#     positive example, negative example, distinguished_from. If two
+#     annotators read the same vocabulary file and apply it to the same
+#     joke, they should usually agree. Inter-annotator agreement target:
+#     ≥80% on controlled vocabulary fields.
+#
+#   Testable fields (operation, reading_switch, wordplay):
+#     Reproducibility comes from a concrete test that produces a written
+#     artifact. If the test produces the artifact, the value fits. If it
+#     doesn't, it doesn't. Tests are the strongest reproducibility
+#     mechanism.
+#
+#   Scale fields (vulnerability, specificity, comprehensibility, etc.):
+#     Reproducibility comes from anchor descriptions at each integer
+#     value. Annotators calibrate against the anchors.
+#
+#   Free-reference fields (concepts, pivot_concept):
+#     These reference an open vocabulary (the concept graph) rather than
+#     a closed controlled vocabulary. Reproducibility requires:
+#     (a) A REGISTRY of existing nodes to match against before creating
+#         new ones (engine/concepts/_registry.yaml)
+#     (b) NORMALIZATION rules for node IDs (lowercase, underscores,
+#         plural for countable)
+#     (c) A GRANULARITY standard: concepts should be at the level where
+#         swapping the concept for a sibling would change the joke's
+#         humor. "traffic" is too broad (many different traffic jokes
+#         work differently). "lane_changing_during_rush_hour_on_I-95"
+#         is too narrow (the joke would work on any highway). The right
+#         level is where the concept does load-bearing work in the
+#         joke's mechanism.
+#     (d) For pivot_concept specifically: "which concept is doing the
+#         load-bearing recontextualization work?" If you removed this
+#         concept and substituted another, would the joke's operation
+#         break? If yes, it's the pivot concept.
+#
+# --- SYNONYMY AND AGREEMENT ---
+#
+# Reproducibility does NOT require identical strings — it requires
+# convergence to the same MEANING. Two types of surface disagreement
+# are acceptable:
+#
+#   SYNONYMOUS STRINGS: Two annotators write different words for the
+#     same concept (e.g., "cheque" vs "check" vs "cheque_writing").
+#     This is resolved by the concept registry's alias system — all
+#     three map to the same node_id. Synonymy is NOT a reproducibility
+#     failure. The test is: "do these strings resolve to the same
+#     registry node?" If yes, the annotators agree.
+#
+#   EQUIVALENT CONTROLLED-VOCABULARY VALUES: For fields with
+#     distinguished_from blocks, if two annotators pick different
+#     values but both acknowledge the other as a close alternative
+#     (e.g., one picks reinterpretation and notes "close call with
+#     articulation"), this is a BOUNDARY case, not a failure. The
+#     schema tracks these via the adversarial.counterarguments_
+#     considered field. Boundary cases signal where vocabulary
+#     definitions need sharpening, not where annotators are wrong.
+#
+# Three types of disagreement ARE reproducibility failures:
+#
+#   GRANULARITY MISMATCH: One annotator writes "traffic" (too broad),
+#     another writes "lane_changing" (correct grain). The substitution
+#     test should resolve this — "traffic" fails because many traffic
+#     jokes work differently and substituting "lane_changing" for
+#     "traffic" doesn't break ANY of them.
+#
+#   CATEGORY CONFUSION: One annotator writes a mechanism description
+#     as a concept ("absurdity", "comparison", "anticipation"). These
+#     belong in structural/logic fields, not in the concept graph.
+#     The registry's excluded-strings list catches these.
+#
+#   GENUINE DISAGREEMENT: Two annotators pick different operations
+#     for the same joke and neither acknowledges the other as a close
+#     alternative. This signals a vocabulary definition gap — the
+#     distinguished_from blocks need strengthening.
+#
+#   [GLOSS] fields are exempt from reproducibility requirements — they
+#   are human-readable reasoning traces, not engine inputs.
+#
+# When adding a new [STRUCTURED] field, specify which reproducibility
+# mechanism applies and verify that the mechanism is sufficient for
+# two annotators to converge.
+#
 # --- CROSS-LEVEL VALIDATION ---
 #
 # When adding a new field, ask:
@@ -182,11 +271,59 @@ joke:
 
     concepts: []                   # [STRUCTURED] list of concept-node references.
                                    #   Each entry is a node_id from engine/concepts/.
-                                   #   NOT bare strings — the engine uses these as
-                                   #   graph lookups.
+                                   #
+                                   #   REPRODUCIBILITY: free-reference field with
+                                   #   alias resolution. Two annotators writing
+                                   #   different strings for the same concept
+                                   #   (e.g., "cheque" vs "check") is NOT a
+                                   #   reproducibility failure — it's resolved by
+                                   #   the registry's alias system. The test is:
+                                   #   "do both strings resolve to the same
+                                   #   registry node?"
+                                   #
+                                   #   LOOKUP PROCEDURE:
+                                   #   1. Check engine/concepts/_registry.yaml for
+                                   #      a node whose aliases include your string
+                                   #   2. If found → use that node_id
+                                   #   3. If not found → check if your string is a
+                                   #      mechanism description (absurdity,
+                                   #      comparison, anticipation, etc.) — these
+                                   #      belong in structural/logic fields, NOT
+                                   #      in concepts. See the registry's excluded-
+                                   #      strings list.
+                                   #   4. If genuinely new concept → create a
+                                   #      provisional entry using a normalized
+                                   #      string (lowercase, underscores, plural
+                                   #      for countable). Apply the granularity
+                                   #      test below.
+                                   #
+                                   #   GRANULARITY TEST: "If I substituted a
+                                   #   sibling concept, would the joke's humor
+                                   #   change?" Too broad: "traffic" (many
+                                   #   traffic jokes work differently). Too narrow:
+                                   #   "lane_changing_on_I95" (works on any
+                                   #   highway). Right: "lane_changing" — load-
+                                   #   bearing grain.
+                                   #
+                                   #   DO NOT include mechanism descriptions as
+                                   #   concepts. "absurdity", "comparison",
+                                   #   "inadequacy", "understatement" describe
+                                   #   how the joke works, not what it's about.
 
     pivot_concept: null            # [STRUCTURED] concept-node reference.
-                                   #   The node the pivot turns on.
+                                   #   The concept doing the load-bearing
+                                   #   recontextualization work at the pivot.
+                                   #
+                                   #   REPRODUCIBILITY TEST: if you removed this
+                                   #   concept and substituted another, would the
+                                   #   joke's operation break? If yes, this is the
+                                   #   pivot concept. If the joke would still work
+                                   #   with a different concept in this slot, the
+                                   #   pivot concept might be more abstract than
+                                   #   what you named.
+                                   #
+                                   #   null when pivot is purely affective with no
+                                   #   concept anchor.
 
     specificity:
       default_level: null          # [STRUCTURED] integer 1-5
@@ -218,6 +355,42 @@ joke:
                                    #   negation | reinterpretation | transplant |
                                    #   mapping | extension | articulation
 
+      operation_alternative: null  # [STRUCTURED] optional. Single-valued.
+                                   #   null | negation | reinterpretation |
+                                   #   transplant | mapping | extension |
+                                   #   articulation
+                                   #
+                                   #   Populated ONLY when the annotator's
+                                   #   confidence on the operation is medium or
+                                   #   low. Records the next-best operation
+                                   #   classification — the one that was
+                                   #   seriously considered and narrowly rejected.
+                                   #
+                                   #   PURPOSE: enables the generation engine to
+                                   #   branch on boundary cases. When non-null,
+                                   #   the generator can produce candidate jokes
+                                   #   from both the primary and alternative
+                                   #   operations, then select the stronger
+                                   #   output. This turns annotation ambiguity
+                                   #   into generative variety.
+                                   #
+                                   #   WHEN TO POPULATE:
+                                   #   - The annotator ran the operation tests
+                                   #     and two operations produced plausible
+                                   #     artifacts
+                                   #   - The distinction required a judgment
+                                   #     call rather than a clear test result
+                                   #   - Typically: reinterpretation/articulation
+                                   #     boundary in observational comedy
+                                   #
+                                   #   WHEN TO LEAVE NULL:
+                                   #   - The primary operation's test produced
+                                   #     a clean artifact and no other test came
+                                   #     close
+                                   #   - confidence is high
+                                   #
+                                   #   Added in v0.9.2.
+
       reading_switch: none         # [STRUCTURED] optional. Single-valued.
                                    #   none | figurative_to_literal |
                                    #   literal_to_figurative
@@ -229,13 +402,39 @@ joke:
       scale_shift: none            # [STRUCTURED] optional. Single-valued.
                                    #   none | expansion | contraction
                                    #
-                                   #   Independence test: "If I removed the scale
-                                   #   change but kept the operation, would the
-                                   #   joke still work at reduced effectiveness?"
-                                   #   If yes → independent modifier, populate.
-                                   #   If the joke dies entirely → the scale
-                                   #   change IS the operation (likely
-                                   #   reinterpretation), set to none.
+                                   #   STRICT independence test (v0.9.1):
+                                   #   "Could I SWAP the scale_shift direction
+                                   #   (expansion ↔ contraction) while keeping
+                                   #   the same operation, and the joke would
+                                   #   still be recognizably the same joke?"
+                                   #
+                                   #   If swapping direction is CONCEIVABLE
+                                   #   (the joke could work with the opposite
+                                   #   scale movement) → scale_shift is
+                                   #   independent, populate it.
+                                   #
+                                   #   If swapping direction is INCONCEIVABLE
+                                   #   (a reinterpretation that reframes grand
+                                   #   as trivial CANNOT work as grand-to-grander)
+                                   #   → the scale change is fused with the
+                                   #   operation, set to none.
+                                   #
+                                   #   Example — INDEPENDENT: "Wherever you are
+                                   #   in life, you've gotta go" is
+                                   #   reinterpretation + expansion. Could the
+                                   #   same reinterpretation work with contraction
+                                   #   instead? Yes — the social observation could
+                                   #   be contracted to a personal quirk rather
+                                   #   than expanded to a life principle. The
+                                   #   expansion is a separable choice.
+                                   #
+                                   #   Example — FUSED: "To be out, this is out"
+                                   #   is reinterpretation + contraction. Could
+                                   #   this reinterpretation work with expansion?
+                                   #   No — the reinterpretation IS the move from
+                                   #   philosophical to trivial. Contraction is
+                                   #   not a modifier here; it's what the
+                                   #   reinterpretation does. Set to none.
 
       wordplay: none               # [STRUCTURED] optional. Single-valued.
                                    #   none | phonemic_pair | portmanteau |
@@ -251,6 +450,28 @@ joke:
                                    #   establishes_premise |
                                    #   establishes_anomaly |
                                    #   establishes_sequence
+                                   #
+                                   #   PREMISE vs CONVENTION decision procedure:
+                                   #   "Would the audience hold this belief
+                                   #   WITHOUT the comedian stating it?"
+                                   #   YES → convention (pre-existing norm)
+                                   #   NO → premise (comedian asks audience to
+                                   #     accept this for the bit to work)
+                                   #
+                                   #   "The middle finger is an insult" → the
+                                   #   audience already believes this. Convention.
+                                   #   "Body parts can be used as insults and
+                                   #   effort correlates with insult severity" →
+                                   #   the audience doesn't hold this until Jerry
+                                   #   frames it. Premise.
+                                   #
+                                   #   PREMISE vs BEHAVIOR decision procedure:
+                                   #   "Is the setup describing something people
+                                   #   DO, or something the comedian CLAIMS?"
+                                   #   People do it → behavior.
+                                   #   Comedian claims it → premise.
+                                   #   "Men are drawn to tool work" → behavior.
+                                   #   "Fashion will eventually disappear" → premise.
 
     pivot_locus: ""                # [STRUCTURED] logical | affective | both
 

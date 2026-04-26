@@ -1,151 +1,578 @@
-# FILE: annotations/s02e06_opening_pass2.yaml
-jokes:
-  - joke_id: "seinfeld_s02e06_opening_01"
-    source:
-      work: "Seinfeld S02E06 'The Statue' opening monologue"
-      medium: sitcom_opener
-      year: 1991
-    transcript_fragment: "According to the information that I have in the envelope that I've received, it seems that I may have already won some very valuable prizes."
-    joke:
-      content:
-        primary_domain: [consumer_culture]
-        concepts: [sweepstakes, self_importance, anticipation]
-        pivot_concept: sweepstakes
-        specificity: {default_level: 3}
-        content_moves: []
-      logic:
-        setup_expectation: "Jerry builds excitement with 'very exciting news' and coy hedging ('not a definite thing yet'), implying genuinely significant personal news worth sharing."
-        punchline_violation: "The 'news' is a mass-mailed sweepstakes envelope -- the most impersonal, worthless form of correspondence possible. The grandiose framing collapses into junk mail."
-        pivot_mechanism:
-          operation: reinterpretation
-          reading_switch: none
-          scale_shift: contraction
-          wordplay: none
-        setup_frame: establishes_expectation
-        pivot_locus: logical
-        resolution_requires: [shared_experience]
-      structure:
-        primary_template: mundane_as_monumental
-        secondary_templates: []
-        subversions_applied: []
-        has_tag: false
-        tag_operation: null
-        tag_has_own_pivot: null
-        act_out:
-          present: false
-          character_type: null
-          register_gap: null
-          character_gloss: ""
-      relational:
-        positioning: {default: lateral_observer}
-        audience_implication: co_observer
-        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 4}
-        performed_relatability: {present: true}
-      narrative:
-        routine_id: "seinfeld_s02e06_sweepstakes"
-        position_in_set: opener
-    performance:
-      performer: seinfeld
-    analysis:
-      adversarial: {confidence: high}
-    notes: "The bit opens with Jerry performing sincere excitement, which turns out to be ironic -- the audience realizes the framing was already mocking the sweepstakes language."
+# S02E06 "The Statue" — Opening Monologue Pass 2 Annotation
+# Schema v0.9
+# Routine: sweepstakes deception — treating junk mail as real news, then flipping to brutal honesty
+# Laugh-points: 4
 
-  - joke_id: "seinfeld_s02e06_opening_02"
-    source:
-      work: "Seinfeld S02E06 'The Statue' opening monologue"
-      medium: sitcom_opener
-      year: 1991
-    transcript_fragment: "I'd like once for a sweepstakes company to have some guts, come out with the truth... Send out envelopes, 'You have definitely lost!'"
-    joke:
-      content:
-        primary_domain: [consumer_culture]
-        concepts: [sweepstakes, honesty, rejection]
-        pivot_concept: honesty
-        specificity: {default_level: 3}
-        content_moves: []
-      logic:
-        setup_expectation: "Sweepstakes companies use optimistic hedging language ('you may have already won') as a marketing tactic. Jerry proposes they 'tell the truth' -- we expect a reasonable honest alternative."
-        punchline_violation: "The 'honest' version is brutally, absurdly blunt: 'You have definitely lost!' -- the opposite pole of the euphemistic original, delivered with the same direct-mail formality."
-        pivot_mechanism:
-          operation: negation
-          reading_switch: none
-          scale_shift: none
-          wordplay: none
-        setup_frame: establishes_convention
-        pivot_locus: logical
-        resolution_requires: [shared_experience]
-      structure:
-        primary_template: comparison
-        secondary_templates: []
-        subversions_applied: []
-        has_tag: true
-        tag_operation: extends
-        tag_has_own_pivot: false
-        act_out:
-          present: true
-          character_type: authority
-          register_gap: treats_mundane_as_serious
-          character_gloss: "Sweepstakes company delivering rejection with the same formal direct-mail register used for the optimistic version"
-      relational:
-        positioning: {default: lateral_observer}
-        audience_implication: co_observer
-        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 4}
-        performed_relatability: {present: true}
-      narrative:
-        routine_id: "seinfeld_s02e06_sweepstakes"
-        position_in_set: opener
-    performance:
-      performer: seinfeld
-    analysis:
-      adversarial: {confidence: high}
-    notes: "The negation is clean: 'may have already won' becomes 'have definitely lost.' The direct-mail register is maintained in both versions, which is what makes it work."
+# ============================================================================
+# JOKE 1: Treating sweepstakes mail as genuinely exciting personal news
+# ============================================================================
 
-  - joke_id: "seinfeld_s02e06_opening_03"
-    source:
-      work: "Seinfeld S02E06 'The Statue' opening monologue"
-      medium: sitcom_opener
-      year: 1991
-    transcript_fragment: "You turn it over, giant printing, 'Not even close!' You open it up, there's this whole letter of explanation, 'Even we cannot believe how badly you've done in this contest.'"
-    joke:
-      content:
-        primary_domain: [consumer_culture]
-        concepts: [sweepstakes, rejection, humiliation]
-        pivot_concept: rejection
-        specificity: {default_level: 4}
-        content_moves: []
-      logic:
-        setup_expectation: "Having established the 'honest sweepstakes' premise with 'You have definitely lost,' the audience expects the bit is complete."
-        punchline_violation: "Jerry escalates through the physical details of the mailer -- flipping it over to find 'Not even close!', then opening it to find the company expressing disbelief at how badly you lost. Each beat adds more specific cruelty while maintaining the formal direct-mail structure."
-        pivot_mechanism:
-          operation: extension
-          reading_switch: none
-          scale_shift: expansion
-          wordplay: none
-        setup_frame: establishes_premise
-        pivot_locus: both
-        resolution_requires: [shared_experience]
-      structure:
-        primary_template: escalation
-        secondary_templates: [mundane_as_monumental]
-        subversions_applied: []
-        has_tag: false
-        tag_operation: null
-        tag_has_own_pivot: null
-        act_out:
-          present: true
-          character_type: authority
-          register_gap: treats_mundane_as_serious
-          character_gloss: "Sweepstakes company doubling down with sincere editorial dismay at the recipient's failure"
-      relational:
-        positioning: {default: lateral_observer}
-        audience_implication: co_observer
-        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 4}
-        performed_relatability: {present: true}
-      narrative:
-        routine_id: "seinfeld_s02e06_sweepstakes"
-        position_in_set: opener
-    performance:
-      performer: seinfeld
-    analysis:
-      adversarial: {confidence: high}
-    notes: "Classic Seinfeld escalation: the honest-rejection premise is followed to progressively more absurd specificity. The physical details (turning it over, opening it up) mirror the actual experience of handling a sweepstakes mailer, grounding the escalation."
+- joke_id: seinfeld_s02e06_opening_01
+  source:
+    work: "Seinfeld S02E06 'The Statue' opening monologue"
+    medium: sitcom_opener
+    year: 1991
+
+  annotation_status:
+    transcription: complete
+    decomposition: complete
+    performance: incomplete
+    commutation: incomplete
+    adversarial_review: incomplete
+    voice_attribution: incomplete
+
+  joke:
+    content:
+      primary_domain: [commerce, deception]
+      concepts: [sweepstakes_deception]
+      pivot_concept: sweepstakes_deception
+      specificity:
+        default_level: 3
+        trajectory: null
+      content_moves: []
+
+    logic:
+      setup_expectation: "Jerry announces he has exciting news and builds suspense about it — the audience expects a genuine personal announcement (career milestone, relationship news, something real)"
+      punchline_violation: "The 'exciting news' turns out to be a sweepstakes 'you may have already won' envelope — junk mail that everyone receives and ignores. Jerry performs the sweepstakes language at face value, treating mass-mailed deceptive marketing as a personal honor, even accepting applause for it."
+      pivot_mechanism:
+        operation: reinterpretation
+        operation_alternative: null
+        reading_switch: none
+        scale_shift: none
+        wordplay: none
+      setup_frame: establishes_expectation
+      pivot_locus: logical
+      resolution_requires: [shared_experience]
+
+    structure:
+      primary_template: mundane_as_monumental
+      secondary_templates: []
+      subversions_applied: []
+      has_tag: false
+      tag_operation: null
+      tag_has_own_pivot: null
+      act_out:
+        present: true
+        character_type: innocent
+        register_gap: unaware_of_absurdity
+        character_gloss: "Person who genuinely believes the sweepstakes envelope is real exciting news and accepts congratulations for it"
+
+    relational:
+      positioning:
+        default: lateral_observer
+        trajectory: null
+      audience_implication: co_observer
+      shared_experience:
+        required: true
+        universality: universal
+        comprehensibility_without_experience: 4
+      performed_relatability:
+        present: true
+
+    narrative:
+      callbacks_to: []
+      callback_is_primary_pivot: null
+      running_premise: sweepstakes_honesty_routine
+      tag_callbacks_to: null
+      anti_callback: null
+      routine_id: s02e06_sweepstakes
+      position_in_routine: 1
+      routine_total_jokes: 4
+      position_in_set: opener
+
+  performance:
+    performer: jerry_seinfeld
+    delivery:
+      cadence: "{UNSPECIFIED}"
+      pause_placement: []
+      repetition: null
+      vocal_register_shifts: []
+      estimated_duration_seconds: null
+      register_break:
+        present: false
+        at: null
+        direction: null
+      act_out_voice:
+        character_register: null
+    voice:
+      persona_markers: []
+      signature_phrases: []
+      register: default
+      editorializes:
+        present: null
+        kind: null
+    affective:
+      default_register:
+        valence: null
+        arousal: null
+      trajectory: null
+      shifts_are_load_bearing: null
+      deviates_from_performer_default: null
+    relational:
+      vulnerability:
+        personal_exposure: null
+        emotional_risk: null
+      performed_relatability:
+        intensity: null
+      positioning_deviation: null
+
+  meta:
+    comments_on_form: null
+    breaks_fourth_wall: null
+
+  analysis:
+    commutation:
+      load_bearing_element:
+        field_path: ""
+        gloss: ""
+      removable_elements:
+        - field_path: ""
+          gloss: ""
+      uncertain_elements:
+        - field_path: ""
+          gloss: ""
+    voice_portability:
+      mort: null
+      cece: null
+    adversarial:
+      counterarguments_considered:
+        - alternative: "Could be articulation — naming the shared experience of receiving sweepstakes mail"
+          why_rejected: "The humor is not simply in naming the experience. It requires the FRAME SHIFT: Jerry presents junk mail as though it were real exciting news. Remove the reframe (state it as 'I got sweepstakes mail') and the joke dies. The humor is in performing the sweepstakes language as though it were sincere — two readings of the same material (junk mail vs. genuine honor). This is reinterpretation."
+        - alternative: "Could be negation — the audience expects real news, gets fake news"
+          why_rejected: "Nothing is rendered false. The sweepstakes envelope IS real — Jerry just reads it in a frame the audience wouldn't. The setup's expectation (real news) is reframed, not negated. The envelope exists; it's the frame of importance that shifts."
+        - alternative: "scale_shift could be contraction — deflation from real news to junk mail"
+          why_rejected: "The joke works in the opposite direction — it ELEVATES junk mail to the status of real news. The mundane_as_monumental template captures this. The scale movement is intrinsic to the reinterpretation (treating trivial as important IS the reframe), so the swap test fails: you cannot swap to expansion because it's already operating as elevation. Set to none."
+      confidence: high
+
+  notes: |
+    Jerry performs an extended act-out of someone who takes sweepstakes mail at face value. The mundane_as_monumental template fits: the rhetorical gravity of a personal announcement is applied to mass-mailed junk. The act-out character is an innocent who doesn't realize the sweepstakes language is deceptive marketing. The audience laugh comes from recognizing the sweepstakes language and seeing it performed sincerely. The sweepstakes_deception concept already exists in the registry.
+
+# ============================================================================
+# JOKE 2: Honest sweepstakes — "You have definitely lost!"
+# ============================================================================
+
+- joke_id: seinfeld_s02e06_opening_02
+  source:
+    work: "Seinfeld S02E06 'The Statue' opening monologue"
+    medium: sitcom_opener
+    year: 1991
+
+  annotation_status:
+    transcription: complete
+    decomposition: complete
+    performance: incomplete
+    commutation: incomplete
+    adversarial_review: incomplete
+    voice_attribution: incomplete
+
+  joke:
+    content:
+      primary_domain: [commerce, deception]
+      concepts: [sweepstakes_deception]
+      pivot_concept: sweepstakes_deception
+      specificity:
+        default_level: 3
+        trajectory: null
+      content_moves: []
+
+    logic:
+      setup_expectation: "Sweepstakes companies use deliberately vague, hopeful language — 'You may have already won' — to create false hope and get you to open the envelope. The audience knows this formula as an established convention of deceptive marketing."
+      punchline_violation: "The formula is negated point by point: 'may have already won' becomes 'have definitely lost.' The sweepstakes company tells the blunt truth instead of the customary deception. Every element of the original formula is precisely inverted."
+      pivot_mechanism:
+        operation: negation
+        operation_alternative: null
+        reading_switch: none
+        scale_shift: none
+        wordplay: none
+      setup_frame: establishes_convention
+      pivot_locus: logical
+      resolution_requires: [shared_experience]
+
+    structure:
+      primary_template: bare_observation
+      secondary_templates: []
+      subversions_applied: []
+      has_tag: true
+      tag_operation: extends
+      tag_has_own_pivot: true
+      act_out:
+        present: false
+        character_type: null
+        register_gap: null
+        character_gloss: ""
+
+    relational:
+      positioning:
+        default: lateral_observer
+        trajectory: null
+      audience_implication: co_observer
+      shared_experience:
+        required: true
+        universality: universal
+        comprehensibility_without_experience: 4
+      performed_relatability:
+        present: true
+
+    narrative:
+      callbacks_to: [seinfeld_s02e06_opening_01]
+      callback_is_primary_pivot: false
+      running_premise: sweepstakes_honesty_routine
+      tag_callbacks_to: null
+      anti_callback: null
+      routine_id: s02e06_sweepstakes
+      position_in_routine: 2
+      routine_total_jokes: 4
+      position_in_set: opener
+
+  performance:
+    performer: jerry_seinfeld
+    delivery:
+      cadence: "{UNSPECIFIED}"
+      pause_placement: []
+      repetition: null
+      vocal_register_shifts: []
+      estimated_duration_seconds: null
+      register_break:
+        present: false
+        at: null
+        direction: null
+      act_out_voice:
+        character_register: null
+    voice:
+      persona_markers: []
+      signature_phrases: []
+      register: default
+      editorializes:
+        present: null
+        kind: null
+    affective:
+      default_register:
+        valence: null
+        arousal: null
+      trajectory: null
+      shifts_are_load_bearing: null
+      deviates_from_performer_default: null
+    relational:
+      vulnerability:
+        personal_exposure: null
+        emotional_risk: null
+      performed_relatability:
+        intensity: null
+      positioning_deviation: null
+
+  meta:
+    comments_on_form: null
+    breaks_fourth_wall: null
+
+  analysis:
+    commutation:
+      load_bearing_element:
+        field_path: ""
+        gloss: ""
+      removable_elements:
+        - field_path: ""
+          gloss: ""
+      uncertain_elements:
+        - field_path: ""
+          gloss: ""
+    voice_portability:
+      mort: null
+      cece: null
+    adversarial:
+      counterarguments_considered:
+        - alternative: "Could be reinterpretation — reframing the sweepstakes formula"
+          why_rejected: "The sweepstakes formula is not reread under a different frame — it is point-for-point NEGATED. 'May have already won' becomes 'have definitely lost.' The setup implies X (deceptive hope); the punchline asserts not-X (blunt rejection). The truth-value of the sweepstakes message is flipped. This is clean negation."
+        - alternative: "Could be extension — following the 'what if they were honest' premise to its conclusion"
+          why_rejected: "The initial flip from 'you may have won' to 'you have definitely lost' is a single-move negation, not a premise being followed forward. The SUBSEQUENT jokes (03 and 04) extend this negated premise, but this first flip is the pure contradiction that establishes the new frame."
+      confidence: high
+
+  notes: |
+    Clean negation: the sweepstakes formula 'you may have already won' is precisely inverted to 'you have definitely lost.' Every word carries a negation — 'may' to 'definitely,' 'won' to 'lost.' The bare_observation template fits because the joke's rhetorical shape is the simple act of stating the inversion — no escalation, no argument chain, no register mismatch. The humor is in the precision of the word-for-word flip. Tags in jokes 03 and 04 will extend this premise.
+
+# ============================================================================
+# JOKE 3: "Not even close!" — giant printing on the back
+# ============================================================================
+
+- joke_id: seinfeld_s02e06_opening_03
+  source:
+    work: "Seinfeld S02E06 'The Statue' opening monologue"
+    medium: sitcom_opener
+    year: 1991
+
+  annotation_status:
+    transcription: complete
+    decomposition: complete
+    performance: incomplete
+    commutation: incomplete
+    adversarial_review: incomplete
+    voice_attribution: incomplete
+
+  joke:
+    content:
+      primary_domain: [commerce, deception]
+      concepts: [sweepstakes_deception]
+      pivot_concept: sweepstakes_deception
+      specificity:
+        default_level: 4
+        trajectory: null
+      content_moves: []
+
+    logic:
+      setup_expectation: "The honest-sweepstakes premise has been established with 'You have definitely lost' — the audience is in the frame of a sweepstakes company being brutally truthful"
+      punchline_violation: "The company goes beyond simple honesty to emphatic, enthusiastic rejection — giant printing on the back of the envelope saying 'Not even close!' The honest sweepstakes company is not merely truthful but gleefully rubbing it in, following the honesty premise past civility into cruelty"
+      pivot_mechanism:
+        operation: extension
+        operation_alternative: null
+        reading_switch: none
+        scale_shift: none
+        wordplay: none
+      setup_frame: establishes_premise
+      pivot_locus: logical
+      resolution_requires: [shared_experience]
+
+    structure:
+      primary_template: escalation
+      secondary_templates: []
+      subversions_applied:
+        - type: specificity_subversion
+          at: punchline
+      has_tag: false
+      tag_operation: null
+      tag_has_own_pivot: null
+      act_out:
+        present: false
+        character_type: null
+        register_gap: null
+        character_gloss: ""
+
+    relational:
+      positioning:
+        default: lateral_observer
+        trajectory: null
+      audience_implication: co_observer
+      shared_experience:
+        required: true
+        universality: universal
+        comprehensibility_without_experience: 4
+      performed_relatability:
+        present: false
+
+    narrative:
+      callbacks_to: [seinfeld_s02e06_opening_02]
+      callback_is_primary_pivot: false
+      running_premise: sweepstakes_honesty_routine
+      tag_callbacks_to: null
+      anti_callback: null
+      routine_id: s02e06_sweepstakes
+      position_in_routine: 3
+      routine_total_jokes: 4
+      position_in_set: opener
+
+  performance:
+    performer: jerry_seinfeld
+    delivery:
+      cadence: "{UNSPECIFIED}"
+      pause_placement: []
+      repetition: null
+      vocal_register_shifts: []
+      estimated_duration_seconds: null
+      register_break:
+        present: false
+        at: null
+        direction: null
+      act_out_voice:
+        character_register: null
+    voice:
+      persona_markers: []
+      signature_phrases: []
+      register: default
+      editorializes:
+        present: null
+        kind: null
+    affective:
+      default_register:
+        valence: null
+        arousal: null
+      trajectory: null
+      shifts_are_load_bearing: null
+      deviates_from_performer_default: null
+    relational:
+      vulnerability:
+        personal_exposure: null
+        emotional_risk: null
+      performed_relatability:
+        intensity: null
+      positioning_deviation: null
+
+  meta:
+    comments_on_form: null
+    breaks_fourth_wall: null
+
+  analysis:
+    commutation:
+      load_bearing_element:
+        field_path: ""
+        gloss: ""
+      removable_elements:
+        - field_path: ""
+          gloss: ""
+      uncertain_elements:
+        - field_path: ""
+          gloss: ""
+    voice_portability:
+      mort: null
+      cece: null
+    adversarial:
+      counterarguments_considered:
+        - alternative: "Could be negation — another inversion of sweepstakes norms"
+          why_rejected: "The negation happened in joke 02 (won to lost). This joke ACCEPTS the negated premise (honest sweepstakes) and pushes it further — the company doesn't just tell you the truth, it rubs it in with 'giant printing.' The humor is in how far the honesty goes, not in another truth-value flip. Extension: (1) accepted premise: sweepstakes tells truth, (2) absurd-but-logical conclusion: they emphasize the rejection with giant text and editorial commentary."
+        - alternative: "Could be a tag on joke 02 rather than a standalone joke"
+          why_rejected: "It has its own pivot — the escalation from simple honesty to emphatic rejection is a new comedic move. The specificity_subversion of 'giant printing' and 'you turn it over' adds physical staging detail that goes beyond joke 02's conceptual flip."
+      confidence: high
+
+  notes: |
+    Extension of the honest-sweepstakes premise: the company is not merely honest but enthusiastically so. 'You turn it over, giant printing' adds physical specificity — the audience can picture the envelope. The escalation template captures the building intensity across the routine: each successive message from the imaginary honest company commits harder to the rejection. The specificity_subversion at the punchline makes the abstract premise concrete with 'giant printing.'
+
+# ============================================================================
+# JOKE 4: "Even we cannot believe how badly you've done"
+# ============================================================================
+
+- joke_id: seinfeld_s02e06_opening_04
+  source:
+    work: "Seinfeld S02E06 'The Statue' opening monologue"
+    medium: sitcom_opener
+    year: 1991
+
+  annotation_status:
+    transcription: complete
+    decomposition: complete
+    performance: incomplete
+    commutation: incomplete
+    adversarial_review: incomplete
+    voice_attribution: incomplete
+
+  joke:
+    content:
+      primary_domain: [commerce, deception]
+      concepts: [sweepstakes_deception]
+      pivot_concept: sweepstakes_deception
+      specificity:
+        default_level: 4
+        trajectory: null
+      content_moves: []
+
+    logic:
+      setup_expectation: "The honest-sweepstakes premise has been escalated to 'Not even close!' — the audience expects another escalation of the rejection, possibly more direct or more insulting"
+      punchline_violation: "The inside letter expresses the company's own AMAZEMENT at how badly the recipient has performed — 'Even we cannot believe how badly you've done in this contest.' The sweepstakes company, which presumably sees millions of entries, is PERSONALLY ASTONISHED by your failure. The rejection shifts from impersonal to intimately incredulous."
+      pivot_mechanism:
+        operation: extension
+        operation_alternative: null
+        reading_switch: none
+        scale_shift: expansion
+        wordplay: none
+      setup_frame: establishes_premise
+      pivot_locus: both
+      resolution_requires: [shared_experience]
+
+    structure:
+      primary_template: escalation
+      secondary_templates: [mundane_as_monumental]
+      subversions_applied: []
+      has_tag: false
+      tag_operation: null
+      tag_has_own_pivot: null
+      act_out:
+        present: true
+        character_type: authority
+        register_gap: treats_mundane_as_serious
+        character_gloss: "The sweepstakes company expressing genuine astonishment at the recipient's failure, as though losing a random drawing were a remarkable personal achievement in incompetence"
+
+    relational:
+      positioning:
+        default: lateral_observer
+        trajectory: null
+      audience_implication: co_observer
+      shared_experience:
+        required: true
+        universality: universal
+        comprehensibility_without_experience: 5
+      performed_relatability:
+        present: false
+
+    narrative:
+      callbacks_to: [seinfeld_s02e06_opening_02, seinfeld_s02e06_opening_03]
+      callback_is_primary_pivot: false
+      running_premise: sweepstakes_honesty_routine
+      tag_callbacks_to: null
+      anti_callback: null
+      routine_id: s02e06_sweepstakes
+      position_in_routine: 4
+      routine_total_jokes: 4
+      position_in_set: opener
+
+  performance:
+    performer: jerry_seinfeld
+    delivery:
+      cadence: "{UNSPECIFIED}"
+      pause_placement: []
+      repetition: null
+      vocal_register_shifts: []
+      estimated_duration_seconds: null
+      register_break:
+        present: false
+        at: null
+        direction: null
+      act_out_voice:
+        character_register: null
+    voice:
+      persona_markers: []
+      signature_phrases: []
+      register: default
+      editorializes:
+        present: null
+        kind: null
+    affective:
+      default_register:
+        valence: null
+        arousal: null
+      trajectory: null
+      shifts_are_load_bearing: null
+      deviates_from_performer_default: null
+    relational:
+      vulnerability:
+        personal_exposure: null
+        emotional_risk: null
+      performed_relatability:
+        intensity: null
+      positioning_deviation: null
+
+  meta:
+    comments_on_form: null
+    breaks_fourth_wall: null
+
+  analysis:
+    commutation:
+      load_bearing_element:
+        field_path: ""
+        gloss: ""
+      removable_elements:
+        - field_path: ""
+          gloss: ""
+      uncertain_elements:
+        - field_path: ""
+          gloss: ""
+    voice_portability:
+      mort: null
+      cece: null
+    adversarial:
+      counterarguments_considered:
+        - alternative: "Could be negation — the company's amazement negates the expectation that they wouldn't care"
+          why_rejected: "The humor is not in contradicting an expectation but in following the honest-sweepstakes premise FURTHER — past simple rejection, past emphatic rejection, to the company being personally stunned. The escalation is the joke. Extension: (1) accepted premise: sweepstakes tells truth bluntly, (2) absurd-but-logical conclusion: they are so honest they express their own incredulity at the scale of your failure."
+        - alternative: "scale_shift could be none — is the expansion fused with the extension?"
+          why_rejected: "The extension could work with contraction instead: the letter could say 'honestly, we barely even looked at your entry' (trivializing rather than expanding). The expansion to 'even WE cannot believe' — treating a random sweepstakes loss as a historic personal failure — is a separable directional choice. The swap test passes."
+        - alternative: "Could the act-out be absent — is Jerry just narrating?"
+          why_rejected: "Jerry voices the letter's content in the register of a stunned authority figure. 'Even we cannot believe' adopts the company's perspective and voice. The character_type is authority (the company) and the register_gap is treats_mundane_as_serious (a random drawing treated as a measurable performance)."
+      confidence: high
+
+  notes: |
+    The routine closer. The extension reaches its absurd peak: the sweepstakes company, which runs a random drawing with millions of entries, is personally astonished by how badly you 'performed' — as though there were skill involved and you somehow failed at being randomly selected. The expansion is in the elevation of a random-chance non-event to something so remarkable that even the company is stunned. The mundane_as_monumental secondary template captures the letter's register: a formal letter of explanation about your astonishing failure in a contest you never entered. The act-out voices the company's incredulous tone.

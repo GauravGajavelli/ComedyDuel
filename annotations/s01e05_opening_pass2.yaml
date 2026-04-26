@@ -1,29 +1,48 @@
 # FILE: annotations/s01e05_opening_pass2.yaml
+# Episode: S01E05 "The Stock Tip" — Opening monologue
+# Pass 2 annotation (decomposition)
+# Annotated: 2026-04-26
+
 jokes:
   - joke_id: "seinfeld_s01e05_opening_01"
     source:
       work: "Seinfeld S01E05 'The Stock Tip' opening monologue"
       medium: sitcom_opener
       year: 1990
+
+    annotation_status:
+      transcription: complete
+      decomposition: complete
+      performance: incomplete
+      commutation: incomplete
+      adversarial_review: incomplete
+      voice_attribution: incomplete
+
     transcript_fragment: "Never liked the check at the end of the meal system, because money's a very different thing before and after you eat. Before you eat money has no value."
+
     joke:
       content:
-        primary_domain: [commerce, dining]
-        concepts: [restaurant, check, money, hunger, value_perception]
-        pivot_concept: money
-        specificity: {default_level: 2}
+        primary_domain: [money_and_commerce, social_ritual]
+        concepts: [restaurant_dining, money_value_perception, cheque_writing]
+        pivot_concept: money_value_perception
+        specificity:
+          default_level: 2
+          trajectory: null
         content_moves: []
+
       logic:
-        setup_expectation: "The check comes at the end of the meal - a standard, accepted convention of dining. The audience expects an observation about the annoyance of paying."
-        punchline_violation: "Money itself changes value based on hunger state. Before eating, money is worthless - you'd pay anything. The observation reframes the check-timing complaint as a deeper truth about how hunger distorts our perception of value."
+        setup_expectation: "The check arrives at the end of the meal. The audience expects a complaint about the timing or the amount -- standard restaurant gripes."
+        punchline_violation: "Instead of complaining about the check itself, Jerry names a deeper truth: money changes its subjective value based on hunger state. Before eating, you'd pay anything; after, you resent every dollar. The humor is in the precise articulation of a feeling everyone has had but never verbalized."
         pivot_mechanism:
           operation: articulation
+          operation_alternative: reinterpretation
           reading_switch: none
           scale_shift: none
           wordplay: none
         setup_frame: establishes_convention
         pivot_locus: logical
         resolution_requires: [shared_experience]
+
       structure:
         primary_template: bare_observation
         secondary_templates: []
@@ -31,45 +50,140 @@ jokes:
         has_tag: false
         tag_operation: null
         tag_has_own_pivot: null
-        act_out: {present: false, character_type: null, register_gap: null, character_gloss: ""}
+        act_out:
+          present: false
+          character_type: null
+          register_gap: null
+          character_gloss: ""
+
       relational:
-        positioning: {default: lateral_observer}
+        positioning:
+          default: lateral_observer
+          trajectory: null
         audience_implication: co_observer
-        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 5}
-        performed_relatability: {present: false}
+        shared_experience:
+          required: true
+          universality: universal
+          comprehensibility_without_experience: 5
+        performed_relatability:
+          present: false
+
       narrative:
+        callbacks_to: []
+        callback_is_primary_pivot: null
+        running_premise: null
+        tag_callbacks_to: null
+        anti_callback: null
         routine_id: "s01e05_restaurant_check"
+        position_in_routine: 1
+        routine_total_jokes: 3
         position_in_set: opener
+
     performance:
       performer: seinfeld
+      delivery:
+        cadence: "{UNSPECIFIED}"
+        pause_placement: []
+        repetition: null
+        vocal_register_shifts: []
+        estimated_duration_seconds: null
+        register_break:
+          present: false
+          at: null
+          direction: null
+        act_out_voice:
+          character_register: null
+      voice:
+        persona_markers: []
+        signature_phrases: []
+        register: default
+        editorializes:
+          present: null
+          kind: null
+      affective:
+        default_register:
+          valence: null
+          arousal: null
+        trajectory: null
+        shifts_are_load_bearing: null
+        deviates_from_performer_default: null
+      relational:
+        vulnerability:
+          personal_exposure: null
+          emotional_risk: null
+        performed_relatability:
+          intensity: null
+        positioning_deviation: null
+
+    meta:
+      comments_on_form: null
+      breaks_fourth_wall: null
+
     analysis:
-      adversarial: {confidence: medium}
-    notes: "Borderline articulation/reinterpretation. The observation that money changes value with hunger state is something everyone implicitly knows but hasn't articulated. No frame shift is required - the humor is in the naming of the truth. The audience reaction is 'yes, exactly' rather than 'I didn't see that coming'."
+      commutation:
+        load_bearing_element:
+          field_path: ""
+          gloss: ""
+        removable_elements:
+          - field_path: ""
+            gloss: ""
+        uncertain_elements:
+          - field_path: ""
+            gloss: ""
+      voice_portability:
+        mort: null
+        cece: null
+      adversarial:
+        counterarguments_considered:
+          - alternative: "Could be reinterpretation -- reframing money from 'fixed value' to 'hunger-dependent value'."
+            why_rejected: "The audience already implicitly knows this feeling. Jerry is naming it, not imposing a new frame. Frame-dependency test: state it in the audience's existing frame ('you feel differently about spending when hungry') and the humor survives -- it's the precision of 'money has no value' that lands, not a frame shift."
+        confidence: medium
+
+    notes: |
+      Borderline articulation/reinterpretation. The 'money has no value' phrasing
+      is slightly more pointed than mere naming, but the audience's reaction is
+      recognition ('yes, exactly') rather than surprise ('I didn't see that coming').
+      The humor survives if you know the punchline in advance, confirming articulation.
 
   - joke_id: "seinfeld_s01e05_opening_02"
     source:
       work: "Seinfeld S01E05 'The Stock Tip' opening monologue"
       medium: sitcom_opener
       year: 1990
-    transcript_fragment: "You're like the ruler of an empire. 'More drinks, appetizers, quickly, quickly! It will be the greatest meal of our lives.'"
+
+    annotation_status:
+      transcription: complete
+      decomposition: complete
+      performance: incomplete
+      commutation: incomplete
+      adversarial_review: incomplete
+      voice_attribution: incomplete
+
+    transcript_fragment: "You sit down at a restaurant. You're like the ruler of an empire. 'More drinks, appetizers, quickly, quickly! It will be the greatest meal of our lives.'"
+
     joke:
       content:
-        primary_domain: [commerce, dining]
-        concepts: [restaurant, ordering, hunger, emperor, extravagance]
-        pivot_concept: ruler
-        specificity: {default_level: 3}
+        primary_domain: [money_and_commerce, social_ritual]
+        concepts: [restaurant_dining, money_value_perception, imperial_ruler]
+        pivot_concept: imperial_ruler
+        specificity:
+          default_level: 3
+          trajectory: null
         content_moves: []
+
       logic:
-        setup_expectation: "Money has no value when you're hungry - the audience has accepted this premise."
-        punchline_violation: "The hungry diner is mapped to an emperor commanding his court. The structural parallel between the pre-meal diner (commanding drinks, appetizers, lavish spending) and a ruler of an empire (commanding subjects, unlimited resources) reveals how hunger transforms a normal person into a grandiose spender."
+        setup_expectation: "The audience has accepted the premise that money has no value when you're hungry. They expect further description of carefree pre-meal spending."
+        punchline_violation: "The hungry diner is mapped to the ruler of an empire. Source: imperial ruler commanding unlimited resources. Target: diner ordering food. Shared structural feature: unconstrained command over resources, grandiose confidence, sense that supply is infinite. The parallel is apt -- diners genuinely do behave with imperial entitlement when hungry."
         pivot_mechanism:
           operation: mapping
+          operation_alternative: null
           reading_switch: none
           scale_shift: expansion
           wordplay: none
         setup_frame: establishes_premise
         pivot_locus: both
         resolution_requires: [shared_experience]
+
       structure:
         primary_template: mundane_as_monumental
         secondary_templates: []
@@ -77,63 +191,243 @@ jokes:
         has_tag: false
         tag_operation: null
         tag_has_own_pivot: null
-        act_out: {present: true, character_type: authority, register_gap: treats_mundane_as_serious, character_gloss: "Imperious diner commanding the table like a Roman emperor at a feast, barking orders with grandiose confidence."}
+        act_out:
+          present: true
+          character_type: authority
+          register_gap: treats_mundane_as_serious
+          character_gloss: "Imperious diner barking orders like a Roman emperor at a banquet -- 'More drinks, appetizers, quickly, quickly!' -- treating a weeknight dinner as the event of a lifetime."
+
       relational:
-        positioning: {default: lateral_observer}
+        positioning:
+          default: lateral_observer
+          trajectory: null
         audience_implication: co_observer
-        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 5}
-        performed_relatability: {present: true}
+        shared_experience:
+          required: true
+          universality: universal
+          comprehensibility_without_experience: 5
+        performed_relatability:
+          present: true
+
       narrative:
+        callbacks_to: []
+        callback_is_primary_pivot: null
+        running_premise: null
+        tag_callbacks_to: null
+        anti_callback: null
         routine_id: "s01e05_restaurant_check"
+        position_in_routine: 2
+        routine_total_jokes: 3
         position_in_set: opener
+
     performance:
       performer: seinfeld
+      delivery:
+        cadence: "{UNSPECIFIED}"
+        pause_placement: []
+        repetition: null
+        vocal_register_shifts: []
+        estimated_duration_seconds: null
+        register_break:
+          present: false
+          at: null
+          direction: null
+        act_out_voice:
+          character_register: null
+      voice:
+        persona_markers: []
+        signature_phrases: []
+        register: default
+        editorializes:
+          present: null
+          kind: null
+      affective:
+        default_register:
+          valence: null
+          arousal: null
+        trajectory: null
+        shifts_are_load_bearing: null
+        deviates_from_performer_default: null
+      relational:
+        vulnerability:
+          personal_exposure: null
+          emotional_risk: null
+        performed_relatability:
+          intensity: null
+        positioning_deviation: null
+
+    meta:
+      comments_on_form: null
+      breaks_fourth_wall: null
+
     analysis:
-      adversarial: {confidence: high}
-    notes: "The mapping connects diner and emperor through shared structure: unlimited-feeling command over resources. The mundane_as_monumental template structures the elevated register applied to ordering appetizers. Scale_shift expansion is independent - the expansion from 'hungry person' to 'ruler of an empire' adds comedic weight but the mapping would survive without it."
+      commutation:
+        load_bearing_element:
+          field_path: ""
+          gloss: ""
+        removable_elements:
+          - field_path: ""
+            gloss: ""
+        uncertain_elements:
+          - field_path: ""
+            gloss: ""
+      voice_portability:
+        mort: null
+        cece: null
+      adversarial:
+        counterarguments_considered:
+          - alternative: "Could be transplant -- importing imperial governance framework onto dining."
+            why_rejected: "The humor is in the aptness of the parallel, not the mismatch of the framework. Diners really do behave with this kind of unconstrained command. The imperial framework illuminates rather than misapplies. If the framework genuinely fit (and it does, structurally), it's mapping."
+        confidence: high
+
+    notes: |
+      Scale_shift expansion is independently specifiable: the same mapping (diner as
+      commander) could work with contraction ('you're like a kid in a candy store')
+      so expansion is a separable modifier, not fused with the operation. The act-out
+      voices the imperial diner with confident, commanding register.
 
   - joke_id: "seinfeld_s01e05_opening_03"
     source:
       work: "Seinfeld S01E05 'The Stock Tip' opening monologue"
       medium: sitcom_opener
       year: 1990
+
+    annotation_status:
+      transcription: complete
+      decomposition: complete
+      performance: incomplete
+      commutation: incomplete
+      adversarial_review: incomplete
+      voice_attribution: incomplete
+
     transcript_fragment: "Then after the meal, you've got the pants open, you've got the napkins destroyed, cigarette butt in the mashed potatoes - then the check comes at that moment. 'What is this? How could this be?' They start passing it around the table, 'Does this look right to you? We're not hungry now. Why are we buying all this food?!'"
+
     joke:
       content:
-        primary_domain: [commerce, dining]
-        concepts: [restaurant, check, aftermath, regret, fullness, confusion]
-        pivot_concept: check
-        specificity: {default_level: 4}
+        primary_domain: [money_and_commerce, social_ritual]
+        concepts: [restaurant_dining, money_value_perception, cheque_writing]
+        pivot_concept: money_value_perception
+        specificity:
+          default_level: 4
+          trajectory: null
         content_moves: []
+
       logic:
-        setup_expectation: "The contrast between before-eating (emperor) and after-eating has been established. The audience expects an observation about the letdown."
-        punchline_violation: "The post-meal state is rendered in vivid, specific detail (pants open, napkins destroyed, cigarette in potatoes) and the check becomes genuinely mystifying - as if the diners have no memory of ordering. 'Why are we buying all this food?' treats the self they were 20 minutes ago as a stranger whose decisions are incomprehensible."
+        setup_expectation: "The before/after contrast has been established. The audience expects the post-meal counterpart to the imperial pre-meal self -- some kind of deflation or regret."
+        punchline_violation: "The check -- which the diners ordered themselves minutes ago -- is reframed as an incomprehensible document from a stranger. The diners treat their past-hungry-self's decisions as if made by someone else entirely. 'Why are we buying all this food?!' reinterprets a voluntary purchase as an inexplicable imposition, as if present-full-self has no continuity with past-hungry-self."
         pivot_mechanism:
           operation: reinterpretation
+          operation_alternative: null
           reading_switch: none
           scale_shift: none
           wordplay: none
         setup_frame: establishes_expectation
         pivot_locus: both
         resolution_requires: [shared_experience]
+
       structure:
         primary_template: comparison
-        secondary_templates: []
+        secondary_templates: [escalation]
         subversions_applied: []
         has_tag: false
         tag_operation: null
         tag_has_own_pivot: null
-        act_out: {present: true, character_type: everyman, register_gap: unaware_of_absurdity, character_gloss: "Post-meal diners passing the check around in genuine bafflement, as if they weren't the ones who ordered everything."}
+        act_out:
+          present: true
+          character_type: everyman
+          register_gap: unaware_of_absurdity
+          character_gloss: "Post-meal diners in genuine bafflement, passing the check around the table as if it were a mysterious artifact, completely unable to connect their present stuffed selves with the people who ordered all this food."
+
       relational:
-        positioning: {default: lateral_observer}
+        positioning:
+          default: lateral_observer
+          trajectory: null
         audience_implication: co_observer
-        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 5}
-        performed_relatability: {present: true}
+        shared_experience:
+          required: true
+          universality: universal
+          comprehensibility_without_experience: 5
+        performed_relatability:
+          present: true
+
       narrative:
+        callbacks_to: []
+        callback_is_primary_pivot: null
+        running_premise: null
+        tag_callbacks_to: null
+        anti_callback: null
         routine_id: "s01e05_restaurant_check"
+        position_in_routine: 3
+        routine_total_jokes: 3
         position_in_set: opener
+
     performance:
       performer: seinfeld
+      delivery:
+        cadence: "{UNSPECIFIED}"
+        pause_placement: []
+        repetition: null
+        vocal_register_shifts: []
+        estimated_duration_seconds: null
+        register_break:
+          present: false
+          at: null
+          direction: null
+        act_out_voice:
+          character_register: null
+      voice:
+        persona_markers: []
+        signature_phrases: []
+        register: default
+        editorializes:
+          present: null
+          kind: null
+      affective:
+        default_register:
+          valence: null
+          arousal: null
+        trajectory: null
+        shifts_are_load_bearing: null
+        deviates_from_performer_default: null
+      relational:
+        vulnerability:
+          personal_exposure: null
+          emotional_risk: null
+        performed_relatability:
+          intensity: null
+        positioning_deviation: null
+
+    meta:
+      comments_on_form: null
+      breaks_fourth_wall: null
+
     analysis:
-      adversarial: {confidence: medium}
-    notes: "The reinterpretation is subtle: the check is reread from 'expected conclusion of dining' to 'inexplicable document from a stranger'. The humor requires the frame shift - the diners treating their own order as if it were someone else's is the reframe. The comparison template structures the before/after juxtaposition. The specificity of 'cigarette butt in the mashed potatoes' is a Seinfeld signature detail."
+      commutation:
+        load_bearing_element:
+          field_path: ""
+          gloss: ""
+        removable_elements:
+          - field_path: ""
+            gloss: ""
+        uncertain_elements:
+          - field_path: ""
+            gloss: ""
+      voice_portability:
+        mort: null
+        cece: null
+      adversarial:
+        counterarguments_considered:
+          - alternative: "Could be articulation -- the audience already knows the feeling of post-meal check shock."
+            why_rejected: "Frame-dependency test: state the observation in the audience's existing frame ('you feel bad about the bill after eating') and the humor dies. The humor REQUIRES the reframe -- treating the check as an inexplicable document, treating past-self as a stranger. 'Why are we buying all this food?!' is funny precisely because it reinterprets a voluntary action as an incomprehensible imposition. The angle is the joke, not the observation."
+          - alternative: "Could be negation -- the pre-meal generosity is negated by post-meal regret."
+            why_rejected: "Nothing is rendered false. The pre-meal spending happened and is not denied. The same event (ordering food) is reread in a different frame (incomprehensible decision by a stranger-self), not contradicted."
+        confidence: high
+
+    notes: |
+      The specificity level 4 reflects the vivid detail work: 'pants open, napkins
+      destroyed, cigarette butt in the mashed potatoes.' These ground-level details
+      are classic Seinfeld signature -- they earn the audience's trust before the
+      reframe. The comparison template structures the before/after juxtaposition
+      (imperial pre-meal self vs. baffled post-meal self), with escalation as
+      secondary template for the accumulating post-meal details. The act-out voices
+      multiple diners passing the check in collective bewilderment.

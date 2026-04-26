@@ -9,12 +9,12 @@ without prior conversation history.
 
 The project is building an annotation schema for decomposing standup comedy
 jokes into structured fields that a generation engine can compute on. The
-schema is at v0.9 after comprehensive level-assignment auditing. It has been
-validated against 14 Seinfeld episodes (71 laugh-points). Key architectural
+schema is at v0.9.2 after comprehensive level-assignment auditing. It has been
+validated against 14 Seinfeld episodes (65 laugh-points). Key architectural
 features: joke/performance block split (the "performer test"), 6 cognitive
-operations + 4 orthogonal modifiers, 6 rhetorical templates, a new
-joke.relational layer (v0.9), and meta rules for level assignment in the
-schema header.
+operations + 4 orthogonal modifiers + operation_alternative for boundary
+cases (v0.9.2), 6 rhetorical templates, a new joke.relational layer (v0.9),
+and meta rules for level assignment in the schema header.
 
 ## Files to read before starting
 
@@ -75,30 +75,33 @@ the protocol in `protocols.md`. The field order is:
 4. `pivot_mechanism.operation` — run the TEST from `pivot-mechanisms.yaml`
    (6 operations: negation | reinterpretation | transplant | mapping |
    extension | articulation)
-5. `pivot_mechanism.reading_switch` (default: none)
-6. `pivot_mechanism.scale_shift` (default: none)
-7. `pivot_mechanism.wordplay` (default: none | phonemic_pair | portmanteau |
+5. `pivot_mechanism.operation_alternative` — if two operations produced
+   plausible test artifacts, record the runner-up here. null if clear.
+   (v0.9.2: enables generation branching on boundary cases)
+6. `pivot_mechanism.reading_switch` (default: none)
+7. `pivot_mechanism.scale_shift` (default: none)
+8. `pivot_mechanism.wordplay` (default: none | phonemic_pair | portmanteau |
    collocation_disruption) — delivery vehicle, not operation
-8. `setup_frame` (establishes_convention | establishes_behavior |
+9. `setup_frame` (establishes_convention | establishes_behavior |
    establishes_expectation | establishes_premise | establishes_anomaly |
    establishes_sequence)
-9. `primary_template` from `templates.yaml` (6 templates:
-   mundane_as_monumental | monumental_as_mundane | bare_observation |
-   escalation | reductio | comparison)
-10. `joke.content.content_moves` — if joke anthropomorphizes, note here
+10. `primary_template` from `templates.yaml` (6 templates:
+    mundane_as_monumental | monumental_as_mundane | bare_observation |
+    escalation | reductio | comparison)
+11. `joke.content.content_moves` — if joke anthropomorphizes, note here
     (not in template)
-11. `joke.structure.act_out` — if joke has character dialogue: character_type
+12. `joke.structure.act_out` — if joke has character dialogue: character_type
     + register_gap (character_register goes in performance, not here)
-12. `joke.relational` — positioning, audience_implication, shared_experience,
+13. `joke.relational` — positioning, audience_implication, shared_experience,
     performed_relatability.present (these are joke properties, not
     performance properties — same value regardless of performer)
-13. `joke.structure.tag_operation` — extends | reframes | undercuts
+14. `joke.structure.tag_operation` — extends | reframes | undercuts
     (if tag callbacks a prior joke, note in joke.narrative.tag_callbacks_to
     separately)
-14. `joke.structure.subversions_applied` — structural_refusal |
+15. `joke.structure.subversions_applied` — structural_refusal |
     meta_structural | specificity_subversion ONLY (register_break goes in
     performance.delivery; anti_callback goes in joke.narrative)
-15. Tag difficulties and vocabulary gaps
+16. Tag difficulties and vocabulary gaps
 
 For each laugh-point, run the operation's test and write down the concrete
 artifact (two readings, a negated claim, a source/target pair, etc.). The
@@ -114,6 +117,17 @@ dependency test: "Does the humor REQUIRE the audience to shift frames, or
 does it work within a single frame?" If removing the frame shift kills the
 joke, it's reinterpretation. If the joke survives within the audience's
 existing frame, it's articulation.
+
+**operation_alternative (v0.9.2):** When two operations both produce
+plausible test artifacts and the choice requires a judgment call rather than
+a clean test result, record the runner-up in `operation_alternative`. This
+is NOT a hedge — pick the best operation as primary, then record the
+alternative so the generation engine can branch. Set confidence to medium
+or low accordingly. If one operation's test clearly wins, leave
+operation_alternative as null and set confidence to high. Expected non-null
+rate: ~25% for observational comedy (Seinfeld baseline: 26%). Higher rates
+suggest the vocabulary boundaries need sharpening; lower rates suggest
+annotators may be suppressing genuine ambiguity.
 
 **When mapping becomes extension in a routine:** Within a multi-beat bit,
 a tag/topper can have a different operation than the joke it extends. If the
@@ -209,6 +223,20 @@ needed. Requirements for adding a new pivot_mechanism.operation:
 
 **4e. Template check.** Same procedure as 4a/4b but for template values.
 
+**4f. operation_alternative check (v0.9.2).** Count the non-null rate for
+`pivot_mechanism.operation_alternative`. Expected range: 15-35% for
+observational comedy.
+- If **below 15%**: annotators may be suppressing genuine ambiguity. Check
+  whether medium-confidence jokes lack alternatives.
+- If **above 35%**: the vocabulary boundaries may need sharpening. Check
+  which operation pairs dominate the alternatives — a pair that appears in
+  >40% of non-null cases may signal a boundary that needs a worked example
+  or a distinguished_from refinement.
+- Track the **boundary pair distribution**: which operation pairs appear as
+  primary/alternative most often. Current baseline (65 LPs):
+  articulation↔reinterpretation (6), reinterpretation↔extension (4).
+  These are the soft boundaries to monitor.
+
 ### Step 5: Update schema (if warranted)
 
 Apply any vocabulary additions, field changes, or value splits identified
@@ -257,7 +285,8 @@ it's included.
 ## Scaling beyond Seinfeld
 
 The schema has been validated against 14 Seinfeld episodes (Seasons 1-2,
-71 laugh-points). As annotation expands to:
+65 laugh-points, 17 with operation_alternative branching points). As
+annotation expands to:
 
 - **Later Seinfeld** (Seasons 3-9): Expect the existing operations to
   hold but templates and subversions to become more relevant as the material
@@ -309,26 +338,28 @@ You are performing a Pass 2 (silent decomposition) annotation on a
 Seinfeld opening monologue. Produce YAML with one entry per distinct
 laugh-point.
 
-## FIELD ORDER (follow exactly — schema v0.9)
+## FIELD ORDER (follow exactly — schema v0.9.2)
 1. setup_expectation (GLOSS — your reasoning trace)
 2. punchline_violation (GLOSS)
 3. pivot_locus: logical | affective | both
 4. pivot_concept
 5. pivot_mechanism.operation — run the TEST below, write down the artifact
-6. pivot_mechanism.reading_switch: none | figurative_to_literal | literal_to_figurative
-7. pivot_mechanism.scale_shift: none | expansion | contraction
-8. pivot_mechanism.wordplay: none | phonemic_pair | portmanteau | collocation_disruption
-9. setup_frame: establishes_convention | establishes_behavior |
+6. pivot_mechanism.operation_alternative — if two operations produced
+   plausible artifacts, record the runner-up. null if one test clearly won.
+7. pivot_mechanism.reading_switch: none | figurative_to_literal | literal_to_figurative
+8. pivot_mechanism.scale_shift: none | expansion | contraction
+9. pivot_mechanism.wordplay: none | phonemic_pair | portmanteau | collocation_disruption
+10. setup_frame: establishes_convention | establishes_behavior |
    establishes_expectation | establishes_premise | establishes_anomaly |
    establishes_sequence
-10. primary_template: [INSERT CURRENT TEMPLATE VALUES FROM templates.yaml]
+11. primary_template: [INSERT CURRENT TEMPLATE VALUES FROM templates.yaml]
     NOTE: if joke anthropomorphizes, put that in content_moves, not template
-11. act_out: present? character_type + register_gap (NOT character_register — that's Pass 3)
-12. subversions: structural_refusal | meta_structural | specificity_subversion ONLY
-13. tag_operation: extends | reframes | undercuts
-14. joke.relational: positioning, audience_implication, shared_experience,
+12. act_out: present? character_type + register_gap (NOT character_register — that's Pass 3)
+13. subversions: structural_refusal | meta_structural | specificity_subversion ONLY
+14. tag_operation: extends | reframes | undercuts
+15. joke.relational: positioning, audience_implication, shared_experience,
     performed_relatability.present
-15. difficulties (tag ambiguities, vocabulary gaps, forced choices)
+16. difficulties (tag ambiguities, vocabulary gaps, forced choices)
 
 ## OPERATION TESTS
 [INSERT THE 6 OPERATIONS AND THEIR TESTS FROM pivot-mechanisms.yaml]
@@ -363,14 +394,18 @@ Report YAML then under 300 words of commentary noting: which operations
 dominated, hardest classification call, any vocabulary gaps.
 ```
 
-## Known open issues (as of 2026-04-26, schema v0.9)
+## Known open issues (as of 2026-04-26, schema v0.9.2)
 
 These are tracked in `working/questions.md` with appearance counts.
 
 **Open — needs monitoring in next batch:**
 - **reinterpretation/articulation boundary** — PARTIALLY RESOLVED.
   Frame-dependency test + worked examples in pivot-mechanisms.yaml.
-  Validate: does the sharpened test reduce disagreement in batch 2?
+  `operation_alternative` field (v0.9.2) captures the ambiguity
+  structurally so the generator can branch. 26% of jokes have non-null
+  alternatives; articulation↔reinterpretation is the dominant pair (6/17).
+  The boundary is likely irreducible for observational comedy — the schema
+  now accommodates rather than fights it.
 - **reading_switch entanglement with reinterpretation** — documented but
   not structurally changed. Near-incompatible with articulation.
 - **act_out.character_register split** — moved to performance but the
@@ -384,7 +419,7 @@ These are tracked in `working/questions.md` with appearance counts.
   bare_observation (was shared_recognition) are naming choices that
   could be revised if annotators find them unclear.
 - **laugh architecture field** — flagged for investigation, needs audio data.
-- **reinterpretation at 31%** — below 40% threshold but watch.
+- **reinterpretation at 35%** — below 40% threshold but watch.
 - **valence_flip modifier** (1 appearance) — tracking.
 - **counterfactual staging device** (1 appearance) — tracking.
 - **anachronistic transplant sub-type** (1 appearance) — tracking.
@@ -396,3 +431,7 @@ These are tracked in `working/questions.md` with appearance counts.
 - v0.9: comprehensive level audit. joke.relational created. register_break
   and anti_callback moved. anthropomorphization moved to content_moves.
   Templates renamed. Meta rules formalized.
+- v0.9.1: strict scale_shift swap test. Non-none rate dropped from 47% to 30%.
+- v0.9.2: `operation_alternative` field added. Turns irreducible annotation
+  ambiguity into generative branching signal. Backfilled across 65 LPs
+  (17/65 = 26% non-null). Concept registry compliance verified at 100%.

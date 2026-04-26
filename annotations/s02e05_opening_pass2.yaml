@@ -1,252 +1,860 @@
-# FILE: annotations/s02e05_opening_pass2.yaml
+# S02E05 "The Apartment" — Opening Monologue Pass 2 Annotation
+# Schema v0.9
+# Routine: apartment painting shrinkage + ideal living room (Star Trek)
+# Laugh-points: 6
 
-jokes:
-  - joke_id: "seinfeld_s02e05_opening_01"
-    source:
-      work: "Seinfeld S02E05 'The Apartment' opening monologue"
-      medium: sitcom_opener
-      year: 1991
-    transcript_fragment: "Well, I painted my apartment again. I've been living in this apartment for years and years, and every time I paint it, it kinda gets me down. I look around, and I think, well, it's a little bit smaller now."
-    joke:
-      content:
-        primary_domain: [domestic_life]
-        concepts: [apartment, painting, shrinkage, perception]
-        pivot_concept: paint_thickness_shrinkage
-        specificity: {default_level: 3}
-        content_moves: []
-      logic:
-        setup_expectation: "Repainting an apartment is a routine home improvement task. 'Gets me down' could lead anywhere — the mess, the cost, the effort."
-        punchline_violation: "The reason for depression is absurdly literal and microscopic: the paint adds thickness to the walls, making the apartment technically smaller. The observation is technically true but the emotional response is wildly disproportionate."
-        pivot_mechanism:
-          operation: articulation
-          reading_switch: none
-          scale_shift: expansion
-          wordplay: none
-        setup_frame: establishes_premise
-        pivot_locus: both
-        resolution_requires: [world_knowledge]
-      structure:
-        primary_template: mundane_as_monumental
-        secondary_templates: []
-        subversions_applied: []
-        has_tag: false
-        tag_operation: null
-        tag_has_own_pivot: null
-        act_out:
-          present: false
-          character_type: null
-          register_gap: null
-          character_gloss: ""
-      relational:
-        positioning: {default: lateral_observer}
-        audience_implication: co_observer
-        shared_experience: {required: false, universality: common, comprehensibility_without_experience: 5}
-        performed_relatability: {present: true}
-      narrative:
-        routine_id: s02e05_apartment_living
-        position_in_set: opener
-    performance:
-      performer: seinfeld
-    analysis:
-      adversarial: {confidence: medium}
-    notes: "Borderline articulation vs. extension. The paint-thickness observation names something technically true that most people haven't consciously thought about — the humor is in the recognition that yes, it IS technically smaller. Scale expansion is independently removable: the observation works without the existential dread, but 'gets me down' inflates the micro-shrinkage to emotional weight."
+# ============================================================================
+# JOKE 1: Apartment gets smaller every time you paint
+# ============================================================================
 
-  - joke_id: "seinfeld_s02e05_opening_02"
-    source:
-      work: "Seinfeld S02E05 'The Apartment' opening monologue"
-      medium: sitcom_opener
-      year: 1991
-    transcript_fragment: "It keeps coming in and coming in. Every time I paint it, it's closer and closer."
-    joke:
-      content:
-        primary_domain: [domestic_life]
-        concepts: [apartment, painting, claustrophobia, encroachment]
-        pivot_concept: walls_closing_in
-        specificity: {default_level: 3}
-        content_moves: []
-      logic:
-        setup_expectation: "The paint-thickness premise has been established. The audience expects more on this topic."
-        punchline_violation: "Extends the microscopic reality of paint buildup into a creeping horror scenario — the walls are 'closing in' like a trash compactor. The premise is followed past reason."
-        pivot_mechanism:
-          operation: extension
-          reading_switch: none
-          scale_shift: none
-          wordplay: none
-        setup_frame: establishes_premise
-        pivot_locus: affective
-        resolution_requires: [world_knowledge]
-      structure:
-        primary_template: escalation
-        secondary_templates: []
-        subversions_applied: []
-        has_tag: false
-        tag_operation: null
-        tag_has_own_pivot: null
-        act_out:
-          present: false
-          character_type: null
-          register_gap: null
-          character_gloss: ""
-      relational:
-        positioning: {default: lateral_observer}
-        audience_implication: co_observer
-        shared_experience: {required: false, universality: common, comprehensibility_without_experience: 5}
-        performed_relatability: {present: false}
-      narrative:
-        routine_id: s02e05_apartment_living
-        position_in_set: opener
-    performance:
-      performer: seinfeld
-    analysis:
-      adversarial: {confidence: high}
-    notes: "Clean extension. The paint-thickness premise is accepted and followed forward in time — repeated paintings compound the shrinkage. The escalation template shapes the increasing urgency ('coming in and coming in,' 'closer and closer')."
+- joke_id: seinfeld_s02e05_opening_01
+  source:
+    work: "Seinfeld S02E05 'The Apartment' opening monologue"
+    medium: sitcom_opener
+    year: 1991
 
-  - joke_id: "seinfeld_s02e05_opening_03"
-    source:
-      work: "Seinfeld S02E05 'The Apartment' opening monologue"
-      medium: sitcom_opener
-      year: 1991
-    transcript_fragment: "I don't even know where the wall outlets are anymore. I just look for like a lump with two slots in it. Kinda looks like a pig is trying to push his way through from the other side."
-    joke:
-      content:
-        primary_domain: [domestic_life]
-        concepts: [apartment, painting, wall_outlets, buried_infrastructure]
-        pivot_concept: outlet_as_pig_face
-        specificity: {default_level: 5}
-        content_moves: []
-      logic:
-        setup_expectation: "The paint-buildup premise continues. The audience expects another consequence of wall thickening."
-        punchline_violation: "The buried outlet image is extended to a vivid, absurd comparison — it looks like a pig pushing through from the other side. The mapping between a paint-covered outlet and a pig's snout pressing through a wall connects two domains through unexpected visual similarity."
-        pivot_mechanism:
-          operation: mapping
-          reading_switch: none
-          scale_shift: none
-          wordplay: none
-        setup_frame: establishes_premise
-        pivot_locus: logical
-        resolution_requires: [world_knowledge]
-      structure:
-        primary_template: comparison
-        secondary_templates: [escalation]
-        subversions_applied: []
-        has_tag: false
-        tag_operation: null
-        tag_has_own_pivot: null
-        act_out:
-          present: false
-          character_type: null
-          register_gap: null
-          character_gloss: ""
-      relational:
-        positioning: {default: lateral_observer}
-        audience_implication: co_observer
-        shared_experience: {required: false, universality: common, comprehensibility_without_experience: 5}
-        performed_relatability: {present: false}
-      narrative:
-        routine_id: s02e05_apartment_living
-        position_in_set: opener
-    performance:
-      performer: seinfeld
-    analysis:
-      adversarial: {confidence: high}
-    notes: "Clear mapping: source domain = pig pushing through a wall, target domain = paint-covered outlet. Shared structural feature: a rounded protrusion with two visible openings pushing through a flat surface. The parallel is apt — a painted-over outlet genuinely does look like that. The comparison template places the two images side by side."
+  annotation_status:
+    transcription: complete
+    decomposition: complete
+    performance: incomplete
+    commutation: incomplete
+    adversarial_review: incomplete
+    voice_attribution: incomplete
 
-  - joke_id: "seinfeld_s02e05_opening_04"
-    source:
-      work: "Seinfeld S02E05 'The Apartment' opening monologue"
-      medium: sitcom_opener
-      year: 1991
-    transcript_fragment: "My idea of the perfect living room would be the bridge on the Starship Enterprise. You know what I mean? Big chair, nice screen, remote control.. that's why Star Trek really was the ultimate male fantasy. Just hurling through space in your living room, watching TV."
-    joke:
-      content:
-        primary_domain: [domestic_life, popular_culture]
-        concepts: [living_room, star_trek, enterprise_bridge, male_fantasy, television]
-        pivot_concept: enterprise_bridge_as_living_room
-        specificity: {default_level: 4}
-        content_moves: []
-      logic:
-        setup_expectation: "Comparing your ideal living room to the Enterprise bridge sounds like a geeky sci-fi aspiration — the audience expects a fantasy about space travel or adventure."
-        punchline_violation: "The Enterprise bridge is reinterpreted not as a command center for space exploration but as the ultimate living room setup — big chair, big screen, remote control. Star Trek's appeal is reframed from interstellar adventure to domestic comfort."
-        pivot_mechanism:
-          operation: reinterpretation
-          reading_switch: none
-          scale_shift: contraction
-          wordplay: none
-        setup_frame: establishes_premise
-        pivot_locus: logical
-        resolution_requires: [world_knowledge, shared_experience]
-      structure:
-        primary_template: comparison
-        secondary_templates: []
-        subversions_applied: []
-        has_tag: false
-        tag_operation: null
-        tag_has_own_pivot: null
-        act_out:
-          present: false
-          character_type: null
-          register_gap: null
-          character_gloss: ""
-      relational:
-        positioning: {default: lateral_observer}
-        audience_implication: accomplice
-        shared_experience: {required: true, universality: common, comprehensibility_without_experience: 3}
-        performed_relatability: {present: true}
-      narrative:
-        routine_id: s02e05_apartment_living
-        position_in_set: opener
-    performance:
-      performer: seinfeld
-    analysis:
-      adversarial: {confidence: high}
-    notes: "Reinterpretation: the Enterprise bridge is reread from 'command center of a starship' to 'ideal TV-watching room.' The contraction from space exploration to couch-sitting is independently load-bearing. The comparison template places the two domains (starship bridge, living room) side by side."
+  joke:
+    content:
+      primary_domain: [domestic_life, urban_life]
+      concepts: [apartment_maintenance]
+      pivot_concept: apartment_maintenance
+      specificity:
+        default_level: 3
+        trajectory: null
+      content_moves: []
 
-  - joke_id: "seinfeld_s02e05_opening_05"
-    source:
-      work: "Seinfeld S02E05 'The Apartment' opening monologue"
-      medium: sitcom_opener
-      year: 1991
-    transcript_fragment: "That's why all the aliens were always dropping in, because Kirk was the only one that had a big screen. They came over Friday night, Klingon boxing.. gotta be there."
-    joke:
-      content:
-        primary_domain: [popular_culture, domestic_life]
-        concepts: [star_trek, aliens, social_visits, big_screen_tv, sports_viewing]
-        pivot_concept: alien_encounters_as_social_calls
-        specificity: {default_level: 5}
-        content_moves: []
-      logic:
-        setup_expectation: "The Enterprise-as-living-room premise is established. Alien encounters on Star Trek are dramatic, dangerous confrontations."
-        punchline_violation: "Alien encounters are reframed as friends dropping by to watch TV on the big screen — specifically for Friday night Klingon boxing. Interstellar conflict becomes a buddy sports-watching night."
-        pivot_mechanism:
-          operation: reinterpretation
-          reading_switch: none
-          scale_shift: contraction
-          wordplay: none
-        setup_frame: establishes_premise
-        pivot_locus: both
-        resolution_requires: [world_knowledge, shared_experience]
-      structure:
-        primary_template: monumental_as_mundane
-        secondary_templates: []
-        subversions_applied: []
-        has_tag: true
-        tag_operation: extends
-        tag_has_own_pivot: true
-        act_out:
-          present: false
-          character_type: null
-          register_gap: null
-          character_gloss: ""
-      relational:
-        positioning: {default: lateral_observer}
-        audience_implication: accomplice
-        shared_experience: {required: true, universality: common, comprehensibility_without_experience: 3}
-        performed_relatability: {present: true}
-      narrative:
-        routine_id: s02e05_apartment_living
-        position_in_set: opener
-    performance:
-      performer: seinfeld
-    analysis:
-      adversarial: {confidence: high}
-    notes: "Extends the reinterpretation from the previous joke — if the bridge is a living room, then alien encounters become social visits. 'Klingon boxing' is a tag with its own pivot: it invents a specific alien sport that maps perfectly onto the 'friends coming over for the fight' convention. 'Gotta be there' clinches the mundane sports-night register. Monumental_as_mundane template: interstellar contact reduced to Friday night TV sports."
+    logic:
+      setup_expectation: "Painting your apartment is a normal domestic chore — the audience expects a complaint about the tedium, mess, or color choice"
+      punchline_violation: "The complaint is that each coat of paint makes the apartment measurably smaller — treating the negligible thickness of paint as a genuine spatial loss, elevating a trivially true fact to an existential encroachment"
+      pivot_mechanism:
+        operation: reinterpretation
+        operation_alternative: extension
+        reading_switch: none
+        scale_shift: expansion
+        wordplay: none
+      setup_frame: establishes_behavior
+      pivot_locus: logical
+      resolution_requires: [shared_experience]
+
+    structure:
+      primary_template: mundane_as_monumental
+      secondary_templates: []
+      subversions_applied: []
+      has_tag: false
+      tag_operation: null
+      tag_has_own_pivot: null
+      act_out:
+        present: false
+        character_type: null
+        register_gap: null
+        character_gloss: ""
+
+    relational:
+      positioning:
+        default: lateral_observer
+        trajectory: null
+      audience_implication: co_observer
+      shared_experience:
+        required: true
+        universality: common
+        comprehensibility_without_experience: 4
+      performed_relatability:
+        present: true
+
+    narrative:
+      callbacks_to: []
+      callback_is_primary_pivot: null
+      running_premise: apartment_shrinkage_routine
+      tag_callbacks_to: null
+      anti_callback: null
+      routine_id: s02e05_apartment_living
+      position_in_routine: 1
+      routine_total_jokes: 6
+      position_in_set: opener
+
+  performance:
+    performer: jerry_seinfeld
+    delivery:
+      cadence: "{UNSPECIFIED}"
+      pause_placement: []
+      repetition: null
+      vocal_register_shifts: []
+      estimated_duration_seconds: null
+      register_break:
+        present: false
+        at: null
+        direction: null
+      act_out_voice:
+        character_register: null
+    voice:
+      persona_markers: []
+      signature_phrases: []
+      register: default
+      editorializes:
+        present: null
+        kind: null
+    affective:
+      default_register:
+        valence: null
+        arousal: null
+      trajectory: null
+      shifts_are_load_bearing: null
+      deviates_from_performer_default: null
+    relational:
+      vulnerability:
+        personal_exposure: null
+        emotional_risk: null
+      performed_relatability:
+        intensity: null
+      positioning_deviation: null
+
+  meta:
+    comments_on_form: null
+    breaks_fourth_wall: null
+
+  analysis:
+    commutation:
+      load_bearing_element:
+        field_path: ""
+        gloss: ""
+      removable_elements:
+        - field_path: ""
+          gloss: ""
+      uncertain_elements:
+        - field_path: ""
+          gloss: ""
+    voice_portability:
+      mort: null
+      cece: null
+    adversarial:
+      counterarguments_considered:
+        - alternative: "Could be articulation — naming the shared observation that paint adds thickness"
+          why_rejected: "The audience does not already think of painting as making their apartment smaller. The reframe — from 'normal maintenance chore' to 'slow spatial encroachment' — is imposed by Jerry. Remove the frame shift (state it as 'painting is tedious') and the joke dies. The new perspective on paint thickness IS the joke."
+        - alternative: "Could be extension — accepting that paint adds thickness and following it to an absurd conclusion"
+          why_rejected: "The joke at this point is the initial reframing — seeing painting as shrinkage. The extension into absurd consequences comes in jokes 2 and 3. This joke establishes the new frame rather than following a premise to its conclusion."
+        - alternative: "scale_shift could be none — is the expansion fused with the reinterpretation?"
+          why_rejected: "The reinterpretation (paint-as-shrinkage) could work at a contracted scale too (e.g., 'I can barely fit my furniture' — contraction to personal inconvenience). The expansion to existential encroachment ('it keeps coming in and coming in') is a separable directional choice."
+      confidence: medium
+
+  notes: |
+    The reinterpretation takes a trivially true physical fact (paint has thickness) and reframes it as a genuine spatial threat. The mundane_as_monumental template fits: painting an apartment is treated with the gravity of a looming encroachment. The expansion is in the elevation from 'minor home maintenance' to 'my living space is closing in on me.' This joke establishes the premise that jokes 2 and 3 will extend.
+
+# ============================================================================
+# JOKE 2: Can't find the wall outlets — look for a lump with two slots
+# ============================================================================
+
+- joke_id: seinfeld_s02e05_opening_02
+  source:
+    work: "Seinfeld S02E05 'The Apartment' opening monologue"
+    medium: sitcom_opener
+    year: 1991
+
+  annotation_status:
+    transcription: complete
+    decomposition: complete
+    performance: incomplete
+    commutation: incomplete
+    adversarial_review: incomplete
+    voice_attribution: incomplete
+
+  joke:
+    content:
+      primary_domain: [domestic_life, urban_life]
+      concepts: [apartment_maintenance]
+      pivot_concept: apartment_maintenance
+      specificity:
+        default_level: 4
+        trajectory: null
+      content_moves: []
+
+    logic:
+      setup_expectation: "The apartment-shrinkage premise has been accepted — the audience is in the frame of paint accumulating over years"
+      punchline_violation: "The wall outlets have been buried under so many layers of paint that they've become unrecognizable lumps — following the shrinkage premise to a specific, absurd-but-logical consequence where basic infrastructure disappears under paint"
+      pivot_mechanism:
+        operation: extension
+        operation_alternative: null
+        reading_switch: none
+        scale_shift: none
+        wordplay: none
+      setup_frame: establishes_premise
+      pivot_locus: logical
+      resolution_requires: [shared_experience, world_knowledge]
+
+    structure:
+      primary_template: reductio
+      secondary_templates: [escalation]
+      subversions_applied:
+        - type: specificity_subversion
+          at: punchline
+      has_tag: false
+      tag_operation: null
+      tag_has_own_pivot: null
+      act_out:
+        present: false
+        character_type: null
+        register_gap: null
+        character_gloss: ""
+
+    relational:
+      positioning:
+        default: lateral_observer
+        trajectory: null
+      audience_implication: co_observer
+      shared_experience:
+        required: true
+        universality: common
+        comprehensibility_without_experience: 4
+      performed_relatability:
+        present: true
+
+    narrative:
+      callbacks_to: [seinfeld_s02e05_opening_01]
+      callback_is_primary_pivot: false
+      running_premise: apartment_shrinkage_routine
+      tag_callbacks_to: null
+      anti_callback: null
+      routine_id: s02e05_apartment_living
+      position_in_routine: 2
+      routine_total_jokes: 6
+      position_in_set: opener
+
+  performance:
+    performer: jerry_seinfeld
+    delivery:
+      cadence: "{UNSPECIFIED}"
+      pause_placement: []
+      repetition: null
+      vocal_register_shifts: []
+      estimated_duration_seconds: null
+      register_break:
+        present: false
+        at: null
+        direction: null
+      act_out_voice:
+        character_register: null
+    voice:
+      persona_markers: []
+      signature_phrases: []
+      register: default
+      editorializes:
+        present: null
+        kind: null
+    affective:
+      default_register:
+        valence: null
+        arousal: null
+      trajectory: null
+      shifts_are_load_bearing: null
+      deviates_from_performer_default: null
+    relational:
+      vulnerability:
+        personal_exposure: null
+        emotional_risk: null
+      performed_relatability:
+        intensity: null
+      positioning_deviation: null
+
+  meta:
+    comments_on_form: null
+    breaks_fourth_wall: null
+
+  analysis:
+    commutation:
+      load_bearing_element:
+        field_path: ""
+        gloss: ""
+      removable_elements:
+        - field_path: ""
+          gloss: ""
+      uncertain_elements:
+        - field_path: ""
+          gloss: ""
+    voice_portability:
+      mort: null
+      cece: null
+    adversarial:
+      counterarguments_considered:
+        - alternative: "Could be reinterpretation — reframing what wall outlets look like"
+          why_rejected: "The humor is not in seeing outlets differently; it's in following the paint-accumulation premise to its logical consequence (outlets buried). The premise from joke 1 is accepted and pushed forward. Extension fits: (1) accepted premise: paint makes apartment smaller, (2) absurd-but-logical conclusion: outlets are no longer visible."
+      confidence: high
+
+  notes: |
+    Classic extension: the paint-shrinkage premise from joke 1 is accepted and followed to an absurd-but-logical destination. The reductio template captures the argumentative chain shape — if paint keeps accumulating, THEN outlets get buried. The specific image of 'a lump with two slots' is a specificity_subversion that makes the abstract premise concrete.
+
+# ============================================================================
+# JOKE 3: Looks like a pig pushing through from the other side
+# ============================================================================
+
+- joke_id: seinfeld_s02e05_opening_03
+  source:
+    work: "Seinfeld S02E05 'The Apartment' opening monologue"
+    medium: sitcom_opener
+    year: 1991
+
+  annotation_status:
+    transcription: complete
+    decomposition: complete
+    performance: incomplete
+    commutation: incomplete
+    adversarial_review: incomplete
+    voice_attribution: incomplete
+
+  joke:
+    content:
+      primary_domain: [domestic_life, urban_life]
+      concepts: [apartment_maintenance]
+      pivot_concept: apartment_maintenance
+      specificity:
+        default_level: 4
+        trajectory: null
+      content_moves: []
+
+    logic:
+      setup_expectation: "The outlet-as-lump image has been established — the audience is picturing the shape of a painted-over outlet"
+      punchline_violation: "The lump is compared to a pig trying to push through from the other side of the wall — an absurd visual that anthropomorphizes the outlet and adds an element of animal desperation to the inanimate shape"
+      pivot_mechanism:
+        operation: mapping
+        operation_alternative: null
+        reading_switch: none
+        scale_shift: none
+        wordplay: none
+      setup_frame: establishes_premise
+      pivot_locus: logical
+      resolution_requires: [world_knowledge]
+
+    structure:
+      primary_template: comparison
+      secondary_templates: []
+      subversions_applied: []
+      has_tag: false
+      tag_operation: null
+      tag_has_own_pivot: null
+      act_out:
+        present: false
+        character_type: null
+        register_gap: null
+        character_gloss: ""
+
+    relational:
+      positioning:
+        default: lateral_observer
+        trajectory: null
+      audience_implication: co_observer
+      shared_experience:
+        required: false
+        universality: universal
+        comprehensibility_without_experience: 5
+      performed_relatability:
+        present: false
+
+    narrative:
+      callbacks_to: [seinfeld_s02e05_opening_02]
+      callback_is_primary_pivot: false
+      running_premise: apartment_shrinkage_routine
+      tag_callbacks_to: null
+      anti_callback: null
+      routine_id: s02e05_apartment_living
+      position_in_routine: 3
+      routine_total_jokes: 6
+      position_in_set: opener
+
+  performance:
+    performer: jerry_seinfeld
+    delivery:
+      cadence: "{UNSPECIFIED}"
+      pause_placement: []
+      repetition: null
+      vocal_register_shifts: []
+      estimated_duration_seconds: null
+      register_break:
+        present: false
+        at: null
+        direction: null
+      act_out_voice:
+        character_register: null
+    voice:
+      persona_markers: []
+      signature_phrases: []
+      register: default
+      editorializes:
+        present: null
+        kind: null
+    affective:
+      default_register:
+        valence: null
+        arousal: null
+      trajectory: null
+      shifts_are_load_bearing: null
+      deviates_from_performer_default: null
+    relational:
+      vulnerability:
+        personal_exposure: null
+        emotional_risk: null
+      performed_relatability:
+        intensity: null
+      positioning_deviation: null
+
+  meta:
+    comments_on_form: null
+    breaks_fourth_wall: null
+
+  analysis:
+    commutation:
+      load_bearing_element:
+        field_path: ""
+        gloss: ""
+      removable_elements:
+        - field_path: ""
+          gloss: ""
+      uncertain_elements:
+        - field_path: ""
+          gloss: ""
+    voice_portability:
+      mort: null
+      cece: null
+    adversarial:
+      counterarguments_considered:
+        - alternative: "Could be extension — continuing the paint-accumulation logic further"
+          why_rejected: "This joke introduces a NEW domain (a pig pushing through a surface) rather than following the paint premise further. The humor is in the visual similarity between a painted-over outlet and a pig snout, not in pushing the premise to a more absurd conclusion. Two domains connected by shared visual shape = mapping."
+        - alternative: "Content move anthropomorphization rather than mapping?"
+          why_rejected: "The pig is a comparison vehicle, not anthropomorphization. The outlet is not being given human traits — it's being compared to an animal shape. The humor is in the aptness of the visual parallel (two slots = pig snout), which is mapping. Anthropomorphization would be treating the outlet as if it had intentions or feelings."
+      confidence: high
+
+  notes: |
+    A pure visual mapping: source domain is a pig's snout pushing through a surface, target domain is a painted-over electrical outlet. Shared structural feature: a rounded lump with two parallel slots/nostrils. The comparison is funny because the visual parallel is surprisingly apt. This is a tag on joke 2's image that introduces its own pivot via a new domain.
+
+# ============================================================================
+# JOKE 4: Perfect living room = bridge of the Starship Enterprise
+# ============================================================================
+
+- joke_id: seinfeld_s02e05_opening_04
+  source:
+    work: "Seinfeld S02E05 'The Apartment' opening monologue"
+    medium: sitcom_opener
+    year: 1991
+
+  annotation_status:
+    transcription: complete
+    decomposition: complete
+    performance: incomplete
+    commutation: incomplete
+    adversarial_review: incomplete
+    voice_attribution: incomplete
+
+  joke:
+    content:
+      primary_domain: [domestic_life, gender_dynamics]
+      concepts: [star_trek_bridge]
+      pivot_concept: star_trek_bridge
+      specificity:
+        default_level: 4
+        trajectory: null
+      content_moves: []
+
+    logic:
+      setup_expectation: "After discussing his cramped apartment, Jerry pivots to his ideal living room — the audience expects a domestic fantasy (bigger space, better furniture, nicer view)"
+      punchline_violation: "The ideal living room is the bridge of the Starship Enterprise — a sci-fi command center is treated as aspirational domestic furniture ('big chair, nice screen, remote control'), revealing that the male fantasy of Star Trek is really just a living room upgrade"
+      pivot_mechanism:
+        operation: mapping
+        operation_alternative: null
+        reading_switch: none
+        scale_shift: none
+        wordplay: none
+      setup_frame: establishes_expectation
+      pivot_locus: logical
+      resolution_requires: [cultural_reference, shared_experience]
+
+    structure:
+      primary_template: comparison
+      secondary_templates: []
+      subversions_applied: []
+      has_tag: false
+      tag_operation: null
+      tag_has_own_pivot: null
+      act_out:
+        present: false
+        character_type: null
+        register_gap: null
+        character_gloss: ""
+
+    relational:
+      positioning:
+        default: lateral_observer
+        trajectory: null
+      audience_implication: co_observer
+      shared_experience:
+        required: true
+        universality: common
+        comprehensibility_without_experience: 2
+      performed_relatability:
+        present: true
+
+    narrative:
+      callbacks_to: []
+      callback_is_primary_pivot: null
+      running_premise: enterprise_living_room_routine
+      tag_callbacks_to: null
+      anti_callback: null
+      routine_id: s02e05_apartment_living
+      position_in_routine: 4
+      routine_total_jokes: 6
+      position_in_set: opener
+
+  performance:
+    performer: jerry_seinfeld
+    delivery:
+      cadence: "{UNSPECIFIED}"
+      pause_placement: []
+      repetition: null
+      vocal_register_shifts: []
+      estimated_duration_seconds: null
+      register_break:
+        present: false
+        at: null
+        direction: null
+      act_out_voice:
+        character_register: null
+    voice:
+      persona_markers: []
+      signature_phrases: []
+      register: default
+      editorializes:
+        present: null
+        kind: null
+    affective:
+      default_register:
+        valence: null
+        arousal: null
+      trajectory: null
+      shifts_are_load_bearing: null
+      deviates_from_performer_default: null
+    relational:
+      vulnerability:
+        personal_exposure: null
+        emotional_risk: null
+      performed_relatability:
+        intensity: null
+      positioning_deviation: null
+
+  meta:
+    comments_on_form: null
+    breaks_fourth_wall: null
+
+  analysis:
+    commutation:
+      load_bearing_element:
+        field_path: ""
+        gloss: ""
+      removable_elements:
+        - field_path: ""
+          gloss: ""
+      uncertain_elements:
+        - field_path: ""
+          gloss: ""
+    voice_portability:
+      mort: null
+      cece: null
+    adversarial:
+      counterarguments_considered:
+        - alternative: "Could be reinterpretation — reframing the Enterprise bridge as a living room"
+          why_rejected: "Two distinct domains are being connected (sci-fi command center and domestic living room), not one thing being reread. The humor is in the structural parallel — big chair, screen, remote control exist in both domains. Source (Enterprise bridge) and target (living room) share the furniture layout. This is mapping, not reinterpretation of a single thing."
+        - alternative: "Could be transplant — importing Star Trek framework onto domestic life"
+          why_rejected: "The humor is in the APTNESS of the parallel (the Enterprise bridge really IS just a living room), not in the MISMATCH of imposing sci-fi rules on domestic life. The parallel illuminates rather than misapplies."
+      confidence: high
+
+  notes: |
+    This joke establishes the Enterprise-as-living-room premise that jokes 5 and 6 will extend. The mapping is: source = Enterprise bridge, target = ideal living room, shared structure = big chair + screen + remote control. The concept star_trek_bridge already exists in the registry. The reduction of the Enterprise to living room furniture ('big chair, nice screen, remote control') does the comedic work.
+
+# ============================================================================
+# JOKE 5: Star Trek = ultimate male fantasy — hurling through space, watching TV
+# ============================================================================
+
+- joke_id: seinfeld_s02e05_opening_05
+  source:
+    work: "Seinfeld S02E05 'The Apartment' opening monologue"
+    medium: sitcom_opener
+    year: 1991
+
+  annotation_status:
+    transcription: complete
+    decomposition: complete
+    performance: incomplete
+    commutation: incomplete
+    adversarial_review: incomplete
+    voice_attribution: incomplete
+
+  joke:
+    content:
+      primary_domain: [domestic_life, gender_dynamics]
+      concepts: [star_trek_bridge]
+      pivot_concept: star_trek_bridge
+      specificity:
+        default_level: 3
+        trajectory: null
+      content_moves: []
+
+    logic:
+      setup_expectation: "Star Trek is 'the ultimate male fantasy' — the audience expects this to mean adventure, exploration, commanding a starship, meeting alien civilizations"
+      punchline_violation: "The 'fantasy' is reduced to 'hurling through space in your living room, watching TV' — the grand sci-fi premise is deflated to the most domestic possible activity (sitting and watching a screen), revealing that the male fantasy is not about exploration but about having the best possible couch setup"
+      pivot_mechanism:
+        operation: reinterpretation
+        operation_alternative: null
+        reading_switch: none
+        scale_shift: contraction
+        wordplay: none
+      setup_frame: establishes_expectation
+      pivot_locus: logical
+      resolution_requires: [cultural_reference, shared_experience]
+
+    structure:
+      primary_template: monumental_as_mundane
+      secondary_templates: []
+      subversions_applied: []
+      has_tag: false
+      tag_operation: null
+      tag_has_own_pivot: null
+      act_out:
+        present: false
+        character_type: null
+        register_gap: null
+        character_gloss: ""
+
+    relational:
+      positioning:
+        default: lateral_observer
+        trajectory: null
+      audience_implication: co_observer
+      shared_experience:
+        required: true
+        universality: common
+        comprehensibility_without_experience: 2
+      performed_relatability:
+        present: true
+
+    narrative:
+      callbacks_to: [seinfeld_s02e05_opening_04]
+      callback_is_primary_pivot: false
+      running_premise: enterprise_living_room_routine
+      tag_callbacks_to: null
+      anti_callback: null
+      routine_id: s02e05_apartment_living
+      position_in_routine: 5
+      routine_total_jokes: 6
+      position_in_set: opener
+
+  performance:
+    performer: jerry_seinfeld
+    delivery:
+      cadence: "{UNSPECIFIED}"
+      pause_placement: []
+      repetition: null
+      vocal_register_shifts: []
+      estimated_duration_seconds: null
+      register_break:
+        present: false
+        at: null
+        direction: null
+      act_out_voice:
+        character_register: null
+    voice:
+      persona_markers: []
+      signature_phrases: []
+      register: default
+      editorializes:
+        present: null
+        kind: null
+    affective:
+      default_register:
+        valence: null
+        arousal: null
+      trajectory: null
+      shifts_are_load_bearing: null
+      deviates_from_performer_default: null
+    relational:
+      vulnerability:
+        personal_exposure: null
+        emotional_risk: null
+      performed_relatability:
+        intensity: null
+      positioning_deviation: null
+
+  meta:
+    comments_on_form: null
+    breaks_fourth_wall: null
+
+  analysis:
+    commutation:
+      load_bearing_element:
+        field_path: ""
+        gloss: ""
+      removable_elements:
+        - field_path: ""
+          gloss: ""
+      uncertain_elements:
+        - field_path: ""
+          gloss: ""
+    voice_portability:
+      mort: null
+      cece: null
+    adversarial:
+      counterarguments_considered:
+        - alternative: "Could be mapping — continuing the parallel from joke 4"
+          why_rejected: "Joke 4 establishes the mapping. This joke performs a REINTERPRETATION of what 'the ultimate male fantasy' means — the audience's reading of Star Trek as adventure/exploration is replaced by the reading of Star Trek as optimized TV-watching. The humor is in the frame shift on what the fantasy IS, not in connecting two new domains."
+        - alternative: "scale_shift could be none — is the contraction fused with the reinterpretation?"
+          why_rejected: "The reinterpretation (Star Trek is really about watching TV) could work with expansion too — e.g., 'this is why men want to BE Kirk, to have the ultimate authority over the remote.' The contraction from 'exploring the galaxy' to 'watching TV on the couch' is a separable directional choice that amplifies the bathetic effect."
+      confidence: high
+
+  notes: |
+    The contraction is clean and load-bearing: 'ultimate male fantasy' (monumental) is deflated to 'watching TV in your living room' (mundane). The reinterpretation shifts the audience's reading of Star Trek's appeal from adventure/exploration to domestic comfort. The monumental_as_mundane template captures the rhetorical shape — the gravity of 'ultimate male fantasy' and sci-fi adventure is treated with the banality of couch life.
+
+# ============================================================================
+# JOKE 6: Aliens dropped in because Kirk had the big screen — Klingon boxing
+# ============================================================================
+
+- joke_id: seinfeld_s02e05_opening_06
+  source:
+    work: "Seinfeld S02E05 'The Apartment' opening monologue"
+    medium: sitcom_opener
+    year: 1991
+
+  annotation_status:
+    transcription: complete
+    decomposition: complete
+    performance: incomplete
+    commutation: incomplete
+    adversarial_review: incomplete
+    voice_attribution: incomplete
+
+  joke:
+    content:
+      primary_domain: [domestic_life, gender_dynamics]
+      concepts: [star_trek_bridge]
+      pivot_concept: star_trek_bridge
+      specificity:
+        default_level: 5
+        trajectory: null
+      content_moves: []
+
+    logic:
+      setup_expectation: "The Enterprise-as-living-room premise has been accepted — the audience is in the frame of Star Trek as domestic life"
+      punchline_violation: "Alien encounters are reframed as buddies dropping by on Friday night because Kirk had the big screen — intergalactic contact becomes the equivalent of coming over to watch the fight. 'Klingon boxing' and 'gotta be there' cement the frame of a casual sports-night hangout applied to galactic diplomacy"
+      pivot_mechanism:
+        operation: extension
+        operation_alternative: null
+        reading_switch: none
+        scale_shift: none
+        wordplay: none
+      setup_frame: establishes_premise
+      pivot_locus: logical
+      resolution_requires: [cultural_reference, shared_experience]
+
+    structure:
+      primary_template: escalation
+      secondary_templates: [monumental_as_mundane]
+      subversions_applied:
+        - type: specificity_subversion
+          at: punchline
+      has_tag: false
+      tag_operation: null
+      tag_has_own_pivot: null
+      act_out:
+        present: false
+        character_type: null
+        register_gap: null
+        character_gloss: ""
+
+    relational:
+      positioning:
+        default: lateral_observer
+        trajectory: null
+      audience_implication: co_observer
+      shared_experience:
+        required: true
+        universality: common
+        comprehensibility_without_experience: 2
+      performed_relatability:
+        present: true
+
+    narrative:
+      callbacks_to: [seinfeld_s02e05_opening_04, seinfeld_s02e05_opening_05]
+      callback_is_primary_pivot: false
+      running_premise: enterprise_living_room_routine
+      tag_callbacks_to: null
+      anti_callback: null
+      routine_id: s02e05_apartment_living
+      position_in_routine: 6
+      routine_total_jokes: 6
+      position_in_set: opener
+
+  performance:
+    performer: jerry_seinfeld
+    delivery:
+      cadence: "{UNSPECIFIED}"
+      pause_placement: []
+      repetition: null
+      vocal_register_shifts: []
+      estimated_duration_seconds: null
+      register_break:
+        present: false
+        at: null
+        direction: null
+      act_out_voice:
+        character_register: null
+    voice:
+      persona_markers: []
+      signature_phrases: []
+      register: default
+      editorializes:
+        present: null
+        kind: null
+    affective:
+      default_register:
+        valence: null
+        arousal: null
+      trajectory: null
+      shifts_are_load_bearing: null
+      deviates_from_performer_default: null
+    relational:
+      vulnerability:
+        personal_exposure: null
+        emotional_risk: null
+      performed_relatability:
+        intensity: null
+      positioning_deviation: null
+
+  meta:
+    comments_on_form: null
+    breaks_fourth_wall: null
+
+  analysis:
+    commutation:
+      load_bearing_element:
+        field_path: ""
+        gloss: ""
+      removable_elements:
+        - field_path: ""
+          gloss: ""
+      uncertain_elements:
+        - field_path: ""
+          gloss: ""
+    voice_portability:
+      mort: null
+      cece: null
+    adversarial:
+      counterarguments_considered:
+        - alternative: "Could be transplant — importing domestic social norms onto intergalactic contact"
+          why_rejected: "The humor is not in the mismatch of applying Friday-night norms to aliens (which would make the framework seem wrong for the context). The humor is in the APTNESS — within the Enterprise-as-living-room frame already established, the aliens-dropping-by reading is logically consistent. This extends the accepted premise rather than importing a mismatched framework."
+        - alternative: "Could be mapping — connecting alien encounters to friends coming over"
+          why_rejected: "By joke 6, the mapping (Enterprise = living room) is already established in joke 4. This joke EXTENDS that accepted premise to a new absurd-but-logical consequence: if the Enterprise is a living room and the viewscreen is a big-screen TV, then alien encounters are just friends dropping by. Extension, not a new mapping."
+      confidence: high
+
+  notes: |
+    The closer of the routine. Accepts the Enterprise-as-living-room premise from jokes 4-5 and extends it to its absurd-but-logical conclusion: if Kirk has the best TV, of course people (aliens) come over on Friday night. 'Klingon boxing' is a specificity_subversion — the invented sport makes the abstract premise hilariously concrete. 'Gotta be there' is the casual sports-fan register applied to intergalactic warfare, maintaining the monumental_as_mundane secondary template. The escalation template captures the building across the routine — each joke commits harder to the Enterprise-as-living-room frame.

@@ -1,33 +1,91 @@
 # FILE: annotations/s02e03_opening_pass2.yaml
+# Pass 2 annotation — s02e03 "The Jacket" (1991)
+# Opening monologue: "Clothes / Universal Outfit"
+# Annotated against schema v0.9
 
 jokes:
+
+  # =========================================================================
+  # JOKE 01 — "Little outfits for myself"
+  # =========================================================================
+
   - joke_id: "seinfeld_s02e03_opening_01"
     source:
       work: "Seinfeld S02E03 'The Jacket' opening monologue"
       medium: sitcom_opener
       year: 1991
-    transcript_fragment: "I hate clothes, okay? I hate buying them. I hate picking them out of my closet. I can't stand every day trying to come up with little outfits for myself."
+
+    annotation_status:
+      transcription: complete
+      decomposition: complete
+      performance: incomplete
+      commutation: incomplete
+      adversarial_review: incomplete
+      voice_attribution: incomplete
+
+    transcript_fragment: >
+      I hate clothes, okay? I hate buying them. I hate picking them out
+      of my closet. I can't stand every day trying to come up with little
+      outfits for myself.
+
     joke:
       content:
-        primary_domain: [fashion, daily_life]
-        concepts: [clothing, daily_routine, self_presentation]
-        pivot_concept: outfits_as_burden
-        specificity: {default_level: 2}
+        primary_domain: [domestic_life, fashion]
+        concepts: [clothes_shopping]
+        pivot_concept: clothes_shopping
+        specificity:
+          default_level: 2
+          trajectory: null
         content_moves: []
+
       logic:
-        setup_expectation: "Getting dressed is a routine, automatic task most people don't think much about."
-        punchline_violation: "Reframes daily dressing as an exhausting creative burden — 'come up with little outfits for myself' makes it sound like curating a fashion show every morning. 'Little outfits' infantilizes the process."
+        setup_expectation: >
+          The escalating "I hate" repetition builds toward what sounds like
+          a genuine, adult complaint about the burden of clothing. The
+          audience expects a grownup grievance about shopping, expense,
+          or fashion pressure.
+        punchline_violation: >
+          "Little outfits for myself" reframes the adult clothing burden
+          as something childish and diminutive. "Outfits" is a word
+          associated with children's dress-up or doll clothes, and "for
+          myself" adds a note of pathetic self-service. The adult act of
+          getting dressed is reread as a childlike, slightly humiliating
+          daily craft project.
+
         pivot_mechanism:
-          operation: articulation
+          operation: reinterpretation
+          operation_alternative: null
+          # TEST: Two readings of the same material.
+          # Reading 1 (setup): getting dressed = adult responsibility,
+          # a burden of modern life.
+          # Reading 2 (punchline): getting dressed = assembling "little
+          # outfits" like a child playing dress-up. Same activity, two
+          # frames. The humor comes from the shift to the diminutive frame.
           reading_switch: none
-          scale_shift: none
+          scale_shift: contraction
+          # STRICT TEST: Could I swap to expansion? Yes — the same
+          # reinterpretation (adult dressing as childlike) could be
+          # expanded to a species-wide absurdity rather than contracted
+          # to a personal diminutive. The contraction (from adult burden
+          # to "little outfits") is a separable intensifier.
           wordplay: none
+
         setup_frame: establishes_behavior
-        pivot_locus: affective
+        # "I hate buying them, picking them out" describes something
+        # people DO. The audience recognizes this behavior without Jerry
+        # needing to establish a premise.
+
+        pivot_locus: logical
         resolution_requires: [shared_experience]
+
       structure:
-        primary_template: bare_observation
-        secondary_templates: []
+        primary_template: mundane_as_monumental
+        # The escalating "I hate" repetition treats the mundane act of
+        # getting dressed with the rhetorical gravity of a profound
+        # grievance. The frame of intensity is sustained against trivial
+        # content.
+        secondary_templates: [escalation]
+        # The "I hate... I hate... I can't stand" builds across beats.
         subversions_applied: []
         has_tag: false
         tag_operation: null
@@ -37,46 +95,180 @@ jokes:
           character_type: null
           register_gap: null
           character_gloss: ""
+
       relational:
-        positioning: {default: lateral_observer}
+        positioning:
+          default: lateral_observer
+          trajectory: null
         audience_implication: co_observer
-        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 5}
-        performed_relatability: {present: true}
+        shared_experience:
+          required: true
+          universality: universal
+          comprehensibility_without_experience: 4
+        performed_relatability:
+          present: false
+          # No "you know when you..." — first-person complaint framing.
+
       narrative:
-        routine_id: s02e03_clothes_future
+        callbacks_to: []
+        callback_is_primary_pivot: null
+        running_premise: null
+        tag_callbacks_to: null
+        anti_callback: null
+        routine_id: "s02e03_universal_outfit"
+        position_in_routine: 1
+        routine_total_jokes: 4
         position_in_set: opener
+
     performance:
       performer: seinfeld
+      delivery:
+        cadence: "{UNSPECIFIED}"
+        pause_placement: []
+        repetition: null
+        vocal_register_shifts: []
+        estimated_duration_seconds: null
+        register_break:
+          present: false
+          at: null
+          direction: null
+        act_out_voice:
+          character_register: null
+      voice:
+        persona_markers: []
+        signature_phrases: []
+        register: default
+        editorializes:
+          present: null
+          kind: null
+      affective:
+        default_register:
+          valence: null
+          arousal: null
+        trajectory: null
+        shifts_are_load_bearing: null
+        deviates_from_performer_default: null
+      relational:
+        vulnerability:
+          personal_exposure: null
+          emotional_risk: null
+        performed_relatability:
+          intensity: null
+        positioning_deviation: null
+
+    meta:
+      comments_on_form: null
+      breaks_fourth_wall: null
+
     analysis:
-      adversarial: {confidence: medium}
-    notes: "Borderline articulation vs. reinterpretation. 'Little outfits' slightly reframes but the humor is primarily recognition-based — everyone has felt this fatigue. The frame-dependency test: stating 'getting dressed every day is tedious' still has the same humor. The naming does the work. Articulation."
+      commutation:
+        load_bearing_element:
+          field_path: ""
+          gloss: ""
+        removable_elements:
+          - field_path: ""
+            gloss: ""
+        uncertain_elements:
+          - field_path: ""
+            gloss: ""
+      voice_portability:
+        mort: null
+        cece: null
+      adversarial:
+        counterarguments_considered:
+          - alternative: "Could be articulation — everyone hates picking out clothes, and 'little outfits' just names the feeling."
+            why_rejected: "The humor is not purely in recognition. 'Little outfits for myself' imposes a new frame (childlike dress-up) on adult dressing. Remove the diminutive reframe and state it as 'choosing what to wear every day' — the joke dies. The frame shift is load-bearing."
+        confidence: high
+
+    notes: |
+      The word "outfits" does the load-bearing recontextualization work.
+      It shifts adult clothing selection into a diminutive, childlike frame.
+      The "I hate" escalation is the template shape (mundane_as_monumental
+      with escalation secondary); the reinterpretation is the operation.
+
+  # =========================================================================
+  # JOKE 02 — "Fashion won't even exist"
+  # =========================================================================
 
   - joke_id: "seinfeld_s02e03_opening_02"
     source:
       work: "Seinfeld S02E03 'The Jacket' opening monologue"
       medium: sitcom_opener
       year: 1991
-    transcript_fragment: "I think eventually fashion won't even exist. It won't. I think eventually we'll all be wearing the same thing. 'Cause anytime I see a movie or a TV show where there's people from the future or another planet, they're all wearing the same thing."
+
+    annotation_status:
+      transcription: complete
+      decomposition: complete
+      performance: incomplete
+      commutation: incomplete
+      adversarial_review: incomplete
+      voice_attribution: incomplete
+
+    transcript_fragment: >
+      I think eventually fashion won't even exist. It won't. I think
+      eventually we'll all be wearing the same thing. 'Cause anytime I see
+      a movie or a TV show where there's people from the future of another
+      planet, they're all wearing the same thing.
+
     joke:
       content:
-        primary_domain: [fashion, popular_culture]
-        concepts: [clothing, future, science_fiction, uniformity]
-        pivot_concept: scifi_as_fashion_forecast
-        specificity: {default_level: 3}
+        primary_domain: [fashion, domestic_life]
+        concepts: [clothes_shopping, universal_outfit]
+        pivot_concept: universal_outfit
+        specificity:
+          default_level: 3
+          trajectory: null
         content_moves: []
+
       logic:
-        setup_expectation: "The prediction that fashion will disappear sounds like a philosophical or sociological claim about culture."
-        punchline_violation: "The 'evidence' for this grand cultural prediction is sci-fi movies and TV shows — treating fictional costume design as legitimate forecasting of human civilization."
+        setup_expectation: >
+          Jerry has established that he hates clothes. The audience expects
+          the routine to continue with specific observations about clothing
+          frustrations. The leap to "fashion won't even exist" is a
+          surprising escalation of personal complaint to historical
+          prediction.
+        punchline_violation: >
+          Jerry uses sci-fi movies as evidence for a sociological prediction.
+          The observation that future/alien civilizations on TV all wear
+          the same outfit is treated as a data point supporting the end of
+          fashion. The humor comes from treating fictional costuming
+          conventions as evidence about the actual future — a category
+          error that the audience recognizes as absurd but apt (sci-fi
+          really does do this).
+
         pivot_mechanism:
           operation: mapping
+          operation_alternative: extension
+          # TEST: (1) Source domain: sci-fi costume conventions in film/TV.
+          # (2) Target domain: the future of human fashion.
+          # (3) Shared structural feature: uniformity of dress.
+          # The humor comes from the aptness of the parallel — sci-fi
+          # really does portray future societies in uniform clothing.
+          # The parallel is funny because it's real but absurd to use as
+          # evidence. This ILLUMINATES rather than misapplies.
           reading_switch: none
-          scale_shift: none
+          scale_shift: expansion
+          # STRICT TEST: Could I swap to contraction? Yes — the observation
+          # about sci-fi uniforms could be contracted to a personal
+          # preference ("that's what I want") rather than expanded to a
+          # species-wide prediction. The expansion from personal complaint
+          # to civilizational forecast is a separable intensifier.
           wordplay: none
+
         setup_frame: establishes_premise
+        # "Fashion will eventually cease to exist" is not something the
+        # audience believes without Jerry stating it. He asks the audience
+        # to accept this for the bit to work.
+
         pivot_locus: logical
-        resolution_requires: [world_knowledge]
+        resolution_requires: [shared_experience, world_knowledge]
+
       structure:
-        primary_template: comparison
+        primary_template: mundane_as_monumental
+        # A personal clothing complaint is treated with the rhetorical
+        # gravity of civilizational prophecy. The register of historical
+        # prediction ("eventually fashion won't even exist") applied to
+        # fashion is the template shape.
         secondary_templates: []
         subversions_applied: []
         has_tag: false
@@ -87,117 +279,497 @@ jokes:
           character_type: null
           register_gap: null
           character_gloss: ""
+
       relational:
-        positioning: {default: lateral_observer}
+        positioning:
+          default: lateral_observer
+          trajectory: null
         audience_implication: co_observer
-        shared_experience: {required: true, universality: common, comprehensibility_without_experience: 4}
-        performed_relatability: {present: false}
+        shared_experience:
+          required: true
+          universality: common
+          comprehensibility_without_experience: 3
+          # Requires familiarity with sci-fi movie/TV costuming conventions.
+        performed_relatability:
+          present: false
+
       narrative:
-        routine_id: s02e03_clothes_future
+        callbacks_to: []
+        callback_is_primary_pivot: null
+        running_premise: null
+        tag_callbacks_to: null
+        anti_callback: null
+        routine_id: "s02e03_universal_outfit"
+        position_in_routine: 2
+        routine_total_jokes: 4
         position_in_set: opener
+
     performance:
       performer: seinfeld
+      delivery:
+        cadence: "{UNSPECIFIED}"
+        pause_placement: []
+        repetition: null
+        vocal_register_shifts: []
+        estimated_duration_seconds: null
+        register_break:
+          present: false
+          at: null
+          direction: null
+        act_out_voice:
+          character_register: null
+      voice:
+        persona_markers: []
+        signature_phrases: []
+        register: default
+        editorializes:
+          present: null
+          kind: null
+      affective:
+        default_register:
+          valence: null
+          arousal: null
+        trajectory: null
+        shifts_are_load_bearing: null
+        deviates_from_performer_default: null
+      relational:
+        vulnerability:
+          personal_exposure: null
+          emotional_risk: null
+        performed_relatability:
+          intensity: null
+        positioning_deviation: null
+
+    meta:
+      comments_on_form: null
+      breaks_fourth_wall: null
+
     analysis:
-      adversarial: {confidence: medium}
-    notes: "Mapping vs transplant: the parallel between sci-fi costume conventions and a real prediction about fashion is presented as genuinely apt (the observation IS that sci-fi always shows uniform clothing). The humor is in the fake-logical connection — treating fiction as evidence. Mapping because the parallel is presented as illuminating, not as a misapplied framework."
+      commutation:
+        load_bearing_element:
+          field_path: ""
+          gloss: ""
+        removable_elements:
+          - field_path: ""
+            gloss: ""
+        uncertain_elements:
+          - field_path: ""
+            gloss: ""
+      voice_portability:
+        mort: null
+        cece: null
+      adversarial:
+        counterarguments_considered:
+          - alternative: "Could be extension — following the 'I hate clothes' premise to its logical conclusion (fashion disappears)."
+            why_rejected: "The humor is not primarily in following a premise to an absurd conclusion. It's in the PARALLEL between sci-fi costuming conventions and predicted real-world future. The sci-fi evidence is the joke — the structural similarity between fictional uniformity and Jerry's prediction. Extension would produce 'I hate clothes so much I'd burn them all'; mapping produces 'look, sci-fi already shows us the answer.'"
+          - alternative: "Could be articulation — everyone has noticed sci-fi characters all wear the same thing."
+            why_rejected: "The observation alone is not the joke. The humor requires CONNECTING the sci-fi convention to a prediction about real fashion. That connection is a mapping between two domains. Pure articulation would be: 'Have you noticed everyone in Star Trek wears the same thing?' without the fashion-prediction framework."
+        confidence: medium
+
+    notes: |
+      The mapping connects sci-fi costume conventions to a real-world
+      fashion prediction. The shared structural feature is uniformity of
+      dress. The mundane_as_monumental template captures the prophetic
+      register applied to clothing. Medium confidence because the
+      extension reading (premise followed to absurd conclusion) has merit,
+      but the sci-fi evidence as structural parallel is more load-bearing
+      than the logical chain.
+
+  # =========================================================================
+  # JOKE 03 — "One-piece silver jumpsuit, V-stripe, and boots. That's it."
+  # =========================================================================
 
   - joke_id: "seinfeld_s02e03_opening_03"
     source:
       work: "Seinfeld S02E03 'The Jacket' opening monologue"
       medium: sitcom_opener
       year: 1991
-    transcript_fragment: "Somehow they decided 'This is going to be our outfit. One-piece silver jumpsuit, V-stripe, and boots. That's it.'"
+
+    annotation_status:
+      transcription: complete
+      decomposition: complete
+      performance: incomplete
+      commutation: incomplete
+      adversarial_review: incomplete
+      voice_attribution: incomplete
+
+    transcript_fragment: >
+      Somehow they decided "This is going to be our outfit. One-piece
+      silver jumpsuit, V-stripe, and boots. That's it."
+
     joke:
       content:
-        primary_domain: [fashion, popular_culture]
-        concepts: [science_fiction, uniform, committee_decision, specificity]
-        pivot_concept: alien_fashion_committee
-        specificity: {default_level: 5}
+        primary_domain: [fashion, domestic_life]
+        concepts: [universal_outfit]
+        pivot_concept: universal_outfit
+        specificity:
+          default_level: 4
+          trajectory: null
         content_moves: []
+
       logic:
-        setup_expectation: "Sci-fi uniforms are a production design choice — the audience understands them as a genre convention."
-        punchline_violation: "Reinterprets the convention as if the fictional civilization held a deliberate meeting and chose this specific outfit. The hyperspecific description ('V-stripe') treats the costume as a reasoned decision rather than a genre trope."
+        setup_expectation: >
+          Jerry has established that future civilizations all wear the same
+          thing. The audience is in the frame of a broad sociological
+          observation about uniformity in sci-fi portrayals.
+        punchline_violation: >
+          The act-out voices the future committee's matter-of-fact
+          announcement of their chosen outfit with absurd specificity:
+          "one-piece silver jumpsuit, V-stripe, and boots." The humor is
+          in the contrast between the enormity of the decision (choosing
+          THE outfit for an entire civilization) and the casual, shopping-
+          catalog specificity of the description, plus the finality of
+          "That's it." A species-defining decision is announced with the
+          register of someone settling on a lunch order.
+
         pivot_mechanism:
           operation: reinterpretation
+          operation_alternative: null
+          # TEST: Two readings of the same material.
+          # Reading 1 (setup): the uniformity of future dress is a grand
+          # civilizational phenomenon — somehow an entire species converged.
+          # Reading 2 (punchline): it was just a mundane committee decision,
+          # announced with catalog specificity and casual finality.
+          # Same phenomenon (species-wide uniform), two frames. The humor
+          # comes from the shift from grand convergence to casual selection.
           reading_switch: none
           scale_shift: none
+          # STRICT TEST: The contraction from civilizational convergence to
+          # casual committee decision IS the reinterpretation. Could this
+          # work with expansion? No — the reinterpretation IS the move from
+          # grand to casual. The scale change is fused with the operation.
           wordplay: none
-        setup_frame: establishes_convention
+
+        setup_frame: establishes_premise
+        # The premise that an entire civilization chose one outfit is
+        # Jerry's construction, not a pre-existing audience belief.
+
         pivot_locus: logical
-        resolution_requires: [world_knowledge]
+        resolution_requires: [world_knowledge, shared_experience]
+
       structure:
-        primary_template: bare_observation
+        primary_template: monumental_as_mundane
+        # A species-defining civilizational decision is treated with the
+        # register of a casual shopping choice. The gravity of the subject
+        # (outfit for an entire civilization) is met with trivially
+        # inadequate framing ("That's it.").
         secondary_templates: []
-        subversions_applied:
-          - {type: specificity_subversion, at: punchline}
+        subversions_applied: []
         has_tag: false
         tag_operation: null
         tag_has_own_pivot: null
         act_out:
-          present: false
-          character_type: null
-          register_gap: null
-          character_gloss: ""
+          present: true
+          character_type: authority
+          # The voiced character is a future leader/committee spokesperson
+          # making an official announcement.
+          register_gap: treats_serious_as_mundane
+          # The character treats a civilization-defining decision with the
+          # casualness of picking a lunch item.
+          character_gloss: >
+            A future civilization spokesperson casually announcing the
+            chosen species-wide outfit with shopping-catalog specificity
+            and bureaucratic finality.
+
       relational:
-        positioning: {default: lateral_observer}
+        positioning:
+          default: lateral_observer
+          trajectory: null
         audience_implication: co_observer
-        shared_experience: {required: true, universality: common, comprehensibility_without_experience: 4}
-        performed_relatability: {present: false}
+        shared_experience:
+          required: true
+          universality: common
+          comprehensibility_without_experience: 3
+        performed_relatability:
+          present: false
+
       narrative:
-        routine_id: s02e03_clothes_future
+        callbacks_to: ["seinfeld_s02e03_opening_02"]
+        callback_is_primary_pivot: false
+        running_premise: null
+        tag_callbacks_to: null
+        anti_callback: null
+        routine_id: "s02e03_universal_outfit"
+        position_in_routine: 3
+        routine_total_jokes: 4
         position_in_set: opener
+
     performance:
       performer: seinfeld
+      delivery:
+        cadence: "{UNSPECIFIED}"
+        pause_placement: []
+        repetition: null
+        vocal_register_shifts: []
+        estimated_duration_seconds: null
+        register_break:
+          present: false
+          at: null
+          direction: null
+        act_out_voice:
+          character_register: null
+      voice:
+        persona_markers: []
+        signature_phrases: []
+        register: default
+        editorializes:
+          present: null
+          kind: null
+      affective:
+        default_register:
+          valence: null
+          arousal: null
+        trajectory: null
+        shifts_are_load_bearing: null
+        deviates_from_performer_default: null
+      relational:
+        vulnerability:
+          personal_exposure: null
+          emotional_risk: null
+        performed_relatability:
+          intensity: null
+        positioning_deviation: null
+
+    meta:
+      comments_on_form: null
+      breaks_fourth_wall: null
+
     analysis:
-      adversarial: {confidence: medium}
-    notes: "The specificity subversion is load-bearing — 'V-stripe' is more specific than the setup warrants and the precision of the description is doing comedic work. Frame shift: genre convention reread as in-world deliberate choice."
+      commutation:
+        load_bearing_element:
+          field_path: ""
+          gloss: ""
+        removable_elements:
+          - field_path: ""
+            gloss: ""
+        uncertain_elements:
+          - field_path: ""
+            gloss: ""
+      voice_portability:
+        mort: null
+        cece: null
+      adversarial:
+        counterarguments_considered:
+          - alternative: "Could be articulation — everyone recognizes the sci-fi uniform trope and the humor is just in naming it specifically."
+            why_rejected: "The humor is not in the recognition alone. The act-out imposes a new frame: the uniform wasn't a mysterious civilizational convergence, it was a casual committee decision. Remove the casual-announcement frame and the joke dies. The reinterpretation (grand phenomenon reread as mundane decision) is load-bearing."
+          - alternative: "Could be extension — following the 'one outfit' premise into specific details."
+            why_rejected: "The specificity of 'silver jumpsuit, V-stripe, boots' is not following logic to an absurd conclusion. It's providing concrete detail that makes the casual-committee reframe vivid. The operation is the reframe from grand to mundane, not a premise pushed past reason."
+        confidence: high
+
+    notes: |
+      The act-out is critical to the operation. The voiced character (future
+      authority figure) treats a monumental decision with shopping-catalog
+      casualness. The scale_shift is none because the contraction from
+      civilizational to casual IS the reinterpretation — it cannot work
+      in the other direction, so the scale change is fused with the operation.
+
+  # =========================================================================
+  # JOKE 04 — "Candidates propose outfits... 'That was nice. I could wear that.'"
+  # =========================================================================
 
   - joke_id: "seinfeld_s02e03_opening_04"
     source:
       work: "Seinfeld S02E03 'The Jacket' opening monologue"
       medium: sitcom_opener
       year: 1991
-    transcript_fragment: "We should come up for an outfit for earth. An earth outfit. We should vote on it. Candidates propose different outfits, no speeches. They walk out, twirl, walk off. We just sit in the audience and go, 'That was nice. I could wear that.'"
+
+    annotation_status:
+      transcription: complete
+      decomposition: complete
+      performance: incomplete
+      commutation: incomplete
+      adversarial_review: incomplete
+      voice_attribution: incomplete
+
+    transcript_fragment: >
+      We should come up for an outfit for earth. An earth outfit. We
+      should vote on it. Candidates propose different outfits, no speeches.
+      They walk out, twirl, walk off. We just sit in the audience and go,
+      "That was nice. I could wear that."
+
     joke:
       content:
-        primary_domain: [fashion, politics, social_conventions]
-        concepts: [clothing, voting, democracy, fashion_show, earth]
-        pivot_concept: democratic_outfit_election
-        specificity: {default_level: 4}
+        primary_domain: [fashion, domestic_life]
+        concepts: [universal_outfit]
+        pivot_concept: universal_outfit
+        specificity:
+          default_level: 4
+          trajectory:
+            - at: setup
+              level: 3
+            - at: punchline
+              level: 5
         content_moves: []
+
       logic:
-        setup_expectation: "The premise of choosing one outfit for all of humanity has been established. The audience expects further absurd theorizing."
-        punchline_violation: "Extends the premise into a detailed political process — candidates, voting, no speeches — that transplants election/pageant conventions onto the clothing choice. The casual audience reaction ('That was nice. I could wear that.') deflates the grand democratic exercise to mundane shopping approval."
+        setup_expectation: >
+          Jerry proposes that Earth should choose its own outfit via a
+          democratic process. The audience is in the frame of a civic/
+          political system being applied to fashion. "Candidates propose
+          different outfits" suggests a political campaign with the
+          seriousness of an election.
+        punchline_violation: >
+          The execution details deflate the political framework into
+          something bathetically casual. "No speeches" strips the process
+          of its political substance. "They walk out, twirl, walk off"
+          reduces the campaign to a fashion show. The audience reaction
+          — "That was nice. I could wear that" — is aggressively ordinary,
+          applying the register of browsing a department store catalog to
+          a species-level democratic decision. The bathetic underreaction
+          is the punchline.
+
         pivot_mechanism:
-          operation: extension
+          operation: transplant
+          operation_alternative: null
+          # TEST: (1) Target domain: choosing what humanity will wear forever.
+          # (2) Source domain: political elections / democratic process.
+          # (3) Imported rules: candidates, voting, campaign presentations.
+          # The humor comes from the MISMATCH — electoral procedures don't
+          # fit fashion selection. The framework is wrong for the context,
+          # and the bathos of "I could wear that" exposes the mismatch.
+          # Would the joke still work if elections genuinely fit fashion?
+          # No — the absurdity of applying electoral process to clothing
+          # is the joke. This is transplant, not mapping.
           reading_switch: none
           scale_shift: none
+          # STRICT TEST: The contraction from grand election to "that was
+          # nice" IS the transplant's comedy — the borrowed framework
+          # is deflated by the bathetic response. Could I swap to expansion?
+          # No — the humor requires the deflation. The scale change is
+          # fused with the operation.
           wordplay: none
+
         setup_frame: establishes_premise
-        pivot_locus: both
-        resolution_requires: [world_knowledge]
+        # "We should vote on an earth outfit" is a premise Jerry
+        # constructs. The audience doesn't hold this belief independently.
+
+        pivot_locus: logical
+        resolution_requires: [shared_experience, world_knowledge]
+
       structure:
-        primary_template: reductio
+        primary_template: monumental_as_mundane
+        # A species-level democratic decision is treated with the register
+        # of casual shopping. "That was nice. I could wear that" applies
+        # department-store-browsing language to a civilizational choice.
         secondary_templates: [escalation]
+        # The bit builds: outfit proposal -> no speeches -> twirl ->
+        # audience underreaction. Each detail adds specificity to the
+        # absurd scenario.
         subversions_applied: []
         has_tag: true
         tag_operation: undercuts
+        # "That was nice. I could wear that" is a tag that undercuts the
+        # political framework by replacing the expected gravity of a
+        # democratic verdict with a department-store browser's shrug.
         tag_has_own_pivot: true
+        # The tag has its own pivot: the audience reaction reframes the
+        # entire election scenario as trivial shopping.
         act_out:
           present: true
           character_type: everyman
+          # The voiced character is a generic audience member/voter
+          # reacting to the "fashion candidates" with casual approval.
           register_gap: treats_serious_as_mundane
-          character_gloss: "Audience member at a civilization-defining election casually evaluating outfits as if shopping."
+          # The character treats a species-defining democratic choice
+          # with the register of commenting on a dress in a store window.
+          character_gloss: >
+            A casual audience member evaluating civilization-defining
+            outfit proposals with the mild approval of someone flipping
+            through a catalog: "That was nice. I could wear that."
+
       relational:
-        positioning: {default: lateral_observer}
+        positioning:
+          default: lateral_observer
+          trajectory: null
         audience_implication: co_observer
-        shared_experience: {required: false, universality: universal, comprehensibility_without_experience: 5}
-        performed_relatability: {present: true}
+        shared_experience:
+          required: true
+          universality: universal
+          comprehensibility_without_experience: 4
+        performed_relatability:
+          present: true
+          # "We should..." and "We just sit in the audience" — inclusive
+          # framing that places comedian and audience in the same scenario.
+
       narrative:
-        routine_id: s02e03_clothes_future
+        callbacks_to: ["seinfeld_s02e03_opening_02", "seinfeld_s02e03_opening_03"]
+        callback_is_primary_pivot: false
+        running_premise: null
+        tag_callbacks_to: null
+        anti_callback: null
+        routine_id: "s02e03_universal_outfit"
+        position_in_routine: 4
+        routine_total_jokes: 4
         position_in_set: opener
+
     performance:
       performer: seinfeld
+      delivery:
+        cadence: "{UNSPECIFIED}"
+        pause_placement: []
+        repetition: null
+        vocal_register_shifts: []
+        estimated_duration_seconds: null
+        register_break:
+          present: false
+          at: null
+          direction: null
+        act_out_voice:
+          character_register: null
+      voice:
+        persona_markers: []
+        signature_phrases: []
+        register: default
+        editorializes:
+          present: null
+          kind: null
+      affective:
+        default_register:
+          valence: null
+          arousal: null
+        trajectory: null
+        shifts_are_load_bearing: null
+        deviates_from_performer_default: null
+      relational:
+        vulnerability:
+          personal_exposure: null
+          emotional_risk: null
+        performed_relatability:
+          intensity: null
+        positioning_deviation: null
+
+    meta:
+      comments_on_form: null
+      breaks_fourth_wall: null
+
     analysis:
-      adversarial: {confidence: high}
-    notes: "The tag ('That was nice. I could wear that.') has its own pivot — it undercuts the grandeur of a species-wide democratic exercise by reducing it to the register of casual shopping. Extension is the primary operation: the one-outfit premise is followed logically into how it would actually be decided. The act-out character is an everyman audience member, blissfully treating a monumental choice with shopping-mall energy."
+      commutation:
+        load_bearing_element:
+          field_path: ""
+          gloss: ""
+        removable_elements:
+          - field_path: ""
+            gloss: ""
+        uncertain_elements:
+          - field_path: ""
+            gloss: ""
+      voice_portability:
+        mort: null
+        cece: null
+      adversarial:
+        counterarguments_considered:
+          - alternative: "Could be extension — following the 'earth outfit' premise to its logical conclusion via election details."
+            why_rejected: "The humor is not in following a premise to an absurd-but-logical destination. It's in the MISMATCH between the imported political framework (candidates, voting) and the fashion domain. The election rules don't belong in fashion selection — that domain violation is the joke. Extension would produce increasingly absurd outfit descriptions; transplant produces the wrong framework applied to the right domain."
+          - alternative: "Could be mapping — the parallel between elections and fashion shows is apt (both involve public presentation and audience judgment)."
+            why_rejected: "The joke depends on the framework NOT fitting. 'No speeches' and 'I could wear that' expose the absurdity of applying electoral process to fashion. If elections genuinely fit fashion selection, the joke would lose its humor. The mismatch is load-bearing, so this is transplant."
+        confidence: high
+
+    notes: |
+      The transplant imports electoral/democratic process into fashion
+      selection. The tag ("That was nice. I could wear that") undercuts
+      the imported framework by showing that the democratic gravity
+      collapses into casual shopping-browse language. The act-out voices
+      the generic audience member/voter with treats_serious_as_mundane
+      register gap. The scale_shift is none because the deflation from
+      grand election to casual browsing is fused with the transplant
+      operation — it cannot work in the other direction.

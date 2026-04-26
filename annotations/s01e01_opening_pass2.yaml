@@ -1,231 +1,900 @@
 # FILE: annotations/s01e01_opening_pass2.yaml
+# Pass 2 annotation — s01e01 "The Seinfeld Chronicles" (Pilot), 1989
+# Opening monologue: "Going Out"
+# Annotated against schema v0.9
+
 jokes:
+
+  # =========================================================================
+  # JOKE 01 — "Why we're here? To be out, this is out."
+  # =========================================================================
+
   - joke_id: "seinfeld_s01e01_opening_01"
     source:
       work: "Seinfeld S01E01 'The Seinfeld Chronicles' opening monologue"
       medium: sitcom_opener
       year: 1989
-    transcript_fragment: "To be out, this is out...and out is one of the single most enjoyable experiences of life."
+
+    annotation_status:
+      transcription: complete
+      decomposition: complete
+      performance: incomplete
+      commutation: incomplete
+      adversarial_review: incomplete
+      voice_attribution: incomplete
+
+    transcript_fragment: >
+      You know, why we're here? To be out, this is out...and out is one
+      of the single most enjoyable experiences of life.
+
     joke:
       content:
         primary_domain: [social_ritual]
-        concepts: [going_out, leisure, social_experience]
+        concepts: [going_out]
         pivot_concept: going_out
-        specificity: {default_level: 2}
+        specificity:
+          default_level: 2
+          trajectory: null
         content_moves: []
+
       logic:
-        setup_expectation: "Jerry asks 'why we're here' - the audience expects a philosophical or existential answer to this loaded question."
-        punchline_violation: "The answer is flatly literal: we're here to be 'out'. The grand question gets a mundane, tautological answer - being out IS the point."
+        setup_expectation: >
+          "Why we're here" invokes a philosophical/existential register.
+          The audience expects an answer about purpose, meaning, or at
+          least an observational thesis about comedy clubs. The question
+          carries the weight of a big opening gambit.
+        punchline_violation: >
+          The answer is tautological and deflating: we're here "to be out."
+          The grand question is answered with a spatial/social truism. Then
+          the mundane state of "being out" is immediately elevated to "one
+          of the single most enjoyable experiences of life," applying
+          monumental language to a trivial concept. The joke operates in
+          two beats: first a contraction (existential to spatial), then an
+          elevation (spatial to monumental).
+
         pivot_mechanism:
           operation: reinterpretation
+          operation_alternative: null
+          # TEST: Two readings of the same material.
+          # Reading 1 (setup): "Why we're here" = existential/philosophical question.
+          # Reading 2 (punchline): "Why we're here" = literal spatial state (being out of the house).
+          # The humor comes from the shift between registers. Nothing is negated;
+          # the question is answered, just in a radically different frame.
           reading_switch: none
-          scale_shift: contraction
+          scale_shift: none
+          # STRICT TEST: The contraction from existential to spatial IS the
+          # reinterpretation. Could I swap to expansion while keeping the same
+          # operation? No — a reinterpretation that reframes grand-as-trivial
+          # CANNOT work as grand-to-grander. The scale change is fused with
+          # the operation. Set to none.
           wordplay: none
-        setup_frame: establishes_premise
+
+        setup_frame: establishes_convention
+        # "Why are we here?" is a question the audience already recognizes as
+        # a standard philosophical/rhetorical opener. They hold this belief
+        # without Jerry stating it. Convention, not premise.
+
         pivot_locus: logical
         resolution_requires: [shared_experience]
+
       structure:
         primary_template: mundane_as_monumental
+        # The rhetorical shape: "being out" is treated with the gravity of a
+        # life philosophy ("one of the single most enjoyable experiences of life").
+        # The frame of importance is sustained; the content is trivial.
         secondary_templates: []
         subversions_applied: []
         has_tag: false
         tag_operation: null
         tag_has_own_pivot: null
-        act_out: {present: false, character_type: null, register_gap: null, character_gloss: ""}
+        act_out:
+          present: false
+          character_type: null
+          register_gap: null
+          character_gloss: ""
+
       relational:
-        positioning: {default: lateral_observer}
+        positioning:
+          default: lateral_observer
+          trajectory: null
         audience_implication: co_observer
-        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 4}
-        performed_relatability: {present: true}
+        # The audience is literally "out" with Jerry. They're co-observers
+        # of the shared condition he's naming.
+        shared_experience:
+          required: true
+          universality: universal
+          comprehensibility_without_experience: 4
+        performed_relatability:
+          present: true
+          # "You know, why we're here?" — direct address presuming shared frame.
+
       narrative:
+        callbacks_to: []
+        callback_is_primary_pivot: null
+        running_premise: null
+        tag_callbacks_to: null
+        anti_callback: null
         routine_id: "s01e01_going_out"
+        position_in_routine: 1
+        routine_total_jokes: 5
         position_in_set: opener
+
     performance:
       performer: seinfeld
+      delivery:
+        cadence: "{UNSPECIFIED}"
+        pause_placement: []
+        repetition: null
+        vocal_register_shifts: []
+        estimated_duration_seconds: null
+        register_break:
+          present: false
+          at: null
+          direction: null
+        act_out_voice:
+          character_register: null
+      voice:
+        persona_markers: []
+        signature_phrases: []
+        register: default
+        editorializes:
+          present: null
+          kind: null
+      affective:
+        default_register:
+          valence: null
+          arousal: null
+        trajectory: null
+        shifts_are_load_bearing: null
+        deviates_from_performer_default: null
+      relational:
+        vulnerability:
+          personal_exposure: null
+          emotional_risk: null
+        performed_relatability:
+          intensity: null
+        positioning_deviation: null
+
+    meta:
+      comments_on_form: null
+      breaks_fourth_wall: null
+
     analysis:
-      adversarial: {confidence: high}
-    notes: "The 'why we're here' philosophical framing reread as literal location is a clean reinterpretation. Scale_shift is independent - the contraction from existential to spatial adds a modifier but the reinterpretation would survive without it."
+      commutation:
+        load_bearing_element:
+          field_path: ""
+          gloss: ""
+        removable_elements:
+          - field_path: ""
+            gloss: ""
+        uncertain_elements:
+          - field_path: ""
+            gloss: ""
+      voice_portability:
+        mort: null
+        cece: null
+      adversarial:
+        counterarguments_considered:
+          - alternative: "Operation could be negation — the existential question is 'negated' by the trivial answer."
+            why_rejected: "Nothing is rendered false. The question is answered, just in a different frame. The humor is in the frame switch, not a truth-value flip."
+        confidence: high
+
+    notes: |
+      The scale_shift is set to none because the contraction from existential
+      to spatial is fused with the reinterpretation itself — you cannot swap
+      to expansion while keeping this operation. The "most enjoyable experiences
+      of life" elevation creates a secondary mundane_as_monumental shape but
+      the primary operation remains the frame-switch reinterpretation.
+
+  # =========================================================================
+  # JOKE 02 — Phone call act-out
+  # =========================================================================
 
   - joke_id: "seinfeld_s01e01_opening_02"
     source:
       work: "Seinfeld S01E01 'The Seinfeld Chronicles' opening monologue"
       medium: sitcom_opener
       year: 1989
-    transcript_fragment: "There are people tryin' to find us, they don't know where we are. 'Did you ring?, I can't find him.' 'Where did he go?' 'He didn't tell me where he was going'. He must have gone out."
+
+    annotation_status:
+      transcription: complete
+      decomposition: complete
+      performance: incomplete
+      commutation: incomplete
+      adversarial_review: incomplete
+      voice_attribution: incomplete
+
+    transcript_fragment: >
+      There are people tryin' to find us, they don't know where we are.
+      "Did you ring?, I can't find him." "Where did he go?" "He didn't
+      tell me where he was going." He must have gone out.
+
     joke:
       content:
         primary_domain: [social_ritual]
-        concepts: [going_out, absence, phone_call, searching]
+        concepts: [going_out]
         pivot_concept: going_out
-        specificity: {default_level: 3}
+        specificity:
+          default_level: 3
+          trajectory: null
         content_moves: []
+
       logic:
-        setup_expectation: "Going out is presented as a collective escape - the audience is enjoying the shared experience of being 'out'."
-        punchline_violation: "The act-out dramatizes the mundane panic of people left behind trying to find us, turning the joyful 'out' into a minor crisis for others. The specificity of the phone call makes an abstract observation concrete and recognizable."
+        setup_expectation: >
+          Jerry has framed "being out" as a joyful, collective experience.
+          The audience is enjoying the shared celebration of being out.
+        punchline_violation: >
+          The act-out dramatizes the mundane, mildly panicked phone exchange
+          of people left behind trying to locate someone who went out. The
+          humor is in the specificity of the phone dialogue — everyone
+          recognizes this exact exchange. The conclusion "he must have gone
+          out" circles back to the premise with comic tautology.
+
         pivot_mechanism:
           operation: articulation
+          operation_alternative: reinterpretation
+          # TEST: Would the audience still find it funny if they KNEW the
+          # punchline? Yes. The humor is not in surprise but in the precision
+          # of naming a universally recognized phone exchange. The audience
+          # reaction is "yes, exactly" — that IS the phone call you have.
           reading_switch: none
           scale_shift: none
           wordplay: none
+
         setup_frame: establishes_premise
+        # Jerry has established the premise that "being out" creates a
+        # situation where people can't find you. This isn't a pre-existing
+        # belief the audience holds — Jerry frames it for the bit.
+
         pivot_locus: affective
+        # The pivot is recognition-based, not a logical operation. The
+        # audience's response is affective (recognition laughter).
         resolution_requires: [shared_experience]
+
       structure:
         primary_template: bare_observation
+        # The joke IS the naming of the phone exchange. No escalation,
+        # no argument, no register mismatch. The rhetorical shape is the
+        # act-out itself.
         secondary_templates: []
         subversions_applied: []
         has_tag: false
         tag_operation: null
         tag_has_own_pivot: null
-        act_out: {present: true, character_type: everyman, register_gap: none, character_gloss: "Person at home trying to reach someone who went out; bewildered, slightly annoyed phone caller."}
+        act_out:
+          present: true
+          character_type: everyman
+          register_gap: none
+          # The characters in the act-out are unremarkable people making an
+          # unremarkable phone call. No register gap — the comedy is in the
+          # recognition, not in a character treating something inappropriately.
+          character_gloss: >
+            Two people on the phone trying to locate someone who went out;
+            slightly bewildered, mildly annoyed everymen.
+
       relational:
-        positioning: {default: lateral_observer}
+        positioning:
+          default: lateral_observer
+          trajectory: null
         audience_implication: co_observer
-        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 4}
-        performed_relatability: {present: true}
+        shared_experience:
+          required: true
+          universality: universal
+          comprehensibility_without_experience: 4
+        performed_relatability:
+          present: true
+
       narrative:
+        callbacks_to: []
+        callback_is_primary_pivot: null
+        running_premise: null
+        tag_callbacks_to: null
+        anti_callback: null
         routine_id: "s01e01_going_out"
+        position_in_routine: 2
+        routine_total_jokes: 5
         position_in_set: opener
+
     performance:
       performer: seinfeld
+      delivery:
+        cadence: "{UNSPECIFIED}"
+        pause_placement: []
+        repetition: null
+        vocal_register_shifts: []
+        estimated_duration_seconds: null
+        register_break:
+          present: false
+          at: null
+          direction: null
+        act_out_voice:
+          character_register: null
+      voice:
+        persona_markers: []
+        signature_phrases: []
+        register: default
+        editorializes:
+          present: null
+          kind: null
+      affective:
+        default_register:
+          valence: null
+          arousal: null
+        trajectory: null
+        shifts_are_load_bearing: null
+        deviates_from_performer_default: null
+      relational:
+        vulnerability:
+          personal_exposure: null
+          emotional_risk: null
+        performed_relatability:
+          intensity: null
+        positioning_deviation: null
+
+    meta:
+      comments_on_form: null
+      breaks_fourth_wall: null
+
     analysis:
-      adversarial: {confidence: medium}
-    notes: "Borderline articulation/reinterpretation. The phone-call act-out names a universally recognized scenario without shifting frame - the humor is in the precision of the naming. The audience recognizes the specific phone exchange from their own lives."
+      commutation:
+        load_bearing_element:
+          field_path: ""
+          gloss: ""
+        removable_elements:
+          - field_path: ""
+            gloss: ""
+        uncertain_elements:
+          - field_path: ""
+            gloss: ""
+      voice_portability:
+        mort: null
+        cece: null
+      adversarial:
+        counterarguments_considered:
+          - alternative: "Could be reinterpretation — the act-out reframes 'being out' from joyful to anxiety-inducing for the people left behind."
+            why_rejected: "The act-out doesn't reframe 'being out.' It dramatizes a known consequence. The audience already knows about this phone call scenario; Jerry names it with specificity. The humor survives without any frame shift — it's the precision of the naming."
+        confidence: medium
+
+    notes: |
+      Borderline articulation/reinterpretation. Applied the disambiguation rule:
+      "Is the OBSERVATION the joke, or is the ANGLE on the observation the joke?"
+      The observation (the specific phone call people have) IS the joke. No new
+      angle is imposed. Articulation.
+
+  # =========================================================================
+  # JOKE 03 — Preparation escalation + "We gotta be getting back"
+  # =========================================================================
 
   - joke_id: "seinfeld_s01e01_opening_03"
     source:
       work: "Seinfeld S01E01 'The Seinfeld Chronicles' opening monologue"
       medium: sitcom_opener
       year: 1989
-    transcript_fragment: "You wanna go out: you get ready, you pick out the clothes, right? You take the shower, you get all ready, get the cash, get your friends, the car, the spot, the reservation...There you're staring around, whatta you do? You go: 'We gotta be getting back'."
+
+    annotation_status:
+      transcription: complete
+      decomposition: complete
+      performance: incomplete
+      commutation: incomplete
+      adversarial_review: incomplete
+      voice_attribution: incomplete
+
+    transcript_fragment: >
+      You wanna go out: you get ready, you pick out the clothes, right?
+      You take the shower, you get all ready, get the cash, get your
+      friends, the car, the spot, the reservation...There you're staring
+      around, whatta you do? You go: "We gotta be getting back."
+
     joke:
       content:
         primary_domain: [social_ritual]
-        concepts: [going_out, preparation, anticipation, disappointment]
+        concepts: [going_out]
         pivot_concept: going_out
-        specificity: {default_level: 3}
+        specificity:
+          default_level: 3
+          trajectory: null
         content_moves: []
+
       logic:
-        setup_expectation: "The escalating list of preparations builds toward a climax - the big payoff of the night out. The audience expects the destination to be worth the effort."
-        punchline_violation: "After all that preparation, the immediate impulse is to go home. The desire to be 'out' is negated the moment you arrive."
+        setup_expectation: >
+          The escalating list of preparations (clothes, shower, cash, friends,
+          car, spot, reservation) builds momentum toward a payoff. The
+          accumulation of effort implies the destination will be worth it.
+          The audience expects either a climactic arrival or a revelation
+          about what "being out" delivers.
+        punchline_violation: >
+          After all the preparation, the immediate impulse upon arriving is
+          to go home. "We gotta be getting back" directly contradicts the
+          desire the entire preparation sequence was in service of. The
+          effort is rendered pointless.
+
         pivot_mechanism:
           operation: negation
+          operation_alternative: null
+          # TEST: "Setup implies X. Punchline asserts not-X."
+          # Setup implies: going out is desirable (all this effort to get there).
+          # Punchline asserts: going out is NOT desirable (wanting to leave
+          # the moment you arrive). The desire is negated.
           reading_switch: none
           scale_shift: none
           wordplay: none
+
         setup_frame: establishes_sequence
+        # The setup is a sequence of preparation steps. The rhetorical
+        # structure is a list that builds.
+
         pivot_locus: logical
         resolution_requires: [shared_experience]
+
       structure:
         primary_template: escalation
+        # The rhetorical shape is the accumulating list of preparations.
+        # Each item (clothes, shower, cash, friends, car, spot, reservation)
+        # adds specificity and commitment. The escalation is the discourse
+        # structure; negation is the cognitive operation at the pivot.
         secondary_templates: []
         subversions_applied: []
         has_tag: false
         tag_operation: null
         tag_has_own_pivot: null
-        act_out: {present: false, character_type: null, register_gap: null, character_gloss: ""}
+        act_out:
+          present: false
+          character_type: null
+          register_gap: null
+          character_gloss: ""
+
       relational:
-        positioning: {default: lateral_observer}
+        positioning:
+          default: lateral_observer
+          trajectory: null
         audience_implication: co_observer
-        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 4}
-        performed_relatability: {present: true}
+        shared_experience:
+          required: true
+          universality: universal
+          comprehensibility_without_experience: 4
+        performed_relatability:
+          present: true
+
       narrative:
+        callbacks_to: []
+        callback_is_primary_pivot: null
+        running_premise: null
+        tag_callbacks_to: null
+        anti_callback: null
         routine_id: "s01e01_going_out"
+        position_in_routine: 3
+        routine_total_jokes: 5
         position_in_set: opener
+
     performance:
       performer: seinfeld
+      delivery:
+        cadence: "{UNSPECIFIED}"
+        pause_placement: []
+        repetition: null
+        vocal_register_shifts: []
+        estimated_duration_seconds: null
+        register_break:
+          present: false
+          at: null
+          direction: null
+        act_out_voice:
+          character_register: null
+      voice:
+        persona_markers: []
+        signature_phrases: []
+        register: default
+        editorializes:
+          present: null
+          kind: null
+      affective:
+        default_register:
+          valence: null
+          arousal: null
+        trajectory: null
+        shifts_are_load_bearing: null
+        deviates_from_performer_default: null
+      relational:
+        vulnerability:
+          personal_exposure: null
+          emotional_risk: null
+        performed_relatability:
+          intensity: null
+        positioning_deviation: null
+
+    meta:
+      comments_on_form: null
+      breaks_fourth_wall: null
+
     analysis:
-      adversarial: {confidence: high}
-    notes: "Clean negation. The setup implies going out is desirable (all the preparation effort). The punchline asserts not-desirable: the instant you're out, you want to go back. The escalating preparation list is the template shape (escalation); the negation is the operation."
+      commutation:
+        load_bearing_element:
+          field_path: ""
+          gloss: ""
+        removable_elements:
+          - field_path: ""
+            gloss: ""
+        uncertain_elements:
+          - field_path: ""
+            gloss: ""
+      voice_portability:
+        mort: null
+        cece: null
+      adversarial:
+        counterarguments_considered:
+          - alternative: "Could be articulation — everyone already knows you want to go home once you're out."
+            why_rejected: "The humor depends on the contradiction between the escalating effort and the desire to leave. If the audience KNEW the punchline, the preparation list would lose its structural function. The surprise of the negation is load-bearing — this is not pure recognition humor."
+        confidence: high
+
+    notes: |
+      Clean negation. Setup implies going out is desirable (all the preparation
+      effort). Punchline asserts not-desirable: the instant you arrive, you want
+      to go back. The escalating preparation list is the template shape
+      (escalation); negation is the operation.
+
+  # =========================================================================
+  # JOKE 04 — The cycle: out/back/sleep/up/out again
+  # =========================================================================
 
   - joke_id: "seinfeld_s01e01_opening_04"
     source:
       work: "Seinfeld S01E01 'The Seinfeld Chronicles' opening monologue"
       medium: sitcom_opener
       year: 1989
-    transcript_fragment: "Once you're out, you wanna get back! You wanna go to sleep, you wanna get up, you wanna go out again tomorrow, right?"
+
+    annotation_status:
+      transcription: complete
+      decomposition: complete
+      performance: incomplete
+      commutation: incomplete
+      adversarial_review: incomplete
+      voice_attribution: incomplete
+
+    transcript_fragment: >
+      Once you're out, you wanna get back! You wanna go to sleep, you
+      wanna get up, you wanna go out again tomorrow, right?
+
     joke:
       content:
-        primary_domain: [social_ritual, existential]
-        concepts: [going_out, cycle, restlessness, human_nature]
-        pivot_concept: cycle
-        specificity: {default_level: 2}
+        primary_domain: [social_ritual]
+        concepts: [going_out, cyclical_dissatisfaction]
+        pivot_concept: cyclical_dissatisfaction
+        specificity:
+          default_level: 2
+          trajectory: null
         content_moves: []
+
       logic:
-        setup_expectation: "The negation (wanting to go back once you're out) seems like the punchline. The audience has landed on the contradiction."
-        punchline_violation: "Jerry extends the negation into an endless cycle - out/back/sleep/up/out again - revealing that the contradiction isn't a one-time thing but a perpetual loop of human restlessness."
+        setup_expectation: >
+          Joke 03 has established the negation: you want to go back once
+          you're out. The audience has landed on the contradiction and
+          expects the bit to move on or deepen.
+        punchline_violation: >
+          Instead of leaving the contradiction as a one-time observation,
+          Jerry extends the logic into a perpetual cycle:
+          out -> back -> sleep -> up -> out again. The negation from
+          joke 03 is revealed to be not a single contradiction but an
+          endless loop of human restlessness.
+
         pivot_mechanism:
           operation: extension
+          operation_alternative: negation
+          # TEST: (1) Accepted premise: once you're out, you want to go back.
+          # (2) Absurd-but-logical conclusion: the desire reverses AGAIN
+          # (want to sleep, want to get up, want to go out), creating an
+          # infinite cycle. The premise is never challenged; the logic is
+          # followed to its perpetual destination.
           reading_switch: none
           scale_shift: expansion
+          # STRICT TEST: Could the same extension work with contraction
+          # instead of expansion? Yes — the cycle could be contracted to
+          # a single evening's micro-oscillations rather than expanded to
+          # a life pattern. The expansion to universal cycle adds comedic
+          # weight but the extension (following the logic forward) would
+          # survive without it. The expansion is a separable modifier.
           wordplay: none
+
         setup_frame: establishes_premise
+        # Jerry has established the premise (from joke 03) that you want
+        # to leave once you arrive. This is not a pre-existing convention;
+        # it was built by the prior joke.
+
         pivot_locus: logical
         resolution_requires: [shared_experience]
+
       structure:
         primary_template: escalation
+        # The rhetorical shape is an accumulating list of desire-reversals:
+        # back, sleep, up, out again. Each beat adds another turn of the
+        # cycle, building momentum.
         secondary_templates: []
         subversions_applied: []
         has_tag: false
         tag_operation: null
         tag_has_own_pivot: null
-        act_out: {present: false, character_type: null, register_gap: null, character_gloss: ""}
+        act_out:
+          present: false
+          character_type: null
+          register_gap: null
+          character_gloss: ""
+
       relational:
-        positioning: {default: lateral_observer}
+        positioning:
+          default: lateral_observer
+          trajectory: null
         audience_implication: co_observer
-        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 5}
-        performed_relatability: {present: true}
+        shared_experience:
+          required: true
+          universality: universal
+          comprehensibility_without_experience: 5
+        performed_relatability:
+          present: true
+
       narrative:
+        callbacks_to: ["seinfeld_s01e01_opening_03"]
+        callback_is_primary_pivot: false
+        running_premise: null
+        tag_callbacks_to: null
+        anti_callback: null
         routine_id: "s01e01_going_out"
+        position_in_routine: 4
+        routine_total_jokes: 5
         position_in_set: opener
+
     performance:
       performer: seinfeld
+      delivery:
+        cadence: "{UNSPECIFIED}"
+        pause_placement: []
+        repetition: null
+        vocal_register_shifts: []
+        estimated_duration_seconds: null
+        register_break:
+          present: false
+          at: null
+          direction: null
+        act_out_voice:
+          character_register: null
+      voice:
+        persona_markers: []
+        signature_phrases: []
+        register: default
+        editorializes:
+          present: null
+          kind: null
+      affective:
+        default_register:
+          valence: null
+          arousal: null
+        trajectory: null
+        shifts_are_load_bearing: null
+        deviates_from_performer_default: null
+      relational:
+        vulnerability:
+          personal_exposure: null
+          emotional_risk: null
+        performed_relatability:
+          intensity: null
+        positioning_deviation: null
+
+    meta:
+      comments_on_form: null
+      breaks_fourth_wall: null
+
     analysis:
-      adversarial: {confidence: medium}
-    notes: "Tags the previous joke's negation by extending the logic into a cycle. The scale_shift to expansion is independent - the cycle works at the specific level (tonight's outing) but the expansion to universal pattern adds comedic weight."
+      commutation:
+        load_bearing_element:
+          field_path: ""
+          gloss: ""
+        removable_elements:
+          - field_path: ""
+            gloss: ""
+        uncertain_elements:
+          - field_path: ""
+            gloss: ""
+      voice_portability:
+        mort: null
+        cece: null
+      adversarial:
+        counterarguments_considered:
+          - alternative: "Could be negation — each step negates the previous desire."
+            why_rejected: "The humor is not in any single contradiction but in the CHAIN of reversals forming a cycle. The premise (wanting what you don't have) is accepted and followed forward, not contradicted. Each reversal is a logical consequence of the premise, not a new negation."
+          - alternative: "Scale_shift could be none — the cycle IS the extension."
+            why_rejected: "The extension (following the logic forward into a cycle) would work at the scale of one evening. The expansion to a broader pattern ('you wanna go out again tomorrow') is a separable intensifier. You could conceive the joke contracting to a micro-cycle within a single evening instead."
+        confidence: medium
+
+    notes: |
+      Functions as a tag on joke 03, extending the negation into a cycle.
+      The callbacks_to field connects this to the prior joke. The scale_shift
+      expansion is independent per the strict test: the cycle logic works at
+      both small and large scales.
+
+  # =========================================================================
+  # JOKE 05 — "Wherever you are in life, you've gotta go."
+  # =========================================================================
 
   - joke_id: "seinfeld_s01e01_opening_05"
     source:
       work: "Seinfeld S01E01 'The Seinfeld Chronicles' opening monologue"
       medium: sitcom_opener
       year: 1989
-    transcript_fragment: "Wherever you are in life, it's my feeling, you've gotta go."
+
+    annotation_status:
+      transcription: complete
+      decomposition: complete
+      performance: incomplete
+      commutation: incomplete
+      adversarial_review: incomplete
+      voice_attribution: incomplete
+
+    transcript_fragment: >
+      Wherever you are in life, it's my feeling, you've gotta go.
+
     joke:
       content:
-        primary_domain: [existential, social_ritual]
-        concepts: [going_out, restlessness, human_condition, movement]
+        primary_domain: [social_ritual]
+        concepts: [going_out, cyclical_dissatisfaction]
         pivot_concept: going_out
-        specificity: {default_level: 1}
+        specificity:
+          default_level: 1
+          trajectory: null
         content_moves: []
+
       logic:
-        setup_expectation: "The routine has been about the specific cycle of going out and coming back. The audience is in the frame of a social-ritual observation."
-        punchline_violation: "'You've gotta go' reinterprets the entire routine: 'going out' becomes a universal existential principle. The specific nightlife observation is reread as a statement about the human condition - we are always in transit."
+        setup_expectation: >
+          The routine has been operating in the frame of a specific social
+          ritual: going out for the evening. The cycle observation (joke 04)
+          broadened it somewhat, but the audience is still in the "going out"
+          frame.
+        punchline_violation: >
+          "Wherever you are in life, you've gotta go" reinterprets the
+          entire routine. "Going out" is no longer about nightlife — it
+          becomes a universal existential principle. "You've gotta go"
+          simultaneously means (a) you must leave wherever you are
+          (restlessness as human condition) and (b) echoes the mortality
+          sense of "gotta go." The specific social observation is reread
+          as a statement about the human condition.
+
         pivot_mechanism:
           operation: reinterpretation
+          operation_alternative: null
+          # TEST: Two readings of the same material.
+          # Reading 1 (setup/routine): "going out" = the social activity of
+          # leaving home for entertainment.
+          # Reading 2 (punchline): "going out" / "gotta go" = existential
+          # restlessness, the human inability to be content where you are.
+          # Same material, two frames. The humor comes from the shift.
           reading_switch: none
           scale_shift: expansion
+          # STRICT TEST: Could this reinterpretation work with contraction?
+          # Yes — the existential observation could be contracted back to
+          # personal quirk ("I've gotta go") rather than expanded to
+          # universal principle ("wherever you are in life"). The expansion
+          # to life-principle is a separable choice that adds weight.
+          # This matches the example in pivot-mechanisms.yaml.
           wordplay: none
+
         setup_frame: establishes_convention
+        # The convention of "going out" as a social activity is something the
+        # audience holds without Jerry stating it. The entire routine has been
+        # operating within this pre-existing frame.
+
         pivot_locus: both
+        # The reinterpretation is logically clean (frame switch from social
+        # to existential), but the landing also carries affective weight —
+        # the audience feels the truth of "you've gotta go" as an emotional
+        # recognition, not just a logical observation.
         resolution_requires: [shared_experience]
+
       structure:
         primary_template: mundane_as_monumental
+        # The rhetorical shape: a mundane social ritual (going out) is
+        # given the gravity of a life philosophy. "Wherever you are in life"
+        # applies the register of existential wisdom to the topic of
+        # leaving the house.
         secondary_templates: []
         subversions_applied: []
         has_tag: false
         tag_operation: null
         tag_has_own_pivot: null
-        act_out: {present: false, character_type: null, register_gap: null, character_gloss: ""}
+        act_out:
+          present: false
+          character_type: null
+          register_gap: null
+          character_gloss: ""
+
       relational:
-        positioning: {default: lateral_observer}
+        positioning:
+          default: lateral_observer
+          trajectory: null
         audience_implication: co_observer
-        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 5}
-        performed_relatability: {present: false}
+        shared_experience:
+          required: true
+          universality: universal
+          comprehensibility_without_experience: 5
+        performed_relatability:
+          present: false
+          # No "you know when you..." gesture here. Jerry delivers a
+          # philosophical pronouncement ("it's my feeling"), claiming
+          # personal conviction rather than shared-experience framing.
+
       narrative:
+        callbacks_to: ["seinfeld_s01e01_opening_03", "seinfeld_s01e01_opening_04"]
+        callback_is_primary_pivot: false
+        running_premise: null
+        tag_callbacks_to: null
+        anti_callback: null
         routine_id: "s01e01_going_out"
+        position_in_routine: 5
+        routine_total_jokes: 5
         position_in_set: opener
+
     performance:
       performer: seinfeld
+      delivery:
+        cadence: "{UNSPECIFIED}"
+        pause_placement: []
+        repetition: null
+        vocal_register_shifts: []
+        estimated_duration_seconds: null
+        register_break:
+          present: false
+          at: null
+          direction: null
+        act_out_voice:
+          character_register: null
+      voice:
+        persona_markers: []
+        signature_phrases: []
+        register: default
+        editorializes:
+          present: null
+          kind: null
+      affective:
+        default_register:
+          valence: null
+          arousal: null
+        trajectory: null
+        shifts_are_load_bearing: null
+        deviates_from_performer_default: null
+      relational:
+        vulnerability:
+          personal_exposure: null
+          emotional_risk: null
+        performed_relatability:
+          intensity: null
+        positioning_deviation: null
+
+    meta:
+      comments_on_form: null
+      breaks_fourth_wall: null
+
     analysis:
-      adversarial: {confidence: high}
-    notes: "The button on the routine. 'Wherever you are in life' lifts the specific going-out cycle to existential principle. The reinterpretation is from social-ritual frame to existential frame. Scale_shift expansion is independent and load-bearing - matches the example in pivot-mechanisms.yaml."
+      commutation:
+        load_bearing_element:
+          field_path: ""
+          gloss: ""
+        removable_elements:
+          - field_path: ""
+            gloss: ""
+        uncertain_elements:
+          - field_path: ""
+            gloss: ""
+      voice_portability:
+        mort: null
+        cece: null
+      adversarial:
+        counterarguments_considered:
+          - alternative: "Could be extension — following the cycle logic to its ultimate conclusion."
+            why_rejected: "The humor is not in following the logic further but in REFRAMING the entire routine. 'Going out' is reread in a new frame (existential rather than social). The operation is a frame shift, not a premise-following. Extension would produce more cycle steps; reinterpretation produces a new lens on the same material."
+          - alternative: "Could be articulation — the audience already senses the existential undertone."
+            why_rejected: "The audience does not hold the existential frame before Jerry imposes it. Remove the frame shift (state it as 'going out is a social ritual we all do') and the joke dies. The humor NEEDS the existential reread."
+        confidence: high
+
+    notes: |
+      The button on the routine. "Wherever you are in life" lifts the specific
+      going-out cycle to existential principle. The reinterpretation is from
+      social-ritual frame to existential frame. Scale_shift expansion is
+      independent — matches the canonical example in pivot-mechanisms.yaml.
+      performed_relatability is false because "it's my feeling" is a personal
+      conviction claim, not a "you know when you..." shared-experience gesture.

@@ -1,151 +1,576 @@
-# FILE: annotations/s02e08_opening_pass2.yaml
-jokes:
-  - joke_id: "seinfeld_s02e08_opening_01"
-    source:
-      work: "Seinfeld S02E08 'The Heart Attack' opening monologue"
-      medium: sitcom_opener
-      year: 1991
-    transcript_fragment: "As an adult, if I want a cookie, I have a cookie, okay? I have three cookies or four cookies, or eleven cookies if I want."
-    joke:
-      content:
-        primary_domain: [domestic_life, food]
-        concepts: [adulthood, freedom, cookies, childhood_rules]
-        pivot_concept: adulthood
-        specificity: {default_level: 3}
-        content_moves: []
-      logic:
-        setup_expectation: "'Enjoying adulthood' and 'reason number one' implies a significant adult privilege -- career, independence, autonomy."
-        punchline_violation: "The pinnacle of adult freedom is eating cookies without permission. The grand framing of adult autonomy is applied to a trivially childish act."
-        pivot_mechanism:
-          operation: reinterpretation
-          reading_switch: none
-          scale_shift: contraction
-          wordplay: none
-        setup_frame: establishes_expectation
-        pivot_locus: logical
-        resolution_requires: [shared_experience]
-      structure:
-        primary_template: mundane_as_monumental
-        secondary_templates: [escalation]
-        subversions_applied: []
-        has_tag: false
-        tag_operation: null
-        tag_has_own_pivot: null
-        act_out:
-          present: false
-          character_type: null
-          register_gap: null
-          character_gloss: ""
-      relational:
-        positioning: {default: lateral_observer}
-        audience_implication: co_observer
-        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 5}
-        performed_relatability: {present: true}
-      narrative:
-        routine_id: "seinfeld_s02e08_cookies"
-        position_in_set: opener
-    performance:
-      performer: seinfeld
-    analysis:
-      adversarial: {confidence: high}
-    notes: "The escalation from 'a cookie' to 'three' to 'four' to 'eleven' is a secondary template reinforcing the core mundane_as_monumental move."
+# S02E08 "The Heart Attack" — Opening Monologue Pass 2 Annotation
+# Schema v0.9
+# Routine: adult cookie freedom / appetite ruining
+# Laugh-points: 4
 
-  - joke_id: "seinfeld_s02e08_opening_02"
-    source:
-      work: "Seinfeld S02E08 'The Heart Attack' opening monologue"
-      medium: sitcom_opener
-      year: 1991
-    transcript_fragment: "Many times I will intentionally ruin my entire appetite. Just ruin it. And then, I call my mother up right after to tell her that I did it. 'Hello, Mom? Yeah, I just ruined my entire appetite.. cookies.'"
-    joke:
-      content:
-        primary_domain: [domestic_life, food, family]
-        concepts: [adulthood, rebellion, mother, appetite, cookies]
-        pivot_concept: rebellion
-        specificity: {default_level: 4}
-        content_moves: []
-      logic:
-        setup_expectation: "Intentionally ruining your appetite is already the childish rebellion established in the prior beat. The audience expects this to remain self-contained."
-        punchline_violation: "Jerry calls his mother to report the act -- reframing cookie-eating as a transgressive event worth confessing, like a child who broke a rule but now does it triumphantly as an adult. The single word 'cookies' as the confession is bathetically specific."
-        pivot_mechanism:
-          operation: mapping
-          reading_switch: none
-          scale_shift: expansion
-          wordplay: none
-        setup_frame: establishes_behavior
-        pivot_locus: both
-        resolution_requires: [shared_experience]
-      structure:
-        primary_template: mundane_as_monumental
-        secondary_templates: []
-        subversions_applied: []
-        has_tag: false
-        tag_operation: null
-        tag_has_own_pivot: null
-        act_out:
-          present: true
-          character_type: enthusiast
-          register_gap: treats_mundane_as_serious
-          character_gloss: "Adult Jerry calling his mother with the triumphant defiance of a teenager confessing a transgression"
-      relational:
-        positioning: {default: lateral_observer}
-        audience_implication: accomplice
-        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 4}
-        performed_relatability: {present: true}
-      narrative:
-        routine_id: "seinfeld_s02e08_cookies"
-        position_in_set: opener
-    performance:
-      performer: seinfeld
-    analysis:
-      adversarial: {confidence: medium}
-    notes: "Mapping vs transplant was the hard call here. The parallel between childhood rule-breaking and adult cookie-eating is apt (mapping) rather than a misapplication -- adults genuinely do feel the echo of the childhood prohibition. The mother-call makes the parallel explicit."
+# ============================================================================
+# JOKE 1: As an adult, if I want a cookie — three, four, eleven cookies
+# ============================================================================
 
-  - joke_id: "seinfeld_s02e08_opening_03"
-    source:
-      work: "Seinfeld S02E08 'The Heart Attack' opening monologue"
-      medium: sitcom_opener
-      year: 1991
-    transcript_fragment: "Because as an adult, we understand even if you ruin an appetite, there's another appetite coming right behind it. There's no danger in running out of appetites."
-    joke:
-      content:
-        primary_domain: [domestic_life, food]
-        concepts: [appetite, adulthood, scarcity, abundance]
-        pivot_concept: appetite
-        specificity: {default_level: 2}
-        content_moves: []
-      logic:
-        setup_expectation: "The childhood framing treats 'ruining your appetite' as a genuine, irreversible consequence -- as if appetite were a finite resource."
-        punchline_violation: "Jerry articulates the obvious adult realization that appetites are renewable and unlimited. The humor is in naming the absurdity of the childhood framing -- something everyone knows but hasn't stated."
-        pivot_mechanism:
-          operation: articulation
-          reading_switch: none
-          scale_shift: none
-          wordplay: none
-        setup_frame: establishes_convention
-        pivot_locus: logical
-        resolution_requires: [shared_experience]
-      structure:
-        primary_template: bare_observation
-        secondary_templates: []
-        subversions_applied: []
-        has_tag: true
-        tag_operation: extends
-        tag_has_own_pivot: false
-        act_out:
-          present: false
-          character_type: null
-          register_gap: null
-          character_gloss: ""
-      relational:
-        positioning: {default: lateral_observer}
-        audience_implication: co_observer
-        shared_experience: {required: true, universality: universal, comprehensibility_without_experience: 5}
-        performed_relatability: {present: true}
-      narrative:
-        routine_id: "seinfeld_s02e08_cookies"
-        position_in_set: opener
-    performance:
-      performer: seinfeld
-    analysis:
-      adversarial: {confidence: high}
-    notes: "Clean articulation: the audience already implicitly knows appetites are renewable. The humor is in Jerry naming what makes the childhood prohibition absurd. No frame shift needed -- the observation lands in the audience's existing frame. The tag 'I've got millions of them, I'll ruin them whenever I want!' extends the triumphant register."
+- joke_id: seinfeld_s02e08_opening_01
+  source:
+    work: "Seinfeld S02E08 'The Heart Attack' opening monologue"
+    medium: sitcom_opener
+    year: 1991
+
+  annotation_status:
+    transcription: complete
+    decomposition: complete
+    performance: incomplete
+    commutation: incomplete
+    adversarial_review: incomplete
+    voice_attribution: incomplete
+
+  joke:
+    content:
+      primary_domain: [domestic_life, childhood]
+      concepts: [adult_cookie_freedom]
+      pivot_concept: adult_cookie_freedom
+      specificity:
+        default_level: 4
+        trajectory: null
+      content_moves: []
+
+    logic:
+      setup_expectation: "Jerry announces he's enjoying adulthood 'for a lot of reasons' — the audience expects substantive adult freedoms (financial independence, autonomy, career, relationships)"
+      punchline_violation: "'Reason number one' is the freedom to eat cookies whenever he wants — the pinnacle of adulthood is reframed as a trivial childhood prohibition lifted, and the escalation from one cookie to eleven treats this minor freedom with the gravity of a hard-won liberty"
+      pivot_mechanism:
+        operation: reinterpretation
+        operation_alternative: null
+        reading_switch: none
+        scale_shift: contraction
+        wordplay: none
+      setup_frame: establishes_expectation
+      pivot_locus: logical
+      resolution_requires: [shared_experience]
+
+    structure:
+      primary_template: mundane_as_monumental
+      secondary_templates: [escalation]
+      subversions_applied: []
+      has_tag: false
+      tag_operation: null
+      tag_has_own_pivot: null
+      act_out:
+        present: false
+        character_type: null
+        register_gap: null
+        character_gloss: ""
+
+    relational:
+      positioning:
+        default: lateral_observer
+        trajectory: null
+      audience_implication: co_observer
+      shared_experience:
+        required: true
+        universality: universal
+        comprehensibility_without_experience: 4
+      performed_relatability:
+        present: true
+
+    narrative:
+      callbacks_to: []
+      callback_is_primary_pivot: null
+      running_premise: adult_cookie_freedom_routine
+      tag_callbacks_to: null
+      anti_callback: null
+      routine_id: s02e08_cookie_freedom
+      position_in_routine: 1
+      routine_total_jokes: 4
+      position_in_set: opener
+
+  performance:
+    performer: jerry_seinfeld
+    delivery:
+      cadence: "{UNSPECIFIED}"
+      pause_placement: []
+      repetition: null
+      vocal_register_shifts: []
+      estimated_duration_seconds: null
+      register_break:
+        present: false
+        at: null
+        direction: null
+      act_out_voice:
+        character_register: null
+    voice:
+      persona_markers: []
+      signature_phrases: []
+      register: default
+      editorializes:
+        present: null
+        kind: null
+    affective:
+      default_register:
+        valence: null
+        arousal: null
+      trajectory: null
+      shifts_are_load_bearing: null
+      deviates_from_performer_default: null
+    relational:
+      vulnerability:
+        personal_exposure: null
+        emotional_risk: null
+      performed_relatability:
+        intensity: null
+      positioning_deviation: null
+
+  meta:
+    comments_on_form: null
+    breaks_fourth_wall: null
+
+  analysis:
+    commutation:
+      load_bearing_element:
+        field_path: ""
+        gloss: ""
+      removable_elements:
+        - field_path: ""
+          gloss: ""
+      uncertain_elements:
+        - field_path: ""
+          gloss: ""
+    voice_portability:
+      mort: null
+      cece: null
+    adversarial:
+      counterarguments_considered:
+        - alternative: "Could be articulation — naming the shared recognition that cookie freedom is secretly the best part of adulthood"
+          why_rejected: "The humor requires the frame shift from 'serious adult benefits' to 'cookie access.' The setup builds the expectation of substantive reasons ('for a lot of reasons... reason number one'). If the audience already framed adulthood primarily as cookie freedom, the joke would not work. The reinterpretation of what 'enjoying adulthood' means IS the joke. Remove the frame shift (state it as 'I like being an adult') and the humor dies."
+        - alternative: "scale_shift could be none — is the contraction fused with the reinterpretation?"
+          why_rejected: "The reinterpretation (adulthood is about trivial freedoms) could work with expansion too — e.g., 'the freedom to eat cookies is really the foundation of all human liberty.' The contraction from 'substantive adult benefits' to 'eating cookies' is a separable directional choice."
+      confidence: high
+
+  notes: |
+    The setup builds rhetorical gravity ('enjoying adulthood... for a lot of reasons... reason number one') that the punchline deflates with cookies. The mundane_as_monumental template captures the treatment of cookie eating with the rhetoric of a major life benefit. The escalation from 1 to 3 to 4 to 11 cookies is a secondary template — each number commits harder to the triviality being treated as monumental. The contraction from 'adult freedoms' to 'cookie access' is clean and separable. Uses the existing registry concept adult_cookie_freedom.
+
+# ============================================================================
+# JOKE 2: I will intentionally ruin my entire appetite — just ruin it
+# ============================================================================
+
+- joke_id: seinfeld_s02e08_opening_02
+  source:
+    work: "Seinfeld S02E08 'The Heart Attack' opening monologue"
+    medium: sitcom_opener
+    year: 1991
+
+  annotation_status:
+    transcription: complete
+    decomposition: complete
+    performance: incomplete
+    commutation: incomplete
+    adversarial_review: incomplete
+    voice_attribution: incomplete
+
+  joke:
+    content:
+      primary_domain: [domestic_life, childhood]
+      concepts: [appetite_ruining, adult_cookie_freedom]
+      pivot_concept: appetite_ruining
+      specificity:
+        default_level: 4
+        trajectory: null
+      content_moves: []
+
+    logic:
+      setup_expectation: "The audience has accepted the cookie-freedom premise — eating cookies is framed as an adult privilege"
+      punchline_violation: "The childhood prohibition ('don't ruin your appetite') is not just ignored but intentionally violated as a power move — the act of ruining your appetite is reframed from accidental transgression to deliberate assertion of adult sovereignty. 'Just ruin it' treats appetite-ruining with the decisiveness of a consequential adult decision."
+      pivot_mechanism:
+        operation: reinterpretation
+        operation_alternative: extension
+        reading_switch: none
+        scale_shift: expansion
+        wordplay: none
+      setup_frame: establishes_convention
+      pivot_locus: logical
+      resolution_requires: [shared_experience]
+
+    structure:
+      primary_template: mundane_as_monumental
+      secondary_templates: []
+      subversions_applied: []
+      has_tag: false
+      tag_operation: null
+      tag_has_own_pivot: null
+      act_out:
+        present: false
+        character_type: null
+        register_gap: null
+        character_gloss: ""
+
+    relational:
+      positioning:
+        default: lateral_observer
+        trajectory: null
+      audience_implication: co_observer
+      shared_experience:
+        required: true
+        universality: universal
+        comprehensibility_without_experience: 4
+      performed_relatability:
+        present: true
+
+    narrative:
+      callbacks_to: [seinfeld_s02e08_opening_01]
+      callback_is_primary_pivot: false
+      running_premise: adult_cookie_freedom_routine
+      tag_callbacks_to: null
+      anti_callback: null
+      routine_id: s02e08_cookie_freedom
+      position_in_routine: 2
+      routine_total_jokes: 4
+      position_in_set: opener
+
+  performance:
+    performer: jerry_seinfeld
+    delivery:
+      cadence: "{UNSPECIFIED}"
+      pause_placement: []
+      repetition: null
+      vocal_register_shifts: []
+      estimated_duration_seconds: null
+      register_break:
+        present: false
+        at: null
+        direction: null
+      act_out_voice:
+        character_register: null
+    voice:
+      persona_markers: []
+      signature_phrases: []
+      register: default
+      editorializes:
+        present: null
+        kind: null
+    affective:
+      default_register:
+        valence: null
+        arousal: null
+      trajectory: null
+      shifts_are_load_bearing: null
+      deviates_from_performer_default: null
+    relational:
+      vulnerability:
+        personal_exposure: null
+        emotional_risk: null
+      performed_relatability:
+        intensity: null
+      positioning_deviation: null
+
+  meta:
+    comments_on_form: null
+    breaks_fourth_wall: null
+
+  analysis:
+    commutation:
+      load_bearing_element:
+        field_path: ""
+        gloss: ""
+      removable_elements:
+        - field_path: ""
+          gloss: ""
+      uncertain_elements:
+        - field_path: ""
+          gloss: ""
+    voice_portability:
+      mort: null
+      cece: null
+    adversarial:
+      counterarguments_considered:
+        - alternative: "Could be extension — following the cookie-freedom premise to a more extreme conclusion"
+          why_rejected: "The humor is not in reaching an absurd destination via logic — it is in reframing the act of appetite-ruining itself. The childhood frame is 'appetite-ruining is accidental and bad.' The adult frame is 'appetite-ruining is intentional and sovereign.' The frame shift on the SAME act (ruining appetite) is the joke. Extension would follow the premise further; this joke shifts the frame on what appetite-ruining means."
+        - alternative: "scale_shift could be none — is the expansion fused with the reinterpretation?"
+          why_rejected: "The reinterpretation (appetite-ruining as deliberate rather than accidental) could work with contraction — e.g., 'I ruined my appetite... it was just one cookie.' The expansion from 'trivial childhood mishap' to 'deliberate act of adult power' is a separable directional choice. The joke works BECAUSE the small act is expanded to feel consequential."
+      confidence: medium
+
+  notes: |
+    The reinterpretation shifts the frame on appetite-ruining from childhood transgression to adult power play. The mundane_as_monumental template continues from joke 1 — appetite destruction is treated with the gravity of a deliberate, consequential act. 'Just ruin it' has the cadence of a motivational slogan applied to snacking. The expansion elevates the trivial act to the register of sovereign decision-making. Uses existing registry concept appetite_ruining.
+
+# ============================================================================
+# JOKE 3: Call my mother to tell her — "Hello, Mom? Cookies."
+# ============================================================================
+
+- joke_id: seinfeld_s02e08_opening_03
+  source:
+    work: "Seinfeld S02E08 'The Heart Attack' opening monologue"
+    medium: sitcom_opener
+    year: 1991
+
+  annotation_status:
+    transcription: complete
+    decomposition: complete
+    performance: incomplete
+    commutation: incomplete
+    adversarial_review: incomplete
+    voice_attribution: incomplete
+
+  joke:
+    content:
+      primary_domain: [domestic_life, childhood, relationships]
+      concepts: [appetite_ruining, adult_cookie_freedom]
+      pivot_concept: appetite_ruining
+      specificity:
+        default_level: 5
+        trajectory: null
+      content_moves: []
+
+    logic:
+      setup_expectation: "Jerry has established appetite-ruining as a deliberate adult power move — the audience expects further escalation of this defiance"
+      punchline_violation: "He calls his mother to REPORT the transgression — the ultimate act of adult defiance is channeled through the childhood framework of confessing to mom. The act-out ('Hello, Mom? yeah, I just ruined my entire appetite.. cookies.') treats the confession with the gravity of reporting a significant life event while the content is trivially childish. The adult is simultaneously asserting independence AND still needing maternal acknowledgment of it."
+      pivot_mechanism:
+        operation: extension
+        operation_alternative: null
+        reading_switch: none
+        scale_shift: none
+        wordplay: none
+      setup_frame: establishes_premise
+      pivot_locus: both
+      resolution_requires: [shared_experience]
+
+    structure:
+      primary_template: escalation
+      secondary_templates: [mundane_as_monumental]
+      subversions_applied: []
+      has_tag: false
+      tag_operation: null
+      tag_has_own_pivot: null
+      act_out:
+        present: true
+        character_type: enthusiast
+        register_gap: unaware_of_absurdity
+        character_gloss: "Adult Jerry calling his mother with gleeful defiance to report ruining his appetite, like a child reporting a daring feat"
+
+    relational:
+      positioning:
+        default: lateral_observer
+        trajectory: null
+      audience_implication: co_observer
+      shared_experience:
+        required: true
+        universality: universal
+        comprehensibility_without_experience: 4
+      performed_relatability:
+        present: true
+
+    narrative:
+      callbacks_to: [seinfeld_s02e08_opening_02]
+      callback_is_primary_pivot: false
+      running_premise: adult_cookie_freedom_routine
+      tag_callbacks_to: null
+      anti_callback: null
+      routine_id: s02e08_cookie_freedom
+      position_in_routine: 3
+      routine_total_jokes: 4
+      position_in_set: opener
+
+  performance:
+    performer: jerry_seinfeld
+    delivery:
+      cadence: "{UNSPECIFIED}"
+      pause_placement: []
+      repetition: null
+      vocal_register_shifts: []
+      estimated_duration_seconds: null
+      register_break:
+        present: false
+        at: null
+        direction: null
+      act_out_voice:
+        character_register: null
+    voice:
+      persona_markers: []
+      signature_phrases: []
+      register: default
+      editorializes:
+        present: null
+        kind: null
+    affective:
+      default_register:
+        valence: null
+        arousal: null
+      trajectory: null
+      shifts_are_load_bearing: null
+      deviates_from_performer_default: null
+    relational:
+      vulnerability:
+        personal_exposure: null
+        emotional_risk: null
+      performed_relatability:
+        intensity: null
+      positioning_deviation: null
+
+  meta:
+    comments_on_form: null
+    breaks_fourth_wall: null
+
+  analysis:
+    commutation:
+      load_bearing_element:
+        field_path: ""
+        gloss: ""
+      removable_elements:
+        - field_path: ""
+          gloss: ""
+      uncertain_elements:
+        - field_path: ""
+          gloss: ""
+    voice_portability:
+      mort: null
+      cece: null
+    adversarial:
+      counterarguments_considered:
+        - alternative: "Could be reinterpretation — reframing the mother-son relationship as the adult confessing rather than the child confessing"
+          why_rejected: "The humor follows the accepted premise (appetite-ruining as adult power move) to its absurd-but-logical conclusion: if ruining your appetite is a triumph, then you would naturally call the person who imposed the prohibition to announce your victory. The premise is accepted and pushed forward, not reframed. (1) Accepted premise: appetite-ruining is adult sovereignty. (2) Absurd-but-logical conclusion: you call mom to brag about it. Extension fits."
+        - alternative: "Could be transplant — importing the framework of reporting a significant achievement onto trivial appetite-ruining"
+          why_rejected: "There is no identifiable foreign domain being imported. The joke stays within the childhood-rules-vs-adult-freedom domain throughout. The calling-mom behavior is logically continuous with the premise, not imported from elsewhere."
+      confidence: high
+
+  notes: |
+    The act-out is the primary delivery vehicle here. The character is an enthusiast type — gleefully reporting the appetite-ruining to mom with the register of someone sharing important news. The register_gap is unaware_of_absurdity: the character does not see the contradiction of asserting adult independence by reporting to his mother. The pivot_locus is 'both' because the logical extension (calling mom to brag) carries affective weight through the act-out's tone of childish triumph. 'Cookies' as a single-word punchline within the act-out is peak specificity (level 5).
+
+# ============================================================================
+# JOKE 4: There's another appetite coming right behind it — millions of them
+# ============================================================================
+
+- joke_id: seinfeld_s02e08_opening_04
+  source:
+    work: "Seinfeld S02E08 'The Heart Attack' opening monologue"
+    medium: sitcom_opener
+    year: 1991
+
+  annotation_status:
+    transcription: complete
+    decomposition: complete
+    performance: incomplete
+    commutation: incomplete
+    adversarial_review: incomplete
+    voice_attribution: incomplete
+
+  joke:
+    content:
+      primary_domain: [domestic_life, childhood]
+      concepts: [appetite_ruining, adult_cookie_freedom]
+      pivot_concept: appetite_ruining
+      specificity:
+        default_level: 3
+        trajectory: null
+      content_moves: []
+
+    logic:
+      setup_expectation: "The premise of appetite-ruining as adult power has been established — the audience has accepted that ruining your appetite is a deliberate adult choice. The childhood warning implied scarcity: you only get one appetite, so guard it."
+      punchline_violation: "Appetites are reframed as a renewable resource — 'there's another appetite coming right behind it' and 'no danger in running out of appetites' treats them like an inexhaustible commodity. The childhood terror of 'ruining' an appetite is defused by the adult realization that appetites regenerate automatically. 'I've got millions of them' applies the language of abundance and resource management to a biological function."
+      pivot_mechanism:
+        operation: reinterpretation
+        operation_alternative: extension
+        reading_switch: figurative_to_literal
+        scale_shift: expansion
+        wordplay: none
+      setup_frame: establishes_convention
+      pivot_locus: logical
+      resolution_requires: [shared_experience]
+
+    structure:
+      primary_template: mundane_as_monumental
+      secondary_templates: [escalation]
+      subversions_applied: []
+      has_tag: false
+      tag_operation: null
+      tag_has_own_pivot: null
+      act_out:
+        present: false
+        character_type: null
+        register_gap: null
+        character_gloss: ""
+
+    relational:
+      positioning:
+        default: lateral_observer
+        trajectory: null
+      audience_implication: co_observer
+      shared_experience:
+        required: true
+        universality: universal
+        comprehensibility_without_experience: 4
+      performed_relatability:
+        present: true
+
+    narrative:
+      callbacks_to: [seinfeld_s02e08_opening_02]
+      callback_is_primary_pivot: false
+      running_premise: adult_cookie_freedom_routine
+      tag_callbacks_to: null
+      anti_callback: null
+      routine_id: s02e08_cookie_freedom
+      position_in_routine: 4
+      routine_total_jokes: 4
+      position_in_set: opener
+
+  performance:
+    performer: jerry_seinfeld
+    delivery:
+      cadence: "{UNSPECIFIED}"
+      pause_placement: []
+      repetition: null
+      vocal_register_shifts: []
+      estimated_duration_seconds: null
+      register_break:
+        present: false
+        at: null
+        direction: null
+      act_out_voice:
+        character_register: null
+    voice:
+      persona_markers: []
+      signature_phrases: []
+      register: default
+      editorializes:
+        present: null
+        kind: null
+    affective:
+      default_register:
+        valence: null
+        arousal: null
+      trajectory: null
+      shifts_are_load_bearing: null
+      deviates_from_performer_default: null
+    relational:
+      vulnerability:
+        personal_exposure: null
+        emotional_risk: null
+      performed_relatability:
+        intensity: null
+      positioning_deviation: null
+
+  meta:
+    comments_on_form: null
+    breaks_fourth_wall: null
+
+  analysis:
+    commutation:
+      load_bearing_element:
+        field_path: ""
+        gloss: ""
+      removable_elements:
+        - field_path: ""
+          gloss: ""
+      uncertain_elements:
+        - field_path: ""
+          gloss: ""
+    voice_portability:
+      mort: null
+      cece: null
+    adversarial:
+      counterarguments_considered:
+        - alternative: "Could be extension — following the appetite-ruining premise to the absurd conclusion that appetites are infinite"
+          why_rejected: "The humor is not in following logic to an absurd destination — it is in reframing what 'ruining an appetite' means. The childhood frame treats 'ruin' as permanent destruction of a scarce resource. The adult frame treats appetite as renewable and abundant. The word 'ruin' is the same word being read differently: in the childhood frame it is catastrophic (figurative weight); in the adult frame it is literal and trivial (you just get hungry again). This is a reinterpretation of 'ruin' from figurative devastation to literal temporary state."
+        - alternative: "Could be articulation — naming the obvious fact that appetite returns"
+          why_rejected: "The audience recognizes the truth, but the humor requires the specific reframing of appetites as a RESOURCE you possess in quantity ('millions of them'). The language of abundance and resource management is the imposed frame. State it in the audience's existing frame ('you get hungry again later') and the joke dies — the humor needs the commodification language."
+        - alternative: "reading_switch could be none — is the figurative-to-literal reading fused with the operation?"
+          why_rejected: "The childhood phrase 'ruin your appetite' uses 'ruin' with figurative gravity (as if appetite were something precious and destructible). The punchline treats 'ruin' literally — you temporarily suppress hunger, and it comes back. This is a clear figurative-to-literal switch: the figurative expression 'ruin your appetite' is reread as literally describing a temporary, reversible state. The reading_switch is independently specifiable — the reinterpretation could work without literalizing 'ruin' (e.g., reframing it as a positive act rather than a literal one)."
+        - alternative: "scale_shift could be none — is the expansion fused?"
+          why_rejected: "The reinterpretation (appetite as renewable) could work at a contracted scale — e.g., 'appetite comes back in an hour, big deal.' The expansion to 'millions of them' and 'no danger of running out' elevates the observation to the register of a resource-management treatise. The expansion is a separable choice that amplifies the mundane_as_monumental effect."
+      confidence: medium
+
+  notes: |
+    The routine's closer and its strongest laugh. The figurative_to_literal reading_switch is load-bearing: the childhood phrase 'ruin your appetite' treats 'ruin' as figuratively catastrophic (you've destroyed something precious). The adult reframe literalizes it — appetite is just a temporary state that regenerates. The mundane_as_monumental template continues: appetites are discussed with the gravity of natural resource management ('no danger in running out,' 'millions of them'). The escalation from 'another one coming right behind it' to 'no danger' to 'millions' to 'I'll ruin them whenever I want' builds the defiant triumph. Both existing registry concepts (appetite_ruining, adult_cookie_freedom) apply.

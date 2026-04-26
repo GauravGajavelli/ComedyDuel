@@ -6,7 +6,7 @@
   - Observational comedy maps well
 - Automate the annotation and schema evolution **[UPDATED]**
   - Sort of recursive because you have to update everything once the schema changes
-  - Schema is now at v0.6 with 6 pivot operations, 7 templates, 6 setup_frame values
+  - Schema is now at v0.9.2 with 6 pivot operations + operation_alternative for boundary branching, 6 templates, 6 setup_frame values
   - Automated pipeline: scrape transcripts → parallel agent annotation (5 episodes at a time) → extract to disk → synthesis with gap tracking
   - Schema evolves through vocabulary gap tracker (3-occurrence threshold for new values, 40%-after-30 broadness check for splitting)
   - See: `working/scaling-path.md` for full batch annotation cycle
@@ -67,8 +67,10 @@
 
 ## Phase 0 Steps **[NEW — replaces implicit workflow]**
 
-- Current state: 14/~140 episodes annotated (71 laugh-points), schema v0.6 validated
-  - Episodes 1-15 have automated Pass 2 annotations (agent-generated)
+- Current state: 14/~140 episodes annotated (65 laugh-points), schema v0.9.2 validated
+  - Episodes 1-15 have automated Pass 2 annotations (agent-generated, re-annotated under v0.9.2)
+  - 17/65 jokes (26%) have non-null operation_alternative for generation branching
+  - All 31 unique concepts resolve to registry node_ids (100% compliance)
   - Episodes 1-15 still need: human audit (laugh points, physical performance, annotation review)
   - No concept graph nodes populated yet
 
@@ -111,10 +113,12 @@
 - If the prompt can't produce funny output from a well-annotated joke, more annotations won't fix that
 - This is the highest-risk technical problem — the schema is necessary but not sufficient; the LLM has to be funny at the word level
 - You'll know within a day whether the architecture's hardest problem is solvable
-- **Multi-candidate generation with structural diversity** **[NEW]**
+- **Multi-candidate generation with structural diversity** **[UPDATED v0.9.2]**
   - WitScript 3 proves that generating candidates via different mechanisms and selecting the best works. Our system has 6 operations (vs. WitScript's 3) and richer constraints
   - For each prompt: generate one candidate per plausible operation type (e.g., one via extension, one via reinterpretation, one via mapping), then let the critic rank them
   - Structural diversity of candidates is higher than WitScript's because our conditioning signal (full annotation spec) is richer
+  - **operation_alternative as branching signal (v0.9.2):** 26% of annotated jokes have a structured alternative operation classification. When `operation_alternative` is non-null, the generator produces candidates from BOTH the primary and alternative operations, then the critic selects. This turns irreducible annotation ambiguity (especially the articulation↔reinterpretation boundary in observational comedy) into generative variety. The dominant boundary pairs are articulation↔reinterpretation (6/17) and reinterpretation↔extension (4/17) — exactly the boundaries where Seinfeld's comedy lives
+  - For jokes with null operation_alternative (74%), the generator only produces candidates from the primary operation — the classification was confident enough that branching would waste compute
 - **Specialized realization model (from WitScript 2's approach)** **[NEW]**
   - WitScript 2's core idea: fine-tune a small model (BERT) on ~16,700 actual joke punch lines, use it for masked-token filling at the punch position. The model learns distributional patterns of what words tend to appear in the punch position given a topic
   - Our version: fine-tune a small model on the annotated corpus's punch-line text, conditioned on operation type + template + performer. This learns "what words Seinfeld uses at the punch position of an extension joke" vs. "what words for a reinterpretation joke"
@@ -146,8 +150,8 @@
 ### Key files
 
 - `engine/schema.yaml` — annotation schema
-- `engine/vocabularies/pivot-mechanisms.yaml` — 6 humor operations with testable criteria
-- `engine/vocabularies/templates.yaml` — 7 rhetorical shapes
+- `engine/vocabularies/pivot-mechanisms.yaml` — 6 humor operations + 4 modifiers with testable criteria
+- `engine/vocabularies/templates.yaml` — 6 rhetorical shapes
 - `protocols.md` — multi-pass annotation workflow
 - `working/scaling-path.md` — batch annotation cycle instructions for new sessions
 - `working/batch1_synthesis.md` — results from first 14 episodes
@@ -254,17 +258,17 @@
 
 1. **Humor critic** — test open-source model ranking ability against your judgments. Unblocks automated evaluation. (Can start during annotation Phase 0)
 2. **Realization prompt engineering** — write and test 3 prompts on existing 14 annotations. De-risks the hardest technical problem. (Start now)
-3. **Multi-candidate generation** — generate one candidate per plausible operation type, critic ranks, top-k go forward. WitScript 3 proves this approach works. (After critic validated)
+3. **Multi-candidate generation** — generate one candidate per plausible operation type, critic ranks, top-k go forward. WitScript 3 proves this approach works. For 26% of jokes, `operation_alternative` provides a structured second operation to branch on; for the rest, branch across the full operation vocabulary. (After critic validated)
 4. **Research COMET-ATOMIC successor** — evaluate current commonsense KBs for relation type coverage, inference quality, local availability. Need: causal/social chains for articulation humor + entity relations for concept proposals. (Can start during Phase 0 as background research)
 5. **Entity ablation on concept graph** — automated commutation test using critic scores. Validates graph quality. (After ~200 concept nodes)
 6. **Commonsense KB as concept proposal engine** — COMET-ATOMIC proposes candidate nodes/edges, critic validates humor relevance, graph stays empirically grounded. (After KB selected and critic validated)
 7. **Graph ML for link prediction + coverage gaps** — expand graph beyond attestation + KB proposals. (After ablation validates the graph has enough signal)
 8. **Specialized realization model** — fine-tune small model on annotated punch-line text, conditioned on operation + template + performer. Requires ~250+ laugh-points. (After 50 episodes annotated)
-9. **Toplyn's formula cross-reference** — COMPLETED. Wordplay added as 7th operation. Toplyn's lexical techniques integrated as realization-stage tools. His book remains useful for additional patterns. (Done)
+9. **Toplyn's formula cross-reference** — COMPLETED. Wordplay added as 4th modifier (corrected from 7th operation — it's a delivery vehicle, not a cognitive operation). Toplyn's lexical techniques integrated as realization-stage tools. His book remains useful for additional patterns. (Done)
 10. **RL for sequential decisions** — subversion timing, set construction. (Phase 2+, after pipeline works end-to-end)
 
 - Consider using data mining techniques on the annotated jokes to find patterns
-  - 71 laugh-points already show: reinterpretation 31%, extension 30%, articulation 15%, negation 10%, transplant 8%, mapping 6% **[NEW]**
+  - 65 laugh-points (v0.9.2) show: reinterpretation 35%, extension 29%, articulation 13%, mapping 12%, negation 6%, transplant 3% **[UPDATED]**
   - Also consider deep reinforcement learning, but first consider if this meets the criterion laid out in 490 like the Markov property (doubtful — see RL section above for nuanced assessment)
 - Use a similar tech stack coding style to my team at Toast to ensure that I'm getting the most out of the project
 - Long-term strategy

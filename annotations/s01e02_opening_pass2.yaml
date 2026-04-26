@@ -1,29 +1,64 @@
 # FILE: annotations/s01e02_opening_pass2.yaml
+# Episode: S01E02 "The Stakeout" — opening monologue
+# Pass 2 annotation (decomposition)
+# Monologue topic: Cheque-writing at the supermarket
+
 jokes:
+
+  # ==========================================================================
+  # JOKE 01 — Women are fast with cheques (keys vs chequebook contrast)
+  # ==========================================================================
+
   - joke_id: "seinfeld_s01e02_opening_01"
     source:
       work: "Seinfeld S01E02 'The Stakeout' opening monologue"
       medium: sitcom_opener
       year: 1990
-    transcript_fragment: "Women are very fast with cheques, y'know, 'cuz they write out so many cheques. The keys, they can never find in their purse, they don't know where that is, but the cheque book they got that."
+
+    annotation_status:
+      transcription: complete
+      decomposition: complete
+      performance: incomplete
+      commutation: incomplete
+      adversarial_review: incomplete
+      voice_attribution: incomplete
+
+    transcript_fragment: >
+      Women are very fast with cheques, y'know, 'cuz they write out so many
+      cheques. The keys, they can never find in their purse, they don't know
+      where that is, but the cheque book they got that.
+
     joke:
       content:
-        primary_domain: [gender_dynamics, commerce]
-        concepts: [cheque_writing, purse, women, speed, competence]
+        primary_domain: [gender_dynamics, money_and_commerce]
+        concepts: [cheque_writing]
         pivot_concept: cheque_writing
-        specificity: {default_level: 3}
+        specificity:
+          default_level: 3
+          trajectory: null
         content_moves: []
+
       logic:
-        setup_expectation: "Women at the supermarket writing cheques sets up an expectation of slowness - the audience knows the cultural trope of waiting behind someone writing a cheque."
-        punchline_violation: "The expectation is negated: women are actually fast with cheques. The contrast between fumbling for keys (expected incompetence) and cheque-book speed (unexpected competence) sharpens the surprise."
+        setup_expectation: >
+          Jerry describes being in line behind two women paying by cheque.
+          The audience supplies the cultural expectation: being stuck behind
+          cheque-writers means a long wait. The "of course" signals shared
+          exasperation — everyone knows this is going to be slow.
+        punchline_violation: >
+          The expectation of slowness is negated: women are actually fast
+          with cheques. The keys-vs-chequebook contrast sharpens the negation
+          by showing the same person fumbling at one task and being expert at
+          another, within the same purse.
         pivot_mechanism:
           operation: negation
+          operation_alternative: articulation
           reading_switch: none
           scale_shift: none
           wordplay: none
-        setup_frame: establishes_expectation
+        setup_frame: establishes_convention
         pivot_locus: logical
         resolution_requires: [shared_experience]
+
       structure:
         primary_template: comparison
         secondary_templates: []
@@ -31,45 +66,164 @@ jokes:
         has_tag: false
         tag_operation: null
         tag_has_own_pivot: null
-        act_out: {present: false, character_type: null, register_gap: null, character_gloss: ""}
+        act_out:
+          present: false
+          character_type: null
+          register_gap: null
+          character_gloss: ""
+
       relational:
-        positioning: {default: lateral_observer}
+        positioning:
+          default: lateral_observer
+          trajectory: null
         audience_implication: co_observer
-        shared_experience: {required: true, universality: common, comprehensibility_without_experience: 3}
-        performed_relatability: {present: false}
+        shared_experience:
+          required: true
+          universality: common
+          comprehensibility_without_experience: 3
+        performed_relatability:
+          present: true
+
       narrative:
+        callbacks_to: []
+        callback_is_primary_pivot: null
+        running_premise: null
+        tag_callbacks_to: null
+        anti_callback: null
         routine_id: "s01e02_cheque"
+        position_in_routine: 1
+        routine_total_jokes: 4
         position_in_set: opener
+
     performance:
       performer: seinfeld
+      delivery:
+        cadence: "{UNSPECIFIED}"
+        pause_placement: []
+        repetition: null
+        vocal_register_shifts: []
+        estimated_duration_seconds: null
+        register_break:
+          present: false
+          at: null
+          direction: null
+        act_out_voice:
+          character_register: null
+      voice:
+        persona_markers: []
+        signature_phrases: []
+        register: default
+        editorializes:
+          present: null
+          kind: null
+      affective:
+        default_register:
+          valence: null
+          arousal: null
+        trajectory: null
+        shifts_are_load_bearing: null
+        deviates_from_performer_default: null
+      relational:
+        vulnerability:
+          personal_exposure: null
+          emotional_risk: null
+        performed_relatability:
+          intensity: null
+        positioning_deviation: null
+
+    meta:
+      comments_on_form: null
+      breaks_fourth_wall: null
+
     analysis:
-      adversarial: {confidence: medium}
-    notes: "The negation is the audience's expectation of slowness being flipped. The comparison template structures the keys-vs-chequebook contrast. Dated material - cheque-writing is no longer a universal experience."
+      commutation:
+        load_bearing_element:
+          field_path: ""
+          gloss: ""
+        removable_elements:
+          - field_path: ""
+            gloss: ""
+        uncertain_elements:
+          - field_path: ""
+            gloss: ""
+      voice_portability:
+        mort: null
+        cece: null
+      adversarial:
+        counterarguments_considered:
+          - alternative: "Could be articulation — the audience recognizes cheque-writing speed as an observation."
+            why_rejected: >
+              The humor depends on the FLIP from expected slowness to
+              unexpected speed. If the audience already knew women were fast
+              with cheques, the joke would have no surprise. The setup builds
+              an expectation (slow) and the punchline negates it (fast).
+              Articulation requires the humor to survive without surprise;
+              this joke's humor dies without the reversal.
+        confidence: medium
+
+    notes: >
+      The audience participation moment ("Cheque") is a setup device, not a
+      standalone laugh-point. The convention being established is "cheque-writers
+      hold up the line" — the audience holds this belief without Jerry stating it.
+      The keys/chequebook comparison is the structural vehicle for the negation.
+      Dated material: cheque-writing is largely extinct as a supermarket
+      experience.
+
+  # ==========================================================================
+  # JOKE 02 — Chequebook comes out of a holster (gunslinger mapping)
+  # ==========================================================================
 
   - joke_id: "seinfeld_s01e02_opening_02"
     source:
       work: "Seinfeld S01E02 'The Stakeout' opening monologue"
       medium: sitcom_opener
       year: 1990
-    transcript_fragment: "The cheque book comes out of a holster: 'Who do I make it out to?... There's my ID...'"
+
+    annotation_status:
+      transcription: complete
+      decomposition: complete
+      performance: incomplete
+      commutation: incomplete
+      adversarial_review: incomplete
+      voice_attribution: incomplete
+
+    transcript_fragment: >
+      They never fumble for the cheque book -- the cheque book comes out of
+      a holster: "Who do I make it out to?... There's my ID..."
+
     joke:
       content:
-        primary_domain: [gender_dynamics, commerce]
-        concepts: [cheque_writing, holster, gunslinger, speed, women]
-        pivot_concept: holster
-        specificity: {default_level: 4}
+        primary_domain: [gender_dynamics, money_and_commerce]
+        concepts: [cheque_writing, quick_draw_gunslinger]
+        pivot_concept: quick_draw_gunslinger
+        specificity:
+          default_level: 4
+          trajectory: null
         content_moves: []
+
       logic:
-        setup_expectation: "Women are fast with cheques - the audience has accepted this observation."
-        punchline_violation: "The speed is mapped to a gunslinger's quick-draw via the holster image. The structural parallel between drawing a chequebook and drawing a gun reveals an unexpected aptness - both are practiced, automatic retrieval motions."
+        setup_expectation: >
+          The audience has accepted that women are fast with cheques. The
+          setup describes the absence of fumbling — a behavioral observation
+          about practiced efficiency.
+        punchline_violation: >
+          The speed of chequebook retrieval is mapped to a gunslinger's
+          quick-draw via the "holster" image. Two domains (supermarket
+          checkout and Western gunfight) share a structural parallel:
+          practiced, automatic, fast retrieval of an instrument from a
+          carry-case. The humor is in the aptness of the parallel — the
+          confident "Who do I make it out to?" mirrors a gunslinger's
+          readiness.
         pivot_mechanism:
           operation: mapping
+          operation_alternative: null
           reading_switch: none
           scale_shift: none
           wordplay: none
         setup_frame: establishes_behavior
         pivot_locus: logical
-        resolution_requires: [shared_experience]
+        resolution_requires: [shared_experience, world_knowledge]
+
       structure:
         primary_template: comparison
         secondary_templates: []
@@ -77,109 +231,479 @@ jokes:
         has_tag: false
         tag_operation: null
         tag_has_own_pivot: null
-        act_out: {present: true, character_type: enthusiast, register_gap: treats_mundane_as_serious, character_gloss: "Woman at supermarket checkout with gunslinger-like efficiency and confidence."}
+        act_out:
+          present: true
+          character_type: expert
+          register_gap: treats_mundane_as_serious
+          character_gloss: >
+            Woman at supermarket checkout with gunslinger-like efficiency.
+            The act-out voices her confident, rapid-fire commands as if
+            drawing on an opponent rather than paying for groceries.
+
       relational:
-        positioning: {default: lateral_observer}
+        positioning:
+          default: lateral_observer
+          trajectory: null
         audience_implication: co_observer
-        shared_experience: {required: true, universality: common, comprehensibility_without_experience: 3}
-        performed_relatability: {present: false}
+        shared_experience:
+          required: true
+          universality: common
+          comprehensibility_without_experience: 3
+        performed_relatability:
+          present: false
+
       narrative:
+        callbacks_to: []
+        callback_is_primary_pivot: null
+        running_premise: null
+        tag_callbacks_to: null
+        anti_callback: null
         routine_id: "s01e02_cheque"
+        position_in_routine: 2
+        routine_total_jokes: 4
         position_in_set: opener
+
     performance:
       performer: seinfeld
+      delivery:
+        cadence: "{UNSPECIFIED}"
+        pause_placement: []
+        repetition: null
+        vocal_register_shifts: []
+        estimated_duration_seconds: null
+        register_break:
+          present: false
+          at: null
+          direction: null
+        act_out_voice:
+          character_register: null
+      voice:
+        persona_markers: []
+        signature_phrases: []
+        register: default
+        editorializes:
+          present: null
+          kind: null
+      affective:
+        default_register:
+          valence: null
+          arousal: null
+        trajectory: null
+        shifts_are_load_bearing: null
+        deviates_from_performer_default: null
+      relational:
+        vulnerability:
+          personal_exposure: null
+          emotional_risk: null
+        performed_relatability:
+          intensity: null
+        positioning_deviation: null
+
+    meta:
+      comments_on_form: null
+      breaks_fourth_wall: null
+
     analysis:
-      adversarial: {confidence: high}
-    notes: "This is the worked example from pivot-mechanisms.yaml for mapping vs transplant. The gunslinger framework genuinely fits - the parallel is apt, not misapplied. The holster image illuminates a real similarity in the speed/automaticity of the motion."
+      commutation:
+        load_bearing_element:
+          field_path: ""
+          gloss: ""
+        removable_elements:
+          - field_path: ""
+            gloss: ""
+        uncertain_elements:
+          - field_path: ""
+            gloss: ""
+      voice_portability:
+        mort: null
+        cece: null
+      adversarial:
+        counterarguments_considered:
+          - alternative: "Could be transplant — gunslinger framework misapplied to supermarket."
+            why_rejected: >
+              The gunslinger framework genuinely fits: the parallel between
+              quick-draw from holster and fast chequebook retrieval from purse
+              is apt, not misapplied. The humor is in recognizing the
+              similarity (mapping), not in the mismatch (transplant). This
+              is the worked example from pivot-mechanisms.yaml.
+        confidence: high
+
+    notes: >
+      This is the worked example from pivot-mechanisms.yaml for mapping vs
+      transplant. The holster image illuminates a real structural parallel
+      in the speed and automaticity of the motion. The act-out realizes the
+      mapping physically — Jerry mimes the draw. Scale_shift: none because
+      the mapping does not independently change scale; the elevation to
+      gunslinger is the mapping itself.
+
+  # ==========================================================================
+  # JOKE 03 — A cheque is like a note from your mother
+  # ==========================================================================
 
   - joke_id: "seinfeld_s01e02_opening_03"
     source:
       work: "Seinfeld S01E02 'The Stakeout' opening monologue"
       medium: sitcom_opener
       year: 1990
-    transcript_fragment: "I think to a man, a cheque is like a note from your mother that says 'I don't have any money, but if you'll contact these people, I'm sure they'll stick up for me...'"
+
+    annotation_status:
+      transcription: complete
+      decomposition: complete
+      performance: incomplete
+      commutation: incomplete
+      adversarial_review: incomplete
+      voice_attribution: incomplete
+
+    transcript_fragment: >
+      I think to a man, a cheque is like a note from your mother that says
+      "I don't have any money, but if you'll contact these people, I'm sure
+      they'll stick up for me... If you just trust me this one time I don't
+      have any money but I have these..."
+
     joke:
       content:
-        primary_domain: [gender_dynamics, commerce]
-        concepts: [cheque, masculinity, money, vulnerability, mothers_note]
-        pivot_concept: cheque
-        specificity: {default_level: 3}
+        primary_domain: [gender_dynamics, money_and_commerce]
+        concepts: [cheque_writing, cheque_as_plea]
+        pivot_concept: cheque_as_plea
+        specificity:
+          default_level: 4
+          trajectory: null
         content_moves: []
+
       logic:
-        setup_expectation: "A cheque is understood as a financial instrument - a legitimate form of payment in commerce."
-        punchline_violation: "The cheque is reinterpreted as a confession of inadequacy - a note from your mother asking for trust. The frame shifts from 'financial instrument' to 'plea for credibility'. The same object (cheque) is reread as a vulnerability display."
+        setup_expectation: >
+          A cheque is understood as a standard financial instrument — a
+          legitimate, adult form of payment. The setup "there's something
+          about a cheque that, to a man, is not masculine" primes the audience
+          for an explanation of the unease men feel writing cheques.
+        punchline_violation: >
+          The cheque is reinterpreted as a pathetic plea — a note from your
+          mother explaining that you don't have real money and asking the
+          recipient to trust you. Reading 1 (setup frame): cheque = financial
+          instrument backed by a bank. Reading 2 (punchline frame): cheque =
+          a confession that you don't actually have money, just a promise
+          written on paper. The same object is reread under a frame of
+          vulnerability and dependency rather than financial competence.
         pivot_mechanism:
           operation: reinterpretation
+          operation_alternative: null
           reading_switch: none
-          scale_shift: contraction
+          scale_shift: none
           wordplay: none
         setup_frame: establishes_convention
         pivot_locus: logical
         resolution_requires: [shared_experience, world_knowledge]
+
       structure:
         primary_template: comparison
         secondary_templates: []
         subversions_applied: []
-        has_tag: false
-        tag_operation: null
-        tag_has_own_pivot: null
-        act_out: {present: true, character_type: innocent, register_gap: unaware_of_absurdity, character_gloss: "Sheepish man presenting a cheque as if apologizing, channeling a child explaining to a teacher."}
+        has_tag: true
+        tag_operation: extends
+        tag_has_own_pivot: true
+        act_out:
+          present: true
+          character_type: innocent
+          register_gap: unaware_of_absurdity
+          character_gloss: >
+            A man presenting a cheque as if making a pathetic personal appeal,
+            channeling a child handing a teacher a note from mom. The
+            character is earnestly pleading — unaware that this plea is what
+            a cheque actually IS in this reframing.
+
       relational:
-        positioning: {default: lateral_observer}
+        positioning:
+          default: lateral_observer
+          trajectory: null
         audience_implication: co_observer
-        shared_experience: {required: true, universality: common, comprehensibility_without_experience: 3}
-        performed_relatability: {present: true}
+        shared_experience:
+          required: true
+          universality: common
+          comprehensibility_without_experience: 3
+        performed_relatability:
+          present: true
+
       narrative:
+        callbacks_to: []
+        callback_is_primary_pivot: null
+        running_premise: null
+        tag_callbacks_to: null
+        anti_callback: null
         routine_id: "s01e02_cheque"
+        position_in_routine: 3
+        routine_total_jokes: 4
         position_in_set: opener
+
     performance:
       performer: seinfeld
+      delivery:
+        cadence: "{UNSPECIFIED}"
+        pause_placement: []
+        repetition: null
+        vocal_register_shifts: []
+        estimated_duration_seconds: null
+        register_break:
+          present: false
+          at: null
+          direction: null
+        act_out_voice:
+          character_register: null
+      voice:
+        persona_markers: []
+        signature_phrases: []
+        register: default
+        editorializes:
+          present: null
+          kind: null
+      affective:
+        default_register:
+          valence: null
+          arousal: null
+        trajectory: null
+        shifts_are_load_bearing: null
+        deviates_from_performer_default: null
+      relational:
+        vulnerability:
+          personal_exposure: null
+          emotional_risk: null
+        performed_relatability:
+          intensity: null
+        positioning_deviation: null
+
+    meta:
+      comments_on_form: null
+      breaks_fourth_wall: null
+
     analysis:
-      adversarial: {confidence: high}
-    notes: "The reinterpretation shifts the cheque from 'standard payment method' to 'confession of not having real money'. Scale_shift contraction is independent - the cheque is deflated from financial instrument to pathetic plea, but the reinterpretation (frame shift) would work without the deflation."
+      commutation:
+        load_bearing_element:
+          field_path: ""
+          gloss: ""
+        removable_elements:
+          - field_path: ""
+            gloss: ""
+        uncertain_elements:
+          - field_path: ""
+            gloss: ""
+      voice_portability:
+        mort: null
+        cece: null
+      adversarial:
+        counterarguments_considered:
+          - alternative: "Could be mapping — cheque mapped to mother's note as two domains."
+            why_rejected: >
+              Mapping requires two distinct domains with a revealed structural
+              parallel where the aptness is the joke. Here, the cheque is not
+              being compared to a separate domain — it is being REREAD as
+              something it already implicitly is. The humor is in seeing the
+              cheque differently (a plea rather than a payment), not in
+              connecting two separate domains. The mother's note is the
+              VEHICLE for the reinterpretation, not a mapping target.
+          - alternative: "Scale_shift should be contraction — financial instrument deflated to pathetic plea."
+            why_rejected: >
+              Strict swap test: could this reinterpretation work with expansion
+              instead of contraction? The reinterpretation IS the deflation —
+              seeing a cheque as a plea IS the move from legitimate to
+              pathetic. Swapping to expansion while keeping the same
+              reinterpretation is inconceivable — the identity of this
+              specific reinterpretation is the diminishment. The contraction
+              is fused with the operation. Set to none.
+        confidence: high
+
+    notes: >
+      The key distinction from mapping: Jerry is not saying "cheques are LIKE
+      mother's notes" in a way that illuminates a parallel between two
+      independent domains. He is saying "when you really look at what a cheque
+      IS, it's a plea." The mother's note is the concrete realization of the
+      reinterpretation, not a separate domain being mapped to. The act-out
+      extends across jokes 03 and 04 as a continuous character voice.
+
+  # ==========================================================================
+  # JOKE 04 — "I wrote on these; is this of any value at all?"
+  # ==========================================================================
 
   - joke_id: "seinfeld_s01e02_opening_04"
     source:
       work: "Seinfeld S01E02 'The Stakeout' opening monologue"
       medium: sitcom_opener
       year: 1990
-    transcript_fragment: "I wrote on these; is this of any value at all?"
+
+    annotation_status:
+      transcription: complete
+      decomposition: complete
+      performance: incomplete
+      commutation: incomplete
+      adversarial_review: incomplete
+      voice_attribution: incomplete
+
+    transcript_fragment: >
+      I wrote on these; is this of any value at all?
+
     joke:
       content:
-        primary_domain: [commerce]
-        concepts: [cheque, value, writing, currency]
-        pivot_concept: cheque
-        specificity: {default_level: 3}
+        primary_domain: [money_and_commerce]
+        concepts: [cheque_writing, cheque_as_plea]
+        pivot_concept: cheque_as_plea
+        specificity:
+          default_level: 3
+          trajectory: null
         content_moves: []
+
       logic:
-        setup_expectation: "The mother's-note act-out has established the cheque-as-plea frame. The audience is in the reinterpretation."
-        punchline_violation: "The button pushes the reinterpretation further: a cheque is reduced to 'a piece of paper I wrote on' - questioning whether writing on paper creates value at all. The financial instrument is now just scribbled-on paper."
+        setup_expectation: >
+          Joke 03 has established the cheque-as-plea frame. The audience is
+          inside the act-out: a man pathetically explaining to a store clerk
+          that he doesn't have real money but has this piece of paper backed
+          by distant people at a bank.
+        punchline_violation: >
+          The button pushes the reinterpretation to its logical terminus:
+          the cheque is stripped of even its "promise" value and reduced to
+          "paper I wrote on." The accepted premise (cheque = pathetic plea)
+          is followed to its most absurd conclusion: writing on paper
+          doesn't create value. The humor is in the destination — the
+          bewildered question "is this of any value at all?" — not in
+          contradicting or reframing the prior joke.
         pivot_mechanism:
-          operation: mapping
+          operation: extension
+          operation_alternative: null
           reading_switch: none
-          scale_shift: contraction
+          scale_shift: none
           wordplay: none
-        setup_frame: establishes_convention
+        setup_frame: establishes_premise
         pivot_locus: logical
         resolution_requires: [world_knowledge]
+
       structure:
         primary_template: reductio
         secondary_templates: []
         subversions_applied: []
-        has_tag: true
-        tag_operation: extends
-        tag_has_own_pivot: true
-        act_out: {present: true, character_type: innocent, register_gap: unaware_of_absurdity, character_gloss: "Man holding up a cheque as if it were a child's drawing, bewildered that anyone would accept it."}
+        has_tag: false
+        tag_operation: null
+        tag_has_own_pivot: null
+        act_out:
+          present: true
+          character_type: innocent
+          register_gap: unaware_of_absurdity
+          character_gloss: >
+            Same character as joke 03 — a man holding up a cheque in genuine
+            bewilderment, as if examining a child's drawing and wondering
+            why anyone would accept it as currency.
+
       relational:
-        positioning: {default: lateral_observer}
+        positioning:
+          default: lateral_observer
+          trajectory: null
         audience_implication: co_observer
-        shared_experience: {required: true, universality: common, comprehensibility_without_experience: 3}
-        performed_relatability: {present: true}
+        shared_experience:
+          required: true
+          universality: common
+          comprehensibility_without_experience: 3
+        performed_relatability:
+          present: true
+
       narrative:
+        callbacks_to: ["seinfeld_s01e02_opening_03"]
+        callback_is_primary_pivot: false
+        running_premise: null
+        tag_callbacks_to: null
+        anti_callback: null
         routine_id: "s01e02_cheque"
+        position_in_routine: 4
+        routine_total_jokes: 4
         position_in_set: opener
+
     performance:
       performer: seinfeld
+      delivery:
+        cadence: "{UNSPECIFIED}"
+        pause_placement: []
+        repetition: null
+        vocal_register_shifts: []
+        estimated_duration_seconds: null
+        register_break:
+          present: false
+          at: null
+          direction: null
+        act_out_voice:
+          character_register: null
+      voice:
+        persona_markers: []
+        signature_phrases: []
+        register: default
+        editorializes:
+          present: null
+          kind: null
+      affective:
+        default_register:
+          valence: null
+          arousal: null
+        trajectory: null
+        shifts_are_load_bearing: null
+        deviates_from_performer_default: null
+      relational:
+        vulnerability:
+          personal_exposure: null
+          emotional_risk: null
+        performed_relatability:
+          intensity: null
+        positioning_deviation: null
+
+    meta:
+      comments_on_form: null
+      breaks_fourth_wall: null
+
     analysis:
-      adversarial: {confidence: medium}
-    notes: "This is the worked example from pivot-mechanisms.yaml. Mapping: cheque (financial instrument) mapped to 'paper with writing on it' (child's craft). The structural parallel is between writing on paper and creating value. Scale_shift contraction is the independent modifier deflating the cheque's status. Could be coded as extension of joke_03's reinterpretation - the tag pushes the plea further to absurdity."
+      commutation:
+        load_bearing_element:
+          field_path: ""
+          gloss: ""
+        removable_elements:
+          - field_path: ""
+            gloss: ""
+        uncertain_elements:
+          - field_path: ""
+            gloss: ""
+      voice_portability:
+        mort: null
+        cece: null
+      adversarial:
+        counterarguments_considered:
+          - alternative: "Could be mapping — cheque mapped to 'paper with writing' as two domains."
+            why_rejected: >
+              The prior annotation coded this as mapping, but the humor is
+              not in connecting two separate domains. The humor is in
+              FOLLOWING the cheque-as-plea premise to its logical endpoint:
+              if a cheque is really just asking someone to trust you, then
+              what is it materially? Paper you wrote on. The operation is
+              extension — the accepted premise (cheque = plea) is followed to
+              an absurd-but-logical conclusion (writing on paper doesn't
+              create value). Extension stays in one domain and pushes it;
+              mapping connects two.
+          - alternative: "Could be reinterpretation — the cheque is reread as worthless paper."
+            why_rejected: >
+              The reinterpretation already happened in joke 03 (cheque reread
+              as plea). This joke accepts that reinterpretation as its
+              premise and pushes it further. The test: does the joke go
+              further in the same direction (extension) or look at the same
+              thing from a different angle (reinterpretation)? It goes
+              further — from "plea" to "worthless paper." Same direction,
+              more extreme destination.
+          - alternative: "Scale_shift should be contraction — financial instrument reduced to worthless paper."
+            why_rejected: >
+              Same reasoning as joke 03. The reduction to worthless paper IS
+              what the extension does — it's the absurd destination. The
+              contraction is not a separable modifier; it's the operation's
+              content. Swapping to expansion is inconceivable for this
+              specific extension.
+        confidence: high
+
+    notes: >
+      This is the button/closer of the monologue. The prior annotation coded
+      it as mapping + contraction; recoded here as extension + none. The
+      reductio template captures the argumentative chain shape: cheque ->
+      plea -> paper with writing -> is this worth anything? The extension
+      operation captures the cognitive mechanism: following the joke-03
+      premise to its absurd endpoint. This joke functions as a tag on joke 03
+      (extending its act-out and premise), but it has its own pivot (the
+      further reduction), so it is annotated as a standalone joke with a
+      callbacks_to reference rather than as a tag within joke 03.
