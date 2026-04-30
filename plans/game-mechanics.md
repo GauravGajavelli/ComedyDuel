@@ -1,5 +1,27 @@
 # Game Mechanics — Brainstorm and Concrete Designs
 
+> **Status (2026-04-29) — historical research, not live product
+> design.** The current active plan is
+> **`plans/comedyduel-format-design-v2.md`** (read that first for
+> what's currently being done). The game-product paths developed
+> in this document (solo Director's Console, party mode, Episode
+> Loops, The Stage) were considered, audited against monetization
+> frames in `plans/monetization-plan.md`, and ultimately set
+> aside. The project is now framed as engine-as-creative-work,
+> with content produced as a byproduct of engine work (per v2)
+> and an optional Nothing, Forever-style showcase deployment as
+> an ambient baseline (per the monetization-plan Resolution).
+>
+> This document is preserved because the design work informed
+> engine architecture in ways that survive the reframing:
+> operation-conditioned generation, voice-as-constraint-set
+> across long sessions, fail-forward delivery for ungraceful
+> generations, transition lines between bits, the topic-anchor
+> + arc + callback structure for routine cohesion, and the
+> Mort/Cece performer dynamic. These are now properties of the
+> engine itself, not of any game built on top of it. Read this
+> document with that translation in mind.
+
 Working document on game-loop design beyond the original "write a joke,
 read AI's joke, get judged" loop in `spec.md`. The core concern this
 document addresses: passive standup-watching is what people skip in

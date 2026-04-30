@@ -955,3 +955,183 @@ distribution that exploits the engine's actual strength
 (generation abundance), and the plan is right only if its
 motivation is creative rather than financial and the
 operational commitment to sustained streaming is realistic.
+
+---
+
+> **Note (2026-04-29):** This Resolution section was further refined
+> into **`plans/comedyduel-format-design-v2.md`**, which is the
+> **current active plan**. The Resolution below records the decision
+> arrived at here; v2 develops it into the specific content model
+> and discipline applied during execution. **Read v2 for what's
+> currently being done; read this document for the four-frame
+> audit that led to the resolution.**
+
+# Resolution (2026-04-29)
+
+After working through this plan in detail — auditing the Twitch
+stream framing, then more honestly comparing to existing AI
+content creators (Vedal/Neuro-sama, DougDoug) and recognizing
+the substantial human-performance and operational burden the
+format actually requires — the plan's framing is **set aside,
+not revised further**.
+
+The decision: the project is **engine-as-creative-work** with
+an **optional Nothing, Forever-style showcase deployment** as a
+bounded low-effort public-facing surface. The motivation is
+creative enjoyment of the structural decomposition of comedy,
+not commercial outcome. The four monetization frames considered
+(game, YouTube channel, continuous Twitch stream, B2B engine
+licensing) each surfaced real obstacles the engine wasn't
+designed to solve, and continuing to audition further frames was
+distorting the work without materially changing payoff
+probability.
+
+This document is preserved as a record of the analysis, not as
+the live plan. The reasoning below the line is historical;
+sections above this point describe frames that were considered
+and set aside, not the path being executed.
+
+## What the showcase deployment is
+
+A continuous Mort/Cece standup stream running on Twitch or
+YouTube Live, in the format Nothing, Forever pioneered: lo-fi
+static character portraits with mouth animation, TTS-voiced
+standup, deterministic output filtering for moderation,
+autonomous engine performance with no real-time human direction.
+This is essentially the original spec's v1.2 watch mode,
+deployed as a showcase rather than as a v1.2 product expansion.
+It's the closest format to what the engine was actually
+designed for and the lowest-burden way to give the engine a
+public face.
+
+Mort and Cece rotate. The engine works through its prompt pool.
+The output filter blocks anything outside the allowed register.
+The stream runs when the engine is producing well; it's shut
+down when it stops being enjoyable to maintain.
+
+## What it isn't
+
+- **Not a product.** No audience-acquisition motion, no
+  scheduled content drops, no retention optimization, no
+  viewer-count metrics as success.
+- **Not a commitment to outcomes.** Runs when the engine is
+  producing well; gets shut down when it stops being enjoyable
+  to maintain.
+- **Not a justification frame.** The engine is the work; the
+  showcase is a deployment surface. The work is justified by
+  being interesting, not by what the showcase achieves.
+
+## Discipline boundary
+
+The single failure mode this resolution must defend against:
+the showcase quietly becoming a product without that decision
+being made deliberately. Concrete signals that the discipline
+has slipped:
+
+- Doing audience-acquisition work (collab outreach,
+  social-platform seeding aimed at growing stream viewership,
+  paid promotion).
+- Scheduling content drops or maintaining a posting cadence
+  aimed at retention.
+- Optimizing engine output for viewer-count metrics rather than
+  for the work being good.
+- Treating viewer counts as a measure of project success.
+- Resisting shutting the showcase down when it stops being
+  enjoyable.
+
+If any of these creep in, the discipline has slipped and the
+showcase has become a product that should be reconsidered
+against the creative-work framing — either explicitly committed
+to as a product (with the operational and motivational
+implications that entails) or explicitly deprioritized back to
+deployment-only.
+
+## What from this plan survives
+
+- The **Phase 0a operation distinctness check** is still useful
+  as engine validation — distinctness is a precondition for the
+  showcase being interesting to anyone, including the operator.
+- The **graceful-failure requirement** remains: a showcase with
+  ungraceful bombs is unwatchable. The engineering work to
+  solve graceful failure is real regardless of product framing,
+  and remains research-grade hard.
+- The **output-moderation infrastructure is non-negotiable** —
+  the showcase is exactly the kind of unsupervised AI standup
+  that Nothing, Forever's Twitch ban demonstrated produces
+  moderation failures. Output filter design is required
+  engineering, not optional. The schema's controlled
+  vocabularies (register, domain, content_moves) are useful raw
+  material for filter rules.
+- The **visual_performance plan's MVP visual fidelity** (static
+  portraits + simple animation) is the showcase's visual layer.
+- **Annotation work continues** at whatever pace fits the
+  creative-work framing, expanding the corpus to broaden voice
+  consistency.
+
+## What from this plan is shelved
+
+- **Latency targets at 2-3 seconds and chat-input handling** —
+  not needed for a non-interactive showcase.
+- **Audience-acquisition motion**, social cross-posting, collab
+  outreach.
+- **Performer rotation logic with intentional handoffs** designed
+  for stream pacing — simpler rotation is enough for a showcase.
+- **Phase 0c's private test stream** with invited viewers — for a
+  showcase, "test it yourself, run it, shut it down if it's not
+  working" is sufficient validation.
+- **Phase 1.5 ensemble extension** as a scheduled-by-default
+  commitment — interesting if the engine work pulls toward it,
+  but no longer on a critical path.
+- **All B2B and downstream monetization paths.**
+- **The 25-40 hr/wk operational commitment.** Showcase upkeep
+  is a few hours per month: monitoring + moderation review +
+  occasional engine improvements.
+
+## The minimum-effort visibility moves: structure resolved
+
+The earlier guidance described minimum-effort visibility as
+devlog + GitHub repo + occasional social posts + comedy-
+community presence + possible workshop paper. Subsequent format
+design (`plans/comedyduel-format-design-v2.md`) structured the
+public surface into three coexisting tracks:
+
+1. **Showcase deployment** (this section) — ambient,
+   lowest-effort.
+2. **Dev Days** (per format-design.md) — Vedal-shape technical
+   content. **Replaces the text-form devlog** as the primary
+   technical-visibility surface, since video Workshop Streams
+   and Autopsies subsume what a written devlog would carry.
+3. **Narrative Challenges** (per format-design.md) — DougDoug-
+   shape entertainment. New surface; was not in the earlier
+   minimum-effort list.
+
+What continues alongside all three (not replaced by any of
+them):
+
+- **GitHub repo** with schema, vocabularies, anonymized annotations.
+- **Occasional social posts** when something interesting surfaces.
+- **Comedy-community presence** when relevant.
+- **Workshop paper on the schema** if intrinsically interesting
+  to write.
+
+Together with the three video/stream tracks, these reach the
+small audience that would care without requiring sustained
+acquisition work. The discipline boundary applies across all
+surfaces: each exists as a deployment of work that exists for
+its own reasons, not as a content production schedule. See
+`plans/comedyduel-format-design-v2.md` for format catalog,
+prerequisites table, and decision framework.
+
+## Single-sentence resolution
+
+The engine is the project; the schema and annotation work is
+the core artifact; a Nothing, Forever-style showcase is
+preserved as a bounded low-effort deployment surface for the
+engine to exist in public; the discipline is to keep the
+showcase a deployment and not let it become a product.
+
+---
+
+> **End of monetization-plan.md.** For the current active plan
+> (quest framing, content types, format prerequisites table, and
+> decision framework), see **`plans/comedyduel-format-design-v2.md`**.

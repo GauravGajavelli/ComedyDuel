@@ -2,6 +2,100 @@
 
 *Working title. Solo-first MVP with 2 comedian characters. Party mode deferred to v1.1.*
 
+> **Status (2026-04-29) — current plan is `plans/comedyduel-format-design-v2.md`. This spec is historical.**
+>
+> The active plan for this project is **`plans/comedyduel-format-design-v2.md`**,
+> which frames the project as **the quest to build a superfunny AI** —
+> engine work as the primary creative activity, with content produced
+> as a byproduct (workshop entries, autopsies, voice swaps,
+> gauntlets, endurance runs, milestone demonstrations).
+> **Read v2 first.** Everything below is preserved as architectural
+> reference and product-thinking history.
+>
+> This spec describes the original product framing: a browser-based
+> comedy game with party-mode v1.1 and watch-mode v1.2 expansions.
+> After working through the game design (`plans/game-mechanics.md`)
+> and four monetization frames (game, YouTube channel, continuous
+> Twitch stream, B2B engine licensing — see
+> `plans/monetization-plan.md`), the project has been reframed.
+>
+> **Primary framing: engine-as-creative-work.** The schema,
+> annotations, operation taxonomy, performance-layer integration,
+> and concept graph are the work. The motivation is creative
+> enjoyment of the structural decomposition of comedy, not
+> commercial outcome. Each monetization frame surfaced real
+> obstacles the engine wasn't designed to solve, because the
+> engine wasn't designed for monetization — it was built because
+> the work is intrinsically interesting. Continuing to audition
+> product frames was distorting the engine work without changing
+> payoff probability materially.
+>
+> **Optional layer: showcase deployment.** A Nothing, Forever-style
+> continuous Mort/Cece standup stream is preserved as a bounded
+> low-effort public-facing surface for the engine. Lo-fi static
+> portraits with mouth animation, TTS-voiced standup, deterministic
+> output filtering for moderation, autonomous performance with no
+> real-time human direction. This is essentially a revived form of
+> the original spec's v1.2 watch mode, deployed as a showcase
+> rather than as a product expansion. It's the closest format to
+> what the engine was actually designed for and the lowest-burden
+> way to give the engine a public face.
+>
+> **Three coexisting public surfaces (additive layers above the
+> showcase).** The showcase deployment is the lowest-effort
+> surface. Above it, two additional content tracks are
+> operationalized in `plans/comedyduel-format-design-v2.md`:
+>
+> - **Dev Days** — Vedal-shape technical content (schema
+>   walkthroughs, live annotation, structural decomposition).
+>   Replaces the text-form devlog from the monetization-plan
+>   resolution as the primary technical-visibility surface.
+> - **Narrative Challenges** — DougDoug-shape premise videos
+>   (character-driven entertainment with the engine as subject).
+>
+> The three surfaces coexist without competing. Together with the
+> GitHub repo, occasional social posts, comedy-community
+> presence, and an optional workshop paper on the schema, they
+> form the complete public face of the project. See
+> `plans/comedyduel-format-design-v2.md` for the full format
+> catalog, the format-prerequisites table (Tier 1 buildable
+> today, Tier 2 light extensions, Tier 3 texture-of-sustained-
+> performance extensions), and the decision framework for
+> evaluating new format ideas.
+>
+> The discipline boundary is explicit: **the showcase is a
+> deployment surface, not a product.** It runs when the engine is
+> producing well, gets shut down when it stops being enjoyable to
+> maintain, and is not optimized for viewer counts, retention, or
+> any other audience-acquisition metric. If audience-acquisition
+> work, retention optimization, scheduled content drops, or treating
+> viewer counts as success creeps in, the discipline has slipped
+> and the showcase has quietly become a product that should be
+> reconsidered against the creative-work framing.
+>
+> This spec remains useful as **architectural reference** and as a
+> record of product thinking that informed the engine design.
+> Concepts that survive: the comedian roster (Mort, Cece) as
+> voice-constraint test cases and as showcase performers; the
+> three-stage pipeline as the generation architecture; the schema
+> and vocabulary work as the core artifact; v1.2 watch mode as the
+> showcase basis. Concepts that are no longer pursued: the game
+> modes, party mode, v1.1 party-product expansion, full
+> distribution plan, success metrics framed as user counts,
+> monetization sequencing.
+>
+> If a substantive product path opens later (inbound interest, a
+> clear shape that hasn't been considered, a collaborator who fits
+> a path none of the above), revisit then. Optionality is preserved
+> by continuing to build the engine cleanly and by the showcase
+> giving the work a public face that can be referenced; active
+> product planning is not required to keep that optionality alive.
+>
+> See `plans/monetization-plan.md` (and its closing Resolution
+> section) for the full reasoning on why the four monetization
+> frames were considered and set aside, and how the engine-as-
+> creative-work + showcase posture was arrived at.
+
 ## Product thesis
 
 A browser-based comedy game where a single player competes against AI comedian characters with distinct voices and personalities. Play solo to develop your comedic writing, test yourself against the AI, and build history with specific comedians over time. Party mode (3–8 players) ships as v1.1 expansion.
