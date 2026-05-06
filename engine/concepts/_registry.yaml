@@ -15,6 +15,9 @@
 # (many different traffic jokes). Too narrow: "lane_changing_on_I95"
 # (works on any highway). Right level: "lane_changing" — load-bearing grain.
 #
+# OPEN RECEIVING SURFACE: concepts may arrive from multiple sources (annotation,
+# COMET-ATOMIC, external APIs) but all must pass the granularity rule above.
+#
 # Built from 231 concept references across 55 annotated laugh-points (v0.9).
 # Strings that are DESCRIPTIONS of humor mechanisms (absurdity, comparison,
 # inadequacy, understatement) are excluded — those belong in the schema's

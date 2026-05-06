@@ -27,7 +27,24 @@
     - Concept decomposition (split coarse concepts used by 5+ jokes for different purposes)
     - Concept merging (combine duplicates found during weekly review)
     - Cross-concept synthesis (post-Phase-0 — derive new concepts from adjacency intersections)
+    - External API-sourced expansion (Wikipedia trending, Know Your Meme, pop culture APIs) — same propose→validate→graduate pattern as COMET-ATOMIC; deferred until critic model exists **[NEW]**
   - Re-evaluate the same way as with generative sufficiency, but with blind comparisons between generated and real jokes
+  - **Topic-triggered material gathering (Discovery sub-layer)** **[NEW]**
+    - Principle: the best comedy material comes from colliding lived experience with whatever information you're consuming — especially non-comedy sources (research papers, health studies, etymology, historical oddities). The diversity and unexpectedness of the input is the feature, not a bug
+    - This is a sub-layer within Discovery, not a separate stage. When Discovery receives a topic/prompt, the material gathering layer fans out to diverse external sources to enrich the available concept neighborhood before graph traversal begins
+    - **How it works:**
+      1. **Topic-triggered query** — given a prompt topic (e.g., "restaurants"), query diverse non-comedy sources: research abstracts (PubMed, arXiv behavioral science), Wikipedia, etymological databases, historical oddities, niche knowledge bases
+      2. **Atomic fact extraction** — distill each source into 1-3 concrete, specific, surprising claims. Domain-tag each fact. Score for surprise (how counterintuitive is this relative to common knowledge?)
+      3. **Collision scoring** — measure domain distance between extracted facts and experiential concepts already in the registry. High distance = transplant/mapping potential. Low distance + validates intuition = articulation potential. Contradicts expectations = negation/reinterpretation potential
+      4. **Ephemeral candidate injection** — high-scoring facts become temporary concept candidates available to Discovery for this generation session (they don't enter the permanent registry without validation)
+      5. **Graduation** — facts that produce jokes validated by the critic model graduate into the permanent concept registry via the standard propose→validate→graduate pipeline
+    - **Relationship to existing operations:** the collision type maps directly to which operation Discovery should suggest:
+      - Distant domains → transplant (misapply the fact's framework to everyday life) or mapping (reveal hidden parallel)
+      - Facts that validate shared intuitions → articulation ("studies confirm what we all already knew")
+      - Facts that contradict expectations → negation or reinterpretation
+    - **Relationship to COMET-ATOMIC:** COMET-ATOMIC enriches the graph with commonsense relations (causal chains, social expectations). Material gathering enriches it with surprising external facts. Both feed Discovery, but with different philosophies: COMET-ATOMIC surfaces what everyone implicitly knows; material gathering surfaces what almost nobody knows. Together they give the engine both articulation opportunities (shared knowledge) and transplant/mapping opportunities (surprising knowledge)
+    - **Source ordering (signal-to-noise, moderation risk):** research abstracts > Wikipedia > etymological/historical databases > pop culture APIs > Know Your Meme > Urban Dictionary (last — highest moderation risk)
+    - Deferred until: critic model exists AND Discovery stage runs end-to-end on the existing concept graph
   - **Commonsense knowledge base for graph enrichment** **[NEW]**
     - The concept graph currently captures concepts and their dimensional co-occurrence adjacencies. What it lacks: the commonsense RELATIONS between concepts (causal, temporal, social — "restaurants HasProperty bills," "bills CausesDesire complaining"). These chains are what underlie observational and articulation humor — the shared knowledge the audience holds
     - **COMET-ATOMIC 2020** (Hwang et al. 2021) is a commonsense knowledge graph with typed relations (causes, effects, attributes, desires, reactions). It can generate inferences like "PersonX goes to restaurant → PersonX wants to order food → PersonX receives a bill → PersonX feels surprised by the total"
@@ -64,6 +81,14 @@
   - For Cece: anthropomorphized concepts (the Little Guilt) become characters she voices. The act-out format is the natural vehicle for her Capitalized Proper Noun concepts
   - Act-outs are also where the visual delivery system does its best work — pose_shift, expression_change at character transitions are exactly what Ace Attorney's system was designed for
   - Future application: the critic AI's in-voice reactions to player jokes use the same target-exploitation mechanism — scan player's joke for exploitable features, construct character response
+- Gimmick / constrained-premise comedians **[NEW]**
+  - Characters like "Dracula" (a hack comedian who only does vampire-themed material) are architecturally trivial to implement: maximize voice constraints + filter concept graph to a single domain
+  - **Why it works natively:** the engine already models voice as a constraint set that rejects material. A gimmick comedian is just an extreme version — reject everything outside the gimmick's theme. Discovery traverses a smaller graph, operations/templates/subversions work identically within that narrowed space
+  - **The gimmick IS a persistent transplant:** the character's existence-framework (vampire, pirate, medieval knight, etc.) applied to mundane human experiences gives you a free operation on every joke. The audience holds the character premise as persistent context (`setup_frame: establishes_convention` is implicit), so every punchline can lean on that shared premise without spending setup words
+  - **Engine validation use:** if the mechanics are sound, they should produce funny output even under absurd constraints. A gimmick comedian that isn't funny exposes engine weaknesses that broader characters like Mort might hide with material diversity
+  - **Implementation:** define a performer file (like Mort/Cece) with an extreme domain filter, a fixed premise anchor, and character-specific voice moves. No new pipeline code needed — just a new constraint configuration
+  - **Content scaling:** many gimmick characters = variety at low marginal cost. Each new character is just a new constraint config, not new architecture. Good candidates: occupational gimmicks (accountant comedian who frames everything as tax deductions), temporal gimmicks (medieval peasant reacting to modern life), species gimmicks (Dracula, sentient houseplant)
+  - Deferred until: at least one non-gimmick comedian (Mort) produces validated output through the full pipeline
 
 ## Phase 0 Steps **[NEW — replaces implicit workflow]**
 
